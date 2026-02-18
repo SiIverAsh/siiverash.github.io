@@ -40,9 +40,10 @@ def get_ai_recommendation(context):
     3. 严禁使用任何引导性废话。
     4. 针对 GPU 和 CPU 领域，必须关注最近 24-72 小时内的动态，或 2025 年最前沿的架构（如 NVIDIA Blackwell, RTX 50系列, Intel Ultra 200系列, AMD Zen 5等）。
     5. 每个内容项（Study、Anime、Music、Game）必须包含至少 4 个 tags。
-    6. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等，对于Paint，推荐的必须是画师而不是作品，并给出画师的x链接。
-    7. 对于history推荐的内容为“历史上的今天”发生的重大事件（不限于科技史），必须提供正好 6 个不同的项，每个项包含 year 和 event 字段。
-    8. 所有的回答请务必用中文
+    6. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等。
+    7. 对于Paint，必须推荐画师名。必须提供其真实的 X(Twitter) 账号 ID（不带@符号）。你必须对该账号的真实性有100%的把握，严禁捏造虚假账号。如果你不确定其账号，请更换推荐的画师。
+    8. 对于history推荐的内容为“历史上的今天”发生的重大事件（不限于科技史），必须提供正好 6 个不同的项，每个项包含 year 和 event 字段。
+    9. 所有的回答请务必用中文
     
     必须输出以下 JSON 格式：
     {{
@@ -59,7 +60,7 @@ def get_ai_recommendation(context):
       }},
       "anime": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
       "music": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-      "paint": [{"title": "..", "desc": "..", "twitter": ".."}],
+      "paint": [{"title": "画师名", "desc": "风格简述", "x_id": "账号ID"}],
       "game": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
       "history": [{"year": "..", "event": ".."}]
     }}
@@ -70,7 +71,7 @@ def get_ai_recommendation(context):
     payload = {
         "model": "deepseek-chat",
         "messages": [
-            {"role": "system", "content": "You are a professional assistant that always outputs valid JSON."},
+            {"role": "system", "content": "You are a professional assistant that always outputs valid JSON and NEVER hallucinates social media handles. If you aren't 100% sure of an X handle, you find an artist whose handle you DO know."},
             {"role": "user", "content": prompt}
         ],
         "response_format": {"type": "json_object"},
@@ -94,13 +95,27 @@ def update_yaml():
             cleaned_content = clean_json_string(raw_content)
             ai_content = json.loads(cleaned_content)
             
+            # 增强 Paint 链接的处理逻辑
+            paint_list = []
+            for item in ai_content.get('paint', []):
+                x_id = str(item.get('x_id', '')).strip().lstrip('@')
+                # 如果 AI 返回了全链接，尝试提取 ID
+                if '/' in x_id:
+                    x_id = x_id.split('/')[-1]
+                
+                paint_list.append({
+                    'title': item.get('title', ''),
+                    'desc': item.get('desc', ''),
+                    'twitter': f"https://x.com/{x_id}" if x_id else ""
+                })
+
             data = {
                 'date': str(datetime.now().date()),
                 'study': ai_content.get('study', {}),
                 'anime': ai_content.get('anime', []),
                 'music': ai_content.get('music', []),
                 'game': ai_content.get('game', []),
-                'paint': ai_content.get('paint', []),
+                'paint': paint_list,
                 'history': ai_content.get('history', [])
             }
             
