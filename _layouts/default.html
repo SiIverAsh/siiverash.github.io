@@ -89,10 +89,15 @@
     <script>
         let dailyData = {};
         try {
-            const base64Data = document.getElementById('data-payload').textContent;
+            const base64Data = document.getElementById('data-payload').textContent.trim();
             if(base64Data) {
-                // 解码 Unicode Base64
-                const jsonStr = decodeURIComponent(escape(window.atob(base64Data)));
+                // 使用更健壮的方案处理 Unicode
+                const binary = atob(base64Data);
+                const bytes = new Uint8Array(binary.length);
+                for (let i = 0; i < binary.length; i++) {
+                    bytes[i] = binary.charCodeAt(i);
+                }
+                const jsonStr = new TextDecoder('utf-8').decode(bytes);
                 dailyData = JSON.parse(jsonStr);
             }
         } catch (e) { console.error("Data error:", e); }

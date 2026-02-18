@@ -55,7 +55,7 @@ title: Welcome to My HP!
 </div>
 
 <script>
-    const dailyData = {{ site.data.recommendations | jsonify }} || {};
+    // 直接使用全局定义的 dailyData，不要重复定义
     let currentType = '';
     let currentSubType = '';
     let lastIndex = -1;

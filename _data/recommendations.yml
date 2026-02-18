@@ -1,145 +1,20 @@
-anime:
-- desc: 异世界转生题材，主角不断死亡回归以改变命运，第三季剧情进入王选篇高潮。
-  tags:
-  - 奇幻
-  - 悬疑
-  - 剧情
-  - 冒险
-  - 恋爱
-  title: Re:Zero -Starting Life in Another World- Season 3
-- desc: 精灵魔法师在勇者之旅结束后的漫长旅程，探讨生命与时间的哲学主题。
-  tags:
-  - 奇幻
-  - 治愈
-  - 冒险
-  - 剧情
-  - 魔法
-  title: Sousou no Frieren
-- desc: 咒术回战涩谷事变篇动画化，咒术师与咒灵在涩谷展开激烈战斗，剧情黑暗紧张。
-  tags:
-  - 战斗
-  - 黑暗
-  - 超自然
-  - 剧情
-  - 热血
-  title: 'Jujutsu Kaisen: Shibuya Incident Arc'
 date: '2026-02-18'
-game:
-- desc: 《艾尔登法环》DLC，新增地图、武器和Boss，延续高难度和开放世界探索。
-  tags:
-  - 动作角色扮演
-  - 开放世界
-  - 黑暗奇幻
-  - 高难度
-  - 多人合作
-  title: 'Elden Ring: Shadow of the Erdtree'
-- desc: 《赛博朋克2077》资料片，全新剧情和角色，优化光追性能和游戏稳定性。
-  tags:
-  - 科幻
-  - 第一人称射击
-  - 角色扮演
-  - 开放世界
-  - 赛博朋克
-  title: 'Cyberpunk 2077: Phantom Liberty'
-- desc: 米哈游开发的太空幻想RPG，回合制战斗和箱庭探索，剧情和角色塑造出色。
-  tags:
-  - 角色扮演
-  - 回合制
-  - 科幻
-  - 冒险
-  - 收集
-  title: 'Honkai: Star Rail'
-music:
-- desc: YOASOBI最新单曲，融合电子流行和叙事性歌词，在Billboard Japan Hot 100连续夺冠。
-  tags:
-  - Jpop
-  - 电子
-  - 流行
-  title: YOASOBI - アイドル
-- desc: 东方Project同人金属乐队Demetori的经典曲目，以高速吉他独奏和复杂编曲著称。
-  tags:
-  - Doujin
-  - 金属
-  - 东方
-  title: Demetori - 感情の摩天楼
-- desc: Aimer为《咒术回战》演唱的片尾曲，空灵嗓音搭配摇滚编曲，情感表现力强。
-  tags:
-  - Jpop
-  - 摇滚
-  - 动画歌曲
-  title: Aimer - 残響散歌
-paint:
-- desc: 擅长唯美插画和角色设计，色彩柔和细腻，作品多用于游戏和动画宣传。
-  title: 画师：Rella
-  twitter: https://twitter.com/rellakinoko
-- desc: 以数字绘画和奇幻风格闻名，作品充满动态感和光影效果，代表作《鬼刀》。
-  title: 画师：Wlop
-  twitter: https://twitter.com/wlop
-- desc: 色彩鲜艳、设计独特的插画师，活跃于Vtuber和游戏角色设计领域。
-  title: 画师：Mika Pikazo
-  twitter: https://twitter.com/MikaPikazo
+history:
+  - {year: "1930年", event: "冥王星被发现。"}
+  - {year: "1965年", event: "冈比亚宣布独立。"}
+  - {year: "2001年", event: "FBI 资深特工汉森因间谍罪被捕。"}
+  - {year: "2021年", event: "毅力号火星车成功着陆火星。"}
 study:
-  Arch:
-  - desc: 微服务架构，采用Kubernetes和Istio，支持自动扩缩容，服务可用性99.99%，响应时间<100ms。
-    title: merge-guardian-platform/merge-guardian
-  - desc: 事件驱动架构，基于Apache Kafka和Redis，消息处理速率100K/s，系统延迟<5ms。
-    title: chandika/openclaw-model-router
-  - desc: 无服务器架构，采用AWS Lambda和API Gateway，冷启动时间优化至200ms，成本降低40%。
-    title: textforge-app/feedback
-  Audio:
-  - desc: 实时音频处理引擎，采用Conv-TasNet架构，支持48kHz采样率，噪声抑制比达25dB，CPU占用率低于5%。
-    title: lif3time-secr3t-c0de/Meeting-Memory
-  - desc: 语音情感分析模块，集成Wav2Vec 2.0和LSTM，在IEMOCAP数据集上情感识别准确率86.4%。
-    title: textforge-app/feedback
-  - desc: 音频模型融合工具，采用神经架构搜索，支持多说话人分离，SI-SNR提升至18.2dB。
-    title: merge-guardian-platform/merge-guardian
-  CPU:
-  - desc: 采用Intel 20A工艺，集成Lion Cove性能核和Skymont能效核，支持AVX-512指令集，单核性能提升25%。
-    title: Intel Ultra 200系列
-  - desc: 基于台积电3nm工艺，每时钟指令数提升15%，支持DDR5-6400内存，在Cinebench R23中多核得分突破40000。
-    title: AMD Zen 5架构
-  - desc: 采用第二代3nm工艺，神经网络引擎性能提升60%，支持统一内存架构，带宽达200GB/s。
-    title: Apple M4芯片
-  CV:
-  - desc: 基于动态路由的视觉模型调度系统，采用分层注意力机制，支持多模态输入，在ImageNet-1K上实现延迟降低15%，吞吐量提升20%。
-    title: chandika/openclaw-model-router
-  - desc: 实时目标排序AI框架，集成YOLOv9和Transformer排序网络，在COCO数据集上达到mAP 52.3%，推理速度120FPS（RTX
-      4090）。
-    title: ajs2583/sortai
-  - desc: 视觉模型合并监控平台，采用差分隐私和联邦学习，支持多GPU并行训练，模型融合误差率低于0.5%。
-    title: merge-guardian-platform/merge-guardian
-  GPU:
-  - desc: 基于台积电4nm工艺，集成192个SM单元，FP32性能达100 TFLOPS，比Hopper提升40%，支持新一代NVLink 5.0。
-    title: NVIDIA Blackwell GB202
-  - desc: 采用Chiplet设计，Infinity Cache升级至512MB，光追性能提升50%，在3DMark Time Spy Extreme中得分突破20000。
-    title: AMD RDNA 4架构
-  - desc: Xe2-HPG架构，基于Intel 4工艺，光线追踪单元数量翻倍，在《赛博朋克2077》中4K帧率提升35%。
-    title: Intel Arc Battlemage
-  Lang:
-  - desc: 多语言代码生成工具，基于CodeLlama-70B，支持Python、JavaScript等20+语言，代码正确率92.3%。
-    title: textforge-app/feedback
-  - desc: 视觉排序语言接口，集成自然语言到SQL转换，查询响应时间低于50ms，准确率95.8%。
-    title: ajs2583/sortai
-  - desc: 会议摘要语言模型，采用BART-large，支持中英日三语，ROUGE-L得分0.72。
-    title: lif3time-secr3t-c0de/Meeting-Memory
-  NLP:
-  - desc: 基于GPT-4o的实时反馈系统，采用稀疏注意力机制，上下文长度扩展至128K tokens，在GLUE基准上准确率提升3.2%。
-    title: textforge-app/feedback
-  - desc: 会议记忆增强NLP工具，集成Whisper-v3和BERT变体，支持多语言转录，转录准确率达98.7%，延迟低于200ms。
-    title: lif3time-secr3t-c0de/Meeting-Memory
-  - desc: 跨模态路由系统，结合CLIP和T5模型，在VQA任务上实现准确率78.9%，比单一模型提升12%。
-    title: chandika/openclaw-model-router
-  Net:
-  - desc: 分布式模型路由网络，采用QUIC协议和边缘计算，延迟降低至10ms以下，支持10Gbps带宽。
-    title: chandika/openclaw-model-router
-  - desc: 安全模型传输协议，集成TLS 1.3和区块链验证，数据传输加密强度达256位，吞吐量5Gbps。
-    title: merge-guardian-platform/merge-guardian
-  - desc: 实时反馈网络架构，采用WebRTC和WebSocket，支持万人并发，丢包率低于0.1%。
-    title: textforge-app/feedback
-  News:
-  - desc: 2026-02-17发布v1.0版本，支持动态模型路由和边缘部署，已在GitHub获得500+星标。
-    title: chandika/openclaw-model-router开源
-  - desc: 2026-02-16集成GPT-4o API，新增实时协作功能，响应时间优化至100ms以内。
-    title: textforge-app/feedback更新
-  - desc: 2026-02-15发布安全补丁，修复模型注入漏洞，采用零信任架构增强防护。
-    title: merge-guardian-platform/merge-guardian安全升级
+  CV: [{title: "YOLOv11", desc: "高效目标检测模型。"}]
+  NLP: [{title: "DeepSeek-V3", desc: "开源大模型新标杆。"}]
+  Audio: [{title: "CAM++", desc: "声纹识别优化。"}]
+  Net: [{title: "HTTP/3", desc: "基于 QUIC 的新协议。"}]
+  Lang: [{title: "Rust Ownership", desc: "理解所有权系统。"}]
+  Arch: [{title: "微服务网关", desc: "解耦业务与通用逻辑。"}]
+  GPU: [{title: "RTX 5090", desc: "新一代性能怪兽。"}]
+  CPU: [{title: "Lunar Lake", desc: "极致能效比架构。"}]
+  News: [{title: "OpenAI Sora", desc: "视频生成突破。"}]
+anime: [{title: "葬送的芙莉莲", desc: "时间与生命的礼赞。", tags: ["治愈"]}]
+music: [{title: "夜に駆ける", desc: "YOASOBI 经典。", tags: ["J-Pop"]}]
+game: [{title: "艾尔登法环", desc: "开放世界动作RPG。", tags: ["魂系"]}]
+paint: [{title: "米山舞", desc: "极具张力的光影。", twitter: "https://x.com/yoneyamai"}]
