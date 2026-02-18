@@ -4,7 +4,7 @@ layout: default
 
 <article>
     <header style="margin-bottom: 30px; text-align: center;">
-        <h1 style="color: #d85a7f; margin-bottom: 10px;">{{ page.title }}</h1>
+        <h1 style="color: #4a90e2; margin-bottom: 10px;">{{ page.title }}</h1>
         <div style="color: #999; font-size: 0.9em; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
             <span><i class="fas fa-calendar-day"></i> {{ page.date | date: "%Y-%m-%d %H:%M" }}</span>
             <span>|</span>
@@ -17,6 +17,8 @@ layout: default
             <span class="post-tag"># {{ tag }}</span>
             {% endfor %}
         </div>
+        <!-- 隐藏的标签数据源，供侧边栏 JS 使用 -->
+        <span id="data-post-tags" style="display:none;">{{ page.tags | join: ',' }}</span>
         {% endif %}
     </header>
 
@@ -76,17 +78,17 @@ document.querySelectorAll('pre').forEach((codeBlock) => {
 
     .post-tag {
         display: inline-block;
-        background: rgba(255, 183, 197, 0.1);
-        color: #d85a7f;
+        background: rgba(127, 178, 216, 0.1);
+        color: #4a90e2;
         padding: 2px 10px;
         border-radius: 8px;
         font-size: 0.8em;
         margin: 0 3px;
-        border: 1px solid rgba(255, 183, 197, 0.3);
+        border: 1px solid rgba(127, 178, 216, 0.3);
     }
-    .post-content h2, .post-content h3 { color: #d85a7f; margin-top: 35px; border-left: 4px solid var(--primary-color); padding-left: 15px; font-weight: 600; }
+    .post-content h2, .post-content h3 { color: #4a90e2; margin-top: 35px; border-left: 4px solid var(--primary-color); padding-left: 15px; font-weight: 600; }
     .post-content img { max-width: 90%; display: block; margin: 25px auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .post-content code { background: #fef0f3; color: #d85a7f; padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 0.9em; }
+    .post-content code { background: #f0f7ff; color: #4a90e2; padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 0.9em; }
     .post-content pre { background: #2d2d2d; color: #ffffff !important; padding: 18px; border-radius: 12px; overflow-x: auto; line-height: 1.5; font-size: 0.85rem; }
     .post-content pre code { color: #ffffff !important; } /* 确保代码内部文字也是白色 */
 </style>

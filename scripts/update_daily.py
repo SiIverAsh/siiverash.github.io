@@ -43,7 +43,7 @@ def get_ai_recommendation(context):
     6. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等。
     7. 对于Paint，必须推荐画师名并提供真实的 X ID（不确定则留空）。
     8. 对于history推荐内容为“历史上的今天”。
-    9. **CV推荐**：必须严格参考**《声优名鉴》(声優名鑑)**数据，推荐一位日本声优。必须包含：姓名(name)、所属事务所(agency)、出生地(hometown)、代表作(works)、以及一段基于名鉴风格的专业评价(intro)。
+    9. **CV推荐**：必须严格参考**《声优名鉴》(声優名鑑)**数据，推荐一位日本声优。必须包含：姓名(name)、所属事务所(agency)、出生地(hometown)、代表作(works)、以及一段基于名鉴风格的专业评价(intro,不用特别长，大约二百字即可)。
     10. 所有的回答请务必用中文。
     
     必须输出以下 JSON 格式：
@@ -93,11 +93,10 @@ def update_yaml():
             cleaned_content = clean_json_string(raw_content)
             ai_content = json.loads(cleaned_content)
             
-            # 增强 Paint 链接的处理逻辑：只有当 ID 看起来合法时才拼接
+         
             paint_list = []
             for item in ai_content.get('paint', []):
                 x_id = str(item.get('x_id', '')).strip().lstrip('@')
-                # 过滤掉占位符或明显虚假的 ID
                 if '/' in x_id: x_id = x_id.split('/')[-1]
                 
                 # 如果 ID 包含中文、空格或过短，视为无效
