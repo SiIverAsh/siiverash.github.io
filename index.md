@@ -129,7 +129,7 @@ title: Welcome to My HP!
         const linkArea = document.getElementById('external-link-area');
         const link = document.getElementById('external-link');
         
-        content.innerHTML = `<h3 style="color: #d85a7f; margin-bottom: 10px;">${categoryLabel}：${title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${desc}</p>`;
+        content.innerHTML = `<h3 style="color: #d85a7f; margin-bottom: 10px;">${title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${desc}</p>`;
         
         tagBox.innerHTML = '';
         if (tags && tags.length > 0) {
