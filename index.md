@@ -21,7 +21,7 @@ title: Welcome to My HP!
     <!-- 子分类选择区 -->
     <div id="sub-tags-area" style="margin-top: 25px; display: none; animation: fadeIn 0.5s;">
         <span class="sub-tag" onclick="showStudyDetail('CV')">视觉 (CV)</span>
-        <span class="sub-tag" onclick="showStudyDetail('NLP')">语言 (NLP)</span>
+        <span class="sub-tag" onclick="showStudyDetail('NLP')">LLM (NLP)</span>
         <span class="sub-tag" onclick="showStudyDetail('Audio')">音频 (Audio)</span>
         <span class="sub-tag" onclick="showStudyDetail('Net')">网络 (Net)</span>
         <br>
@@ -61,7 +61,7 @@ title: Welcome to My HP!
     function handleStudyClick() {
         currentType = 'study';
         document.getElementById('sub-tags-area').style.display = 'block';
-        document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f; font-weight: bold;">请选择一个研究领域 💡</p>';
+        document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f; font-weight: bold;">请选择一个领域 💡</p>';
         document.getElementById('rec-tags').innerHTML = '';
         document.getElementById('refresh-parent').style.display = 'none';
         document.getElementById('external-link-area').style.display = 'none';
@@ -73,7 +73,6 @@ title: Welcome to My HP!
         if (list && Array.isArray(list)) {
             const index = getNextIndex(list.length);
             const item = list[index];
-            // 去除 'Study - ' 前缀
             updateUI(subType, item.title, item.desc, [], null);
         } else {
             console.error("Data not found for study." + subType);
@@ -90,12 +89,10 @@ title: Welcome to My HP!
             const item = list[index];
             updateUI(type.toUpperCase(), item.title, item.desc, item.tags || [], item.twitter || null);
         } else if (list && typeof list === 'object') {
-            // 兼容旧的单对象格式
             updateUI(type.toUpperCase(), list.title, list.desc, list.tags || [], list.twitter || null);
         }
     }
 
-    // 强制获取不同的索引，避免点击“换一个”没反应
     function getNextIndex(length) {
         if (length <= 1) return 0;
         let newIndex = Math.floor(Math.random() * length);

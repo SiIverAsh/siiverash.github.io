@@ -32,12 +32,12 @@ def get_ai_recommendation(context):
     prompt_template = """
     用中文回答
     今日实时背景：{CONTEXT_PLACEHOLDER}
-    请作为专家助手为一名我提供每日推荐，对于推荐的内容，必须很新，不能是很旧的内容。
+    请作为专家助手为一名我提供每日推荐，对于study推荐的内容，必须很新，不能是很旧的内容，对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等，对于Paint，必须推荐画师，以及给出画师的x链接。
     
     要求：
     1. 每个分类/子领域必须提供正好 3 个不同的推荐项。
     2. desc 必须直接输出硬核技术细节或专业点评，严禁使用引导性废话。
-    3. Anime(至少5个tags)、Music(至少3个tags)、Paint(必须是画师，必须有twitter链接)。
+    3. Anime(至少5个tags)、Music(至少3个tags)、Pain)。
     
     必须且仅输出以下 JSON 格式：
     {{

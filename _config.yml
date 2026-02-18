@@ -1,8 +1,13 @@
 title: Silverash's Space
-description: "计科人 / 二次元 / 音乐 / 绘画"
 baseurl: ""
 url: "https://siiverash.github.io"
 
+# 社交链接配置
+social:
+  github: "https://github.com/siiverash"
+  twitter: "https://x.com/Wolfram1907" 
+  pixiv: "https://www.pixiv.net/users/55937658" 
+  email: "z1379523665@gmail.com" 
 
 # 插件
 plugins:

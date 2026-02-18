@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
     
+    <!-- 站点统计：本地化脚本 -->
+    <script async src="{{ site.baseurl }}/assets/js/site-metrics.js"></script>
+    
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         :root {
             --primary-color: #ffb7c5;
@@ -27,7 +33,6 @@
             background-size: cover; z-index: -1;
         }
 
-        /* 响应式大容器 */
         .wrapper {
             max-width: 1100px;
             margin: 0 auto;
@@ -38,7 +43,6 @@
             min-height: calc(100vh - 80px);
         }
 
-        /* 左侧个人信息卡片 */
         .sidebar {
             position: sticky;
             top: 40px;
@@ -64,10 +68,28 @@
         }
         .avatar:hover { transform: rotate(360deg) scale(1.1); }
 
-        .sidebar h2 { margin: 10px 0; color: #d85a7f; }
-        .sidebar p { font-size: 0.9em; color: #666; line-height: 1.5; }
+        .sidebar h2 { margin: 10px 0 5px; color: #d85a7f; }
+        .sidebar p { font-size: 0.9em; color: #666; line-height: 1.5; margin-bottom: 15px; }
 
-        .nav-links { margin-top: 25px; text-align: left; }
+        /* 社交图标样式 */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            color: #888;
+            font-size: 1.2em;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .nav-links { margin-top: 10px; text-align: left; }
         .nav-item {
             display: block;
             padding: 10px 15px;
@@ -84,7 +106,6 @@
             transform: translateX(8px);
         }
 
-        /* 右侧主内容区 */
         .main-content {
             animation: slideInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -100,17 +121,9 @@
             min-height: 400px;
         }
 
-        /* 动画定义 */
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes slideInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* 移动端适配 */
         @media (max-width: 850px) {
             .wrapper { grid-template-columns: 1fr; }
             .sidebar { position: relative; top: 0; }
@@ -120,11 +133,18 @@
 <body>
     <div class="background"></div>
     <div class="wrapper">
-        <!-- 侧边栏 -->
         <aside class="sidebar">
             <img src="https://github.com/siiverash.png" alt="Avatar" class="avatar">
             <h2>Silverash</h2>
-            <p><br>计科 / 二次元</p>
+            <p>计科 / 二次元 / 画师</p>
+            
+            <!-- 社交图标栏 -->
+            <div class="social-links">
+                {% if site.social.github %}<a href="{{ site.social.github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>{% endif %}
+                {% if site.social.twitter %}<a href="{{ site.social.twitter }}" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>{% endif %}
+                {% if site.social.pixiv %}<a href="{{ site.social.pixiv }}" target="_blank" title="Pixiv"><i class="fas fa-palette"></i></a>{% endif %}
+                {% if site.social.email %}<a href="{{ site.social.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
+            </div>
             
             <nav class="nav-links">
                 <a href="{{ site.baseurl }}/" class="nav-item">🏠 首页</a>
@@ -135,19 +155,12 @@
             </nav>
         </aside>
 
-        <!-- 内容区 -->
         <main class="main-content">
             <div class="content-card">
                 {{ content }}
-                
                 <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed rgba(0,0,0,0.1); font-size: 0.85em; color: #888; text-align: center;">
-                    <p>
-                        &copy; {{ site.time | date: '%Y' }} {{ site.title }}. 
-                    </p>
-                    <p>
-                        Powered by <a href="https://jekyllrb.com/" target="_blank" style="color: #d85a7f; text-decoration: none;">Jekyll</a> 
-                        & <a href="https://pages.github.com/" target="_blank" style="color: #d85a7f; text-decoration: none;">GitHub Pages</a>.
-                    </p>
+                    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
+                    <p>Powered by <a href="https://jekyllrb.com/" target="_blank" style="color: #d85a7f; text-decoration: none;">Jekyll</a> & <a href="https://pages.github.com/" target="_blank" style="color: #d85a7f; text-decoration: none;">GitHub Pages</a>.</p>
                 </footer>
             </div>
         </main>
