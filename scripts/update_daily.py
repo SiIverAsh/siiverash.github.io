@@ -74,7 +74,7 @@ def get_ai_recommendation(context):
             {"role": "user", "content": prompt}
         ],
         "response_format": {"type": "json_object"},
-        "max_tokens": 5000,
+        "max_tokens": 6000,
         "temperature": 0.7
     }
 
