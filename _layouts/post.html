@@ -7,8 +7,7 @@ layout: default
         <h1 style="color: #d85a7f; margin-bottom: 10px;">{{ page.title }}</h1>
         <div style="color: #999; font-size: 0.9em;">
             发布于 {{ page.date | date: "%Y年%m月%d日" }} | 
-            分类：{% for cat in page.categories %}<span style="color: var(--primary-color)">{{ cat }}</span>{% endfor %} |
-            <span id="busuanzi_container_page_pv">阅读量 <span id="busuanzi_value_page_pv">--</span> 次</span>
+            分类：{% for cat in page.categories %}<span style="color: var(--primary-color)">{{ cat }}</span>{% endfor %}
         </div>
     </header>
 
