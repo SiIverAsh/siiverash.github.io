@@ -50,11 +50,7 @@
 </head>
 <body>
     <div class="background"></div>
-    
-    <!-- 稳健数据源：不使用 base64，直接通过 JSON 字符串传递 -->
-    <script id="data-raw" type="application/json">
-        {{ site.data.recommendations | jsonify }}
-    </script>
+    <script id="data-raw" type="application/json">{{ site.data.recommendations | jsonify }}</script>
 
     <div class="wrapper">
         <aside class="sidebar glass-card">
@@ -87,15 +83,19 @@
         <aside class="extra-sidebar">
             <div class="extra-box glass-card"><div class="extra-title"><i class="fas fa-search"></i> 全站搜索</div><input type="text" id="search-input" placeholder="输入关键词..."><ul id="results-container"></ul></div>
             <div class="extra-box glass-card clock-box"><div id="clock-time">00:00:00</div><div id="clock-date"></div><div id="clock-lunar"></div></div>
-            <div class="extra-box glass-card"><div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div><div id="history-content" style="max-height: 350px; overflow-y: auto;">载入中...</div></div>
+            
+            <!-- 仅在首页显示历史上的今天 -->
+            {% if page.url == "/" or page.url == "/index.html" %}
+            <div class="extra-box glass-card">
+                <div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div>
+                <div id="history-content" style="max-height: 350px; overflow-y: auto;">载入中...</div>
+            </div>
+            {% endif %}
         </aside>
     </div>
     <script>
         let dailyData = {};
-        try {
-            const rawJson = document.getElementById('data-raw').textContent;
-            dailyData = JSON.parse(rawJson);
-        } catch (e) { console.error("Data Load Error", e); }
+        try { dailyData = JSON.parse(document.getElementById('data-raw').textContent); } catch (e) { }
 
         function updateClock() {
             const now = new Date();
@@ -110,10 +110,8 @@
 
         function loadHistory() {
             const container = document.getElementById('history-content');
-            if (dailyData && dailyData.history && Array.isArray(dailyData.history)) {
+            if (container && dailyData.history && Array.isArray(dailyData.history)) {
                 container.innerHTML = dailyData.history.map(item => `<div class="history-item"><span class="history-year">${item.year}</span><br>${item.event}</div>`).join('');
-            } else {
-                container.innerHTML = '<div style="font-size:0.8em;color:#999;">今天似乎很平静。</div>';
             }
         }
         loadHistory();
