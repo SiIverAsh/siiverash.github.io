@@ -1,0 +1,21 @@
+<aside class="sidebar glass-card">
+    <a href="{{ site.baseurl }}/about">
+        <img src="https://github.com/siiverash.png" alt="Avatar" class="avatar" title="Click! About me">
+    </a>
+    <h2>Silverash</h2>
+    <div class="social-links">
+        {% if site.social.github %}<a href="{{ site.social.github }}" target="_blank"><i class="fab fa-github"></i></a>{% endif %}
+        {% if site.social.twitter %}<a href="{{ site.social.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>{% endif %}
+        {% if site.social.pixiv %}<a href="{{ site.social.pixiv }}" target="_blank"><i class="fas fa-image"></i></a>{% endif %}
+        {% if site.social.email %}<a href="{{ site.social.email }}"><i class="fas fa-envelope"></i></a>{% endif %}
+    </div>
+    <nav class="nav-links">
+        <a href="{{ site.baseurl }}/" class="nav-item"><i class="fas fa-home"></i> 首页</a>
+        <a href="{{ site.baseurl }}/categories/study/" class="nav-item"><i class="fas fa-terminal"></i> 学习笔记</a>
+        <a href="{{ site.baseurl }}/categories/anime/" class="nav-item"><i class="fas fa-clapperboard"></i> 动漫记录</a>
+        <a href="{{ site.baseurl }}/categories/music/" class="nav-item"><i class="fas fa-compact-disc"></i> 同音鉴赏</a>
+        <a href="{{ site.baseurl }}/categories/paint/" class="nav-item"><i class="fas fa-pen-nib"></i> 胡乱涂鸦</a>
+        <a href="{{ site.baseurl }}/categories/game/" class="nav-item"><i class="fas fa-ghost"></i> 游戏荒野</a>
+        <a href="{{ site.baseurl }}/categories/snap/" class="nav-item"><i class="fas fa-camera"></i> 瞬间随拍</a>
+    </nav>
+</aside>

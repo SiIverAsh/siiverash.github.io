@@ -1,0 +1,29 @@
+<div class="extra-box glass-card search-box-card">
+    <div class="extra-title"><i class="fas fa-search"></i> 全站搜索</div>
+    <div class="search-wrapper">
+        <input type="text" id="search-input" placeholder="输入关键词...">
+        <ul id="results-container"></ul>
+    </div>
+</div>
+
+<div class="extra-box glass-card clock-box">
+    <div id="clock-time">00:00:00</div>
+    <div id="clock-date"></div>
+    <div id="clock-lunar"></div>
+</div>
+
+<!-- 仅在首页或特定页面显示历史记录 -->
+{% if page.url == "/" or page.url == "/index.html" %}
+<div class="extra-box glass-card">
+    <div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div>
+    <div id="history-content" style="max-height: 350px; overflow-y: auto;">载入中...</div>
+</div>
+{% endif %}
+
+<!-- 预留：TOC 目录卡片 (仅在文章详情页显示) -->
+{% if page.layout == 'post' %}
+<div class="extra-box glass-card toc-box">
+    <div class="extra-title"><i class="fas fa-list-ul"></i> 文章目录</div>
+    <div id="toc-content"></div>
+</div>
+{% endif %}
