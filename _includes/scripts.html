@@ -35,8 +35,10 @@
         if (cvName && window.siteData && window.siteData.cv_recommend) {
             const cv = window.siteData.cv_recommend;
             cvName.textContent = cv.name;
+            document.getElementById('cv-agency').textContent = "🏢 " + cv.agency;
+            document.getElementById('cv-hometown').textContent = "📍 " + cv.hometown;
             document.getElementById('cv-works').textContent = "代表作: " + cv.works;
-            document.getElementById('cv-feature').textContent = cv.feature;
+            document.getElementById('cv-intro').textContent = cv.intro;
         }
 
         // 识别动漫博文详情页的标签

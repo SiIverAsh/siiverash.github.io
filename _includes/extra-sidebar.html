@@ -23,11 +23,15 @@
 <!-- 动漫分类页：显示每日声优推荐 -->
 {% if page.url contains '/categories/anime' %}
 <div class="extra-box glass-card">
-    <div class="extra-title"><i class="fas fa-microphone-lines"></i> 今日声优推荐</div>
+    <div class="extra-title"><i class="fas fa-microphone-lines"></i> 声优名鉴 · 每日推荐</div>
     <div id="cv-content">
-        <h4 id="cv-name" style="color: #4a90e2; margin: 0 0 10px 0;">载入中...</h4>
-        <p id="cv-works" style="font-size: 0.85em; color: #666; margin-bottom: 8px;"></p>
-        <p id="cv-feature" style="font-size: 0.8em; color: #888; font-style: italic;"></p>
+        <h4 id="cv-name" style="color: #4a90e2; margin: 0 0 5px 0;"></h4>
+        <div id="cv-meta" style="font-size: 0.75em; color: #888; margin-bottom: 10px;">
+            <span id="cv-agency" style="margin-right: 10px;"></span>
+            <span id="cv-hometown"></span>
+        </div>
+        <p id="cv-works" style="font-size: 0.85em; color: #666; margin-bottom: 8px; font-weight: bold;"></p>
+        <p id="cv-intro" style="font-size: 0.8em; color: #555; line-height: 1.4; border-top: 1px dashed #eee; padding-top: 8px;"></p>
     </div>
 </div>
 {% endif %}
