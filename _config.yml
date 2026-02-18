@@ -1,2 +1,4 @@
-title: silverash's homepage
-description:
+title: Silverash's Blog
+theme: minima
+plugins:
+  - jekyll-feed
