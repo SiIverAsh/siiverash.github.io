@@ -2,20 +2,42 @@
 layout: default
 ---
 
-# Category: {{ page.title }}
+<h2 style="margin-top:0; color: #d85a7f; border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 5px;">
+    {{ page.title }}
+</h2>
 
-<ul style="list-style: none; padding: 0; text-align: left; max-width: 400px; margin: 20px auto;">
+<div style="margin-top: 30px;">
   {% for post in site.categories[page.category] %}
-    <li style="margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 5px;">
-      <span style="font-size: 0.8em; color: #888;">{{ post.date | date: "%Y-%m-%d" }}</span>
-      <br>
-      <a href="{{ post.url | relative_url }}" style="color: #d85a7f; text-decoration: none; font-weight: bold;">
-        {{ post.title }}
-      </a>
-    </li>
+    <a href="{{ post.url | relative_url }}" style="text-decoration: none; display: block; margin-bottom: 20px;">
+        <div class="post-preview-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0; color: #444;">{{ post.title }}</h3>
+                <span style="font-size: 0.85em; color: #888;">{{ post.date | date: "%Y-%m-%d" }}</span>
+            </div>
+            <p style="margin: 10px 0 0; color: #666; font-size: 0.95em; line-height: 1.6;">
+                {{ post.excerpt | strip_html | truncate: 120 }}
+            </p>
+        </div>
+    </a>
   {% else %}
-    <p>目前还没有文章，快去写一篇吧！(๑•̀ㅂ•́)و✧</p>
+    <div style="text-align: center; padding: 50px 0; color: #999;">
+        <p style="font-size: 3em; margin: 0;">( ; ω ; )</p>
+        <p>这一栏还没有文章呢...</p>
+    </div>
   {% endfor %}
-</ul>
+</div>
 
-<a href="{{ site.baseurl }}/" style="display: inline-block; margin-top: 20px; color: #777; font-size: 0.9em;">← 返回首页</a>
+<style>
+    .post-preview-card {
+        background: rgba(255,255,255,0.4);
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.5);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .post-preview-card:hover {
+        background: white;
+        transform: scale(1.02) translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+</style>

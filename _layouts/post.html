@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<article>
+    <header style="margin-bottom: 30px; text-align: center;">
+        <h1 style="color: #d85a7f; margin-bottom: 10px;">{{ page.title }}</h1>
+        <div style="color: #999; font-size: 0.9em;">
+            发布于 {{ page.date | date: "%Y年%m月%d日" }} | 
+            分类：{% for cat in page.categories %}<span style="color: var(--primary-color)">{{ cat }}</span>{% endfor %}
+        </div>
+    </header>
+
+    <div class="post-content" style="line-height: 1.8; color: #444; font-size: 1.05em;">
+        {{ content }}
+    </div>
+
+    <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #eee; text-align: center;">
+        <a href="javascript:history.back()" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">
+            ← 返回列表
+        </a>
+    </footer>
+</article>
+
+<style>
+    .post-content h2, .post-content h3 { color: #d85a7f; margin-top: 30px; }
+    .post-content img { max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px 0; }
+    .post-content code { background: #fef0f3; color: #d85a7f; padding: 2px 6px; border-radius: 4px; }
+    .post-content pre { background: #2d2d2d; color: #ccc; padding: 20px; border-radius: 12px; overflow-x: auto; }
+</style>
