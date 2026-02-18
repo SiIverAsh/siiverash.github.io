@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+# Category: {{ page.title }}
+
+<ul style="list-style: none; padding: 0; text-align: left; max-width: 400px; margin: 20px auto;">
+  {% for post in site.categories[page.category] %}
+    <li style="margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 5px;">
+      <span style="font-size: 0.8em; color: #888;">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <br>
+      <a href="{{ post.url | relative_url }}" style="color: #d85a7f; text-decoration: none; font-weight: bold;">
+        {{ post.title }}
+      </a>
+    </li>
+  {% else %}
+    <p>目前还没有文章，快去写一篇吧！(๑•̀ㅂ•́)و✧</p>
+  {% endfor %}
+</ul>
+
+<a href="{{ site.baseurl }}/" style="display: inline-block; margin-top: 20px; color: #777; font-size: 0.9em;">← 返回首页</a>

@@ -1,20 +1,21 @@
 ---
 layout: default
-title: 欢迎来到我的空间
+title: Welcome to My HP!
 ---
 
-# Silverash 👋
+# Hi, I'm Silverash 👋
 
 一名普通的 **计科人**。
 
 <p>这里是我记录生活与爱好的数字小窝。</p>
 
 <div class="tags">
-    <span class="tag"># 二次元 🌸</span>
-    <span class="tag"># 音乐 🎵</span>
-    <span class="tag"># 绘画 🎨</span>
+    <a href="{{ site.baseurl }}/categories/study" class="tag"># Study 📚</a>
+    <a href="{{ site.baseurl }}/categories/anime" class="tag"># Anime 🌸</a>
+    <a href="{{ site.baseurl }}/categories/music" class="tag"># Music 🎵</a>
+    <a href="{{ site.baseurl }}/categories/paint" class="tag"># Paint 🎨</a>
 </div>
 
 ---
 
-> “代码只是工具，生活才是目的。”
+> “Attention is all you need.”
