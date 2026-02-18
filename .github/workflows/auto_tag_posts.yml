@@ -1,0 +1,40 @@
+name: Auto Tag Blog Posts
+
+on:
+  push:
+    paths:
+      - '_posts/**' # 只有当 _posts 文件夹下的内容发生变化时才运行
+  workflow_dispatch: # 允许手动运行
+
+permissions:
+  contents: write
+
+jobs:
+  tagging:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 获取完整历史以确保能 push
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: Run Auto Tagger
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python scripts/auto_tagger.py
+
+      - name: Commit and Push Tags
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action [AI Tagger]"
+          git add _posts/*.md
+          # 只有在有变动（即 AI 生成了新标签）时才提交
+          git diff --quiet && git diff --staged --quiet || (git commit -m "AI: Automatically generated tags for blog posts [skip ci]" && git push)

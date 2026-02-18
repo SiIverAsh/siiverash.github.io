@@ -5,10 +5,20 @@ layout: default
 <article>
     <header style="margin-bottom: 30px; text-align: center;">
         <h1 style="color: #d85a7f; margin-bottom: 10px;">{{ page.title }}</h1>
-        <div style="color: #999; font-size: 0.9em;">
-            发布于 {{ page.date | date: "%Y年%m月%d日" }} | 
-            分类：{% for cat in page.categories %}<span style="color: var(--primary-color)">{{ cat }}</span>{% endfor %}
+        <div style="color: #999; font-size: 0.9em; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <span><i class="fas fa-calendar-day"></i> {{ page.date | date: "%Y年%m月%d日" }}</span>
+            <span>|</span>
+            <span><i class="fas fa-folder-open"></i> {% for cat in page.categories %}<span style="color: var(--primary-color)">{{ cat }}</span>{% endfor %}</span>
         </div>
+        
+        <!-- 文章标签显示 -->
+        {% if page.tags.size > 0 %}
+        <div style="margin-top: 15px;">
+            {% for tag in page.tags %}
+            <span class="post-tag"># {{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
     </header>
 
     <div class="post-content" style="line-height: 1.8; color: #444; font-size: 1.05em;">
@@ -23,8 +33,18 @@ layout: default
 </article>
 
 <style>
-    .post-content h2, .post-content h3 { color: #d85a7f; margin-top: 30px; }
+    .post-tag {
+        display: inline-block;
+        background: rgba(255, 183, 197, 0.1);
+        color: #d85a7f;
+        padding: 2px 10px;
+        border-radius: 8px;
+        font-size: 0.8em;
+        margin: 0 3px;
+        border: 1px solid rgba(255, 183, 197, 0.3);
+    }
+    .post-content h2, .post-content h3 { color: #d85a7f; margin-top: 30px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
     .post-content img { max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px 0; }
-    .post-content code { background: #fef0f3; color: #d85a7f; padding: 2px 6px; border-radius: 4px; }
-    .post-content pre { background: #2d2d2d; color: #ccc; padding: 20px; border-radius: 12px; overflow-x: auto; }
+    .post-content code { background: #fef0f3; color: #d85a7f; padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; }
+    .post-content pre { background: #2d2d2d; color: #ccc; padding: 20px; border-radius: 12px; overflow-x: auto; line-height: 1.5; }
 </style>
