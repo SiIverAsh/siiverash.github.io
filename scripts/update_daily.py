@@ -32,31 +32,35 @@ def get_ai_recommendation(context):
 
     prompt_template = """
     今天是 {CURRENT_DATE}。你是一个顶级硬件与人工智能专家。
-    基于实时背景：{CONTEXT_PLACEHOLDER}，为软件工程硕士提供每日推荐。
+    请基于近期（一个月以内或是一个星期内）的实时背景：{CONTEXT_PLACEHOLDER}，为一名软件工程硕士生提供每日推荐。
     
     要求：
-    1. 每个子类/分类必须提供正好 5 个项。
-    2. desc 必须精炼硬核（100字内），严禁废话。
-    3. 针对 GPU/CPU 关注 2025 年最新架构。
-    4. 所有的回答请务必用中文。
+    1. 每个分类（Study下的子类、Anime、Music、Paint、Game）必须提供正好 5 个不同的推荐项。
+    2. desc 必须输出最新的硬核技术细节（如架构特性、工艺制程、性能指标）。
+    3. 严禁使用任何引导性废话。
+    4. 针对 GPU 和 CPU 领域，必须关注最近 24-72 小时内的动态，或 2025 年最前沿的架构（如 NVIDIA Blackwell, RTX 50系列, Intel Ultra 200系列, AMD Zen 5等）。
+    5. 每个内容项（Study、Anime、Music、Game）必须包含至少 4 个 tags。
+    6. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等，对于Paint，推荐的必须是画师而不是作品，并给出画师的x链接。
+    7. 对于history推荐的内容为“历史上的今天”发生的重大事件（不限于科技史），必须提供正好 6 个不同的项，每个项包含 year 和 event 字段。
+    8. 所有的回答请务必用中文
     
     必须输出以下 JSON 格式：
     {{
       "study": {{
-        "CV": [{"title": "..", "desc": ".."}],
-        "NLP": [{"title": "..", "desc": ".."}],
-        "Audio": [{"title": "..", "desc": ".."}],
-        "Net": [{"title": "..", "desc": ".."}],
-        "Lang": [{"title": "..", "desc": ".."}],
-        "Arch": [{"title": "..", "desc": ".."}],
-        "GPU": [{"title": "..", "desc": ".."}],
-        "CPU": [{"title": "..", "desc": ".."}],
-        "News": [{"title": "..", "desc": ".."}]
+        "CV": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+        "NLP": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+        "Audio": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+        "Net": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+        "Lang": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+        "Arch": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+        "GPU": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+        "CPU": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+        "News": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}]
       }},
-      "anime": [{"title": "..", "desc": "..", "tags": []}],
-      "music": [{"title": "..", "desc": "..", "tags": []}],
+      "anime": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+      "music": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
       "paint": [{"title": "..", "desc": "..", "twitter": ".."}],
-      "game": [{"title": "..", "desc": "..", "tags": []}],
+      "game": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
       "history": [{"year": "..", "event": ".."}]
     }}
     """
@@ -70,7 +74,7 @@ def get_ai_recommendation(context):
             {"role": "user", "content": prompt}
         ],
         "response_format": {"type": "json_object"},
-        "max_tokens": 4000,
+        "max_tokens": 5000,
         "temperature": 0.7
     }
 
