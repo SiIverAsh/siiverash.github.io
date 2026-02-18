@@ -35,7 +35,7 @@ def get_ai_recommendation(context):
     请基于近期（一个月以内或是一个星期内）的实时背景：{CONTEXT_PLACEHOLDER}，为一名软件工程硕士生提供每日推荐。
     
     要求：
-    1. 每个分类（Study下的子类、Anime、Music、Paint、Game）必须提供正好 4 个不同的推荐项。
+    1. 每个分类（Study下的子类、Anime、Music、Paint、Game）必须提供正好 3 个不同的推荐项。
     2. desc 必须输出最新的硬核技术细节（如架构特性、工艺制程、性能指标）。
     3. 严禁使用任何引导性废话。
     4. 针对 GPU 和 CPU 领域，必须关注最近 24-72 小时内的动态。
