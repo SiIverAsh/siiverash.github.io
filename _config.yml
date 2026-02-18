@@ -3,22 +3,27 @@ baseurl: ""
 url: "https://siiverash.github.io"
 repository: "SiIverAsh/siiverash.github.io"
 
-# 社交链接配置
 social:
   github: "https://github.com/siiverash"
   twitter: "https://x.com/Wolfram1907" 
   pixiv: "https://www.pixiv.net/users/55937658" 
   email: "z1379523665@gmail.com" 
 
-# 插件配置
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
 
-# 分页配置
 pagination:
   enabled: true
   per_page: 10
   permalink: '/page/:num/'
-  title: ":title - 第 :num 页" 
+  title: ":title - 第 :num 页"
+  limit: 0
   sort_reverse: true
+  # 关键：确保自动页面生成开启
+  autopages:
+    enabled: true
+    categories:
+      layouts:
+        - category.html
+      dest: "categories/:name"

@@ -86,7 +86,12 @@
         </aside>
     </div>
     <script>
-        const dailyData = {{ site.data.recommendations | jsonify }} || {};
+        let dailyData = {};
+        try {
+            dailyData = {{ site.data.recommendations | jsonify }} || {};
+        } catch (e) {
+            console.error("Failed to load dailyData:", e);
+        }
         function updateClock() {
             const now = new Date();
             document.getElementById('clock-time').textContent = now.toLocaleTimeString('zh-CN', { hour12: false });
