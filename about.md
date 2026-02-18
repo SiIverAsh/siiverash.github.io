@@ -30,12 +30,11 @@ title: 关于我
 ---
 
 <style>
-    /* 核心排版修复 */
     .content-card {
-        text-align: left !important; /* 强制容器内容左对齐 */
+        text-align: left !important;
     }
     .content-card h1, .content-card > div:first-child {
-        text-align: center !important; /* 保持标题居中 */
+        text-align: center !important;
     }
     h2 { 
         border-left: 4px solid var(--primary-color); 
@@ -48,7 +47,7 @@ title: 关于我
         line-height: 2; 
         color: #444; 
         text-align: left;
-        padding-left: 25px; /* 给圆点留出显示空间 */
+        padding-left: 25px; 
     }
     li {
         text-align: left;
