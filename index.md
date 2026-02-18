@@ -28,6 +28,8 @@ title: Welcome to My HP!
         <br>
         <span class="sub-tag" onclick="showStudyDetail('Lang')">语言 (Lang)</span>
         <span class="sub-tag" onclick="showStudyDetail('Arch')">架构 (Arch)</span>
+        <span class="sub-tag" onclick="showStudyDetail('GPU')">显卡 (GPU)</span>
+        <span class="sub-tag" onclick="showStudyDetail('CPU')">处理器 (CPU)</span>
         <span class="sub-tag" onclick="showStudyDetail('News')">动态 (News)</span>
     </div>
 
