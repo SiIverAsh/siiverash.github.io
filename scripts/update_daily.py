@@ -40,7 +40,8 @@ def get_ai_recommendation(context):
     4. 针对 GPU 和 CPU 领域，必须关注最近 24-72 小时内的动态，或 2025 年最前沿的架构（如 NVIDIA Blackwell, RTX 50系列, Intel Ultra 200系列, AMD Zen 5等）。
     5. Anime(至少5个tags)、Music(至少3个tags)、Game(至少5个tags)、Paint。
     6. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等，对于Paint，必须推荐画师，以及给出画师的x链接。
-    7. 所有的回答请务必用中文
+    7. 对于history推荐的内容必须是技术史、互联网史或与当今日期相关的科技大事件，提供 3 个不同的项。
+    8. 所有的回答请务必用中文
     
     必须输出以下 JSON 格式：
     {{
@@ -74,6 +75,11 @@ def get_ai_recommendation(context):
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}}
+      ],
+      "history": [
+        {{"title": "..", "desc": ".."}},
+        {{"title": "..", "desc": ".."}},
+        {{"title": "..", "desc": ".."}}
       ]
     }}
     """
@@ -91,8 +97,10 @@ def get_ai_recommendation(context):
 
     try:
         response = requests.post(api_url, headers=headers, json=payload)
+        response.raise_for_status()
         return response.json()['choices'][0]['message']['content']
     except Exception as e:
+        print(f"Error calling AI API: {e}")
         return None
 
 def update_yaml():
@@ -102,19 +110,26 @@ def update_yaml():
         try:
             cleaned_content = clean_json_string(raw_content)
             ai_content = json.loads(cleaned_content)
+            
+            # Ensure all required keys exist, use default values if missing
             data = {
                 'date': str(datetime.now().date()),
-                'study': ai_content['study'],
-                'anime': ai_content['anime'],
-                'music': ai_content['music'],
-                'game': ai_content['game'],
-                'paint': ai_content['paint'],
-                'history': ai_content['history']
+                'study': ai_content.get('study', {}),
+                'anime': ai_content.get('anime', []),
+                'music': ai_content.get('music', []),
+                'game': ai_content.get('game', []),
+                'paint': ai_content.get('paint', []),
+                'history': ai_content.get('history', [])
             }
+            
             with open('_data/recommendations.yml', 'w', encoding='utf-8') as f:
                 yaml.dump(data, f, allow_unicode=True)
-        except:
-            pass
+            print("Successfully updated _data/recommendations.yml")
+        except Exception as e:
+            print(f"Error processing AI response: {e}")
+            print(f"Raw content: {raw_content}")
+    else:
+        print("Failed to get AI recommendation")
 
 if __name__ == "__main__":
     update_yaml()
