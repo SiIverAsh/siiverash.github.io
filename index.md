@@ -18,7 +18,7 @@ title: Welcome to My HP!
         <div class="stat-card" onclick="handleClick('paint')"><h3>🎨</h3><p>Paint</p></div>
     </div>
 
-    <!-- 子分类选择区 (增加更多标签) -->
+    <!-- 子分类选择区 -->
     <div id="sub-tags-area" style="margin-top: 25px; display: none; animation: fadeIn 0.5s;">
         <span class="sub-tag" onclick="showStudyDetail('CV')">视觉 (CV)</span>
         <span class="sub-tag" onclick="showStudyDetail('NLP')">语言 (NLP)</span>
@@ -33,7 +33,7 @@ title: Welcome to My HP!
     <!-- 每日推荐显示区 -->
     <div id="recommend-box" class="recommend-box">
         <div id="recommend-content">
-            <p style="color: #999;">✨ 点击上方卡片，查看今日推荐 ✨</p>
+            <p style="color: #999;">✨ 点击上方卡片，查看今日 AI 自动推荐 ✨</p>
         </div>
         <div id="rec-tags" class="rec-tags"></div>
         <a id="go-to-list" href="#" class="go-btn">查看全部文章 →</a>
@@ -52,11 +52,12 @@ title: Welcome to My HP!
 
     function showStudyDetail(subType) {
         if (!dailyData.study || !dailyData.study[subType]) {
-            alert("该领域数据尚在生成中，请运行 Action 更新。");
+            alert("该领域数据正在生成中。");
             return;
         }
         const item = dailyData.study[subType];
-        updateUI('Study - ' + subType, item.title, item.desc, [subType, 'Daily'], 'study');
+        // 传入空数组，不再显示 Tag
+        updateUI('Study - ' + subType, item.title, item.desc, [], 'study');
     }
 
     function handleClick(type) {
@@ -72,10 +73,10 @@ title: Welcome to My HP!
         const tagBox = document.getElementById('rec-tags');
         const btn = document.getElementById('go-to-list');
         
-        content.innerHTML = `<h3 style="color: #d85a7f; margin-bottom: 10px;">${categoryLabel} 推荐：${title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${desc}</p>`;
+        content.innerHTML = `<h3 style="color: #d85a7f; margin-bottom: 10px;">${categoryLabel}：${title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${desc}</p>`;
         
         tagBox.innerHTML = '';
-        if (tags) {
+        if (tags && tags.length > 0) {
             tags.forEach(t => {
                 tagBox.innerHTML += `<span class="mini-tag">${t}</span>`;
             });

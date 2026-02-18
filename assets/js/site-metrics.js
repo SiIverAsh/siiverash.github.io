@@ -1,0 +1,49 @@
+var bszCaller, bszTag; !function() {
+    var c, d, e, a = !1, b = [];
+    ready = function(c) {
+        return a || "interactive" === document.readyState || "complete" === document.readyState ? c.call(document) : b.push(function() {
+            return c.call(this)
+        }), this
+    }, d = function() {
+        for (var c = 0, d = b.length; d > c; c++) b[c].apply(document);
+        b = []
+    }, e = function() {
+        a || (a = !0, d.call(window), document.removeEventListener ? document.removeEventListener("DOMContentLoaded", e, !1) : document.detachEvent && (document.detachEvent("onreadystatechange", e), window.detachEvent("onload", e)))
+    }, document.addEventListener ? document.addEventListener("DOMContentLoaded", e, !1) : document.attachEvent && (document.attachEvent("onreadystatechange", function() {
+        /loaded|complete/.test(document.readyState) && e()
+    }), window.attachEvent("onload", e)), bszCaller = {
+        fetch: function(a, b) {
+            var c = "BusuanziCallback_" + Math.floor(1099511627776 * Math.random());
+            window[c] = this.evalCall(b), a = a.replace("=BusuanziCallback", "=" + c), scriptTag = document.createElement("SCRIPT"), scriptTag.type = "text/javascript", scriptTag.defer = !0, scriptTag.src = a, document.getElementsByTagName("HEAD")[0].appendChild(scriptTag)
+        }, evalCall: function(a) {
+            return function(b) {
+                ready(function() {
+                    try {
+                        a(b), scriptTag.parentElement.removeChild(scriptTag)
+                    } catch (c) {
+                        bszTag.hiding()
+                    }
+                })
+            }
+        }
+    }, bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback", function(a) {
+        bszTag.texts(a), bszTag.shows()
+    }), bszTag = {
+        bszs: ["site_pv", "page_pv", "site_uv"], texts: function(a) {
+            this.bszs.forEach(function(b) {
+                var c = document.getElementById("busuanzi_value_" + b);
+                c && (c.innerHTML = a[b])
+            })
+        }, hiding: function() {
+            this.bszs.forEach(function(a) {
+                var b = document.getElementById("busuanzi_container_" + a);
+                b && (b.style.display = "none")
+            })
+        }, shows: function() {
+            this.bszs.forEach(function(a) {
+                var b = document.getElementById("busuanzi_container_" + a);
+                b && (b.style.display = "inline")
+            })
+        }
+    }
+}();

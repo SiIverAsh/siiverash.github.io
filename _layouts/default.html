@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
+    
+    <!-- 站点统计：本地化脚本以绕过广告拦截 -->
+    <script async src="{{ site.baseurl }}/assets/js/site-metrics.js"></script>
+
     <style>
         :root {
             --primary-color: #ffb7c5;
@@ -152,9 +156,6 @@
                         & <a href="https://pages.github.com/" target="_blank" style="color: #d85a7f; text-decoration: none;">GitHub Pages</a>.
                     </p>
                 </footer>
-                
-                <!-- 不蒜子统计脚本 -->
-                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             </div>
         </main>
     </div>
