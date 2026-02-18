@@ -38,4 +38,8 @@ jobs:
           git config --local user.name "GitHub Action [AI Tagger]"
           git add _posts/*.md
           # 只有在有变动（即 AI 生成了新标签）时才提交
-          git diff --quiet && git diff --staged --quiet || (git commit -m "AI: Automatically generated tags for blog posts [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (
+            git commit -m "AI: Automatically generated tags for blog posts [skip ci]"
+            git pull --rebase origin main
+            git push
+          )
