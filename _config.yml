@@ -1,4 +1,20 @@
-title: Silverash's Blog
-theme: minima
+title: Silverash's Space
+description: "计科人 / 二次元 / 音乐 / 绘画"
+remote_theme: "hojun/jekyll-theme-sakura" # 一个非常经典的 Sakura 移植版
+
+# 插件配置
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
+
+# --- 樱花主题专属配置 ---
+# 你可以在这里更换你的背景图 URL
+# 建议使用 1920x1080 以上的分页图
+background_image: "https://api.dujin.org/bing/1920.php" # 默认使用必应每日美图，你也可以换成二次元图床链接
+
+# 社交链接
+github: "siiverash"
+
+# 个人资料
+author: "Silverash"
+avatar: "https://github.com/siiverash.png" # 默认使用你的 GitHub 头像
