@@ -7,7 +7,8 @@ title: Welcome to My HP!
     <h1 style="font-size: 2.5em; color: #d85a7f; margin-bottom: 20px;">Welcome to My HP!</h1>
     
     <p style="font-size: 1.1em; line-height: 1.8;">
-        Attenion Is All You Need!
+        这里是 <b>Silverash</b> 的数字领地。<br>
+        代码只是工具，生活才是目的。
     </p>
 
     <!-- 交互卡片区 -->
@@ -36,42 +37,73 @@ title: Welcome to My HP!
             <p style="color: #999;">✨ 点击上方卡片，查看今日 AI 自动推荐 ✨</p>
         </div>
         <div id="rec-tags" class="rec-tags"></div>
-        <a id="go-to-list" href="#" class="go-btn">查看全部文章 →</a>
+        
+        <!-- 外部链接按钮 (画师推特等) -->
+        <div id="external-link-area" style="display: none; margin-top: 15px;">
+            <a id="external-link" href="#" target="_blank" class="twitter-btn">关注画师 𝕏</a>
+        </div>
+        
+        <!-- 重新推荐按钮 -->
+        <div id="refresh-btn" style="display: none; margin-top: 20px;">
+            <button onclick="reRecommend()" class="refresh-btn">
+                换一个 🔄
+            </button>
+        </div>
     </div>
 </div>
 
 <script>
     const dailyData = {{ site.data.recommendations | jsonify }} || {};
+    let currentType = '';
+    let currentSubType = '';
 
     function handleStudyClick() {
+        currentType = 'study';
         document.getElementById('sub-tags-area').style.display = 'block';
         document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f; font-weight: bold;">请选择一个研究领域 💡</p>';
         document.getElementById('rec-tags').innerHTML = '';
-        document.getElementById('go-to-list').style.display = 'none';
+        document.getElementById('refresh-btn').style.display = 'none';
+        document.getElementById('external-link-area').style.display = 'none';
     }
 
     function showStudyDetail(subType) {
-        if (!dailyData.study || !dailyData.study[subType]) {
-            alert("该领域数据正在生成中。");
-            return;
+        currentSubType = subType;
+        const list = dailyData.study[subType];
+        if (list) {
+            const item = list[Math.floor(Math.random() * list.length)];
+            updateUI('Study - ' + subType, item.title, item.desc, [], null);
         }
-        const item = dailyData.study[subType];
-        // 传入空数组，不再显示 Tag
-        updateUI('Study - ' + subType, item.title, item.desc, [], 'study');
     }
 
     function handleClick(type) {
+        currentType = type;
+        currentSubType = '';
         document.getElementById('sub-tags-area').style.display = 'none';
-        const item = dailyData[type];
-        if (item) {
-            updateUI(type.toUpperCase(), item.title, item.desc, item.tags || [], type);
+        const list = dailyData[type];
+        if (list) {
+            const item = list[Math.floor(Math.random() * list.length)];
+            // 现在为音乐和动漫都传递 tags
+            updateUI(type.toUpperCase(), item.title, item.desc, item.tags || [], item.twitter || null);
         }
     }
 
-    function updateUI(categoryLabel, title, desc, tags, categoryUrl) {
+    function reRecommend() {
+        if (currentType === 'study' && currentSubType) {
+            showStudyDetail(currentSubType);
+        } else if (currentType) {
+            handleClick(currentType);
+        }
+        const btn = document.querySelector('.refresh-btn');
+        btn.style.transform = 'rotate(360deg)';
+        setTimeout(() => btn.style.transform = 'rotate(0deg)', 500);
+    }
+
+    function updateUI(categoryLabel, title, desc, tags, twitterUrl) {
         const content = document.getElementById('recommend-content');
         const tagBox = document.getElementById('rec-tags');
-        const btn = document.getElementById('go-to-list');
+        const refreshBtn = document.getElementById('refresh-btn');
+        const linkArea = document.getElementById('external-link-area');
+        const link = document.getElementById('external-link');
         
         content.innerHTML = `<h3 style="color: #d85a7f; margin-bottom: 10px;">${categoryLabel}：${title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${desc}</p>`;
         
@@ -81,8 +113,15 @@ title: Welcome to My HP!
                 tagBox.innerHTML += `<span class="mini-tag">${t}</span>`;
             });
         }
-        btn.href = `{{ site.baseurl }}/categories/${categoryUrl}`;
-        btn.style.display = 'inline-block';
+
+        if (twitterUrl) {
+            link.href = twitterUrl;
+            linkArea.style.display = 'block';
+        } else {
+            linkArea.style.display = 'none';
+        }
+
+        refreshBtn.style.display = 'block';
     }
 </script>
 
@@ -95,6 +134,7 @@ title: Welcome to My HP!
         border: 1px solid rgba(255,255,255,0.5);
     }
     .stat-card:hover { transform: translateY(-10px); background: white; }
+    
     .sub-tag {
         display: inline-block; padding: 6px 12px; margin: 4px;
         background: rgba(255,255,255,0.8); border: 1px solid var(--primary-color);
@@ -102,14 +142,31 @@ title: Welcome to My HP!
         cursor: pointer; transition: 0.3s; font-weight: bold;
     }
     .sub-tag:hover { background: var(--primary-color); color: white; }
+    
     .recommend-box {
         margin-top: 20px; background: rgba(255,255,255,0.5);
         border-radius: 24px; padding: 25px; border: 2px dashed var(--primary-color);
+        position: relative;
     }
+
+    .refresh-btn {
+        background: white; border: 1px solid var(--primary-color);
+        color: #d85a7f; padding: 5px 15px; border-radius: 20px;
+        font-size: 0.85em; cursor: pointer; transition: 0.5s ease;
+        font-weight: bold;
+    }
+    .refresh-btn:hover { background: var(--primary-color); color: white; }
+
+    .twitter-btn {
+        display: inline-block; background: #1da1f2; color: white;
+        padding: 6px 15px; border-radius: 15px; text-decoration: none;
+        font-size: 0.85em; font-weight: bold; transition: 0.3s;
+    }
+    .twitter-btn:hover { background: #0c85d0; transform: scale(1.05); }
+
     .mini-tag {
         display: inline-block; background: #fef0f3; color: #d85a7f;
         padding: 2px 10px; border-radius: 10px; font-size: 0.75em;
         margin: 5px; border: 1px solid var(--primary-color);
     }
-    .go-btn { margin-top: 20px; display: none; color: var(--primary-color); text-decoration: none; font-weight: bold; }
 </style>

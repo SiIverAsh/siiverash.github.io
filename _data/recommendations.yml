@@ -1,38 +1,21 @@
-anime:
-  desc: 推荐理由：奇幻冒险题材，讲述精灵魔法使芙莉莲在勇者逝世后重新探索世界的旅程，画风细腻，情感刻画深刻，探讨生命与记忆的主题。
-  tags:
-  - 奇幻
-  - 冒险
-  - 治愈
-  - 漫画改编
-  - MAPPA制作
-  title: 葬送のフリーレン
 date: '2026-02-18'
-music:
-  desc: 推荐理由：东方Project经典同人曲，nomico演唱的电子舞曲版本，旋律洗脑，PV采用剪影动画风格极具创意，是东方同人音乐的标志性作品。
-  title: Bad Apple!! feat. nomico / Alstroemeria Records (东方同人)
-paint:
-  desc: 给出画师推特链接：https://twitter.com/yonema，推荐理由：日本知名动画师与插画家，色彩运用大胆，角色动态感强，代表作《EVA》系列原画与个人插画集。
-  title: 米山舞 / 赛璐璐风格
 study:
-  Arch:
-    desc: 介绍高并发系统实践 - 使用Rust + Tokio异步运行时构建微服务，结合gRPC实现高效通信，通过链路追踪与熔断机制保障系统稳定性。
-    title: 架构/前后端
-  Audio:
-    desc: 介绍音频处理技术Whisper.cpp - OpenAI Whisper模型的C++移植版，优化实时语音识别，支持多平台部署，显著降低延迟与资源消耗。
-    title: 声纹/音频
-  CV:
-    desc: 介绍CV领域的SOTA模型Segment Anything Model (SAM) - Meta AI开发的通用图像分割模型，通过提示（点、框、文本）实现零样本分割，支持多种下游任务。
-    title: 视觉相关
-  Lang:
-    desc: 介绍Python 3.12新特性 - 优化错误信息提示，引入新型f-string解析器提升性能，新增`@override`装饰器增强代码可读性与维护性。
-    title: 编程语言
-  NLP:
-    desc: 介绍NLP技术Retrieval-Augmented Generation (RAG) - 结合检索与生成的大模型增强技术，通过外部知识库减少幻觉，提升回答准确性，广泛应用于企业级AI应用。
-    title: 语言处理
-  Net:
-    desc: 介绍网络协议QUIC - 基于UDP的下一代传输协议，内置TLS加密，减少连接延迟，支持多路复用，被HTTP/3采用以提升Web性能。
-    title: 计网/安全
-  News:
-    desc: 汇总OpenAI动态 - 发布GPT-4o mini模型，成本降低50%，响应速度提升2倍，支持128K上下文，面向开发者提供更高效的API服务。
-    title: AI 业界动态
+  CV: [{title: "YOLOv11", desc: "高效目标检测模型。"}]
+  NLP: [{title: "DeepSeek-V3", desc: "开源大模型新标杆。"}]
+  Audio: [{title: "CAM++", desc: "声纹识别优化。"}]
+  Net: [{title: "HTTP/3", desc: "基于 QUIC 的新协议。"}]
+  Lang: [{title: "Rust Ownership", desc: "理解所有权系统。"}]
+  Arch: [{title: "微服务网关", desc: "解耦业务与通用逻辑。"}]
+  News: [{title: "OpenAI Sora", desc: "视频生成领域的突破。"}]
+anime:
+  - title: "葬送的芙莉莲"
+    desc: "时间与生命的礼赞。"
+    tags: ["治愈", "奇幻", "冒险", "公路片", "高分神作"]
+music:
+  - title: "夜に駆ける"
+    desc: "YOASOBI 经典之作。"
+    tags: ["J-Pop", "轻快", "深夜感"]
+paint:
+  - title: "米山舞"
+    desc: "极具张力的构图与光影，色彩通透且富有情感。"
+    twitter: "https://x.com/yoneyamai"
