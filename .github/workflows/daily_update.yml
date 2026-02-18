@@ -1,0 +1,36 @@
+name: Daily Recommendations Update
+
+on:
+  schedule:
+    # 每天凌晨 00:00 UTC (北京时间 08:00) 运行
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  update-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        pip install requests pyyaml
+
+    - name: Run update script
+      run: |
+        python scripts/update_daily.py
+
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add _data/recommendations.yml
+        git commit -m "Update daily recommendations [skip ci]" || echo "No changes to commit"
+        git push

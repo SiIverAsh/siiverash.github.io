@@ -138,6 +138,16 @@
         <main class="main-content">
             <div class="content-card">
                 {{ content }}
+                
+                <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed rgba(0,0,0,0.1); font-size: 0.85em; color: #888; text-align: center;">
+                    <p>
+                        &copy; {{ site.time | date: '%Y' }} {{ site.title }}. 
+                    </p>
+                    <p>
+                        Powered by <a href="https://jekyllrb.com/" target="_blank" style="color: #d85a7f; text-decoration: none;">Jekyll</a> 
+                        & <a href="https://pages.github.com/" target="_blank" style="color: #d85a7f; text-decoration: none;">GitHub Pages</a>.
+                    </p>
+                </footer>
             </div>
         </main>
     </div>

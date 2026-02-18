@@ -1,0 +1,30 @@
+study:
+  - title: "Transformer 架构"
+    desc: "现代 AI 的基石。理解 Self-Attention 是掌握大模型的关键，建议阅读《Attention Is All You Need》。"
+  - title: "ONNX 量化"
+    desc: "模型部署的利器。通过将 FP32 转为 INT8，可以在不损失太多精度的情况下大幅提升推理速度。"
+  - title: "谱聚类算法"
+    desc: "声纹识别常用的聚类方式。基于图论的算法，能处理非凸形状的数据分布。"
+
+anime:
+  - title: "葬送的芙莉莲"
+    desc: "关于勇者死后的世界。在漫长的寿命中，精灵开始理解人类瞬间即逝的生命意义。"
+    tags: ["治愈", "冒险", "奇幻"]
+  - title: "孤独摇滚"
+    desc: "社恐少女的音乐成长之路。极致的视觉表现力，让每个计科人都能产生共鸣。"
+    tags: ["音乐", "喜剧", "青春"]
+  - title: "命运石之门"
+    desc: "关于时间旅行与收束的杰作。一切都是命运石之门的选择，El Psy Kongroo。"
+    tags: ["科幻", "悬疑", "神作"]
+
+music:
+  - title: "Refrain"
+    desc: "Aimer 的深情演绎。旋律中透出的孤独与希望，非常适合深夜 Coding。"
+  - title: "Stay With Me"
+    desc: "经典的 City Pop。复古的律动感，让枯燥的学习时间变得轻快起来。"
+
+paint:
+  - title: "视平线与消失点"
+    desc: "透视是绘画的骨架。理解一点透视和两点透视，能让你的画面瞬间拥有空间感。"
+  - title: "赛璐璐赛博配色"
+    desc: "尝试使用高饱和度的青色与紫色对比。霓虹灯感的色彩非常适合二次元插画。"
