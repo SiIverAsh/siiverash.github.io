@@ -50,10 +50,7 @@
 </head>
 <body>
     <div class="background"></div>
-    <!-- 隐藏数据源：防止 Liquid 注入导致 JS 语法错误 -->
-    <script id="daily-data-source" type="application/json">
-        {{ site.data.recommendations | jsonify }}
-    </script>
+    <div id="data-payload" style="display:none;">{{ site.data.recommendations | jsonify | base64_encode }}</div>
 
     <div class="wrapper">
         <aside class="sidebar glass-card">
@@ -79,23 +76,26 @@
             <div class="content-card glass-card">
                 {{ content }}
                 <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed rgba(0,0,0,0.1); font-size: 0.85em; color: #888; text-align: center;">
-                    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Powered by Jekyll & Pages.</p>
+                    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
                 </footer>
             </div>
         </main>
         <aside class="extra-sidebar">
             <div class="extra-box glass-card"><div class="extra-title"><i class="fas fa-search"></i> 全站搜索</div><input type="text" id="search-input" placeholder="输入关键词..."><ul id="results-container"></ul></div>
             <div class="extra-box glass-card clock-box"><div id="clock-time">00:00:00</div><div id="clock-date"></div><div id="clock-lunar"></div></div>
-            <div class="extra-box glass-card"><div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div><div id="history-content" style="max-height: 350px; overflow-y: auto;">等待 AI 开启时空之门...</div></div>
+            <div class="extra-box glass-card"><div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div><div id="history-content" style="max-height: 350px; overflow-y: auto;">载入中...</div></div>
         </aside>
     </div>
     <script>
-        // 安全解析数据
         let dailyData = {};
         try {
-            const rawJson = document.getElementById('daily-data-source').textContent;
-            dailyData = JSON.parse(rawJson) || {};
-        } catch (e) { console.error("Data parse error", e); }
+            const base64Data = document.getElementById('data-payload').textContent;
+            if(base64Data) {
+                // 解码 Unicode Base64
+                const jsonStr = decodeURIComponent(escape(window.atob(base64Data)));
+                dailyData = JSON.parse(jsonStr);
+            }
+        } catch (e) { console.error("Data error:", e); }
 
         function updateClock() {
             const now = new Date();
@@ -104,7 +104,7 @@
             try {
                 const lunar = new Intl.DateTimeFormat('zh-u-ca-chinese', {day:'numeric', month:'long'}).format(now);
                 document.getElementById('clock-lunar').textContent = "农历 " + lunar;
-            } catch(e) { }
+            } catch(e) {}
         }
         setInterval(updateClock, 1000); updateClock();
 

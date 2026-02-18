@@ -11,19 +11,3 @@ social:
 
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v2
-
-# 分页与自动页面生成
-pagination:
-  enabled: true
-  per_page: 10
-  permalink: '/page/:num/'
-  title: ":title - 第 :num 页"
-  limit: 0
-  sort_reverse: true
-  autopages:
-    enabled: true
-    categories:
-      layouts:
-        - category.html # 确保使用此布局
-      dest: "categories" # 生成路径为 /categories/name/
