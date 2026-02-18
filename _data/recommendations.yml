@@ -1,21 +1,117 @@
-date: '2026-02-18'
-study:
-  CV: [{title: "YOLOv11", desc: "高效目标检测模型。"}]
-  NLP: [{title: "DeepSeek-V3", desc: "开源大模型新标杆。"}]
-  Audio: [{title: "CAM++", desc: "声纹识别优化。"}]
-  Net: [{title: "HTTP/3", desc: "基于 QUIC 的新协议。"}]
-  Lang: [{title: "Rust Ownership", desc: "理解所有权系统。"}]
-  Arch: [{title: "微服务网关", desc: "解耦业务与通用逻辑。"}]
-  News: [{title: "OpenAI Sora", desc: "视频生成领域的突破。"}]
 anime:
-  - title: "葬送的芙莉莲"
-    desc: "时间与生命的礼赞。"
-    tags: ["治愈", "奇幻", "冒险", "公路片", "高分神作"]
+- desc: Studio Trigger's adaptation of CD Projekt Red's universe with hand-drawn animation
+    over 3D backgrounds, implementing chromatic aberration effects and scanline rendering
+    for cyberpunk aesthetic.
+  tags:
+  - Cyberpunk
+  - Action
+  - Drama
+  - Sci-Fi
+  - Violence
+  title: 'Cyberpunk: Edgerunners'
+date: '2026-02-18'
 music:
-  - title: "夜に駆ける"
-    desc: "YOASOBI 经典之作。"
-    tags: ["J-Pop", "轻快", "深夜感"]
+- desc: Implements analog synthesizer emulation with Moog-style ladder filters, using
+    sidechain compression with 4:1 ratio and tape saturation with harmonic distortion
+    for lo-fi aesthetic.
+  tags:
+  - Electronic
+  - Experimental
+  - Ambient
+  title: Lorn - Acid Rain
 paint:
-  - title: "米山舞"
-    desc: "极具张力的构图与光影，色彩通透且富有情感。"
-    twitter: "https://x.com/yoneyamai"
+- desc: Utilizes Photoshop with custom brush sets for texture painting, implementing
+    layer blending modes with overlay and soft light for atmospheric perspective and
+    color grading with adjustment layers.
+  title: Wlop Digital Painting Techniques
+  twitter: https://twitter.com/wlop
+study:
+  Arch:
+  - desc: Implements microservices with gRPC-based communication, using Kubernetes
+      for orchestration with horizontal pod autoscaling and Istio for service mesh
+      with circuit breaking patterns.
+    title: 'SWE-Agent-Arena: Distributed System Architecture'
+  - desc: Deploys Kafka clusters with 3-node replication factor, implementing exactly-once
+      semantics with transactional producers and consumer groups with partition rebalancing
+      algorithms.
+    title: Event-driven Architecture with Apache Kafka
+  - desc: Utilizes Lambda functions with provisioned concurrency, implementing API
+      Gateway integration with custom authorizers and Step Functions for workflow
+      orchestration with state machines.
+    title: Serverless Computing with AWS Lambda
+  Audio:
+  - desc: Implements Mel-frequency cepstral coefficients extraction with Kaldi-based
+      acoustic modeling, using approximate nearest neighbor search with FAISS indices
+      for real-time audio clip retrieval.
+    title: 'myinstants-mcp: Audio Instant Retrieval System'
+  - desc: Utilizes TDNN architectures for speaker embedding extraction, implementing
+      probabilistic linear discriminant analysis for speaker clustering with agglomerative
+      hierarchical clustering algorithms.
+    title: Meeting Audio Diarization with x-vectors
+  - desc: Deploys convolutional autoencoders with RVQ codebooks for audio compression,
+      using GAN-based discriminators for perceptual quality enhancement at 6kbps bitrates.
+    title: Neural Audio Codec with Residual Vector Quantization
+  CV:
+  - desc: Implements CLIP-based visual-text alignment with temporal attention mechanisms
+      for meeting video analysis, using 3D CNN for spatial-temporal feature extraction
+      and transformer encoders for cross-modal fusion.
+    title: 'Meeting-Memory: Multi-modal Meeting Summarization'
+  - desc: Leverages DDPM with conditional U-Net architectures for temporal consistency,
+      incorporating optical flow guidance and masked attention mechanisms for frame-to-frame
+      coherence in video completion tasks.
+    title: Diffusion Models for Video Inpainting
+  - desc: Utilizes positional encoding with multi-layer perceptrons for implicit neural
+      representations, implementing volume rendering with hierarchical sampling and
+      view-dependent appearance modeling.
+    title: NeRF-based Scene Reconstruction from Sparse Views
+  Lang:
+  - desc: Utilizes Rust's ownership system with lifetimes for memory safety, implementing
+      async/await with tokio runtime and custom derive macros for protocol message
+      serialization.
+    title: Rust-based Protocol Implementation
+  - desc: Implements mypy static type checking with generic types and protocol definitions,
+      using dataclasses with field validators and property decorators for runtime
+      type enforcement.
+    title: Python Type Hints for Large Codebases
+  - desc: Deploys Emscripten toolchain for C++ to WebAssembly compilation, implementing
+      JavaScript binding with Embind and memory management with linear memory allocation.
+    title: WASM Compilation for Web Applications
+  NLP:
+  - desc: Implements fine-tuned BERT-Large with multi-head attention for sentiment
+      classification, using CRF layers for named entity recognition in user feedback
+      datasets with 85% F1-score.
+    title: Feedback Analysis with BERT-based Models
+  - desc: Deploys T5-3B with encoder-decoder architecture for abstractive summarization,
+      incorporating pointer-generator networks for handling out-of-vocabulary tokens
+      in meeting transcripts.
+    title: Meeting Transcript Summarization with T5
+  - desc: Uses RoBERTa with custom tokenization for protocol message parsing, implementing
+      sequence labeling with BIO tagging scheme and conditional random fields for
+      structured output.
+    title: Multi-agent Communication Protocol Parsing
+  Net:
+  - desc: Implements packet capture with libpcap, using flow-based analysis with 5-tuple
+      hashing and statistical anomaly detection with Z-score calculations for network
+      intrusion detection.
+    title: 'Agent Finger Protocol: Network Traffic Analysis'
+  - desc: Deploys RFC 6455 compliant WebSocket servers with binary frame fragmentation,
+      implementing message queueing with Redis pub/sub and connection pooling with
+      1000+ concurrent connections.
+    title: WebSocket-based Real-time Communication
+  - desc: Analyzes UDP-based multiplexed streams with TLS 1.3 encryption, implementing
+      connection migration with CID rotation and 0-RTT handshake optimizations for
+      reduced latency.
+    title: QUIC Protocol Implementation Analysis
+  News:
+  - desc: Microsoft releases enterprise version with organization-wide codebase indexing,
+      implementing custom model fine-tuning with private repositories and compliance
+      features for regulated industries.
+    title: GitHub Copilot Enterprise Launch
+  - desc: Introduces torch.compile with graph breaks reduction, implementing inductor
+      backend improvements for GPU kernel fusion and memory planning optimizations
+      for transformer models.
+    title: PyTorch 2.3 Performance Optimizations
+  - desc: Announces memory safety audit program for critical crates, implementing
+      fuzzing infrastructure with libFuzzer integration and formal verification tools
+      for unsafe code analysis.
+    title: Rust Foundation Security Initiative
