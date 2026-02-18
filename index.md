@@ -4,7 +4,7 @@ title: Welcome to My HP!
 ---
 
 <div style="text-align: center; padding: 10px 0;">
-    <h1 style="font-size: 2.5em; color: #d85a7f; margin-bottom: 20px;">Welcome to My HP!</h1>
+    <h1 style="font-size: 2.5em; color: #4a90e2; margin-bottom: 20px;">Welcome to My HP!</h1>
     <p style="font-size: 1.1em; line-height: 1.8;">Attention Is All You Need!</p>
 
     <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
@@ -42,7 +42,7 @@ title: Welcome to My HP!
     function handleStudyClick() {
         curT = 'study'; curS = '';
         document.getElementById('sub-tags-area').style.display = 'block';
-        document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f; font-weight: bold;">请选择一个研究领域 💡</p>';
+        document.getElementById('recommend-content').innerHTML = '<p style="color: #4a90e2; font-weight: bold;">请选择一个研究领域 💡</p>';
         document.getElementById('rec-tags').innerHTML = '';
         document.getElementById('refresh-parent').style.display = 'none';
         document.getElementById('external-link-area').style.display = 'none';
@@ -78,7 +78,7 @@ title: Welcome to My HP!
     }
 
     function updateUI(item, label) {
-        document.getElementById('recommend-content').innerHTML = `<h3 style="color: #d85a7f; margin-bottom: 10px;">${item.title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${item.desc}</p>`;
+        document.getElementById('recommend-content').innerHTML = `<h3 style="color: #4a90e2; margin-bottom: 10px;">${item.title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${item.desc}</p>`;
         const tBox = document.getElementById('rec-tags'); tBox.innerHTML = '';
         if (item.tags) item.tags.forEach(t => { tBox.innerHTML += `<span class="mini-tag">${t}</span>`; });
         const lArea = document.getElementById('external-link-area');
@@ -91,12 +91,12 @@ title: Welcome to My HP!
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .stat-card { background: rgba(255,255,255,0.4); padding: 15px; border-radius: 20px; width: 90px; cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.5); }
     .stat-card:hover { transform: translateY(-10px); background: white; }
-    .sub-tag { display: inline-block; padding: 6px 12px; margin: 4px; background: rgba(255,255,255,0.8); border: 1px solid var(--primary-color); color: #d85a7f; border-radius: 12px; font-size: 0.8em; cursor: pointer; transition: 0.3s; font-weight: bold; }
+    .sub-tag { display: inline-block; padding: 6px 12px; margin: 4px; background: rgba(255,255,255,0.8); border: 1px solid var(--primary-color); color: #4a90e2; border-radius: 12px; font-size: 0.8em; cursor: pointer; transition: 0.3s; font-weight: bold; }
     .sub-tag:hover { background: var(--primary-color); color: white; }
     .recommend-box { margin-top: 20px; background: rgba(255,255,255,0.5); border-radius: 24px; padding: 25px; border: 2px dashed var(--primary-color); }
-    .refresh-btn { background: white; border: 1px solid var(--primary-color); color: #d85a7f; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; cursor: pointer; transition: transform 0.5s ease; font-weight: bold; }
+    .refresh-btn { background: white; border: 1px solid var(--primary-color); color: #4a90e2; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; cursor: pointer; transition: transform 0.5s ease; font-weight: bold; }
     .refresh-btn:hover { background: var(--primary-color); color: white; }
     .twitter-btn { display: inline-block; background: #1da1f2; color: white; padding: 6px 15px; border-radius: 15px; text-decoration: none; font-size: 0.85em; font-weight: bold; transition: 0.3s; }
     .twitter-btn:hover { background: #0c85d0; transform: scale(1.05); }
-    .mini-tag { display: inline-block; background: #fef0f3; color: #d85a7f; padding: 2px 10px; border-radius: 10px; font-size: 0.75em; margin: 5px; border: 1px solid var(--primary-color); }
+    .mini-tag { display: inline-block; background: #fef0f3; color: #4a90e2; padding: 2px 10px; border-radius: 10px; font-size: 0.75em; margin: 5px; border: 1px solid var(--primary-color); }
 </style>

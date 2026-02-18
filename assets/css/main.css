@@ -1,5 +1,5 @@
 :root { 
-    --primary-color: #ffb7c5; 
+    --primary-color: #7fb2d8; 
     --text-main: #444; 
     --glass-bg: rgba(255, 255, 255, 0.75); 
     --glass-border: rgba(255, 255, 255, 0.3); 
@@ -45,7 +45,7 @@ body, html {
 }
 
 .avatar:hover { transform: rotate(360deg) scale(1.1); }
-.sidebar h2 { margin: 10px 0 5px; color: #d85a7f; font-size: 1.4em; }
+.sidebar h2 { margin: 10px 0 5px; color: #4a90e2; font-size: 1.4em; }
 
 .social-links { display: flex; justify-content: center; gap: 12px; margin-bottom: 20px; }
 .social-links a { color: #888; font-size: 1.1em; transition: 0.3s; }
@@ -75,7 +75,7 @@ body, html {
 .extra-box { padding: 20px; position: relative; }
 .search-box-card { z-index: 1000; }
 .extra-title { 
-    font-size: 0.9em; font-weight: bold; color: #d85a7f; 
+    font-size: 0.9em; font-weight: bold; color: #4a90e2; 
     margin-bottom: 15px; display: flex; align-items: center; gap: 8px; 
 }
 
@@ -101,9 +101,9 @@ body, html {
 #results-container a:hover { color: var(--primary-color); }
 
 .clock-box { text-align: center; }
-#clock-time { font-size: 1.8em; font-weight: bold; color: #d85a7f; font-family: 'Courier New', monospace; }
+#clock-time { font-size: 1.8em; font-weight: bold; color: #4a90e2; font-family: 'Courier New', monospace; }
 #clock-date { font-size: 0.9em; color: #888; margin-top: 5px; }
-#clock-lunar { font-size: 0.85em; color: #d85a7f; margin-top: 5px; font-weight: bold; }
+#clock-lunar { font-size: 0.85em; color: #4a90e2; margin-top: 5px; font-weight: bold; }
 
 #history-content { font-size: 0.85em; line-height: 1.6; color: #666; }
 .history-item { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dashed rgba(0,0,0,0.1); }
