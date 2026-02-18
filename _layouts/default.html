@@ -195,18 +195,19 @@
             <div class="extra-box glass-card clock-box">
                 <div id="clock-time">00:00:00</div>
                 <div id="clock-date">2026年02月18日</div>
+                <div id="clock-lunar" style="font-size: 0.85em; color: #d85a7f; margin-top: 5px; font-weight: bold;">加载农历...</div>
             </div>
 
             <!-- 历史上的今天 -->
             <div class="extra-box glass-card">
                 <div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div>
-                <div id="history-content">正在穿越时空...</div>
+                <div id="history-content" style="max-height: 400px; overflow-y: auto;">正在进入幻想乡...</div>
             </div>
         </aside>
     </div>
 
     <script>
-        // 1. 实时时钟逻辑
+        // 1. 实时时钟与农历逻辑
         function updateClock() {
             const now = new Date();
             const timeStr = now.toLocaleTimeString('zh-CN', { hour12: false });
@@ -217,28 +218,32 @@
         setInterval(updateClock, 1000);
         updateClock();
 
-        // 2. 历史上的今天逻辑 (使用公共接口)
+        // 获取农历 
+        async function fetchLunar() {
+            try {
+                const res = await fetch('https://api.oick.cn/nl/api.php');
+                const data = await res.json();
+                document.getElementById('clock-lunar').textContent = `农历 ${data.nlyear} ${data.nlmonth}${data.nlday}`;
+            } catch (e) {
+                document.getElementById('clock-lunar').textContent = '农历获取失败';
+            }
+        }
+        fetchLunar();
+
+        // 2. 历史上的今天逻辑 
         async function fetchHistory() {
             try {
-                const now = new Date();
-                const month = now.getMonth() + 1;
-                const day = now.getDate();
-                // 使用一个稳定的公开历史 API
-                const response = await fetch(`https:// useless-api.vercel.app/api/history?month=${month}&day=${day}`);
-                // 如果上述 API 不稳定，此处有备选逻辑：
-                const res = await fetch(`https://baike.baidu.com/cms/home/eventsOnHistory/${month < 10 ? '0'+month : month}.json`);
+                const res = await fetch('https://api.oick.cn/lishi/api.php');
                 const data = await res.json();
-                const todayEvents = data[month < 10 ? '0'+month : month][month.toString() + (day < 10 ? '0'+day : day)];
                 
                 let html = '';
-                todayEvents.slice(0, 3).forEach(item => {
-                    // 过滤掉 HTML 标签
-                    const title = item.title.replace(/<[^>]+>/g, '');
-                    html += `<div class="history-item"><span class="history-year">${item.year}年</span><br>${title}</div>`;
+                // 取前 5 条历史事件
+                data.result.slice(0, 5).forEach(item => {
+                    html += `<div class="history-item"><span class="history-year">${item.date.split('年')[0]}年</span><br>${item.title}</div>`;
                 });
                 document.getElementById('history-content').innerHTML = html || '今天似乎很平静。';
             } catch (e) {
-                document.getElementById('history-content').textContent = '暂时无法获取历史数据。';
+                document.getElementById('history-content').textContent = '数据暂不可用，请稍后再试。';
             }
         }
         fetchHistory();
