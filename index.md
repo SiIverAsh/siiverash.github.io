@@ -16,6 +16,7 @@ title: Welcome to My HP!
         <div class="stat-card" onclick="handleClick('anime')"><h3>🌸</h3><p>Anime</p></div>
         <div class="stat-card" onclick="handleClick('music')"><h3>🎵</h3><p>Music</p></div>
         <div class="stat-card" onclick="handleClick('paint')"><h3>🎨</h3><p>Paint</p></div>
+        <div class="stat-card" onclick="handleClick('game')"><h3>🎮</h3><p>Game</p></div>
     </div>
 
     <!-- 子分类选择区 -->
@@ -71,7 +72,6 @@ title: Welcome to My HP!
         currentSubType = subType;
         const list = dailyData.study ? dailyData.study[subType] : null;
         if (list && Array.isArray(list)) {
-            // 点击子标签时，总是显示第一项，点击“换一个”才触发随机
             const item = list[0]; 
             lastIndex = 0; // 同步索引
             updateUI(subType, item.title, item.desc, [], null);
