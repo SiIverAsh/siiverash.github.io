@@ -31,7 +31,8 @@
         .extra-title { font-size: 0.9em; font-weight: bold; color: #d85a7f; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
         
         /* 搜索 UI 升级：下拉浮层 */
-        .search-wrapper { position: relative; }
+        .search-wrapper { position: relative; z-index: 1001; }
+        .search-box-card { z-index: 100; position: relative; } /* 确保搜索卡片在右侧栏最上层 */
         #search-input { width: 100%; padding: 10px 15px; border-radius: 12px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.5); outline: none; box-sizing: border-box; font-size: 0.9em; }
         #results-container { 
             position: absolute; top: 100%; left: 0; width: 100%; 
@@ -93,7 +94,8 @@
             </div>
         </main>
         <aside class="extra-sidebar">
-            <div class="extra-box glass-card">
+            <!-- 搜索框 -->
+            <div class="extra-box glass-card search-box-card">
                 <div class="extra-title"><i class="fas fa-search"></i> 全站搜索</div>
                 <div class="search-wrapper">
                     <input type="text" id="search-input" placeholder="输入关键词...">
