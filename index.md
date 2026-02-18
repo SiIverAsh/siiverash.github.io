@@ -20,7 +20,7 @@ title: Welcome to My HP!
     </div>
 
     <!-- 子分类选择区 (仅Study显示) -->
-    <div id="sub-tags-area" style="margin-top: 20px; display: none;">
+    <div id="sub-tags-area" style="margin-top: 25px; display: none; animation: fadeIn 0.5s;">
         <span class="sub-tag" onclick="showStudyDetail('CV')">视觉 (CV)</span>
         <span class="sub-tag" onclick="showStudyDetail('NLP')">语言 (NLP)</span>
         <span class="sub-tag" onclick="showStudyDetail('Audio')">音频 (Audio)</span>
@@ -38,28 +38,32 @@ title: Welcome to My HP!
 </div>
 
 <script>
+    // 确保数据加载成功
     const dailyData = {{ site.data.recommendations | jsonify }} || {};
 
-    // 处理 Study 点击：显示子分类
     function handleStudyClick() {
-        document.getElementById('sub-tags-area').style.display = 'block';
-        document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f;">请选择一个研究领域 💡</p>';
+        console.log("Study clicked");
+        const area = document.getElementById('sub-tags-area');
+        area.style.display = 'block';
+        
+        const content = document.getElementById('recommend-content');
+        content.innerHTML = '<p style="color: #d85a7f; font-weight: bold;">请选择一个研究领域 💡</p>';
         document.getElementById('rec-tags').innerHTML = '';
         document.getElementById('go-to-list').style.display = 'none';
     }
 
-    // 显示具体的 Study 详情
     function showStudyDetail(subType) {
-        const item = dailyData.study[subType];
-        if (item) {
-            updateUI('Study - ' + subType, item.title, item.desc, [subType, 'Tech'], 'study');
+        if (!dailyData.study || !dailyData.study[subType]) {
+            alert("数据还在加载中或格式不正确，请稍后再试或检查 Action 运行情况。");
+            return;
         }
+        const item = dailyData.study[subType];
+        updateUI('Study - ' + subType, item.title, item.desc, [subType, 'Tech'], 'study');
     }
 
-    // 处理其他分类点击
     function handleClick(type) {
         document.getElementById('sub-tags-area').style.display = 'none';
-        const item = Array.isArray(dailyData[type]) ? dailyData[type][0] : dailyData[type];
+        const item = dailyData[type];
         if (item) {
             updateUI(type.toUpperCase(), item.title, item.desc, item.tags || [], type);
         }
@@ -73,9 +77,11 @@ title: Welcome to My HP!
         content.innerHTML = `<h3 style="color: #d85a7f; margin-bottom: 10px;">${categoryLabel} 推荐：${title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${desc}</p>`;
         
         tagBox.innerHTML = '';
-        tags.forEach(t => {
-            tagBox.innerHTML += `<span class="mini-tag">${t}</span>`;
-        });
+        if (tags && tags.length > 0) {
+            tags.forEach(t => {
+                tagBox.innerHTML += `<span class="mini-tag">${t}</span>`;
+            });
+        }
 
         btn.href = `{{ site.baseurl }}/categories/${categoryUrl}`;
         btn.style.display = 'inline-block';
@@ -83,37 +89,40 @@ title: Welcome to My HP!
 </script>
 
 <style>
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    
     .stat-card {
         background: rgba(255,255,255,0.4);
         padding: 15px; border-radius: 20px; width: 90px;
         cursor: pointer; transition: 0.3s;
         border: 1px solid rgba(255,255,255,0.5);
+        user-select: none;
     }
-    .stat-card:hover { transform: translateY(-10px); background: white; }
-    .stat-card h3 { margin: 0; font-size: 1.5em; }
-    .stat-card p { margin: 5px 0 0; font-weight: bold; color: #777; font-size: 0.8em; }
+    .stat-card:hover { transform: translateY(-10px); background: white; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .stat-card:active { transform: scale(0.95); }
 
     .sub-tag {
         display: inline-block;
-        padding: 5px 12px;
+        padding: 6px 15px;
         margin: 5px;
-        background: white;
-        border: 1px solid #d85a7f;
+        background: rgba(255,255,255,0.8);
+        border: 1px solid var(--primary-color);
         color: #d85a7f;
-        border-radius: 12px;
+        border-radius: 15px;
         font-size: 0.85em;
         cursor: pointer;
         transition: 0.3s;
+        font-weight: bold;
     }
-    .sub-tag:hover { background: #d85a7f; color: white; }
+    .sub-tag:hover { background: var(--primary-color); color: white; transform: scale(1.05); }
 
     .recommend-box {
-        margin-top: 20px;
+        margin-top: 25px;
         background: rgba(255,255,255,0.5);
         border-radius: 24px;
         padding: 25px;
         border: 2px dashed var(--primary-color);
-        min-height: 100px;
+        min-height: 120px;
     }
 
     .mini-tag {

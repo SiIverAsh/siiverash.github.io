@@ -1,30 +1,24 @@
+date: '2026-02-18'
 study:
-  - title: "Transformer 架构"
-    desc: "现代 AI 的基石。理解 Self-Attention 是掌握大模型的关键，建议阅读《Attention Is All You Need》。"
-  - title: "ONNX 量化"
-    desc: "模型部署的利器。通过将 FP32 转为 INT8，可以在不损失太多精度的情况下大幅提升推理速度。"
-  - title: "谱聚类算法"
-    desc: "声纹识别常用的聚类方式。基于图论的算法，能处理非凸形状的数据分布。"
-
+  CV:
+    title: "YOLOv11 目标检测"
+    desc: "最新的 YOLO 系列，通过优化的 C3K2 架构和检测头，实现了更快的推理速度。"
+  NLP:
+    title: "DeepSeek-V3 架构"
+    desc: "采用 Multi-head Latent Attention (MLA) 架构，极大地降低了推理时的 KV Cache 开销。"
+  Audio:
+    title: "CAM++ 声纹识别"
+    desc: "基于 Densely Connected TDNN 的高效声纹识别模型，适合在移动端部署。"
+  Net:
+    title: "HTTP/3 协议"
+    desc: "基于 QUIC 协议，解决了 TCP 的队头阻塞问题，在弱网环境下表现优异。"
 anime:
-  - title: "葬送的芙莉莲"
-    desc: "关于勇者死后的世界。在漫长的寿命中，精灵开始理解人类瞬间即逝的生命意义。"
-    tags: ["治愈", "冒险", "奇幻"]
-  - title: "孤独摇滚"
-    desc: "社恐少女的音乐成长之路。极致的视觉表现力，让每个计科人都能产生共鸣。"
-    tags: ["音乐", "喜剧", "青春"]
-  - title: "命运石之门"
-    desc: "关于时间旅行与收束的杰作。一切都是命运石之门的选择，El Psy Kongroo。"
-    tags: ["科幻", "悬疑", "神作"]
-
+  title: "葬送的芙莉莲"
+  desc: "画风精美，探讨了时间与情感的深刻主题。"
+  tags: ["治愈", "奇幻"]
 music:
-  - title: "Refrain"
-    desc: "Aimer 的深情演绎。旋律中透出的孤独与希望，非常适合深夜 Coding。"
-  - title: "Stay With Me"
-    desc: "经典的 City Pop。复古的律动感，让枯燥的学习时间变得轻快起来。"
-
+  title: "夜に駆ける"
+  desc: "节奏轻快，适合在敲代码时听。"
 paint:
-  - title: "视平线与消失点"
-    desc: "透视是绘画的骨架。理解一点透视和两点透视，能让你的画面瞬间拥有空间感。"
-  - title: "赛璐璐赛博配色"
-    desc: "尝试使用高饱和度的青色与紫色对比。霓虹灯感的色彩非常适合二次元插画。"
+  title: "赛璐璐上色法"
+  desc: "明暗界限清晰，非常适合二次元插画的快速表现。"
