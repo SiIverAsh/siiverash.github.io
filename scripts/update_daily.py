@@ -9,7 +9,6 @@ api_key = os.getenv("DEEPSEEK_API_KEY")
 api_url = "https://api.deepseek.com/chat/completions"
 
 def get_realtime_context():
-    """获取 GitHub 过去 24h 热门项目作为技术背景"""
     try:
         yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
         query = "created:>" + yesterday + " topic:ai"
@@ -84,7 +83,7 @@ def get_ai_recommendation(context):
     payload = {
         "model": "deepseek-chat",
         "messages": [
-            {"role": "system", "content": "You are a professional tech expert. You provide latest hardware and software insights."},
+            {"role": "system", "content": "You are a professional assistant."},
             {"role": "user", "content": prompt}
         ],
         "response_format": {"type": "json_object"}
@@ -92,10 +91,8 @@ def get_ai_recommendation(context):
 
     try:
         response = requests.post(api_url, headers=headers, json=payload)
-        response.raise_for_status()
         return response.json()['choices'][0]['message']['content']
     except Exception as e:
-        print("API Error: " + str(e))
         return None
 
 def update_yaml():
@@ -111,15 +108,13 @@ def update_yaml():
                 'anime': ai_content['anime'],
                 'music': ai_content['music'],
                 'game': ai_content['game'],
-                'paint': ai_content['paint']
+                'paint': ai_content['paint'],
+                'history': ai_content['history']
             }
             with open('_data/recommendations.yml', 'w', encoding='utf-8') as f:
                 yaml.dump(data, f, allow_unicode=True)
-            print("Successfully updated with latest hardware context.")
-        except Exception as e:
-            print("JSON Parsing Error: " + str(e))
-    else:
-        print("Failed to get AI content.")
+        except:
+            pass
 
 if __name__ == "__main__":
     update_yaml()
