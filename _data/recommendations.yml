@@ -1,24 +1,12 @@
 date: '2026-02-18'
 study:
-  CV:
-    title: "YOLOv11 目标检测"
-    desc: "最新的 YOLO 系列，通过优化的 C3K2 架构和检测头，实现了更快的推理速度。"
-  NLP:
-    title: "DeepSeek-V3 架构"
-    desc: "采用 Multi-head Latent Attention (MLA) 架构，极大地降低了推理时的 KV Cache 开销。"
-  Audio:
-    title: "CAM++ 声纹识别"
-    desc: "基于 Densely Connected TDNN 的高效声纹识别模型，适合在移动端部署。"
-  Net:
-    title: "HTTP/3 协议"
-    desc: "基于 QUIC 协议，解决了 TCP 的队头阻塞问题，在弱网环境下表现优异。"
-anime:
-  title: "葬送的芙莉莲"
-  desc: "画风精美，探讨了时间与情感的深刻主题。"
-  tags: ["治愈", "奇幻"]
-music:
-  title: "夜に駆ける"
-  desc: "节奏轻快，适合在敲代码时听。"
-paint:
-  title: "赛璐璐上色法"
-  desc: "明暗界限清晰，非常适合二次元插画的快速表现。"
+  CV: {title: "YOLOv11", desc: "高效目标检测模型。"}
+  NLP: {title: "DeepSeek-V3", desc: "开源大模型新标杆。"}
+  Audio: {title: "CAM++", desc: "声纹识别优化。"}
+  Net: {title: "HTTP/3", desc: "基于 QUIC 的新协议。"}
+  Lang: {title: "Rust Ownership", desc: "理解所有权系统。"}
+  Arch: {title: "微服务网关", desc: "解耦业务与通用逻辑。"}
+  News: {title: "OpenAI Sora", desc: "视频生成领域的突破。"}
+anime: {title: "葬送的芙莉莲", desc: "时间与生命的礼赞。", tags: ["治愈"]}
+music: {title: "夜に駆ける", desc: "YOASOBI 经典之作。"}
+paint: {title: "透视法", desc: "空间感的基石。"}

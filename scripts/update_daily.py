@@ -14,18 +14,22 @@ def get_ai_recommendation():
     headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
 
     prompt = """
-    你是一个专业的个人博主助手。请你仔细在网上搜索过之后再进行后面的动作，请为我提供每日推荐。
+    你是一个专业的个人博主助手。请你仔细搜索之后再做出以下行为：请为我提供每日推荐。
     
     请严格按照以下 JSON 格式输出：
     {
       "study": {
         "CV": {"title": "视觉相关", "desc": "介绍一个CV领域的SOTA模型或技巧"},
-        "NLP": {"title": "语言处理", "desc": "介绍一个NLP或大模型相关技术，例如openAI发布了GPT-5.2"},
-        "Net": {"title": "计网/架构", "desc": "介绍一个网络协议或分布式系统知识"}
+        "NLP": {"title": "语言处理", "desc": "介绍一个NLP或大模型相关技术"},
+        "Audio": {"title": "声纹/音频", "desc": "介绍一个音频处理或声纹识别优化技术"},
+        "Net": {"title": "计网/安全", "desc": "介绍一个网络协议或网络安全知识"},
+        "Lang": {"title": "编程语言", "desc": "介绍 C++/Python/Rust/Go 等语言的高级特性或新版本动向"},
+        "Arch": {"title": "架构/前后端", "desc": "介绍高并发系统、微服务、现代前端框架或工程化实践"},
+        "News": {"title": "AI 业界动态", "desc": "汇总一条 OpenAI/DeepSeek/Google/Meta 等公司的最新动态或重磅发布"}
       },
-      "anime": {"title": "动漫名", "desc": "推荐理由", "tags": ["标签1", "标签2", "标签3", "标签4", "标签5"]},
-      "music": {"title": "歌名/歌手/风格(这里请你主要推荐日本同人音乐，例如东方project、M3同人音乐等))", "desc": "推荐理由"},
-      "paint": {"title": "画师/风格", "desc": "画师推特链接，推荐理由"}
+        "anime": {"title": "动漫名", "desc": "推荐理由", "tags": ["标签1", "标签2", "标签3", "标签4", "标签5"]},                                       
+        "music": {"title": "歌名/歌手/风格)", "desc": "(这里请你主要推荐日本同人音乐，例如东方project、M3同人音乐等)推荐理由"},                        
+        "paint": {"title": "画师/风格", "desc": "给出画师推特链接，推荐理由"}                                                                                   }  
     }
     """
 
