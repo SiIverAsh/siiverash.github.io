@@ -38,13 +38,13 @@ title: Welcome to My HP!
         </div>
         <div id="rec-tags" class="rec-tags"></div>
         
-        <!-- 外部链接按钮 (画师推特等) -->
+        <!-- 外部链接按钮 -->
         <div id="external-link-area" style="display: none; margin-top: 15px;">
             <a id="external-link" href="#" target="_blank" class="twitter-btn">关注画师 𝕏</a>
         </div>
         
         <!-- 重新推荐按钮 -->
-        <div id="refresh-btn" style="display: none; margin-top: 20px;">
+        <div id="refresh-parent" style="display: none; margin-top: 20px;">
             <button onclick="reRecommend()" class="refresh-btn">
                 换一个 🔄
             </button>
@@ -53,25 +53,31 @@ title: Welcome to My HP!
 </div>
 
 <script>
+    // 从 Jekyll 注入数据
     const dailyData = {{ site.data.recommendations | jsonify }} || {};
     let currentType = '';
     let currentSubType = '';
+    let lastIndex = -1;
 
     function handleStudyClick() {
         currentType = 'study';
         document.getElementById('sub-tags-area').style.display = 'block';
         document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f; font-weight: bold;">请选择一个研究领域 💡</p>';
         document.getElementById('rec-tags').innerHTML = '';
-        document.getElementById('refresh-btn').style.display = 'none';
+        document.getElementById('refresh-parent').style.display = 'none';
         document.getElementById('external-link-area').style.display = 'none';
     }
 
     function showStudyDetail(subType) {
         currentSubType = subType;
-        const list = dailyData.study[subType];
-        if (list) {
-            const item = list[Math.floor(Math.random() * list.length)];
-            updateUI('Study - ' + subType, item.title, item.desc, [], null);
+        const list = dailyData.study ? dailyData.study[subType] : null;
+        if (list && Array.isArray(list)) {
+            const index = getNextIndex(list.length);
+            const item = list[index];
+            // 去除 'Study - ' 前缀
+            updateUI(subType, item.title, item.desc, [], null);
+        } else {
+            console.error("Data not found for study." + subType);
         }
     }
 
@@ -80,28 +86,45 @@ title: Welcome to My HP!
         currentSubType = '';
         document.getElementById('sub-tags-area').style.display = 'none';
         const list = dailyData[type];
-        if (list) {
-            const item = list[Math.floor(Math.random() * list.length)];
-            // 现在为音乐和动漫都传递 tags
+        if (list && Array.isArray(list)) {
+            const index = getNextIndex(list.length);
+            const item = list[index];
             updateUI(type.toUpperCase(), item.title, item.desc, item.tags || [], item.twitter || null);
+        } else if (list && typeof list === 'object') {
+            // 兼容旧的单对象格式
+            updateUI(type.toUpperCase(), list.title, list.desc, list.tags || [], list.twitter || null);
         }
     }
 
-    function reRecommend() {
-        if (currentType === 'study' && currentSubType) {
-            showStudyDetail(currentSubType);
-        } else if (currentType) {
-            handleClick(currentType);
+    // 强制获取不同的索引，避免点击“换一个”没反应
+    function getNextIndex(length) {
+        if (length <= 1) return 0;
+        let newIndex = Math.floor(Math.random() * length);
+        while (newIndex === lastIndex) {
+            newIndex = Math.floor(Math.random() * length);
         }
+        lastIndex = newIndex;
+        return newIndex;
+    }
+
+    function reRecommend() {
         const btn = document.querySelector('.refresh-btn');
         btn.style.transform = 'rotate(360deg)';
-        setTimeout(() => btn.style.transform = 'rotate(0deg)', 500);
+        
+        setTimeout(() => {
+            if (currentType === 'study' && currentSubType) {
+                showStudyDetail(currentSubType);
+            } else if (currentType) {
+                handleClick(currentType);
+            }
+            btn.style.transform = 'rotate(0deg)';
+        }, 300);
     }
 
     function updateUI(categoryLabel, title, desc, tags, twitterUrl) {
         const content = document.getElementById('recommend-content');
         const tagBox = document.getElementById('rec-tags');
-        const refreshBtn = document.getElementById('refresh-btn');
+        const refreshParent = document.getElementById('refresh-parent');
         const linkArea = document.getElementById('external-link-area');
         const link = document.getElementById('external-link');
         
@@ -121,7 +144,7 @@ title: Welcome to My HP!
             linkArea.style.display = 'none';
         }
 
-        refreshBtn.style.display = 'block';
+        refreshParent.style.display = 'block';
     }
 </script>
 
@@ -146,13 +169,12 @@ title: Welcome to My HP!
     .recommend-box {
         margin-top: 20px; background: rgba(255,255,255,0.5);
         border-radius: 24px; padding: 25px; border: 2px dashed var(--primary-color);
-        position: relative;
     }
 
     .refresh-btn {
         background: white; border: 1px solid var(--primary-color);
         color: #d85a7f; padding: 5px 15px; border-radius: 20px;
-        font-size: 0.85em; cursor: pointer; transition: 0.5s ease;
+        font-size: 0.85em; cursor: pointer; transition: transform 0.5s ease;
         font-weight: bold;
     }
     .refresh-btn:hover { background: var(--primary-color); color: white; }
