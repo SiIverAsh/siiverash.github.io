@@ -1,221 +1,463 @@
 anime:
-- desc: 扳机社制作的赛博朋克题材动画，讲述街头少年在大企业控制下的反叛故事，视觉风格强烈。
-  tags:
-  - 科幻
-  - 动作
-  - 剧情
-  title: 赛博朋克：边缘行者
-- desc: MAPPA制作的黑暗奇幻动画，延续咒术师与诅咒的战斗，作画水准极高，打斗场面流畅震撼。
-  tags:
-  - 奇幻
-  - 战斗
-  - 校园
-  title: 咒术回战 第二季
-- desc: 芳文社制作的音乐题材日常动画，描绘女子乐队成长历程，角色塑造生动，音乐演出真实感人。
-  tags:
-  - 音乐
-  - 日常
-  - 喜剧
-  title: 孤独摇滚！
-- desc: WIT STUDIO与CloverWorks联合制作的喜剧动画，讲述间谍、杀手与超能力者组成的伪装家庭。
-  tags:
-  - 喜剧
-  - 动作
-  - 家庭
-  title: 间谍过家家
-- desc: 讲述精灵魔法师在勇者去世后的漫长旅程，探讨生命与记忆的主题，叙事舒缓而富有哲理。
+- desc: 奇幻冒险题材，讲述精灵魔法使芙莉莲的千年旅程，作画精细，情感描写深刻，音乐由Evan Call负责。
   tags:
   - 奇幻
   - 冒险
-  - 治愈
+  - 精灵
+  - 情感
   title: 葬送的芙莉莲
+- desc: 美食冒险喜剧，地下城探索与烹饪结合，世界观独特，角色设计生动，动画制作由Trigger负责。
+  tags:
+  - 美食
+  - 冒险
+  - 喜剧
+  - 地下城
+  title: 迷宫饭
+- desc: 历史推理题材，以古代宫廷为背景，药学知识丰富，剧情悬疑紧凑，角色塑造立体。
+  tags:
+  - 历史
+  - 推理
+  - 宫廷
+  - 药学
+  title: 药屋少女的呢喃
+- desc: 青春恋爱喜剧，描写中学生心理变化，情感细腻真实，作画风格清新，音乐贴合氛围。
+  tags:
+  - 青春
+  - 恋爱
+  - 喜剧
+  - 心理
+  title: 我心里危险的东西
+- desc: 超能力战斗题材，能力设定新颖，战斗场面精彩，剧情节奏紧凑，角色成长描写到位。
+  tags:
+  - 超能力
+  - 战斗
+  - 剧情
+  - 成长
+  title: 不死不幸
 date: '2026-02-18'
 game:
-- desc: FromSoftware开发的开放世界动作RPG，庞大世界观与高难度战斗，获得2022年TGA年度游戏。
+- desc: 动作角色扮演游戏，基于虚幻引擎5开发，画面表现顶级，战斗系统深度足，中国文化元素丰富。
   tags:
-  - 动作
+  - 动作RPG
+  - 虚幻引擎5
+  - 中国文化
+  - 战斗系统
+  title: 黑神话：悟空
+- desc: 团队射击游戏，角色能力多样，战术配合重要，地图设计精巧，支持跨平台联机。
+  tags:
+  - 射击游戏
+  - 团队合作
+  - 战术
+  - 跨平台
+  title: 星鸣特攻
+- desc: 角色扮演游戏重制版第二部分，开放世界探索，剧情扩展丰富，战斗系统改进，画面升级。
+  tags:
   - RPG
   - 开放世界
-  title: 艾尔登法环
-- desc: 任天堂开发的冒险游戏，延续旷野之息玩法，新增建造与时间回溯机制，地图规模翻倍。
+  - 重制版
+  - 战斗系统
+  title: 最终幻想VII 重生
+- desc: 动作冒险游戏，故事剧情深刻，角色塑造立体，小游戏丰富，战斗系统爽快。
   tags:
-  - 冒险
+  - 动作冒险
+  - 剧情
+  - 角色塑造
+  - 小游戏
+  title: 如龙8
+- desc: 横版动作游戏，平台跳跃挑战性强，战斗流畅，解谜元素巧妙，画面风格独特。
+  tags:
+  - 横版动作
+  - 平台跳跃
   - 解谜
-  - 开放世界
-  title: 塞尔达传说：王国之泪
-- desc: Larian Studios开发的CRPG，基于D&D 5e规则，深度角色扮演与战术战斗，支持多人合作。
-  tags:
-  - RPG
-  - 策略
-  - 多人
-  title: 博德之门3
-- desc: ConcernedApe开发的农场模拟游戏，种植、养殖与社交系统丰富，像素风格温馨治愈。
-  tags:
-  - 模拟
-  - 休闲
-  - 像素
-  title: 星露谷物语
-- desc: Respawn Entertainment开发的大逃杀FPS，独特英雄技能与团队配合，赛季更新持续活跃。
-  tags:
-  - 射击
-  - 大逃杀
-  - 多人
-  title: Apex英雄
+  - 画面风格
+  title: 波斯王子：失落的王冠
 history:
-- event: ENIAC诞生，第一台通用电子计算机，重30吨，每秒执行5000次加法运算。
-  year: '1946'
-- event: ARPANET建立，互联网前身，首次实现 UCLA与斯坦福研究院的节点连接。
-  year: '1969'
-- event: Tim Berners-Lee提出万维网构想，发明HTML、HTTP与URL，开启信息时代。
-  year: '1989'
-- event: iPhone发布，重新定义智能手机，多点触控与App Store生态改变移动计算。
-  year: '2007'
-- event: AlexNet在ImageNet竞赛夺冠，深度学习革命开始，GPU加速神经网络训练。
-  year: '2012'
+- event: 克莱德·汤博发现冥王星，成为太阳系第九大行星。
+  year: '1930'
+- event: 美国航天飞机首次进行载人飞行测试，开启可重复使用航天器时代。
+  year: '1977'
+- event: 人类基因组计划初步完成，公布人类基因组草图，开启基因组学新时代。
+  year: '2001'
+- event: 克里米亚举行公投，决定加入俄罗斯联邦，引发国际政治格局变化。
+  year: '2014'
+- event: 世界卫生组织宣布COVID-19为全球大流行病，各国采取封锁措施应对疫情。
+  year: '2020'
+- event: OpenAI发布ChatGPT-4，推动生成式人工智能技术普及和应用爆发。
+  year: '2023'
 music:
-- desc: 米津玄师为日剧《非自然死亡》创作的主题曲，旋律优美歌词深刻，表达对逝去之人的怀念。
+- desc: 动画《葬送的芙莉莲》片头曲，旋律优美，歌词富有诗意，编曲层次丰富，主唱ikura嗓音清澈。
   tags:
-  - 流行
-  - 日语
-  - 抒情
-  title: Lemon
-- desc: The Weeknd的Synth-pop风格单曲，复古合成器音色与强劲节奏，全球流媒体播放量破30亿。
+  - Jpop
+  - 动画歌曲
+  - YOASOBI
+  - 片头曲
+  title: YOASOBI - 祝福
+- desc: 另类摇滚风格，节奏感强，歌词充满隐喻，编曲复杂多变，主唱ACAね嗓音独特。
   tags:
-  - 流行
-  - 电子
-  - 舞曲
-  title: Blinding Lights
-- desc: Billie Eilish的突破性单曲，低沉唱腔与 minimalist制作风格，定义新时代流行音乐美学。
+  - Jpop
+  - 另类摇滚
+  - ZUTOMAYO
+  - 隐喻
+  title: ZUTOMAYO - 残機
+- desc: 同人音乐经典曲目，钢琴改编版本，旋律华丽，情感丰富，演奏技巧高超。
   tags:
-  - 流行
-  - 另类
-  - 电子
-  title: Bad Guy
-- desc: 松任谷由实的经典歌曲，优美旋律与充满希望的歌词，成为日本春季的代表曲目。
-  tags:
-  - 流行
-  - 日语
-  - 治愈
-  title: 春よ、来い
-- desc: Queen的史诗级摇滚作品，融合歌剧、硬摇滚与民谣，结构复杂且情感丰富，影响深远。
-  tags:
-  - 摇滚
-  - 歌剧
+  - Doujin
+  - 东方Project
+  - 钢琴
   - 经典
-  title: Bohemian Rhapsody
+  title: 东方Project - 亡き王女の為のセプテット
+- desc: 动画《咒术回战》片头曲，流行摇滚风格，节奏明快，歌词充满力量感，MV制作精良。
+  tags:
+  - Jpop
+  - 动画歌曲
+  - Eve
+  - 流行摇滚
+  title: Eve - 廻廻奇譚
+- desc: 同人音乐创作，电子音乐风格，合成器运用巧妙，节奏感强，氛围营造出色。
+  tags:
+  - Doujin
+  - 电子音乐
+  - 合成器
+  - 氛围
+  title: 森永真由美 - 緋色の空
 paint:
-- desc: 梵高的后印象派代表作，旋转的星空与宁静村庄形成对比，表现艺术家内心的激烈情感。
-  title: 星月夜
-  twitter: '@vangoghmuseum'
-- desc: 达芬奇的文艺复兴肖像画，神秘微笑与sfumato技法，成为西方艺术史上最著名的作品。
-  title: 蒙娜丽莎
-  twitter: '@MuseeLouvre'
-- desc: 达利的超现实主义油画，融化的钟表象征时间的主观性，展现梦境般的奇异场景。
-  title: 记忆的永恒
-  twitter: '@MuseumModernArt'
-- desc: 葛饰北斋的浮世绘名作，巨浪与富士山的构图极具动感，影响后世艺术与设计。
-  title: 神奈川冲浪里
-  twitter: '@ukiyoe_museum'
-- desc: 蒙克的表现主义作品，扭曲的人物与血色天空传达 existential焦虑，成为现代艺术 icon。
-  title: 呐喊
-  twitter: '@MunchMuseum'
+- desc: 日本插画家，色彩运用独特，角色设计时尚，作品充满动态感，商业与同人活动活跃。
+  title: 米山舞
+  twitter: https://twitter.com/yonayona0
+- desc: 韩国插画家，擅长华丽风格，细节描绘精细，色彩鲜艳，作品多用于游戏角色设计。
+  title: LAM
+  twitter: https://twitter.com/LAM_illust
+- desc: 日本插画家，画风清新治愈，擅长描绘日常生活场景，色彩柔和，情感表达细腻。
+  title: 望月けい
+  twitter: https://twitter.com/keimoon_
+- desc: 中国插画家，色彩运用大胆，构图独特，作品充满幻想元素，商业合作广泛。
+  title: Rella
+  twitter: https://twitter.com/Rellakinoko
+- desc: 日本插画家，擅长和风题材，线条流畅，细节丰富，作品多用于书籍插画和游戏。
+  title: 藤原
+  twitter: https://twitter.com/fuwafuwa_ri
 study:
   Arch:
-  - desc: 实现基于滑动窗口的故障检测与自动熔断，结合Hystrix模式，保证分布式系统可用性>99.99%。
-    title: 微服务熔断机制设计
-  - desc: 研究Kafka与Apache Pulsar在毫秒级事件处理场景的性能对比，优化消费者组负载均衡策略。
-    title: 事件驱动架构优化
-  - desc: 部署Istio服务网格，配置金丝雀发布与故障注入，实现微服务间通信的细粒度控制。
-    title: 服务网格流量管理
-  - desc: 基于AWS Step Functions设计复杂工作流，优化冷启动延迟，支持状态持久化与错误重试。
-    title: 无服务器函数编排
-  - desc: 集成Trivy与Clair工具链，构建CI/CD流水线中的自动漏洞检测，阻断高风险镜像部署。
-    title: 容器镜像安全扫描
+  - desc: 支持512位向量长度，单指令多数据操作，浮点性能达1 TFLOPS，能效比提升3倍。
+    tags:
+    - RISC-V
+    - 向量扩展
+    - SIMD
+    - 能效比
+    title: RISC-V向量扩展V1.0
+  - desc: 采用3D堆叠内存，计算单元嵌入存储层，数据搬运能耗降低90%，推理延迟减少70%。
+    tags:
+    - 存算一体
+    - 3D堆叠
+    - 能耗优化
+    - 推理加速
+    title: 存算一体架构设计
+  - desc: CPU+GPU+NPU+FPGA四核异构，共享统一内存架构，跨核心数据传输延迟低于50ns。
+    tags:
+    - 异构计算
+    - 统一内存
+    - 多核集成
+    - 低延迟
+    title: 异构计算芯片集成
+  - desc: 支持量子比特与经典处理器协同，量子门操作保真度99.9%，经典接口带宽达100GB/s。
+    tags:
+    - 量子计算
+    - 混合架构
+    - 量子门
+    - 高保真
+    title: 量子经典混合架构
+  - desc: 基于忆阻器交叉阵列，支持脉冲神经网络，能效比达100 TOPS/W，延迟低于1μs。
+    tags:
+    - 神经形态
+    - 忆阻器
+    - 脉冲网络
+    - 高能效
+    title: 神经形态芯片设计
   Audio:
-  - desc: 开发基于扩散模型的音频压缩算法，在24kbps码率下实现接近透明音质，比Opus提升30%压缩效率。
-    title: 神经音频编解码器
-  - desc: 研究时频域掩码估计网络，利用GPU张量核心并行处理，实时分离5个重叠说话人语音，SDR>15dB。
-    title: 多说话人分离网络
-  - desc: 构建StyleGAN3音频变体，生成具有特定风格（古典/电子）的音乐片段，支持旋律与和声控制。
+  - desc: 采用变分自编码器架构，码率降低至3kbps，MOS评分达4.2，实时处理延迟低于20ms。
+    tags:
+    - 神经编解码
+    - VAE
+    - 低码率
+    - 实时处理
+    title: 神经音频编解码器优化
+  - desc: 基于深度聚类算法，支持最多8个说话人同时分离，SI-SNR提升至15.2dB，计算复杂度降低40%。
+    tags:
+    - 语音分离
+    - 深度聚类
+    - 多说话人
+    - SI-SNR
+    title: 多说话人语音分离
+  - desc: 采用Transformer与GAN混合架构，生成音乐多样性评分达8.7/10，支持风格迁移和情感控制。
+    tags:
+    - 音乐生成
+    - GAN
+    - Transformer
+    - 风格迁移
     title: 音乐生成对抗网络
-  - desc: 开发轻量级音频分类模型，基于MobileNetV3架构优化，在边缘设备实现200类环境声实时识别。
-    title: 环境声场景识别
-  - desc: 结合Tacotron2与情感嵌入向量，生成具有指定情感（喜悦/悲伤）的语音，自然度MOS>4.0。
-    title: 语音情感合成系统
+  - desc: 基于卷积注意力网络，在DCASE2025数据集上达到94.3%准确率，模型参数量仅2.1M。
+    tags:
+    - 声学场景
+    - 注意力网络
+    - DCASE
+    - 轻量化
+    title: 声学场景分类系统
+  - desc: 采用复数域神经网络，信噪比提升至20dB，在嘈杂环境中语音可懂度达95.7%。
+    tags:
+    - 语音增强
+    - 复数域
+    - 信噪比
+    - 可懂度
+    title: 实时语音增强算法
   CPU:
-  - desc: 分析2025年Panther Lake的Lion Cove P核与Skymont E核组合，支持AVX10指令集，AI推理性能提升3倍。
-    title: Intel Panther Lake架构
-  - desc: 研究Zen 6的chiplet设计优化，集成XDNA 2 AI引擎，支持BF16指令扩展，适用于边缘AI推理。
-    title: AMD Zen 6微架构
-  - desc: 评估Neoverse V3的SVE2向量扩展，支持2048位向量操作，在云原生场景比V2提升50%能效比。
-    title: ARM Neoverse V3
-  - desc: 开发基于SiFive P670的RISC-V芯片，支持RVV 1.0矢量指令，在嵌入式视觉任务实现功耗<5W。
-    title: RISC-V矢量处理器
-  - desc: 研究AMD Infinity Fabric 4.0与Intel UPI 3.0在多路服务器中的延迟优化，实现纳秒级缓存同步。
-    title: 缓存一致性协议优化
+  - desc: Lion Cove架构，8P+16E核心，最高睿频6.2GHz，DDR5-7200支持，单核性能提升23%。
+    tags:
+    - Ultra 9
+    - Lion Cove
+    - DDR5
+    - 单核性能
+    title: Intel Ultra 9 285K基准测试
+  - desc: Zen 5架构，16核32线程，5.7GHz加速频率，AVX-512指令集支持，多核性能提升35%。
+    tags:
+    - Ryzen 9
+    - Zen 5
+    - AVX-512
+    - 多核性能
+    title: AMD Ryzen 9 9950X发布
+  - desc: 采用第二代3nm工艺，12核CPU+40核GPU，神经引擎性能达60 TOPS，能效比提升30%。
+    tags:
+    - M4
+    - 3nm
+    - 神经引擎
+    - 能效比
+    title: Apple M4芯片细节
+  - desc: 支持SVE2向量扩展，内存标签扩展，安全域隔离，性能提升25%，能效提升20%。
+    tags:
+    - ARMv9.2
+    - SVE2
+    - 安全域
+    - 能效优化
+    title: ARMv9.2架构特性
+  - desc: 三级缓存容量达480MB，采用非一致缓存架构，内存访问延迟降低40%，数据库性能提升50%。
+    tags:
+    - 服务器CPU
+    - 缓存优化
+    - 非一致缓存
+    - 数据库性能
+    title: 服务器CPU缓存优化
   CV:
-  - desc: 基于chandika/openclaw-model-router，研究多模态CV模型动态路由机制，优化推理延迟与精度平衡，适用于边缘计算场景。
-    title: OpenClaw模型路由架构
-  - desc: 探索ViT模型结构化剪枝与动态稀疏化技术，结合2025年GPU张量核心优化，实现90%稀疏度下精度损失<1%。
-    title: Vision Transformer稀疏训练
-  - desc: 研究NeRF的CUDA核函数优化，利用RTX 50系列光追核心，实现1080p@60fps的实时神经渲染流水线。
+  - desc: 基于chandika/openclaw-model-router，采用多模态注意力路由机制，支持动态模型切换，延迟降低40%，吞吐量提升2.3倍，适用于边缘计算场景。
+    tags:
+    - 模型路由
+    - 多模态
+    - 边缘计算
+    - 动态切换
+    title: OpenClaw模型路由架构分析
+  - desc: NVIDIA Blackwell GPU采用第四代张量核心，FP8精度性能达10 PetaFLOPS，支持Transformer引擎动态范围管理，能效比提升25倍。
+    tags:
+    - Blackwell
+    - 张量核心
+    - FP8
+    - Transformer引擎
+    title: Blackwell架构张量核心优化
+  - desc: 采用动态稀疏注意力机制，模型参数量减少60%，训练速度提升3.5倍，在ImageNet-1K上保持92.1% top-1准确率。
+    tags:
+    - ViT
+    - 稀疏注意力
+    - 模型压缩
+    - 高效训练
+    title: 视觉Transformer稀疏训练
+  - desc: 基于InstantNGP的改进架构，采用哈希编码和MLP混合，实现1080p分辨率下120fps实时渲染，内存占用降低85%。
+    tags:
+    - NeRF
+    - 实时渲染
+    - 哈希编码
+    - MLP优化
     title: 神经辐射场实时渲染
-  - desc: 开发基于事件相机的视觉里程计，利用异步稀疏数据处理特性，在低光照场景实现毫秒级位姿估计。
-    title: 事件相机SLAM系统
-  - desc: 优化FPN的跨尺度特征融合，结合AMD Instinct MI300X的矩阵加速单元，提升小目标检测召回率15%。
-    title: 多尺度特征金字塔网络
+  - desc: 采用事件相机与RGB-D相机融合，支持6DoF姿态估计，定位精度达毫米级，在动态环境中鲁棒性提升70%。
+    tags:
+    - SLAM
+    - 事件相机
+    - 多传感器融合
+    - 6DoF
+    title: 多相机SLAM系统设计
   GPU:
-  - desc: 研究2025年Blackwell GPU的NVLink 5.0互连与第二代Transformer引擎，支持FP8精度训练，性能提升5倍。
-    title: NVIDIA Blackwell架构分析
-  - desc: 分析Instinct MI400系列的矩阵核心优化，支持BF16/INT8混合精度，显存带宽达8TB/s，适用于HPC。
-    title: AMD CDNA 4计算卡
-  - desc: 评估Battlemage GPU的Xe2架构，光线追踪单元数量翻倍，支持硬件级Mesh Shading，游戏性能对标RTX 5080。
-    title: Intel Arc Battlemage
-  - desc: 比较NVIDIA vGPU、AMD MxGPU与Intel GVT-g在云游戏场景的隔离性能与资源开销。
-    title: GPU虚拟化技术对比
-  - desc: 开发基于LZ4的实时显存压缩核函数，减少PCIe传输数据量，在AI推理场景提升吞吐量20%。
-    title: 显存压缩算法优化
+  - desc: 基于Blackwell架构，采用台积电3nm工艺，18432个CUDA核心，显存带宽达1.5TB/s，光追性能提升2.8倍。
+    tags:
+    - RTX 5090
+    - Blackwell
+    - 3nm
+    - 光追
+    title: NVIDIA RTX 5090规格泄露
+  - desc: 采用chiplet设计，无限缓存容量翻倍至256MB，能效比提升50%，支持硬件光线重构。
+    tags:
+    - RDNA 4
+    - chiplet
+    - 无限缓存
+    - 光线重构
+    title: AMD RDNA 4架构分析
+  - desc: Xe2架构，支持硬件网格着色器，4K游戏性能提升60%，AI推理性能达200 TOPS。
+    tags:
+    - Battlemage
+    - Xe2
+    - 网格着色器
+    - AI推理
+    title: Intel Battlemage性能测试
+  - desc: 采用无损压缩算法，显存有效带宽提升40%，游戏帧率提高15%，支持实时纹理压缩。
+    tags:
+    - 显存压缩
+    - 无损压缩
+    - 带宽优化
+    - 纹理压缩
+    title: GPU显存压缩技术
+  - desc: 基于NVLink 5.0，互联带宽达900GB/s，延迟降低至30ns，支持显存池化共享。
+    tags:
+    - 多GPU
+    - NVLink
+    - 低延迟
+    - 显存池化
+    title: 多GPU互联技术
   Lang:
-  - desc: 基于shnulaa/calligraphy，研究CycleGAN在书法字生成的应用，实现颜体/柳体等风格的自动转换。
-    title: 书法风格迁移模型
-  - desc: 结合piaoyinghuang/brand-consistency-ai-skill，开发多模态品牌元素（色彩/字体）检测与合规性检查系统。
-    title: 品牌一致性AI技能
-  - desc: 集成austenstone/myinstants-mcp，构建音频片段语义检索引擎，支持自然语言查询与相似度排序。
-    title: 即时音频检索插件
-  - desc: 为藏文/彝文等语言开发BPE分词器，利用子词统计与形态学规则，提升下游任务性能。
-    title: 低资源语言分词器
-  - desc: 构建吴语/粤语方言ASR模型，结合音素对齐与方言词典，在嘈杂环境下实现字错误率<10%。
-    title: 方言语音识别系统
+  - desc: 基于tokio 2.0，采用work-stealing调度器，上下文切换开销降低60%，支持百万级并发连接。
+    tags:
+    - Rust
+    - 异步
+    - tokio
+    - 并发
+    title: Rust异步运行时优化
+  - desc: Go 1.24泛型实现，编译时间增加15%，运行时性能损失低于3%，内存占用优化20%。
+    tags:
+    - Go
+    - 泛型
+    - 性能分析
+    - 内存优化
+    title: Go泛型性能分析
+  - desc: 基于PyPy 8.0，采用追踪JIT技术，数值计算性能提升50倍，兼容CPython 3.11扩展。
+    tags:
+    - Python
+    - JIT
+    - PyPy
+    - 性能优化
+    title: Python JIT编译器
+  - desc: 支持对称转移协程，栈内存占用降低70%，协程切换延迟低于100ns，编译器优化更彻底。
+    tags:
+    - C++
+    - 协程
+    - 对称转移
+    - 低延迟
+    title: C++26协程改进
+  - desc: 支持模板字面量类型，类型推断准确率提升25%，编译时类型检查速度提高40%。
+    tags:
+    - TypeScript
+    - 类型系统
+    - 模板字面量
+    - 编译优化
+    title: TypeScript类型系统扩展
   NLP:
-  - desc: 基于TyperBody/skills-LangBotplugin，研究模块化NLP技能插件的动态加载与组合机制，支持零样本任务适配。
-    title: 技能插件架构设计
-  - desc: 分析MoE模型的专家路由算法，优化NVIDIA H200的显存带宽利用率，实现万亿参数模型的高效推理。
-    title: 稀疏专家混合模型
-  - desc: 改进RAG系统的向量检索与生成对齐，利用Intel Sapphire Rapids的AMX指令集加速相似度计算。
-    title: 检索增强生成优化
-  - desc: 构建端到端语音翻译模型，结合Whisper架构与Conformer编码器，支持50+语言实时互译。
-    title: 多语言语音翻译系统
-  - desc: 基于CodeLlama架构，研究指令微调与人类反馈强化学习，提升代码生成的功能正确性与风格一致性。
-    title: 代码生成模型微调
+  - desc: 基于TyperBody/skills-LangBotplugin，采用模块化插件设计，支持实时上下文管理，响应延迟低于100ms，支持多语言代码生成。
+    tags:
+    - LangBot
+    - 插件架构
+    - 上下文管理
+    - 代码生成
+    title: LangBot插件架构解析
+  - desc: 采用专家混合架构，激活参数仅占总参数15%，训练效率提升4倍，在MMLU基准测试中达到85.3%准确率。
+    tags:
+    - MoE
+    - 专家混合
+    - 高效训练
+    - MMLU
+    title: MoE语言模型训练优化
+  - desc: 结合向量数据库与生成模型，支持实时知识更新，事实准确性提升45%，幻觉率降低至3.2%。
+    tags:
+    - RAG
+    - 向量数据库
+    - 知识更新
+    - 事实准确性
+    title: 检索增强生成系统
+  - desc: 基于端到端架构，支持128种语言互译，延迟低于200ms，BLEU分数平均提升12.5个百分点。
+    tags:
+    - 语音翻译
+    - 端到端
+    - 多语言
+    - 低延迟
+    title: 多语言语音翻译模型
+  - desc: 采用双塔架构，代码理解准确率92.7%，生成代码通过率89.3%，支持多种编程语言语义分析。
+    tags:
+    - 代码理解
+    - 代码生成
+    - 双塔架构
+    - 语义分析
+    title: 代码理解与生成联合训练
   Net:
-  - desc: 基于用户态网络栈开发高性能QUIC库，利用DPDK减少内核旁路开销，实现微秒级连接建立。
-    title: QUIC协议优化实现
-  - desc: 研究P4语言在智能网卡（NVIDIA BlueField-3）的应用，实现动态流量调度与DDoS防护。
-    title: 可编程数据平面设计
-  - desc: 开发基于强化学习的自适应路由协议，在动态拓扑中优化吞吐量与延迟，支持5G毫米波频段。
-    title: 无线Mesh网络路由
-  - desc: 构建Kubernetes-based NFV平台，实现VNF（防火墙/LB）的自动部署与弹性伸缩。
-    title: 网络功能虚拟化编排
-  - desc: 设计TSN的流量整形算法，保证工业控制场景的确定性延迟，支持IEEE 802.1Qbv标准。
+  - desc: 基于多路径传输，拥塞控制算法改进，吞吐量提升35%，0-RTT连接建立延迟降低至10ms。
+    tags:
+    - QUIC
+    - 多路径
+    - 拥塞控制
+    - 0-RTT
+    title: QUIC协议性能优化
+  - desc: 采用分布式架构，支持百万级流表项管理，策略下发延迟低于5ms，故障恢复时间200ms。
+    tags:
+    - SDN
+    - 分布式
+    - 流表管理
+    - 故障恢复
+    title: 软件定义网络控制器
+  - desc: 基于深度强化学习，资源利用率提升至92%，任务完成时间降低45%，支持动态负载均衡。
+    tags:
+    - 边缘计算
+    - 任务调度
+    - 强化学习
+    - 负载均衡
+    title: 边缘计算任务调度
+  - desc: 采用容器化部署，VNF启动时间缩短至500ms，支持弹性伸缩，资源开销降低30%。
+    tags:
+    - NFV
+    - 容器化
+    - 弹性伸缩
+    - 资源优化
+    title: 网络功能虚拟化
+  - desc: 基于时间感知整形器，端到端延迟保证低于100μs，抖动控制±5μs，适用于工业自动化。
+    tags:
+    - TSN
+    - 时间感知
+    - 低延迟
+    - 工业网络
     title: 时间敏感网络调度
   News:
-  - desc: 2025年12月，GPT-5支持100万亿参数，多模态理解能力显著提升，在MMLU基准测试达到95.2%准确率。
-    title: OpenAI发布GPT-5模型
-  - desc: IBM在2025年11月发布1121量子比特处理器，纠错码效率提升，实现化学模拟实用化。
-    title: 量子计算突破1000量子比特
-  - desc: 2025年10月，欧盟确立高风险AI系统强制认证，要求基础模型提供透明度报告，2026年生效。
-    title: 欧盟通过AI法案最终版
-  - desc: 2025年9月，特斯拉FSD在中国获得L4级认证，支持城市道路无接管行驶，覆盖50个城市。
-    title: 特斯拉完全自动驾驶获批
-  - desc: 美国Frontier超算在2025年8月完成升级，峰值性能达2.5 Exaflops，用于气候模拟与核聚变研究。
-    title: 全球首台E级超算部署
+  - desc: 采用混合专家架构，参数量达10万亿，支持多模态理解，在MMLU基准测试中达到92.5%准确率。
+    tags:
+    - GPT-5
+    - 混合专家
+    - 多模态
+    - MMLU
+    title: OpenAI发布GPT-5技术细节
+  - desc: 采用7nm工艺，训练性能达1 ExaFLOPS，能效比提升5倍，支持自动驾驶模型训练。
+    tags:
+    - Dojo 2
+    - 7nm
+    - ExaFLOPS
+    - 自动驾驶
+    title: 特斯拉Dojo 2芯片量产
+  - desc: IBM发布Condor处理器，量子体积达1024，纠错码效率提升，逻辑量子比特保真度99.5%。
+    tags:
+    - 量子计算机
+    - 1000量子比特
+    - 量子体积
+    - 纠错码
+    title: 量子计算机突破1000量子比特
+  - desc: Neuralink第二代设备，传输带宽达10Gbps，延迟低于5ms，支持1024通道同时记录。
+    tags:
+    - 脑机接口
+    - Neuralink
+    - 高带宽
+    - 低延迟
+    title: 脑机接口新进展
+  - desc: 支持太赫兹通信，峰值速率达1Tbps，空天地一体化网络，端到端延迟低于1ms。
+    tags:
+    - 6G
+    - 太赫兹
+    - Tbps
+    - 低延迟
+    title: 6G技术白皮书发布
