@@ -30,6 +30,7 @@ def get_ai_recommendation(context):
     headers = {"Content-Type": "application/json", "Authorization": "Bearer " + api_key}
 
     prompt_template = """
+    用中文回答
     今日实时背景：{CONTEXT_PLACEHOLDER}
     请作为专家助手为一名软件工程硕士生提供每日推荐。
     
