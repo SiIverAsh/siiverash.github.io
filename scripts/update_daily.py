@@ -3,6 +3,7 @@ import os
 import json
 import requests
 import re
+import sys
 from datetime import datetime, timedelta
 
 api_key = os.getenv("DEEPSEEK_API_KEY")
@@ -151,8 +152,10 @@ def update_yaml():
         except Exception as e:
             print(f"Error processing AI response: {e}")
             print(f"Raw content: {raw_content}")
+            sys.exit(1)
     else:
         print("Failed to get AI recommendation")
+        sys.exit(1)
 
 if __name__ == "__main__":
     update_yaml()
