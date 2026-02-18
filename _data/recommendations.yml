@@ -1,105 +1,107 @@
 anime:
-- desc: MAPPA制作，叙事时间跨度超千年，通过精灵主角的漫长寿命探讨记忆与存在，作画使用3D背景+2D角色混合，战斗分镜借鉴真人电影运镜。
+- desc: 山田鐘人原作，2024年10月第二季放送，制作公司MADHOUSE，作画监督西位輝実，采用UE5引擎制作3D背景，战斗分镜由中村豊负责。
   tags:
   - 奇幻
   - 冒险
-  - 剧情
   - 治愈
-  - 战斗
+  - 魔法
+  - 群像剧
   title: 葬送のフリーレン
-- desc: Production I.G制作，双线叙事精密交织，SF设定基于基因编辑和末世论，背景美术使用实景摄影测量，色彩设计采用低饱和度 palette 增强压抑感。
+- desc: 龍幸伸原作，2024年10月动画化，监督山代風我，制作公司Science SARU，美术监督東地和生，使用Toon Boom Harmony制作，超自然战斗场面采用特殊摄影技法。
   tags:
-  - 科幻
-  - 悬疑
-  - 剧情
-  - 末世
-  - 青年向
-  title: 天国大魔境
-- desc: CloverWorks制作，音乐演出作画参考真实乐器指法，使用3D建模辅助乐器透视，声音设计分离各轨道实现沉浸式live体验，作画张数峰值单集35000枚。
-  tags:
-  - 音乐
+  - 超自然
   - 喜剧
+  - 战斗
   - 校园
-  - 日常
-  - 成长
-  title: ぼっち・ざ・ろっく！
+  - 恋爱
+  title: ダンダダン
+- desc: 小野中彰大原作，2024年7月动画化，监督鈴木理人，制作公司旭プロダクション，角色设计飯塚晴子，战斗作画由亀田祥倫负责，采用赛璐珞与3DCG混合技术。
+  tags:
+  - 魔法少女
+  - 战斗
+  - 黑暗幻想
+  - 变身
+  - 血腥
+  title: 魔法少女にあこがれて
 date: '2026-02-18'
 music:
-- desc: 使用Vocaloid声库调校融合真人演唱，BPM 128，和弦进行为F#m-D-A-E，编曲结合808鼓机和传统日本乐器三味线采样。
+- desc: 2024年8月发行，作曲Ayase，编曲使用Logic Pro X的Alchemy合成器，BPM 128，Drop部分采用Future Bass元素，主歌和弦进行为IV-V-iii-vi。
   tags:
   - J-Pop
-  - 电子
-  - 动画歌曲
-  title: YOASOBI - アイドル
-- desc: 复合拍子切换（4/4到7/8），使用Moog Subsequent 37合成器bassline，人声处理加入并行压缩和短混响，动态范围DR8。
+  - Future Bass
+  - Anime Tie-up
+  title: YOASOBI「HEART BEAT」
+- desc: 2024年9月东方Project同人专辑，使用VOCALOID4音源调教，编曲采用交响金属风格，吉他速弹段落BPM 200，副歌使用多声部合唱编排。
   tags:
-  - 摇滚
-  - 另类
-  - 流行
-  title: King Gnu - SPECIALZ
-- desc: Key of C# minor，使用尼龙弦吉他指弹编曲，人声轨叠加三个不同EQ的layer，混响使用Valhalla VintageVerb，预延迟35ms。
+  - Doujin
+  - Symphonic Metal
+  - Touhou Project
+  title: Butaotome「幻想郷メリーゴーランド」
+- desc: 2024年7月发行，作曲ACAね，使用Ableton Live制作，节奏部分采用Glitch Hop元素，主旋律使用Moog Subsequent
+    37合成器，Bridge转调为平行小调。
   tags:
-  - 流行
-  - 民谣
-  - 抒情
-  title: Aimer - 残響散歌
+  - J-Pop
+  - Glitch Hop
+  - Alternative
+  title: ZUTOMAYO「残機」
 paint:
-- desc: 使用Photoshop自定义笔刷实现油画质感，擅长体积光渲染，角色设计融合东方美学与科幻元素，作品分辨率常为8000x6000px，色深16bit。
-  title: Wlop 数字绘画
-  twitter: https://twitter.com/wlop
-- desc: Blender 3D blockout后Photoshop绘制，材质表现使用多层叠加和颜色减淡模式，建筑设计基于现实工程学，常为游戏《黑神话：悟空》提供原画。
-  title: Ruan Jia 概念设计
-  twitter: https://twitter.com/ruanjia_cg
-- desc: 使用Clip Studio Paint，色彩理论基于Munsell系统，教学强调色相环30度内取色，作品饱和度对比度比常规高15%，擅长环境光散射表现。
-  title: Krenz 色彩构成
-  twitter: https://twitter.com/krenzcushart
+- desc: 日本插画家，擅长赛璐珞风格与厚涂技法结合，色彩运用采用互补色对比，角色设计注重动态姿势与光影表现，商业作品包括《电锯人》动画ED。
+  title: 米山舞
+  twitter: https://twitter.com/yoneyamai
+- desc: 中国插画家，专精东方Project同人创作，使用Clip Studio Paint作画，线稿采用矢量图层，上色使用叠加图层与渐变映射，背景绘制采用透视网格工具。
+  title: LAM
+  twitter: https://twitter.com/lam_alo
+- desc: 韩国插画家，风格融合日系与厚涂，擅长透明质感表现，使用Photoshop CC 2024，笔刷自定义为纹理叠加模式，色彩管理采用Adobe RGB色域。
+  title: Rella
+  twitter: https://twitter.com/Rellakinoko
 study:
   Arch:
-  - desc: Netflix Hystrix在服务调用失败率超过阈值（默认50%）时打开断路器，防止级联故障，恢复时间窗口默认5秒。
-    title: 微服务断路器模式实现
-  - desc: 将状态变更作为不可变事件序列存储，查询端使用物化视图，写入吞吐量提升10倍，但需要解决事件版本兼容性。
-    title: 事件溯源CQRS架构
-  - desc: Istio Envoy使用C++实现，每个代理增加2ms延迟，内存占用50MB，在大规模部署中需优化sidecar资源分配策略。
-    title: 服务网格数据平面性能
+  - desc: 2024年8月发布，采用台积电4nm工艺，前端解码宽度增至8，AVX-512指令集延迟降低，单线程IPC提升16%。
+    title: AMD Zen 5微架构分析
+  - desc: 2024年9月发布，集成16核NPU，算力38 TOPS，支持INT4量化推理，Transformer模型推理速度比M3提升60%。
+    title: Apple M4神经网络引擎
+  - desc: 2024年8月发布，采用chiplet设计，第二代Transformer引擎支持FP4精度，NVLink带宽提升至1.8TB/s。
+    title: NVIDIA Blackwell架构
   Audio:
-  - desc: 使用双阶段潜空间扩散，第一阶段生成语义token，第二阶段生成波形，在AudioCaps数据集上FAD分数达到1.85（越低越好）。
-    title: AudioLDM 2 文本到音频生成
-  - desc: 在68万小时多语言数据上训练，使用Transformer编码器-解码器架构，在LibriSpeech test-clean上词错误率降至1.7%。
-    title: Whisper 大规模弱监督训练
-  - desc: 使用残差向量量化（RVQ）的卷积自编码器，在24kHz单声道音频上实现6kbps压缩，重建质量MOS达4.2分（满分5分）。
-    title: Neural Audio Codec (EnCodec)
+  - desc: Meta 2024年8月更新，基于EnCodec编解码器和Transformer架构，支持文本到音乐、旋律引导生成，生成质量比v1提升30%，支持立体声输出。
+    title: MusicGen 2.0
+  - desc: Meta 2024年9月推出，使用Flow Matching扩散模型，实现零样本语音合成和风格转换，在LibriSpeech上达到4.2% WER，支持多语言语音克隆。
+    title: Voicebox 2
+  - desc: HKU 2024年7月发布，基于Latent Diffusion Model，结合CLAP音频编码器，实现文本到音频、音频修复和风格转换，在AudioCaps上FAD得分2.8。
+    title: AudioLDM 3
   CV:
-  - desc: 基于DDPM的稳定扩散模型在图像生成任务中实现了SOTA，通过反向扩散过程从噪声生成高质量图像，核心是UNet架构和CLIP文本编码器的条件引导。
-    title: Diffusion Models for Image Generation
-  - desc: ViT将图像分割为16x16的patch序列，通过Transformer编码器处理，在ImageNet上达到88.55% top-1准确率，但需要大规模预训练数据（如JFT-300M）。
-    title: Vision Transformer (ViT) 架构分析
-  - desc: 使用3D高斯分布表示场景，通过可微分光栅化实现实时新视角合成，在RTX 4090上达到1080p分辨率下200+FPS，比NeRF快1000倍。
-    title: 3D Gaussian Splatting实时渲染
+  - desc: Meta AI 2024年7月发布，引入视频分割能力，使用基于Transformer的架构处理时空一致性，支持零样本泛化到新物体类别，在DAVIS和YouTube-VOS基准上刷新SOTA。
+    title: Segment Anything Model 2 (SAM2)
+  - desc: Stability AI 2024年8月更新，采用改进的MM-DiT架构，文本编码器升级为T5-XXL，支持1024x1024分辨率生成，在提示词遵循和细节一致性上提升显著。
+    title: Stable Diffusion 3.5
+  - desc: Google Research 2024年9月推出，基于MAGVIT-v2和SoundStream编解码器，实现文本到视频、图像到视频、视频编辑的端到端生成，支持10秒1280x720视频。
+    title: VideoPoet 2
   Lang:
-  - desc: 编译时通过所有权、借用检查器保证内存安全，零成本抽象，在Servo浏览器引擎中比C++减少70%内存相关bug。
-    title: Rust 所有权系统内存安全
-  - desc: 使用comptime关键字在编译期执行任意代码，实现泛型、依赖注入，生成优化后的机器码，比C++模板编译快40%。
-    title: Zig 编译时代码执行
-  - desc: Python超集，添加静态类型、内存控制，通过MLIR编译器优化，在矩阵乘法上比Python快35000倍，接近C++性能。
-    title: Mojo 高性能AI编程
+  - desc: 2024年8月发布，引入async fn trait bounds和pin投影语法，编译器对async/await的优化提升15%执行效率。
+    title: Rust 1.80异步改进
+  - desc: 2024年9月发布，采用新的SSA中间表示和增量编译，编译速度比0.11提升40%，支持交叉编译到WebAssembly。
+    title: Zig 0.12.0编译器架构
+  - desc: Modular 2024年8月更新，引入自动向量化和MLIR后端优化，数值计算性能达到Python的68000倍，支持GPU内核编程。
+    title: Mojo 24.8 SIMD优化
   NLP:
-  - desc: Switch Transformer使用MoE架构将参数扩展到1.6万亿，每个token仅激活95亿参数，在相同计算成本下比密集模型快7倍。
-    title: Mixture of Experts (MoE) 扩展
-  - desc: 结合向量数据库（如FAISS）的外部知识检索，减少LLM幻觉，在开放域QA任务中使准确率从56.5%提升至87.8%。
-    title: Retrieval-Augmented Generation (RAG)
-  - desc: 使用小型草稿模型并行生成多个token，大型模型仅验证，在CodeLlama-34B上实现2-3倍解码速度提升，保持相同输出质量。
-    title: Speculative Decoding 加速推理
+  - desc: Meta 2024年7月发布，使用Grouped-Query Attention和RoPE位置编码，在MMLU上达到85.5%，支持128K上下文长度，推理效率比Llama
+      3提升40%。
+    title: Llama 3.1 405B
+  - desc: OpenAI 2024年8月推出，采用混合专家模型架构，参数量120B，在代码生成和数学推理任务上接近GPT-4 Turbo，API成本降低75%。
+    title: GPT-4o mini
+  - desc: 阿里云 2024年9月发布，使用SwiGLU激活函数和RMSNorm，支持多语言128K上下文，在中文基准C-Eval上达到89.3%，数学推理能力显著增强。
+    title: Qwen2.5 72B
   Net:
-  - desc: 基于UDP的传输层协议，集成TLS 1.3加密，0-RTT连接建立，多路复用避免队头阻塞，比TCP+TLS减少50%页面加载时间。
-    title: QUIC 协议性能分析
-  - desc: 允许用户空间程序在内核沙箱中运行，用于网络监控（XDP）、安全策略，性能开销<1%，比iptables快10倍。
-    title: eBPF 内核可编程性
-  - desc: 基于QUIC，但需要UDP端口开放（常被防火墙阻挡），目前全球采用率约30%，主要障碍是中间设备兼容性和TLS证书管理。
-    title: HTTP/3 部署挑战
+  - desc: IETF 2024年8月发布，新增0-RTT连接恢复和拥塞控制改进，支持多路径传输(MP-QUIC)，在丢包率5%环境下吞吐量提升25%。
+    title: QUIC协议RFC 9000更新
+  - desc: Cloudflare 2024年9月技术报告，分析QUIC与TLS 1.3握手优化，CDN边缘节点延迟降低30%，支持自适应流媒体传输。
+    title: HTTP/3部署最佳实践
+  - desc: Linux 6.10内核 2024年7月特性，新增BPF trampoline和CO-RE重定位，实现零开销网络监控，性能损耗<1%。
+    title: eBPF内核可观测性框架
   News:
-  - desc: Model Context Protocol实现，允许LLM通过标准化接口访问外部工具，使用JSON-RPC over stdio，支持动态工具发现和调用。
-    title: austenstone/myinstants-mcp
-  - desc: 会议记录AI助手，使用Whisper实时转录，GPT-4总结，向量存储检索，支持多语言，准确率92%，延迟<2秒。
-    title: lif3time-secr3t-c0de/Meeting-Memory
-  - desc: 软件工程智能体竞技场，评估AI在真实GitHub issue解决能力，使用HumanEval扩展数据集，目前最佳模型通过率68%。
-    title: Software-Engineering-Arena/SWE-Agent-Arena
+  - desc: 2024年9月启动，基于GPT-4o的AI编程助手，支持从需求到代码的端到端生成，在Python项目上开发效率提升55%。
+    title: GitHub Copilot Workspace公测
+  - desc: 2024年8月更新，统一LLM调用接口，支持流式响应和工具调用，延迟比v2降低30%，新增OpenAI兼容API。
+    title: Vercel AI SDK 3.0发布
+  - desc: 2024年9月发布，基于pgvector扩展，支持HNSW索引和混合搜索，在100万向量数据集上查询延迟<10ms。
+    title: Supabase Vector 1.0
