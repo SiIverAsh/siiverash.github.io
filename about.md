@@ -9,7 +9,7 @@ title: 关于我
 </div>
 
 ## 🎓 教育背景
-*   **学校**: USST、Soft Engineering、Master's Degree
+*   **学校专业**: USST、Soft Engineering、Master's Degree
 *   **研究方向**: LLM 、ASR etc.
 
 ## 💻 技术栈
