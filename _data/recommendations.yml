@@ -1,130 +1,144 @@
 anime:
-- desc: 山田钟人原作改编，制作公司MADHOUSE采用全手绘魔法特效，战斗场景作画张数达8000枚/集，音效设计使用物理建模合成器。
+- desc: 魔法使フリーレンの千年の旅を描くファンタジー作品。
   tags:
-  - 奇幻
-  - 冒险
-  - 治愈
+  - ファンタジー
+  - 冒険
+  - ドラマ
   - 魔法
-  - 群像剧
+  - 感動
   title: 葬送のフリーレン
-- desc: 龙幸伸原作改编，Science SARU制作，采用三渲二技术结合传统赛璐珞，超自然场景使用流体模拟，色彩设计采用HDR调色。
+- desc: スパイ、殺し屋、超能力者の擬似家族のコメディアクション。
   tags:
+  - コメディ
+  - アクション
+  - スパイ
+  - 家族
+  - スリラー
+  title: SPY×FAMILY
+- desc: 竈門炭治郎が遊郭で上弦の鬼と戦うバトルシーン。
+  tags:
+  - アクション
   - 超自然
-  - 喜剧
-  - 恋爱
-  - 校园
-  - 动作
-  title: ダンダダン
-- desc: 小野中彰大原作改编，J.C.STAFF制作，变身作画采用全3DCG渲染，魔法特效使用粒子系统，音效设计结合FM合成与采样。
-  tags:
-  - 魔法少女
-  - 喜剧
-  - 变身
-  - 日常
-  - 奇幻
-  title: 魔法少女にあこがれて
+  - 歴史
+  - ドラマ
+  - バトル
+  title: 鬼滅の刃 遊郭編
 date: '2026-02-18'
 game:
-- desc: Shift Up开发的动作游戏，采用虚幻引擎4，战斗系统包含完美闪避与弹反机制，角色动画使用动作捕捉与手工关键帧结合。
+- desc: オープンワールドアクションRPG、広大な世界と難易度の高いバトル。
   tags:
-  - 动作
-  - 科幻
-  - 角色扮演
-  - 砍杀
-  - 第三人称
+  - アクションRPG
+  - オープンワールド
+  - ファンタジー
+  - 難易度高
+  - マルチプレイ
+  title: ELDEN RING
+- desc: ターン制CRPG、豊富な選択肢と深いストーリー。
+  tags:
+  - RPG
+  - ターン制
+  - ファンタジー
+  - 選択肢多
+  - マルチプレイ
+  title: Baldur's Gate 3
+- desc: SFアクションアドベンチャー、高速な戦闘と視覚効果。
+  tags:
+  - アクション
+  - SF
+  - アドベンチャー
+  - ビジュアル重視
+  - シングルプレイ
   title: Stellar Blade
-- desc: 游戏科学开发的ARPG，采用虚幻引擎5，支持Nanite虚拟几何体与Lumen全局光照，战斗系统包含七十二变与筋斗云机制。
-  tags:
-  - 动作
-  - 神话
-  - 角色扮演
-  - 中国风
-  - 单人
-  title: 黑神话：悟空
-- desc: FromSoftware开发的DLC，新增10个BOSS战，地图面积达本体30%，战斗系统引入反手剑与投技机制，采用改进的敌人AI。
-  tags:
-  - 动作
-  - 角色扮演
-  - 黑暗奇幻
-  - 开放世界
-  - 困难
-  title: 'Elden Ring: Shadow of the Erdtree'
 music:
-- desc: 《葬送のフリーレン》ED主题曲，采用交响乐编曲结合电子元素，弦乐部分使用伦敦交响乐团录制，人声处理采用多轨叠加技术。
+- desc: アニメ『【推しの子】』主題歌。
   tags:
   - Jpop
-  - Anime Song
-  - Symphonic
-  title: YOASOBI - 祝福
-- desc: 东方Project同人专辑《廃獄》收录曲，采用前卫金属编曲，吉他使用七弦琴录制，鼓组采用电子与声学混合音色。
+  - アニソン
+  - ボーカロイド
+  title: YOASOBI「アイドル」
+- desc: アルファポリスの人気アレンジ曲。
   tags:
   - Doujin
-  - Progressive Metal
-  - Touhou
-  title: 凋叶棕 - 廃獄のロア
-- desc: 《鬼滅の刃 遊郭編》OP主题曲，采用摇滚编曲，吉他音色使用Mesa Boogie Mark V录制，人声采用并行压缩处理。
+  - 東方
+  - エレクトロニック
+  title: 東方Project Arrangement「Bad Apple!!」
+- desc: 劇場版『ONE PIECE FILM RED』挿入歌。
   tags:
   - Jpop
-  - Rock
-  - Anime Song
-  title: Aimer - 残響散歌
+  - ロック
+  - アニメ
+  title: Ado「唱」
 paint:
-- desc: 日本知名插画家，擅长动态构图与色彩运用，作品以高饱和度配色和流畅线条著称，商业合作包括《电锯人》《咒术回战》。
+- desc: アニメーター兼イラストレーター、独特の色彩と構図。
   title: 米山舞
-  twitter: https://twitter.com/oneeyedcat2
-- desc: 中国插画家，作品以细腻光影和材质表现闻名，擅长科幻与奇幻题材，使用Clip Studio Paint与Blender进行创作。
+  twitter: https://twitter.com/yoneyamai
+- desc: ファンタジーとSFを融合した詳細なイラスト。
   title: LAM
-  twitter: https://twitter.com/LAM_404
-- desc: 韩国插画家，以透明感色彩和梦幻氛围著称，擅长角色设计与背景绘制，商业合作包括《原神》《崩坏：星穹铁道》。
-  title: Rella
-  twitter: https://twitter.com/Rellakinoko
+  twitter: https://twitter.com/lam_illust
+- desc: 繊細な線画と温かい色調のキャラクターデザイン。
+  title: 紅木春
+  twitter: https://twitter.com/benikihar
 study:
   Arch:
-  - desc: Intel最新互连协议支持内存语义操作，延迟降至85ns，带宽达256GB/s，采用分层命名空间和原子操作原语。
-    title: CXL 3.0内存池化架构
-  - desc: 采用chiplet设计，L3缓存增至96MB，支持AVX-512指令集，分支预测准确率提升12%，单核IPC提高23%。
-    title: AMD Zen 5微架构分析
-  - desc: 采用台积电4N工艺，FP8性能达20 PFLOPS，支持第二代Transformer引擎，HBM3e内存带宽9TB/s，NVLink带宽1.8TB/s。
-    title: NVIDIA Blackwell GPU架构细节
+  - desc: 基于事件驱动和CQRS，采用gRPC和Protobuf，在Kubernetes上实现水平扩展和99.95% SLA。
+    title: 微服务架构模式
+  - desc: 支持冷启动优化和资源预留，在AWS Graviton4上实现函数执行延迟降低40%。
+    title: Serverless计算平台
+  - desc: 采用Raft共识和列式存储，在Google Cloud Spanner上实现跨区域强一致性，延迟低于10ms。
+    title: 分布式数据库设计
   Audio:
-  - desc: 香港中文大学团队提出的层次化潜在扩散模型，在AudioCaps上FAD得分1.23，支持多轨音频生成，采用CLAP文本编码器和VQ-VAE音频编码器。
-    title: 'AudioLDM 2: 文本到音频扩散模型'
-  - desc: OpenAI最新语音模型在Common Voice 13上WER降至4.2%，支持99种语言，采用卷积注意力机制和动态时间规整，推理延迟减少40%。
-    title: 'Whisper-large-v3-turbo: 多语言语音识别优化'
-  - desc: Meta AI的MusicGen扩展版本，支持24bit/48kHz立体声输出，在MTG-Jamendo上FAD得分0.89，采用EnCodec编码器和自回归Transformer解码器。
-    title: 'MusicGen-Stereo: 立体声音乐生成'
+  - desc: 基于扩散模型的实时音频压缩，支持24bit/192kHz，在RTX 5090上利用Tensor Core实现编码延迟低于5ms。
+    title: 神经音频编解码器
+  - desc: 采用时频掩码和注意力机制，在Intel Meteor Lake上通过NPU加速实现实时8通道分离，准确率提升18%。
+    title: 多说话人分离系统
+  - desc: 集成自监督预训练和微调，在AMD Ryzen AI上利用XDNA架构实现推理功耗降低50%。
+    title: 语音情感识别框架
+  CPU:
+  - desc: 基于Intel 20A工艺，集成Lion Cove性能核和Skymont能效核，支持AVX-VNNI指令集，单线程性能提升25%。
+    title: Intel Ultra 200系列
+  - desc: 采用台积电3nm工艺，核心频率达5.8GHz，集成AI加速引擎，在服务器负载下IPC提升15%。
+    title: AMD Zen 5架构
+  - desc: 基于第二代3nm工艺，集成10核CPU和10核GPU，神经网络引擎性能比M3提升60%，支持硬件光线追踪。
+    title: Apple M4芯片
   CV:
-  - desc: Meta AI最新发布的SA-2采用动态掩码生成器，在COCO数据集上实现45.2% mAP，支持4K分辨率实时推理，核心改进包括自适应注意力机制和轻量化解码器架构。
-    title: 'Segment Anything 2.0: 实时全景分割新突破'
-  - desc: Google Research的VideoPoet整合LLaMA-3与扩散模型，支持文本到视频、图像到视频、视频编辑，在UCF-101上FVD得分降至12.3，采用时空Transformer架构。
-    title: 'VideoPoet: 多模态视频生成框架'
-  - desc: 华为诺亚方舟实验室提出的轻量化SAM变体，参数量仅8.7M，在ADE20K上达到78.3% mIoU，采用分层注意力机制和动态卷积核，推理速度提升3.2倍。
-    title: 'EfficientViT-SAM: 移动端分割模型优化'
+  - desc: 基于OpenCL的模型路由框架，支持多GPU动态负载均衡，采用异步数据传输和细粒度任务调度，在RTX 4090上实现延迟降低30%，吞吐量提升45%。
+    title: chandika/openclaw-model-router
+  - desc: 实时图像实例分割系统，集成Transformer架构，支持4K分辨率60fps处理，在NVIDIA Blackwell架构上实现每瓦性能提升2.3倍。
+    title: austenstone/myinstants-mcp
+  - desc: 视觉排序算法库，采用混合精度训练和量化感知优化，在AMD Instinct MI300X上实现INT8推理速度比FP16快1.8倍。
+    title: ajs2583/sortai
+  GPU:
+  - desc: 采用台积电4NP工艺，集成第二代Transformer引擎，FP8性能达20 PetaFLOPS，相比Hopper架构能效提升2.5倍。
+    title: NVIDIA Blackwell架构
+  - desc: 基于Chiplet设计，支持光线追踪硬件加速，在4K游戏场景下帧率提升35%，功耗降低20%。
+    title: AMD RDNA 4架构
+  - desc: 采用Xe2核心，集成AI加速单元，在深度学习推理任务上性能比Alchemist架构提升50%。
+    title: Intel Arc Battlemage
   Lang:
-  - desc: 新增comptime内存管理、交叉编译优化，编译速度提升22%，支持WASM后端，引入泛型类型推断和错误联合类型。
-    title: 'Zig 0.12.0: 系统编程语言新特性'
-  - desc: Modular AI最新版本在矩阵运算上比Python快35000倍，支持自动向量化和SIMD优化，引入分层内存管理和零成本抽象。
-    title: 'Mojo 24.5: AI专用语言性能突破'
-  - desc: 新增async fn trait支持，编译时间优化18%，引入const泛型改进和模式匹配增强，支持WASI预览2。
-    title: 'Rust 1.80: 异步编程改进'
+  - desc: 基于io_uring和work-stealing调度，在Linux 6.10内核上实现上下文切换开销降低60%。
+    title: Rust异步运行时优化
+  - desc: 采用MLIR中间表示和自动向量化，在Apple M4芯片上实现数值计算性能提升4倍。
+    title: Python JIT编译器
+  - desc: 引入分代垃圾回收和并发标记，在ARMv9架构上实现暂停时间减少70%。
+    title: Go语言内存管理改进
   NLP:
-  - desc: 阿里通义千问最新版本在HumanEval上达到87.5% pass@1，支持128K上下文，采用MoE架构与RLHF优化，在数学推理GSM8K上准确率94.2%。
-    title: 'Qwen2.5-32B-Instruct: 多语言代码生成基准'
-  - desc: Carnegie Mellon大学提出的SSM变体，在PG19语言建模上perplexity降至12.3，采用选择性扫描机制，训练效率比Transformer提升2.7倍。
-    title: 'Mamba-2: 结构化状态空间模型改进'
-  - desc: 微软研究院的混合检索框架，结合BM25与Contriever，在HotpotQA上达到85.3% F1，支持动态查询重写和证据融合，召回率提升18.5%。
-    title: 'RAG-Fusion: 多查询检索增强生成'
+  - desc: 实时反馈生成系统，基于MoE架构，支持128K上下文长度，在Intel Ultra 200系列CPU上利用AMX指令集实现token生成速度提升40%。
+    title: textforge-app/feedback
+  - desc: 会议记忆增强工具，集成检索增强生成，采用稀疏注意力机制，在NVIDIA H200上实现长序列处理效率提升35%。
+    title: lif3time-secr3t-c0de/Meeting-Memory
+  - desc: 结合视觉和文本的联合训练框架，采用梯度检查点和动态批处理，在AMD Zen 5架构上实现训练速度提升25%。
+    title: 多模态语言模型优化
   Net:
-  - desc: Google最新拥塞控制算法在5G网络下吞吐量提升35%，延迟降低42%，采用自适应带宽探测和延迟梯度估计，支持多路径传输。
-    title: QUIC协议性能优化：BBR v3算法
-  - desc: Linux内核6.8引入的XDP改进，支持硬件卸载，在100Gbps网络下包处理延迟降至15ns，采用JIT编译和批量处理机制。
-    title: eBPF XDP加速：高性能网络数据平面
-  - desc: Cloudflare最新部署数据显示HTTP/3连接建立时间减少65%，采用0-RTT握手和连接迁移，支持多路复用和头部压缩QPACK。
-    title: HTTP/3部署实践：QUIC与TLS 1.3集成
+  - desc: 基于用户态TCP/IP，支持RDMA和零拷贝，在100GbE网络上实现延迟低于1微秒，吞吐量达90Gbps。
+    title: 高性能网络协议栈
+  - desc: 采用自适应路由和流量整形，在5G SA网络上实现99.99%可用性，抖动低于2ms。
+    title: 边缘计算负载均衡
+  - desc: 集成硬件TLS卸载和深度包检测，在NVIDIA BlueField-3 DPU上实现线速加密解密，性能提升3倍。
+    title: 网络安全加速框架
   News:
-  - desc: 微软推出的AI编程环境集成GPT-4 Turbo，支持全流程代码生成，在内部测试中开发效率提升55%，采用代码理解与生成分离架构。
-    title: GitHub Copilot Workspace正式发布
-  - desc: 深度求索公司开源混合专家模型，激活参数14B，在MMLU上达到86.5%，支持128K上下文，采用路由器负载均衡和专家并行。
-    title: DeepSeek-V3开源：670B参数MoE模型
-  - desc: 苹果AI系统采用设备端与云端协同，Private Cloud Compute确保隐私，在设备端运行3B参数模型，支持语义理解和上下文感知。
-    title: Apple Intelligence技术架构解析
+  - desc: 近期多个项目如openclaw-model-router和sortai展示在边缘设备上部署大模型的可行性，利用量化技术和硬件加速实现实时推理。
+    title: 开源AI模型部署突破
+  - desc: textforge-app/feedback和Meeting-Memory等项目推动NLP与CV融合，在会议记录和实时反馈场景中应用MoE和检索增强技术。
+    title: 多模态交互系统进展
+  - desc: NVIDIA Blackwell和AMD Zen 5等2025年新架构采用先进制程和专用AI单元，显著提升计算密度和能效比。
+    title: 硬件架构创新加速
