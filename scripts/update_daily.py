@@ -24,13 +24,14 @@ def get_ai_recommendation(context):
 
     headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
 
+    # 修复：所有 JSON 格式的大括号都必须双写以进行转义
     prompt = f"""
     今日实时背景（{datetime.now().date()}）：{context}
     
     你是一个专业的个人博主助手。请为一名上海理工大学软件工程硕士生提供每日技术与艺术推荐。
     
     要求：
-    1. 每个分类提供 3 个不同的推荐项。
+    1. 每个分类请提供 3 个不同的推荐项。
     2. desc 必须直接输出硬核知识点或评价，严禁使用引导性废话。
     3. Anime 部分：每个推荐项必须包含至少 5 个描述其属性或风格的 tags。
     4. Music 部分：每个推荐项必须包含至少 3 个描述其流派或情绪的 tags。
@@ -39,17 +40,17 @@ def get_ai_recommendation(context):
     请严格按照以下 JSON 格式输出：
     {{
       "study": {{
-        "CV": [{"title": "标题", "desc": "细节"}],
-        "NLP": [{"title": "标题", "desc": "细节"}],
-        "Audio": [{"title": "标题", "desc": "细节"}],
-        "Net": [{"title": "标题", "desc": "细节"}],
-        "Lang": [{"title": "标题", "desc": "细节"}],
-        "Arch": [{"title": "标题", "desc": "细节"}],
-        "News": [{"title": "标题", "desc": "细节"}]
+        "CV": [{{ "title": "标题", "desc": "细节" }}],
+        "NLP": [{{ "title": "标题", "desc": "细节" }}],
+        "Audio": [{{ "title": "标题", "desc": "细节" }}],
+        "Net": [{{ "title": "标题", "desc": "细节" }}],
+        "Lang": [{{ "title": "标题", "desc": "细节" }}],
+        "Arch": [{{ "title": "标题", "desc": "细节" }}],
+        "News": [{{ "title": "标题", "desc": "细节" }}]
       }},
-      "anime": [{"title": "动漫名", "desc": "理由", "tags": ["标签1", "标签2", "标签3", "标签4", "标签5"]}],
-      "music": [{"title": "歌名", "desc": "理由", "tags": ["流派1", "流派2", "情绪1"]}],
-      "paint": [{"title": "画师名", "desc": "画风特点描述", "twitter": "链接"}]
+      "anime": [{{ "title": "动漫名", "desc": "理由", "tags": ["A", "B", "C", "D", "E"] }}],
+      "music": [{{ "title": "歌名", "desc": "理由", "tags": ["A", "B", "C"] }}],
+      "paint": [{{ "title": "画师名", "desc": "画风特点", "twitter": "链接" }}]
     }}
     """
 
@@ -65,7 +66,8 @@ def get_ai_recommendation(context):
     try:
         response = requests.post(api_url, headers=headers, json=payload)
         return response.json()['choices'][0]['message']['content']
-    except:
+    except Exception as e:
+        print(f"Error: {e}")
         return None
 
 def update_yaml():
