@@ -30,26 +30,41 @@ title: 关于我
 ---
 
 <style>
+  
     .content-card {
-        text-align: left !important;
+        text-align: center !important; 
     }
-    .content-card h1, .content-card > div:first-child {
-        text-align: center !important;
-    }
-    h2 { 
+    
+    .content-card h2 { 
+        display: inline-block; 
+        text-align: left;
+        width: 100%;
+        max-width: 600px;
         border-left: 4px solid var(--primary-color); 
         padding-left: 15px; 
         color: #d85a7f;
         margin-top: 30px;
-        text-align: left;
     }
-    ul { 
+
+    .content-card ul { 
+        display: inline-block; 
+        text-align: left; 
+        max-width: 600px;
+        width: 100%;
+        padding-left: 20px; 
+        margin: 0 auto;
+        list-style-position: inside; 
+    }
+
+    .content-card li { 
         line-height: 2; 
         color: #444; 
-        text-align: left;
-        padding-left: 25px; 
+        margin-bottom: 5px;
     }
-    li {
+
+    .content-card p {
+        max-width: 600px;
+        margin: 10px auto;
         text-align: left;
     }
 </style>
