@@ -55,7 +55,7 @@ title: Welcome to My HP!
 </div>
 
 <script>
-    // 直接使用母版中的 window.siteData
+    // 状态管理
     let currentType = '';
     let currentSubType = '';
     let lastIndex = -1;
@@ -72,7 +72,7 @@ title: Welcome to My HP!
 
     function showStudyDetail(subType) {
         currentSubType = subType;
-        const list = window.siteData.study ? window.siteData.study[subType] : null;
+        const list = window.siteData && window.siteData.study ? window.siteData.study[subType] : null;
         if (list && Array.isArray(list)) {
             const item = list[0]; 
             lastIndex = 0;
@@ -84,7 +84,7 @@ title: Welcome to My HP!
         currentType = type;
         currentSubType = '';
         document.getElementById('sub-tags-area').style.display = 'none';
-        const list = window.siteData[type];
+        const list = window.siteData ? window.siteData[type] : null;
         if (list && Array.isArray(list)) {
             const item = list[0]; 
             lastIndex = 0;
@@ -106,6 +106,8 @@ title: Welcome to My HP!
         
         setTimeout(() => {
             const dataRoot = window.siteData;
+            if (!dataRoot) return;
+
             if (currentType === 'study' && currentSubType) {
                 const list = dataRoot.study[currentSubType];
                 const index = getNextIndex(list.length);
