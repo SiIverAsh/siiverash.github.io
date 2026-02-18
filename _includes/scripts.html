@@ -39,6 +39,10 @@
             document.getElementById('cv-hometown').textContent = "📍 " + cv.hometown;
             document.getElementById('cv-works').textContent = "代表作: " + cv.works;
             document.getElementById('cv-intro').textContent = cv.intro;
+            const wikiLink = document.getElementById('cv-wiki-link');
+            if (wikiLink) {
+                wikiLink.href = "https://zh.moegirl.org.cn/" + encodeURIComponent(cv.name);
+            }
         }
 
         // 识别动漫博文详情页的标签
