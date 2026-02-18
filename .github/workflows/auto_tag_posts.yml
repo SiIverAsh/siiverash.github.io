@@ -3,8 +3,8 @@ name: Auto Tag Blog Posts
 on:
   push:
     paths:
-      - '_posts/**' # 只有当 _posts 文件夹下的内容发生变化时才运行
-  workflow_dispatch: # 允许手动运行
+      - '_posts/**' #
+  workflow_dispatch: # 手动触发
 
 permissions:
   contents: write
@@ -16,12 +16,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # 获取完整历史以确保能 push
+          fetch-depth: 0 
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+          cache: 'pip' # 启用 pip 缓存
 
       - name: Install dependencies
         run: pip install requests pyyaml
