@@ -35,7 +35,7 @@ def get_ai_recommendation(context):
     请基于近期（一个月以内或是一个星期内）的实时背景：{CONTEXT_PLACEHOLDER}，为一名软件工程硕士生提供每日推荐。
     
     要求：
-    1. 每个分类（Study下的子类、Anime、Music、Paint、Game）必须提供正好 8 个不同的推荐项。
+    1. 每个分类（Study下的子类、Anime、Music、Paint、Game）必须提供正好 5 个不同的推荐项。
     2. desc 必须输出最新的硬核技术细节（如架构特性、工艺制程、性能指标）。
     3. 严禁使用任何引导性废话。
     4. 针对 GPU 和 CPU 领域，必须关注最近 24-72 小时内的动态，或 2025 年最前沿的架构（如 NVIDIA Blackwell, RTX 50系列, Intel Ultra 200系列, AMD Zen 5等）。
@@ -47,20 +47,17 @@ def get_ai_recommendation(context):
     必须输出以下 JSON 格式：
     {{
       "study": {{
-        "CV": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
-        "NLP": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
-        "Audio": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
-        "Net": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
-        "Lang": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
-        "Arch": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
-        "GPU": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
-        "CPU": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
-        "News": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}]
+        "CV": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
+        "NLP": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
+        "Audio": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
+        "Net": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
+        "Lang": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
+        "Arch": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
+        "GPU": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
+        "CPU": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
+        "News": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}]
       }},
       "anime": [
-        {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
-        {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
-        {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
@@ -72,9 +69,6 @@ def get_ai_recommendation(context):
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}},
-        {{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}},
-        {{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}},
-        {{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}}
       ],
       "paint": [
@@ -82,15 +76,9 @@ def get_ai_recommendation(context):
         {{"title": "..", "desc": "..", "twitter": ".."}},
         {{"title": "..", "desc": "..", "twitter": ".."}},
         {{"title": "..", "desc": "..", "twitter": ".."}},
-        {{"title": "..", "desc": "..", "twitter": ".."}},
-        {{"title": "..", "desc": "..", "twitter": ".."}},
-        {{"title": "..", "desc": "..", "twitter": ".."}},
         {{"title": "..", "desc": "..", "twitter": ".."}}
       ],
       "game": [
-        {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
-        {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
-        {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
