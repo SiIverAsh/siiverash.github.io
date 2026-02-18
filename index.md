@@ -42,7 +42,7 @@ title: Welcome to My HP!
         
         <!-- 外部链接按钮 -->
         <div id="external-link-area" style="display: none; margin-top: 15px;">
-            <a id="external-link" href="#" target="_blank" class="twitter-btn">关注画师 𝕏</a>
+            <a id="external-link" href="#" target="_blank" class="twitter-btn">去关注画师 𝕏</a>
         </div>
         
         <!-- 重新推荐按钮 -->
