@@ -7,7 +7,8 @@ title: Welcome to My HP!
     <h1 style="font-size: 2.5em; color: #d85a7f; margin-bottom: 20px;">Welcome to My HP!</h1>
     
     <p style="font-size: 1.1em; line-height: 1.8;">
-     Attenion Is All You Need!
+        这里是 <b>Silverash</b> 的数字领地。<br>
+        代码只是工具，生活才是目的。
     </p>
 
     <!-- 交互卡片区 -->
@@ -21,7 +22,7 @@ title: Welcome to My HP!
     <!-- 子分类选择区 -->
     <div id="sub-tags-area" style="margin-top: 25px; display: none; animation: fadeIn 0.5s;">
         <span class="sub-tag" onclick="showStudyDetail('CV')">视觉 (CV)</span>
-        <span class="sub-tag" onclick="showStudyDetail('NLP')">LLM (NLP)</span>
+        <span class="sub-tag" onclick="showStudyDetail('NLP')">语言 (NLP)</span>
         <span class="sub-tag" onclick="showStudyDetail('Audio')">音频 (Audio)</span>
         <span class="sub-tag" onclick="showStudyDetail('Net')">网络 (Net)</span>
         <br>
@@ -52,7 +53,6 @@ title: Welcome to My HP!
 </div>
 
 <script>
-    // 从 Jekyll 注入数据
     const dailyData = {{ site.data.recommendations | jsonify }} || {};
     let currentType = '';
     let currentSubType = '';
@@ -60,10 +60,11 @@ title: Welcome to My HP!
 
     function handleStudyClick() {
         currentType = 'study';
+        currentSubType = ''; // 重置子类型
         document.getElementById('sub-tags-area').style.display = 'block';
-        document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f; font-weight: bold;">请选择一个领域 💡</p>';
+        document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f; font-weight: bold;">请选择一个研究领域 💡</p>';
         document.getElementById('rec-tags').innerHTML = '';
-        document.getElementById('refresh-parent').style.display = 'none';
+        document.getElementById('refresh-parent').style.display = 'none'; // 关键：隐藏按钮
         document.getElementById('external-link-area').style.display = 'none';
     }
 
@@ -71,11 +72,10 @@ title: Welcome to My HP!
         currentSubType = subType;
         const list = dailyData.study ? dailyData.study[subType] : null;
         if (list && Array.isArray(list)) {
-            const index = getNextIndex(list.length);
-            const item = list[index];
+            // 点击子标签时，总是显示第一项，点击“换一个”才触发随机
+            const item = list[0]; 
+            lastIndex = 0; // 同步索引
             updateUI(subType, item.title, item.desc, [], null);
-        } else {
-            console.error("Data not found for study." + subType);
         }
     }
 
@@ -85,11 +85,9 @@ title: Welcome to My HP!
         document.getElementById('sub-tags-area').style.display = 'none';
         const list = dailyData[type];
         if (list && Array.isArray(list)) {
-            const index = getNextIndex(list.length);
-            const item = list[index];
+            const item = list[0]; 
+            lastIndex = 0; // 同步索引
             updateUI(type.toUpperCase(), item.title, item.desc, item.tags || [], item.twitter || null);
-        } else if (list && typeof list === 'object') {
-            updateUI(type.toUpperCase(), list.title, list.desc, list.tags || [], list.twitter || null);
         }
     }
 
@@ -109,9 +107,15 @@ title: Welcome to My HP!
         
         setTimeout(() => {
             if (currentType === 'study' && currentSubType) {
-                showStudyDetail(currentSubType);
+                const list = dailyData.study[currentSubType];
+                const index = getNextIndex(list.length);
+                const item = list[index];
+                updateUI(currentSubType, item.title, item.desc, [], null);
             } else if (currentType) {
-                handleClick(currentType);
+                const list = dailyData[currentType];
+                const index = getNextIndex(list.length);
+                const item = list[index];
+                updateUI(currentType.toUpperCase(), item.title, item.desc, item.tags || [], item.twitter || null);
             }
             btn.style.transform = 'rotate(0deg)';
         }, 300);
