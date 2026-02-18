@@ -20,10 +20,30 @@
 </div>
 {% endif %}
 
-<!-- 预留：TOC 目录卡片 (仅在文章详情页显示) -->
-{% if page.layout == 'post' %}
-<div class="extra-box glass-card toc-box">
-    <div class="extra-title"><i class="fas fa-list-ul"></i> 文章目录</div>
-    <div id="toc-content"></div>
+<!-- 动漫分类页：显示每日声优推荐 -->
+{% if page.url contains '/categories/anime' %}
+<div class="extra-box glass-card">
+    <div class="extra-title"><i class="fas fa-microphone-lines"></i> 今日声优推荐</div>
+    <div id="cv-content">
+        <h4 id="cv-name" style="color: #4a90e2; margin: 0 0 10px 0;">载入中...</h4>
+        <p id="cv-works" style="font-size: 0.85em; color: #666; margin-bottom: 8px;"></p>
+        <p id="cv-feature" style="font-size: 0.8em; color: #888; font-style: italic;"></p>
+    </div>
 </div>
+{% endif %}
+
+<!-- 动漫文章详情页：显示动漫简单介绍和 bgm.tv 链接 -->
+{% if page.layout == 'post' and page.categories contains 'anime' %}
+<div class="extra-box glass-card anime-info-card">
+    <div class="extra-title"><i class="fas fa-circle-info"></i> 动漫百科</div>
+    <div id="anime-wiki-content">
+        <h4 id="wiki-title" style="color: #4a90e2; margin: 0 0 10px 0;"></h4>
+        <p id="wiki-desc" style="font-size: 0.85em; line-height: 1.5; color: #666; margin-bottom: 15px;"></p>
+        <a id="wiki-bgm-link" href="#" target="_blank" class="bgm-btn">在 Bangumi 查看 📺</a>
+    </div>
+</div>
+<style>
+    .bgm-btn { display: inline-block; background: #f09199; color: white; padding: 6px 12px; border-radius: 8px; text-decoration: none; font-size: 0.8em; font-weight: bold; transition: 0.3s; }
+    .bgm-btn:hover { background: #e07b85; transform: scale(1.05); }
+</style>
 {% endif %}

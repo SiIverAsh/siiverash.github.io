@@ -41,28 +41,20 @@ def get_ai_recommendation(context):
     4. 针对 GPU 和 CPU 领域，必须关注最近 24-72 小时内的动态。
     5. 每个内容项（Study、Anime、Music、Game）必须包含至少 4 个 tags。
     6. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等。
-    7. 对于Paint，必须推荐画师名。提供其真实的 X(Twitter) 账号 ID（不带@）。**注意：你必须非常确定该 ID 的准确性，如果不能保证 ID 100% 正确，请务必将 x_id 置为空字符串 ""。严禁任何形式的推测或编造。**
-    8. 对于history推荐内容为“历史上的今天”，必须提供正好 6 个项，包含 year 和 event 字段。
-    9. 所有的回答请务必用中文。
+    7. 对于Paint，必须推荐画师名并提供真实的 X ID（不确定则留空）。
+    8. 对于history推荐内容为“历史上的今天”。
+    9. **新增项**：必须推荐一位日本知名声优（CV），包含姓名(name)、代表作(works)、声音特点(feature)。
+    10. 所有的回答请务必用中文。
     
     必须输出以下 JSON 格式：
     {{
-      "study": {{
-        "CV": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-        "NLP": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-        "Audio": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-        "Net": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-        "Lang": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-        "Arch": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-        "GPU": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-        "CPU": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-        "News": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}]
-      }},
+      "study": {{ ... }},
       "anime": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
       "music": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
       "paint": [{"title": "画师名", "desc": "风格简述", "x_id": "账号ID"}],
       "game": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-      "history": [{"year": "..", "event": ".."}]
+      "history": [{"year": "..", "event": ".."}],
+      "cv_recommend": {{"name": "声优名", "works": "代表作1, 代表作2", "feature": "声音特点描述"}}
     }}
     """
     
@@ -118,7 +110,8 @@ def update_yaml():
                 'music': ai_content.get('music', []),
                 'game': ai_content.get('game', []),
                 'paint': paint_list,
-                'history': ai_content.get('history', [])
+                'history': ai_content.get('history', []),
+                'cv_recommend': ai_content.get('cv_recommend', {})
             }
             
             with open('_data/recommendations.yml', 'w', encoding='utf-8') as f:

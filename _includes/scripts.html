@@ -29,7 +29,33 @@
     }
     window.addEventListener('DOMContentLoaded', loadHistory);
 
-    // 3. 搜索初始化
+    // 4. 动漫页面专属逻辑
+    function loadAnimeExtras() {
+        const cvName = document.getElementById('cv-name');
+        if (cvName && window.siteData && window.siteData.cv_recommend) {
+            const cv = window.siteData.cv_recommend;
+            cvName.textContent = cv.name;
+            document.getElementById('cv-works').textContent = "代表作: " + cv.works;
+            document.getElementById('cv-feature').textContent = cv.feature;
+        }
+
+        // 识别动漫博文详情页的标签
+        const wikiTitle = document.getElementById('wiki-title');
+        if (wikiTitle) {
+            // 获取 Jekyll 注入的标签 (这里需要一个小技巧，通过 ID 传递)
+            const postTags = Array.from(document.querySelectorAll('.mini-tag')).map(t => t.textContent.trim());
+            // 排除掉非动漫名的通用标签
+            const ignoreTags = ['动漫', '恋爱番', '成长', '二次元', '感想', '吹水'];
+            const animeTitle = postTags.find(tag => !ignoreTags.includes(tag)) || "{{ page.title }}".split(' ')[0];
+            
+            if (animeTitle) {
+                wikiTitle.textContent = animeTitle;
+                document.getElementById('wiki-desc').textContent = "点击下方按钮可直接在 Bangumi (番组计划) 中查看关于《" + animeTitle + "》的详细资料、评分及讨论。";
+                document.getElementById('wiki-bgm-link').href = "https://bgm.tv/subject_search/" + encodeURIComponent(animeTitle) + "?cat=2";
+            }
+        }
+    }
+    window.addEventListener('DOMContentLoaded', loadAnimeExtras);
     const sinput = document.getElementById('search-input');
     const sresults = document.getElementById('results-container');
     if(sinput) {
