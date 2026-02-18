@@ -40,7 +40,7 @@ def get_ai_recommendation(context):
     4. 针对 GPU 和 CPU 领域，必须关注最近 24-72 小时内的动态，或 2025 年最前沿的架构（如 NVIDIA Blackwell, RTX 50系列, Intel Ultra 200系列, AMD Zen 5等）。
     5. Anime(至少5个tags)、Music(至少3个tags)、Game(至少5个tags)、Paint。
     6. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等，对于Paint，必须推荐画师，以及给出画师的x链接。
-    7. 对于history推荐的内容必须是技术史、互联网史或与当今日期相关的科技大事件，提供 3 个不同的项。
+    7. 对于history推荐的内容为“历史上的今天”发生的重大事件（不限于科技史），必须提供正好 6 个不同的项，每个项包含 year 和 event 字段。
     8. 所有的回答请务必用中文
     
     必须输出以下 JSON 格式：
@@ -77,9 +77,12 @@ def get_ai_recommendation(context):
         {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}}
       ],
       "history": [
-        {{"title": "..", "desc": ".."}},
-        {{"title": "..", "desc": ".."}},
-        {{"title": "..", "desc": ".."}}
+        {{"year": "..", "event": ".."}},
+        {{"year": "..", "event": ".."}},
+        {{"year": "..", "event": ".."}},
+        {{"year": "..", "event": ".."}},
+        {{"year": "..", "event": ".."}},
+        {{"year": "..", "event": ".."}}
       ]
     }}
     """
