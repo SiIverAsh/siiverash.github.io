@@ -38,12 +38,12 @@ def get_ai_recommendation(context):
     1. 每个分类（Study下的子类、Anime、Music、Paint、Game）必须提供正好 4 个不同的推荐项。
     2. desc 必须输出最新的硬核技术细节（如架构特性、工艺制程、性能指标）。
     3. 严禁使用任何引导性废话。
-    4. 针对 GPU 和 CPU 领域，必须关注最近 24-72 小时内的动态，或 2025 年最前沿的架构（如 NVIDIA Blackwell, RTX 50系列, Intel Ultra 200系列, AMD Zen 5等）。
+    4. 针对 GPU 和 CPU 领域，必须关注最近 24-72 小时内的动态。
     5. 每个内容项（Study、Anime、Music、Game）必须包含至少 4 个 tags。
     6. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等。
-    7. 对于Paint，必须推荐画师名。必须提供其真实的 X(Twitter) 账号 ID（不带@符号）。你必须对该账号的真实性有100%的把握，严禁捏造虚假账号。如果你不确定其账号，请更换推荐的画师。
-    8. 对于history推荐的内容为“历史上的今天”发生的重大事件（不限于科技史），必须提供正好 6 个不同的项，每个项包含 year 和 event 字段。
-    9. 所有的回答请务必用中文
+    7. 对于Paint，必须推荐画师名。提供其真实的 X(Twitter) 账号 ID（不带@）。**注意：你必须非常确定该 ID 的准确性，如果不能保证 ID 100% 正确，请务必将 x_id 置为空字符串 ""。严禁任何形式的推测或编造。**
+    8. 对于history推荐内容为“历史上的今天”，必须提供正好 6 个项，包含 year 和 event 字段。
+    9. 所有的回答请务必用中文。
     
     必须输出以下 JSON 格式：
     {{
@@ -71,12 +71,12 @@ def get_ai_recommendation(context):
     payload = {
         "model": "deepseek-chat",
         "messages": [
-            {"role": "system", "content": "You are a professional assistant that always outputs valid JSON and NEVER hallucinates social media handles. If you aren't 100% sure of an X handle, you find an artist whose handle you DO know."},
+            {"role": "system", "content": "你是一个全能的数字生活与技术博主，精通硬件、AI、动漫及二次元文化。你以输出信息的高准确性著称。"},
             {"role": "user", "content": prompt}
         ],
         "response_format": {"type": "json_object"},
-        "max_tokens": 6000,
-        "temperature": 0.7
+        "max_tokens": 5000,
+        "temperature": 0.6
     }
 
     try:
@@ -95,18 +95,20 @@ def update_yaml():
             cleaned_content = clean_json_string(raw_content)
             ai_content = json.loads(cleaned_content)
             
-            # 增强 Paint 链接的处理逻辑
+            # 增强 Paint 链接的处理逻辑：只有当 ID 看起来合法时才拼接
             paint_list = []
             for item in ai_content.get('paint', []):
                 x_id = str(item.get('x_id', '')).strip().lstrip('@')
-                # 如果 AI 返回了全链接，尝试提取 ID
-                if '/' in x_id:
-                    x_id = x_id.split('/')[-1]
+                # 过滤掉占位符或明显虚假的 ID
+                if '/' in x_id: x_id = x_id.split('/')[-1]
+                
+                # 如果 ID 包含中文、空格或过短，视为无效
+                is_valid = x_id and not re.search(r'[\u4e00-\u9fa5\s]', x_id) and len(x_id) > 2
                 
                 paint_list.append({
                     'title': item.get('title', ''),
                     'desc': item.get('desc', ''),
-                    'twitter': f"https://x.com/{x_id}" if x_id else ""
+                    'twitter': f"https://x.com/{x_id}" if is_valid else ""
                 })
 
             data = {
