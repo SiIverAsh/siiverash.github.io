@@ -9,19 +9,19 @@ title: 关于我
 </div>
 
 ## 🎓 教育背景
-   **就读学校**: USST | Soft Engineering | Master's Degree
-   **研究方向**: LLM 、ASR etc.
+*   **学校**: USST | Soft Engineering | Master's Degree
+*   **研究方向**: LLM 、ASR etc.
 
 ## 💻 技术栈
-   **语言**：Py、Cpp(studing)、 JAVA、 TS(Studing)、JS
-   **核心领域**：Fullstack、ReadtimeASR、AI algorithms。(假如给我三天Vibe)
+*   **语言**：Py、Cpp(studing)、 JAVA、 TS(Studing)、JS
+*   **核心领域**：Fullstack、ReadtimeASR、AI algorithms。(假如给我三天Vibe)
 
 ## 🎨 个人爱好
-   **二次元**：看动漫（）。
-   **绘画**：苦手。
-   **音乐**：无忌口。（ASMR也算音乐么？！）
-   **游戏**：FPS、Gal、二次元手游等，无忌口。
-   **摄影**：I AM NIKON ！
+*   **二次元**：看动漫（）。
+*   **绘画**：苦手。
+*   **音乐**：无忌口。（ASMR也算音乐么？！）
+*   **游戏**：FPS、Gal、二次元手游等，无忌口。
+*   **摄影**：I AM NIKON ！
 
 
 ## 📬 联系我
