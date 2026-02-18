@@ -7,8 +7,7 @@ title: Welcome to My HP!
     <h1 style="font-size: 2.5em; color: #d85a7f; margin-bottom: 20px;">Welcome to My HP!</h1>
     
     <p style="font-size: 1.1em; line-height: 1.8;">
-        这里是 <b>Silverash</b> 的数字领地。<br>
-        代码只是工具，生活才是目的。
+        Attenion Is All You Need!
     </p>
 
     <!-- 交互卡片区 -->
@@ -34,7 +33,7 @@ title: Welcome to My HP!
     <!-- 每日推荐显示区 -->
     <div id="recommend-box" class="recommend-box">
         <div id="recommend-content">
-            <p style="color: #999;">✨ 点击上方卡片，查看今日 AI 自动推荐 ✨</p>
+            <p style="color: #999;">✨ 点击上方卡片，查看今日推荐 ✨</p>
         </div>
         <div id="rec-tags" class="rec-tags"></div>
         <a id="go-to-list" href="#" class="go-btn">查看全部文章 →</a>
