@@ -6,12 +6,11 @@ layout: default
     <header style="margin-bottom: 30px; text-align: center;">
         <h1 style="color: #d85a7f; margin-bottom: 10px;">{{ page.title }}</h1>
         <div style="color: #999; font-size: 0.9em; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-            <span><i class="fas fa-calendar-day"></i> {{ page.date | date: "%Y年%m月%d日" }}</span>
+            <span><i class="fas fa-calendar-day"></i> {{ page.date | date: "%Y-%m-%d %H:%M" }}</span>
             <span>|</span>
             <span><i class="fas fa-folder-open"></i> {% for cat in page.categories %}<span style="color: var(--primary-color)">{{ cat }}</span>{% endfor %}</span>
         </div>
         
-        <!-- 文章标签显示 -->
         {% if page.tags.size > 0 %}
         <div style="margin-top: 15px;">
             {% for tag in page.tags %}
@@ -32,7 +31,49 @@ layout: default
     </footer>
 </article>
 
+<script>
+document.querySelectorAll('pre').forEach((codeBlock) => {
+    const button = document.createElement('button');
+    button.className = 'copy-code-button';
+    button.type = 'button';
+    button.innerText = '复制';
+
+    button.addEventListener('click', () => {
+        const code = codeBlock.querySelector('code').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+            button.innerText = '已复制!';
+            setTimeout(() => { button.innerText = '复制'; }, 2000);
+        });
+    });
+
+    codeBlock.style.position = 'relative';
+    codeBlock.appendChild(button);
+});
+</script>
+
 <style>
+    .copy-code-button {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #888;
+        padding: 4px 8px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.75rem;
+        transition: 0.3s;
+        opacity: 0; 
+    }
+    pre:hover .copy-code-button {
+        opacity: 1;
+    }
+    .copy-code-button:hover {
+        background: var(--primary-color);
+        color: white;
+    }
+
     .post-tag {
         display: inline-block;
         background: rgba(255, 183, 197, 0.1);
