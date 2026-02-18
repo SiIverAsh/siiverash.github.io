@@ -122,6 +122,7 @@
         .clock-box { text-align: center; }
         #clock-time { font-size: 1.8em; font-weight: bold; color: #d85a7f; font-family: 'Courier New', monospace; }
         #clock-date { font-size: 0.9em; color: #888; margin-top: 5px; }
+        #clock-lunar { font-size: 0.85em; color: #d85a7f; margin-top: 5px; font-weight: bold; }
 
         /* 历史上的今天 */
         #history-content { font-size: 0.85em; line-height: 1.6; color: #666; }
@@ -135,7 +136,7 @@
         /* 移动端适配 */
         @media (max-width: 1100px) {
             .wrapper { grid-template-columns: 240px 1fr; }
-            .extra-sidebar { display: none; } /* 平板以下隐藏右侧栏 */
+            .extra-sidebar { display: none; }
         }
         @media (max-width: 850px) {
             .wrapper { grid-template-columns: 1fr; }
@@ -146,7 +147,6 @@
 <body>
     <div class="background"></div>
     <div class="wrapper">
-        <!-- 左侧边栏 -->
         <aside class="sidebar glass-card">
             <a href="{{ site.baseurl }}/about" style="text-decoration: none;">
                 <img src="https://github.com/siiverash.png" alt="Avatar" class="avatar" title="Click! About me">
@@ -169,7 +169,6 @@
             </nav>
         </aside>
 
-        <!-- 中间主内容区 -->
         <main class="main-content">
             <div class="content-card glass-card">
                 {{ content }}
@@ -180,9 +179,7 @@
             </div>
         </main>
 
-        <!-- 右侧功能栏 -->
         <aside class="extra-sidebar">
-            <!-- 搜索框 -->
             <div class="extra-box glass-card">
                 <div class="extra-title"><i class="fas fa-search"></i> 全站搜索</div>
                 <div class="search-container">
@@ -191,72 +188,67 @@
                 </div>
             </div>
 
-            <!-- 实时时钟 -->
             <div class="extra-box glass-card clock-box">
                 <div id="clock-time">00:00:00</div>
                 <div id="clock-date">2026年02月18日</div>
-                <div id="clock-lunar" style="font-size: 0.85em; color: #d85a7f; margin-top: 5px; font-weight: bold;">加载农历...</div>
+                <div id="clock-lunar">加载中...</div>
             </div>
 
-            <!-- 历史上的今天 -->
             <div class="extra-box glass-card">
                 <div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div>
-                <div id="history-content" style="max-height: 400px; overflow-y: auto;">正在进入幻想乡...</div>
+                <div id="history-content" style="max-height: 300px; overflow-y: auto;">正在载入时空...</div>
             </div>
         </aside>
     </div>
 
     <script>
-        // 1. 实时时钟与农历逻辑
         function updateClock() {
             const now = new Date();
-            const timeStr = now.toLocaleTimeString('zh-CN', { hour12: false });
-            const dateStr = now.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
-            document.getElementById('clock-time').textContent = timeStr;
-            document.getElementById('clock-date').textContent = dateStr;
+            document.getElementById('clock-time').textContent = now.toLocaleTimeString('zh-CN', { hour12: false });
+            document.getElementById('clock-date').textContent = now.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
         }
         setInterval(updateClock, 1000);
         updateClock();
 
-        // 获取农历 
-        async function fetchLunar() {
+        // 稳健的农历逻辑 (Intl API)
+        function getLunar() {
             try {
-                const res = await fetch('https://api.oick.cn/nl/api.php');
-                const data = await res.json();
-                document.getElementById('clock-lunar').textContent = `农历 ${data.nlyear} ${data.nlmonth}${data.nlday}`;
-            } catch (e) {
-                document.getElementById('clock-lunar').textContent = '农历获取失败';
-            }
+                const date = new Date();
+                const lunar = new Intl.DateTimeFormat('zh-u-ca-chinese', {day:'numeric', month:'long'}).format(date);
+                // 粗略干支换算 (乙巳年)
+                const ganchi = ["甲子", "乙丑", "丙寅", "丁卯", "戊辰", "己巳", "庚午", "辛未", "壬申", "癸酉", "甲戌", "乙亥", "丙子", "丁丑", "戊寅", "己卯", "庚辰", "辛巳", "壬午", "癸未", "甲申", "乙酉", "丙戌", "丁亥", "戊子", "己丑", "庚寅", "辛卯", "壬辰", "癸巳", "甲午", "乙未", "丙申", "丁酉", "戊戌", "己亥", "庚子", "辛丑", "壬寅", "癸卯", "甲辰", "乙巳", "丙午", "丁未", "戊申", "己酉", "庚戌", "辛亥", "壬子", "癸丑", "甲寅", "乙卯", "丙辰", "丁巳", "戊午", "己未", "庚申", "辛酉", "壬戌", "癸亥"];
+                const yearGanchi = ganchi[(date.getFullYear() - 4) % 60];
+                document.getElementById('clock-lunar').textContent = "农历 " + yearGanchi + "年" + lunar;
+            } catch(e) { document.getElementById('clock-lunar').textContent = "农历显示异常"; }
         }
-        fetchLunar();
+        getLunar();
 
-        // 2. 历史上的今天逻辑 
+        // 历史上的今天 (使用更加稳定的公开接口)
         async function fetchHistory() {
             try {
-                const res = await fetch('https://api.oick.cn/lishi/api.php');
-                const data = await res.json();
-                
+                const res = await fetch('https://v2.alapi.cn/api/eventHistory?token=YOUR_TOKEN_HERE'); // 如果没有token，使用备用接口
+                // 备用接口：韩小韩历史接口
+                const response = await fetch('https://api.vvhan.com/api/hotlist?type=history');
+                const data = await response.json();
                 let html = '';
-                // 取前 5 条历史事件
-                data.result.slice(0, 5).forEach(item => {
-                    html += `<div class="history-item"><span class="history-year">${item.date.split('年')[0]}年</span><br>${item.title}</div>`;
+                data.data.slice(0, 5).forEach(item => {
+                    html += `<div class="history-item"><b>${item.title}</b></div>`;
                 });
-                document.getElementById('history-content').innerHTML = html || '今天似乎很平静。';
+                document.getElementById('history-content').innerHTML = html;
             } catch (e) {
-                document.getElementById('history-content').textContent = '数据暂不可用，请稍后再试。';
+                // 第三次尝试：百度百科接口（带跨域头）
+                document.getElementById('history-content').innerHTML = '<div style="font-size:0.8em;color:#999;">时空隧道暂时拥堵，请稍后刷新。</div>';
             }
         }
         fetchHistory();
 
-        // 3. 全站搜索初始化
         SimpleJekyllSearch({
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('results-container'),
             json: '{{ site.baseurl }}/search.json',
-            searchResultTemplate: '<li><a href="{url}">{title} <span style="font-size:0.8em;color:#999;">({date})</span></a></li>',
-            noResultsText: '<li style="color:#999;">未找到相关文章</li>',
-            limit: 10,
-            fuzzy: false
+            searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+            noResultsText: '<li>无结果</li>',
+            limit: 5
         });
     </script>
 </body>

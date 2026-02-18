@@ -1,5 +1,7 @@
 ---
 layout: category
 title: Study 📚
-category: study
+pagination: 
+  enabled: true
+  category: study
 ---

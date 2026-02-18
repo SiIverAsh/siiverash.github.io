@@ -1,5 +1,7 @@
 ---
 layout: category
 title: Snap 📸
-category: snap
+pagination: 
+  enabled: true
+  category: snap
 ---

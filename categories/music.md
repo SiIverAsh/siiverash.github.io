@@ -1,5 +1,7 @@
 ---
 layout: category
 title: Music 🎵
-category: music
+pagination: 
+  enabled: true
+  category: music
 ---

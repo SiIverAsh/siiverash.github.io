@@ -1,5 +1,7 @@
 ---
 layout: category
 title: Game 🎮
-category: game
+pagination: 
+  enabled: true
+  category: game
 ---

@@ -1,5 +1,7 @@
 ---
 layout: category
 title: Anime 🌸
-category: anime
+pagination: 
+  enabled: true
+  category: anime
 ---

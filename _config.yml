@@ -9,6 +9,15 @@ social:
   pixiv: "https://www.pixiv.net/users/55937658" 
   email: "z1379523665@gmail.com" 
 
-# 插件
+# 插件配置
 plugins:
   - jekyll-feed
+  - jekyll-paginate-v2
+
+# 分页配置
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title_suffix: ' - 第 :num 页'
+  sort_reverse: true

@@ -1,5 +1,7 @@
 ---
 layout: category
 title: Paint 🎨
-category: paint
+pagination: 
+  enabled: true
+  category: paint
 ---
