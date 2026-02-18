@@ -7,8 +7,7 @@ title: Welcome to My HP!
     <h1 style="font-size: 2.5em; color: #d85a7f; margin-bottom: 20px;">Welcome to My HP!</h1>
     
     <p style="font-size: 1.1em; line-height: 1.8;">
-        这里是 <b>Silverash</b> 的数字领地。<br>
-        代码只是工具，生活才是目的。
+     Attenion Is All You Need!
     </p>
 
     <!-- 交互卡片区 -->

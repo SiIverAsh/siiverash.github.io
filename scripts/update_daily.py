@@ -29,20 +29,18 @@ def get_ai_recommendation(context):
 
     headers = {"Content-Type": "application/json", "Authorization": "Bearer " + api_key}
 
-    # 放弃 f-string，改用普通字符串，避免大括号转义地狱
     prompt_template = """
-    用中文回答
     今日实时背景：{CONTEXT_PLACEHOLDER}
     请作为专家助手为一名软件工程硕士生提供每日推荐。
     
     要求：
     1. 每个分类/子领域必须提供正好 3 个不同的推荐项。
-    2. desc 必须直接输出硬核技术细节，严禁使用引导性废话。
-    3. Anime(至少5个tags)、Music(至少3个tags)、Paint(必须是画师，且有twitter链接)。
+    2. desc 必须直接输出硬核技术细节或专业点评，严禁使用引导性废话。
+    3. Anime(至少5个tags)、Music(至少3个tags)、Paint(必须有twitter链接)。
     
     必须且仅输出以下 JSON 格式：
-    {
-      "study": {
+    {{
+      "study": {{
         "CV": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
         "NLP": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
         "Audio": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
@@ -50,11 +48,23 @@ def get_ai_recommendation(context):
         "Lang": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
         "Arch": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
         "News": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}]
-      },
-      "anime": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}],
-      "music": [{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}],
-      "paint": [{"title": "..", "desc": "..", "twitter": ".."}]
-    }
+      }},
+      "anime": [
+        {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
+        {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}},
+        {{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}}
+      ],
+      "music": [
+        {{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}},
+        {{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}},
+        {{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}}
+      ],
+      "paint": [
+        {{"title": "..", "desc": "..", "twitter": ".."}},
+        {{"title": "..", "desc": "..", "twitter": ".."}},
+        {{"title": "..", "desc": "..", "twitter": ".."}}
+      ]
+    }}
     """
     
     prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context)
