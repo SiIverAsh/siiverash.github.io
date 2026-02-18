@@ -55,27 +55,27 @@ title: Welcome to My HP!
 </div>
 
 <script>
-    // 直接使用全局定义的 dailyData，不要重复定义
+    // 直接使用母版中的 window.siteData
     let currentType = '';
     let currentSubType = '';
     let lastIndex = -1;
 
     function handleStudyClick() {
         currentType = 'study';
-        currentSubType = ''; // 重置子类型
+        currentSubType = '';
         document.getElementById('sub-tags-area').style.display = 'block';
         document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f; font-weight: bold;">请选择一个研究领域 💡</p>';
         document.getElementById('rec-tags').innerHTML = '';
-        document.getElementById('refresh-parent').style.display = 'none'; // 关键：隐藏按钮
+        document.getElementById('refresh-parent').style.display = 'none';
         document.getElementById('external-link-area').style.display = 'none';
     }
 
     function showStudyDetail(subType) {
         currentSubType = subType;
-        const list = dailyData.study ? dailyData.study[subType] : null;
+        const list = window.siteData.study ? window.siteData.study[subType] : null;
         if (list && Array.isArray(list)) {
             const item = list[0]; 
-            lastIndex = 0; // 同步索引
+            lastIndex = 0;
             updateUI(subType, item.title, item.desc, [], null);
         }
     }
@@ -84,10 +84,10 @@ title: Welcome to My HP!
         currentType = type;
         currentSubType = '';
         document.getElementById('sub-tags-area').style.display = 'none';
-        const list = dailyData[type];
+        const list = window.siteData[type];
         if (list && Array.isArray(list)) {
             const item = list[0]; 
-            lastIndex = 0; // 同步索引
+            lastIndex = 0;
             updateUI(type.toUpperCase(), item.title, item.desc, item.tags || [], item.twitter || null);
         }
     }
@@ -95,9 +95,7 @@ title: Welcome to My HP!
     function getNextIndex(length) {
         if (length <= 1) return 0;
         let newIndex = Math.floor(Math.random() * length);
-        while (newIndex === lastIndex) {
-            newIndex = Math.floor(Math.random() * length);
-        }
+        while (newIndex === lastIndex) { newIndex = Math.floor(Math.random() * length); }
         lastIndex = newIndex;
         return newIndex;
     }
@@ -107,13 +105,14 @@ title: Welcome to My HP!
         btn.style.transform = 'rotate(360deg)';
         
         setTimeout(() => {
+            const dataRoot = window.siteData;
             if (currentType === 'study' && currentSubType) {
-                const list = dailyData.study[currentSubType];
+                const list = dataRoot.study[currentSubType];
                 const index = getNextIndex(list.length);
                 const item = list[index];
                 updateUI(currentSubType, item.title, item.desc, [], null);
             } else if (currentType) {
-                const list = dailyData[currentType];
+                const list = dataRoot[currentType];
                 const index = getNextIndex(list.length);
                 const item = list[index];
                 updateUI(currentType.toUpperCase(), item.title, item.desc, item.tags || [], item.twitter || null);
@@ -151,45 +150,14 @@ title: Welcome to My HP!
 
 <style>
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    .stat-card {
-        background: rgba(255,255,255,0.4);
-        padding: 15px; border-radius: 20px; width: 90px;
-        cursor: pointer; transition: 0.3s;
-        border: 1px solid rgba(255,255,255,0.5);
-    }
+    .stat-card { background: rgba(255,255,255,0.4); padding: 15px; border-radius: 20px; width: 90px; cursor: pointer; transition: 0.3s; border: 1px solid rgba(255,255,255,0.5); }
     .stat-card:hover { transform: translateY(-10px); background: white; }
-    
-    .sub-tag {
-        display: inline-block; padding: 6px 12px; margin: 4px;
-        background: rgba(255,255,255,0.8); border: 1px solid var(--primary-color);
-        color: #d85a7f; border-radius: 12px; font-size: 0.8em;
-        cursor: pointer; transition: 0.3s; font-weight: bold;
-    }
+    .sub-tag { display: inline-block; padding: 6px 12px; margin: 4px; background: rgba(255,255,255,0.8); border: 1px solid var(--primary-color); color: #d85a7f; border-radius: 12px; font-size: 0.8em; cursor: pointer; transition: 0.3s; font-weight: bold; }
     .sub-tag:hover { background: var(--primary-color); color: white; }
-    
-    .recommend-box {
-        margin-top: 20px; background: rgba(255,255,255,0.5);
-        border-radius: 24px; padding: 25px; border: 2px dashed var(--primary-color);
-    }
-
-    .refresh-btn {
-        background: white; border: 1px solid var(--primary-color);
-        color: #d85a7f; padding: 5px 15px; border-radius: 20px;
-        font-size: 0.85em; cursor: pointer; transition: transform 0.5s ease;
-        font-weight: bold;
-    }
+    .recommend-box { margin-top: 20px; background: rgba(255,255,255,0.5); border-radius: 24px; padding: 25px; border: 2px dashed var(--primary-color); }
+    .refresh-btn { background: white; border: 1px solid var(--primary-color); color: #d85a7f; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; cursor: pointer; transition: transform 0.5s ease; font-weight: bold; }
     .refresh-btn:hover { background: var(--primary-color); color: white; }
-
-    .twitter-btn {
-        display: inline-block; background: #1da1f2; color: white;
-        padding: 6px 15px; border-radius: 15px; text-decoration: none;
-        font-size: 0.85em; font-weight: bold; transition: 0.3s;
-    }
+    .twitter-btn { display: inline-block; background: #1da1f2; color: white; padding: 6px 15px; border-radius: 15px; text-decoration: none; font-size: 0.85em; font-weight: bold; transition: 0.3s; }
     .twitter-btn:hover { background: #0c85d0; transform: scale(1.05); }
-
-    .mini-tag {
-        display: inline-block; background: #fef0f3; color: #d85a7f;
-        padding: 2px 10px; border-radius: 10px; font-size: 0.75em;
-        margin: 5px; border: 1px solid var(--primary-color);
-    }
+    .mini-tag { display: inline-block; background: #fef0f3; color: #d85a7f; padding: 2px 10px; border-radius: 10px; font-size: 0.75em; margin: 5px; border: 1px solid var(--primary-color); }
 </style>

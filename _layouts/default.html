@@ -29,11 +29,23 @@
         .extra-sidebar { position: sticky; top: 40px; height: fit-content; display: flex; flex-direction: column; gap: 20px; animation: slideInRight 0.8s ease; }
         .extra-box { padding: 20px; }
         .extra-title { font-size: 0.9em; font-weight: bold; color: #d85a7f; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        
+        /* 搜索 UI 升级：下拉浮层 */
+        .search-wrapper { position: relative; }
         #search-input { width: 100%; padding: 10px 15px; border-radius: 12px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.5); outline: none; box-sizing: border-box; font-size: 0.9em; }
-        #results-container { list-style: none; padding: 0; margin-top: 10px; max-height: 300px; overflow-y: auto; }
-        #results-container li { padding: 8px 10px; border-bottom: 1px solid rgba(0,0,0,0.05); font-size: 0.85em; }
-        #results-container a { text-decoration: none; color: #666; transition: 0.2s; }
+        #results-container { 
+            position: absolute; top: 100%; left: 0; width: 100%; 
+            list-style: none; padding: 10px 0; margin-top: 8px; 
+            max-height: 350px; overflow-y: auto; z-index: 1000; 
+            background: white; border-radius: 16px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            display: none; border: 1px solid #eee;
+        }
+        #results-container li { padding: 10px 15px; border-bottom: 1px solid #f5f5f5; }
+        #results-container li:last-child { border-bottom: none; }
+        #results-container a { text-decoration: none; color: #444; font-size: 0.9em; display: block; }
         #results-container a:hover { color: var(--primary-color); }
+
         .clock-box { text-align: center; }
         #clock-time { font-size: 1.8em; font-weight: bold; color: #d85a7f; font-family: 'Courier New', monospace; }
         #clock-date { font-size: 0.9em; color: #888; margin-top: 5px; }
@@ -81,21 +93,23 @@
             </div>
         </main>
         <aside class="extra-sidebar">
-            <div class="extra-box glass-card"><div class="extra-title"><i class="fas fa-search"></i> 全站搜索</div><input type="text" id="search-input" placeholder="输入关键词..."><ul id="results-container"></ul></div>
-            <div class="extra-box glass-card clock-box"><div id="clock-time">00:00:00</div><div id="clock-date"></div><div id="clock-lunar"></div></div>
-            
-            <!-- 仅在首页显示历史上的今天 -->
-            {% if page.url == "/" or page.url == "/index.html" %}
             <div class="extra-box glass-card">
-                <div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div>
-                <div id="history-content" style="max-height: 350px; overflow-y: auto;">载入中...</div>
+                <div class="extra-title"><i class="fas fa-search"></i> 全站搜索</div>
+                <div class="search-wrapper">
+                    <input type="text" id="search-input" placeholder="输入关键词...">
+                    <ul id="results-container"></ul>
+                </div>
             </div>
+            <div class="extra-box glass-card clock-box"><div id="clock-time">00:00:00</div><div id="clock-date"></div><div id="clock-lunar"></div></div>
+            {% if page.url == "/" or page.url == "/index.html" %}
+            <div class="extra-box glass-card"><div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div><div id="history-content" style="max-height: 350px; overflow-y: auto;">载入中...</div></div>
             {% endif %}
         </aside>
     </div>
     <script>
-        let dailyData = {};
-        try { dailyData = JSON.parse(document.getElementById('data-raw').textContent); } catch (e) { }
+        // 定义全局变量，供首页脚本使用
+        window.siteData = {};
+        try { window.siteData = JSON.parse(document.getElementById('data-raw').textContent); } catch (e) { }
 
         function updateClock() {
             const now = new Date();
@@ -110,19 +124,27 @@
 
         function loadHistory() {
             const container = document.getElementById('history-content');
-            if (container && dailyData.history && Array.isArray(dailyData.history)) {
-                container.innerHTML = dailyData.history.map(item => `<div class="history-item"><span class="history-year">${item.year}</span><br>${item.event}</div>`).join('');
+            if (container && window.siteData.history) {
+                container.innerHTML = window.siteData.history.map(item => `<div class="history-item"><span class="history-year">${item.year}</span><br>${item.event}</div>`).join('');
             }
         }
         loadHistory();
 
+        // 搜索逻辑：输入时显示下拉，失去焦点或清空时隐藏
+        const searchInput = document.getElementById('search-input');
+        const resultsContainer = document.getElementById('results-container');
+        
+        searchInput.addEventListener('input', () => {
+            resultsContainer.style.display = searchInput.value ? 'block' : 'none';
+        });
+
         SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('results-container'),
+            searchInput: searchInput,
+            resultsContainer: resultsContainer,
             json: '{{ site.baseurl }}/search.json',
             searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-            noResultsText: '<li>无结果</li>',
-            limit: 5
+            noResultsText: '<li><p style="padding:0 15px; color:#999;">无相关内容</p></li>',
+            limit: 8
         });
     </script>
 </body>
