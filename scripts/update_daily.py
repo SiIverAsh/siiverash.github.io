@@ -135,7 +135,6 @@ def update_yaml():
             cleaned_content = clean_json_string(raw_content)
             ai_content = json.loads(cleaned_content)
             
-            # Ensure all required keys exist, use default values if missing
             data = {
                 'date': str(datetime.now().date()),
                 'study': ai_content.get('study', {}),
