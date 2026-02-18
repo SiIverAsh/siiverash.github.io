@@ -1,7 +1,14 @@
 title: Silverashの隙间 
 baseurl: ""
 url: "https://siiverash.github.io"
-repository: "SiIverAsh/siiverash.github.io"
+repository: "siiverash/siiverash.github.io"
+description: "Attention Is All You Need!"
+
+# 显式提供元数据，避免插件去调 GitHub API
+github: [metadata]
+  name: "siiverash.github.io"
+  owner: "siiverash"
+  is_project: false
 
 social:
   github: "https://github.com/siiverash"
