@@ -13,16 +13,24 @@ title: Welcome to My HP!
 
     <!-- 交互卡片区 -->
     <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <div class="stat-card" onclick="handleClick('study')"><h3>📚</h3><p>Study</p></div>
+        <div class="stat-card" onclick="handleStudyClick()"><h3>📚</h3><p>Study</p></div>
         <div class="stat-card" onclick="handleClick('anime')"><h3>🌸</h3><p>Anime</p></div>
         <div class="stat-card" onclick="handleClick('music')"><h3>🎵</h3><p>Music</p></div>
         <div class="stat-card" onclick="handleClick('paint')"><h3>🎨</h3><p>Paint</p></div>
     </div>
 
+    <!-- 子分类选择区 (仅Study显示) -->
+    <div id="sub-tags-area" style="margin-top: 20px; display: none;">
+        <span class="sub-tag" onclick="showStudyDetail('CV')">视觉 (CV)</span>
+        <span class="sub-tag" onclick="showStudyDetail('NLP')">语言 (NLP)</span>
+        <span class="sub-tag" onclick="showStudyDetail('Audio')">音频 (Audio)</span>
+        <span class="sub-tag" onclick="showStudyDetail('Net')">网络 (Net)</span>
+    </div>
+
     <!-- 每日推荐显示区 -->
     <div id="recommend-box" class="recommend-box">
         <div id="recommend-content">
-            <p style="color: #999;">✨ 自动推荐 ✨</p>
+            <p style="color: #999;">✨ 点击上方卡片，查看今日 AI 自动推荐 ✨</p>
         </div>
         <div id="rec-tags" class="rec-tags"></div>
         <a id="go-to-list" href="#" class="go-btn">查看全部文章 →</a>
@@ -30,92 +38,89 @@ title: Welcome to My HP!
 </div>
 
 <script>
-    // 安全地从 Jekyll 注入数据
     const dailyData = {{ site.data.recommendations | jsonify }} || {};
 
+    // 处理 Study 点击：显示子分类
+    function handleStudyClick() {
+        document.getElementById('sub-tags-area').style.display = 'block';
+        document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f;">请选择一个研究领域 💡</p>';
+        document.getElementById('rec-tags').innerHTML = '';
+        document.getElementById('go-to-list').style.display = 'none';
+    }
+
+    // 显示具体的 Study 详情
+    function showStudyDetail(subType) {
+        const item = dailyData.study[subType];
+        if (item) {
+            updateUI('Study - ' + subType, item.title, item.desc, [subType, 'Tech'], 'study');
+        }
+    }
+
+    // 处理其他分类点击
     function handleClick(type) {
-        const box = document.getElementById('recommend-box');
+        document.getElementById('sub-tags-area').style.display = 'none';
+        const item = Array.isArray(dailyData[type]) ? dailyData[type][0] : dailyData[type];
+        if (item) {
+            updateUI(type.toUpperCase(), item.title, item.desc, item.tags || [], type);
+        }
+    }
+
+    function updateUI(categoryLabel, title, desc, tags, categoryUrl) {
         const content = document.getElementById('recommend-content');
         const tagBox = document.getElementById('rec-tags');
         const btn = document.getElementById('go-to-list');
-
-        // 基础动画
-        box.style.transform = 'scale(0.98)';
-        setTimeout(() => box.style.transform = 'scale(1)', 100);
-
-        // 获取数据 (如果是数组则取第一个，不是则直接取)
-        const item = Array.isArray(dailyData[type]) ? dailyData[type][0] : dailyData[type];
-
-        if (!item) {
-            content.innerHTML = `<p style="color: #999;">该栏目暂无推荐内容 (T_T)</p>`;
-            return;
-        }
-
-        // 更新内容
-        let html = `<h3 style="color: #d85a7f; margin-bottom: 10px;">今日 ${type.toUpperCase()} 推荐：${item.title}</h3>`;
-        html += `<p style="line-height: 1.6; color: #555; font-size: 0.95em;">${item.desc}</p>`;
-        content.innerHTML = html;
-
-        // 处理标签
+        
+        content.innerHTML = `<h3 style="color: #d85a7f; margin-bottom: 10px;">${categoryLabel} 推荐：${title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${desc}</p>`;
+        
         tagBox.innerHTML = '';
-        if (item.tags && Array.isArray(item.tags)) {
-            item.tags.forEach(t => {
-                tagBox.innerHTML += `<span class="mini-tag">${t}</span>`;
-            });
-        }
+        tags.forEach(t => {
+            tagBox.innerHTML += `<span class="mini-tag">${t}</span>`;
+        });
 
-        // 更新按钮
-        btn.href = `{{ site.baseurl }}/categories/${type}`;
+        btn.href = `{{ site.baseurl }}/categories/${categoryUrl}`;
         btn.style.display = 'inline-block';
-        box.style.borderStyle = 'solid';
     }
 </script>
 
 <style>
     .stat-card {
         background: rgba(255,255,255,0.4);
-        padding: 15px;
-        border-radius: 20px;
-        width: 90px;
-        cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        padding: 15px; border-radius: 20px; width: 90px;
+        cursor: pointer; transition: 0.3s;
         border: 1px solid rgba(255,255,255,0.5);
-        user-select: none;
     }
-    .stat-card:hover { transform: translateY(-10px); background: white; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-    .stat-card:active { transform: scale(0.9); }
+    .stat-card:hover { transform: translateY(-10px); background: white; }
     .stat-card h3 { margin: 0; font-size: 1.5em; }
     .stat-card p { margin: 5px 0 0; font-weight: bold; color: #777; font-size: 0.8em; }
 
+    .sub-tag {
+        display: inline-block;
+        padding: 5px 12px;
+        margin: 5px;
+        background: white;
+        border: 1px solid #d85a7f;
+        color: #d85a7f;
+        border-radius: 12px;
+        font-size: 0.85em;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .sub-tag:hover { background: #d85a7f; color: white; }
+
     .recommend-box {
-        margin-top: 30px;
+        margin-top: 20px;
         background: rgba(255,255,255,0.5);
         border-radius: 24px;
         padding: 25px;
         border: 2px dashed var(--primary-color);
         min-height: 100px;
-        transition: all 0.3s ease;
     }
 
     .mini-tag {
-        display: inline-block;
-        background: #fef0f3;
-        color: #d85a7f;
-        padding: 2px 10px;
-        border-radius: 10px;
-        font-size: 0.75em;
-        margin: 5px;
-        border: 1px solid var(--primary-color);
+        display: inline-block; background: #fef0f3; color: #d85a7f;
+        padding: 2px 10px; border-radius: 10px; font-size: 0.75em;
+        margin: 5px; border: 1px solid var(--primary-color);
     }
 
-    .go-btn {
-        margin-top: 20px;
-        display: none;
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 0.9em;
-        transition: 0.3s;
-    }
-    .go-btn:hover { letter-spacing: 1px; color: #d85a7f; }
+    .go-btn { margin-top: 20px; display: none; color: var(--primary-color); text-decoration: none; font-weight: bold; }
 </style>

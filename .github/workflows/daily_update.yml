@@ -2,9 +2,8 @@ name: Daily Recommendations Update
 
 on:
   schedule:
-    # 每天凌晨 00:00 UTC (北京时间 08:00) 运行
     - cron: '0 0 * * *'
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch:
 
 jobs:
   update-content:
@@ -24,6 +23,8 @@ jobs:
         pip install requests pyyaml
 
     - name: Run update script
+      env:
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
       run: |
         python scripts/update_daily.py
 
@@ -32,5 +33,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add _data/recommendations.yml
-        git commit -m "Update daily recommendations [skip ci]" || echo "No changes to commit"
+        git commit -m "DeepSeek AI Daily Update [skip ci]" || echo "No changes to commit"
         git push
