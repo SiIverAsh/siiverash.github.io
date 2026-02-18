@@ -50,7 +50,11 @@
 </head>
 <body>
     <div class="background"></div>
-    <div id="data-payload" style="display:none;">{{ site.data.recommendations | jsonify | base64_encode }}</div>
+    
+    <!-- 稳健数据源：不使用 base64，直接通过 JSON 字符串传递 -->
+    <script id="data-raw" type="application/json">
+        {{ site.data.recommendations | jsonify }}
+    </script>
 
     <div class="wrapper">
         <aside class="sidebar glass-card">
@@ -89,18 +93,9 @@
     <script>
         let dailyData = {};
         try {
-            const base64Data = document.getElementById('data-payload').textContent.trim();
-            if(base64Data) {
-                // 使用更健壮的方案处理 Unicode
-                const binary = atob(base64Data);
-                const bytes = new Uint8Array(binary.length);
-                for (let i = 0; i < binary.length; i++) {
-                    bytes[i] = binary.charCodeAt(i);
-                }
-                const jsonStr = new TextDecoder('utf-8').decode(bytes);
-                dailyData = JSON.parse(jsonStr);
-            }
-        } catch (e) { console.error("Data error:", e); }
+            const rawJson = document.getElementById('data-raw').textContent;
+            dailyData = JSON.parse(rawJson);
+        } catch (e) { console.error("Data Load Error", e); }
 
         function updateClock() {
             const now = new Date();
@@ -115,8 +110,10 @@
 
         function loadHistory() {
             const container = document.getElementById('history-content');
-            if (dailyData.history && Array.isArray(dailyData.history)) {
+            if (dailyData && dailyData.history && Array.isArray(dailyData.history)) {
                 container.innerHTML = dailyData.history.map(item => `<div class="history-item"><span class="history-year">${item.year}</span><br>${item.event}</div>`).join('');
+            } else {
+                container.innerHTML = '<div style="font-size:0.8em;color:#999;">今天似乎很平静。</div>';
             }
         }
         loadHistory();
