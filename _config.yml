@@ -1,16 +1,8 @@
 title: Silverash's Space
 description: "计科人 / 二次元 / 音乐 / 绘画"
-remote_theme: "fu-sentai/jekyll-theme-yakumo" # 换成一个更稳定的二次元主题
+baseurl: ""
+url: "https://siiverash.github.io"
 
-# 插件配置
+# 插件
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
-
-# 个人资料配置（Yakumo 主题通用）
-author: "Silverash"
-avatar: "https://github.com/siiverash.png"
-bio: "计科人 / 二次元 / 音乐 / 绘画"
-
-# 你可以在这里配置背景图
-background_image: "https://api.dujin.org/bing/1920.php"

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <style>
+        :root {
+            --primary-color: #ffb7c5; /* 樱花粉 */
+            --bg-overlay: rgba(255, 255, 255, 0.7);
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* 背景图层 */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://api.dujin.org/bing/1920.php') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1;
+            filter: brightness(0.9);
+        }
+
+        /* 主容器 */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* 磨砂玻璃卡片 */
+        .card {
+            background: var(--bg-overlay);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            text-align: center;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        h1 { color: #d85a7f; margin-bottom: 10px; }
+        h2 { color: #555; font-weight: 300; }
+        p { line-height: 1.6; color: #444; }
+
+        .tags {
+            margin-top: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .tag:hover { transform: scale(1.1); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 页脚 */
+        footer {
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="card">
+            {{ content }}
+            <footer>
+                &copy; {{ site.time | date: '%Y' }} {{ site.title }} | Built with Love
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

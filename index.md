@@ -1,15 +1,20 @@
 ---
 layout: default
-title: Home
+title: 欢迎来到我的空间
 ---
 
-## 你好，我是 Silverash 👋
+# Silverash 👋
 
-一名热爱生活的 **计科人**。
+一名普通的 **计科人**。
 
-这里是我的数字小窝，用来记录我的：
-- **二次元** 幻想世界 🌸
-- 情感起伏的 **音乐** 🎵
-- 灵光一现的 **绘画** 🎨
+<p>这里是我记录生活与爱好的数字小窝。</p>
 
-*代码只是工具，生活才是目的。*
+<div class="tags">
+    <span class="tag"># 二次元 🌸</span>
+    <span class="tag"># 音乐 🎵</span>
+    <span class="tag"># 绘画 🎨</span>
+</div>
+
+---
+
+> “代码只是工具，生活才是目的。”
