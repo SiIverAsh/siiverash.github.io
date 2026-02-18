@@ -31,7 +31,6 @@ def get_ai_recommendation(context):
     headers = {"Content-Type": "application/json", "Authorization": "Bearer " + api_key}
 
     prompt_template = """
-    用中文回答我
     今天是 {CURRENT_DATE}。你是一个顶级硬件与人工智能专家。
     请基于近期（一个月以内或是一个星期内）的实时背景：{CONTEXT_PLACEHOLDER}，为一名软件工程硕士生提供每日推荐。
     
@@ -41,7 +40,8 @@ def get_ai_recommendation(context):
     3. 严禁使用任何引导性废话。
     4. 针对 GPU 和 CPU 领域，必须关注最近 24-72 小时内的动态，或 2025 年最前沿的架构（如 NVIDIA Blackwell, RTX 50系列, Intel Ultra 200系列, AMD Zen 5等）。
     5. Anime(至少5个tags)、Music(至少3个tags)、Game(至少5个tags)、Paint。
-    6.对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等，对于Paint，必须推荐画师，以及给出画师的x链接。
+    6. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等，对于Paint，必须推荐画师，以及给出画师的x链接。
+    7. 所有的回答请务必用中文
     
     必须输出以下 JSON 格式：
     {{
