@@ -2,19 +2,34 @@ import yaml
 import os
 import json
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 
 api_key = os.getenv("DEEPSEEK_API_KEY")
 api_url = "https://api.deepseek.com/chat/completions"
 
-def get_ai_recommendation():
+def get_realtime_context():
+    """仅抓取最核心的今日热门 AI 项目名，作为极简背景"""
+    try:
+        yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+        query = f"created:>{yesterday} topic:ai"
+        url = f"https://api.github.com/search/repositories?q={query}&sort=stars&order=desc&per_page=5"
+        res = requests.get(url, timeout=5)
+        repos = res.json().get('items', [])
+        return ", ".join([r['full_name'] for r in repos])
+    except:
+        return ""
+
+def get_ai_recommendation(context):
     if not api_key:
         return None
 
     headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
 
-    prompt = """
-    你是一个专业的个人博主助手。请你仔细搜索之后再做出以下行为：请为我提供每日推荐。
+    # 保持原有 Prompt 结构，仅在开头注入实时背景
+    prompt = f"""
+    今日实时背景（{datetime.now().date()}）：{context}
+    
+    你是一个专业的个人博主助手。请为一名上海理工大学软件工程硕士生提供每日技术推荐。
     
     要求：
     1. 描述（desc）必须直接输出硬核知识点或技术细节。
@@ -22,30 +37,29 @@ def get_ai_recommendation():
     3. 风格应简洁、专业、直接，像技术文档一样。
     
     请严格按照以下 JSON 格式输出：
-    {
-      "study": {
-        "CV": {"title": "视觉相关", "desc": "直接介绍一个CV领域的SOTA模型或技巧"},
-        "NLP": {"title": "语言处理", "desc": "直接介绍一个NLP或大模型相关技术"},
-        "Audio": {"title": "声纹/音频", "desc": "直接介绍一个音频处理或声纹识别优化技术"},
-        "Net": {"title": "计网/安全", "desc": "直接介绍一个网络协议或网络安全知识"},
-        "Lang": {"title": "编程语言", "desc": "直接介绍 C++/Python/Rust/Go 等语言的高级特性或新版本动向"},
-        "Arch": {"title": "架构/前后端", "desc": "直接介绍一个高并发系统、微服务、现代前端框架或工程化实践"},
-        "News": {"title": "AI 业界动态", "desc": "汇总一条 OpenAI/DeepSeek/Google/Meta 等公司的最新动态或重磅发布"}
-      },
-        "anime": {"title": "动漫名", "desc": "推荐理由", "tags": ["标签1", "标签2", "标签3", "标签4", "标签5", "标签6", "标签7", "标签8",]},                                       
-        "music": {"title": "歌名/歌手/风格)", "desc": "(这里请你主要推荐日本同人音乐，例如东方project、M3同人音乐等),并写出推荐理由"},                        
-        "paint": {"title": "画师/风格", "desc": "直接给出画师推特链接，并写出推荐理由"}                                                                                   }  
-    }
+    {{
+      "study": {{
+        "CV": {{"title": "视觉技术名", "desc": "直接描述该技术的原理、优势或核心逻辑"}},
+        "NLP": {{"title": "语言模型技术", "desc": "直接描述其架构特点或优化方案"}},
+        "Audio": {{"title": "音频/声纹技术", "desc": "直接描述算法改进点或性能指标"}},
+        "Net": {{"title": "网络/安全技术", "desc": "直接描述协议细节"}},
+        "Lang": {{"title": "语言特性", "desc": "直接描述底层机制或新版特性"}},
+        "Arch": {{"title": "架构模式", "desc": "直接描述其解决的痛点或设计要点"}},
+        "News": {{"title": "AI 业界动态", "desc": "直接描述事件内容及行业影响"}}
+      }},
+      "anime": {{"title": "动漫名", "desc": "推荐理由", "tags": ["标签1", "标签2"]}},
+      "music": {{"title": "歌名", "desc": "推荐理由"}},
+      "paint": {{"title": "画师", "desc": "推特链接：，核心要领"}}
+    }}
     """
 
     payload = {
         "model": "deepseek-chat",
         "messages": [
-            {"role": "system", "content": "You are a helpful assistant that outputs only JSON."},
+            {"role": "system", "content": "You are a professional tech assistant."},
             {"role": "user", "content": prompt}
         ],
-        "response_format": {"type": "json_object"},
-        "stream": False
+        "response_format": {"type": "json_object"}
     }
 
     try:
@@ -55,7 +69,8 @@ def get_ai_recommendation():
         return None
 
 def update_yaml():
-    raw_content = get_ai_recommendation()
+    context = get_realtime_context()
+    raw_content = get_ai_recommendation(context)
     if raw_content:
         ai_content = json.loads(raw_content)
         data = {
