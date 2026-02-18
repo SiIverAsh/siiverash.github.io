@@ -13,7 +13,7 @@
         .wrapper { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 260px 1fr 280px; gap: 20px; padding: 40px 20px; min-height: calc(100vh - 80px); }
         .glass-card { background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 24px; border: 1px solid var(--glass-border); box-shadow: var(--shadow); }
         .sidebar { position: sticky; top: 40px; height: fit-content; padding: 30px 20px; text-align: center; animation: slideInLeft 0.8s ease; }
-        .avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; transition: transform 0.5s; }
+        .avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; transition: transform 0.5s; cursor: pointer; }
         .avatar:hover { transform: rotate(360deg) scale(1.1); }
         .sidebar h2 { margin: 10px 0 5px; color: #d85a7f; font-size: 1.4em; }
         .social-links { display: flex; justify-content: center; gap: 12px; margin-bottom: 20px; }
@@ -50,9 +50,14 @@
 </head>
 <body>
     <div class="background"></div>
+    <!-- 隐藏数据源：防止 Liquid 注入导致 JS 语法错误 -->
+    <script id="daily-data-source" type="application/json">
+        {{ site.data.recommendations | jsonify }}
+    </script>
+
     <div class="wrapper">
         <aside class="sidebar glass-card">
-            <a href="{{ site.baseurl }}/about" style="text-decoration: none;"><img src="https://github.com/siiverash.png" alt="Avatar" class="avatar" title="Click! About me"></a>
+            <a href="{{ site.baseurl }}/about"><img src="https://github.com/siiverash.png" alt="Avatar" class="avatar" title="Click! About me"></a>
             <h2>Silverash</h2>
             <div class="social-links">
                 {% if site.social.github %}<a href="{{ site.social.github }}" target="_blank"><i class="fab fa-github"></i></a>{% endif %}
@@ -62,20 +67,19 @@
             </div>
             <nav class="nav-links">
                 <a href="{{ site.baseurl }}/" class="nav-item"><i class="fas fa-home"></i> 首页</a>
-                <a href="{{ site.baseurl }}/categories/study" class="nav-item"><i class="fas fa-terminal"></i> 学习笔记</a>
-                <a href="{{ site.baseurl }}/categories/anime" class="nav-item"><i class="fas fa-clapperboard"></i> 动漫记录</a>
-                <a href="{{ site.baseurl }}/categories/music" class="nav-item"><i class="fas fa-compact-disc"></i> 同音鉴赏</a>
-                <a href="{{ site.baseurl }}/categories/paint" class="nav-item"><i class="fas fa-pen-nib"></i> 胡乱涂鸦</a>
-                <a href="{{ site.baseurl }}/categories/game" class="nav-item"><i class="fas fa-ghost"></i> 游戏荒野</a>
-                <a href="{{ site.baseurl }}/categories/snap" class="nav-item"><i class="fas fa-camera"></i> 瞬间随拍</a>
+                <a href="{{ site.baseurl }}/categories/study/" class="nav-item"><i class="fas fa-terminal"></i> 学习笔记</a>
+                <a href="{{ site.baseurl }}/categories/anime/" class="nav-item"><i class="fas fa-clapperboard"></i> 动漫记录</a>
+                <a href="{{ site.baseurl }}/categories/music/" class="nav-item"><i class="fas fa-compact-disc"></i> 同音鉴赏</a>
+                <a href="{{ site.baseurl }}/categories/paint/" class="nav-item"><i class="fas fa-pen-nib"></i> 胡乱涂鸦</a>
+                <a href="{{ site.baseurl }}/categories/game/" class="nav-item"><i class="fas fa-ghost"></i> 游戏荒野</a>
+                <a href="{{ site.baseurl }}/categories/snap/" class="nav-item"><i class="fas fa-camera"></i> 瞬间随拍</a>
             </nav>
         </aside>
         <main class="main-content">
             <div class="content-card glass-card">
                 {{ content }}
                 <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed rgba(0,0,0,0.1); font-size: 0.85em; color: #888; text-align: center;">
-                    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
-                    <p>Powered by <a href="https://jekyllrb.com/" target="_blank" style="color: #d85a7f; text-decoration: none;">Jekyll</a> & <a href="https://pages.github.com/" target="_blank" style="color: #d85a7f; text-decoration: none;">GitHub Pages</a>.</p>
+                    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Powered by Jekyll & Pages.</p>
                 </footer>
             </div>
         </main>
@@ -86,12 +90,13 @@
         </aside>
     </div>
     <script>
+        // 安全解析数据
         let dailyData = {};
         try {
-            dailyData = {{ site.data.recommendations | jsonify }} || {};
-        } catch (e) {
-            console.error("Failed to load dailyData:", e);
-        }
+            const rawJson = document.getElementById('daily-data-source').textContent;
+            dailyData = JSON.parse(rawJson) || {};
+        } catch (e) { console.error("Data parse error", e); }
+
         function updateClock() {
             const now = new Date();
             document.getElementById('clock-time').textContent = now.toLocaleTimeString('zh-CN', { hour12: false });
@@ -104,10 +109,9 @@
         setInterval(updateClock, 1000); updateClock();
 
         function loadHistory() {
-            const history = dailyData.history;
             const container = document.getElementById('history-content');
-            if (history && Array.isArray(history)) {
-                container.innerHTML = history.map(item => `<div class="history-item"><span class="history-year">${item.year}</span><br>${item.event}</div>`).join('');
+            if (dailyData.history && Array.isArray(dailyData.history)) {
+                container.innerHTML = dailyData.history.map(item => `<div class="history-item"><span class="history-year">${item.year}</span><br>${item.event}</div>`).join('');
             }
         }
         loadHistory();
