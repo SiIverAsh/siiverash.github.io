@@ -30,11 +30,27 @@ title: 关于我
 ---
 
 <style>
-    .post-content h2 { 
+    /* 核心排版修复 */
+    .content-card {
+        text-align: left !important; /* 强制容器内容左对齐 */
+    }
+    .content-card h1, .content-card > div:first-child {
+        text-align: center !important; /* 保持标题居中 */
+    }
+    h2 { 
         border-left: 4px solid var(--primary-color); 
         padding-left: 15px; 
         color: #d85a7f;
         margin-top: 30px;
+        text-align: left;
     }
-    ul { line-height: 2; color: #444; }
+    ul { 
+        line-height: 2; 
+        color: #444; 
+        text-align: left;
+        padding-left: 25px; /* 给圆点留出显示空间 */
+    }
+    li {
+        text-align: left;
+    }
 </style>
