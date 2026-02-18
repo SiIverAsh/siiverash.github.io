@@ -11,8 +11,8 @@ api_url = "https://api.deepseek.com/chat/completions"
 def get_realtime_context():
     try:
         yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
-        query = f"created:>{yesterday} topic:ai"
-        url = f"https://api.github.com/search/repositories?q={query}&sort=stars&order=desc&per_page=5"
+        query = "created:>" + yesterday + " topic:ai"
+        url = "https://api.github.com/search/repositories?q=" + query + "&sort=stars&order=desc&per_page=5"
         res = requests.get(url, timeout=5)
         repos = res.json().get('items', [])
         return ", ".join([r['full_name'] for r in repos])
@@ -20,8 +20,6 @@ def get_realtime_context():
         return ""
 
 def clean_json_string(raw_str):
-    """提取字符串中的 JSON 部分并清理常见错误"""
-    # 去除 Markdown 代码块标记
     json_str = re.sub(r'```json\s*|\s*```', '', raw_str).strip()
     return json_str
 
@@ -29,10 +27,11 @@ def get_ai_recommendation(context):
     if not api_key:
         return None
 
-    headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
+    headers = {"Content-Type": "application/json", "Authorization": "Bearer " + api_key}
 
-    prompt = f"""
-    今日实时背景：{context}
+    # 放弃 f-string，改用普通字符串，避免大括号转义地狱
+    prompt_template = """
+    今日实时背景：{CONTEXT_PLACEHOLDER}
     请作为专家助手为一名软件工程硕士生提供每日推荐。
     
     要求：
@@ -41,8 +40,8 @@ def get_ai_recommendation(context):
     3. Anime(至少5个tags)、Music(至少3个tags)、Paint(必须有twitter链接)。
     
     必须且仅输出以下 JSON 格式：
-    {{
-      "study": {{
+    {
+      "study": {
         "CV": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
         "NLP": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
         "Audio": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
@@ -50,12 +49,14 @@ def get_ai_recommendation(context):
         "Lang": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
         "Arch": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}],
         "News": [{"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}, {"title": "..", "desc": ".."}]
-      }},
-      "anime": [{"title": "..", "desc": "..", "tags": [..]}],
-      "music": [{"title": "..", "desc": "..", "tags": [..]}],
+      },
+      "anime": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D", "E"]}],
+      "music": [{"title": "..", "desc": "..", "tags": ["A", "B", "C"]}],
       "paint": [{"title": "..", "desc": "..", "twitter": ".."}]
-    }}
+    }
     """
+    
+    prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context)
 
     payload = {
         "model": "deepseek-chat",
@@ -71,7 +72,7 @@ def get_ai_recommendation(context):
         response.raise_for_status()
         return response.json()['choices'][0]['message']['content']
     except Exception as e:
-        print(f"API Request Error: {e}")
+        print("API Request Error: " + str(e))
         return None
 
 def update_yaml():
@@ -92,8 +93,7 @@ def update_yaml():
                 yaml.dump(data, f, allow_unicode=True)
             print("Successfully updated recommendations.yml")
         except Exception as e:
-            print(f"JSON Parsing Error: {e}")
-            print(f"Raw content: {raw_content[:500]}...")
+            print("JSON Parsing Error: " + str(e))
     else:
         print("Failed to get AI content.")
 
