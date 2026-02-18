@@ -6,6 +6,18 @@
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+    
+    <!-- 1. 数据层提前：确保数据在页面内容渲染前就位 -->
+    <script id="data-raw" type="application/json">{{ site.data.recommendations | jsonify }}</script>
+    <script>
+        window.siteData = {};
+        try {
+            const raw = document.getElementById('data-raw').textContent;
+            window.siteData = JSON.parse(raw);
+            console.log("SiteData Loaded Successfully:", window.siteData);
+        } catch (e) { console.error("Data Parse Error:", e); }
+    </script>
+
     <style>
         :root { --primary-color: #ffb7c5; --text-main: #444; --glass-bg: rgba(255, 255, 255, 0.75); --glass-border: rgba(255, 255, 255, 0.3); --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); }
         body, html { margin: 0; padding: 0; min-height: 100vh; font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; color: var(--text-main); }
@@ -29,23 +41,13 @@
         .extra-sidebar { position: sticky; top: 40px; height: fit-content; display: flex; flex-direction: column; gap: 20px; animation: slideInRight 0.8s ease; }
         .extra-box { padding: 20px; }
         .extra-title { font-size: 0.9em; font-weight: bold; color: #d85a7f; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
-        
         .search-wrapper { position: relative; z-index: 1001; }
-        .search-box-card { z-index: 100; position: relative; } 
+        .search-box-card { z-index: 100; position: relative; }
         #search-input { width: 100%; padding: 10px 15px; border-radius: 12px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.5); outline: none; box-sizing: border-box; font-size: 0.9em; }
-        #results-container { 
-            position: absolute; top: 100%; left: 0; width: 100%; 
-            list-style: none; padding: 10px 0; margin-top: 8px; 
-            max-height: 350px; overflow-y: auto; z-index: 1000; 
-            background: white; border-radius: 16px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
-            display: none; border: 1px solid #eee;
-        }
+        #results-container { position: absolute; top: 100%; left: 0; width: 100%; list-style: none; padding: 10px 0; margin-top: 8px; max-height: 350px; overflow-y: auto; z-index: 1000; background: white; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: none; border: 1px solid #eee; }
         #results-container li { padding: 10px 15px; border-bottom: 1px solid #f5f5f5; }
-        #results-container li:last-child { border-bottom: none; }
         #results-container a { text-decoration: none; color: #444; font-size: 0.9em; display: block; }
         #results-container a:hover { color: var(--primary-color); }
-
         .clock-box { text-align: center; }
         #clock-time { font-size: 1.8em; font-weight: bold; color: #d85a7f; font-family: 'Courier New', monospace; }
         #clock-date { font-size: 0.9em; color: #888; margin-top: 5px; }
@@ -62,8 +64,6 @@
 </head>
 <body>
     <div class="background"></div>
-    <script id="data-raw" type="application/json">{{ site.data.recommendations | jsonify }}</script>
-
     <div class="wrapper">
         <aside class="sidebar glass-card">
             <a href="{{ site.baseurl }}/about"><img src="https://github.com/siiverash.png" alt="Avatar" class="avatar" title="Click! About me"></a>
@@ -93,7 +93,6 @@
             </div>
         </main>
         <aside class="extra-sidebar">
-            <!-- 搜索框 -->
             <div class="extra-box glass-card search-box-card">
                 <div class="extra-title"><i class="fas fa-search"></i> 全站搜索</div>
                 <div class="search-wrapper">
@@ -108,9 +107,7 @@
         </aside>
     </div>
     <script>
-        window.siteData = {};
-        try { window.siteData = JSON.parse(document.getElementById('data-raw').textContent); } catch (e) { }
-
+        // 全局核心逻辑：始终运行
         function updateClock() {
             const now = new Date();
             document.getElementById('clock-time').textContent = now.toLocaleTimeString('zh-CN', { hour12: false });
@@ -130,21 +127,18 @@
         }
         loadHistory();
 
-        const searchInput = document.getElementById('search-input');
-        const resultsContainer = document.getElementById('results-container');
-        
-        searchInput.addEventListener('input', () => {
-            resultsContainer.style.display = searchInput.value ? 'block' : 'none';
-        });
-
-        SimpleJekyllSearch({
-            searchInput: searchInput,
-            resultsContainer: resultsContainer,
-            json: '{{ site.baseurl }}/search.json',
-            searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-            noResultsText: '<li><p style="padding:0 15px; color:#999;">无相关内容</p></li>',
-            limit: 8
-        });
+        const sinput = document.getElementById('search-input');
+        const sresults = document.getElementById('results-container');
+        if(sinput) {
+            sinput.addEventListener('input', () => { sresults.style.display = sinput.value ? 'block' : 'none'; });
+            SimpleJekyllSearch({
+                searchInput: sinput, resultsContainer: sresults,
+                json: '{{ site.baseurl }}/search.json',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                noResultsText: '<li><p style="padding:0 15px; color:#999;">无内容</p></li>',
+                limit: 8
+            });
+        }
     </script>
 </body>
 </html>

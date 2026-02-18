@@ -1,20 +1,17 @@
-date: '2026-02-18'
-history:
-  - {year: "1930年", event: "冥王星被发现。"}
-  - {year: "1965年", event: "冈比亚宣布独立。"}
-  - {year: "2001年", event: "FBI 资深特工汉森因间谍罪被捕。"}
-  - {year: "2021年", event: "毅力号火星车成功着陆火星。"}
+# 这是一个占位文件，所有内容均由 GitHub Actions 每日自动生成。
+date: ""
+history: []
 study:
-  CV: [{title: "YOLOv11", desc: "高效目标检测模型。"}]
-  NLP: [{title: "DeepSeek-V3", desc: "开源大模型新标杆。"}]
-  Audio: [{title: "CAM++", desc: "声纹识别优化。"}]
-  Net: [{title: "HTTP/3", desc: "基于 QUIC 的新协议。"}]
-  Lang: [{title: "Rust Ownership", desc: "理解所有权系统。"}]
-  Arch: [{title: "微服务网关", desc: "解耦业务与通用逻辑。"}]
-  GPU: [{title: "RTX 5090", desc: "新一代性能怪兽。"}]
-  CPU: [{title: "Lunar Lake", desc: "极致能效比架构。"}]
-  News: [{title: "OpenAI Sora", desc: "视频生成突破。"}]
-anime: [{title: "葬送的芙莉莲", desc: "时间与生命的礼赞。", tags: ["治愈"]}]
-music: [{title: "夜に駆ける", desc: "YOASOBI 经典。", tags: ["J-Pop"]}]
-game: [{title: "艾尔登法环", desc: "开放世界动作RPG。", tags: ["魂系"]}]
-paint: [{title: "米山舞", desc: "极具张力的光影。", twitter: "https://x.com/yoneyamai"}]
+  CV: []
+  NLP: []
+  Audio: []
+  Net: []
+  Lang: []
+  Arch: []
+  GPU: []
+  CPU: []
+  News: []
+anime: []
+music: []
+game: []
+paint: []

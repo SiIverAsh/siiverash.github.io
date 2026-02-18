@@ -5,12 +5,8 @@ title: Welcome to My HP!
 
 <div style="text-align: center; padding: 10px 0;">
     <h1 style="font-size: 2.5em; color: #d85a7f; margin-bottom: 20px;">Welcome to My HP!</h1>
-    
-    <p style="font-size: 1.1em; line-height: 1.8;">
-    Attention Is All You Need!
-    </p>
+    <p style="font-size: 1.1em; line-height: 1.8;">Attention Is All You Need!</p>
 
-    <!-- 交互卡片区 -->
     <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
         <div class="stat-card" onclick="handleStudyClick()"><h3>📚</h3><p>Study</p></div>
         <div class="stat-card" onclick="handleClick('anime')"><h3>🌸</h3><p>Anime</p></div>
@@ -19,7 +15,6 @@ title: Welcome to My HP!
         <div class="stat-card" onclick="handleClick('game')"><h3>🎮</h3><p>Game</p></div>
     </div>
 
-    <!-- 子分类选择区 -->
     <div id="sub-tags-area" style="margin-top: 25px; display: none; animation: fadeIn 0.5s;">
         <span class="sub-tag" onclick="showStudyDetail('CV')">视觉 (CV)</span>
         <span class="sub-tag" onclick="showStudyDetail('NLP')">语言 (NLP)</span>
@@ -33,36 +28,19 @@ title: Welcome to My HP!
         <span class="sub-tag" onclick="showStudyDetail('News')">动态 (News)</span>
     </div>
 
-    <!-- 每日推荐显示区 -->
     <div id="recommend-box" class="recommend-box">
-        <div id="recommend-content">
-            <p style="color: #999;">✨ 点击上方卡片，查看今日 AI 自动推荐 ✨</p>
-        </div>
+        <div id="recommend-content"><p style="color: #999;">✨ 点击上方卡片，查看今日 AI 自动推荐 ✨</p></div>
         <div id="rec-tags" class="rec-tags"></div>
-        
-        <!-- 外部链接按钮 -->
-        <div id="external-link-area" style="display: none; margin-top: 15px;">
-            <a id="external-link" href="#" target="_blank" class="twitter-btn">去关注画师 𝕏</a>
-        </div>
-        
-        <!-- 重新推荐按钮 -->
-        <div id="refresh-parent" style="display: none; margin-top: 20px;">
-            <button onclick="reRecommend()" class="refresh-btn">
-                换一个 🔄
-            </button>
-        </div>
+        <div id="external-link-area" style="display: none; margin-top: 15px;"><a id="external-link" href="#" target="_blank" class="twitter-btn">去关注画师 𝕏</a></div>
+        <div id="refresh-parent" style="display: none; margin-top: 20px;"><button onclick="reRecommend()" class="refresh-btn">换一个 🔄</button></div>
     </div>
 </div>
 
 <script>
-    // 状态管理
-    let currentType = '';
-    let currentSubType = '';
-    let lastIndex = -1;
+    let curT = '', curS = '', lastIdx = -1;
 
     function handleStudyClick() {
-        currentType = 'study';
-        currentSubType = '';
+        curT = 'study'; curS = '';
         document.getElementById('sub-tags-area').style.display = 'block';
         document.getElementById('recommend-content').innerHTML = '<p style="color: #d85a7f; font-weight: bold;">请选择一个研究领域 💡</p>';
         document.getElementById('rec-tags').innerHTML = '';
@@ -70,83 +48,42 @@ title: Welcome to My HP!
         document.getElementById('external-link-area').style.display = 'none';
     }
 
-    function showStudyDetail(subType) {
-        currentSubType = subType;
-        const list = window.siteData && window.siteData.study ? window.siteData.study[subType] : null;
-        if (list && Array.isArray(list)) {
-            const item = list[0]; 
-            lastIndex = 0;
-            updateUI(subType, item.title, item.desc, [], null);
-        }
+    function showStudyDetail(sub) {
+        curS = sub;
+        const list = (window.siteData && window.siteData.study) ? window.siteData.study[sub] : null;
+        if (list) { lastIdx = 0; updateUI(list[0], sub); }
     }
 
     function handleClick(type) {
-        currentType = type;
-        currentSubType = '';
+        curT = type; curS = '';
         document.getElementById('sub-tags-area').style.display = 'none';
         const list = window.siteData ? window.siteData[type] : null;
-        if (list && Array.isArray(list)) {
-            const item = list[0]; 
-            lastIndex = 0;
-            updateUI(type.toUpperCase(), item.title, item.desc, item.tags || [], item.twitter || null);
-        }
-    }
-
-    function getNextIndex(length) {
-        if (length <= 1) return 0;
-        let newIndex = Math.floor(Math.random() * length);
-        while (newIndex === lastIndex) { newIndex = Math.floor(Math.random() * length); }
-        lastIndex = newIndex;
-        return newIndex;
+        if (list) { lastIdx = 0; updateUI(list[0], type.toUpperCase()); }
     }
 
     function reRecommend() {
         const btn = document.querySelector('.refresh-btn');
         btn.style.transform = 'rotate(360deg)';
-        
         setTimeout(() => {
-            const dataRoot = window.siteData;
-            if (!dataRoot) return;
-
-            if (currentType === 'study' && currentSubType) {
-                const list = dataRoot.study[currentSubType];
-                const index = getNextIndex(list.length);
-                const item = list[index];
-                updateUI(currentSubType, item.title, item.desc, [], null);
-            } else if (currentType) {
-                const list = dataRoot[currentType];
-                const index = getNextIndex(list.length);
-                const item = list[index];
-                updateUI(currentType.toUpperCase(), item.title, item.desc, item.tags || [], item.twitter || null);
+            const data = window.siteData;
+            const list = (curT === 'study') ? data.study[curS] : data[curT];
+            if (list) {
+                let ni = Math.floor(Math.random() * list.length);
+                if (list.length > 1) while(ni === lastIdx) ni = Math.floor(Math.random() * list.length);
+                lastIdx = ni;
+                updateUI(list[ni], (curT === 'study' ? curS : curT.toUpperCase()));
             }
             btn.style.transform = 'rotate(0deg)';
         }, 300);
     }
 
-    function updateUI(categoryLabel, title, desc, tags, twitterUrl) {
-        const content = document.getElementById('recommend-content');
-        const tagBox = document.getElementById('rec-tags');
-        const refreshParent = document.getElementById('refresh-parent');
-        const linkArea = document.getElementById('external-link-area');
-        const link = document.getElementById('external-link');
-        
-        content.innerHTML = `<h3 style="color: #d85a7f; margin-bottom: 10px;">${title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${desc}</p>`;
-        
-        tagBox.innerHTML = '';
-        if (tags && tags.length > 0) {
-            tags.forEach(t => {
-                tagBox.innerHTML += `<span class="mini-tag">${t}</span>`;
-            });
-        }
-
-        if (twitterUrl) {
-            link.href = twitterUrl;
-            linkArea.style.display = 'block';
-        } else {
-            linkArea.style.display = 'none';
-        }
-
-        refreshParent.style.display = 'block';
+    function updateUI(item, label) {
+        document.getElementById('recommend-content').innerHTML = `<h3 style="color: #d85a7f; margin-bottom: 10px;">${item.title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${item.desc}</p>`;
+        const tBox = document.getElementById('rec-tags'); tBox.innerHTML = '';
+        if (item.tags) item.tags.forEach(t => { tBox.innerHTML += `<span class="mini-tag">${t}</span>`; });
+        const lArea = document.getElementById('external-link-area');
+        if (item.twitter) { document.getElementById('external-link').href = item.twitter; lArea.style.display = 'block'; } else { lArea.style.display = 'none'; }
+        document.getElementById('refresh-parent').style.display = 'block';
     }
 </script>
 
