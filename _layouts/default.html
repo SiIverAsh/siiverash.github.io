@@ -66,9 +66,7 @@
         .avatar:hover { transform: rotate(360deg) scale(1.1); }
 
         .sidebar h2 { margin: 10px 0 5px; color: #d85a7f; }
-        .sidebar p { font-size: 0.9em; color: #666; line-height: 1.5; margin-bottom: 15px; }
-
-        /* 社交图标样式 */
+        
         .social-links {
             display: flex;
             justify-content: center;
@@ -89,18 +87,32 @@
         .nav-links { margin-top: 10px; text-align: left; }
         .nav-item {
             display: block;
-            padding: 10px 15px;
-            margin: 5px 0;
+            padding: 12px 18px;
+            margin: 8px 0;
             border-radius: 12px;
             text-decoration: none;
             color: #555;
             transition: 0.3s;
             background: rgba(255,255,255,0.3);
+            font-size: 0.95em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .nav-item i {
+            width: 20px;
+            text-align: center;
+            font-size: 1.1em;
+            color: #888;
+            transition: 0.3s;
         }
         .nav-item:hover {
             background: var(--primary-color);
             color: white;
             transform: translateX(8px);
+        }
+        .nav-item:hover i {
+            color: white;
         }
 
         .main-content {
@@ -134,21 +146,20 @@
             <img src="https://github.com/siiverash.png" alt="Avatar" class="avatar">
             <h2>Silverash</h2>
             
-            <!-- 社交图标栏 -->
             <div class="social-links">
                 {% if site.social.github %}<a href="{{ site.social.github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>{% endif %}
                 {% if site.social.twitter %}<a href="{{ site.social.twitter }}" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>{% endif %}
-                {% if site.social.pixiv %}<a href="{{ site.social.pixiv }}" target="_blank" title="Pixiv"><i class="fas fa-palette"></i></a>{% endif %}
+                {% if site.social.pixiv %}<a href="{{ site.social.pixiv }}" target="_blank" title="Pixiv"><i class="fas fa-image"></i></a>{% endif %}
                 {% if site.social.email %}<a href="{{ site.social.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
             </div>
             
             <nav class="nav-links">
-                <a href="{{ site.baseurl }}/" class="nav-item">🏠 首页</a>
-                <a href="{{ site.baseurl }}/categories/study" class="nav-item">📚 学习笔记</a>
-                <a href="{{ site.baseurl }}/categories/anime" class="nav-item">🌸 动漫记录</a>
-                <a href="{{ site.baseurl }}/categories/music" class="nav-item">🎵 同音鉴赏</a>
-                <a href="{{ site.baseurl }}/categories/paint" class="nav-item">🎨 胡乱涂鸦</a>
-                <a href="{{ site.baseurl }}/categories/game" class="nav-item">🎮 游戏荒野</a>
+                <a href="{{ site.baseurl }}/" class="nav-item"><i class="fas fa-home"></i> 首页</a>
+                <a href="{{ site.baseurl }}/categories/study" class="nav-item"><i class="fas fa-terminal"></i> 学习笔记</a>
+                <a href="{{ site.baseurl }}/categories/anime" class="nav-item"><i class="fas fa-clapperboard"></i> 动漫记录</a>
+                <a href="{{ site.baseurl }}/categories/music" class="nav-item"><i class="fas fa-compact-disc"></i> 同音鉴赏</a>
+                <a href="{{ site.baseurl }}/categories/paint" class="nav-item"><i class="fas fa-pen-nib"></i> 胡乱涂鸦</a>
+                <a href="{{ site.baseurl }}/categories/game" class="nav-item"><i class="fas fa-ghost"></i> 游戏荒野</a>
             </nav>
         </aside>
 
