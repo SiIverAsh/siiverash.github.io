@@ -1,0 +1,26 @@
+# 动漫记录频道侧边栏
+anime:
+  watching: 
+    - "午夜的心动旋律"
+    - "推子3"
+    - "超时空辉夜姬物语"
+    - "和青梅竹马不会发生的恋爱喜剧"
+
+# # 音乐鉴赏频道侧边栏
+# music:
+#   circles: 
+#     - "Alstroemeria Records"
+#     - "凋叶棕 (RD-Sounds)"
+#   genres: 
+#     - "Touhou Arrange"
+#     - "Melodic Death Metal"
+#     - "J-Pop / J-Rock"
+
+# 游戏荒野频道侧边栏
+game:
+  specs:
+    cpu: "Intel Core i7-14700K"
+    gpu: "NVIDIA RTX 4080 Super"
+    ram: "32GB DDR5 6000MT/s"
+    storage: "WD SN5000 1T*2 "
+

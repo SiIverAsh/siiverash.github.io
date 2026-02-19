@@ -20,7 +20,64 @@
 </div>
 {% endif %}
 
-<!-- 动漫分类页：显示每日声优推荐 -->
+<!-- 动漫分类页：显示追番与神作 -->
+{% if page.url contains '/categories/anime' %}
+<div class="extra-box glass-card">
+    <div class="extra-title"><i class="fas fa-play-circle"></i> 正在追番 (Watching)</div>
+    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85em; color: #555;">
+        {% for item in site.data.me.anime.watching %}
+        <li style="margin-bottom: 8px; border-left: 3px solid #f09199; padding-left: 10px;">{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <!-- <div class="extra-title" style="margin-top: 20px;"><i class="fas fa-award"></i> 神作 (Rating)</div>
+    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85em; color: #666;">
+        {% for item in site.data.me.anime.hall_of_fame %}
+        <li style="margin-bottom: 5px;"><i class="fas fa-star" style="color: #ffd700; margin-right: 5px;"></i> {{ item }}</li>
+        {% endfor %}
+    </ul> -->
+</div>
+{% endif %}
+
+<!-- 音乐分类页：显示社团与曲风 -->
+{% if page.url contains '/categories/music' %}
+<div class="extra-box glass-card">
+    <div class="extra-title"><i class="fas fa-compact-disc"></i> 关注社团 (Circle)</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        {% for item in site.data.me.music.circles %}
+        <span style="background: rgba(74, 144, 226, 0.1); color: #4a90e2; padding: 4px 10px; border-radius: 8px; font-size: 0.75em; border: 1px solid rgba(74, 144, 226, 0.2);">{{ item }}</span>
+        {% endfor %}
+    </div>
+    <div class="extra-title" style="margin-top: 20px;"><i class="fas fa-headphones-simple"></i> 曲风偏好 (Genre)</div>
+    <div style="font-size: 0.85em; color: #555; line-height: 1.8;">
+        {% for item in site.data.me.music.genres %}
+        <span style="margin-right: 12px;"><i class="fas fa-hashtag" style="font-size: 0.8em; color: #888;"></i> {{ item }}</span>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- 游戏分类页：显示配置 -->
+{% if page.url contains '/categories/game' %}
+<div class="extra-box glass-card">
+    <div class="extra-title"><i class="fas fa-tower-pc"></i> 系统配置 (Specs)</div>
+    <div style="font-size: 0.8em; color: #555;">
+        <div style="margin-bottom: 10px;">
+            <div style="color: #4a90e2; font-weight: bold;"><i class="fas fa-microchip"></i> CPU</div>
+            <div>{{ site.data.me.game.specs.cpu }}</div>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <div style="color: #f09199; font-weight: bold;"><i class="fas fa-video"></i> GPU</div>
+            <div>{{ site.data.me.game.specs.gpu }}</div>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <div style="color: #888; font-weight: bold;"><i class="fas fa-memory"></i> RAM</div>
+            <div>{{ site.data.me.game.specs.ram }}</div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- 每日声优推荐 -->
 {% if page.url contains '/categories/anime' %}
 <div class="extra-box glass-card">
     <div class="extra-title"><i class="fas fa-microphone-lines"></i> 声优名鉴 · 每日推荐</div>
