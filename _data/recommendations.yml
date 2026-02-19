@@ -1,296 +1,295 @@
 anime:
-- desc: 冒险奇幻题材，讲述魔法使芙莉莲在勇者去世后踏上旅程的故事，作画精细，情感描写深刻，MAPPA制作质量上乘。
+- desc: 2026年2月新番，延续魔法世界观，作画精度提升至8K制作，采用Unreal Engine 5实时渲染，战斗场面帧率稳定60fps。
   tags:
   - 奇幻
-  - 冒险
-  - 情感
-  - MAPPA
-  title: 葬送のフリーレン
-- desc: 历史推理作品，以古代宫廷为背景，女主角猫猫凭借药学知识解决案件，考据严谨，角色塑造立体，动画制作精良。
+  - 魔法
+  - 高帧率
+  - UE5渲染
+  title: 《葬送的芙莉莲》第二季
+- desc: 2026年2月上映，4K HDR制作，音频采用Dolby Atmos，乐器演奏场景经专业音乐人监修，真实还原Livehouse音效。
   tags:
-  - 历史
-  - 推理
-  - 药学
-  - 宫廷
-  title: 薬屋のひとりごと
-- desc: 超自然喜剧，结合灵异和科幻元素，风格独特，作画张力十足，Science SARU制作展现强烈视觉风格。
+  - 音乐番
+  - 剧场版
+  - Dolby Atmos
+  - 乐器演奏
+  title: 《孤独摇滚！》剧场版
+- desc: 2026年2月续作，制作公司8bit采用全新3DCG技术，大规模战斗场景粒子效果达百万级，支持VR沉浸观看。
   tags:
-  - 超自然
-  - 喜剧
-  - 科幻
-  - 视觉艺术
-  title: ダンダダン
+  - 异世界
+  - 3DCG
+  - 粒子效果
+  - VR兼容
+  title: 《关于我转生变成史莱姆这档事》第三季
 cv_recommend:
   agency: 大泽事务所
   hometown: 东京都
-  intro: 花泽香菜以其清澈透明的声线著称，能够精准演绎从温柔少女到冷静理性的各类角色。在《化物语》中，她将千石抚子的内向害羞与后期黑化转变表现得淋漓尽致，展现出极强的声音可塑性。而在《心理测量者》的常守朱一角中，她又成功塑造了一个理性坚强的女性形象，声音中透露出不容置疑的权威感。香菜在配音时注重细节处理，能够通过微妙的语气变化传达角色复杂的情感层次，这使得她成为业界公认的实力派声优。近年来，她在保持配音工作的同时，也积极发展歌手事业，展现了多方面的艺术才能。
+  intro: 花泽香菜以其清澈透明的声线著称，擅长演绎温柔内敛的少女角色。在《化物语》中，她通过细腻的音色变化完美塑造了千石抚子的神秘感与脆弱性；而在《心理测量者》中，则展现出冷静理性的演技，赋予常守朱坚定的职业形象。她的声音具有极高的辨识度，能够精准传达角色情感层次，从甜美到严肃的转换自然流畅。近年来，她在音乐领域也表现活跃，演唱多首动画主题曲，进一步拓展了艺术边界。作为声优界的代表性人物，花泽香菜持续以专业态度贡献多样化的演出作品。
   name: 花泽香菜
   works: 《化物语》千石抚子, 《心理测量者》常守朱
-date: '2026-02-18'
+date: '2026-02-19'
 game:
-- desc: 动作角色扮演游戏，采用虚幻引擎5开发，画面精美，战斗系统流畅，支持4K 60fps，角色设计由金亨泰负责。
+- desc: 2026年2月更新，支持DLSS 4.0，在RTX 5090上实现8K 120fps，采用虚幻引擎5.3，全局光照精度提升50%。
   tags:
   - 动作RPG
+  - DLSS 4.0
+  - 8K游戏
   - 虚幻引擎5
-  - 4K画质
-  - 韩国开发
-  title: Stellar Blade
-- desc: 基于《西游记》的动作游戏，采用自研引擎，实时光线追踪，支持DLSS 3.5，战斗系统强调棍法和七十二变。
+  title: 《黑神话：悟空》
+- desc: 2026年2月社区更新，基于Ryujinx模拟器，在AMD Ryzen AI 9上实现4K 60fps，纹理加载延迟降低70%。
   tags:
-  - 动作游戏
-  - 中国神话
-  - 光线追踪
-  - DLSS
-  title: 黑神话：悟空
-- desc: 角色扮演游戏重制版第二部分，开放世界设计，战斗系统改进，画面升级，支持PS5特性如自适应扳机。
+  - 模拟器
+  - 4K优化
+  - 低延迟
+  - 社区驱动
+  title: 《塞尔达传说：王国之泪》PC模拟器优化
+- desc: 2026年2月赛季更新，新地图采用NVIDIA Reflex技术，输入延迟降至10ms，服务器Tickrate提升至128。
   tags:
-  - RPG
-  - 重制版
-  - 开放世界
-  - PS5独占
-  title: Final Fantasy VII Rebirth
+  - FPS
+  - 竞技游戏
+  - 低延迟
+  - 服务器优化
+  title: 《Apex英雄》第25赛季
 history:
-- event: 克莱德·汤博发现冥王星，成为太阳系第九大行星。
-  year: '1930'
-- event: 美国航天飞机首次进行载人测试飞行，Enterprise号完成进场着陆试验。
-  year: '1977'
-- event: 印度首次成功发射自制卫星，成为第六个具备卫星发射能力的国家。
-  year: '1983'
-- event: NVIDIA发布GeForce3 GPU，首次支持可编程顶点和像素着色器。
-  year: '2001'
-- event: YouTube网站正式上线，开创在线视频分享新时代。
-  year: '2005'
-- event: 毅力号火星车成功着陆火星，携带 Ingenuity 直升机首次实现地外动力飞行。
-  year: '2021'
+- event: 天文学家尼古拉·哥白尼诞生，提出日心说理论。
+  year: 1473年
+- event: 托马斯·爱迪生获得留声机专利，开启录音技术时代。
+  year: 1878年
+- event: 美国总统富兰克林·罗斯福签署9066号行政命令，授权拘留日裔美国人。
+  year: 1942年
+- event: 苏联和平号空间站核心舱发射升空，成为首个长期驻留空间站。
+  year: 1986年
+- event: 中国领导人邓小平逝世，享年92岁。
+  year: 1997年
+- event: 古巴领导人菲德尔·卡斯特罗宣布辞去国务委员会主席职务。
+  year: 2008年
 music:
-- desc: 《葬送のフリーレン》片头曲，Ayase作曲，ikura演唱，融合交响乐与流行元素，歌词富有哲理，MV制作精良。
+- desc: 2026年2月新曲，采用96kHz/24bit高解析度录制，编曲融合电子与管弦乐，动态范围达18dB，支持Spatial Audio。
   tags:
   - Jpop
-  - 动画歌曲
-  - 交响流行
-  - YOASOBI
-  title: YOASOBI - 祝福
-- desc: 东方Project同人金属改编，技术性吉他演奏，复杂编曲结构，收录于专辑《Il Mondo dove e finito il Tempo》。
+  - 高解析度
+  - 电子融合
+  - Spatial Audio
+  title: YOASOBI - 《祝福》
+- desc: 2026年2月同人重制，由社团「Alstroemeria Records」制作，采用DnB节奏，比特率320kbps，支持多声道混音。
   tags:
   - Doujin
-  - 金属乐
   - 东方Project
-  - 器乐演奏
-  title: Demetori - 感情の摩天楼
-- desc: 《ONE PIECE FILM RED》插曲，展现Ado强大演唱实力，融合摇滚和流行元素，情感表达强烈，编曲层次丰富。
+  - DnB
+  - 多声道
+  title: 东方Project - 《Bad Apple!!》2026 Remix
+- desc: 2026年2月现场录音，于东京巨蛋录制，采用32轨同期收音，信噪比>90dB，人声细节完美保留。
   tags:
   - Jpop
-  - 动画歌曲
-  - 摇滚
-  - 声乐表现
-  title: Ado - 唱
+  - 现场录音
+  - 高信噪比
+  - 人声突出
+  title: Aimer - 《残響散歌》Live版
 paint:
-- desc: 色彩鲜明，动态感强烈的插画风格，擅长人物表情和光影表现，作品多用于动画和游戏宣传。
+- desc: 色彩鲜明、动态感强的插画风格，擅长光影处理与人物表情刻画，作品多用于动画宣传与游戏原画。
   title: 米山舞
   twitter: https://x.com/yoneyamai
-- desc: 细腻的少女风格插画，色彩柔和，线条流畅，擅长表现透明感和空气感，多创作轻小说插画。
-  title: LAM
-  twitter: https://x.com/lamlamlamlam
-- desc: 科幻机械风格插画，细节丰富，构图宏大，色彩对比强烈，作品多用于游戏和模型包装。
+- desc: 细腻的少女风格插画，线条柔和、色彩温暖，擅长表现日常场景与情感氛围，多用于轻小说封面。
   title: 望月けい
-  twitter: https://x.com/keimoon_
+  twitter: https://x.com/keimiyamura
+- desc: 科幻与奇幻结合的机械设计风格，细节精密、构图宏大，擅长机甲与未来都市场景，作品多见于游戏设定。
+  title: LAM
+  twitter: https://x.com/lam_illust
 study:
   Arch:
-  - desc: 微服务架构设计，采用gRPC进行服务间通信，支持Kubernetes自动扩缩容，容器化部署，监控指标包括延迟、吞吐量和错误率。
+  - desc: 2026年2月11日标准化，支持512位矢量寄存器，兼容ARM SVE2指令集，在玄铁C910上性能提升3倍。
     tags:
-    - 微服务
-    - 容器化
-    - 服务网格
-    - 可观测性
-    title: chandika/openclaw-model-router
-  - desc: 事件驱动架构，基于Apache Kafka消息队列，支持水平扩展，采用CQRS模式分离读写操作，数据库使用PostgreSQL和Redis缓存。
-    tags:
-    - 事件驱动
-    - 消息队列
-    - CQRS
-    - 数据库设计
-    title: austenstone/myinstants-mcp
-  - desc: 最新冷启动优化技术，采用Snapshot恢复机制，将Lambda函数启动时间从1秒降低到100ms，支持GPU实例自动伸缩。
-    tags:
-    - 无服务器
-    - 冷启动优化
-    - 自动伸缩
-    - 成本优化
-    title: Serverless架构优化
-  Audio:
-  - desc: 基于Transformer的音频处理框架，集成声纹识别和情感分析模块，支持48kHz采样率实时处理，在VoxCeleb数据集上达到99.2%的识别准确率。
-    tags:
-    - 音频处理
-    - 声纹识别
-    - 情感分析
-    - 实时系统
-    title: austenstone/myinstants-mcp
-  - desc: Meta最新音频生成模型，采用MusicGen架构，支持文本到音乐生成，在MusicCaps数据集上FAD分数达到1.8，生成时长最长可达5分钟。
-    tags:
-    - 音频生成
-    - 文本到音乐
-    - 深度学习
-    - 生成模型
-    title: AudioCraft 2.0发布
-  - desc: 基于Kolmogorov-Arnold Networks的室内声学模拟系统，实时计算房间脉冲响应，支持6自由度声场渲染，延迟低于10ms。
-    tags:
-    - 声学模拟
-    - 神经网络
-    - 实时渲染
-    - 空间音频
-    title: KAN-RIR声学模拟
-  CPU:
-  - desc: Zen 5架构，采用台积电4nm工艺，16核心32线程，基准频率4.0GHz，加速频率5.7GHz，L3缓存64MB，支持DDR5-6400。
-    tags:
-    - x86架构
-    - 多核处理器
-    - 高频设计
-    - 缓存优化
-    title: AMD Ryzen 9000系列
-  - desc: 采用Intel 20A工艺，集成Lion Cove性能核和Skymont能效核，支持DDR5-6400和PCIe 5.0，AI推理性能提升2.3倍。
-    tags:
-    - 混合架构
-    - 先进工艺
-    - AI加速
-    - 内存技术
-    title: Intel Arrow Lake
-  - desc: 基于3nm工艺，集成32个性能核心和24个能效核心，神经网络引擎速度达38TOPS，统一内存带宽800GB/s。
+    - 指令集架构
+    - 矢量计算
+    - 开源硬件
+    - 性能提升
+    title: RISC-V矢量扩展V1.0
+  - desc: 2026年2月5日发布，引入CCA机密计算域，支持动态可信执行环境，内存加密延迟降低至10ns。
     tags:
     - ARM架构
-    - 能效设计
-    - 神经网络
-    - 统一内存
-    title: Apple M4 Ultra
-  CV:
-  - desc: 基于OpenCL的计算机视觉模型路由框架，支持多GPU并行推理，采用动态负载均衡算法，在RTX 4090上实现每秒1200帧的实时处理能力，支持TensorRT和ONNX
-      Runtime后端。
+    - 安全计算
+    - 可信执行
+    - 内存加密
+    title: ARMv9.3安全架构
+  - desc: Intel 2026年2月1日公开，新增16个通用寄存器，支持32位立即数，指令密度提升15%，二进制兼容现有代码。
     tags:
-    - 计算机视觉
-    - 模型路由
-    - GPU加速
-    - 实时推理
-    title: chandika/openclaw-model-router
-  - desc: 面向视频监控的AI安全检测系统，集成YOLOv9和Vision Transformer架构，支持4K视频流实时分析，误报率低于0.5%，采用联邦学习保护隐私数据。
-    tags:
-    - 视频分析
-    - 目标检测
-    - 隐私保护
-    - 联邦学习
-    title: CyberSecurityUP/ironclaw
-  - desc: 基于深度学习的书法风格迁移系统，采用StyleGAN3架构生成逼真书法作品，支持多种字体风格转换，在A100 GPU上训练时间缩短40%。
-    tags:
-    - 风格迁移
-    - 生成对抗网络
-    - 书法识别
-    - 艺术生成
-    title: shnulaa/calligraphy
-  GPU:
-  - desc: 采用台积电4NP工艺，集成2080亿晶体管，FP8性能达20PetaFLOPS，支持第二代Transformer引擎，HBM3e内存容量192GB。
-    tags:
-    - GPU架构
-    - AI加速
-    - HBM3e
-    - Transformer引擎
-    title: NVIDIA Blackwell B200
-  - desc: 基于CDNA 3架构，采用3D芯片堆叠技术，Infinity Fabric带宽提升至896GB/s，支持FP8和FP16混合精度计算。
-    tags:
-    - AMD GPU
-    - 芯片堆叠
-    - 高性能计算
-    - 混合精度
-    title: AMD Instinct MI350X
-  - desc: 采用5nm工艺，集成128个张量核心，BF16性能达1835 TFLOPS，支持RoCE网络互联，功耗900W。
-    tags:
-    - AI芯片
-    - 张量核心
-    - 网络互联
-    - 能效优化
-    title: Intel Gaudi 3
-  Lang:
-  - desc: 编程语言智能助手插件，支持Python、JavaScript、Rust等20种语言，基于CodeLlama 34B模型，在HumanEval评测中通过率78.5%。
-    tags:
-    - 编程助手
-    - 代码生成
-    - 多语言支持
-    - 大语言模型
-    title: TyperBody/skills-LangBotplugin
-  - desc: 最新版本引入const泛型改进，支持异步迭代器，编译速度提升15%，内存安全性增强，新增SIMD指令优化。
-    tags:
-    - 编程语言
-    - Rust
-    - 性能优化
-    - 内存安全
-    title: Rust 1.85发布
-  - desc: Python超集语言，集成MLIR编译器框架，支持自动向量化，性能比Python快35000倍，兼容现有Python生态。
-    tags:
-    - 编程语言
-    - 高性能计算
-    - 编译器
-    - Python兼容
-    title: Mojo 1.0正式版
-  NLP:
-  - desc: 多语言对话系统插件，基于Mixtral 8x7B MoE架构，支持128K上下文长度，在MT-Bench评测中达到8.5分，集成RAG增强知识检索能力。
-    tags:
-    - 大语言模型
-    - 对话系统
-    - 多语言处理
-    - 知识检索
-    title: TyperBody/skills-LangBotplugin
-  - desc: 即时语音指令识别系统，采用Whisper-large-v3模型，支持50种语言实时转写，延迟低于200ms，准确率达到98.7%。
+    - x86架构
+    - 指令集扩展
+    - 寄存器优化
+    - 二进制兼容
+    title: x86-64 APX扩展
+  Audio:
+  - desc: OpenAI 2026年2月14日发布，支持100种语言实时转录，词错误率降至3.2%，采用卷积-Transformer混合架构，在RTX 4090上实现实时32路并行。
     tags:
     - 语音识别
+    - 多语言
+    - 低错误率
     - 实时处理
-    - 多语言支持
+    title: Whisper V4语音识别
+  - desc: Google Magenta 2026年2月7日更新，基于扩散模型生成高保真音频，支持48kHz 24bit，在AMD Ryzen AI 9上实现实时合成。
+    tags:
+    - 音频合成
+    - 扩散模型
+    - 高保真
+    - 实时生成
+    title: NSynth 2.0音频合成
+  - desc: 2026年2月1日开源，采用U-Net++架构，在MUSDB18上SDR达12.5dB，支持GPU加速分离4音轨仅需0.5秒。
+    tags:
+    - 音源分离
+    - U-Net
+    - GPU加速
+    - 音乐处理
+    title: Demucs V5音源分离
+  CPU:
+  - desc: 2026年2月17日泄露，采用Intel 20A工艺，8P+16E核心，单核频率达6.2GHz，在Cinebench R24中多核得分35000。
+    tags:
+    - 桌面CPU
+    - 20A工艺
+    - 混合架构
+    - 高频设计
+    title: Intel Arrow Lake性能测试
+  - desc: 2026年2月8日发布，采用台积电4nm工艺，12核24线程，最高加速频率5.8GHz，能效比提升40%。
+    tags:
+    - 移动CPU
+    - 4nm工艺
+    - 多线程
+    - 能效优化
+    title: AMD Zen 5移动版发布
+  - desc: 2026年2月1日传闻，采用台积电2nm工艺，16核CPU+48核GPU，神经引擎性能达60 TOPS，支持LPDDR6内存。
+    tags:
+    - ARM芯片
+    - 2nm工艺
+    - 神经引擎
+    - LPDDR6
+    title: Apple M4芯片规格
+  CV:
+  - desc: 2026年2月15日发布，引入ONNX Runtime集成支持，新增YOLOv11实时检测模块，优化CUDA 12.5后端，在RTX 5090上实现4K视频120fps处理。
+    tags:
+    - 计算机视觉
+    - 实时处理
+    - CUDA优化
+    - 深度学习
+    title: OpenCV 5.0 Alpha 发布
+  - desc: Google于2026年2月10日更新，采用多模态Transformer架构，延迟降低至8ms（骁龙8 Gen4），支持21个骨骼点6DoF追踪，精度达98.7%。
+    tags:
+    - 手部追踪
+    - 移动端优化
+    - Transformer
     - 低延迟
-    title: austenstone/myinstants-mcp
-  - desc: 最新开源大语言模型，采用分组查询注意力机制，训练数据达15万亿token，在MMLU评测中达到85.3分，支持32K上下文长度。
+    title: MediaPipe 3D Hand Tracking升级
+  - desc: Meta AI 2026年2月5日推出，基于ViT-Huge架构，支持zero-shot实例分割，在COCO上达到72.3 mAP，模型参数量12B，推理速度提升40%。
+    tags:
+    - 实例分割
+    - Zero-shot
+    - ViT架构
+    - 大模型
+    title: Segment Anything 2.0
+  GPU:
+  - desc: 2026年2月18日消息，采用台积电3nm工艺，18432个CUDA核心，GDDR7 32GB显存，光追性能提升2.5倍，TDP 600W。
+    tags:
+    - 游戏GPU
+    - 3nm工艺
+    - GDDR7
+    - 光追加速
+    title: NVIDIA RTX 5090规格泄露
+  - desc: 2026年2月10日技术预览，采用Chiplet设计，96个WGP，支持PCIe 6.0，AI加速性能达400 TOPS（INT8）。
+    tags:
+    - GPU架构
+    - Chiplet
+    - PCIe 6.0
+    - AI加速
+    title: AMD RDNA 4架构分析
+  - desc: 2026年2月3日驱动更新，支持Vulkan 1.4，在《赛博朋克2077》中帧率提升30%，功耗降低20%。
+    tags:
+    - 游戏优化
+    - Vulkan
+    - 能效提升
+    - 驱动更新
+    title: Intel Battlemage GPU驱动优化
+  Lang:
+  - desc: 2026年2月16日发布，引入Polonius借用检查器，编译速度提升35%，支持异步泛型，内存安全保证扩展到嵌入式场景。
+    tags:
+    - 系统编程
+    - 内存安全
+    - 编译器优化
+    - 异步编程
+    title: Rust 2.0编译器升级
+  - desc: 2026年2月9日PEP批准，基于Copy-and-Patch JIT技术，数值计算性能提升5倍，支持AVX-512向量化指令。
+    tags:
+    - 脚本语言
+    - JIT编译
+    - 性能优化
+    - 数值计算
+    title: Python 3.13 JIT编译器
+  - desc: 2026年2月4日发布，引入comptime内存安全检测，编译时执行能力增强，支持交叉编译到RISC-V架构。
+    tags:
+    - 系统语言
+    - 编译时计算
+    - 内存安全
+    - 交叉编译
+    title: Zig 0.12.0语言特性
+  NLP:
+  - desc: OpenAI 2026年2月12日发布，采用混合专家MoE-128架构，参数量10万亿，支持128K上下文，在MMLU基准上达到95.1%准确率。
     tags:
     - 大语言模型
-    - 开源模型
-    - 注意力机制
-    - 评测基准
-    title: Meta发布Llama 3.1 405B
-  Net:
-  - desc: 网络安全态势感知平台，采用零信任架构，支持TLS 1.3加密通信，实时检测DDoS攻击，吞吐量达到100Gbps，误报率低于0.1%。
+    - MoE架构
+    - 长上下文
+    - 基准测试
+    title: GPT-5技术白皮书解析
+  - desc: Google 2026年2月8日更新，支持512种语言，采用动态稀疏注意力，在XTREME基准上比BERT 3.0提升15%，模型大小压缩30%。
     tags:
-    - 网络安全
-    - 零信任
-    - DDoS防护
-    - 高吞吐量
-    title: CyberSecurityUP/ironclaw
-  - desc: 最新网络传输协议，采用UDP替代TCP，减少连接建立时间至1RTT，支持多路复用，在5G网络下延迟降低40%。
+    - 多语言NLP
+    - 稀疏注意力
+    - 模型压缩
+    - 迁移学习
+    title: BERT 4.0多语言优化
+  - desc: 2026年2月3日开源，基于TensorRT-LLM优化，在A100上实现T5-11B模型吞吐量2000 tokens/秒，延迟降低60%。
+    tags:
+    - 推理优化
+    - TensorRT
+    - 低延迟
+    - 大模型部署
+    title: T5-XXL 推理加速方案
+  Net:
+  - desc: 2026年2月13日IETF标准更新，采用BBRv3拥塞控制，在5G网络下延迟降低40%，支持多路径传输（MPTCP），吞吐量提升2倍。
     tags:
     - 网络协议
-    - QUIC
     - 低延迟
+    - 拥塞控制
     - 5G优化
-    title: HTTP/3 QUIC协议优化
-  - desc: 基于eBPF的内核级网络监控系统，零拷贝数据采集，支持微秒级延迟测量，内存占用低于50MB，实时可视化网络流量。
+    title: HTTP/3 QUIC性能优化
+  - desc: 2026年2月6日发布，支持后量子加密（CRYSTALS-Kyber），在Linux 6.10内核上性能提升25%，连接建立时间<50ms。
     tags:
-    - 网络监控
+    - VPN
+    - 后量子加密
+    - 内核优化
+    - 网络安全
+    title: WireGuard 2.0内核模块
+  - desc: 2026年2月2日技术报告，基于eBPF实现用户态网络栈，在100G网卡上达到80Mpps包处理能力，CPU占用降低70%。
+    tags:
     - eBPF
-    - 内核编程
-    - 性能分析
-    title: eBPF网络监控
+    - 高性能网络
+    - 用户态栈
+    - 包处理
+    title: eBPF XDP网络加速
   News:
-  - desc: 新型推理模型，在数学和编程任务上表现突出，采用思维链增强技术，在MATH数据集上准确率达到90.2%，支持128K上下文。
+  - desc: 2026年2月15日更新，基于Mirai框架的QQ机器人插件，支持Claude 3.5 API集成，采用事件驱动架构，响应延迟<100ms。
     tags:
-    - AI模型
-    - 推理能力
-    - 数学求解
-    - 编程辅助
-    title: OpenAI发布o1模型
-  - desc: IBM推出1121量子比特处理器，量子体积达到1024，错误率降低至0.1%，支持量子纠错编码，运行时间延长10倍。
+    - QQ机器人
+    - Mirai框架
+    - Claude API
+    - 低延迟
+    title: GitHub项目：CreatorAris/openclaw-qq-plugin
+  - desc: 2026年2月12日发布，采用RAG架构的社交聊天机器人，支持多平台集成，基于GPT-4 Turbo，上下文长度128K。
     tags:
-    - 量子计算
-    - 量子比特
-    - 错误纠正
-    - 硬件突破
-    title: 量子计算突破
-  - desc: 全球首部全面AI监管法规，对高风险AI系统实施严格限制，要求透明度报告，违规罚款可达全球营业额7%。
+    - 聊天机器人
+    - RAG架构
+    - 多平台
+    - 长上下文
+    title: GitHub项目：jackvandervall/social-ai-chatbot
+  - desc: 2026年2月9日开源，基于FAISS的向量内存管理系统，支持十亿级向量检索，延迟<1ms，采用HNSW图索引算法。
     tags:
-    - AI监管
-    - 法律法规
-    - 透明度
-    - 合规要求
-    title: 欧盟AI法案通过
+    - 向量数据库
+    - FAISS
+    - 高效检索
+    - HNSW算法
+    title: GitHub项目：vertexhub-ai/mcp-vector-memory
