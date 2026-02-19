@@ -4,7 +4,8 @@
 <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
 <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+<!-- 彻底解决跨域引用问题：使用本地相对路径 -->
+<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 
 <script id="data-raw" type="application/json">{{ site.data.recommendations | jsonify }}</script>

@@ -1,6 +1,6 @@
 title: Silverashの隙间
-baseurl: ""
-url: "https://siiverash.github.io"
+baseurl: "" # 确保为空，适应顶级域名
+url: "" # 动态适应
 repository: "siiverash/siiverash.github.io"
 description: "Attention Is All You Need!"
 encoding: utf-8 # 显式指定 UTF-8 编码
