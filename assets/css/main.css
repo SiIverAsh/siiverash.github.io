@@ -66,6 +66,30 @@ body, html {
 .main-content { animation: slideInUp 0.8s ease; min-width: 0; }
 .content-card { padding: 40px; min-height: 400px; max-width: 850px; margin: 0 auto; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; }
 
+/* 邮箱弹出框样式 */
+.email-pop {
+    position: absolute;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #4a90e2;
+    z-index: 10000;
+    pointer-events: none;
+    animation: popIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    white-space: nowrap;
+}
+
+.email-pop.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.5) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
 .extra-sidebar { 
     position: sticky; top: 40px; height: fit-content; 
     display: flex; flex-direction: column; gap: 20px; 

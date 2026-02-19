@@ -68,6 +68,34 @@
         }
     }
     window.addEventListener('DOMContentLoaded', loadAnimeExtras);
+
+    // 5. 邮箱显示逻辑
+    function showEmail(event, email) {
+        // 防止点击穿透
+        event.stopPropagation();
+        
+        // 移除已存在的提示框
+        const oldTip = document.getElementById('email-tooltip');
+        if (oldTip) oldTip.remove();
+
+        const tip = document.createElement('div');
+        tip.id = 'email-tooltip';
+        tip.className = 'glass-card email-pop';
+        tip.textContent = email;
+        tip.style.left = (event.pageX + 10) + 'px';
+        tip.style.top = (event.pageY + 10) + 'px';
+        
+        document.body.appendChild(tip);
+
+        // 点击其他地方关闭
+        const closeTip = () => {
+            tip.classList.add('fade-out');
+            setTimeout(() => tip.remove(), 300);
+            document.removeEventListener('click', closeTip);
+        };
+        setTimeout(() => document.addEventListener('click', closeTip), 10);
+    }
+
     const sinput = document.getElementById('search-input');
     const sresults = document.getElementById('results-container');
     if(sinput) {

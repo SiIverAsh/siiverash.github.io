@@ -7,7 +7,11 @@
         {% if site.social.github %}<a href="{{ site.social.github }}" target="_blank"><i class="fab fa-github"></i></a>{% endif %}
         {% if site.social.twitter %}<a href="{{ site.social.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>{% endif %}
         {% if site.social.pixiv %}<a href="{{ site.social.pixiv }}" target="_blank"><i class="fas fa-image"></i></a>{% endif %}
-        {% if site.social.email %}<a href="{{ site.social.email }}"><i class="fas fa-envelope"></i></a>{% endif %}
+        {% if site.social.email %}
+            <a href="javascript:void(0)" onclick="showEmail(event, '{{ site.social.email }}')" title="Click to see Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        {% endif %}
     </div>
     <nav class="nav-links">
         <a href="{{ site.baseurl }}/" class="nav-item"><i class="fas fa-home"></i> 首页</a>
