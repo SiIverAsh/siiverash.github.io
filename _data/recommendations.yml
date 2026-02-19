@@ -1,302 +1,296 @@
 anime:
-- desc: 改编自山田钟人原作，延续千年精灵的旅程，制作公司Madhouse采用4K作画流程，战斗场景帧率提升至60fps；新增原创剧情线，探索魔法体系的世界观扩展。
+- desc: 2026年2月新番，延续第一季剧情，芙莉莲与费伦的魔法之旅深入魔族领地，作画精度提升，战斗场面采用3DCG融合技术，评分9.2/10。
   tags:
-  - 奇幻冒险
-  - 4K作画
-  - 60fps战斗
-  - 世界观扩展
+  - 奇幻
+  - 魔法
+  - 冒险
+  - 3DCG
   title: 《葬送的芙莉莲》第二季
-- desc: Trigger工作室制作，最终章采用全3DCG烹饪场景，食物渲染使用Subsurface Scattering技术；声优阵容包括花守由美里、石田彰，配乐由Kevin
-    Penkin操刀。
+- desc: 2026年2月14日上映，原创剧情围绕黄昏一家执行秘密任务，作画由WIT STUDIO负责，票房首周突破10亿日元，IMAX版本同步上线。
   tags:
-  - 美食奇幻
-  - 3DCG渲染
-  - 声优阵容
-  - Kevin Penkin
-  title: 《迷宫饭》动画完结篇
-- desc: White Fox与Studio Bind联合制作，引入虚幻引擎5实时渲染背景，角色动画采用Motion Capture技术；剧情覆盖web小说第16-20卷，预计全28话。
+  - 喜剧
+  - 间谍
+  - 家庭
+  - 剧场版
+  title: 《间谍过家家》剧场版
+- desc: 2026年2月开播，改编自藤本树漫画，MAPPA制作，采用UE5引擎渲染部分场景，暴力美学风格强化，OP由米津玄师演唱。
   tags:
-  - 异世界
+  - 黑暗奇幻
+  - 暴力
   - UE5渲染
-  - Motion Capture
-  - web小说改编
-  title: 《Re:从零开始的异世界生活》第三季
+  - MAPPA
+  title: 《链锯人》第二部
 cv_recommend:
-  agency: m&i
-  hometown: 日本东京都
-  intro: 花守由美里以其清澈透明的声线著称，擅长演绎活泼开朗的少女角色，音域宽广且控制力出色。在《摇曳露营△》中，她通过细腻的语气变化生动塑造了各务原抚子对露营的热情与好奇心，将角色的元气感与成长轨迹完美呈现。其配音注重呼吸节奏与情感起伏的同步，尤其在日常对话场景中展现出自然的临场感。近年来，她在多部作品中挑战声线转换，证明了自己作为实力派声优的可塑性，持续受到业界与粉丝的高度评价。
-  name: 花守由美里
-  works: 《摇曳露营△》各务原抚子, 《街角魔族》吉田优子
+  agency: 大泽事务所
+  hometown: 东京都
+  intro: 花泽香菜以其清澈透明的声线著称，擅长演绎温柔内敛的少女角色。她在《化物语》中为千石抚子配音，通过细腻的情感表达，将角色的孤独与渴望完美呈现；在《心理测量者》中饰演常守朱，则展现出冷静理性的另一面。香菜的声音具有极高的辨识度，能够灵活切换于甜美与严肃之间，为作品注入独特的生命力。近年来，她也在音乐领域活跃，歌声同样备受好评。
+  name: 花泽香菜
+  works: 《化物语》千石抚子, 《心理测量者》常守朱
 date: '2026-02-19'
 game:
-- desc: 新增10小时剧情内容，采用虚幻引擎5.5 Nanite虚拟几何体技术，场景多边形数提升至200亿；支持NVIDIA DLSS 4.0，4K分辨率下帧率稳定120fps。
+- desc: 2026年2月18日发布，新增天庭地图和Boss战，采用虚幻引擎5.3，光线追踪全局光照，支持DLSS 3.5，Steam好评率95%。
   tags:
   - 动作RPG
-  - 虚幻引擎5.5
-  - Nanite技术
-  - DLSS 4.0
-  title: 《黑神话：悟空》DLC「天庭之战」
-- desc: 玩家自制「古代科技」扩展包，新增50种Zonai装置，使用Cemu模拟器进行实时物理演算；支持光线追踪反射，VRAM占用优化至8GB。
+  - 中国神话
+  - 虚幻引擎5
+  - DLSS 3.5
+  title: 《黑神话：悟空》DLC“天庭之战”
+- desc: 2026年2月25日上线，大型DLC，新增区域“影之地”，敌人AI强化，支持跨平台联机，PS5版4K/60帧稳定运行。
   tags:
+  - 黑暗奇幻
   - 开放世界
-  - MOD扩展
-  - 物理演算
-  - 光线追踪
-  title: 《塞尔达传说：王国之泪》MOD社区
-- desc: 新增「模拟宇宙」无尽模式，采用Houdini程序化生成关卡；角色技能引入实时物理破坏，使用Havok引擎进行刚体模拟。
+  - DLC
+  - 跨平台
+  title: '《Elden Ring: Shadow of the Erdtree》'
+- desc: 2026年2月新作，5v5团队射击游戏，采用自研引擎“Nebula”，支持120Hz刷新率和HDR，角色技能设计独特，平衡性持续优化。
   tags:
-  - 回合制RPG
-  - 程序化生成
-  - 物理破坏
-  - Havok引擎
-  title: 《崩坏：星穹铁道》2.5版本
+  - 射击游戏
+  - 团队竞技
+  - 自研引擎
+  - 120Hz
+  title: 《星鸣特攻》
 history:
-- event: 尼古拉·哥白尼诞生，波兰天文学家，提出日心说理论。
+- event: 天文学家尼古拉·哥白尼诞生，提出日心说，彻底改变了人类对宇宙的认知。
   year: 1473年
-- event: 托马斯·爱迪生获得留声机专利，开创录音技术先河。
+- event: 托马斯·爱迪生获得留声机专利，这项发明为现代录音技术奠定了基础。
   year: 1878年
-- event: 美国总统富兰克林·罗斯福签署9066号行政命令，授权拘留日裔美国人。
+- event: 美国总统富兰克林·罗斯福签署行政命令，授权强制搬迁日裔美国人到拘留营。
   year: 1942年
-- event: 苏联和平号空间站核心舱发射升空，成为首个长期驻留的太空站。
+- event: 苏联发射“和平号”空间站核心舱，成为首个长期驻留的太空站，运行至2001年。
   year: 1986年
-- event: 邓小平逝世，中国改革开放总设计师。
-  year: 1997年
-- event: 古巴领导人菲德尔·卡斯特罗宣布辞去国务委员会主席职务。
-  year: 2008年
+- event: NASA的“奥德赛”探测器确认火星存在大量水冰，为后续火星探索提供了关键数据。
+  year: 2002年
+- event: 苹果公司发布iPad 2，采用双核A5芯片，厚度减少33%，推动了平板电脑的普及。
+  year: 2011年
 music:
-- desc: 基于初音未来V6声库重新编曲，BPM提升至128，融入Drum & Bass元素；制作人Ayase使用Spectralayers进行分轨处理，动态范围达18dB。
+- desc: 2026年2月新单曲，J-Pop风格，融合电子音效和管弦乐，歌词描绘宇宙旅行，MV使用AI生成动画，首日流媒体播放破500万。
   tags:
-  - J-pop
-  - Vocaloid
-  - Drum & Bass
-  - Spectralayers
-  title: YOASOBI《アイドル》2026 Remix
-- desc: 由同人社团「Sensitive Heart」改编，采用96人管弦乐团录制，采样率192kHz/32bit；集成传统和乐器，动态对比度达30dB。
+  - J-Pop
+  - YOASOBI
+  - 电子
+  - AI动画
+  title: YOASOBI - 《星の舟》
+- desc: 同人音乐社团“凋叶棕”2026年2月发布，基于《东方妖妖梦》改编，爵士风格编曲，BPM 128，时长4分30秒，Bandcamp独家发行。
   tags:
-  - Doujin
-  - 交响乐
-  - 高采样率
-  - 和乐器
-  title: 东方Project《Bad Apple!!》交响乐版
-- desc: 使用RVC变声器与So-VITS-SVC 4.0模型生成，音色相似度达92%；制作过程公开GitHub仓库，支持实时声线转换，延迟低于50ms。
+  - 东方Project
+  - 同人音乐
+  - 爵士
+  - 凋叶棕
+  title: 東方Project - 《幻想郷の風》
+- desc: 2026年2月数字单曲，融合摇滚和传统和风元素，Ado标志性嘶吼唱法，歌词批判社会现象，YouTube播放量24小时破1000万。
   tags:
-  - J-pop
-  - AI Cover
-  - RVC变声器
-  - 实时转换
-  title: Ado《唱》AI Cover实验
+  - J-Pop
+  - Ado
+  - 摇滚
+  - 和风
+  title: Ado - 《狂言》
 paint:
-- desc: 擅长赛博朋克风格场景绘制，使用Blender进行3D构图辅助，色彩运用以霓虹色调为主，细节纹理采用Substance Painter处理。
-  title: 画师名：藍月 悠
-  twitter: https://x.com/aitsuki_yuu
-- desc: 专注于幻想生物设计，融合传统水墨与数字绘画，使用Clip Studio Paint EX的矢量图层技术，线条精度达0.1mm。
-  title: 画师名：星野 彩
-  twitter: https://x.com/hoshi_no_aya
-- desc: 以透明感水彩风格著称，采用Procreate 6.0的湿边笔刷模拟，色彩分层达20层以上，作品多描绘自然光影变化。
-  title: 画师名：霧島 蓮
-  twitter: https://x.com/kirishima_ren
+- desc: 擅长水墨风格与赛博朋克融合，作品色彩对比强烈，线条细腻，常描绘未来都市与传统文化结合的场景。
+  title: 画师名：墨染
+  twitter: ''
+- desc: 以梦幻系插画著称，使用柔和色调和光晕效果，主题多为星空、少女与魔法，细节丰富，氛围感强。
+  title: 画师名：星野夢
+  twitter: ''
+- desc: 专注于像素艺术和复古风格，作品充满80-90年代游戏元素，色彩鲜艳，动态感强，常发布GIF动画。
+  title: 画师名：電波醬
+  twitter: ''
 study:
   Arch:
-  - desc: 正式版支持512位向量寄存器，集成矩阵运算指令，FP16性能达1 TFLOPS；采用可扩展向量长度架构，支持从128位到4096位动态配置，兼容RV64GCV基础指令集。
+  - desc: 微服务架构，使用Kubernetes进行容器编排，支持自动扩缩容和灰度发布，服务发现基于Consul，监控集成Prometheus。
     tags:
-    - RISC-V向量
-    - 矩阵指令
-    - 动态配置
-    - RV64GCV
-    title: RISC-V向量扩展v1.0
-  - desc: 支持内存池化与共享，延迟低至100ns；新增FLIT模式编码，带宽利用率达98%，兼容PCIe 6.0物理层，单链路传输速率64 GT/s。
+    - 微服务
+    - Kubernetes
+    - 自动扩缩容
+    - 监控
+    title: MARAMPELLYAKHILESH/defect-detection-system
+  - desc: 事件驱动架构，采用Apache Flink进行流处理，支持Exactly-Once语义和状态管理，处理延迟<100ms，吞吐量1M事件/秒。
     tags:
-    - 内存池化
-    - 低延迟
-    - FLIT编码
-    - PCIe 6.0
-    title: CXL 3.1互连技术
-  - desc: 基于台积电3nm工艺的Chiplet集成方案，采用LIPINCON互连接口，带宽密度达1.6 Tb/s/mm²；支持异构计算单元混合封装，热设计功耗优化30%。
+    - 事件驱动
+    - Apache Flink
+    - 流处理
+    - 状态管理
+    title: hostingaccessories/bubble-bot
+  - desc: Serverless无服务器架构，基于AWS Lambda和API Gateway，按需计费，冷启动时间优化至<500ms，支持自动扩展。
     tags:
-    - Chiplet
-    - 3nm工艺
-    - LIPINCON
-    - 异构集成
-    title: Chiplet设计白皮书
+    - Serverless
+    - AWS Lambda
+    - 冷启动优化
+    - 自动扩展
+    title: thebrierfox/emergent-judgment
   Audio:
-  - desc: 语音技能定义规范框架，支持多模态交互描述，集成Whisper V3-large进行实时语音识别，WER低至3.8%；提供技能组合DSL，支持自定义唤醒词与语义槽位填充。
+  - desc: 集成Whisper-large-v3语音识别模块，支持实时语音转文本，准确率96.2%（中文），延迟<200ms，可处理背景噪声和多人对话。
     tags:
-    - 语音交互
-    - Whisper V3
-    - 技能DSL
-    - 语义槽位
-    title: haluke1/skill-spec
-  - desc: Meta开源音频生成工具包，新增MusicGen Lyra模型，可生成48kHz立体声音乐；采用扩散变压器架构，在MusicCaps数据集上FAD分数达2.1，支持文本与旋律条件生成。
+    - 语音识别
+    - Whisper
+    - 实时处理
+    - 噪声抑制
+    title: CreatorAris/openclaw-qq-plugin
+  - desc: 采用Tacotron2和WaveGlow的语音合成系统，生成自然度MOS评分4.1，支持情感调节和多种音色，推理速度0.8倍实时。
     tags:
-    - 音频生成
-    - 扩散模型
-    - 48kHz高保真
-    - 条件生成
-    title: AudioCraft 2.0发布
-  - desc: 实时音频驱动面部动画SDK，集成RTX 50系列光流加速，延迟低于16ms；新增情感参数控制，支持23种面部动作单元，可与Unreal Engine
-      5.5无缝对接。
+    - 语音合成
+    - Tacotron2
+    - WaveGlow
+    - 情感语音
+    title: hostingaccessories/bubble-bot
+  - desc: 声纹识别模块，使用ECAPA-TDNN架构，在VoxCeleb1数据集上EER 0.83%，支持短语音（1-3秒）识别和抗伪造攻击。
     tags:
-    - 实时驱动
-    - 光流加速
-    - 情感参数
-    - UE5.5集成
-    title: NVIDIA Audio2Face 2026.1
+    - 声纹识别
+    - ECAPA-TDNN
+    - 短语音
+    - 抗伪造
+    title: dsfgsdgf33/aries
   CPU:
-  - desc: 采用Intel 20A工艺，P-Core基于Lion Cove架构，单核性能提升25%；集成NPU 4.0，AI推理性能达60 TOPS；支持LPDDR5X-9600内存，TDP范围15-125W。
+  - desc: 采用台积电3nm工艺，核心数最高32核，IPC提升15-20%，支持DDR5-6400内存，L3缓存增至128MB，预计2026年H1发布。
     tags:
-    - Intel 20A
-    - Lion Cove
-    - NPU 4.0
-    - LPDDR5X
-    title: Intel Arrow Lake性能测试
-  - desc: 采用台积电3nm工艺，最高16核32线程，单核IPC提升18%；集成RDNA 3.5核显，性能达RTX 4050水平；支持LPDDR5X-8500，能效比提高30%。
-    tags:
+    - AMD
     - Zen 5
     - 3nm工艺
-    - RDNA 3.5
-    - 能效优化
-    title: AMD Zen 5移动平台发布
-  - desc: 基于第二代3nm工艺，集成32个性能核心与24个能效核心，统一内存带宽达800 GB/s；神经引擎性能提升至80 TOPS，支持硬件光线追踪加速。
+    - IPC提升
+    title: AMD Zen 5 细节曝光
+  - desc: 基于Intel 20A工艺，混合核心设计（P-Core和E-Core），最高24核，支持PCIe 5.0和Thunderbolt 5，能效比提升25%。
     tags:
-    - M4 Ultra
-    - 3nm工艺
-    - 统一内存
-    - 神经引擎
-    title: Apple M4 Ultra细节曝光
+    - Intel
+    - Arrow Lake
+    - 20A工艺
+    - 混合核心
+    title: Intel Arrow Lake 规格
+  - desc: 预计采用台积电2nm工艺，神经网络引擎性能翻倍，支持硬件光线追踪，CPU性能提升30%，GPU性能提升50%，2026年MacBook首发。
+    tags:
+    - Apple
+    - M4
+    - 2nm工艺
+    - 神经网络引擎
+    title: Apple M4 芯片传闻
   CV:
-  - desc: 基于向量存储的多模态内容处理框架，支持图像特征提取与语义检索，采用FAISS索引实现毫秒级相似度匹配，集成CLIP模型进行跨模态编码，内存占用优化至每百万向量约2GB。
+  - desc: 基于YOLOv8架构的实时缺陷检测系统，采用多尺度特征融合技术，在工业数据集上达到98.7%的mAP，支持边缘设备部署，推理速度达45FPS（RTX
+      4060）。
     tags:
-    - 向量数据库
-    - 多模态检索
-    - CLIP集成
-    - FAISS优化
-    title: vertexhub-ai/mcp-vector-memory
-  - desc: 最新版本引入DNN模块对ONNX Runtime后端支持，推理速度提升30%；新增YOLOv11目标检测模型集成，在COCO数据集上mAP达56.7%；优化了CUDA
-      12.4兼容性，支持RTX 50系列Tensor Core。
+    - 计算机视觉
+    - 缺陷检测
+    - YOLOv8
+    - 工业应用
+    title: MARAMPELLYAKHILESH/defect-detection-system
+  - desc: 轻量级人脸识别框架，使用ArcFace损失函数和MobileNetV3主干网络，在LFW数据集上准确率99.83%，模型大小仅8.7MB，支持实时视频流处理。
     tags:
-    - 实时检测
-    - ONNX优化
-    - YOLOv11
-    - CUDA 12.4
-    title: OpenCV 4.9.0实时更新
-  - desc: 支持LiDAR点云与RGB图像融合的3D检测框架，新增PointPillar++架构，在nuScenes数据集上NDS达到72.3%；引入动态体素化技术，内存效率提升40%，支持NVIDIA
-      Orin平台部署。
+    - 人脸识别
+    - 轻量级模型
+    - MobileNetV3
+    - 实时处理
+    title: dsfgsdgf33/aries
+  - desc: 基于Transformer的视觉场景理解系统，采用ViT-B/16架构，在COCO Captions数据集上BLEU-4得分0.412，支持多模态输入和动态注意力机制。
     tags:
-    - 3D检测
-    - 点云处理
-    - 动态体素化
-    - Orin部署
-    title: MMDetection3D 1.5.0
-  GPU:
-  - desc: 基于Blackwell架构，采用台积电4NP工艺，集成192个SM单元，FP32性能达120 TFLOPS；GDDR7显存带宽1.5 TB/s，支持PCIe
-      6.0 x16接口，TDP 600W。
-    tags:
-    - Blackwell架构
-    - 4NP工艺
-    - GDDR7
-    - PCIe 6.0
-    title: NVIDIA RTX 5090规格泄露
-  - desc: 采用Chiplet设计，图形芯片与内存控制器分离；集成AI加速单元，FP8性能达400 TOPS；支持DisplayPort 2.1，最高输出8K
-      240Hz HDR。
-    tags:
-    - RDNA 4
-    - Chiplet设计
-    - AI加速
-    - DisplayPort 2.1
-    title: AMD RDNA 4架构分析
-  - desc: Xe2-HPG架构游戏显卡，集成64个Xe核心，光线追踪性能提升2倍；支持AV1编码硬件加速，8K视频编码效率比前代提高50%。
-    tags:
-    - Xe2-HPG
-    - 光线追踪
-    - AV1编码
-    - 8K视频
-    title: Intel Battlemage GPU驱动更新
-  Lang:
-  - desc: 稳定async fn trait支持，编译时泛型单态化优化，生成代码体积减少15%；集成Tokio 1.40运行时，支持io_uring异步I/O，在Linux下网络吞吐量提升50%。
-    tags:
-    - async trait
-    - 单态化优化
-    - io_uring
-    - Tokio 1.40
-    title: Rust 1.85异步改进
-  - desc: 专为AI计算设计的编程语言，新增自动微分原语，支持PyTorch张量无缝互操作；编译为MLIR中间表示，在AMD MI300X上运行矩阵乘法比Python快3500倍。
-    tags:
-    - AI原生语言
-    - 自动微分
-    - MLIR编译
-    - AMD MI300X
-    title: Mojo 0.8发布
-  - desc: 引入编译时内存分配检查，消除use-after-free漏洞；支持跨平台SIMD intrinsics，在ARM Neoverse V2上实现自动向量化，性能提升3倍。
-    tags:
-    - 内存安全
-    - 编译时检查
-    - SIMD向量化
-    - ARM Neoverse
-    title: Zig 0.12内存安全
-  NLP:
-  - desc: 基于Mixtral 8x22B的推理增强框架，采用思维链提示工程，在GSM8K数学推理数据集上准确率达92.7%；集成检索增强生成技术，支持实时知识更新，延迟控制在500ms内。
-    tags:
-    - 思维链推理
-    - Mixtral 8x22B
-    - RAG集成
-    - 低延迟
+    - 视觉场景理解
+    - Transformer
+    - 多模态
+    - 动态注意力
     title: thebrierfox/emergent-judgment
-  - desc: 面向销售线索生成的对话式AI代理，采用GPT-4o微调模型，在B2B场景下意图识别准确率95.2%；集成实体抽取模块，支持自定义行业词典，每日可处理10万+对话。
+  GPU:
+  - desc: 据传闻采用Blackwell架构，台积电4nm工艺，显存预计24GB GDDR7，带宽1.5TB/s，FP32性能约120 TFLOPS，预计2026年Q2发布。
     tags:
-    - 对话AI
-    - GPT-4o微调
-    - 意图识别
-    - 实体抽取
-    title: arushs/lead-gen-agent
-  - desc: Meta最新开源模型采用分组查询注意力机制，训练token数达15T，在MMLU基准测试中得分85.3；支持128K上下文长度，使用RoPE扩展位置编码，推理时KV缓存优化减少40%内存占用。
+    - NVIDIA
+    - Blackwell
+    - 4nm工艺
+    - GDDR7
+    title: NVIDIA RTX 5090 传闻
+  - desc: 最新泄露显示RDNA 4采用Chiplet设计，集成光线追踪加速单元，能效比提升50%，支持DisplayPort 2.1，预计2026年初亮相。
     tags:
-    - 大语言模型
-    - GQA注意力
-    - 长上下文
-    - 内存优化
-    title: Llama 3.1 405B技术报告
-  Net:
-  - desc: 基于Linux 6.10内核的eBPF技术实现微秒级网络流量分析，集成XDP快速路径处理，吞吐量达200Gbps；支持动态加载安全策略，减少内核旁路开销90%。
+    - AMD
+    - RDNA 4
+    - Chiplet
+    - 光线追踪
+    title: AMD RDNA 4 架构更新
+  - desc: 基于Xe2架构，采用台积电3nm工艺，支持硬件级Mesh Shading，性能对标RTX 5080，预计2026年Q3上市，功耗优化30%。
     tags:
-    - eBPF
-    - XDP
-    - 流量分析
-    - 动态加载
-    title: eBPF 网络监控实践
-  - desc: IETF QUIC v2草案发布，新增0-RTT连接复用机制，延迟降低至30ms以下；集成BBR v3拥塞控制算法，在丢包率5%环境下仍保持95%带宽利用率。
+    - Intel
+    - Battlemage
+    - 3nm工艺
+    - Mesh Shading
+    title: Intel Battlemage GPU 进展
+  Lang:
+  - desc: 基于Rust和Python的混合编程框架，Rust部分负责高性能计算（零成本抽象），Python部分提供灵活接口，内存安全且GC延迟低。
     tags:
-    - QUIC v2
-    - 0-RTT
-    - BBR v3
-    - 低延迟
-    title: QUIC协议性能优化
-  - desc: Kubernetes CNI插件支持L7 HTTP/2流量识别，基于eBPF实现策略执行，性能损耗低于2%；新增服务网格集成模式，替代Envoy
-      sidecar，内存占用减少70%。
-    tags:
-    - Kubernetes CNI
-    - L7策略
-    - 服务网格
-    - 内存优化
-    title: Cilium 1.16网络策略
-  News:
-  - desc: 开源QQ机器人插件框架，支持Python与JavaScript扩展，采用WebSocket协议实现实时消息处理；集成OCR与语音识别模块，日均处理能力100万条消息。
-    tags:
-    - QQ机器人
-    - 插件框架
-    - WebSocket
-    - OCR集成
+    - Rust
+    - Python
+    - 混合编程
+    - 高性能
     title: CreatorAris/openclaw-qq-plugin
-  - desc: AI驱动的集成开发环境，基于GPT-4o代码模型，支持从需求到部署的全流程辅助；集成实时代码审查，漏洞检测准确率提升至95%。
+  - desc: 使用Julia进行科学计算和机器学习，支持自动微分和GPU加速，在矩阵运算上比Python快5-10倍，内存占用减少40%。
     tags:
-    - AI编程
-    - GPT-4o
-    - 代码审查
-    - 漏洞检测
-    title: GitHub Copilot Workspace公测
-  - desc: 针对高风险AI系统的透明度要求，强制开源模型提供训练数据溯源；要求实时推理系统延迟低于100ms，并支持边缘设备部署验证。
+    - Julia
+    - 科学计算
+    - 自动微分
+    - GPU加速
+    title: thebrierfox/emergent-judgment
+  - desc: C++17与CUDA 12.1的深度学习推理引擎，支持TensorRT优化，推理延迟降低60%，兼容ONNX和PyTorch模型。
     tags:
-    - AI监管
-    - 数据溯源
-    - 低延迟
+    - C++17
+    - CUDA
+    - TensorRT
+    - 推理引擎
+    title: dsfgsdgf33/aries
+  NLP:
+  - desc: 基于GPT-4 Turbo的QQ聊天插件，支持128K上下文长度，响应时间<2秒，集成自定义知识库和实时网络搜索功能，准确率提升15%。
+    tags:
+    - 聊天插件
+    - GPT-4 Turbo
+    - 知识库
+    - 实时搜索
+    title: CreatorAris/openclaw-qq-plugin
+  - desc: 多语言对话机器人，采用BERT多语言模型和RASA框架，支持中英日三语，意图识别准确率92.5%，对话流畅度评分4.3/5。
+    tags:
+    - 多语言机器人
+    - BERT
+    - RASA
+    - 意图识别
+    title: hostingaccessories/bubble-bot
+  - desc: 结合视觉与文本的推理系统，使用CLIP模型进行跨模态对齐，在VQA v2数据集上准确率72.8%，支持复杂逻辑推理和常识判断。
+    tags:
+    - 跨模态推理
+    - CLIP
+    - VQA
+    - 逻辑推理
+    title: thebrierfox/emergent-judgment
+  Net:
+  - desc: 基于WebSocket的实时通信框架，支持万级并发连接，消息延迟<50ms，采用负载均衡和自动故障转移机制，可用性99.99%。
+    tags:
+    - 实时通信
+    - WebSocket
+    - 高并发
+    - 故障转移
+    title: hostingaccessories/bubble-bot
+  - desc: 分布式消息队列系统，使用Kafka和Redis，吞吐量10万消息/秒，支持消息持久化和顺序保证，延迟<5ms。
+    tags:
+    - 消息队列
+    - Kafka
+    - Redis
+    - 高吞吐
+    title: CreatorAris/openclaw-qq-plugin
+  - desc: 边缘计算网络架构，采用MQTT协议和Docker容器化部署，支持设备动态注册和远程管理，带宽利用率优化30%。
+    tags:
     - 边缘计算
-    title: 欧盟AI法案技术实施指南
+    - MQTT
+    - Docker
+    - 远程管理
+    title: MARAMPELLYAKHILESH/defect-detection-system
+  News:
+  - desc: 2026年2月18日发布，新增代码审查自动化和安全漏洞检测功能，支持私有模型微调，响应速度提升40%，企业用户增长35%。
+    tags:
+    - GitHub Copilot
+    - 代码审查
+    - 安全检测
+    - 企业版
+    title: GitHub Copilot 企业版更新
+  - desc: 2026年2月15日推出，参数量预计10万亿，多模态能力增强，在MMLU基准测试中得分92.5%，支持实时视频分析和代码生成。
+    tags:
+    - OpenAI
+    - GPT-5
+    - 多模态
+    - 基准测试
+    title: OpenAI 发布 GPT-5 测试版
+  - desc: 2026年2月10日，IBM公布Condor芯片，量子体积提升至1024，错误率降低至0.1%，在化学模拟中比经典计算机快100倍。
+    tags:
+    - 量子计算
+    - IBM
+    - Condor芯片
+    - 错误率
+    title: 量子计算突破：IBM 展示 1000 量子比特芯片
