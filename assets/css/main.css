@@ -52,33 +52,67 @@ code {
     color: #ffffff !important;
 }
 
-/* 全局文字对比度强化（针对深色模式） */
-.dark-mode .content-card, 
-.dark-mode .content-card p, 
+/* 深色模式变量优化 */
+.dark-mode {
+    --text-main: rgba(255, 255, 255, 0.95); /* 高亮度但非死白 */
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --glass-bg: rgba(25, 25, 30, 0.94); 
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+    --code-bg: #1e1e1e;
+}
+
+body, html { 
+    margin: 0; padding: 0; min-height: 100vh; 
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
+    color: var(--text-main); 
+    background-color: #f0f2f5; 
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.dark-mode body, .dark-mode html { background-color: #080808 !important; }
+
+/* 精准控制深色模式下的正文与侧栏文字 */
+.dark-mode .content-card,
+.dark-mode .content-card p,
 .dark-mode .content-card li,
 .dark-mode .content-card h1,
 .dark-mode .content-card h2,
 .dark-mode .content-card h3,
-.dark-mode .sidebar,
-.dark-mode .sidebar h2,
-.dark-mode .nav-item,
 .dark-mode .extra-sidebar,
 .dark-mode .extra-box,
-.dark-mode .extra-title,
-.dark-mode #history-content,
 .dark-mode .history-item,
-.dark-mode .post-preview-card h3,
-.dark-mode .post-preview-card p,
-.dark-mode .stat-card p {
-    color: #ffffff !important;
+.dark-mode #cv-content p {
+    color: var(--text-main) !important;
+    opacity: 1 !important;
 }
 
-/* 侧边栏导航特殊处理 */
-.nav-item { 
-    display: flex; align-items: center; gap: 10px; 
-    padding: 10px 15px; margin: 5px 0; border-radius: 12px; 
-    text-decoration: none; color: var(--text-main); 
-    background: rgba(255,255,255,0.1); transition: 0.3s; 
+/* 次要文字调优 */
+.dark-mode .post-preview-card p,
+.dark-mode #clock-date,
+.dark-mode .history-year {
+    color: var(--text-muted) !important;
+}
+
+/* 极致锁定：彻底根除代码块白块 */
+div.highlighter-rouge, 
+div.highlighter-rouge div.highlight, 
+div.highlighter-rouge pre.highlight, 
+.highlight pre, 
+pre, 
+code {
+    background-color: var(--code-bg) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+}
+
+.dark-mode pre, 
+.dark-mode .highlight, 
+.dark-mode .highlight pre, 
+.dark-mode code {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important; /* 代码块内文字稍微柔和一点 */
 }
 .dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; }
 .nav-item:hover { background: var(--primary-color) !important; color: white !important; transform: translateX(5px); }
