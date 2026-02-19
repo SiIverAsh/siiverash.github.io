@@ -1,25 +1,47 @@
 :root { 
     --primary-color: #7fb2d8; 
-    --text-main: #444; 
-    --glass-bg: rgba(255, 255, 255, 0.75); 
-    --glass-border: rgba(255, 255, 255, 0.3); 
-    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); 
+    --text-main: #333; 
+    --glass-bg: rgba(255, 255, 255, 0.8); 
+    --glass-border: rgba(255, 255, 255, 0.4); 
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); 
+    --code-bg: #f6f8fa; /* 浅色模式代码背景 */
     --transition-speed: 0.3s;
 }
 
-/* 深色模式类 */
+/* 深色模式强制覆盖 */
 .dark-mode {
     --text-main: #e0e0e0;
-    --glass-bg: rgba(30, 30, 35, 0.85);
+    --glass-bg: rgba(25, 25, 30, 0.9); /* 加深加厚，防止泛白 */
     --glass-border: rgba(255, 255, 255, 0.1);
-    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    --code-bg: #1e1e1e; /* 深色模式代码背景 */
 }
 
 body, html { 
     margin: 0; padding: 0; min-height: 100vh; 
     font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
     color: var(--text-main); 
-    transition: background-color var(--transition-speed), color var(--transition-speed);
+    background-color: #f0f2f5; /* 增加底色防止透明度丢失 */
+}
+
+/* 强制修复代码块 */
+pre, code, .highlight {
+    background-color: var(--code-bg) !important;
+    color: var(--text-main) !important;
+    border-radius: 8px;
+}
+
+.dark-mode pre, .dark-mode code, .dark-mode .highlight {
+    background-color: #1e1e1e !important;
+    color: #dcdcdc !important;
+}
+
+.glass-card { 
+    background: var(--glass-bg); 
+    backdrop-filter: blur(12px) saturate(180%); 
+    -webkit-backdrop-filter: blur(12px) saturate(180%); 
+    border-radius: 24px; border: 1px solid var(--glass-border); 
+    box-shadow: var(--shadow); 
 }
 
 /* 主题切换按钮样式 */
@@ -68,13 +90,6 @@ body, html {
     display: grid; grid-template-columns: 260px 1fr 280px; 
     gap: 20px; padding: 40px 20px; 
     min-height: calc(100vh - 80px); 
-}
-
-.glass-card { 
-    background: var(--glass-bg); 
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); 
-    border-radius: 24px; border: 1px solid var(--glass-border); 
-    box-shadow: var(--shadow); 
 }
 
 .sidebar { 
