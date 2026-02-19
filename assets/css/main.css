@@ -31,45 +31,32 @@ body, html {
     background-color: #f0f2f5; 
     transition: background-color var(--transition-speed), color var(--transition-speed);
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden; /* 防止横向滚动条 */
 }
 
 .dark-mode body, .dark-mode html { background-color: #080808 !important; }
 
+/* 强制显示背景图 */
 .background { 
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-    background: url('https://personalweb-1340173525.cos.ap-shanghai.myqcloud.com/bg.png') no-repeat center center fixed; 
-    background-size: cover; z-index: -1; 
+    background: url('https://personalweb-1340173525.cos.ap-shanghai.myqcloud.com/bg.png') no-repeat center center fixed !important; 
+    background-size: cover !important; z-index: -1; 
 }
 
-/* 3. 布局结构 - 核心锁定 */
+/* 3. 布局结构 */
 .wrapper { 
     max-width: 1400px; margin: 0 auto; 
     display: grid; grid-template-columns: 260px 1fr 280px; 
     gap: 20px; padding: 40px 20px; 
     min-height: calc(100vh - 80px); 
-    align-items: start; /* 关键：确保所有列从顶部开始，不拉伸 */
+    align-items: start;
 }
 
 .main-content { animation: slideInUp 0.8s ease; min-width: 0; }
 
-/* 4. 侧边栏 - 粘性定位强化 */
-.sidebar { 
-    position: sticky; top: 40px; 
-    align-self: start; 
-    height: fit-content; padding: 30px 20px; text-align: center; 
-    animation: slideInLeft 0.8s ease; 
-}
+/* 4. 侧边栏与卡片 */
+.sidebar { position: sticky; top: 40px; height: fit-content; padding: 30px 20px; text-align: center; animation: slideInLeft 0.8s ease; }
+.extra-sidebar { position: sticky; top: 40px; height: fit-content; display: flex; flex-direction: column; gap: 20px; animation: slideInRight 0.8s ease; align-self: start; }
 
-.extra-sidebar { 
-    position: sticky; top: 40px; 
-    align-self: start; /* 关键：确保右侧栏固定感 */
-    height: fit-content; 
-    display: flex; flex-direction: column; gap: 20px; 
-    animation: slideInRight 0.8s ease; 
-}
-
-/* 5. 组件 */
 .glass-card { 
     background: var(--glass-bg) !important; 
     backdrop-filter: blur(15px) saturate(180%); 
@@ -78,21 +65,46 @@ body, html {
     box-shadow: var(--shadow); 
 }
 
-.content-card { 
-    padding: 40px; min-height: 400px; max-width: 850px; margin: 0 auto; 
-    overflow-wrap: break-word; font-size: 1.05em; line-height: 1.75; 
-}
-
 .extra-box { padding: 20px; position: relative; }
 .extra-title { font-size: 0.95em; font-weight: bold; color: var(--primary-color); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
 
-/* 6. 深色模式加亮 */
+/* 5. 搜索框美化 (解决不一致) */
+.search-wrapper { position: relative; z-index: 1001; }
+#search-input { 
+    width: 100%; padding: 12px 15px; border-radius: 12px; 
+    border: 1px solid var(--glass-border); 
+    background: rgba(255,255,255,0.2); color: var(--text-main); outline: none; 
+    box-sizing: border-box; font-size: 0.9em; transition: 0.3s;
+}
+.dark-mode #search-input { background: rgba(0,0,0,0.3) !important; color: white !important; }
+#search-input:focus { border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2); }
+
+#results-container { 
+    position: absolute; top: 100%; left: 0; width: 100%; 
+    list-style: none; padding: 10px 0; margin-top: 8px; 
+    max-height: 350px; overflow-y: auto; z-index: 9999; 
+    background: var(--glass-bg); border-radius: 16px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); display: none; 
+    border: 1px solid var(--glass-border); 
+}
+#results-container li { padding: 10px 15px; border-bottom: 1px solid var(--glass-border); }
+#results-container a { text-decoration: none; color: var(--text-main); font-size: 0.9em; display: block; }
+#results-container a:hover { color: var(--primary-color); }
+
+/* 6. 时钟样式美化 (解决不一致) */
+.clock-box { text-align: center; }
+#clock-time { font-size: 2.2em; font-weight: bold; color: var(--primary-color); font-family: 'Courier New', monospace; letter-spacing: 2px; }
+#clock-date { font-size: 0.9em; color: var(--text-muted); margin-top: 8px; }
+#clock-lunar { font-size: 0.85em; color: var(--primary-color); margin-top: 5px; font-weight: bold; }
+
+/* 7. 博客内容优化 */
+.content-card { padding: 40px; min-height: 400px; max-width: 850px; margin: 0 auto; overflow-wrap: break-word; font-size: 1.05em; line-height: 1.75; }
 .dark-mode .content-card, .dark-mode .content-card p, .dark-mode .content-card li, .dark-mode .content-card h1, .dark-mode .content-card h2, .dark-mode .content-card h3, .dark-mode .extra-sidebar, .dark-mode .extra-box, .dark-mode .history-item, .dark-mode #cv-content p, .dark-mode .sidebar h2, .dark-mode .post-preview-card h3 {
     color: #fafafa !important; font-weight: 450;
 }
 .dark-mode .post-preview-card p, .dark-mode #clock-date, .dark-mode .history-year { color: var(--text-muted) !important; }
 
-/* 7. 代码块 */
+/* 8. 代码块彻底锁死 */
 div.highlighter-rouge, div.highlighter-rouge div.highlight, div.highlighter-rouge pre.highlight, .highlight pre, pre, code {
     background-color: var(--code-bg) !important; color: var(--text-main) !important; border: 1px solid var(--glass-border); border-radius: 12px;
 }
@@ -100,21 +112,18 @@ div.highlighter-rouge, div.highlighter-rouge div.highlight, div.highlighter-roug
     background-color: #1e1e1e !important; color: #eeeeee !important;
 }
 
-/* 8. 导航与社交 */
+/* 9. 导航与社交 */
 .avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; transition: transform 0.5s; cursor: pointer; }
 .avatar:hover { transform: rotate(360deg) scale(1.1); }
 .social-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
 .social-links a { color: var(--text-muted); font-size: 1.1em; transition: 0.3s; }
 .dark-mode .social-links a { color: #ffffff !important; }
 
-.nav-item { 
-    display: flex; align-items: center; gap: 10px; padding: 10px 15px; margin: 5px 0; border-radius: 12px; 
-    text-decoration: none; color: var(--text-main); background: rgba(255,255,255,0.1); transition: 0.3s; 
-}
+.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 15px; margin: 5px 0; border-radius: 12px; text-decoration: none; color: var(--text-main); background: rgba(255,255,255,0.1); transition: 0.3s; }
 .dark-mode .nav-item { color: #ffffff !important; background: rgba(255,255,255,0.05) !important; }
 .nav-item:hover { background: var(--primary-color) !important; color: white !important; transform: translateX(5px); }
 
-/* 9. 主题按钮 */
+/* 10. 主题切换按钮 */
 #theme-toggle {
     position: fixed !important; top: 20px !important; right: 20px !important; left: unset !important;
     width: 45px; height: 45px; border-radius: 12px; background: var(--glass-bg); backdrop-filter: blur(10px);
@@ -122,12 +131,10 @@ div.highlighter-rouge, div.highlighter-rouge div.highlight, div.highlighter-roug
     display: flex; align-items: center; justify-content: center; font-size: 1.2em; color: var(--primary-color);
 }
 
-/* 10. 响应式 */
-@media (max-width: 1100px) { 
-    .wrapper { grid-template-columns: 240px 1fr; } 
-    .extra-sidebar { display: none; } 
-}
-@media (max-width: 850px) { 
-    .wrapper { grid-template-columns: 1fr; padding: 20px 10px; } 
-    .sidebar { position: relative; top: 0; width: 100%; box-sizing: border-box; } 
-}
+/* 11. 动画与响应式 */
+@keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slideInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 1100px) { .wrapper { grid-template-columns: 240px 1fr; } .extra-sidebar { display: none; } }
+@media (max-width: 850px) { .wrapper { grid-template-columns: 1fr; padding: 20px 10px; } .sidebar { position: relative; top: 0; width: 100%; box-sizing: border-box; } }
