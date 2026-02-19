@@ -15,7 +15,7 @@
 }
 
 .dark-mode {
-    --text-main: #ffffff !important;
+    --text-main: #ffffff !important; 
     --text-muted: #dddddd !important;
     --glass-bg: rgba(15, 15, 20, 0.97) !important; 
     --glass-border: rgba(255, 255, 255, 0.2) !important;
@@ -31,14 +31,18 @@ body, html {
     background-color: #f0f2f5; 
     transition: background-color var(--transition-speed), color var(--transition-speed);
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-.dark-mode body, .dark-mode html { 
-    background-color: #000000 !important; 
+.dark-mode body, .dark-mode html { background-color: #000000 !important; }
+
+.background { 
+    position: fixed !important; top: 0 !important; left: 0 !important; 
+    width: 100% !important; height: 100% !important; 
+    background: url('https://personalweb-1340173525.cos.ap-shanghai.myqcloud.com/bg.png') no-repeat center center fixed !important; 
+    background-size: cover !important; z-index: -1 !important; 
 }
 
-/* 3. 布局锁定 */
+/* 3. 布局结构  */
 .wrapper { 
     max-width: 1400px; margin: 0 auto; 
     display: grid; grid-template-columns: 260px 1fr 280px; 
@@ -47,11 +51,16 @@ body, html {
     align-items: start;
 }
 
-.main-content { animation: slideInUp 0.8s ease; min-width: 0; }
+.main-content { animation: slideInUp 0.8s ease; min-width: 0; flex: 1; }
 
-/* 4. 侧边栏 */
-.sidebar { position: sticky; top: 40px; height: fit-content; padding: 30px 20px; text-align: center; }
-.extra-sidebar { position: sticky; top: 40px; height: fit-content; display: flex; flex-direction: column; gap: 20px; align-self: start; }
+/* 4. 侧边栏与卡片  */
+.sidebar { position: sticky; top: 40px; width: 260px; height: fit-content; padding: 30px 20px; text-align: center; box-sizing: border-box; }
+
+.extra-sidebar { 
+    position: sticky; top: 40px; width: 280px; height: fit-content; 
+    display: flex; flex-direction: column; gap: 20px; 
+    align-self: start; box-sizing: border-box;
+}
 
 .glass-card { 
     background: var(--glass-bg) !important; 
@@ -61,71 +70,58 @@ body, html {
     box-shadow: var(--shadow); 
 }
 
-/* 5. 极致亮度锁定 (正文、列表、推荐、历史) */
+.extra-box { padding: 20px; position: relative; width: 100%; box-sizing: border-box; }
+.extra-title { font-size: 0.95em; font-weight: bold; color: var(--primary-color); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+
+/* 5. 动态内容加亮*/
+.dark-mode #history-content, 
+.dark-mode #history-content *,
+.dark-mode #cv-content,
+.dark-mode #cv-content *,
 .dark-mode .content-card, 
-.dark-mode .post-content,
-.dark-mode .post-content *,
-.dark-mode .extra-sidebar,
-.dark-mode .extra-sidebar *,
-.dark-mode .post-preview-card,
-.dark-mode .post-preview-card *,
-.dark-mode .recommend-box,
-.dark-mode .recommend-box *,
-.dark-mode #history-content,
-.dark-mode .history-item {
+.dark-mode .content-card *,
+.dark-mode .post-preview-card * {
     color: #ffffff !important;
     opacity: 1 !important;
-    text-shadow: none !important;
 }
 
-.dark-mode .post-preview-card p, 
-.dark-mode .history-year { 
-    color: rgba(255,255,255,0.8) !important; 
+.dark-mode .history-year, .dark-mode #clock-date { color: #bbbbbb !important; }
+
+/* 6. 功能组件 */
+.search-wrapper { position: relative; z-index: 1001; }
+#search-input { 
+    width: 100%; padding: 12px 15px; border-radius: 12px; 
+    border: 1px solid var(--glass-border); 
+    background: rgba(255,255,255,0.2); color: var(--text-main); outline: none; 
+}
+.dark-mode #search-input { background: rgba(0,0,0,0.3) !important; color: white !important; }
+
+#results-container { 
+    position: absolute; top: 100%; left: 0; width: 100%; 
+    background: var(--glass-bg); border-radius: 16px; 
+    z-index: 9999; border: 1px solid var(--glass-border); display: none; 
 }
 
-.post-content h2, .post-content h3 { color: var(--primary-color) !important; }
+#clock-time { font-size: 2.2em; font-weight: bold; color: var(--primary-color); font-family: 'Courier New', monospace; }
 
-/* 6. 代码块 */
-div.highlighter-rouge, .highlight, pre, code {
-    background-color: var(--code-bg) !important;
-    color: var(--text-main) !important;
-    border-radius: 12px;
-}
-.dark-mode pre, .dark-mode code { color: #ffffff !important; }
-
-/* 7. 主题切换按钮 - 绝对物理锁定 (解决左右横跳问题) */
+/* 7. 主题切换按钮  */
 #theme-toggle {
     position: fixed !important;
     top: 25px !important;
     right: 25px !important;
-    left: auto !important; /* 核心：强力清除任何可能继承的左侧定位 */
-    bottom: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 48px !important;
-    height: 48px !important;
-    border-radius: 14px !important;
-    background: var(--glass-bg) !important;
-    backdrop-filter: blur(10px) !important;
-    border: 1px solid var(--glass-border) !important;
-    box-shadow: var(--shadow) !important;
-    cursor: pointer !important;
-    z-index: 2147483647 !important; /* 使用 32 位整数最大值，确保绝对置顶 */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 1.3em !important;
-    color: var(--primary-color) !important;
-    transition: transform 0.3s, background 0.3s !important;
-}
-
-/* 移动端特殊位置校准 */
-@media (max-width: 850px) { 
-    #theme-toggle {
-        top: 15px !important;
-        right: 15px !important;
-        left: auto !important;
-    }
+    left: auto !important; 
+    margin-inline-start: auto !important;
+    width: 48px; height: 48px;
+    border-radius: 14px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    z-index: 2147483647 !important;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3em;
+    color: var(--primary-color);
 }
 
 /* 8. 响应式补丁 */
@@ -134,16 +130,13 @@ div.highlighter-rouge, .highlight, pre, code {
     .extra-sidebar { display: none; } 
 }
 @media (max-width: 850px) { 
-    .wrapper { grid-template-columns: 1fr; } 
-    .sidebar { position: relative; top: 0; } 
-    #theme-toggle { top: 15px !important; right: 15px !important; left: auto !important; }
+    .wrapper { grid-template-columns: 1fr; padding: 20px 10px; } 
+    .sidebar { position: relative; top: 0; width: 100%; } 
 }
 
-/* 其他基础 */
-.background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('https://personalweb-1340173525.cos.ap-shanghai.myqcloud.com/bg.png') no-repeat center center fixed; background-size: cover; z-index: -1; }
-.avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; transition: transform 0.5s; cursor: pointer; }
+/* 9. 杂项 */
+.avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; transition: 0.5s; cursor: pointer; }
 .avatar:hover { transform: rotate(360deg) scale(1.1); }
-.social-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
-.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 15px; margin: 5px 0; border-radius: 12px; text-decoration: none; color: var(--text-main); background: rgba(255,255,255,0.1); transition: 0.3s; }
-.dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; }
+.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 15px; margin: 5px 0; border-radius: 12px; text-decoration: none; color: var(--text-main); background: rgba(255,255,255,0.1); }
+.dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; color: #ffffff !important; }
 .nav-item:hover { background: var(--primary-color) !important; color: white !important; }
