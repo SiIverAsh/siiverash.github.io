@@ -1,0 +1,13 @@
+# 个人敏感配置与模板（永远不提交）
+DOMAIN_SETUP_GUIDE.md
+_posts/BLOG_TEMPLATE.md
+_posts/COMMIT_LOG_FORMAT.md
+
+# Jekyll 默认忽略
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+node_modules/
+.env
