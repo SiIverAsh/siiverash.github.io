@@ -115,12 +115,12 @@ code {
 .dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; }
 .nav-item:hover { background: var(--primary-color) !important; color: white !important; transform: translateX(5px); }
 
-/* 主题切换按钮样式 */
+/* 主题切换按钮样式 - 彻底锁死右上角 */
 #theme-toggle {
     position: fixed !important;
     top: 20px !important;
     right: 20px !important;
-    left: auto !important; 
+    left: unset !important; /* 强制消除左侧偏移 */
     width: 45px;
     height: 45px;
     border-radius: 12px;
@@ -130,7 +130,7 @@ code {
     border: 1px solid var(--glass-border);
     box-shadow: var(--shadow);
     cursor: pointer;
-    z-index: 10001;
+    z-index: 10005 !important; /* 提升至最高层级 */
     display: flex;
     align-items: center;
     justify-content: center;
