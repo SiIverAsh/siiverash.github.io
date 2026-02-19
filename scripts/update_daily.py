@@ -42,10 +42,10 @@ def get_ai_recommendation(context):
     4. 针对 GPU 和 CPU 领域，必须关注最近一个月内的动态。
     5. 每个内容项（Study、Anime、Music、Game）必须包含至少 4 个 tags。
     6. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等。
-    7. 对于Paint，画师不一定是知名的，但是必须推荐画师名并提供真实的 X ID（不确定则留空）。
+    7. 对于Paint，画师不一定是知名的，可以推荐国内平台的画师，但是必须提供真实的画师链接（可以是X，可以是微博等等）（不确定则留空）。
     8. 对于history推荐内容为“历史上的今天”，必须提供 6 条不同数据。
     9. **CV推荐**：必须严格参考**《声优名鉴》(声優名鑑)**数据，推荐一位日本声优，每天都得推荐不同的声优，禁止一直推荐同一个。
-    必须包含：姓名(name)、所属事务所(agency)、出生地(hometown)、代表作(works)、以及一段基于名鉴风格的专业评价(intro,不用特别长，大约150字即可)。
+    必须包含：姓名(name)、所属事务所(agency)、出生地(hometown)、代表作(works)、以及一段基于名鉴风格的专业评价(intro,不用特别长，大约100字即可)，代表作如果你不知道可以不写，但是写出来的代表作一定要正确。
     10. 所有的回答请务必用中文。
     
     必须输出以下 JSON 格式：
@@ -63,7 +63,7 @@ def get_ai_recommendation(context):
       }},
       "anime": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
       "music": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-      "paint": [{"title": "画师名", "desc": "风格简述", "x_id": "账号ID"}],
+      "paint": [{"title": "画师名", "desc": "风格简述", "id": "账号链接"}],
       "game": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
       "history": [{"year": "..", "event": ".."}],
       "cv_recommend": {
