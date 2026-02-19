@@ -1,6 +1,7 @@
+---
+---
 @charset "UTF-8";
 
-/* 1. 变量定义 */
 :root { 
     --primary-color: #4a90e2; 
     --text-main: #111111; 
@@ -21,43 +22,40 @@
     --code-bg: #1a1a1a !important;
 }
 
-/* 2. 全局基础 */
 body, html { 
     margin: 0; padding: 0; min-height: 100vh; 
     font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
     color: var(--text-main); 
-    background-color: transparent !important; /* 关键：设为透明，否则会挡住背景图 */
+    background-color: transparent !important;
     transition: background-color var(--transition-speed), color var(--transition-speed);
     -webkit-font-smoothing: antialiased;
 }
 
-/* 强制背景图层 - 提升层级和显示逻辑 */
+.dark-mode body, .dark-mode html { background-color: #000000 !important; }
+
 .background { 
     position: fixed !important; top: 0 !important; left: 0 !important; 
     width: 100% !important; height: 100% !important; 
-    background-image: url('https://personalweb-1340173525.cos.ap-shanghai.myqcloud.com/bg.png') !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    z-index: -2 !important; /* 放在最底层 */
+    background: url('https://personalweb-1340173525.cos.ap-shanghai.myqcloud.com/bg.png') no-repeat center center fixed !important; 
+    background-size: cover !important; z-index: -2 !important; 
 }
 
-/* 3. 布局结构 - 终极 Grid 锁定 */
 .wrapper { 
     max-width: 1400px; margin: 0 auto; 
-    display: grid; grid-template-columns: 260px minmax(0, 1fr) 280px; 
-    gap: 20px; padding: 40px 20px; 
+    display: grid; grid-template-columns: 260px minmax(0, 1fr) 300px; 
+    gap: 25px; padding: 40px 20px; 
     min-height: calc(100vh - 80px); 
     align-items: start;
-    position: relative;
-    z-index: 1;
 }
 
 .main-content { animation: slideInUp 0.8s ease; min-width: 0; }
 
-/* 4. 侧边栏与卡片 */
 .sidebar { position: sticky; top: 40px; width: 260px; height: fit-content; padding: 30px 20px; text-align: center; box-sizing: border-box; }
-.extra-sidebar { position: sticky; top: 40px; width: 280px; height: fit-content; display: flex; flex-direction: column; gap: 20px; align-self: start; box-sizing: border-box; }
+.extra-sidebar { 
+    position: sticky; top: 40px; width: 300px; height: fit-content; 
+    display: flex; flex-direction: column; gap: 25px; 
+    align-self: start; box-sizing: border-box; 
+}
 
 .glass-card { 
     background: var(--glass-bg) !important; 
@@ -68,10 +66,9 @@ body, html {
 }
 
 .content-card { padding: 40px; min-height: 400px; width: 100%; box-sizing: border-box; overflow-wrap: break-word; font-size: 1.1em; line-height: 1.8; }
-.extra-box { padding: 20px; position: relative; width: 100%; box-sizing: border-box; }
-.extra-title { font-size: 0.95em; font-weight: bold; color: var(--primary-color) !important; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+.extra-box { padding: 25px; position: relative; width: 100%; box-sizing: border-box; }
+.extra-title { font-size: 1em; font-weight: bold; color: var(--primary-color) !important; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
 
-/* 5. 极致亮度锁定 (动态文字、列表、侧栏) */
 .dark-mode .content-card, .dark-mode .post-content, .dark-mode .post-content *,
 .dark-mode .extra-sidebar, .dark-mode .extra-sidebar *,
 .dark-mode .post-preview-card, .dark-mode .post-preview-card *,
@@ -81,19 +78,42 @@ body, html {
     opacity: 1 !important;
 }
 
-/* 6. 功能组件与按钮 */
+.dark-mode h2, .dark-mode h3 { color: var(--primary-color) !important; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.1); border-radius: 10px; }
+.dark-mode ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15) !important; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-color) !important; }
+
+#history-content { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.1) transparent; }
+.dark-mode #history-content { scrollbar-color: rgba(255,255,255,0.15) transparent !important; }
+
 #theme-toggle {
-    position: fixed !important; top: 25px !important; right: 25px !important; left: auto !important; 
-    width: 48px; height: 48px; border-radius: 14px; background: var(--glass-bg);
-    z-index: 2147483647 !important; display: flex; align-items: center; justify-content: center;
+    position: fixed !important; top: 25px !important; 
+    right: 25px !important; left: auto !important; 
+    width: 48px; height: 48px; border-radius: 14px;
+    background: var(--glass-bg); z-index: 2147483647 !important;
+    display: flex; align-items: center; justify-content: center;
     cursor: pointer; box-shadow: var(--shadow);
+}
+
+.email-pop {
+    position: absolute; padding: 10px 18px; font-size: 0.9em; font-weight: bold;
+    color: var(--text-main); background: var(--glass-bg); backdrop-filter: blur(10px);
+    border-radius: 12px; box-shadow: var(--shadow); z-index: 30000;
+    animation: popIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 .avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; transition: 0.5s; cursor: pointer; }
 .nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 15px; margin: 5px 0; border-radius: 12px; text-decoration: none; color: var(--text-main); background: rgba(255,255,255,0.1); font-weight: 600; }
 .dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; color: #ffffff !important; }
 
-/* 7. 动画与响应式 */
+div.highlighter-rouge, .highlight, pre, code {
+    background-color: var(--code-bg) !important; color: var(--text-main) !important; border-radius: 12px; border: 1px solid var(--glass-border);
+}
+.dark-mode pre, .dark-mode code { background-color: #1a1a1a !important; color: #ffffff !important; }
+
 @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes slideInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 

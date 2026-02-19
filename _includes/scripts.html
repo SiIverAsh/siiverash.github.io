@@ -1,14 +1,11 @@
 <script>
-    // 1. 时钟逻辑
     function updateClock() {
         const now = new Date();
         const timeEl = document.getElementById('clock-time');
         const dateEl = document.getElementById('clock-date');
         const lunarEl = document.getElementById('clock-lunar');
-
         if(timeEl) timeEl.textContent = now.toLocaleTimeString('zh-CN', { hour12: false });
         if(dateEl) dateEl.textContent = now.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
-        
         try {
             if(lunarEl) {
                 const lunar = new Intl.DateTimeFormat('zh-u-ca-chinese', {day:'numeric', month:'long'}).format(now);
@@ -18,7 +15,6 @@
     }
     setInterval(updateClock, 1000); updateClock();
 
-    // 2. 历史记录加载
     function loadHistory() {
         const container = document.getElementById('history-content');
         if (container && window.siteData && window.siteData.history) {
@@ -29,65 +25,17 @@
     }
     window.addEventListener('DOMContentLoaded', loadHistory);
 
-    // 4. 动漫页面专属逻辑
-    function loadAnimeExtras() {
-        const cvName = document.getElementById('cv-name');
-        if (cvName && window.siteData && window.siteData.cv_recommend) {
-            const cv = window.siteData.cv_recommend;
-            cvName.textContent = cv.name;
-            document.getElementById('cv-agency').textContent = "🏢 " + cv.agency;
-            document.getElementById('cv-hometown').textContent = "📍 " + cv.hometown;
-            document.getElementById('cv-works').textContent = "代表作: " + cv.works;
-            document.getElementById('cv-intro').textContent = cv.intro;
-            const wikiLink = document.getElementById('cv-wiki-link');
-            if (wikiLink) {
-                wikiLink.href = "https://zh.moegirl.org.cn/" + encodeURIComponent(cv.name);
-            }
-        }
-
-        // 识别动漫博文详情页的标签
-        const wikiTitle = document.getElementById('wiki-title');
-        const tagSource = document.getElementById('data-post-tags');
-        if (wikiTitle && tagSource) {
-            // 获取文章真实的标签列表
-            const postTags = tagSource.textContent.split(',').map(t => t.trim());
-            // 排除掉非动漫名的通用标签 (大幅扩充过滤词库)
-            const ignoreTags = ['动漫', '恋爱番', '成长', '二次元', '感想', '吹水', '新番', '记录', '吐槽', '经典', '神作', '补番'];
-            // 找到第一个不在过滤列表中的标签，即视为动漫名
-            const animeTitle = postTags.find(tag => !ignoreTags.includes(tag));
-            
-            if (animeTitle) {
-                wikiTitle.textContent = animeTitle;
-                document.getElementById('wiki-desc').textContent = "点击下方按钮可直接在 Bangumi (番组计划) 中查看关于《" + animeTitle + "》的详细资料、评分及讨论。";
-                document.getElementById('wiki-bgm-link').href = "https://bgm.tv/subject_search/" + encodeURIComponent(animeTitle) + "?cat=2";
-            } else {
-                // 如果没找到合适标签，卡片保持隐藏或使用标题降级
-                const infoCard = document.querySelector('.anime-info-card');
-                if (infoCard) infoCard.style.display = 'none';
-            }
-        }
-    }
-    window.addEventListener('DOMContentLoaded', loadAnimeExtras);
-
-    // 5. 邮箱显示逻辑
     function showEmail(event, email) {
-        // 防止点击穿透
         event.stopPropagation();
-        
-        // 移除已存在的提示框
         const oldTip = document.getElementById('email-tooltip');
         if (oldTip) oldTip.remove();
-
         const tip = document.createElement('div');
         tip.id = 'email-tooltip';
         tip.className = 'glass-card email-pop';
         tip.textContent = email;
         tip.style.left = (event.pageX + 10) + 'px';
         tip.style.top = (event.pageY + 10) + 'px';
-        
         document.body.appendChild(tip);
-
-        // 点击其他地方关闭
         const closeTip = () => {
             tip.classList.add('fade-out');
             setTimeout(() => tip.remove(), 300);
@@ -110,44 +58,52 @@
         });
     }
 
-    // 6. 深色模式切换逻辑
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-    const icon = themeToggle.querySelector('i');
+    const icon = themeToggle ? themeToggle.querySelector('i') : null;
 
     function syncCodeBlocks() {
         const isDark = body.classList.contains('dark-mode');
         const bg = isDark ? '#1e1e1e' : '#f6f8fa';
-        const color = isDark ? '#f5f5f5' : '#333';
+        const color = isDark ? '#ffffff' : '#111111';
         document.querySelectorAll('pre, .highlight, code').forEach(el => {
             el.style.setProperty('background-color', bg, 'important');
             el.style.setProperty('color', color, 'important');
         });
     }
 
-    // 初始化：检查存储或系统偏好
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
     if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
         body.classList.add('dark-mode');
-        icon.classList.replace('fa-sun', 'fa-moon');
+        if(icon) icon.classList.replace('fa-sun', 'fa-moon');
     }
-    
     setTimeout(syncCodeBlocks, 100);
 
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        const isDark = body.classList.contains('dark-mode');
-        
-        // 更新图标
-        if (isDark) {
-            icon.classList.replace('fa-sun', 'fa-moon');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            icon.classList.replace('fa-moon', 'fa-sun');
-            localStorage.setItem('theme', 'light');
+    if(themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            if(icon) {
+                if (isDark) { icon.classList.replace('fa-sun', 'fa-moon'); localStorage.setItem('theme', 'dark'); }
+                else { icon.classList.replace('fa-moon', 'fa-sun'); localStorage.setItem('theme', 'light'); }
+            }
+            syncCodeBlocks();
+        });
+    }
+
+    function loadAnimeExtras() {
+        const cvName = document.getElementById('cv-name');
+        if (cvName && window.siteData && window.siteData.cv_recommend) {
+            const cv = window.siteData.cv_recommend;
+            cvName.textContent = cv.name;
+            document.getElementById('cv-agency').textContent = "🏢 " + cv.agency;
+            document.getElementById('cv-hometown').textContent = "📍 " + cv.hometown;
+            document.getElementById('cv-works').textContent = "代表作: " + cv.works;
+            document.getElementById('cv-intro').textContent = cv.intro;
+            const wikiLink = document.getElementById('cv-wiki-link');
+            if (wikiLink) { wikiLink.href = "https://zh.moegirl.org.cn/" + encodeURIComponent(cv.name); }
         }
-        syncCodeBlocks(); // 切换时同步
-    });
+    }
+    window.addEventListener('DOMContentLoaded', loadAnimeExtras);
 </script>
