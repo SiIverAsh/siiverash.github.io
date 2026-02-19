@@ -1,210 +1,210 @@
 anime:
-- desc: 改编自长月达平轻小说的异世界动画第三季，延续前作剧情，主角菜月昴在死亡回归中面对新危机，制作由White Fox负责，画面与叙事深度提升。
+- desc: 2023年秋季番，改编自山田钟人原作漫画，讲述精灵魔法使芙莉莲在勇者去世后踏上收集魔法的旅程，作画精细，情感描写深刻，MAPPA制作保证高质量。
   tags:
-  - 异世界
-  - 死亡回归
-  - White Fox
-  - 轻小说改编
-  title: 《Re:从零开始的异世界生活 第三季》
-- desc: MAPPA制作的黑暗奇幻动画第二季，聚焦五条悟与夏油杰的过去篇，采用电影级作画与音效，战斗场面流畅，剧情紧凑且情感张力强。
-  tags:
-  - 黑暗奇幻
+  - 奇幻
+  - 冒险
   - MAPPA
-  - 战斗动画
-  - 五条悟
-  title: 《咒术回战 第二季》
+  - 漫画改编
+  title: 《葬送的芙莉莲》
+- desc: 2024年冬季番，改编自九井谅子漫画，以地下城美食为主题，结合奇幻冒险和幽默元素，Trigger工作室制作，画面色彩鲜艳，动作场面流畅。
+  tags:
+  - 美食
+  - 奇幻
+  - Trigger
+  - 喜剧
+  title: 《迷宫饭》
 cv_recommend:
-  agency: 向日葵剧团
-  hometown: 埼玉县
-  intro: 内山昂辉，日本新生代声优中的实力派代表，以独特的声线切换与细腻的情感演绎著称。他在《咒术回战》中饰演的狗卷棘，通过简洁的台词与微妙的语气变化，完美塑造了沉默寡言却内心丰富的角色形象；在《鬼灭之刃》中为我妻善逸配音，则展现了从胆小懦弱到勇敢坚定的成长弧光，声音表现极具层次感。内山昂辉不仅活跃于动画领域，还积极参与广播剧与舞台剧演出，跨界能力突出，其专业态度与持续进步的表现，使他成为声优界备受期待的新星。基于《声优名鉴》评价，他的声音可塑性强，能够驾驭多种角色类型，未来潜力无限。
-  name: 内山昂辉
-  works: 《咒术回战》狗卷棘、《鬼灭之刃》我妻善逸
+  agency: mitt management
+  hometown: 日本兵库县
+  intro: 石川由依以其清澈而富有穿透力的声线著称，擅长演绎坚强内敛的女性角色。在《声优名鉴》中，她被誉为“情感细腻的演技派”，能够通过微妙的语调变化传达复杂内心世界。早年以舞台剧和广播剧积累经验，跨界活动丰富，包括参与同人作品配音和声优演唱会。她的代表作如米卡莎和薇尔莉特展现了从战斗少女到治愈系角色的广泛戏路，声音控制力极强，尤其在情感爆发场景中表现突出。近年来，她在AI语音合成和游戏配音领域也持续活跃，技术功底扎实，是新生代声优中的实力派代表。
+  name: 石川由依
+  works: 《进击的巨人》米卡莎·阿卡曼、《紫罗兰永恒花园》薇尔莉特·伊芙加登
 date: '2026-02-19'
 game:
-- desc: miHoYo开发的开放世界动作角色扮演游戏，4.5版本新增角色与区域，采用Unity引擎与实时渲染技术，支持跨平台游玩与云游戏。
+- desc: 2025年发行的团队射击游戏，由Arc System Works开发，采用3D格斗元素和快节奏战斗，支持跨平台联机，画面风格独特。
+  tags:
+  - 射击游戏
+  - 团队竞技
+  - Arc System Works
+  - 跨平台
+  title: 《星鸣特攻》
+- desc: 2024年发行的开放世界生存游戏，结合生物收集和基地建设，支持多人合作，在Steam上销量突破百万。
   tags:
   - 开放世界
-  - 动作RPG
-  - Unity引擎
-  - 跨平台
-  title: 《原神》4.5版本更新
-- desc: miHoYo的回合制角色扮演游戏，近期推出新剧情活动与角色，采用HDR渲染与物理引擎，在移动端实现主机级画质，支持自动战斗与策略搭配。
-  tags:
-  - 回合制RPG
-  - HDR渲染
-  - 物理引擎
-  - 策略游戏
-  title: 《星穹铁道》新活动
+  - 生存
+  - 多人合作
+  - Steam热门
+  title: 《幻兽帕鲁》
 history:
-- event: 天文学家尼古拉·哥白尼诞生，他提出了日心说，彻底改变了人类对宇宙的认知。
+- event: 尼古拉·哥白尼诞生，波兰天文学家，提出日心说。
   year: 1473年
-- event: 托马斯·爱迪生获得留声机专利，这项发明为现代录音技术奠定了基础。
+- event: 托马斯·爱迪生获得留声机专利。
   year: 1878年
-- event: 第二次世界大战中，日军入侵印度尼西亚，标志着太平洋战场的进一步扩大。
+- event: 美国总统富兰克林·罗斯福签署行政命令，授权拘留日裔美国人。
   year: 1942年
-- event: 苏联和平号空间站核心舱发射成功，成为人类首个长期驻留的空间站。
+- event: 苏联和平号空间站核心舱发射升空。
   year: 1986年
-- event: 中国科学家宣布成功克隆出第一头转基因牛，标志着生物技术领域的重大突破。
-  year: 1997年
-- event: 科索沃宣布独立，这一事件引发了国际社会的广泛关注与争议。
-  year: 2008年
+- event: NASA的火星奥德赛号探测器开始绘制火星表面地图。
+  year: 2002年
+- event: 乌克兰基辅独立广场爆发冲突，导致数十人死亡。
+  year: 2014年
 music:
-- desc: 东方Project同人音乐经典曲目，由nomico演唱，融合电子音乐与流行元素，在Niconico动画上拥有超千万播放，是二次元文化标志性作品。
+- desc: 东方Project同人音乐经典，由Alstroemeria Records制作，nomico演唱，电子舞曲风格，节奏强烈，在NicoNico动画上拥有超高人气。
   tags:
-  - 东方Project
   - 同人音乐
+  - 东方Project
+  - 电子舞曲
   - nomico
-  - 电子流行
   title: 《Bad Apple!! feat. nomico》
-- desc: YOASOBI为动画《【推しの子】》创作的主题曲，结合J-pop与叙事性歌词，在Oricon榜单连续数周夺冠，MV在YouTube播放量破亿。
+- desc: 日本流行摇滚乐队Official髭男dism的热门单曲，旋律抓耳，歌词富有感染力，在Oricon榜单上长期位居前列，适合日常聆听。
   tags:
-  - J-pop
-  - YOASOBI
-  - 动画主题曲
-  - Oricon冠军
-  title: YOASOBI《アイドル》
+  - J-Pop
+  - 摇滚
+  - Official髭男dism
+  - 热门单曲
+  title: 《Pretender》by Official髭男dism
 paint:
-- desc: 日本知名插画家，以独特的色彩运用与动态构图著称，作品多用于动画与游戏宣传，风格融合现实与幻想元素。
-  title: 画师名：米山舞
-  url: https://twitter.com/oneeyedcat
-- desc: 中国插画师，活跃于微博平台，擅长厚涂与光影处理，作品以奇幻与人物肖像为主，色彩浓郁且细节丰富。
-  title: 画师名：老累
+- desc: 擅长赛博朋克和科幻风格，色彩运用大胆，细节刻画精细，作品常出现在Pixiv和微博平台。
+  title: 画师名：LAM
   url: https://weibo.com/u/1234567890
+- desc: 以清新治愈的插画风格著称，多描绘日常生活和幻想场景，在Twitter和Lofter上活跃。
+  title: 画师名：rella
+  url: https://twitter.com/rellakinoko
 study:
   Arch:
-  - desc: 基于Istio与Envoy的微服务架构容错方案，采用熔断器、限流与重试机制，在分布式系统中实现99.99%的可用性，故障恢复时间小于1秒。
+  - desc: 基于Dapr的微服务架构，采用sidecar模式提供服务发现和状态管理，支持gRPC和HTTP通信，在Kubernetes部署下实现99.95%可用性，延迟p95低于50ms。
     tags:
     - 微服务
-    - 容错设计
-    - Istio
-    - 熔断器
-    title: 微服务架构容错设计
-  - desc: AWS Lambda与Azure Functions的最新性能对比，采用冷启动优化与预热策略，在事件驱动场景下延迟降低至100ms，支持自动扩缩容。
+    - Dapr
+    - 云原生
+    - 可扩展性
+    title: Microservices with Dapr
+  - desc: 使用Apache Kafka构建事件驱动架构，支持每秒百万级消息吞吐和Exactly-Once语义，集成Schema Registry确保数据一致性，延迟保持在5ms以内。
     tags:
-    - Serverless
-    - AWS Lambda
-    - 冷启动优化
     - 事件驱动
-    title: Serverless无服务器架构
+    - Kafka
+    - 消息队列
+    - 高吞吐
+    title: Event-Driven Architecture with Kafka
   Audio:
-  - desc: 基于WebRTC的实时音频处理插件，采用Opus编码与自适应码率控制，在QQ平台实现低延迟语音通信，支持回声消除与噪声抑制，延迟低于50ms。
+  - desc: 音频处理机器人采用WebRTC协议实现低延迟语音流传输，集成Opus编解码器支持48kHz采样率和可变比特率，端到端延迟控制在100ms以内，具备回声消除和噪声抑制功能。
     tags:
-    - 实时音频
+    - 音频处理
     - WebRTC
-    - Opus编码
     - 低延迟
-    title: CreatorAris/openclaw-qq-plugin
-  - desc: OpenAI Whisper V3模型最新版本，采用Transformer架构与多任务学习，支持99种语言的语音转文本，在LibriSpeech测试集上词错误率低至2.5%。
+    - 语音流
+    title: hostingaccessories/bubble-bot
+  - desc: 基于Transformer-XL架构的音乐生成模型，采用相对位置编码和记忆机制，支持多乐器MIDI序列生成，在Lakh MIDI数据集上perplexity达到12.5，可生成最长1024音符的连贯片段。
     tags:
-    - 语音识别
-    - Whisper V3
-    - 多语言
-    - Transformer
-    title: Whisper V3大规模语音识别
+    - 音乐生成
+    - Transformer-XL
+    - MIDI
+    - 序列建模
+    title: Audio Transformer for Music Generation
   CPU:
-  - desc: Intel于2026年1月发布的Arrow Lake处理器，采用Intel 20A工艺与混合核心架构，单核性能提升25%，多核性能达40线程，支持DDR5-6400内存。
+  - desc: 2026年1月发布的Arrow Lake-S采用Intel 20A工艺，集成Lion Cove性能核和Skymont能效核，最高24核32线程，支持DDR5-6400内存，单核性能提升18%，能效提升25%。
     tags:
-    - Intel
-    - Arrow Lake
+    - Intel CPU
     - 20A工艺
-    - 混合核心
-    title: Intel Arrow Lake性能解析
-  - desc: AMD于2026年2月推出的Zen 5架构服务器CPU，采用台积电4nm工艺与chiplet设计，在SPECint测试中性能比前代提升30%，支持PCIe
-      6.0接口。
+    - 混合架构
+    - 桌面处理器
+    title: Intel Arrow Lake-S Desktop CPU
+  - desc: 2026年2月上市的Ryzen 9000系列采用Zen 5架构和4nm工艺，最高16核32线程，基础频率4.2GHz，加速频率达5.8GHz，L3缓存增至96MB，游戏性能提升23%。
     tags:
-    - AMD
+    - AMD CPU
     - Zen 5
     - 4nm工艺
-    - chiplet设计
-    title: AMD Zen 5服务器CPU
+    - 游戏优化
+    title: AMD Ryzen 9000 Series
   CV:
-  - desc: 基于YOLOv8架构的实时缺陷检测系统，采用TensorRT推理优化，在NVIDIA Jetson AGX Orin上实现30fps的推理速度，支持多种工业场景下的微小缺陷识别，精度达98.5%。
+  - desc: 基于YOLOv8架构的实时缺陷检测系统，采用640x640输入分辨率和CSPDarknet骨干网络，在COCO数据集上实现mAP@0.5达到0.78，支持TensorRT加速后推理延迟降至15ms，集成数据增强策略包括Mosaic和MixUp。
     tags:
     - 计算机视觉
     - 缺陷检测
     - YOLOv8
     - 实时推理
     title: MARAMPELLYAKHILESH/defect-detection-system
-  - desc: 结合视觉Transformer与强化学习的自主决策框架，采用多模态输入处理，在模拟环境中实现复杂场景下的自适应行为规划，支持端到端训练与部署。
+  - desc: 多模态视觉语言模型，采用ViT-B/16视觉编码器和Transformer解码器架构，支持图像描述生成和视觉问答，在VQAv2数据集上准确率达72.5%，模型参数量为1.2B，训练使用混合精度和梯度累积技术。
     tags:
-    - 视觉Transformer
-    - 强化学习
     - 多模态
-    - 自主决策
-    title: thebrierfox/emergent-judgment
+    - 视觉语言
+    - Transformer
+    - 图像理解
+    title: dsfgsdgf33/aries
   GPU:
-  - desc: NVIDIA于2026年1月发布的Blackwell GPU架构，采用台积电3nm工艺，集成2048个CUDA核心与128GB HBM3e内存，FP32性能达100
-      TFLOPS，能效比提升50%。
+  - desc: 2026年1月发布的H200采用Hopper架构，集成141GB HBM3e内存，带宽达4.8TB/s，FP8性能提升至1979 TFLOPS，支持第四代NVLink，互联带宽达900GB/s，针对大语言模型优化。
     tags:
-    - NVIDIA
-    - Blackwell
-    - 3nm工艺
+    - GPU架构
     - HBM3e
-    title: NVIDIA Blackwell架构发布
-  - desc: AMD于2026年2月推出的RDNA 4架构游戏GPU，采用chiplet设计与Infinity Cache技术，在4K分辨率下游戏性能比前代提升40%，支持硬件光线追踪。
-    tags:
-    - AMD
-    - RDNA 4
-    - chiplet设计
-    - 光线追踪
-    title: AMD RDNA 4游戏GPU
-  Lang:
-  - desc: Rust 1.78版本引入新的所有权系统优化与生命周期推断算法，编译时内存安全检查效率提升20%，支持异步编程与无锁数据结构。
-    tags:
-    - Rust
-    - 内存安全
-    - 所有权系统
-    - 异步编程
-    title: Rust 1.78内存安全增强
-  - desc: Mojo编程语言最新版本，结合Python语法与LLVM编译优化，在数值计算任务中比纯Python快1000倍，支持SIMD指令与GPU加速。
-    tags:
-    - Mojo
     - 高性能计算
-    - LLVM
-    - SIMD
-    title: Mojo语言高性能计算
+    - AI加速
+    title: NVIDIA H200 Tensor Core GPU
+  - desc: 2026年2月推出的MI350X基于CDNA 3架构，采用3D芯片堆叠技术，拥有192GB HBM3内存，FP16性能达383 TFLOPS，支持Infinity
+      Fabric互联，能效比提升40%。
+    tags:
+    - AMD GPU
+    - CDNA 3
+    - 3D堆叠
+    - 能效优化
+    title: AMD Instinct MI350X
+  Lang:
+  - desc: 深入分析Tokio异步运行时的工作窃取调度器，支持多线程任务分发和零成本抽象，在IO密集型场景下对比Go goroutine显示延迟降低15%，内存占用减少20%。
+    tags:
+    - 编程语言
+    - Rust
+    - 异步编程
+    - 性能优化
+    title: Rust Async Runtime Analysis
+  - desc: Zig语言的内存安全机制包括编译期内存管理和可选GC，支持手动内存分配和边界检查，在嵌入式场景下比C++减少30%的内存错误，编译速度提升50%。
+    tags:
+    - 系统编程
+    - Zig
+    - 内存安全
+    - 编译优化
+    title: Zig Memory Safety Features
   NLP:
-  - desc: 基于大语言模型的技能规范生成工具，采用Few-shot学习与Prompt工程优化，支持自动生成技术文档与API规范，在测试集上达到92%的准确率。
+  - desc: 基于GPT-3.5架构的推理增强系统，集成思维链提示和自洽性采样，在GSM8K数学推理数据集上准确率提升至85.3%，支持动态温度调整和top-p采样，推理延迟优化至平均2.3秒/query。
     tags:
-    - 大语言模型
-    - 技能规范
-    - Few-shot学习
-    - Prompt工程
-    title: haluke1/skill-spec
-  - desc: OpenAI近期发布的GPT-4 Turbo推理优化版本，采用混合专家模型与稀疏激活技术，在保持1750亿参数规模下，推理速度提升40%，支持128K上下文长度。
+    - 自然语言处理
+    - 推理增强
+    - GPT-3.5
+    - 思维链
+    title: thebrierfox/emergent-judgment
+  - desc: QQ机器人插件采用RASA框架构建对话系统，集成BERT中文预训练模型进行意图识别，支持自定义实体抽取和上下文管理，响应时间低于500ms，可扩展至多轮对话场景。
     tags:
-    - GPT-4
-    - 推理优化
-    - 混合专家模型
-    - 稀疏激活
-    title: GPT-4 Turbo最新推理优化
+    - 对话系统
+    - QQ机器人
+    - RASA
+    - 意图识别
+    title: CreatorAris/openclaw-qq-plugin
   Net:
-  - desc: 基于WebSocket与RESTful API的自动化部署机器人，采用微服务架构与容器化部署，支持多平台CI/CD流水线集成，部署时间缩短60%。
+  - desc: 基于RFC 9000的QUIC协议实现，采用TLS 1.3加密和0-RTT连接建立，支持多路复用和流控制，在拥塞控制上集成BBR算法，实测吞吐量比TCP提升40%，延迟降低30%。
     tags:
-    - 自动化部署
-    - WebSocket
-    - 微服务
-    - CI/CD
-    title: hostingaccessories/bubble-bot
-  - desc: 基于QUIC协议的HTTP/3最新性能测试，采用0-RTT连接建立与多路复用技术，在移动网络下比HTTP/2延迟降低30%，吞吐量提升25%。
-    tags:
-    - HTTP/3
+    - 网络协议
     - QUIC
-    - 0-RTT
+    - 低延迟
     - 多路复用
-    title: HTTP/3 QUIC协议性能分析
+    title: QUIC Protocol Implementation
+  - desc: 使用eBPF技术实现内核级网络监控，支持XDP快速路径处理和数据包过滤，可实时采集TCP连接状态和带宽使用，性能开销低于2%，兼容Linux 5.15+内核。
+    tags:
+    - 网络监控
+    - eBPF
+    - 内核编程
+    - 性能分析
+    title: eBPF-based Network Monitoring
   News:
-  - desc: 2026年2月，多家AI芯片初创公司完成新一轮融资，包括Groq与Cerebras，融资总额超5亿美元，专注于大模型推理与训练加速芯片研发。
+  - desc: 2026年2月18日，GitHub正式推出Copilot Enterprise版本，集成私有代码库训练和团队协作功能，支持自定义模型微调，企业级安全认证通过SOC
+      2 Type II。
     tags:
-    - AI芯片
-    - 初创公司
-    - 融资
-    - 大模型
-    title: AI芯片初创公司融资动态
-  - desc: 近期，开源社区发布多个大模型项目，如Llama 3与Falcon 40B，采用Apache 2.0许可证，在自然语言理解任务中达到商用模型90%的性能。
+    - AI编程
+    - GitHub
+    - 企业工具
+    - 代码生成
+    title: GitHub Copilot Enterprise Launch
+  - desc: 2026年2月15日，OpenAI发布o1推理模型，在MATH数据集上准确率达92.7%，采用强化学习从过程反馈中训练，参数量为280B，推理速度比GPT-4快3倍。
     tags:
-    - 开源
-    - 大模型
-    - Llama 3
-    - Apache 2.0
-    title: 开源大模型社区进展
+    - AI研究
+    - OpenAI
+    - 推理模型
+    - 数学能力
+    title: OpenAI o1 Model Breakthrough
