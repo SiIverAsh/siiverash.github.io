@@ -1,5 +1,6 @@
 ---
 ---
+@charset "UTF-8";
 
 /* 1. 变量定义 */
 :root { 
@@ -22,7 +23,7 @@
     --code-bg: #1e1e1e;
 }
 
-/* 2. 全局基础与背景锁定 */
+/* 2. 全局基础 */
 body, html { 
     margin: 0; padding: 0; min-height: 100vh; 
     font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
@@ -34,22 +35,12 @@ body, html {
 
 .dark-mode body, .dark-mode html { background-color: #080808 !important; }
 
-/* 极致修正：背景图层级与显示 */
+/* 背景图强制固定 */
 .background { 
-    position: fixed !important; 
-    top: 0 !important; 
-    left: 0 !important; 
-    width: 100% !important; 
-    height: 100% !important; 
-    min-height: 100vh !important;
-    min-width: 100vw !important;
-    background-image: url("https://personalweb-1340173525.cos.ap-shanghai.myqcloud.com/bg.png") !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-    z-index: -1 !important; 
-    display: block !important;
+    position: fixed !important; top: 0 !important; left: 0 !important; 
+    width: 100% !important; height: 100% !important; 
+    background: url('https://personalweb-1340173525.cos.ap-shanghai.myqcloud.com/bg.png') no-repeat center center fixed !important; 
+    background-size: cover !important; z-index: -1 !important; 
 }
 
 /* 3. 布局结构 */
@@ -78,7 +69,7 @@ body, html {
 .extra-box { padding: 20px; position: relative; }
 .extra-title { font-size: 0.95em; font-weight: bold; color: var(--primary-color); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
 
-/* 5. 搜索框美化 (解决不一致) */
+/* 5. 搜索与时钟 */
 .search-wrapper { position: relative; z-index: 1001; }
 #search-input { 
     width: 100%; padding: 12px 15px; border-radius: 12px; 
@@ -87,7 +78,6 @@ body, html {
     box-sizing: border-box; font-size: 0.9em; transition: 0.3s;
 }
 .dark-mode #search-input { background: rgba(0,0,0,0.3) !important; color: white !important; }
-#search-input:focus { border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2); }
 
 #results-container { 
     position: absolute; top: 100%; left: 0; width: 100%; 
@@ -97,24 +87,22 @@ body, html {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2); display: none; 
     border: 1px solid var(--glass-border); 
 }
-#results-container li { padding: 10px 15px; border-bottom: 1px solid var(--glass-border); }
-#results-container a { text-decoration: none; color: var(--text-main); font-size: 0.9em; display: block; }
-#results-container a:hover { color: var(--primary-color); }
 
-/* 6. 时钟样式美化 (解决不一致) */
 .clock-box { text-align: center; }
 #clock-time { font-size: 2.2em; font-weight: bold; color: var(--primary-color); font-family: 'Courier New', monospace; letter-spacing: 2px; }
-#clock-date { font-size: 0.9em; color: var(--text-muted); margin-top: 8px; }
-#clock-lunar { font-size: 0.85em; color: var(--primary-color); margin-top: 5px; font-weight: bold; }
 
-/* 7. 博客内容优化 */
+/* 6. 博客内容优化 */
 .content-card { padding: 40px; min-height: 400px; max-width: 850px; margin: 0 auto; overflow-wrap: break-word; font-size: 1.05em; line-height: 1.75; }
 .dark-mode .content-card, .dark-mode .content-card p, .dark-mode .content-card li, .dark-mode .content-card h1, .dark-mode .content-card h2, .dark-mode .content-card h3, .dark-mode .extra-sidebar, .dark-mode .extra-box, .dark-mode .history-item, .dark-mode #cv-content p, .dark-mode .sidebar h2, .dark-mode .post-preview-card h3 {
-    color: #fafafa !important; font-weight: 450;
+    color: #ffffff !important; /* 强制纯白 */
+    font-weight: 500 !important; /* 进一步加粗，防止发灰 */
+    text-shadow: 0 0 1px rgba(255,255,255,0.2); /* 微弱光晕增强亮度感 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .dark-mode .post-preview-card p, .dark-mode #clock-date, .dark-mode .history-year { color: var(--text-muted) !important; }
 
-/* 8. 代码块彻底锁死 */
+/* 7. 代码块锁死 */
 div.highlighter-rouge, div.highlighter-rouge div.highlight, div.highlighter-rouge pre.highlight, .highlight pre, pre, code {
     background-color: var(--code-bg) !important; color: var(--text-main) !important; border: 1px solid var(--glass-border); border-radius: 12px;
 }
@@ -122,7 +110,7 @@ div.highlighter-rouge, div.highlighter-rouge div.highlight, div.highlighter-roug
     background-color: #1e1e1e !important; color: #eeeeee !important;
 }
 
-/* 9. 导航与社交 */
+/* 8. 导航与社交 */
 .avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; transition: transform 0.5s; cursor: pointer; }
 .avatar:hover { transform: rotate(360deg) scale(1.1); }
 .social-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
@@ -133,18 +121,30 @@ div.highlighter-rouge, div.highlighter-rouge div.highlight, div.highlighter-roug
 .dark-mode .nav-item { color: #ffffff !important; background: rgba(255,255,255,0.05) !important; }
 .nav-item:hover { background: var(--primary-color) !important; color: white !important; transform: translateX(5px); }
 
-/* 10. 主题切换按钮 */
+/* 9. 主题切换按钮 - 强制锁定右上角 */
 #theme-toggle {
-    position: fixed !important; top: 20px !important; right: 20px !important; left: unset !important;
-    width: 45px; height: 45px; border-radius: 12px; background: var(--glass-bg); backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border); box-shadow: var(--shadow); cursor: pointer; z-index: 10005 !important;
-    display: flex; align-items: center; justify-content: center; font-size: 1.2em; color: var(--primary-color);
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    left: auto !important; 
+    width: 45px; height: 45px;
+    border-radius: 12px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    z-index: 10005 !important;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2em;
+    color: var(--primary-color);
+    transition: transform 0.3s, background 0.3s;
 }
 
-/* 11. 动画与响应式 */
+/* 10. 响应式与动画 */
 @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes slideInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 1100px) { .wrapper { grid-template-columns: 240px 1fr; } .extra-sidebar { display: none; } }
-@media (max-width: 850px) { .wrapper { grid-template-columns: 1fr; padding: 20px 10px; } .sidebar { position: relative; top: 0; width: 100%; box-sizing: border-box; } }
+@media (max-width: 850px) { .wrapper { grid-template-columns: 1fr; padding: 20px 10px; } .sidebar { position: relative; top: 0; width: 100%; box-sizing: border-box; } #theme-toggle { top: 10px; right: 10px; } }
