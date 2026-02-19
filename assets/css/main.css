@@ -2,11 +2,10 @@
 ---
 @charset "UTF-8";
 
-/* 1. 变量定义 */
 :root { 
     --primary-color: #4a90e2; 
-    --text-main: #000000; 
-    --text-muted: #555555;
+    --text-main: #111111; 
+    --text-muted: #444444;
     --glass-bg: rgba(255, 255, 255, 0.85); 
     --glass-border: rgba(255, 255, 255, 0.4); 
     --shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.15); 
@@ -16,14 +15,13 @@
 
 .dark-mode {
     --text-main: #ffffff !important; 
-    --text-muted: #cccccc !important;
+    --text-muted: #dddddd !important;
     --glass-bg: rgba(15, 15, 20, 0.97) !important; 
     --glass-border: rgba(255, 255, 255, 0.2) !important;
     --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.9) !important;
     --code-bg: #1a1a1a !important;
 }
 
-/* 2. 全局基础 */
 body, html { 
     margin: 0; padding: 0; min-height: 100vh; 
     font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
@@ -42,10 +40,9 @@ body, html {
     background-size: cover !important; z-index: -1 !important; 
 }
 
-/* 3. 布局结构 */
 .wrapper { 
     max-width: 1400px; margin: 0 auto; 
-    display: grid; grid-template-columns: 260px 1fr 280px; 
+    display: grid; grid-template-columns: 260px minmax(0, 1fr) 280px; 
     gap: 20px; padding: 40px 20px; 
     min-height: calc(100vh - 80px); 
     align-items: start;
@@ -53,9 +50,8 @@ body, html {
 
 .main-content { animation: slideInUp 0.8s ease; min-width: 0; }
 
-/* 4. 侧边栏与卡片 */
-.sidebar { position: sticky; top: 40px; width: 260px; height: fit-content; padding: 30px 20px; text-align: center; }
-.extra-sidebar { position: sticky; top: 40px; width: 280px; height: fit-content; display: flex; flex-direction: column; gap: 20px; align-self: start; }
+.sidebar { position: sticky; top: 40px; width: 260px; height: fit-content; padding: 30px 20px; text-align: center; box-sizing: border-box; }
+.extra-sidebar { position: sticky; top: 40px; width: 280px; height: fit-content; display: flex; flex-direction: column; gap: 20px; align-self: start; box-sizing: border-box; }
 
 .glass-card { 
     background: var(--glass-bg) !important; 
@@ -65,60 +61,35 @@ body, html {
     box-shadow: var(--shadow); 
 }
 
-/* 5. 极致亮度锁定 (核心修复点) */
-.dark-mode .content-card, 
-.dark-mode .post-content,
-.dark-mode .post-content *,
-.dark-mode .extra-sidebar,
-.dark-mode .extra-sidebar *,
-.dark-mode .post-preview-card,
-.dark-mode .post-preview-card *,
-.dark-mode .recommend-box,
-.dark-mode .recommend-box *,
-.dark-mode #history-content,
-.dark-mode #cv-content {
+.content-card { padding: 40px; min-height: 400px; width: 100%; box-sizing: border-box; overflow-wrap: break-word; font-size: 1.1em; line-height: 1.8; }
+.extra-box { padding: 20px; position: relative; width: 100%; box-sizing: border-box; }
+.extra-title { font-size: 0.95em; font-weight: bold; color: var(--primary-color) !important; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+
+.dark-mode .content-card, .dark-mode .post-content, .dark-mode .post-content *,
+.dark-mode .extra-sidebar, .dark-mode .extra-sidebar *,
+.dark-mode .post-preview-card, .dark-mode .post-preview-card *,
+.dark-mode .recommend-box, .dark-mode .recommend-box *,
+.dark-mode #history-content, .dark-mode .history-item, .dark-mode #cv-content, .dark-mode #cv-content * {
     color: #ffffff !important;
     opacity: 1 !important;
-    text-shadow: 0 0 1px rgba(255,255,255,0.1) !important;
 }
 
-/* 局部例外：保持链接和主题色 */
-.dark-mode h2, .dark-mode h3, .dark-mode .extra-title { color: var(--primary-color) !important; }
-.dark-mode .text-muted, .dark-mode .history-year, .dark-mode #clock-date { color: #bbbbbb !important; }
-
-/* 6. 代码块 */
 div.highlighter-rouge, .highlight, pre, code {
-    background-color: var(--code-bg) !important;
-    color: var(--text-main) !important;
-    border-radius: 12px;
-    border: 1px solid var(--glass-border);
+    background-color: var(--code-bg) !important; color: var(--text-main) !important; border-radius: 12px;
 }
 .dark-mode pre, .dark-mode code { background-color: #1a1a1a !important; color: #ffffff !important; }
 
-/* 7. 主题切换按钮 - 终极右侧锁死 */
 #theme-toggle {
-    position: fixed !important;
-    top: 25px !important;
-    right: 25px !important;
-    left: auto !important; 
-    margin-inline-start: auto !important;
-    width: 48px; height: 48px;
-    border-radius: 14px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow);
+    position: fixed !important; top: 25px !important; right: 25px !important; left: auto !important; 
+    width: 48px; height: 48px; border-radius: 14px; background: var(--glass-bg);
+    z-index: 2147483647 !important; display: flex; align-items: center; justify-content: center;
     cursor: pointer;
-    z-index: 2147483647 !important;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.3em;
-    color: var(--primary-color);
 }
 
-/* 8. 响应式与杂项 */
-.avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; transition: 0.5s; cursor: pointer; }
-.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 15px; margin: 5px 0; border-radius: 12px; text-decoration: none; color: var(--text-main); background: rgba(255,255,255,0.1); }
-.dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; color: #ffffff !important; }
+@media (max-width: 1100px) { .wrapper { grid-template-columns: 240px minmax(0, 1fr); } .extra-sidebar { display: none; } }
+@media (max-width: 850px) { .wrapper { grid-template-columns: minmax(0, 1fr); padding: 20px 10px; } .sidebar { position: relative; top: 0; width: 100%; } }
 
-@media (max-width: 1100px) { .wrapper { grid-template-columns: 240px 1fr; } .extra-sidebar { display: none; } }
-@media (max-width: 850px) { .wrapper { grid-template-columns: 1fr; } .sidebar { position: relative; top: 0; width: 100%; } }
+.avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; transition: 0.5s; cursor: pointer; }
+.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 15px; margin: 5px 0; border-radius: 12px; text-decoration: none; color: var(--text-main); background: rgba(255,255,255,0.1); font-weight: 600; }
+.dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; color: #ffffff !important; }
+#clock-time { font-size: 2.2em; font-weight: bold; color: var(--primary-color); font-family: 'Courier New', monospace; }
