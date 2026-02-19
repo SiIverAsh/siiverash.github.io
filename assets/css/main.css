@@ -1,16 +1,17 @@
 @charset "UTF-8";
 :root { 
     --primary-color: #7fb2d8; 
-    --text-main: #444; 
-    --glass-bg: rgba(255, 255, 255, 0.75); 
-    --glass-border: rgba(255, 255, 255, 0.3); 
-    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); 
+    --text-main: #e0e0e0; 
+    --glass-bg: rgba(30, 30, 35, 0.8); 
+    --glass-border: rgba(255, 255, 255, 0.1); 
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
 body, html { 
     margin: 0; padding: 0; min-height: 100vh; 
     font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
     color: var(--text-main); 
+    background-color: #121212;
 }
 
 .background { 
@@ -56,8 +57,8 @@ body, html {
 .nav-item { 
     display: flex; align-items: center; gap: 10px; 
     padding: 10px 15px; margin: 5px 0; border-radius: 12px; 
-    text-decoration: none; color: #555; transition: 0.3s; 
-    background: rgba(255,255,255,0.3); font-size: 0.9em; 
+    text-decoration: none; color: #bbb; transition: 0.3s; 
+    background: rgba(255,255,255,0.05); font-size: 0.9em; 
 }
 
 .nav-item i { width: 18px; text-align: center; color: #888; }
@@ -73,7 +74,8 @@ body, html {
     padding: 8px 15px;
     font-size: 0.9em;
     font-weight: bold;
-    color: #4a90e2;
+    color: #fff;
+    background: rgba(0,0,0,0.8);
     z-index: 10000;
     pointer-events: none;
     animation: popIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
@@ -100,7 +102,7 @@ body, html {
 .extra-box { padding: 20px; position: relative; }
 .search-box-card { z-index: 1000; }
 .extra-title { 
-    font-size: 0.9em; font-weight: bold; color: #4a90e2; 
+    font-size: 0.9em; font-weight: bold; color: #7fb2d8; 
     margin-bottom: 15px; display: flex; align-items: center; gap: 8px; 
 }
 
@@ -108,7 +110,7 @@ body, html {
 #search-input { 
     width: 100%; padding: 10px 15px; border-radius: 12px; 
     border: 1px solid var(--glass-border); 
-    background: rgba(255,255,255,0.5); outline: none; 
+    background: rgba(0,0,0,0.3); color: white; outline: none; 
     box-sizing: border-box; font-size: 0.9em; 
 }
 
