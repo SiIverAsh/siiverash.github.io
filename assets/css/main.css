@@ -12,7 +12,7 @@
 
 /* 深色模式强制覆盖 */
 .dark-mode {
-    --text-main: #ffffff !important; /* 深色模式文字强制纯白 */
+    --text-main: #ffffff !important; 
     --text-muted: #cccccc !important;
     --glass-bg: rgba(20, 20, 25, 0.96) !important; 
     --glass-border: rgba(255, 255, 255, 0.15) !important;
@@ -31,7 +31,6 @@ body, html {
 
 .dark-mode body, .dark-mode html { background-color: #050505 !important; }
 
-/* 极致锁定：彻底根除代码块白块 */
 div.highlighter-rouge, 
 div.highlighter-rouge div.highlight, 
 div.highlighter-rouge pre.highlight, 
@@ -72,7 +71,7 @@ body, html {
 
 .dark-mode body, .dark-mode html { background-color: #080808 !important; }
 
-/* 精准控制深色模式下的正文与侧栏文字 */
+
 .dark-mode .content-card,
 .dark-mode .content-card p,
 .dark-mode .content-card li,
@@ -83,18 +82,17 @@ body, html {
 .dark-mode .extra-box,
 .dark-mode .history-item,
 .dark-mode #cv-content p {
-    color: var(--text-main) !important;
+    color: #fafafa !important;
     opacity: 1 !important;
+    font-weight: 450; 
 }
 
-/* 次要文字调优 */
 .dark-mode .post-preview-card p,
 .dark-mode #clock-date,
 .dark-mode .history-year {
     color: var(--text-muted) !important;
 }
 
-/* 极致锁定：彻底根除代码块白块 */
 div.highlighter-rouge, 
 div.highlighter-rouge div.highlight, 
 div.highlighter-rouge pre.highlight, 
@@ -112,17 +110,17 @@ code {
 .dark-mode .highlight pre, 
 .dark-mode code {
     background-color: #1e1e1e !important;
-    color: #eeeeee !important; /* 代码块内文字稍微柔和一点 */
+    color: #eeeeee !important;
 }
 .dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; }
 .nav-item:hover { background: var(--primary-color) !important; color: white !important; transform: translateX(5px); }
 
-/* 主题切换按钮样式 - 极致定位锁定 */
+/* 主题切换按钮样式 */
 #theme-toggle {
     position: fixed !important;
     top: 20px !important;
     right: 20px !important;
-    left: auto !important; /* 强制取消左侧定位，解决 Edge 偏移问题 */
+    left: auto !important; 
     width: 45px;
     height: 45px;
     border-radius: 12px;
@@ -132,7 +130,7 @@ code {
     border: 1px solid var(--glass-border);
     box-shadow: var(--shadow);
     cursor: pointer;
-    z-index: 10001; /* 确保在最顶层 */
+    z-index: 10001;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,7 +170,15 @@ code {
 .dark-mode .social-links a { color: #ffffff !important; }
 
 .main-content { animation: slideInUp 0.8s ease; min-width: 0; }
-.content-card { padding: 40px; min-height: 400px; max-width: 850px; margin: 0 auto; overflow-wrap: break-word; }
+.content-card { 
+    padding: 40px; 
+    min-height: 400px; 
+    max-width: 850px; 
+    margin: 0 auto; 
+    overflow-wrap: break-word;
+    font-size: 1.05em;
+    line-height: 1.75; 
+}
 
 /* 搜索框深色适配 */
 #search-input { 
