@@ -17,6 +17,28 @@
     --code-bg: #1e1e1e;
 }
 
+/* 极致锁定：彻底根除代码块白块（针对 Chrome/夸克/Jekyll Rouge） */
+div.highlighter-rouge, 
+div.highlighter-rouge div.highlight, 
+div.highlighter-rouge pre.highlight, 
+.highlight pre, 
+pre, 
+code {
+    background-color: var(--code-bg) !important;
+    color: var(--text-main) !important;
+}
+
+/* 深色模式下的极致锁定 */
+.dark-mode div.highlighter-rouge, 
+.dark-mode div.highlighter-rouge div.highlight, 
+.dark-mode div.highlighter-rouge pre.highlight, 
+.dark-mode .highlight pre, 
+.dark-mode pre, 
+.dark-mode code {
+    background-color: #1e1e1e !important;
+    color: #f5f5f5 !important;
+}
+
 body, html { 
     margin: 0; padding: 0; min-height: 100vh; 
     font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
