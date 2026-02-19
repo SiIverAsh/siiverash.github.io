@@ -69,9 +69,11 @@ layout: default
 </script>
 
 <style>
-    .page-btn { background: white; border: 1px solid var(--primary-color); color: #4a90e2; padding: 5px 15px; border-radius: 12px; cursor: pointer; transition: 0.3s; }
+    .page-btn { background: var(--glass-bg); border: 1px solid var(--primary-color); color: var(--primary-color); padding: 5px 15px; border-radius: 12px; cursor: pointer; transition: 0.3s; }
     .page-btn:hover { background: var(--primary-color); color: white; }
-    .mini-post-tag { display: inline-block; background: rgba(0, 0, 0, 0.05); color: #888; padding: 1px 8px; border-radius: 6px; font-size: 0.75em; margin-right: 5px; }
-    .post-preview-card { background: rgba(255,255,255,0.4); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.5); transition: all 0.4s; }
-    .post-preview-card:hover { background: white; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .mini-post-tag { display: inline-block; background: rgba(127, 178, 216, 0.1); color: var(--primary-color); padding: 1px 8px; border-radius: 6px; font-size: 0.75em; margin-right: 5px; }
+    .post-preview-card { background: var(--glass-bg); padding: 20px; border-radius: 16px; border: 1px solid var(--glass-border); transition: all 0.4s; box-shadow: var(--shadow); }
+    .post-preview-card h3 { color: var(--primary-color); }
+    .post-preview-card p { color: var(--text-main); opacity: 0.9; }
+    .post-preview-card:hover { transform: translateY(-5px); filter: brightness(1.05); }
 </style>
