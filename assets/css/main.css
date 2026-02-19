@@ -10,7 +10,6 @@ body, html {
     margin: 0; padding: 0; min-height: 100vh; 
     font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
     color: var(--text-main); 
-    cursor: crosshair; /* 添加特定光标样式 */
 }
 
 .background { 
