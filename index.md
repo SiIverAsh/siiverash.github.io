@@ -78,7 +78,7 @@ title: Welcome to My HP!
     }
 
     function updateUI(item, label) {
-        document.getElementById('recommend-content').innerHTML = `<h3 style="color: #4a90e2; margin-bottom: 10px;">${item.title}</h3><p style="line-height: 1.6; color: #555; font-size: 0.95em;">${item.desc}</p>`;
+        document.getElementById('recommend-content').innerHTML = `<h3 style="color: var(--primary-color); margin-bottom: 10px;">${item.title}</h3><p style="line-height: 1.6; color: var(--text-main); font-size: 0.95em;">${item.desc}</p>`;
         const tBox = document.getElementById('rec-tags'); tBox.innerHTML = '';
         if (item.tags) item.tags.forEach(t => { tBox.innerHTML += `<span class="mini-tag">${t}</span>`; });
         const lArea = document.getElementById('external-link-area');

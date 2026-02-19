@@ -61,22 +61,26 @@ body, html {
     box-shadow: var(--shadow); 
 }
 
-/* 5. 博客正文与文字亮度强化 */
-.content-card { 
-    padding: 40px; min-height: 400px; max-width: 850px; margin: 0 auto; 
-    overflow-wrap: break-word; font-size: 1.1em; line-height: 1.8; 
-}
-
-
+/* 5. 极致亮度锁定 (正文、列表、推荐、历史) */
 .dark-mode .content-card, 
 .dark-mode .post-content,
 .dark-mode .post-content *,
+.dark-mode .extra-sidebar,
 .dark-mode .extra-sidebar *,
-.dark-mode .sidebar h2,
-.dark-mode .post-preview-card * {
+.dark-mode .post-preview-card,
+.dark-mode .post-preview-card *,
+.dark-mode .recommend-box,
+.dark-mode .recommend-box *,
+.dark-mode #history-content,
+.dark-mode .history-item {
     color: #ffffff !important;
     opacity: 1 !important;
-    text-shadow: 0 0 1px rgba(255,255,255,0.1); 
+    text-shadow: none !important;
+}
+
+.dark-mode .post-preview-card p, 
+.dark-mode .history-year { 
+    color: rgba(255,255,255,0.8) !important; 
 }
 
 .post-content h2, .post-content h3 { color: var(--primary-color) !important; }
@@ -89,24 +93,39 @@ div.highlighter-rouge, .highlight, pre, code {
 }
 .dark-mode pre, .dark-mode code { color: #ffffff !important; }
 
-/* 7. 主题切换按钮  */
+/* 7. 主题切换按钮 - 绝对物理锁定 (解决左右横跳问题) */
 #theme-toggle {
     position: fixed !important;
     top: 25px !important;
     right: 25px !important;
-    left: auto !important; 
+    left: auto !important; /* 核心：强力清除任何可能继承的左侧定位 */
+    bottom: auto !important;
     margin: 0 !important;
-    width: 48px; height: 48px;
-    border-radius: 14px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow);
-    cursor: pointer;
-    z-index: 20000 !important; 
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.3em;
-    color: var(--primary-color);
+    padding: 0 !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 14px !important;
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: var(--shadow) !important;
+    cursor: pointer !important;
+    z-index: 2147483647 !important; /* 使用 32 位整数最大值，确保绝对置顶 */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.3em !important;
+    color: var(--primary-color) !important;
+    transition: transform 0.3s, background 0.3s !important;
+}
+
+/* 移动端特殊位置校准 */
+@media (max-width: 850px) { 
+    #theme-toggle {
+        top: 15px !important;
+        right: 15px !important;
+        left: auto !important;
+    }
 }
 
 /* 8. 响应式补丁 */
