@@ -3,23 +3,25 @@
 /* 1. 变量定义 */
 :root { 
     --primary-color: #4a90e2; 
-    --text-main: #000000; 
-    --text-muted: #555555;
+    --text-main: #222222; 
+    --text-muted: #666666;
     --glass-bg: rgba(255, 255, 255, 0.85); 
     --glass-border: rgba(255, 255, 255, 0.4); 
     --shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.1); 
     --code-bg: #f6f8fa; 
     --transition-speed: 0.3s;
+    --bg-color: #f0f2f5;
 }
 
-/* 深色模式变量 */
+/* 深色模式变量*/
 .dark-mode {
-    --text-main: rgba(255, 255, 255, 0.95); 
+    --text-main: #ffffff; 
     --text-muted: rgba(255, 255, 255, 0.7);
-    --glass-bg: rgba(25, 25, 30, 0.94); 
-    --glass-border: rgba(255, 255, 255, 0.12);
-    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+    --glass-bg: rgba(25, 25, 30, 0.9); 
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
     --code-bg: #1e1e1e;
+    --bg-color: #080808;
 }
 
 /* 2. 全局基础样式 */
@@ -27,13 +29,9 @@ body, html {
     margin: 0; padding: 0; min-height: 100vh; 
     font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
     color: var(--text-main); 
-    background-color: #f0f2f5; 
+    background-color: var(--bg-color); 
     transition: background-color var(--transition-speed), color var(--transition-speed);
-    -webkit-font-smoothing: antialiased;
-}
 
-.dark-mode body, .dark-mode html { 
-    background-color: #080808 !important; 
 }
 
 .background { 
@@ -42,7 +40,7 @@ body, html {
     background-size: cover; z-index: -1; 
 }
 
-/* 3. 布局容器 */
+/* 3. 布局与容器 */
 .wrapper { 
     max-width: 1400px; margin: 0 auto; 
     display: grid; grid-template-columns: 260px 1fr 280px; 
@@ -52,130 +50,78 @@ body, html {
 
 .main-content { animation: slideInUp 0.8s ease; min-width: 0; }
 
-/* 4. 核心组件样式 */
 .glass-card { 
-    background: var(--glass-bg) !important; 
+    background: var(--glass-bg); 
     backdrop-filter: blur(15px) saturate(180%); 
     -webkit-backdrop-filter: blur(15px) saturate(180%); 
-    border-radius: 24px; border: 1px solid var(--glass-border); 
+    border-radius: 24px; 
+    border: 1px solid var(--glass-border); 
     box-shadow: var(--shadow); 
 }
 
 .content-card { 
     padding: 40px; 
-    min-height: 400px; 
     max-width: 850px; 
     margin: 0 auto; 
     overflow-wrap: break-word;
     font-size: 1.05em;
-    line-height: 1.75; 
+    line-height: 1.8; 
 }
 
-/* 5. 深色模式文字强化 */
-.dark-mode .content-card,
-.dark-mode .content-card p,
-.dark-mode .content-card li,
-.dark-mode .content-card h1,
-.dark-mode .content-card h2,
-.dark-mode .content-card h3,
-.dark-mode .extra-sidebar,
-.dark-mode .extra-box,
-.dark-mode .history-item,
-.dark-mode #cv-content p,
-.dark-mode .sidebar h2,
-.dark-mode .post-preview-card h3 {
-    color: #fafafa !important; /* 强制提升正文亮度 */
-    font-weight: 450;
+/* 4. 深色模式细节增强 */
+.dark-mode .content-card {
+    font-weight: 450; 
+    text-shadow: 0 0 1px rgba(255,255,255,0.1); 
 }
 
-.dark-mode .post-preview-card p,
-.dark-mode #clock-date,
-.dark-mode .history-year {
-    color: var(--text-muted) !important;
+
+.content-card h1, .content-card h2, .content-card h3 {
+    color: var(--text-main);
 }
 
-/* 6. 代码块彻底锁死 */
-div.highlighter-rouge, 
-div.highlighter-rouge div.highlight, 
-div.highlighter-rouge pre.highlight, 
-.highlight pre, 
-pre, 
-code {
+/* 5. 代码块  */
+pre, code, .highlight {
     background-color: var(--code-bg) !important;
     color: var(--text-main) !important;
     border: 1px solid var(--glass-border);
     border-radius: 12px;
 }
 
-.dark-mode pre, 
-.dark-mode .highlight, 
-.dark-mode .highlight pre, 
-.dark-mode code {
-    background-color: #1e1e1e !important;
-    color: #eeeeee !important;
-}
-
-/* 7. 侧边栏与导航 */
+/* 6. 侧边栏与导航  */
 .sidebar { position: sticky; top: 40px; height: fit-content; padding: 30px 20px; text-align: center; animation: slideInLeft 0.8s ease; }
-.avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; transition: transform 0.5s; cursor: pointer; }
+.avatar { width: 100px; height: 100px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; transition: 0.5s; cursor: pointer; }
 .avatar:hover { transform: rotate(360deg) scale(1.1); }
-
-.social-links { display: flex; justify-content: center; gap: 12px; margin-bottom: 20px; }
-.social-links a { color: var(--text-muted); font-size: 1.1em; transition: 0.3s; }
-.dark-mode .social-links a { color: #ffffff !important; }
 
 .nav-item { 
     display: flex; align-items: center; gap: 10px; 
-    padding: 10px 15px; margin: 5px 0; border-radius: 12px; 
+    padding: 12px 15px; margin: 8px 0; border-radius: 12px; 
     text-decoration: none; color: var(--text-main); 
     background: rgba(255,255,255,0.1); transition: 0.3s; 
 }
-.dark-mode .nav-item { color: #ffffff !important; background: rgba(255,255,255,0.05) !important; }
 .nav-item:hover { background: var(--primary-color) !important; color: white !important; transform: translateX(5px); }
 
-/* 8. 搜索与功能组件 */
-#search-input { 
-    width: 100%; padding: 10px 15px; border-radius: 12px; 
-    border: 1px solid var(--glass-border); 
-    background: rgba(0,0,0,0.05); color: var(--text-main); outline: none; 
-    box-sizing: border-box; font-size: 0.9em; 
-}
-.dark-mode #search-input { background: rgba(255,255,255,0.1) !important; color: white !important; }
-
-#results-container { 
-    position: absolute; top: 100%; left: 0; width: 100%; 
-    list-style: none; padding: 10px 0; margin-top: 8px; 
-    max-height: 350px; overflow-y: auto; z-index: 9999; 
-    background: var(--glass-bg); border-radius: 16px; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2); display: none; 
-    border: 1px solid var(--glass-border); 
-}
-
-/* 9. 主题切换按钮 - 绝对锁定 */
+/* 7. 主题切换与搜索 */
 #theme-toggle {
-    position: fixed !important;
-    top: 20px !important;
-    right: 20px !important;
-    left: unset !important;
-    width: 45px; height: 45px;
-    border-radius: 12px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow);
-    cursor: pointer;
-    z-index: 10005 !important;
+    position: fixed; top: 20px; right: 20px;
+    width: 45px; height: 45px; border-radius: 12px;
+    background: var(--glass-bg); backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border); box-shadow: var(--shadow);
+    cursor: pointer; z-index: 10005;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.2em;
-    color: var(--primary-color);
-    transition: transform 0.3s, background 0.3s;
+    font-size: 1.2em; color: var(--primary-color);
+    transition: 0.3s;
 }
-#theme-toggle:hover { transform: scale(1.1) rotate(15deg); }
 
-/* 10. 动画与响应式 */
+#search-input { 
+    width: 100%; padding: 12px 15px; border-radius: 12px; 
+    border: 1px solid var(--glass-border); 
+    background: rgba(255,255,255,0.1); color: var(--text-main); outline: none; 
+    box-sizing: border-box; 
+}
+
+/* 8. 动画与响应式 */
 @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes slideInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-@media (max-width: 1100px) { .wrapper { grid-template-columns: 240px 1fr; } .extra-sidebar { display: none; } }
+@media (max-width: 1100px) { .wrapper { grid-template-columns: 240px 1fr; } }
 @media (max-width: 850px) { .wrapper { grid-template-columns: 1fr; } .sidebar { position: relative; top: 0; } }
