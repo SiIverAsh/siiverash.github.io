@@ -1,17 +1,26 @@
 @charset "UTF-8";
 :root { 
     --primary-color: #7fb2d8; 
-    --text-main: #e0e0e0; 
-    --glass-bg: rgba(30, 30, 35, 0.8); 
-    --glass-border: rgba(255, 255, 255, 0.1); 
-    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    --text-main: #444; 
+    --glass-bg: rgba(255, 255, 255, 0.75); 
+    --glass-border: rgba(255, 255, 255, 0.3); 
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); 
+}
+
+/* 自动适配深色模式 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-main: #e0e0e0;
+        --glass-bg: rgba(30, 30, 35, 0.8);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    }
 }
 
 body, html { 
     margin: 0; padding: 0; min-height: 100vh; 
     font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
     color: var(--text-main); 
-    background-color: #121212;
 }
 
 .background { 
