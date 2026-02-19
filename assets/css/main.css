@@ -10,10 +10,10 @@
 
 /* 深色模式强制覆盖 */
 .dark-mode {
-    --text-main: #e0e0e0;
-    --glass-bg: rgba(25, 25, 30, 0.92); /* 显著加深，防止 Chrome 泛白 */
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+    --text-main: #ffffff; /* 提升至纯白，确保高可读性 */
+    --glass-bg: rgba(20, 20, 25, 0.95); /* 更扎实的深色，防止泛白 */
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
     --code-bg: #1e1e1e;
 }
 
@@ -25,9 +25,17 @@ body, html {
     transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
-.dark-mode body, .dark-mode html { background-color: #121212; }
+.dark-mode body, .dark-mode html { background-color: #0a0a0a; color: #ffffff !important; }
 
-/* 强制修复博客内容文字 */
+/* 深度锁定代码块背景：防止任何模式下出现纯白 */
+pre, .highlight, .highlight pre, code, .highlighter-rouge .highlight {
+    background-color: var(--code-bg) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+}
+
+/* 博客正文与侧边栏文字加亮 */
 .dark-mode .content-card, 
 .dark-mode .content-card p, 
 .dark-mode .content-card li,
@@ -35,29 +43,27 @@ body, html {
 .dark-mode .content-card h2,
 .dark-mode .content-card h3,
 .dark-mode .post-preview-card h3,
-.dark-mode .post-preview-card p {
-    color: #e0e0e0 !important;
+.dark-mode .post-preview-card p,
+.dark-mode .extra-sidebar,
+.dark-mode .extra-box,
+.dark-mode .extra-title,
+.dark-mode #history-content,
+.dark-mode #cv-content p,
+.dark-mode .history-item {
+    color: #ffffff !important; /* 强制所有文本在暗色模式下为白色 */
 }
 
-/* 强制修复代码块背景 */
-pre, .highlight, .highlight pre, code {
-    background-color: var(--code-bg) !important;
-    color: var(--text-main) !important;
-    border-radius: 12px;
-}
-
-.dark-mode pre, 
-.dark-mode .highlight, 
-.dark-mode .highlight pre, 
-.dark-mode code {
-    background-color: #1e1e1e !important;
-    color: #dcdcdc !important;
+/* 特殊处理：侧边栏次要文字 */
+.dark-mode #clock-date, 
+.dark-mode .history-year,
+.dark-mode #cv-meta span {
+    color: #bbb !important; /* 次要信息使用浅灰色 */
 }
 
 .glass-card { 
     background: var(--glass-bg) !important; 
-    backdrop-filter: blur(12px) saturate(180%); 
-    -webkit-backdrop-filter: blur(12px) saturate(180%); 
+    backdrop-filter: blur(15px) saturate(180%); 
+    -webkit-backdrop-filter: blur(15px) saturate(180%); 
     border-radius: 24px; border: 1px solid var(--glass-border); 
     box-shadow: var(--shadow); 
 }
