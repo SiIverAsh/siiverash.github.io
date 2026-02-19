@@ -3,6 +3,7 @@ baseurl: ""
 url: "https://siiverash.github.io"
 repository: "siiverash/siiverash.github.io"
 description: "Attention Is All You Need!"
+encoding: utf-8 # 显式指定 UTF-8 编码
 
 # 显式提供元数据，避免插件去调 GitHub API
 # 注意：格式必须严格遵守 YAML 缩进
