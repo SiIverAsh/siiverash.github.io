@@ -8,7 +8,7 @@
         {% if site.social.twitter %}<a href="{{ site.social.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>{% endif %}
         {% if site.social.pixiv %}<a href="{{ site.social.pixiv }}" target="_blank"><i class="fas fa-image"></i></a>{% endif %}
         {% if site.social.email %}
-            <a href="javascript:void(0)" onclick="showEmail(event, '{{ site.social.email }}')" title="Click to see Email">
+            <a style="cursor: pointer;" onclick="showEmail(event, '{{ site.social.email }}'); return false;" title="Click to see Email">
                 <i class="fas fa-envelope"></i>
             </a>
         {% endif %}
