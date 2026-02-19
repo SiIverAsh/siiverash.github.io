@@ -23,7 +23,7 @@
         const container = document.getElementById('history-content');
         if (container && window.siteData && window.siteData.history) {
             container.innerHTML = window.siteData.history.map(item => 
-                `<div class="history-item"><span class="history-year">${item.year}</span><br>${item.event}</div>`
+                `<div class="history-item"><span class="history-year" style="color: var(--primary-color); font-weight: bold;">${item.year}</span><br>${item.event}</div>`
             ).join('');
         }
     }

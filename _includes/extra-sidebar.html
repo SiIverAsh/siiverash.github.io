@@ -16,7 +16,7 @@
 {% if page.url == "/" or page.url == "/index.html" %}
 <div class="extra-box glass-card">
     <div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div>
-    <div id="history-content" style="max-height: 350px; overflow-y: auto;">载入中...</div>
+    <div id="history-content" style="max-height: 350px; overflow-y: auto; color: var(--text-main);">载入中...</div>
 </div>
 {% endif %}
 
@@ -24,17 +24,11 @@
 {% if page.url contains '/categories/anime' %}
 <div class="extra-box glass-card">
     <div class="extra-title"><i class="fas fa-play-circle"></i> 正在追番 (Watching)</div>
-    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85em; color: #555;">
+    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85em; color: var(--text-main);">
         {% for item in site.data.me.anime.watching %}
         <li style="margin-bottom: 8px; border-left: 3px solid #f09199; padding-left: 10px;">{{ item }}</li>
         {% endfor %}
     </ul>
-    <!-- <div class="extra-title" style="margin-top: 20px;"><i class="fas fa-award"></i> 神作 (Rating)</div>
-    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85em; color: #666;">
-        {% for item in site.data.me.anime.hall_of_fame %}
-        <li style="margin-bottom: 5px;"><i class="fas fa-star" style="color: #ffd700; margin-right: 5px;"></i> {{ item }}</li>
-        {% endfor %}
-    </ul> -->
 </div>
 {% endif %}
 
@@ -48,9 +42,9 @@
         {% endfor %}
     </div>
     <div class="extra-title" style="margin-top: 20px;"><i class="fas fa-headphones-simple"></i> 曲风偏好 (Genre)</div>
-    <div style="font-size: 0.85em; color: #555; line-height: 1.8;">
+    <div style="font-size: 0.85em; color: var(--text-main); line-height: 1.8;">
         {% for item in site.data.me.music.genres %}
-        <span style="margin-right: 12px;"><i class="fas fa-hashtag" style="font-size: 0.8em; color: #888;"></i> {{ item }}</span>
+        <span style="margin-right: 12px;"><i class="fas fa-hashtag" style="font-size: 0.8em; color: var(--text-muted);"></i> {{ item }}</span>
         {% endfor %}
     </div>
 </div>
@@ -60,9 +54,9 @@
 {% if page.url contains '/categories/game' %}
 <div class="extra-box glass-card">
     <div class="extra-title"><i class="fas fa-tower-pc"></i> 系统配置 (Specs)</div>
-    <div style="font-size: 0.8em; color: #555;">
+    <div style="font-size: 0.85em; color: var(--text-main);">
         <div style="margin-bottom: 10px;">
-            <div style="color: #4a90e2; font-weight: bold;"><i class="fas fa-microchip"></i> CPU</div>
+            <div style="color: var(--primary-color); font-weight: bold;"><i class="fas fa-microchip"></i> CPU</div>
             <div>{{ site.data.me.game.specs.cpu }}</div>
         </div>
         <div style="margin-bottom: 10px;">
@@ -70,11 +64,11 @@
             <div>{{ site.data.me.game.specs.gpu }}</div>
         </div>
         <div style="margin-bottom: 10px;">
-            <div style="color: #888; font-weight: bold;"><i class="fas fa-memory"></i> RAM</div>
+            <div style="color: var(--text-muted); font-weight: bold;"><i class="fas fa-memory"></i> RAM</div>
             <div>{{ site.data.me.game.specs.ram }}</div>
         </div>
         <div>
-            <div style="color: #4a90e2; font-weight: bold;"><i class="fas fa-hard-drive"></i> Storage</div>
+            <div style="color: var(--primary-color); font-weight: bold;"><i class="fas fa-hard-drive"></i> Storage</div>
             <div>{{ site.data.me.game.specs.storage }}</div>
         </div>
     </div>
@@ -86,34 +80,33 @@
 <div class="extra-box glass-card">
     <div class="extra-title"><i class="fas fa-microphone-lines"></i> 声优名鉴 · 每日推荐</div>
     <div id="cv-content">
-        <h4 id="cv-name" style="color: #4a90e2; margin: 0 0 5px 0;"></h4>
-        <div id="cv-meta" style="font-size: 0.75em; color: #888; margin-bottom: 10px;">
+        <h4 id="cv-name" style="color: var(--primary-color); margin: 0 0 5px 0;"></h4>
+        <div id="cv-meta" style="font-size: 0.75em; color: var(--text-muted); margin-bottom: 10px;">
             <span id="cv-agency" style="margin-right: 10px;"></span>
             <span id="cv-hometown"></span>
         </div>
-        <p id="cv-works" style="font-size: 0.85em; color: #666; margin-bottom: 8px; font-weight: bold;"></p>
-        <p id="cv-intro" style="font-size: 0.8em; color: #555; line-height: 1.4; border-top: 1px dashed #eee; padding-top: 8px; margin-bottom: 12px;"></p>
+        <p id="cv-works" style="font-size: 0.85em; color: var(--text-main); margin-bottom: 8px; font-weight: bold;"></p>
+        <p id="cv-intro" style="font-size: 0.85em; color: var(--text-main); line-height: 1.5; border-top: 1px dashed var(--glass-border); padding-top: 8px; margin-bottom: 12px;"></p>
         <a id="cv-wiki-link" href="#" target="_blank" class="moe-btn">查看萌娘百科 📖</a>
     </div>
 </div>
-<style>
-    .moe-btn { display: inline-block; background: #4a90e2; color: white; padding: 6px 12px; border-radius: 8px; text-decoration: none; font-size: 0.8em; font-weight: bold; transition: 0.3s; }
-    .moe-btn:hover { background: #357abd; transform: scale(1.05); }
-</style>
 {% endif %}
 
-<!-- 动漫文章详情页：显示动漫简单介绍和 bgm.tv 链接 -->
+<!-- 动漫文章详情页 -->
 {% if page.layout == 'post' and page.categories contains 'anime' %}
 <div class="extra-box glass-card anime-info-card">
     <div class="extra-title"><i class="fas fa-circle-info"></i> 动漫百科</div>
     <div id="anime-wiki-content">
-        <h4 id="wiki-title" style="color: #4a90e2; margin: 0 0 10px 0;"></h4>
-        <p id="wiki-desc" style="font-size: 0.85em; line-height: 1.5; color: #666; margin-bottom: 15px;"></p>
+        <h4 id="wiki-title" style="color: var(--primary-color); margin: 0 0 10px 0;"></h4>
+        <p id="wiki-desc" style="font-size: 0.85em; line-height: 1.5; color: var(--text-main); margin-bottom: 15px;"></p>
         <a id="wiki-bgm-link" href="#" target="_blank" class="bgm-btn">在 Bangumi 查看 📺</a>
     </div>
 </div>
-<style>
-    .bgm-btn { display: inline-block; background: #f09199; color: white; padding: 6px 12px; border-radius: 8px; text-decoration: none; font-size: 0.8em; font-weight: bold; transition: 0.3s; }
-    .bgm-btn:hover { background: #e07b85; transform: scale(1.05); }
-</style>
 {% endif %}
+
+<style>
+    .moe-btn { display: inline-block; background: var(--primary-color); color: white !important; padding: 6px 12px; border-radius: 8px; text-decoration: none; font-size: 0.8em; font-weight: bold; transition: 0.3s; }
+    .moe-btn:hover { filter: brightness(1.1); transform: scale(1.05); }
+    .bgm-btn { display: inline-block; background: #f09199; color: white !important; padding: 6px 12px; border-radius: 8px; text-decoration: none; font-size: 0.8em; font-weight: bold; transition: 0.3s; }
+    .bgm-btn:hover { filter: brightness(1.1); transform: scale(1.05); }
+</style>
