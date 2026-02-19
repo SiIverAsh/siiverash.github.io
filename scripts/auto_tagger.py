@@ -2,6 +2,7 @@ import os
 import json
 import requests
 import yaml
+from datetime import datetime
 
 # 配置 API
 api_key = os.getenv("DEEPSEEK_API_KEY")
@@ -25,7 +26,6 @@ def get_tags_from_ai(title, content):
     文章标题：{TITLE}
     文章内容摘要：{CONTENT}
     """
-    # 使用 replace 避免 f-string 带来的转义问题
     final_prompt = prompt.replace("{TITLE}", title).replace("{CONTENT}", content[:1000])
 
     payload = {
@@ -55,14 +55,13 @@ def process_posts():
         return
 
     for filename in os.listdir(posts_dir):
-        if not filename.endswith(".md"):
+        if not filename.endswith(".md") or filename == "BLOG_TEMPLATE.md":
             continue
             
         filepath = os.path.join(posts_dir, filename)
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        # 使用更稳健的分割方法替代正则表达式
         parts = content.split('---', 2)
         if len(parts) < 3:
             continue
@@ -76,25 +75,37 @@ def process_posts():
             print("YAML Load Error in " + filename + ": " + str(e))
             continue
 
-        if front_matter.get("tags") and len(front_matter["tags"]) > 0:
-            print("Skipping " + filename + ": Already has tags.")
-            continue
+        needs_update = False
+        
+        # 逻辑 1：自动更正日期
+        current_date_str = front_matter.get("date")
+        # 如果日期不存在，或者是模板默认的占位日期，则更新
+        template_dates = ["2026-02-19 12:00:00 +0800", "2026-02-19 12:00:00", "2026-02-18 12:00:00"]
+        if not current_date_str or any(td in str(current_date_str) for td in template_dates):
+            new_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S +0800")
+            front_matter["date"] = new_date
+            print("Auto-filling date for " + filename + ": " + new_date)
+            needs_update = True
 
-        print("Generating tags for: " + filename + "...")
-        title = front_matter.get("title", "")
-        new_tags = get_tags_from_ai(title, post_body.strip())
+        # 逻辑 2：生成标签（如果缺失）
+        if not front_matter.get("tags") or len(front_matter["tags"]) == 0:
+            print("Generating tags for: " + filename + "...")
+            title = front_matter.get("title", "")
+            new_tags = get_tags_from_ai(title, post_body.strip())
+            if new_tags:
+                front_matter["tags"] = new_tags
+                needs_update = True
 
-        if new_tags:
-            print("Found tags: " + str(new_tags))
-            front_matter["tags"] = new_tags
-            
-            # 重新组合文件
+        if needs_update:
             new_front_matter_str = yaml.dump(front_matter, allow_unicode=True).strip()
             new_content = "---\n" + new_front_matter_str + "\n---\n\n" + post_body.lstrip()
             
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(new_content)
             print("Successfully updated " + filename)
+
+if __name__ == "__main__":
+    process_posts()
 
 if __name__ == "__main__":
     process_posts()
