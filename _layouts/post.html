@@ -4,8 +4,8 @@ layout: default
 
 <article>
     <header style="margin-bottom: 30px; text-align: center;">
-        <h1 style="color: #4a90e2; margin-bottom: 10px;">{{ page.title }}</h1>
-        <div style="color: #999; font-size: 0.9em; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <h1 style="color: var(--primary-color); margin-bottom: 10px;">{{ page.title }}</h1>
+        <div style="color: var(--text-muted); font-size: 0.9em; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
             <span><i class="fas fa-calendar-day"></i> {{ page.date | date: "%Y-%m-%d %H:%M" }}</span>
             <span>|</span>
             <span><i class="fas fa-folder-open"></i> {% for cat in page.categories %}<span style="color: var(--primary-color)">{{ cat }}</span>{% endfor %}</span>
@@ -17,16 +17,15 @@ layout: default
             <span class="post-tag"># {{ tag }}</span>
             {% endfor %}
         </div>
-        <!-- 隐藏的标签数据源，供侧边栏 JS 使用 -->
         <span id="data-post-tags" style="display:none;">{{ page.tags | join: ',' }}</span>
         {% endif %}
     </header>
 
-    <div class="post-content" style="line-height: 1.8; color: #444; font-size: 1.0rem;">
+    <div class="post-content">
         {{ content }}
     </div>
 
-    <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #eee; text-align: center;">
+    <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed rgba(0,0,0,0.1); text-align: center;">
         <a href="javascript:history.back()" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">
             ← 返回列表
         </a>
@@ -41,7 +40,8 @@ document.querySelectorAll('pre').forEach((codeBlock) => {
     button.innerText = '复制';
 
     button.addEventListener('click', () => {
-        const code = codeBlock.querySelector('code').innerText;
+        const codeElement = codeBlock.querySelector('code');
+        const code = codeElement ? codeElement.innerText : codeBlock.innerText;
         navigator.clipboard.writeText(code).then(() => {
             button.innerText = '已复制!';
             setTimeout(() => { button.innerText = '复制'; }, 2000);
@@ -67,28 +67,25 @@ document.querySelectorAll('pre').forEach((codeBlock) => {
         font-size: 0.75rem;
         transition: 0.3s;
         opacity: 0; 
+        z-index: 10;
     }
-    pre:hover .copy-code-button {
-        opacity: 1;
-    }
-    .copy-code-button:hover {
-        background: var(--primary-color);
-        color: white;
-    }
+    pre:hover .copy-code-button { opacity: 1; }
+    .copy-code-button:hover { background: var(--primary-color); color: white; }
 
     .post-tag {
         display: inline-block;
         background: rgba(127, 178, 216, 0.1);
-        color: #4a90e2;
+        color: var(--primary-color);
         padding: 2px 10px;
         border-radius: 8px;
         font-size: 0.8em;
         margin: 0 3px;
-        border: 1px solid rgba(127, 178, 216, 0.3);
+        border: 1px solid var(--glass-border);
     }
-    .post-content h2, .post-content h3 { color: #4a90e2; margin-top: 35px; border-left: 4px solid var(--primary-color); padding-left: 15px; font-weight: 600; }
-    .post-content img { max-width: 90%; display: block; margin: 25px auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .post-content code { background: #f0f7ff; color: #4a90e2; padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 0.9em; }
-    .post-content pre { background: #2d2d2d; color: #ffffff !important; padding: 18px; border-radius: 12px; overflow-x: auto; line-height: 1.5; font-size: 0.85rem; }
-    .post-content pre code { color: #ffffff !important; } /* 确保代码内部文字也是白色 */
+    
+    .post-content { line-height: 1.8; color: var(--text-main); font-size: 1.1em; }
+    .post-content h2, .post-content h3 { color: var(--primary-color); margin-top: 35px; border-left: 4px solid var(--primary-color); padding-left: 15px; font-weight: 600; }
+    .post-content img { max-width: 90%; display: block; margin: 25px auto; border-radius: 12px; box-shadow: var(--shadow); }
+    .post-content code { background: var(--code-bg); color: var(--primary-color); padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 0.9em; }
+    .post-content pre { background: var(--code-bg); padding: 18px; border-radius: 12px; overflow-x: auto; border: 1px solid var(--glass-border); }
 </style>
