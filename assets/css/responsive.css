@@ -24,7 +24,7 @@
         top: 0;
         width: 290px;
         height: 100vh;
-        z-index: 10001; /* 侧边栏层级：内容级最高 */
+        z-index: 1000; /* 调低层级 */
         transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         box-shadow: 15px 0 50px rgba(0,0,0,0.3);
         overflow-y: auto;
@@ -94,7 +94,7 @@
         backdrop-filter: blur(15px);
         border: 1px solid var(--glass-border);
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        z-index: 10005; /* 控制层级：在侧边栏上方，但远低于邮箱弹窗 */
+        z-index: 1001; /* 按钮层级调低 */
         align-items: center;
         justify-content: center;
         font-size: 1.2em;
@@ -110,7 +110,7 @@
         width: 100vw;
         height: 100vh;
         background: rgba(0,0,0,0.4);
-        z-index: 10000; /* 底部层级 */
+        z-index: 999; 
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
     }
@@ -127,7 +127,7 @@
         display: block;
         margin-bottom: 20px;
         width: 100%;
-        /* 搜索占位符不设置层级，让其随内容滚动 */
+        z-index: 1; /* 确保非常低 */
     }
 
     #mobile-search-placeholder .search-box-card {
@@ -144,12 +144,12 @@
         right: 15px !important;
         width: 42px !important;
         height: 42px !important;
-        z-index: 10005 !important; /* 同三小杠层级 */
+        z-index: 1001 !important;
     }
 
-    /* 邮箱弹窗最高层级保证 (20,000 比按钮的 10,005 高出一万) */
+    /* 终极层级：绝对覆盖一切 */
     .email-pop {
-        z-index: 20000 !important;
+        z-index: 2147483647 !important;
     }
 }
 

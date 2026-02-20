@@ -42,7 +42,8 @@
             tip.style.top = (event.pageY + 10) + 'px';
         }
         
-        document.body.appendChild(tip);
+        const container = document.getElementById('email-pop-container') || document.body;
+        container.appendChild(tip);
         const closeTip = () => {
             tip.classList.add('fade-out');
             setTimeout(() => tip.remove(), 300);
