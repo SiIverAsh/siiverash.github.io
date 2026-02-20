@@ -5,14 +5,18 @@ import requests
 import re
 import sys
 import random
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 api_key = os.getenv("DEEPSEEK_API_KEY")
 api_url = "https://api.deepseek.com/chat/completions"
 
+def get_beijing_time():
+    """获取北京时间 (UTC+8)"""
+    return datetime.now(timezone(timedelta(hours=8)))
+
 def get_realtime_context():
     try:
-        yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+        yesterday = (get_beijing_time() - timedelta(days=1)).strftime('%Y-%m-%d')
         query = "created:>" + yesterday + " topic:ai"
         url = "https://api.github.com/search/repositories?q=" + query + "&sort=stars&order=desc&per_page=5"
         res = requests.get(url, timeout=5)
@@ -91,7 +95,7 @@ def get_ai_recommendation(context):
     }}
     """
     
-    prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context).replace("{CURRENT_DATE}", str(datetime.now().date())).replace("{DAILY_FOCUS}", daily_focus)
+    prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context).replace("{CURRENT_DATE}", str(get_beijing_time().date())).replace("{DAILY_FOCUS}", daily_focus)
 
     payload = {
         "model": "deepseek-chat",
@@ -130,7 +134,7 @@ def update_yaml():
                 })
 
             data = {
-                'date': str(datetime.now().date()),
+                'date': str(get_beijing_time().date()),
                 'study': ai_content.get('study', {}),
                 'anime': ai_content.get('anime', []),
                 'music': ai_content.get('music', []),

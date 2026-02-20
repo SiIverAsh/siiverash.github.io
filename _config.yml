@@ -1,4 +1,5 @@
 title: Silverashの隙间
+timezone: Asia/Shanghai
 baseurl: "" # 确保为空，适应顶级域名
 url: "" # 动态适应
 repository: "siiverash/siiverash.github.io"

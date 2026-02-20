@@ -2,12 +2,16 @@ import os
 import json
 import requests
 import yaml
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 # DeepSeek API Configuration
 API_KEY = os.getenv("DEEPSEEK_API_KEY")
 API_URL = "https://api.deepseek.com/chat/completions"
 POSTS_DIR = "_posts"
+
+def get_beijing_time():
+    """获取北京时间 (UTC+8)"""
+    return datetime.now(timezone(timedelta(hours=8)))
 
 def get_existing_tags():
     """收集全站已有标签，确保 AI 优先复用"""
@@ -126,7 +130,7 @@ def process_posts():
             should_update_date = True
         
         if should_update_date:
-            new_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S +0800")
+            new_date = get_beijing_time().strftime("%Y-%m-%d %H:%M:%S +0800")
             front_matter["date"] = new_date
             print(f"Set upload time for {filename}: {new_date}")
             needs_update = True
