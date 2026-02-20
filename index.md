@@ -41,7 +41,7 @@ title: Welcome to My HP!
     function handleStudyClick() {
         curT = 'study'; curS = '';
         document.getElementById('sub-tags-area').style.display = 'block';
-        document.getElementById('recommend-content').innerHTML = '<p style="color: #4a90e2; font-weight: bold;">请选择一个研究领域 💡</p>';
+        document.getElementById('recommend-content').innerHTML = '<p style="color: #1d508a; font-weight: bold;">请选择一个研究领域 💡</p>';
         document.getElementById('rec-tags').innerHTML = '';
         document.getElementById('external-link-area').style.display = 'none';
     }
