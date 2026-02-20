@@ -32,49 +32,31 @@ title: Welcome to My HP!
         <div id="recommend-content"><p style="color: #999;">✨ 点击上方卡片，查看今日 AI 自动推荐 ✨</p></div>
         <div id="rec-tags" class="rec-tags"></div>
         <div id="external-link-area" style="display: none; margin-top: 15px;"><a id="external-link" href="#" target="_blank" class="twitter-btn">去关注画师 𝕏</a></div>
-        <div id="refresh-parent" style="display: none; margin-top: 20px;"><button onclick="reRecommend()" class="refresh-btn">换一个 🔄</button></div>
     </div>
 </div>
 
 <script>
-    let curT = '', curS = '', lastIdx = -1;
+    let curT = '', curS = '';
 
     function handleStudyClick() {
         curT = 'study'; curS = '';
         document.getElementById('sub-tags-area').style.display = 'block';
         document.getElementById('recommend-content').innerHTML = '<p style="color: #4a90e2; font-weight: bold;">请选择一个研究领域 💡</p>';
         document.getElementById('rec-tags').innerHTML = '';
-        document.getElementById('refresh-parent').style.display = 'none';
         document.getElementById('external-link-area').style.display = 'none';
     }
 
     function showStudyDetail(sub) {
         curS = sub;
         const list = (window.siteData && window.siteData.study) ? window.siteData.study[sub] : null;
-        if (list) { lastIdx = 0; updateUI(list[0], sub); }
+        if (list && list.length > 0) { updateUI(list[0], sub); }
     }
 
     function handleClick(type) {
         curT = type; curS = '';
         document.getElementById('sub-tags-area').style.display = 'none';
         const list = window.siteData ? window.siteData[type] : null;
-        if (list) { lastIdx = 0; updateUI(list[0], type.toUpperCase()); }
-    }
-
-    function reRecommend() {
-        const btn = document.querySelector('.refresh-btn');
-        btn.style.transform = 'rotate(360deg)';
-        setTimeout(() => {
-            const data = window.siteData;
-            const list = (curT === 'study') ? data.study[curS] : data[curT];
-            if (list) {
-                let ni = Math.floor(Math.random() * list.length);
-                if (list.length > 1) while(ni === lastIdx) ni = Math.floor(Math.random() * list.length);
-                lastIdx = ni;
-                updateUI(list[ni], (curT === 'study' ? curS : curT.toUpperCase()));
-            }
-            btn.style.transform = 'rotate(0deg)';
-        }, 300);
+        if (list && list.length > 0) { updateUI(list[0], type.toUpperCase()); }
     }
 
     function updateUI(item, label) {
@@ -82,8 +64,12 @@ title: Welcome to My HP!
         const tBox = document.getElementById('rec-tags'); tBox.innerHTML = '';
         if (item.tags) item.tags.forEach(t => { tBox.innerHTML += `<span class="mini-tag">${t}</span>`; });
         const lArea = document.getElementById('external-link-area');
-        if (item.twitter) { document.getElementById('external-link').href = item.twitter; lArea.style.display = 'block'; } else { lArea.style.display = 'none'; }
-        document.getElementById('refresh-parent').style.display = 'block';
+        if (item.twitter || item.url) { 
+            document.getElementById('external-link').href = item.twitter || item.url; 
+            lArea.style.display = 'block'; 
+        } else { 
+            lArea.style.display = 'none'; 
+        }
     }
 </script>
 

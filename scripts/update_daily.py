@@ -46,7 +46,7 @@ def get_ai_recommendation(context):
     请基于近期（一个月以内或是一个星期内）的实时背景：{CONTEXT_PLACEHOLDER}，为一名软件工程硕士生提供每日推荐。
     
     要求：
-    1. 每个分类（Study下的 9 个指定子类、Anime、Music、Paint、Game）必须提供正好 2 个不同的推荐项。
+    1. 每个分类（Study下的 9 个指定子类、Anime、Music、Paint、Game）必须提供正好 1 个推荐项。
     2. Study 下必须严格使用这 9 个键名：CV, NLP, Audio, Net, Lang, Arch, GPU, CPU, News。你必须根据实时背景将 GitHub 项目分类放入这些子类中。
     3. desc 必须输出最新的硬核技术细节（如架构特性、工艺制程、性能指标）。
     4. 严禁使用任何引导性废话。
