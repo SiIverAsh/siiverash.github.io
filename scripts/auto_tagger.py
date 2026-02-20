@@ -49,7 +49,7 @@ def get_tags_from_ai(title, content, category, existing_tags):
     elif category == "anime":
         guidance = "这是一篇动漫相关博文。请【务必】提取作品名称作为首个标签，并增加声优、制作公司或流派等标签。"
     elif category == "music":
-        guidance = "这是一篇音乐鉴赏。请提取曲名、社团/作者名、曲风（如：同人音乐、电音、流行）。"
+        guidance = "这是一篇音乐鉴赏。请提取社团/作者名、曲风（如：同人音乐、电音、流行）。"
     elif category == "paint":
         guidance = "这是一篇绘画/涂鸦分享。请提取绘画工具（如：iPad, Procreate, 水彩）、题材（如：人物, 风景）或练习阶段。"
     elif category == "game":
@@ -57,7 +57,7 @@ def get_tags_from_ai(title, content, category, existing_tags):
     elif category == "snap":
         guidance = "这是一篇摄影作品。请提取相机型号（如：Nikon Z系列, D850）、镜头焦段、拍摄地点或后期风格。"
     elif category == "asmr":
-        guidance = "这是一篇助眠/ASMR相关内容。请提取音频类型（如：无人声, 耳朵按摩, 环境音）、作者名或助眠效果。"
+        guidance = "这是一篇助眠/ASMR相关内容。请提取作者名。"
     elif category == "emo":
         guidance = "这是一篇深夜心情随笔。请提取情感意象（如：怀旧, 迷茫, 宁静）或核心感悟。"
 
@@ -116,9 +116,19 @@ def process_posts():
 
         needs_update = False
         
-        # 补全日期逻辑
-        if not front_matter.get("date"):
-            front_matter["date"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S +0800")
+        # 逻辑 1：智能日期补全（自动打上“上传时间”）
+        current_date_str = str(front_matter.get("date", ""))
+        # 识别占位符或旧模板日期
+        placeholders = ["UPLOAD_TIME", "2026-02-19 12:00:00", "2026-02-18", "None", ""]
+        
+        should_update_date = False
+        if not current_date_str or any(p in current_date_str for p in placeholders):
+            should_update_date = True
+        
+        if should_update_date:
+            new_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S +0800")
+            front_matter["date"] = new_date
+            print(f"Set upload time for {filename}: {new_date}")
             needs_update = True
 
         # 智能标签逻辑：仅在缺失标签时触发
