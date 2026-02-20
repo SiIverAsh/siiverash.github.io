@@ -14,7 +14,6 @@
         async function getVisitorCount() {
             const visitorElement = document.getElementById('visitor-count');
             try {
-                // 请确保此 URL 准确无误
                 const WORKER_URL = 'https://visitor-counter.siiverash.workers.dev';
                 
                 const response = await fetch(WORKER_URL, {
