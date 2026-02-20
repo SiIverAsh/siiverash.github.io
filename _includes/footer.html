@@ -13,32 +13,40 @@
     <script>
         async function getVisitorCount() {
             const visitorElement = document.getElementById('visitor-count');
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 5000); // 5秒超时
+
             try {
                 const WORKER_URL = 'https://visitor-counter.1379523665.workers.dev';
                 
                 const response = await fetch(WORKER_URL, {
                     method: 'GET',
                     mode: 'cors',
-                    cache: 'no-cache' 
+                    signal: controller.signal
                 });
 
+                clearTimeout(timeoutId);
+
+                const text = await response.text();
+                
                 if (!response.ok) {
-                    throw new Error('Worker response status: ' + response.status);
+                    throw new Error('Server returned ' + response.status + ': ' + text);
                 }
                 
-                const count = await response.text();
-                if (count && !isNaN(count.trim())) {
-                    visitorElement.innerText = parseInt(count.trim()).toLocaleString();
+                if (text && !isNaN(text.trim())) {
+                    visitorElement.innerText = parseInt(text.trim()).toLocaleString();
                 } else {
-                    console.error('Invalid count received:', count);
-                    visitorElement.innerText = 'N/A';
+                    // 如果 Worker 返回了错误信息（如 KV 没绑定），直接显示
+                    visitorElement.innerText = text.includes('Error') ? 'Error' : 'N/A';
+                    console.warn('Worker Response:', text);
                 }
             } catch (error) {
+                clearTimeout(timeoutId);
                 console.error('Visitor Stats Fetch Error:', error);
-                visitorElement.innerText = '...'; 
+                // 顶级前端处理：如果报错，显示 "Offline" 或 "..." 而不是一直 Loading
+                visitorElement.innerText = error.name === 'AbortError' ? 'Timeout' : 'Offline';
             }
         }
-        // 立即执行并尝试获取
         getVisitorCount();
     </script>
 </footer>
