@@ -47,15 +47,15 @@ def get_tags_from_ai(title, content, category, existing_tags):
     if category == "study":
         guidance = "这是一篇学习笔记。请侧重提取技术领域词（如：计算机网络、系统架构、深度学习、算法优化）。"
     elif category == "anime":
-        guidance = "这是一篇动漫相关博文。请【务必】提取作品名称作为首个标签，并增加声优、制作公司或流派等标签。"
+        guidance = "这是一篇动漫相关博文。请【务必】提取作品名称作为首个标签，并增加动漫类型等标签。"
     elif category == "music":
-        guidance = "这是一篇音乐鉴赏。请提取社团/作者名、曲风（如：同人音乐、电音、流行）。"
+        guidance = "这是一篇音乐鉴赏。请提取社团/作者名、曲风（如：同人音乐、电音、流行等等）。"
     elif category == "paint":
-        guidance = "这是一篇绘画/涂鸦分享。请提取绘画工具（如：iPad, Procreate, 水彩）、题材（如：人物, 风景）或练习阶段。"
+        guidance = "这是一篇绘画/涂鸦分享。请提取其中的人物，风格。"
     elif category == "game":
         guidance = "这是一篇游戏记录。请【务必】提取游戏名称作为首个标签，并增加平台（如：PC, PS5, Steam）、类型（如：FPS, RPG）或成就心得。"
     elif category == "snap":
-        guidance = "这是一篇摄影作品。请提取相机型号（如：Nikon Z系列, D850）、镜头焦段、拍摄地点或后期风格。"
+        guidance = "这是一篇摄影作品。请提取镜头焦段、拍摄地点或后期风格。"
     elif category == "asmr":
         guidance = "这是一篇助眠/ASMR相关内容。请提取作者名。"
     elif category == "emo":
