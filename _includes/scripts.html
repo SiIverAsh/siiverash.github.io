@@ -15,17 +15,32 @@
     }
     setInterval(updateClock, 1000); updateClock();
 
-    function loadHistory() {
-        const container = document.getElementById('history-content');
-        if (container && window.siteData && window.siteData.history) {
-            container.innerHTML = window.siteData.history.map(item => 
-                `<div class="history-item"><span class="history-year" style="color: var(--primary-color); font-weight: bold;">${item.year}</span><br>${item.event}</div>`
-            ).join('');
+        function loadHistory() {
+            const container = document.getElementById('history-content');
+            if (container && window.siteData && window.siteData.history) {
+                container.innerHTML = window.siteData.history.map(item => 
+                    `<div class="history-item"><span class="history-year" style="color: var(--primary-color); font-weight: bold;">${item.year}</span><br>${item.event}</div>`
+                ).join('');
+            }
         }
-    }
-    window.addEventListener('DOMContentLoaded', () => {
-        loadHistory();
-        loadAnimeExtras();
-        if (typeof loadBangumiWiki === 'function') loadBangumiWiki();
-    });
+    
+        function loadAnimeExtras() {
+            const cvName = document.getElementById('cv-name');
+            if (cvName && window.siteData && window.siteData.cv_recommend) {
+                const cv = window.siteData.cv_recommend;
+                cvName.textContent = cv.name;
+                document.getElementById('cv-agency').textContent = "🏢 " + cv.agency;
+                document.getElementById('cv-hometown').textContent = "📍 " + cv.hometown;
+                document.getElementById('cv-works').textContent = "代表作: " + cv.works;
+                document.getElementById('cv-intro').textContent = cv.intro;
+                const wikiLink = document.getElementById('cv-wiki-link');
+                if (wikiLink) { wikiLink.href = "https://zh.moegirl.org.cn/" + encodeURIComponent(cv.name); }
+            }
+        }
+    
+        window.addEventListener('DOMContentLoaded', () => {
+            loadHistory();
+            loadAnimeExtras();
+            if (typeof loadBangumiWiki === 'function') loadBangumiWiki();
+        });
 </script>
