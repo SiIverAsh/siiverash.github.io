@@ -1,9 +1,9 @@
-<footer style="margin-top: 80px; padding: 40px 0; border-top: 1px dashed var(--glass-border); text-align: center;">
-    <p style="margin-bottom: 12px; font-weight: 500; color: var(--text-main); font-size: 0.95em;">
+<footer style="margin-top: 100px; padding: 40px 0; border-top: 1px dashed var(--glass-border); text-align: center;">
+    <p style="margin-bottom: 15px; font-weight: 500; color: var(--text-main); font-size: 0.95em;">
         &copy; {{ site.time | date: '%Y' }} SilverAsh. Built with <i class="fab fa-github"></i> Actions & Jekyll.
     </p>
     
-    <div id="stats-area" class="visitor-stats" style="font-size: 0.85em; color: var(--text-muted); display: none; justify-content: center; gap: 15px; align-items: center; opacity: 0.9;">
+    <div id="stats-area" class="visitor-stats" style="font-size: 0.85em; color: var(--text-muted); display: none; justify-content: center; gap: 15px; align-items: center; opacity: 0.8;">
         <span id="visitor-count-container">
             <i class="fas fa-eye" style="color: var(--primary-color); margin-right: 4px;"></i> 
             总访问量: <span id="visitor-count" style="font-weight: 600; color: var(--primary-color);">...</span>
@@ -11,26 +11,29 @@
     </div>
 
     <script>
-        async function getVisitorCount() {
-            const visitorElement = document.getElementById('visitor-count');
-            const statsArea = document.getElementById('stats-area');
-
-            try {
-                // 如果你改了 Worker 名字，记得同步修改这里
+        (function() {
+            async function getVisitorCount() {
+                const visitorElement = document.getElementById('visitor-count');
+                const statsArea = document.getElementById('stats-area');
                 const WORKER_URL = 'https://visitor-counter.1379523665.workers.dev';
-                
-                const response = await fetch(WORKER_URL);
-                if (response.ok) {
-                    const text = await response.text();
-                    if (text && !isNaN(text.trim())) {
-                        visitorElement.innerText = parseInt(text.trim()).toLocaleString();
-                        statsArea.style.display = 'flex';
+
+                try {
+                    const response = await fetch(WORKER_URL);
+                    if (response.ok) {
+                        const text = await response.text();
+                        if (text && !isNaN(text.trim())) {
+                            visitorElement.innerText = parseInt(text.trim()).toLocaleString();
+                            statsArea.style.display = 'flex';
+                        }
                     }
-                }
-            } catch (error) {
-                console.warn('Visitor stats fetch failed. This is usually due to AdBlockers or network restrictions.');
+                } catch (e) {}
             }
-        }
-        getVisitorCount();
+            
+            if (document.readyState === 'complete') {
+                getVisitorCount();
+            } else {
+                window.addEventListener('load', getVisitorCount);
+            }
+        })();
     </script>
 </footer>
