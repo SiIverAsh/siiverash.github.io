@@ -1,5 +1,3 @@
----
----
 @charset "UTF-8";
 
 /* 1. 变量定义 */
@@ -7,7 +5,7 @@
     --primary-color: #4a90e2; 
     --text-main: #111111; 
     --text-muted: #555555;
-    --glass-bg: rgba(245, 247, 250, 0.85); /* 稍微暗一点的浅色背景 */
+    --glass-bg: rgba(245, 247, 250, 0.85); 
     --glass-border: rgba(0, 0, 0, 0.05); 
     --shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.1); 
     --code-bg: #f1f3f5; 
@@ -37,7 +35,6 @@ body, html {
 
 .dark-mode body, .dark-mode html { 
     background-color: #000000 !important;
-    /* 解决深色模式下字体变细的视觉差 */
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -74,7 +71,7 @@ body, html {
 .extra-box { padding: 20px; position: relative; }
 .extra-title { font-size: 0.95em; font-weight: bold; color: var(--primary-color); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
 
-/* 5. 搜索框终极置顶修复 */
+/* 5. 搜索框置顶 */
 .search-box-card { 
     overflow: visible !important; 
     z-index: 10002 !important; 
@@ -108,18 +105,16 @@ body, html {
 /* 7. 博客内容优化 - 强制排版锁定 */
 .content-card { padding: 40px; min-height: 400px; max-width: 850px; margin: 0 auto; overflow-wrap: break-word; font-size: 1.05em; line-height: 1.75; }
 
-/* 深色模式：锁死正文颜色，但不影响蓝色标题 */
 .dark-mode .content-card p, .dark-mode .content-card li, .dark-mode #cv-content p, .dark-mode .extra-box {
     color: #ffffff !important;
 }
 
-/* 核心：无论什么模式，蓝色元素强制保持蓝色，且粗细不变 */
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .extra-title, 
 .dark-mode .history-year, .dark-mode #cv-name, .dark-mode #wiki-title, 
 .dark-mode .sidebar h2, .dark-mode .post-preview-card h3,
 .dark-mode .nav-item i {
     color: var(--primary-color) !important;
-    font-weight: inherit !important;
+    font-weight: bold !important;
 }
 
 .dark-mode .post-preview-card p, .dark-mode #clock-date { color: var(--text-muted) !important; }
@@ -140,7 +135,7 @@ div.highlighter-rouge, .highlight, pre, code {
 .dark-mode .social-links a { color: #ffffff !important; }
 
 .nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 15px; margin: 5px 0; border-radius: 12px; text-decoration: none; color: var(--text-main); background: rgba(255,255,255,0.1); font-weight: 600; transition: 0.3s; }
-.dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; color: #ffffff !important; }
+.dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; color: #ffffff !important; font-weight: 600 !important; }
 .nav-item:hover { background: var(--primary-color) !important; color: white !important; transform: translateX(5px); }
 
 /* 10. 主题切换按钮 */
