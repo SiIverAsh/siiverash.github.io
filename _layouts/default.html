@@ -12,7 +12,17 @@
         <i class="fas fa-bars"></i>
     </button>
 
+    <button id="mobile-search-toggle" title="Search">
+        <i class="fas fa-search"></i>
+    </button>
+
     <div class="sidebar-overlay"></div>
+    <div id="mobile-search-overlay" class="search-overlay">
+        <div class="search-overlay-content">
+            <div id="mobile-search-container"></div>
+            <button id="close-search" class="close-search-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
 
     <div class="background"></div>
     
@@ -20,9 +30,6 @@
         {% include sidebar.html %}
 
         <main class="main-content">
-            <!-- 手机端顶部搜索栏占位符 -->
-            <div id="mobile-search-placeholder"></div>
-
             <div class="content-card glass-card">
                 {{ content }}
                 {% include footer.html %}

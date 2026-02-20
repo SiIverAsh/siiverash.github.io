@@ -31,6 +31,23 @@
     }
 
     /**
+     * 动漫相关组件初始化（声优推荐）
+     */
+    function loadAnimeExtras() {
+        const cvName = document.getElementById('cv-name');
+        if (cvName && window.siteData && window.siteData.cv_recommend) {
+            const cv = window.siteData.cv_recommend;
+            cvName.textContent = cv.name;
+            document.getElementById('cv-agency').textContent = "🏢 " + cv.agency;
+            document.getElementById('cv-hometown').textContent = "📍 " + cv.hometown;
+            document.getElementById('cv-works').textContent = "代表作: " + cv.works;
+            document.getElementById('cv-intro').textContent = cv.intro;
+            const wikiLink = document.getElementById('cv-wiki-link');
+            if (wikiLink) { wikiLink.href = "https://zh.moegirl.org.cn/" + encodeURIComponent(cv.name); }
+        }
+    }
+
+    /**
      * 展示邮箱弹窗，支持移动端自适应居中显示
      */
     function showEmail(event, email) {
@@ -38,7 +55,6 @@
         const oldTip = document.getElementById('email-tooltip');
         if (oldTip) oldTip.remove();
         
-        // 手机端专用：创建独立背景遮罩层以隔离视觉干扰
         let emailOverlay = null;
         if (window.innerWidth <= 768) {
             emailOverlay = document.createElement('div');
@@ -51,23 +67,19 @@
         tip.className = 'glass-card email-pop';
         tip.textContent = email;
         
-        // 移动端全屏居中，桌面端跟随鼠标点击位置
         if (window.innerWidth <= 768) {
             tip.style.left = '50%';
             tip.style.top = '50%';
             tip.style.transform = 'translate(-50%, -50%)';
         } else {
-            // 在 fixed 定位下必须使用 clientX/clientY 以便在滚动页面时依然能正确对齐视口
             tip.style.left = (event.clientX + 10) + 'px';
             tip.style.top = (event.clientY + 10) + 'px';
         }
         
-        // 挂载弹窗至专用容器或 body
         const container = document.getElementById('email-pop-container') || document.body;
         if (emailOverlay) container.appendChild(emailOverlay);
         container.appendChild(tip);
 
-        // 点击空白处关闭弹窗
         const closeTip = () => {
             tip.classList.add('fade-out');
             if (emailOverlay) {
@@ -101,16 +113,17 @@
     }
 
     /**
-     * 深色模式主题切换逻辑
+     * 主题切换加载与控制
      */
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-    const icon = themeToggle ? themeToggle.querySelector('i') : null;
-
+    
+    // 初始加载主题
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
         body.classList.add('dark-mode');
+        const icon = themeToggle?.querySelector('i');
         if(icon) icon.classList.replace('fa-sun', 'fa-moon');
     }
 
@@ -118,28 +131,17 @@
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             const isDark = body.classList.contains('dark-mode');
+            const icon = themeToggle.querySelector('i');
             if(icon) {
-                if (isDark) { icon.classList.replace('fa-sun', 'fa-moon'); localStorage.setItem('theme', 'dark'); }
-                else { icon.classList.replace('fa-moon', 'fa-sun'); localStorage.setItem('theme', 'light'); }
+                if (isDark) { 
+                    icon.classList.replace('fa-sun', 'fa-moon'); 
+                    localStorage.setItem('theme', 'dark'); 
+                } else { 
+                    icon.classList.replace('fa-moon', 'fa-sun'); 
+                    localStorage.setItem('theme', 'light'); 
+                }
             }
         });
-    }
-
-    /**
-     * 动漫相关组件初始化
-     */
-    function loadAnimeExtras() {
-        const cvName = document.getElementById('cv-name');
-        if (cvName && window.siteData && window.siteData.cv_recommend) {
-            const cv = window.siteData.cv_recommend;
-            cvName.textContent = cv.name;
-            document.getElementById('cv-agency').textContent = "🏢 " + cv.agency;
-            document.getElementById('cv-hometown').textContent = "📍 " + cv.hometown;
-            document.getElementById('cv-works').textContent = "代表作: " + cv.works;
-            document.getElementById('cv-intro').textContent = cv.intro;
-            const wikiLink = document.getElementById('cv-wiki-link');
-            if (wikiLink) { wikiLink.href = "https://zh.moegirl.org.cn/" + encodeURIComponent(cv.name); }
-        }
     }
 
     /**
@@ -150,20 +152,20 @@
         loadAnimeExtras();
         if (typeof loadBangumiWiki === 'function') loadBangumiWiki();
 
-        // 移动端适配逻辑：侧边栏切换与元素搬运
-        const menuToggle = document.getElementById('mobile-menu-toggle');
         const sidebar = document.querySelector('.sidebar');
-        const overlay = document.querySelector('.sidebar-overlay');
+        const sidebarOverlay = document.querySelector('.sidebar-overlay');
         const extraSidebar = document.querySelector('.extra-sidebar');
-        const mobileSearchPlaceholder = document.getElementById('mobile-search-placeholder');
+        const mobileSearchContainer = document.getElementById('mobile-search-container');
+        const searchOverlay = document.getElementById('mobile-search-overlay');
 
-        if (menuToggle && sidebar && overlay) {
-            // 在小屏幕下将搜索卡片移动至主内容区顶部占位符
+        // 处理移动端适配逻辑：侧边栏切换与搜索框搬运
+        if (sidebar && sidebarOverlay && mobileSearchContainer && searchOverlay) {
+            
             const handleResize = () => {
                 const searchCard = document.querySelector('.search-box-card');
-                if (window.innerWidth <= 768 && searchCard && mobileSearchPlaceholder) {
-                    if (!mobileSearchPlaceholder.contains(searchCard)) {
-                        mobileSearchPlaceholder.appendChild(searchCard);
+                if (window.innerWidth <= 768 && searchCard) {
+                    if (!mobileSearchContainer.contains(searchCard)) {
+                        mobileSearchContainer.appendChild(searchCard);
                     }
                 } else if (window.innerWidth > 768 && searchCard && extraSidebar) {
                     if (!extraSidebar.contains(searchCard)) {
@@ -171,23 +173,42 @@
                     }
                 }
             };
-
             window.addEventListener('resize', handleResize);
             handleResize();
 
-            const toggleSidebar = () => {
+            // 侧边栏开关
+            document.getElementById('mobile-menu-toggle')?.addEventListener('click', () => {
                 sidebar.classList.toggle('active');
-                overlay.classList.toggle('active');
-                document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+                sidebarOverlay.classList.toggle('active');
+            });
+
+            sidebarOverlay.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+            });
+
+            // 搜索弹出层开关
+            document.getElementById('mobile-search-toggle')?.addEventListener('click', () => {
+                searchOverlay.classList.add('active');
+                searchOverlay.style.display = 'flex';
+                document.getElementById('search-input')?.focus();
+            });
+
+            const closeSearch = () => {
+                searchOverlay.classList.remove('active');
+                setTimeout(() => { searchOverlay.style.display = 'none'; }, 300);
             };
 
-            menuToggle.addEventListener('click', toggleSidebar);
-            overlay.addEventListener('click', toggleSidebar);
+            document.getElementById('close-search')?.addEventListener('click', closeSearch);
+            searchOverlay.addEventListener('click', (e) => {
+                if (e.target === searchOverlay) closeSearch();
+            });
 
-            // 点击导航项后自动关闭菜单
+            // 导航点击后自动关闭菜单
             document.querySelectorAll('.nav-item').forEach(item => {
                 item.addEventListener('click', () => {
-                    if (sidebar.classList.contains('active')) toggleSidebar();
+                    sidebar.classList.remove('active');
+                    sidebarOverlay.classList.remove('active');
                 });
             });
         }

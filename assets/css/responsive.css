@@ -15,17 +15,16 @@
     .wrapper {
         display: block;
         padding: 70px 12px 20px;
-        z-index: auto !important; /* 解除层叠上下文锁定 */
+        z-index: auto !important;
     }
 
-    /* 侧边栏抽屉样式 */
     .sidebar {
         position: fixed;
         left: -320px;
         top: 0;
         width: 290px;
         height: 100vh;
-        z-index: 1000; 
+        z-index: 10001; 
         transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         box-shadow: 15px 0 50px rgba(0,0,0,0.3);
         overflow-y: auto;
@@ -45,35 +44,6 @@
         left: 0;
     }
 
-    .sidebar h2 {
-        color: var(--primary-color) !important;
-        font-weight: 800;
-        margin-bottom: 20px;
-        letter-spacing: 1px;
-    }
-
-    .sidebar .avatar {
-        width: 90px;
-        height: 90px;
-        margin-bottom: 20px;
-        border: 3px solid white;
-    }
-
-    .sidebar .social-links {
-        margin-bottom: 25px;
-    }
-
-    .sidebar .nav-item {
-        background: rgba(255, 255, 255, 0.15) !important;
-        padding: 12px 20px;
-        margin: 10px 0;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .dark-mode .sidebar .nav-item {
-        background: rgba(255, 255, 255, 0.05) !important;
-    }
-
     .main-content {
         width: 100%;
     }
@@ -83,12 +53,11 @@
         border-radius: 20px;
     }
 
-    /* 顶部菜单按钮样式 */
-    #mobile-menu-toggle {
+    /* 顶部按钮通用样式 */
+    #mobile-menu-toggle, #mobile-search-toggle, #theme-toggle {
         display: flex !important;
         position: fixed;
         top: 15px;
-        left: 15px;
         width: 42px;
         height: 42px;
         border-radius: 12px;
@@ -96,15 +65,59 @@
         backdrop-filter: blur(15px);
         border: 1px solid var(--glass-border);
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        z-index: 1001; 
+        z-index: 10005;
         align-items: center;
         justify-content: center;
-        font-size: 1.2em;
+        font-size: 1.1em;
         color: var(--primary-color);
         cursor: pointer;
     }
 
-    /* 背景遮罩层 */
+    #mobile-menu-toggle { left: 15px; }
+    #mobile-search-toggle { right: 67px; } /* 位于主题按钮左侧 */
+    #theme-toggle { right: 15px !important; top: 15px !important; }
+
+    /* 搜索弹出层样式 */
+    .search-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 2000000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .search-overlay.active {
+        display: flex;
+        opacity: 1;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 80px;
+    }
+
+    .search-overlay-content {
+        width: 90%;
+        max-width: 500px;
+        position: relative;
+    }
+
+    .close-search-btn {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
     .sidebar-overlay {
         display: none;
         position: fixed;
@@ -113,54 +126,20 @@
         width: 100vw;
         height: 100vh;
         background: rgba(0,0,0,0.4);
-        z-index: 999; 
+        z-index: 10000; 
         backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
     }
     
-    .sidebar-overlay.active {
-        display: block;
-    }
+    .sidebar-overlay.active { display: block; }
 
-    #mobile-moved-content {
-        display: none !important;
-    }
-
-    /* 顶部搜索框样式 */
-    #mobile-search-placeholder {
-        display: block;
-        margin-bottom: 20px;
-        width: 100%;
-        z-index: 1;
-    }
-
-    #mobile-search-placeholder .search-box-card {
-        padding: 15px;
-        border-radius: 16px;
-        background: var(--glass-bg) !important;
-        backdrop-filter: blur(10px);
-        border: 1px solid var(--glass-border);
-        box-shadow: var(--shadow);
-    }
-
-    #theme-toggle {
-        top: 15px !important;
-        right: 15px !important;
-        width: 42px !important;
-        height: 42px !important;
-        z-index: 1001 !important;
-    }
-
-    /* 邮箱弹窗手机端层级加固 */
+    /* 邮箱弹窗移动端层级加固 */
     .email-pop {
         z-index: 2147483647 !important;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
 }
 
-/* Desktop Utility Hiding */
 @media (min-width: 769px) {
-    #mobile-menu-toggle { display: none !important; }
+    #mobile-menu-toggle, #mobile-search-toggle { display: none !important; }
 }
 
 img { max-width: 100%; height: auto; }
