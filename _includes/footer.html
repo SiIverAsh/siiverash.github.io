@@ -1,3 +1,28 @@
-<footer style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed rgba(0,0,0,0.1); font-size: 0.85em; color: #888; text-align: center;">
-    <p>&copy; {{ site.time | date: '%Y' }} SilverAsh. Built with <i class="fab fa-github"></i> Actions & Jekyll.</p>
+<footer class="glass-card" style="margin-top: 50px; padding: 25px; border-top: 1px dashed var(--glass-border); text-align: center; border-radius: 20px; box-shadow: none; background: transparent !important;">
+    <p style="margin-bottom: 10px; font-weight: 500; color: var(--text-main);">&copy; {{ site.time | date: '%Y' }} SilverAsh. Built with <i class="fab fa-github"></i> Actions & Jekyll.</p>
+    
+    <div class="visitor-stats" style="font-size: 0.85em; color: var(--text-muted); display: flex; justify-content: center; gap: 15px; align-items: center;">
+        <span id="visitor-count-container">
+            <i class="fas fa-eye" style="color: var(--primary-color);"></i> 
+            总访问量: <span id="visitor-count" style="font-weight: bold; color: var(--primary-color);">...</span>
+        </span>
+    </div>
+
+    <script>
+        async function getVisitorCount() {
+            try {
+                // 请将此 URL 替换为您在 Cloudflare 控制台部署后的 Worker 路由地址
+                const WORKER_URL = 'https://visitor-counter.siiverash.workers.dev';
+                const response = await fetch(WORKER_URL);
+                const count = await response.text();
+                if (count) {
+                    document.getElementById('visitor-count').innerText = parseInt(count).toLocaleString();
+                }
+            } catch (error) {
+                console.error('Visitor count fetch error:', error);
+                document.getElementById('visitor-count').innerText = 'N/A';
+            }
+        }
+        getVisitorCount();
+    </script>
 </footer>

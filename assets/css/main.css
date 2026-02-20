@@ -474,15 +474,34 @@ code {
     }
 }
 
-@media (max-width: 850px) {
-    .wrapper {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 20px 10px;
-    }
-    .sidebar {
-        position: relative;
-        top: 0;
-        width: 100%;
-        box-sizing: border-box;
-    }
+/* ==========================================================================
+   14. 页脚与统计 (Footer & Stats)
+   ========================================================================== */
+
+footer {
+    margin-top: 50px;
+    padding: 30px 0;
+    border-top: 1px dashed var(--glass-border);
+    font-size: 0.9em;
+    color: var(--text-muted); /* 使用变量确保对比度 */
+    text-align: center;
 }
+
+.dark-mode footer {
+    color: #bbbbbb;
+}
+
+.busuanzi-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+#visitor-count {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
