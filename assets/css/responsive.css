@@ -1,4 +1,6 @@
-/* Tablet Layout (1100px) */
+/* ==========================================================================
+   Tablet Layout (max-width: 1100px)
+   ========================================================================== */
 @media (max-width: 1100px) {
     .wrapper {
         grid-template-columns: 260px 1fr;
@@ -10,14 +12,17 @@
     }
 }
 
-/* Mobile Layout (768px) */
+/* ==========================================================================
+   Mobile Layout (max-width: 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
     .wrapper {
         display: block;
         padding: 70px 12px 20px;
-        z-index: auto !important;
+        z-index: auto !important; 
     }
 
+    /* Sidebar Drawer */
     .sidebar {
         position: fixed;
         left: -320px;
@@ -44,6 +49,27 @@
         left: 0;
     }
 
+    .sidebar h2 {
+        color: var(--primary-color) !important;
+        font-weight: 800;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .sidebar .avatar {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 20px;
+        border: 3px solid white;
+    }
+
+    .sidebar .nav-item {
+        background: rgba(255, 255, 255, 0.15) !important;
+        padding: 12px 20px;
+        margin: 10px 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     .main-content {
         width: 100%;
     }
@@ -53,7 +79,7 @@
         border-radius: 20px;
     }
 
-    /* 顶部按钮通用样式 */
+    /* Floating Action Buttons (Menu, Search, Theme) */
     #mobile-menu-toggle, #mobile-search-toggle, #theme-toggle {
         display: flex !important;
         position: fixed;
@@ -74,10 +100,10 @@
     }
 
     #mobile-menu-toggle { left: 15px; }
-    #mobile-search-toggle { right: 67px; } /* 位于主题按钮左侧 */
+    #mobile-search-toggle { right: 67px; } 
     #theme-toggle { right: 15px !important; top: 15px !important; }
 
-    /* 搜索弹出层样式 */
+    /* Search Overlay */
     .search-overlay {
         display: none;
         position: fixed;
@@ -132,12 +158,16 @@
     
     .sidebar-overlay.active { display: block; }
 
-    /* 邮箱弹窗移动端层级加固 */
+    /* Email Tooltip Mobile Stabilization */
     .email-pop {
         z-index: 2147483647 !important;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
 }
 
+/* ==========================================================================
+   Utilities & Global Overrides
+   ========================================================================== */
 @media (min-width: 769px) {
     #mobile-menu-toggle, #mobile-search-toggle, .search-overlay { display: none !important; }
 }
