@@ -482,6 +482,7 @@ code {
     .wrapper {
         display: block;
         padding: 70px 12px 20px;
+        z-index: auto !important; /* 关键修复：打破层叠上下文，允许内部侧边栏跳出 */
     }
 
     .sidebar {
