@@ -69,7 +69,7 @@ html {
     min-height: calc(100vh - 80px);
     align-items: start;
     position: relative;
-    z-index: 1;
+    z-index: auto;
 }
 
 .main-content {
@@ -365,7 +365,7 @@ code {
 }
 
 .email-pop {
-    position: fixed; /* 改为 fixed 确保在移动端也能定位正确 */
+    position: fixed;
     padding: 12px 20px;
     font-size: 1em;
     font-weight: bold;
@@ -374,7 +374,8 @@ code {
     backdrop-filter: blur(15px);
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    z-index: 3000000 !important; /* 必须高于侧边栏的 2000001 */
+    z-index: 999999999 !important; /* 绝对最高层级 */
+    transform: translateZ(9999px); /* 强制 GPU 渲染置顶 */
     animation: popIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     border: 1px solid var(--glass-border);
 }

@@ -15,7 +15,7 @@
     .wrapper {
         display: block;
         padding: 70px 12px 20px;
-        z-index: auto !important;
+        /* 不再设置 z-index，让内部 fixed 元素在 root 上下文中渲染 */
     }
 
     .sidebar {
@@ -94,7 +94,7 @@
         backdrop-filter: blur(15px);
         border: 1px solid var(--glass-border);
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        z-index: 10002; /* 按钮层级，始终在侧边栏上方 */
+        z-index: 10002; /* 按钮始终在侧边栏上方 */
         align-items: center;
         justify-content: center;
         font-size: 1.2em;
@@ -110,7 +110,7 @@
         width: 100vw;
         height: 100vh;
         background: rgba(0,0,0,0.4);
-        z-index: 10000; /* 遮罩层在侧边栏下方 */
+        z-index: 10000; /* 遮罩层在底部 */
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
     }
@@ -146,9 +146,9 @@
         z-index: 10002 !important;
     }
 
-    /* 邮箱弹窗最高层级保证 */
+    /* 邮箱弹窗移动端层级加固：使用更高的层级确保覆盖 */
     .email-pop {
-        z-index: 20000 !important; /* 这个层级现在高于 10001 和 10002，绝对在最顶层 */
+        z-index: 2000000 !important;
     }
 }
 
