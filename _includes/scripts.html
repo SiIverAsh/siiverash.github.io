@@ -57,8 +57,9 @@
             tip.style.top = '50%';
             tip.style.transform = 'translate(-50%, -50%)';
         } else {
-            tip.style.left = (event.pageX + 10) + 'px';
-            tip.style.top = (event.pageY + 10) + 'px';
+            // 在 fixed 定位下必须使用 clientX/clientY 以便在滚动页面时依然能正确对齐视口
+            tip.style.left = (event.clientX + 10) + 'px';
+            tip.style.top = (event.clientY + 10) + 'px';
         }
         
         // 挂载弹窗至专用容器或 body
