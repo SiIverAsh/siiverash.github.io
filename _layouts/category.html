@@ -8,15 +8,17 @@ layout: default
     </h2>
     
     <div class="filter-wrapper">
-        <!-- 年份下拉框 -->
+        <!-- 年份下拉框：深度自定义 -->
         <div class="year-filter-box">
             <span class="filter-label">年份:</span>
-            <select id="year-filter" class="filter-select" onchange="applyFilters()">
-                <option value="all">全部</option>
-            </select>
+            <div class="select-wrapper">
+                <select id="year-filter" class="filter-select" onchange="applyFilters()">
+                    <option value="all">全部年份</option>
+                </select>
+            </div>
         </div>
 
-        <!-- 标签胶囊流 -->
+        <!-- 标签胶囊流：智能加权排序 -->
         <div id="tag-pills-container" class="tag-pills-container">
             <span class="tag-pill active" data-value="all" onclick="selectTag(this)">全部标签</span>
         </div>
@@ -76,22 +78,45 @@ layout: default
     let activeTag = 'all';
     const allItems = Array.from(document.querySelectorAll('.post-item'));
 
+    /**
+     * 智能初始化筛选器：统计频率并排序
+     */
     function initFilters() {
         const years = new Set();
-        const tags = new Set();
+        const tagCounts = {}; // 用于统计标签频率
+        
         allItems.forEach(item => {
             years.add(item.dataset.year);
-            item.dataset.tags.split(',').forEach(t => { if(t) tags.add(t.trim()); });
+            const tags = item.dataset.tags.split(',');
+            tags.forEach(t => {
+                const cleanT = t.trim();
+                if (cleanT) {
+                    tagCounts[cleanT] = (tagCounts[cleanT] || 0) + 1;
+                }
+            });
         });
+
+        // 填充年份下拉框
         const yearSelect = document.getElementById('year-filter');
         Array.from(years).sort().reverse().forEach(y => {
             yearSelect.innerHTML += `<option value="${y}">${y}年</option>`;
         });
+
+        // 智能标签排序：频率优先 (代表性)，频率相同时按字母序
+        const sortedTags = Object.keys(tagCounts).sort((a, b) => {
+            if (tagCounts[b] !== tagCounts[a]) {
+                return tagCounts[b] - tagCounts[a];
+            }
+            return a.localeCompare(b);
+        });
+
+        // 填充标签胶囊
         const tagContainer = document.getElementById('tag-pills-container');
-        Array.from(tags).sort().forEach(t => {
+        sortedTags.forEach(t => {
             const pill = document.createElement('span');
             pill.className = 'tag-pill';
-            pill.textContent = t;
+            // 如果出现频率很高，可以加个小标识，或者直接通过排序体现
+            pill.innerHTML = `${t} <small style="opacity:0.5; font-size:0.8em;">${tagCounts[t]}</small>`;
             pill.dataset.value = t;
             pill.onclick = () => selectTag(pill);
             tagContainer.appendChild(pill);
@@ -159,47 +184,91 @@ layout: default
     .filter-wrapper { 
         display: flex; 
         flex-direction: column; 
-        gap: 12px; 
+        gap: 15px; 
         background: var(--glass-bg); 
-        padding: 15px; 
-        border-radius: 16px; 
+        padding: 18px; 
+        border-radius: 20px; 
         border: 1px solid var(--glass-border); 
+        box-shadow: var(--shadow);
     }
 
-    .year-filter-box { display: flex; align-items: center; gap: 10px; border-bottom: 1px dashed var(--glass-border); padding-bottom: 10px; }
-    .filter-label { font-size: 0.85em; font-weight: bold; color: var(--primary-color); }
+    .year-filter-box { display: flex; align-items: center; gap: 12px; }
     
+    /* 下拉框容器：实现自定义箭头 */
+    .select-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .select-wrapper::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.7em;
+        color: var(--primary-color);
+        pointer-events: none;
+    }
+
     .filter-select { 
-        background: rgba(255, 255, 255, 0.1); 
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none; /* 彻底移除原生样式 */
+        background: rgba(255, 255, 255, 0.15); 
         border: 1px solid var(--glass-border); 
         color: var(--text-main); 
-        font-size: 0.85em; 
-        padding: 4px 12px;
-        border-radius: 10px; /* 圆润化 */
+        font-size: 0.9em; 
+        padding: 6px 35px 6px 15px;
+        border-radius: 12px; /* 增加圆角 */
         cursor: pointer;
         outline: none;
         transition: 0.3s;
+        min-width: 120px;
     }
-    .filter-select:hover { background: rgba(255, 255, 255, 0.2); }
+    
+    .filter-select:hover { background: rgba(255, 255, 255, 0.25); border-color: var(--primary-color); }
+    .filter-select option { background-color: var(--glass-bg); color: var(--text-main); }
+    .dark-mode .filter-select option { background-color: #1e1e1e; color: #ffffff; }
+
+    .tag-pills-container { 
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 8px; 
+        max-height: 150px; 
+        overflow-y: auto; 
+        padding: 5px 5px 5px 0;
+        border-top: 1px dashed var(--glass-border);
+        padding-top: 15px;
+    }
 
     .tag-pill {
         display: inline-block;
         padding: 5px 15px;
         background: rgba(127, 178, 216, 0.1);
         color: var(--text-muted);
-        border-radius: 25px; /* 胶囊圆角 */
-        font-size: 0.8em;
+        border-radius: 25px;
+        font-size: 0.85em;
         cursor: pointer;
         transition: 0.3s;
-        border: 1px solid transparent;
+        border: 1px solid rgba(29, 80, 138, 0.1);
         white-space: nowrap;
     }
-    .tag-pill:hover { background: rgba(127, 178, 216, 0.2); color: var(--primary-color); }
+
+    .tag-pill:hover { background: rgba(127, 178, 216, 0.2); color: var(--primary-color); transform: scale(1.05); }
+    
     .tag-pill.active { 
         background: var(--primary-color); 
         color: white !important; 
-        box-shadow: 0 4px 10px rgba(29, 80, 138, 0.3);
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(29, 80, 138, 0.3);
+        border-color: transparent;
     }
+
+    .tag-pills-container::-webkit-scrollbar { width: 4px; }
+    .tag-pills-container::-webkit-scrollbar-thumb { background: var(--primary-color); opacity: 0.3; border-radius: 10px; }
 
     .post-preview-card { 
         position: relative; 
@@ -213,21 +282,8 @@ layout: default
     }
     .post-preview-card:hover { transform: translateY(-8px); box-shadow: 0 15px 45px rgba(0,0,0,0.1); }
 
-    /* 修复版：标题颜色锁定为蓝色变量，强制覆盖可能的异常继承 */
-    .post-title { 
-        margin: 0; 
-        flex: 1; 
-        color: var(--primary-color) !important; 
-        font-weight: bold;
-    }
-
-    .post-excerpt {
-        margin: 12px 0 0; 
-        font-size: 0.95em; 
-        line-height: 1.6; 
-        color: var(--text-main);
-        opacity: 0.85;
-    }
+    .post-title { margin: 0; flex: 1; color: var(--primary-color) !important; font-weight: bold; }
+    .post-excerpt { margin: 12px 0 0; font-size: 0.95em; line-height: 1.6; color: var(--text-main); opacity: 0.85; }
 
     .post-number-side { 
         position: absolute; 
