@@ -4,15 +4,15 @@ title: Welcome to My HP!
 ---
 
 <div style="text-align: center; padding: 10px 0;">
-    <h1 style="font-size: 2.5em; color: #4a90e2; margin-bottom: 20px;">Welcome to My HP!</h1>
+    <h1 style="font-size: 2.5em; color: #1d508a; margin-bottom: 20px;">Welcome to My HP!</h1>
     <p style="font-size: 1.1em; line-height: 1.8;">Attention Is All You Need!</p>
 
     <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <div class="stat-card" onclick="handleStudyClick()"><h3>📚</h3><p>Study</p></div>
-        <div class="stat-card" onclick="handleClick('anime')"><h3>🌸</h3><p>Anime</p></div>
-        <div class="stat-card" onclick="handleClick('music')"><h3>🎵</h3><p>Music</p></div>
-        <div class="stat-card" onclick="handleClick('paint')"><h3>🎨</h3><p>Paint</p></div>
-        <div class="stat-card" onclick="handleClick('game')"><h3>🎮</h3><p>Game</p></div>
+        <div class="stat-card" onclick="handleStudyClick()"><h3>📚</h3><p style="color: #1d508a; font-weight: bold;">Study</p></div>
+        <div class="stat-card" onclick="handleClick('anime')"><h3>🌸</h3><p style="color: #1d508a; font-weight: bold;">Anime</p></div>
+        <div class="stat-card" onclick="handleClick('music')"><h3>🎵</h3><p style="color: #1d508a; font-weight: bold;">Music</p></div>
+        <div class="stat-card" onclick="handleClick('paint')"><h3>🎨</h3><p style="color: #1d508a; font-weight: bold;">Paint</p></div>
+        <div class="stat-card" onclick="handleClick('game')"><h3>🎮</h3><p style="color: #1d508a; font-weight: bold;">Game</p></div>
     </div>
 
     <div id="sub-tags-area" style="margin-top: 25px; display: none; animation: fadeIn 0.5s;">
@@ -29,7 +29,7 @@ title: Welcome to My HP!
     </div>
 
     <div id="recommend-box" class="recommend-box">
-        <div id="recommend-content"><p style="color: #999;">✨ 点击上方卡片，查看今日 AI 自动推荐 ✨</p></div>
+        <div id="recommend-content"><p style="color: #000000; font-weight: 500;">✨ 点击上方卡片，查看今日 AI 自动推荐 ✨</p></div>
         <div id="rec-tags" class="rec-tags"></div>
         <div id="external-link-area" style="display: none; margin-top: 15px;"><a id="external-link" href="#" target="_blank" class="twitter-btn">去关注画师 𝕏</a></div>
     </div>

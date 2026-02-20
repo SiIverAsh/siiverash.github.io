@@ -131,8 +131,10 @@ div.highlighter-rouge, .highlight, pre, code {
 .social-links a { color: var(--text-muted); font-size: 1.1em; transition: 0.3s; }
 .dark-mode .social-links a { color: #ffffff !important; }
 
-.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 15px; margin: 5px 0; border-radius: 12px; text-decoration: none; color: var(--text-main); background: rgba(255,255,255,0.1); font-weight: 600; transition: 0.3s; }
-.dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; color: #ffffff !important; font-weight: 600 !important; }
+.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 15px; margin: 5px 0; border-radius: 12px; text-decoration: none; color: #1d508a; background: rgba(255,255,255,0.1); font-weight: 600; transition: 0.3s; }
+.dark-mode .nav-item { background: rgba(255,255,255,0.05) !important; color: #ffffff !important; }
+
+.dark-mode #recommend-content p { color: #ffffff !important; }
 .nav-item:hover { background: var(--primary-color) !important; color: white !important; transform: translateX(5px); }
 
 /* 10. 主题切换 */
