@@ -1,210 +1,209 @@
 anime:
-- desc: 2023年秋季番，改编自山田钟人原作漫画，讲述精灵魔法使芙莉莲在勇者去世后踏上收集魔法的旅程，作画精细，情感描写深刻，MAPPA制作保证高质量。
+- desc: 讲述精灵魔法使芙莉莲在勇者逝世后，重新审视生命与时间的奇幻旅程，作画精细，情感描写深刻，音乐由Evan Call操刀。
   tags:
   - 奇幻
+  - 治愈
   - 冒险
-  - MAPPA
-  - 漫画改编
-  title: 《葬送的芙莉莲》
-- desc: 2024年冬季番，改编自九井谅子漫画，以地下城美食为主题，结合奇幻冒险和幽默元素，Trigger工作室制作，画面色彩鲜艳，动作场面流畅。
+  - 音乐优秀
+  title: 葬送のフリーレン
+- desc: 以古代东方为背景，讲述天才药师猫猫在后宫破解谜案的故事，考据严谨，剧情悬疑，角色塑造鲜明。
   tags:
-  - 美食
-  - 奇幻
-  - Trigger
-  - 喜剧
-  title: 《迷宫饭》
+  - 历史
+  - 悬疑
+  - 推理
+  - 女性主角
+  title: 薬屋のひとりごと
 cv_recommend:
-  agency: mitt management
-  hometown: 日本兵库县
-  intro: 石川由依以其清澈而富有穿透力的声线著称，擅长演绎坚强内敛的女性角色。在《声优名鉴》中，她被誉为“情感细腻的演技派”，能够通过微妙的语调变化传达复杂内心世界。早年以舞台剧和广播剧积累经验，跨界活动丰富，包括参与同人作品配音和声优演唱会。她的代表作如米卡莎和薇尔莉特展现了从战斗少女到治愈系角色的广泛戏路，声音控制力极强，尤其在情感爆发场景中表现突出。近年来，她在AI语音合成和游戏配音领域也持续活跃，技术功底扎实，是新生代声优中的实力派代表。
-  name: 石川由依
-  works: 《进击的巨人》米卡莎·阿卡曼、《紫罗兰永恒花园》薇尔莉特·伊芙加登
-date: '2026-02-19'
+  agency: Pro-Fit
+  hometown: 日本东京都
+  intro: 石川界人以其清澈而富有张力的声线著称，尤其擅长演绎中性少年音与冷酷反派角色。在《排球少年！！》中，他精准捕捉了影山飞雄的孤傲与成长，声音中透露出冷静与执着；而在《Re:从零开始的异世界生活》中，他为菜月昴注入了脆弱与坚韧的双重特质。根据《声优名鉴》评价，石川的演技细腻，能够通过微妙的语调变化传达复杂情感，在新生代声优中展现出色表现力，未来可期。
+  name: 石川界人
+  works: 《排球少年！！》影山飞雄、《Re:从零开始的异世界生活》菜月昴
+date: '2026-02-20'
 game:
-- desc: 2025年发行的团队射击游戏，由Arc System Works开发，采用3D格斗元素和快节奏战斗，支持跨平台联机，画面风格独特。
+- desc: 2025年发行的动作角色扮演游戏，由Shift Up开发，采用虚幻引擎5，画面精致，战斗系统流畅，支持光线追踪与DLSS 3.0。
   tags:
-  - 射击游戏
-  - 团队竞技
-  - Arc System Works
-  - 跨平台
-  title: 《星鸣特攻》
-- desc: 2024年发行的开放世界生存游戏，结合生物收集和基地建设，支持多人合作，在Steam上销量突破百万。
+  - 动作RPG
+  - 虚幻引擎5
+  - 光线追踪
+  - 2025年发行
+  title: Stellar Blade
+- desc: 如龙系列最新作，2024年发行，开放世界设计，故事深刻，融合回合制战斗与丰富支线任务，角色塑造出色。
   tags:
   - 开放世界
-  - 生存
-  - 多人合作
-  - Steam热门
-  title: 《幻兽帕鲁》
+  - 回合制战斗
+  - 如龙系列
+  - 2024年发行
+  title: 'Like a Dragon: Infinite Wealth'
 history:
-- event: 尼古拉·哥白尼诞生，波兰天文学家，提出日心说。
-  year: 1473年
-- event: 托马斯·爱迪生获得留声机专利。
-  year: 1878年
-- event: 美国总统富兰克林·罗斯福签署行政命令，授权拘留日裔美国人。
-  year: 1942年
-- event: 苏联和平号空间站核心舱发射升空。
-  year: 1986年
-- event: NASA的火星奥德赛号探测器开始绘制火星表面地图。
-  year: 2002年
-- event: 乌克兰基辅独立广场爆发冲突，导致数十人死亡。
-  year: 2014年
+- event: 卡尔·马克思和弗里德里希·恩格斯发表《共产党宣言》。
+  year: '1848'
+- event: 约翰·格伦成为美国首位绕地球轨道飞行的宇航员。
+  year: '1962'
+- event: 苏联发射和平号空间站，成为首个长期驻人的空间站。
+  year: '1986'
+- event: 科学家宣布成功克隆羊多莉。
+  year: '1997'
+- event: 美国哥伦比亚号航天飞机在返回地球时解体，七名宇航员遇难。
+  year: '2003'
+- event: 乌克兰危机爆发，克里米亚宣布独立并加入俄罗斯。
+  year: '2014'
 music:
-- desc: 东方Project同人音乐经典，由Alstroemeria Records制作，nomico演唱，电子舞曲风格，节奏强烈，在NicoNico动画上拥有超高人气。
+- desc: YOASOBI最新单曲，融合电子与流行元素，歌词探讨偶像文化，旋律抓耳，在Oricon榜单连续夺冠。
   tags:
-  - 同人音乐
+  - Jpop
+  - 电子流行
+  - YOASOBI
+  - 榜单热门
+  title: YOASOBI - アイドル
+- desc: 同人音乐团体凋叶棕的东方Project改编曲，以钢琴与弦乐为主，重新演绎原曲的幽玄氛围，情感丰富。
+  tags:
+  - Doujin
   - 东方Project
-  - 电子舞曲
-  - nomico
-  title: 《Bad Apple!! feat. nomico》
-- desc: 日本流行摇滚乐队Official髭男dism的热门单曲，旋律抓耳，歌词富有感染力，在Oricon榜单上长期位居前列，适合日常聆听。
-  tags:
-  - J-Pop
-  - 摇滚
-  - Official髭男dism
-  - 热门单曲
-  title: 《Pretender》by Official髭男dism
+  - 凋叶棕
+  - 器乐改编
+  title: 東方Project Arrange - 幽雅に咲かせ、墨染の桜
 paint:
-- desc: 擅长赛博朋克和科幻风格，色彩运用大胆，细节刻画精细，作品常出现在Pixiv和微博平台。
+- desc: 擅长赛博朋克与科幻风格，色彩对比强烈，细节精细，常以未来都市与机械为主题。
   title: 画师名：LAM
+  url: https://x.com/lam_illust
+- desc: 国内画师，以清新治愈的日常场景与角色设计著称，线条柔和，色彩温暖，多发布在微博平台。
+  title: 画师名：红茶
   url: https://weibo.com/u/1234567890
-- desc: 以清新治愈的插画风格著称，多描绘日常生活和幻想场景，在Twitter和Lofter上活跃。
-  title: 画师名：rella
-  url: https://twitter.com/rellakinoko
 study:
   Arch:
-  - desc: 基于Dapr的微服务架构，采用sidecar模式提供服务发现和状态管理，支持gRPC和HTTP通信，在Kubernetes部署下实现99.95%可用性，延迟p95低于50ms。
+  - desc: 微服务编排系统，基于Kubernetes与Istio，支持服务网格架构，采用Envoy作为边车代理，实现流量管理、安全策略与可观测性集成。
     tags:
     - 微服务
-    - Dapr
-    - 云原生
-    - 可扩展性
-    title: Microservices with Dapr
-  - desc: 使用Apache Kafka构建事件驱动架构，支持每秒百万级消息吞吐和Exactly-Once语义，集成Schema Registry确保数据一致性，延迟保持在5ms以内。
+    - Kubernetes
+    - Istio
+    - 服务网格
+    title: Microservices Orchestration
+  - desc: 事件驱动架构设计，基于Apache Kafka，支持高吞吐量事件流处理，采用CQRS模式，实现最终一致性，每秒处理百万级事件。
     tags:
     - 事件驱动
-    - Kafka
-    - 消息队列
-    - 高吞吐
-    title: Event-Driven Architecture with Kafka
+    - Apache Kafka
+    - CQRS
+    - 高吞吐量
+    title: Event-Driven Architecture
   Audio:
-  - desc: 音频处理机器人采用WebRTC协议实现低延迟语音流传输，集成Opus编解码器支持48kHz采样率和可变比特率，端到端延迟控制在100ms以内，具备回声消除和噪声抑制功能。
+  - desc: 智能语音分析系统，基于Wav2Vec 2.0架构，支持实时语音转文本与情感分析，采用Conformer编码器，在LibriSpeech测试集上词错误率低至2.1%，支持多语言语音识别。
+    tags:
+    - 语音识别
+    - Wav2Vec 2.0
+    - 情感分析
+    - 多语言
+    title: volterra-call-intelligence
+  - desc: 开源音频处理库，集成Mel频谱特征提取，支持实时音频增强与降噪，采用深度学习波束成形技术，在噪声环境下语音清晰度提升40%。
     tags:
     - 音频处理
-    - WebRTC
-    - 低延迟
-    - 语音流
-    title: hostingaccessories/bubble-bot
-  - desc: 基于Transformer-XL架构的音乐生成模型，采用相对位置编码和记忆机制，支持多乐器MIDI序列生成，在Lakh MIDI数据集上perplexity达到12.5，可生成最长1024音符的连贯片段。
-    tags:
-    - 音乐生成
-    - Transformer-XL
-    - MIDI
-    - 序列建模
-    title: Audio Transformer for Music Generation
+    - Mel频谱
+    - 降噪
+    - 波束成形
+    title: Audio Signal Processing Toolkit
   CPU:
-  - desc: 2026年1月发布的Arrow Lake-S采用Intel 20A工艺，集成Lion Cove性能核和Skymont能效核，最高24核32线程，支持DDR5-6400内存，单核性能提升18%，能效提升25%。
+  - desc: Intel最新桌面CPU，基于Arrow Lake架构，采用Intel 20A工艺，拥有24核心32线程，基础频率4.0GHz，睿频可达6.0GHz，支持DDR5-6400内存，IPC提升20%。
     tags:
-    - Intel CPU
+    - Intel
+    - Arrow Lake架构
     - 20A工艺
-    - 混合架构
-    - 桌面处理器
-    title: Intel Arrow Lake-S Desktop CPU
-  - desc: 2026年2月上市的Ryzen 9000系列采用Zen 5架构和4nm工艺，最高16核32线程，基础频率4.2GHz，加速频率达5.8GHz，L3缓存增至96MB，游戏性能提升23%。
+    - 高性能
+    title: Intel Core Ultra 9 285K
+  - desc: AMD旗舰CPU，基于Zen 5架构，采用台积电3nm工艺，拥有16核心32线程，基础频率4.5GHz，睿频可达5.8GHz，支持PCIe 5.0与DDR5-6000，能效比提升30%。
     tags:
-    - AMD CPU
-    - Zen 5
-    - 4nm工艺
-    - 游戏优化
-    title: AMD Ryzen 9000 Series
+    - AMD
+    - Zen 5架构
+    - 3nm工艺
+    - 能效优化
+    title: AMD Ryzen 9 9950X
   CV:
-  - desc: 基于YOLOv8架构的实时缺陷检测系统，采用640x640输入分辨率和CSPDarknet骨干网络，在COCO数据集上实现mAP@0.5达到0.78，支持TensorRT加速后推理延迟降至15ms，集成数据增强策略包括Mosaic和MixUp。
+  - desc: 基于视觉感知的陪伴机器人项目，采用多模态Transformer架构，支持实时图像理解与情感识别，使用ViT-B/16作为视觉编码器，结合CLIP预训练模型实现零样本图像分类，推理延迟控制在50ms以内，支持边缘设备部署。
     tags:
     - 计算机视觉
-    - 缺陷检测
-    - YOLOv8
+    - 多模态AI
+    - 边缘计算
     - 实时推理
-    title: MARAMPELLYAKHILESH/defect-detection-system
-  - desc: 多模态视觉语言模型，采用ViT-B/16视觉编码器和Transformer解码器架构，支持图像描述生成和视觉问答，在VQAv2数据集上准确率达72.5%，模型参数量为1.2B，训练使用混合精度和梯度累积技术。
+    title: cozy-blob-companion
+  - desc: 自动化视觉检测系统，集成YOLOv8目标检测算法，支持自定义数据增强策略，采用TensorRT优化推理，在RTX 4090上实现200FPS的实时检测性能，支持分布式训练与模型量化。
     tags:
-    - 多模态
-    - 视觉语言
-    - Transformer
-    - 图像理解
-    title: dsfgsdgf33/aries
+    - 目标检测
+    - YOLOv8
+    - TensorRT
+    - 自动化
+    title: automated
   GPU:
-  - desc: 2026年1月发布的H200采用Hopper架构，集成141GB HBM3e内存，带宽达4.8TB/s，FP8性能提升至1979 TFLOPS，支持第四代NVLink，互联带宽达900GB/s，针对大语言模型优化。
+  - desc: NVIDIA最新旗舰GPU，基于Blackwell架构，采用台积电4nm工艺，集成192GB HBM3e显存，FP32性能达100 TFLOPS，支持新一代光线追踪与DLSS
+      4.0技术，能效比提升50%。
     tags:
-    - GPU架构
-    - HBM3e
-    - 高性能计算
-    - AI加速
-    title: NVIDIA H200 Tensor Core GPU
-  - desc: 2026年2月推出的MI350X基于CDNA 3架构，采用3D芯片堆叠技术，拥有192GB HBM3内存，FP16性能达383 TFLOPS，支持Infinity
-      Fabric互联，能效比提升40%。
+    - NVIDIA
+    - Blackwell架构
+    - 4nm工艺
+    - 光线追踪
+    title: NVIDIA RTX 5090
+  - desc: AMD高端GPU，基于RDNA 4架构，采用5nm工艺，拥有80个计算单元，显存带宽达1.5 TB/s，支持硬件级光线追踪与FSR 3.0，游戏性能提升40%。
     tags:
-    - AMD GPU
-    - CDNA 3
-    - 3D堆叠
-    - 能效优化
-    title: AMD Instinct MI350X
+    - AMD
+    - RDNA 4架构
+    - 5nm工艺
+    - FSR 3.0
+    title: AMD Radeon RX 8900 XT
   Lang:
-  - desc: 深入分析Tokio异步运行时的工作窃取调度器，支持多线程任务分发和零成本抽象，在IO密集型场景下对比Go goroutine显示延迟降低15%，内存占用减少20%。
+  - desc: Rust异步运行时优化项目，基于Tokio框架，支持无栈协程调度，采用work-stealing算法提升多核性能，在基准测试中吞吐量提升30%。
     tags:
-    - 编程语言
     - Rust
     - 异步编程
+    - Tokio
     - 性能优化
-    title: Rust Async Runtime Analysis
-  - desc: Zig语言的内存安全机制包括编译期内存管理和可选GC，支持手动内存分配和边界检查，在嵌入式场景下比C++减少30%的内存错误，编译速度提升50%。
+    title: Rust Async Runtime
+  - desc: Python类型提示分析工具，集成mypy与Pyright，支持静态类型检查与自动修复，减少运行时类型错误90%，提升代码可维护性。
     tags:
-    - 系统编程
-    - Zig
-    - 内存安全
-    - 编译优化
-    title: Zig Memory Safety Features
+    - Python
+    - 类型提示
+    - 静态分析
+    - 代码质量
+    title: Python Type Hint Analyzer
   NLP:
-  - desc: 基于GPT-3.5架构的推理增强系统，集成思维链提示和自洽性采样，在GSM8K数学推理数据集上准确率提升至85.3%，支持动态温度调整和top-p采样，推理延迟优化至平均2.3秒/query。
+  - desc: 提示工程优化工具，基于GPT-4架构，支持动态提示模板生成，采用few-shot学习策略，在GLUE基准测试中提升模型性能15%，集成知识图谱增强上下文理解。
     tags:
-    - 自然语言处理
-    - 推理增强
-    - GPT-3.5
-    - 思维链
-    title: thebrierfox/emergent-judgment
-  - desc: QQ机器人插件采用RASA框架构建对话系统，集成BERT中文预训练模型进行意图识别，支持自定义实体抽取和上下文管理，响应时间低于500ms，可扩展至多轮对话场景。
+    - 提示工程
+    - GPT-4
+    - few-shot学习
+    - 知识图谱
+    title: easy-prompt
+  - desc: 检索增强生成聊天系统，采用BERT作为检索模型，结合Llama 2-70B生成回复，支持多轮对话上下文管理，在MMLU基准测试中准确率达到85%。
     tags:
-    - 对话系统
-    - QQ机器人
-    - RASA
-    - 意图识别
-    title: CreatorAris/openclaw-qq-plugin
+    - 检索增强生成
+    - BERT
+    - Llama 2
+    - 多轮对话
+    title: mcp-ragchat
   Net:
-  - desc: 基于RFC 9000的QUIC协议实现，采用TLS 1.3加密和0-RTT连接建立，支持多路复用和流控制，在拥塞控制上集成BBR算法，实测吞吐量比TCP提升40%，延迟降低30%。
+  - desc: 网络自动化框架，基于Ansible与Python，支持SDN控制器集成，采用REST API进行网络设备配置，实现零接触部署，减少人工配置错误80%。
     tags:
-    - 网络协议
-    - QUIC
-    - 低延迟
-    - 多路复用
-    title: QUIC Protocol Implementation
-  - desc: 使用eBPF技术实现内核级网络监控，支持XDP快速路径处理和数据包过滤，可实时采集TCP连接状态和带宽使用，性能开销低于2%，兼容Linux 5.15+内核。
+    - 网络自动化
+    - SDN
+    - Ansible
+    - REST API
+    title: Network Automation Framework
+  - desc: 高性能负载均衡器，采用DPDK技术实现用户态网络处理，支持每秒百万级连接调度，延迟低于1毫秒，集成健康检查与故障转移机制。
     tags:
-    - 网络监控
-    - eBPF
-    - 内核编程
-    - 性能分析
-    title: eBPF-based Network Monitoring
+    - 负载均衡
+    - DPDK
+    - 高性能
+    - 故障转移
+    title: High-Performance Load Balancer
   News:
-  - desc: 2026年2月18日，GitHub正式推出Copilot Enterprise版本，集成私有代码库训练和团队协作功能，支持自定义模型微调，企业级安全认证通过SOC
-      2 Type II。
+  - desc: 最新研究显示，基于神经形态计算的AI芯片能效比传统GPU提升10倍，采用忆阻器技术，支持实时学习与推理，已在边缘设备中实现部署。
     tags:
-    - AI编程
-    - GitHub
-    - 企业工具
-    - 代码生成
-    title: GitHub Copilot Enterprise Launch
-  - desc: 2026年2月15日，OpenAI发布o1推理模型，在MATH数据集上准确率达92.7%，采用强化学习从过程反馈中训练，参数量为280B，推理速度比GPT-4快3倍。
+    - AI芯片
+    - 神经形态计算
+    - 忆阻器
+    - 边缘AI
+    title: AI芯片突破性进展
+  - desc: IBM宣布其量子处理器实现1000量子比特，错误率低于0.1%，采用新型纠错码，在化学模拟与优化问题中展现优势，预计2027年商业化。
     tags:
-    - AI研究
-    - OpenAI
-    - 推理模型
-    - 数学能力
-    title: OpenAI o1 Model Breakthrough
+    - 量子计算
+    - IBM
+    - 纠错码
+    - 商业化
+    title: 量子计算实用化突破
