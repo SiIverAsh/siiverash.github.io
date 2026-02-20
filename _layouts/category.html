@@ -216,22 +216,37 @@ layout: default
     .filter-select { 
         -webkit-appearance: none;
         -moz-appearance: none;
-        appearance: none; /* 彻底移除原生样式 */
-        background: rgba(255, 255, 255, 0.15); 
+        appearance: none; 
+        background: var(--glass-bg); 
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border: 1px solid var(--glass-border); 
         color: var(--text-main); 
         font-size: 0.9em; 
-        padding: 6px 35px 6px 15px;
-        border-radius: 12px; /* 增加圆角 */
+        padding: 8px 35px 8px 15px;
+        border-radius: 12px; 
         cursor: pointer;
         outline: none;
-        transition: 0.3s;
-        min-width: 120px;
+        transition: all 0.3s ease;
+        min-width: 130px;
+        box-shadow: var(--shadow);
     }
     
-    .filter-select:hover { background: rgba(255, 255, 255, 0.25); border-color: var(--primary-color); }
-    .filter-select option { background-color: var(--glass-bg); color: var(--text-main); }
-    .dark-mode .filter-select option { background-color: #1e1e1e; color: #ffffff; }
+    .filter-select:hover { 
+        border-color: var(--primary-color);
+        transform: translateY(-1px);
+    }
+
+    /* 强制锁定深色模式下的 option 背景 */
+    .filter-select option { 
+        background-color: #ffffff; 
+        color: #111111; 
+    }
+
+    .dark-mode .filter-select option { 
+        background-color: #1e1e1e; 
+        color: #ffffff; 
+    }
 
     .tag-pills-container { 
         display: flex; 

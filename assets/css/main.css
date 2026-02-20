@@ -162,34 +162,43 @@ html {
     width: 100%;
     list-style: none;
     padding: 10px 0;
-    margin-top: 8px;
+    margin-top: 12px;
     max-height: 350px;
     overflow-y: auto;
     z-index: 2147483647 !important;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px; /* 圆润化 */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.85); /* 降低不透明度 */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     display: none;
     border: 1px solid var(--glass-border);
 }
 
 .dark-mode #results-container {
-    background: rgba(30, 30, 35, 0.95) !important;
+    background: rgba(30, 30, 35, 0.85) !important;
 }
 
 #results-container li {
-    padding: 10px 15px;
-    border-bottom: 1px solid var(--glass-border);
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode #results-container li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #results-container a {
     text-decoration: none;
     color: var(--text-main);
-    font-size: 0.9em;
+    font-size: 0.95em;
     display: block;
+    padding: 12px 20px;
+    transition: 0.2s;
 }
 
 #results-container a:hover {
+    background: rgba(29, 80, 138, 0.1);
     color: var(--primary-color);
 }
 
