@@ -32,8 +32,16 @@
         tip.id = 'email-tooltip';
         tip.className = 'glass-card email-pop';
         tip.textContent = email;
-        tip.style.left = (event.pageX + 10) + 'px';
-        tip.style.top = (event.pageY + 10) + 'px';
+        
+        if (window.innerWidth <= 768) {
+            tip.style.left = '50%';
+            tip.style.top = '50%';
+            tip.style.transform = 'translate(-50%, -50%)';
+        } else {
+            tip.style.left = (event.pageX + 10) + 'px';
+            tip.style.top = (event.pageY + 10) + 'px';
+        }
+        
         document.body.appendChild(tip);
         const closeTip = () => {
             tip.classList.add('fade-out');
