@@ -18,22 +18,27 @@
                 
                 const response = await fetch(WORKER_URL, {
                     method: 'GET',
-                    mode: 'cors'
+                    mode: 'cors',
+                    cache: 'no-cache' 
                 });
 
-                if (!response.ok) throw new Error('Worker response not ok');
+                if (!response.ok) {
+                    throw new Error('Worker response status: ' + response.status);
+                }
                 
                 const count = await response.text();
-                if (count && !isNaN(count)) {
-                    visitorElement.innerText = parseInt(count).toLocaleString();
+                if (count && !isNaN(count.trim())) {
+                    visitorElement.innerText = parseInt(count.trim()).toLocaleString();
                 } else {
+                    console.error('Invalid count received:', count);
                     visitorElement.innerText = 'N/A';
                 }
             } catch (error) {
                 console.error('Visitor Stats Fetch Error:', error);
-                visitorElement.innerText = '...';
+                visitorElement.innerText = '...'; 
             }
         }
+        // 立即执行并尝试获取
         getVisitorCount();
     </script>
 </footer>
