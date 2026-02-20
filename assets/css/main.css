@@ -51,7 +51,7 @@ html {
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    background: url('https://personalweb-1340173525.cos.ap-shanghai.myqcloud.com/bg.png') no-repeat center center fixed !important;
+    background: url('../homepage.webp') no-repeat center center fixed !important;
     background-size: cover !important;
     z-index: -2 !important;
     display: block !important;
