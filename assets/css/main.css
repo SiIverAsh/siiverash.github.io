@@ -588,17 +588,30 @@ code {
         display: block;
     }
 
-    /* 移动端从右侧移过来的内容容器 */
+    /* 隐藏侧边栏内的额外内容，保持纯净 */
     #mobile-moved-content {
-        margin-top: 30px;
-        padding-top: 20px;
-        border-top: 1px dashed var(--glass-border);
+        display: none !important;
     }
-    
-    #mobile-moved-content .extra-box {
-        margin-bottom: 15px;
-        background: rgba(255,255,255,0.2) !important;
-        box-shadow: none;
+
+    /* 手机端顶部搜索栏样式 */
+    #mobile-search-placeholder {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #mobile-search-placeholder .search-box-card {
+        padding: 15px;
+        border-radius: 16px;
+        background: var(--glass-bg) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--shadow);
+    }
+
+    #mobile-search-placeholder .extra-title {
+        margin-bottom: 10px;
+        font-size: 0.9em;
     }
 
     #theme-toggle {

@@ -103,22 +103,20 @@
         const sidebar = document.querySelector('.sidebar');
         const overlay = document.querySelector('.sidebar-overlay');
         const extraSidebar = document.querySelector('.extra-sidebar');
-        const movedContainer = document.getElementById('mobile-moved-content');
+        const mobileSearchPlaceholder = document.getElementById('mobile-search-placeholder');
 
         if (menuToggle && sidebar && overlay) {
-            // 处理 DOM 搬运：在手机端将右侧内容移动到抽屉内
+            // 处理 DOM 搬运：只搬运搜索框
             const handleResize = () => {
-                if (window.innerWidth <= 768 && extraSidebar && movedContainer) {
-                    if (extraSidebar.children.length > 0) {
-                        while (extraSidebar.firstChild) {
-                            movedContainer.appendChild(extraSidebar.firstChild);
-                        }
+                const searchCard = document.querySelector('.search-box-card');
+                if (window.innerWidth <= 768 && searchCard && mobileSearchPlaceholder) {
+                    if (!mobileSearchPlaceholder.contains(searchCard)) {
+                        mobileSearchPlaceholder.appendChild(searchCard);
                     }
-                } else if (window.innerWidth > 768 && extraSidebar && movedContainer) {
-                    if (movedContainer.children.length > 0) {
-                        while (movedContainer.firstChild) {
-                            extraSidebar.appendChild(movedContainer.firstChild);
-                        }
+                } else if (window.innerWidth > 768 && searchCard && extraSidebar) {
+                    if (!extraSidebar.contains(searchCard)) {
+                        // 搜索框通常是 extra-sidebar 的第一个子元素
+                        extraSidebar.insertBefore(searchCard, extraSidebar.firstChild);
                     }
                 }
             };
