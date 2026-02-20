@@ -145,6 +145,11 @@
         height: 42px !important;
         z-index: 2000002 !important;
     }
+
+    /* 邮箱弹窗移动端层级加固 */
+    .email-pop {
+        z-index: 5000000 !important; /* 绝对最高层级 */
+    }
 }
 
 /* Utils */
