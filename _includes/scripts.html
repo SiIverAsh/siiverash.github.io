@@ -97,5 +97,50 @@
         loadHistory();
         loadAnimeExtras();
         if (typeof loadBangumiWiki === 'function') loadBangumiWiki();
+
+        // 移动端适配逻辑
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.sidebar-overlay');
+        const extraSidebar = document.querySelector('.extra-sidebar');
+        const movedContainer = document.getElementById('mobile-moved-content');
+
+        if (menuToggle && sidebar && overlay) {
+            // 处理 DOM 搬运：在手机端将右侧内容移动到抽屉内
+            const handleResize = () => {
+                if (window.innerWidth <= 768 && extraSidebar && movedContainer) {
+                    if (extraSidebar.children.length > 0) {
+                        while (extraSidebar.firstChild) {
+                            movedContainer.appendChild(extraSidebar.firstChild);
+                        }
+                    }
+                } else if (window.innerWidth > 768 && extraSidebar && movedContainer) {
+                    if (movedContainer.children.length > 0) {
+                        while (movedContainer.firstChild) {
+                            extraSidebar.appendChild(movedContainer.firstChild);
+                        }
+                    }
+                }
+            };
+
+            window.addEventListener('resize', handleResize);
+            handleResize(); // 初始化执行一次
+
+            const toggleSidebar = () => {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+            };
+
+            menuToggle.addEventListener('click', toggleSidebar);
+            overlay.addEventListener('click', toggleSidebar);
+
+            // 点击导航项自动关闭
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    if (sidebar.classList.contains('active')) toggleSidebar();
+                });
+            });
+        }
     });
 </script>
