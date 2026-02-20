@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-/* ==========================================================================
-   1. 变量定义 (Variables)
-   ========================================================================== */
+/* 1. 变量定义 */
 
 :root {
     --primary-color: #1d508a;
@@ -101,9 +99,7 @@ html {
     align-self: start;
 }
 
-/* ==========================================================================
-   4. 通用组件 (Common Components)
-   ========================================================================== */
+/* 4. 通用组件 */
 
 .glass-card {
     background: var(--glass-bg) !important;
@@ -170,11 +166,15 @@ html {
     max-height: 350px;
     overflow-y: auto;
     z-index: 2147483647 !important;
-    background: var(--glass-bg);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     display: none;
     border: 1px solid var(--glass-border);
+}
+
+.dark-mode #results-container {
+    background: rgba(30, 30, 35, 0.95) !important;
 }
 
 #results-container li {
