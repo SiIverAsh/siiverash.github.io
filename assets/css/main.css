@@ -5,7 +5,7 @@
     --primary-color: #4a90e2; 
     --text-main: #111111; 
     --text-muted: #555555;
-    --glass-bg: rgba(245, 247, 250, 0.85); 
+    --glass-bg: rgba(245, 247, 250, 0.65); 
     --glass-border: rgba(0, 0, 0, 0.05); 
     --shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.1); 
     --code-bg: #f1f3f5; 
@@ -16,7 +16,7 @@
     --primary-color: #4a90e2 !important; 
     --text-main: #ffffff !important; 
     --text-muted: #dddddd !important;
-    --glass-bg: rgba(25, 25, 30, 0.94); 
+    --glass-bg: rgba(25, 25, 30, 0.75); 
     --glass-border: rgba(255, 255, 255, 0.12);
     --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
     --code-bg: #1e1e1e;
