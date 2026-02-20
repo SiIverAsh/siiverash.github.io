@@ -61,23 +61,12 @@
     const body = document.body;
     const icon = themeToggle ? themeToggle.querySelector('i') : null;
 
-    function syncCodeBlocks() {
-        const isDark = body.classList.contains('dark-mode');
-        const bg = isDark ? '#1e1e1e' : '#f6f8fa';
-        const color = isDark ? '#ffffff' : '#111111';
-        document.querySelectorAll('pre, .highlight, code').forEach(el => {
-            el.style.setProperty('background-color', bg, 'important');
-            el.style.setProperty('color', color, 'important');
-        });
-    }
-
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
         body.classList.add('dark-mode');
         if(icon) icon.classList.replace('fa-sun', 'fa-moon');
     }
-    setTimeout(syncCodeBlocks, 100);
 
     if(themeToggle) {
         themeToggle.addEventListener('click', () => {
@@ -87,7 +76,6 @@
                 if (isDark) { icon.classList.replace('fa-sun', 'fa-moon'); localStorage.setItem('theme', 'dark'); }
                 else { icon.classList.replace('fa-moon', 'fa-sun'); localStorage.setItem('theme', 'light'); }
             }
-            syncCodeBlocks();
         });
     }
 
