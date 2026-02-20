@@ -102,6 +102,50 @@
         <a id="wiki-bgm-link" href="#" target="_blank" class="bgm-btn">在 Bangumi 查看 📺</a>
     </div>
 </div>
+
+<script>
+    function loadBangumiWiki() {
+        const wikiTitle = document.getElementById('wiki-title');
+        const wikiBgmLink = document.getElementById('wiki-bgm-link');
+        const wikiDesc = document.getElementById('wiki-desc');
+        if (!wikiTitle || !wikiBgmLink) return;
+
+        let animeName = "";
+        
+        // 1. 尝试从标签中提取 (优先级高)
+        const tagContainer = document.getElementById('data-post-tags');
+        if (tagContainer) {
+            const tags = tagContainer.textContent.split(',');
+            const skip = ['动漫', '二次元', '恋爱番', '热血番', '成长', '漫评', '感想', '番剧', '青春', '治愈', '科幻', '悬疑', '日常', '校园', '奇幻', '战斗', '3D彼女', '图像', '绘画', '随笔'];
+            // 注意：'3D彼女' 如果出现在这里可能会被跳过，如果它是唯一的特定标签
+            // 我们重新定义：排除掉非常通用的词，保留看起来像名字的词
+            const generalTags = ['动漫', '二次元', '恋爱番', '热血番', '成长', '漫评', '感想', '番剧', '青春', '治愈', '科幻', '悬疑', '日常', '校园', '奇幻', '战斗', '图像', '绘画', '随笔', '新年'];
+            
+            for (let t of tags) {
+                let cleanT = t.trim();
+                if (cleanT && !generalTags.includes(cleanT)) {
+                    animeName = cleanT;
+                    break;
+                }
+            }
+        }
+
+        // 2. 如果标签没提取到，从标题提取
+        if (!animeName) {
+            let title = "{{ page.title }}";
+            // 去掉常见的后缀如 "感想", "漫评", "观后感"
+            animeName = title.replace(/(感想|漫评|观后感|记录|随笔)$/, "").trim();
+        }
+
+        if (animeName) {
+            wikiTitle.textContent = animeName;
+            wikiBgmLink.href = "https://bgm.tv/subject_search?search_text=" + encodeURIComponent(animeName) + "&cat=2";
+            wikiDesc.textContent = "点击下方按钮在 Bangumi 查看关于《" + animeName + "》的详细评分与资讯。";
+        }
+    }
+    // 立即尝试执行一次，并注册到 DOMContentLoaded 兜底
+    loadBangumiWiki();
+</script>
 {% endif %}
 
 <style>
