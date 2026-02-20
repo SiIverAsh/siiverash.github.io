@@ -118,8 +118,8 @@ def process_posts():
         
         # 逻辑 1：智能日期补全（自动打上“上传时间”）
         current_date_str = str(front_matter.get("date", ""))
-        # 识别占位符或旧模板日期
-        placeholders = ["UPLOAD_TIME", "2026-02-19 12:00:00", "2026-02-18", "None", ""]
+        # 识别占位符：UPLOAD_TIME (旧), 2026-01-01 (新模板)
+        placeholders = ["UPLOAD_TIME", "2026-01-01 00:00:00", "None", ""]
         
         should_update_date = False
         if not current_date_str or any(p in current_date_str for p in placeholders):
