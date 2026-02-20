@@ -3,18 +3,19 @@
         &copy; {{ site.time | date: '%Y' }} SilverAsh. Built with <i class="fab fa-github"></i> Actions & Jekyll.
     </p>
     
-    <div class="visitor-stats" style="font-size: 0.85em; color: var(--text-muted); display: flex; justify-content: center; gap: 15px; align-items: center; opacity: 0.9;">
+    <div id="stats-area" class="visitor-stats" style="font-size: 0.85em; color: var(--text-muted); display: none; justify-content: center; gap: 15px; align-items: center; opacity: 0.9;">
         <span id="visitor-count-container">
             <i class="fas fa-eye" style="color: var(--primary-color); margin-right: 4px;"></i> 
-            总访问量: <span id="visitor-count" style="font-weight: 600; color: var(--primary-color);">Loading...</span>
+            总访问量: <span id="visitor-count" style="font-weight: 600; color: var(--primary-color);">...</span>
         </span>
     </div>
 
     <script>
         async function getVisitorCount() {
             const visitorElement = document.getElementById('visitor-count');
+            const statsArea = document.getElementById('stats-area');
             const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 5000); // 5秒超时
+            const timeoutId = setTimeout(() => controller.abort(), 3000); // 缩短为3秒，不影响体验
 
             try {
                 const WORKER_URL = 'https://visitor-counter.1379523665.workers.dev';
@@ -25,26 +26,16 @@
                     signal: controller.signal
                 });
 
-                clearTimeout(timeoutId);
-
-                const text = await response.text();
-                
-                if (!response.ok) {
-                    throw new Error('Server returned ' + response.status + ': ' + text);
-                }
-                
-                if (text && !isNaN(text.trim())) {
-                    visitorElement.innerText = parseInt(text.trim()).toLocaleString();
-                } else {
-                    // 如果 Worker 返回了错误信息（如 KV 没绑定），直接显示
-                    visitorElement.innerText = text.includes('Error') ? 'Error' : 'N/A';
-                    console.warn('Worker Response:', text);
+                if (response.ok) {
+                    const text = await response.text();
+                    if (text && !isNaN(text.trim())) {
+                        visitorElement.innerText = parseInt(text.trim()).toLocaleString();
+                        statsArea.style.display = 'flex'; // 只有成功才显示
+                    }
                 }
             } catch (error) {
-                clearTimeout(timeoutId);
-                console.error('Visitor Stats Fetch Error:', error);
-                // 顶级前端处理：如果报错，显示 "Offline" 或 "..." 而不是一直 Loading
-                visitorElement.innerText = error.name === 'AbortError' ? 'Timeout' : 'Offline';
+                // 静默失败：由于 AdBlock 或网络墙导致的失败，直接不显示统计信息
+                console.warn('Visitor stats hidden due to network/adblock restrictions.');
             }
         }
         getVisitorCount();
