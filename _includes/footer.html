@@ -15,7 +15,8 @@
             async function getVisitorCount() {
                 const visitorElement = document.getElementById('visitor-count');
                 const statsArea = document.getElementById('stats-area');
-                const WORKER_URL = 'https://visitor-counter.1379523665.workers.dev';
+                // 使用您自己的自定义子域名，彻底解决拦截和超时问题
+                const WORKER_URL = 'https://api.silverash.site';
 
                 try {
                     const response = await fetch(WORKER_URL);
@@ -26,7 +27,9 @@
                             statsArea.style.display = 'flex';
                         }
                     }
-                } catch (e) {}
+                } catch (e) {
+                    console.warn('Visitor stats offline.');
+                }
             }
             
             if (document.readyState === 'complete') {
