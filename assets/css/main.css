@@ -139,8 +139,8 @@ html {
 
 #search-input {
     width: 100%;
-    padding: 12px 15px;
-    border-radius: 12px;
+    padding: 12px 20px;
+    border-radius: 20px; /* 胶囊圆角 */
     border: 1px solid var(--glass-border);
     background: rgba(255, 255, 255, 0.2);
     color: var(--text-main);
@@ -167,7 +167,7 @@ html {
     overflow-y: auto;
     z-index: 2147483647 !important;
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 16px;
+    border-radius: 20px; /* 圆润化 */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     display: none;
     border: 1px solid var(--glass-border);
