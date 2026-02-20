@@ -374,8 +374,7 @@ code {
     backdrop-filter: blur(15px);
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    z-index: 999999999 !important; /* 绝对最高层级 */
-    transform: translateZ(9999px); /* 强制 GPU 渲染置顶 */
+    z-index: 20000 !important; /* 调整为合理的最高梯队 */
     animation: popIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     border: 1px solid var(--glass-border);
 }
