@@ -1,26 +1,38 @@
-<footer class="glass-card" style="margin-top: 50px; padding: 25px; border-top: 1px dashed var(--glass-border); text-align: center; border-radius: 20px; box-shadow: none; background: transparent !important;">
-    <p style="margin-bottom: 10px; font-weight: 500; color: var(--text-main);">&copy; {{ site.time | date: '%Y' }} SilverAsh. Built with <i class="fab fa-github"></i> Actions & Jekyll.</p>
+<footer style="margin-top: 80px; padding: 40px 0; border-top: 1px dashed var(--glass-border); text-align: center;">
+    <p style="margin-bottom: 12px; font-weight: 500; color: var(--text-main); font-size: 0.95em;">
+        &copy; {{ site.time | date: '%Y' }} SilverAsh. Built with <i class="fab fa-github"></i> Actions & Jekyll.
+    </p>
     
-    <div class="visitor-stats" style="font-size: 0.85em; color: var(--text-muted); display: flex; justify-content: center; gap: 15px; align-items: center;">
+    <div class="visitor-stats" style="font-size: 0.85em; color: var(--text-muted); display: flex; justify-content: center; gap: 15px; align-items: center; opacity: 0.9;">
         <span id="visitor-count-container">
-            <i class="fas fa-eye" style="color: var(--primary-color);"></i> 
-            总访问量: <span id="visitor-count" style="font-weight: bold; color: var(--primary-color);">...</span>
+            <i class="fas fa-eye" style="color: var(--primary-color); margin-right: 4px;"></i> 
+            总访问量: <span id="visitor-count" style="font-weight: 600; color: var(--primary-color);">Loading...</span>
         </span>
     </div>
 
     <script>
         async function getVisitorCount() {
+            const visitorElement = document.getElementById('visitor-count');
             try {
-                // 请将此 URL 替换为您在 Cloudflare 控制台部署后的 Worker 路由地址
+                // 请确保此 URL 准确无误
                 const WORKER_URL = 'https://visitor-counter.siiverash.workers.dev';
-                const response = await fetch(WORKER_URL);
+                
+                const response = await fetch(WORKER_URL, {
+                    method: 'GET',
+                    mode: 'cors'
+                });
+
+                if (!response.ok) throw new Error('Worker response not ok');
+                
                 const count = await response.text();
-                if (count) {
-                    document.getElementById('visitor-count').innerText = parseInt(count).toLocaleString();
+                if (count && !isNaN(count)) {
+                    visitorElement.innerText = parseInt(count).toLocaleString();
+                } else {
+                    visitorElement.innerText = 'N/A';
                 }
             } catch (error) {
-                console.error('Visitor count fetch error:', error);
-                document.getElementById('visitor-count').innerText = 'N/A';
+                console.error('Visitor Stats Fetch Error:', error);
+                visitorElement.innerText = '...';
             }
         }
         getVisitorCount();
