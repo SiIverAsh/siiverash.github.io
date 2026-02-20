@@ -8,17 +8,20 @@ layout: default
     </h2>
     
     <div class="filter-wrapper">
-        <!-- 年份下拉框：深度自定义 -->
         <div class="year-filter-box">
             <span class="filter-label">年份:</span>
-            <div class="select-wrapper">
-                <select id="year-filter" class="filter-select" onchange="applyFilters()">
-                    <option value="all">全部年份</option>
-                </select>
+            <!-- 自定义下拉框：实现完全的圆润与毛玻璃效果 -->
+            <div class="custom-select" id="year-custom-select">
+                <div class="select-trigger">
+                    <span id="selected-year-text">全部年份</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="custom-options-container" id="year-options">
+                    <div class="custom-option active" data-value="all" onclick="selectYear('all', '全部年份')">全部年份</div>
+                </div>
             </div>
         </div>
 
-        <!-- 标签胶囊流：智能加权排序 -->
         <div id="tag-pills-container" class="tag-pills-container">
             <span class="tag-pill active" data-value="all" onclick="selectTag(this)">全部标签</span>
         </div>
@@ -76,14 +79,12 @@ layout: default
     let currentPage = 1;
     let filteredItems = [];
     let activeTag = 'all';
+    let activeYear = 'all';
     const allItems = Array.from(document.querySelectorAll('.post-item'));
 
-    /**
-     * 智能初始化筛选器：统计频率并排序
-     */
     function initFilters() {
         const years = new Set();
-        const tagCounts = {}; // 用于统计标签频率
+        const tagCounts = {};
         
         allItems.forEach(item => {
             years.add(item.dataset.year);
@@ -96,31 +97,54 @@ layout: default
             });
         });
 
-        // 填充年份下拉框
-        const yearSelect = document.getElementById('year-filter');
+        // 填充自定义年份选项
+        const yearOptionsContainer = document.getElementById('year-options');
         Array.from(years).sort().reverse().forEach(y => {
-            yearSelect.innerHTML += `<option value="${y}">${y}年</option>`;
+            const opt = document.createElement('div');
+            opt.className = 'custom-option';
+            opt.textContent = y + '年';
+            opt.dataset.value = y;
+            opt.onclick = () => selectYear(y, y + '年');
+            yearOptionsContainer.appendChild(opt);
         });
 
-        // 智能标签排序：频率优先 (代表性)，频率相同时按字母序
         const sortedTags = Object.keys(tagCounts).sort((a, b) => {
-            if (tagCounts[b] !== tagCounts[a]) {
-                return tagCounts[b] - tagCounts[a];
-            }
+            if (tagCounts[b] !== tagCounts[a]) return tagCounts[b] - tagCounts[a];
             return a.localeCompare(b);
         });
 
-        // 填充标签胶囊
         const tagContainer = document.getElementById('tag-pills-container');
         sortedTags.forEach(t => {
             const pill = document.createElement('span');
             pill.className = 'tag-pill';
-            // 如果出现频率很高，可以加个小标识，或者直接通过排序体现
             pill.innerHTML = `${t} <small style="opacity:0.5; font-size:0.8em;">${tagCounts[t]}</small>`;
             pill.dataset.value = t;
             pill.onclick = () => selectTag(pill);
             tagContainer.appendChild(pill);
         });
+
+        // 自定义下拉框开关逻辑
+        const customSelect = document.getElementById('year-custom-select');
+        const trigger = customSelect.querySelector('.select-trigger');
+        
+        trigger.onclick = (e) => {
+            e.stopPropagation();
+            customSelect.classList.toggle('open');
+        };
+
+        document.addEventListener('click', () => {
+            customSelect.classList.remove('open');
+        });
+    }
+
+    function selectYear(val, text) {
+        activeYear = val;
+        document.getElementById('selected-year-text').textContent = text;
+        const options = document.querySelectorAll('.custom-option');
+        options.forEach(opt => {
+            opt.classList.toggle('active', opt.dataset.value === val);
+        });
+        applyFilters();
     }
 
     function selectTag(element) {
@@ -131,9 +155,8 @@ layout: default
     }
 
     function applyFilters() {
-        const selectedYear = document.getElementById('year-filter').value;
         filteredItems = allItems.filter(item => {
-            const matchesYear = selectedYear === 'all' || item.dataset.year === selectedYear;
+            const matchesYear = activeYear === 'all' || item.dataset.year === activeYear;
             const matchesTag = activeTag === 'all' || item.dataset.tags.split(',').includes(activeTag);
             return matchesYear && matchesTag;
         });
@@ -194,58 +217,84 @@ layout: default
 
     .year-filter-box { display: flex; align-items: center; gap: 12px; }
     
-    /* 下拉框容器：实现自定义箭头 */
-    .select-wrapper {
+    /* 自定义下拉框样式：实现真正的圆润和毛玻璃 */
+    .custom-select {
         position: relative;
-        display: inline-block;
+        min-width: 140px;
+        user-select: none;
     }
 
-    .select-wrapper::after {
-        content: '\f078';
-        font-family: 'Font Awesome 6 Free';
-        font-weight: 900;
-        position: absolute;
-        right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 0.7em;
-        color: var(--primary-color);
-        pointer-events: none;
-    }
-
-    .filter-select { 
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none; 
-        background: var(--glass-bg); 
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid var(--glass-border); 
-        color: var(--text-main); 
-        font-size: 0.9em; 
-        padding: 8px 35px 8px 15px;
-        border-radius: 12px; 
+    .select-trigger {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid var(--glass-border);
+        padding: 8px 15px;
+        border-radius: 12px;
         cursor: pointer;
-        outline: none;
-        transition: all 0.3s ease;
-        min-width: 130px;
-        box-shadow: var(--shadow);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--text-main);
+        font-size: 0.9em;
+        transition: 0.3s;
     }
-    
-    .filter-select:hover { 
+
+    .select-trigger:hover {
+        background: rgba(255, 255, 255, 0.2);
         border-color: var(--primary-color);
-        transform: translateY(-1px);
     }
 
-    /* 强制锁定深色模式下的 option 背景 */
-    .filter-select option { 
-        background-color: #ffffff; 
-        color: #111111; 
+    .custom-options-container {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 100%;
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid var(--glass-border);
+        border-radius: 16px; /* 关键：圆润的下拉框 */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        z-index: 1000;
+        display: none;
+        overflow: hidden;
+        animation: fadeInDown 0.3s ease;
     }
 
-    .dark-mode .filter-select option { 
-        background-color: #1e1e1e; 
-        color: #ffffff; 
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .custom-select.open .custom-options-container {
+        display: block;
+    }
+
+    .custom-select.open .select-trigger i {
+        transform: rotate(180deg);
+    }
+
+    .select-trigger i {
+        transition: transform 0.3s;
+        font-size: 0.8em;
+        color: var(--primary-color);
+    }
+
+    .custom-option {
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 0.9em;
+        color: var(--text-main);
+        transition: 0.2s;
+    }
+
+    .custom-option:hover {
+        background: rgba(29, 80, 138, 0.1);
+        color: var(--primary-color);
+    }
+
+    .custom-option.active {
+        background: var(--primary-color);
+        color: white;
     }
 
     .tag-pills-container { 
@@ -254,9 +303,8 @@ layout: default
         gap: 8px; 
         max-height: 150px; 
         overflow-y: auto; 
-        padding: 5px 5px 5px 0;
+        padding: 15px 5px 5px 0;
         border-top: 1px dashed var(--glass-border);
-        padding-top: 15px;
     }
 
     .tag-pill {
@@ -273,7 +321,6 @@ layout: default
     }
 
     .tag-pill:hover { background: rgba(127, 178, 216, 0.2); color: var(--primary-color); transform: scale(1.05); }
-    
     .tag-pill.active { 
         background: var(--primary-color); 
         color: white !important; 
