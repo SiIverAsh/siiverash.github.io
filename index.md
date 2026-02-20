@@ -4,8 +4,8 @@ title: Welcome to My HP!
 ---
 
 <div style="text-align: center; padding: 10px 0;">
-    <h1 style="font-size: 2.5em; color: #1d508a; margin-bottom: 20px;">Welcome to My HP!</h1>
-    <p style="font-size: 1.1em; line-height: 1.8;">Attention Is All You Need</p>
+    <h1 style="font-size: 2.5em; color: #4a90e2; margin-bottom: 20px;">Welcome to My HP!</h1>
+    <p style="font-size: 1.1em; line-height: 1.8;">Attention Is All You Need!</p>
 
     <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
         <div class="stat-card" onclick="handleStudyClick()"><h3>📚</h3><p>Study</p></div>
@@ -74,15 +74,82 @@ title: Welcome to My HP!
 </script>
 
 <style>
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    .stat-card { background: var(--glass-bg); color: var(--text-main); padding: 15px; border-radius: 20px; width: 90px; cursor: pointer; transition: 0.3s; border: 1px solid var(--glass-border); box-shadow: var(--shadow); }
-    .stat-card:hover { transform: translateY(-10px); filter: brightness(1.1); }
-    .sub-tag { display: inline-block; padding: 6px 12px; margin: 4px; background: var(--glass-bg); border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 12px; font-size: 0.8em; cursor: pointer; transition: 0.3s; font-weight: bold; }
-    .sub-tag:hover { background: var(--primary-color); color: white; }
-    .recommend-box { margin-top: 20px; background: var(--glass-bg); color: var(--text-main); border-radius: 24px; padding: 25px; border: 2px dashed var(--primary-color); box-shadow: var(--shadow); }
-    .refresh-btn { background: var(--glass-bg); border: 1px solid var(--primary-color); color: var(--primary-color); padding: 5px 15px; border-radius: 20px; font-size: 0.85em; cursor: pointer; transition: transform 0.5s ease; font-weight: bold; }
-    .refresh-btn:hover { background: var(--primary-color); color: white; }
-    .twitter-btn { display: inline-block; background: #1da1f2; color: white; padding: 6px 15px; border-radius: 15px; text-decoration: none; font-size: 0.85em; font-weight: bold; transition: 0.3s; }
-    .twitter-btn:hover { background: #0c85d0; transform: scale(1.05); }
-    .mini-tag { display: inline-block; background: rgba(127, 178, 216, 0.1); color: var(--primary-color); padding: 2px 10px; border-radius: 10px; font-size: 0.75em; margin: 5px; border: 1px solid var(--primary-color); }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .stat-card {
+        background: var(--glass-bg);
+        color: var(--text-main);
+        padding: 15px;
+        border-radius: 20px;
+        width: 90px;
+        cursor: pointer;
+        transition: 0.3s;
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--shadow);
+    }
+
+    .stat-card:hover {
+        transform: translateY(-10px);
+        filter: brightness(1.1);
+    }
+
+    .sub-tag {
+        display: inline-block;
+        padding: 6px 12px;
+        margin: 4px;
+        background: var(--glass-bg);
+        border: 1px solid #1d508a;
+        color: #1d508a;
+        border-radius: 12px;
+        font-size: 0.8em;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    .sub-tag:hover {
+        background: #1d508a;
+        color: white;
+    }
+
+    .recommend-box {
+        margin-top: 20px;
+        background: var(--glass-bg);
+        color: var(--text-main);
+        border-radius: 24px;
+        padding: 25px;
+        border: 2px dashed var(--primary-color);
+        box-shadow: var(--shadow);
+    }
+
+    .twitter-btn {
+        display: inline-block;
+        background: #1da1f2;
+        color: white;
+        padding: 6px 15px;
+        border-radius: 15px;
+        text-decoration: none;
+        font-size: 0.85em;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .twitter-btn:hover {
+        background: #0c85d0;
+        transform: scale(1.05);
+    }
+
+    .mini-tag {
+        display: inline-block;
+        background: rgba(127, 178, 216, 0.1);
+        color: #1d508a;
+        padding: 2px 10px;
+        border-radius: 10px;
+        font-size: 0.75em;
+        margin: 5px;
+        border: 1px solid #1d508a;
+    }
 </style>
