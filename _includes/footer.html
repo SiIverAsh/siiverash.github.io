@@ -1,5 +1,5 @@
 <footer style="margin-top: 100px; padding: 40px 0; border-top: 1px dashed var(--glass-border); text-align: center;">
-    <p style="margin-bottom: 15px; font-weight: 500; color: var(--text-main); font-size: 0.95em;">
+    <p style="margin-bottom: 15px; font-weight: 500; color: var(--text-main); font-size: 0.95em; text-align: center;">
         &copy; {{ site.time | date: '%Y' }} SilverAsh. Built with <i class="fab fa-github"></i> Actions & Jekyll.
     </p>
     
@@ -20,7 +20,7 @@
                 const hasVisited = sessionStorage.getItem('v_session_flag');
                 let workerUrl = 'https://api.silverash.site';
                 
-                // 如果本会话已访问过，则带上 update=false 参数，告诉后端不要增加次数
+                // 如果当前会话已访问过，则不增加计数
                 if (hasVisited) {
                     workerUrl += '?update=false';
                 }
