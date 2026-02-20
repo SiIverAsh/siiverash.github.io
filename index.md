@@ -4,8 +4,8 @@ title: Welcome to My HP!
 ---
 
 <div style="text-align: center; padding: 10px 0;">
-    <h1 style="font-size: 2.5em; color: #4a90e2; margin-bottom: 20px;">Welcome to My HP!</h1>
-    <p style="font-size: 1.1em; line-height: 1.8;">Attention Is All You Need!</p>
+    <h1 style="font-size: 2.5em; color: #1d508a; margin-bottom: 20px;">Welcome to My HP!</h1>
+    <p style="font-size: 1.1em; line-height: 1.8;">Attention Is All You Need</p>
 
     <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
         <div class="stat-card" onclick="handleStudyClick()"><h3>📚</h3><p>Study</p></div>
