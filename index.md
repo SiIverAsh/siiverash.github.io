@@ -152,4 +152,10 @@ title: Welcome to My HP!
         margin: 5px;
         border: 1px solid #1d508a;
     }
+
+    .dark-mode .mini-tag {
+        color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+        background: rgba(74, 144, 226, 0.2) !important;
+    }
 </style>
