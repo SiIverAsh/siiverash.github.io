@@ -15,21 +15,31 @@
             async function getVisitorCount() {
                 const visitorElement = document.getElementById('visitor-count');
                 const statsArea = document.getElementById('stats-area');
-                // 使用您自己的自定义子域名，彻底解决拦截和超时问题
-                const WORKER_URL = 'https://api.silverash.site';
+                
+                // 检查 sessionStorage 标记
+                const hasVisited = sessionStorage.getItem('v_session_flag');
+                let workerUrl = 'https://api.silverash.site';
+                
+                // 如果本会话已访问过，则带上 update=false 参数，告诉后端不要增加次数
+                if (hasVisited) {
+                    workerUrl += '?update=false';
+                }
 
                 try {
-                    const response = await fetch(WORKER_URL);
+                    const response = await fetch(workerUrl);
                     if (response.ok) {
                         const text = await response.text();
                         if (text && !isNaN(text.trim())) {
                             visitorElement.innerText = parseInt(text.trim()).toLocaleString();
                             statsArea.style.display = 'flex';
+                            
+                            // 第一次成功访问后，设置 sessionStorage 标记
+                            if (!hasVisited) {
+                                sessionStorage.setItem('v_session_flag', 'true');
+                            }
                         }
                     }
-                } catch (e) {
-                    console.warn('Visitor stats offline.');
-                }
+                } catch (e) {}
             }
             
             if (document.readyState === 'complete') {
