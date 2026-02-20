@@ -71,8 +71,8 @@ body, html {
 
 /* 5. 搜索框终极置顶修复 */
 .search-box-card { 
-    overflow: visible !important; /* 核心：允许子元素溢出容器 */
-    z-index: 10002 !important; /* 提升卡片本身层级 */
+    overflow: visible !important; 
+    z-index: 10002 !important; 
 }
 .search-wrapper { position: relative; z-index: 10003 !important; }
 #search-input { 
@@ -85,7 +85,7 @@ body, html {
     position: absolute; top: 100%; left: 0; width: 100%; 
     list-style: none; padding: 10px 0; margin-top: 8px; 
     max-height: 350px; overflow-y: auto; 
-    z-index: 2147483647 !important; /* 核心：使用绝对最高层级 */
+    z-index: 2147483647 !important; 
     background: var(--glass-bg); border-radius: 16px; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.2); display: none; 
     border: 1px solid var(--glass-border); 
@@ -100,20 +100,24 @@ body, html {
 #clock-date { font-size: 0.9em; color: var(--text-muted); margin-top: 8px; }
 #clock-lunar { font-size: 0.85em; color: var(--primary-color); margin-top: 5px; font-weight: bold; }
 
-/* 7. 博客内容优化 - 强制格式锁定 */
+/* 7. 博客内容优化 - 强制排版锁定 */
 .content-card { padding: 40px; min-height: 400px; max-width: 850px; margin: 0 auto; overflow-wrap: break-word; font-size: 1.05em; line-height: 1.75; }
 
-/* 强制：深色模式下仅修改 color，严禁修改粗细、阴影、间距 */
-.dark-mode .content-card, .dark-mode .content-card p, .dark-mode .content-card li, 
-.dark-mode .content-card h1, .dark-mode .content-card h2, .dark-mode .content-card h3, 
-.dark-mode .extra-sidebar, .dark-mode .extra-box, .dark-mode .history-item, 
-.dark-mode #cv-content p, .dark-mode .sidebar h2, .dark-mode .post-preview-card h3 {
+/* 深色模式：锁死正文颜色，但不影响蓝色标题 */
+.dark-mode .content-card p, .dark-mode .content-card li, .dark-mode #cv-content p, .dark-mode .extra-box {
     color: #ffffff !important;
-    font-weight: inherit !important; /* 核心：继承原始粗细 */
-    text-shadow: none !important;    /* 核心：移除阴影干扰 */
-    opacity: 1 !important;
 }
-.dark-mode .post-preview-card p, .dark-mode #clock-date, .dark-mode .history-year { color: var(--text-muted) !important; }
+
+/* 核心：无论什么模式，蓝色元素强制保持蓝色，且粗细不变 */
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .extra-title, 
+.dark-mode .history-year, .dark-mode #cv-name, .dark-mode #wiki-title, 
+.dark-mode .sidebar h2, .dark-mode .post-preview-card h3,
+.dark-mode .nav-item i {
+    color: var(--primary-color) !important;
+    font-weight: inherit !important;
+}
+
+.dark-mode .post-preview-card p, .dark-mode #clock-date { color: var(--text-muted) !important; }
 
 /* 8. 代码块锁死 */
 div.highlighter-rouge, .highlight, pre, code {
@@ -142,19 +146,7 @@ div.highlighter-rouge, .highlight, pre, code {
     display: flex; align-items: center; justify-content: center; font-size: 1.2em; color: var(--primary-color);
 }
 
-/* 11. 动画与响应式 */
-@keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes slideInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-@media (max-width: 1100px) { .wrapper { grid-template-columns: 240px minmax(0, 1fr); } .extra-sidebar { display: none; } }
-@media (max-width: 850px) { .wrapper { grid-template-columns: minmax(0, 1fr); padding: 20px 10px; } .sidebar { position: relative; top: 0; width: 100%; box-sizing: border-box; } }
-
-/* 12. 蓝色锁定与邮箱弹窗 */
-.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .extra-title, .dark-mode .history-year, .dark-mode #cv-name {
-    color: var(--primary-color) !important;
-}
-
+/* 11. 邮箱弹窗 */
 .email-pop {
     position: absolute; padding: 10px 18px; font-size: 0.9em; font-weight: bold;
     color: var(--text-main); background: var(--glass-bg); backdrop-filter: blur(10px);
