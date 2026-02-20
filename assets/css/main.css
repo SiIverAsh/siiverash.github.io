@@ -155,3 +155,35 @@ div.highlighter-rouge, .highlight, pre, code {
 }
 @keyframes popIn { from { opacity: 0; transform: scale(0.5) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
 .email-pop.fade-out { opacity: 0; transform: translateY(-10px); transition: 0.3s; }
+
+/* 13. 滚动条美化 */
+#history-content::-webkit-scrollbar,
+#results-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#history-content::-webkit-scrollbar-track,
+#results-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#history-content::-webkit-scrollbar-thumb,
+#results-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.dark-mode #history-content::-webkit-scrollbar-thumb,
+.dark-mode #results-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#history-content:hover::-webkit-scrollbar-thumb,
+#results-container:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode #history-content:hover::-webkit-scrollbar-thumb,
+.dark-mode #results-container:hover::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
