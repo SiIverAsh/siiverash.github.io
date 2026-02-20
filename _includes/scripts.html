@@ -105,5 +105,45 @@
             if (wikiLink) { wikiLink.href = "https://zh.moegirl.org.cn/" + encodeURIComponent(cv.name); }
         }
     }
-    window.addEventListener('DOMContentLoaded', loadAnimeExtras);
+
+    function loadBangumiWiki() {
+        const tagContainer = document.getElementById('data-post-tags');
+        if (!tagContainer) return;
+        
+        const tags = tagContainer.textContent.split(',');
+        const generalTags = ['动漫', '二次元', '恋爱番', '热血番', '成长', '漫评', '感想', '番剧', '青春', '治愈', '科幻', '悬疑', '日常', '校园', '奇幻', '战斗'];
+        
+        let animeTitle = '';
+        for (let tag of tags) {
+            const trimmedTag = tag.trim();
+            if (trimmedTag && !generalTags.includes(trimmedTag)) {
+                animeTitle = trimmedTag;
+                break;
+            }
+        }
+        
+        // 如果没找到特定标签，就拿第一个
+        if (!animeTitle && tags.length > 0) animeTitle = tags[0].trim();
+        
+        if (animeTitle) {
+            const wikiTitle = document.getElementById('wiki-title');
+            const wikiBgmLink = document.getElementById('wiki-bgm-link');
+            const wikiDesc = document.getElementById('wiki-desc');
+            
+            if (wikiTitle) wikiTitle.textContent = animeTitle;
+            if (wikiBgmLink) {
+                // cat=2 是 Bangumi 的动画分类
+                wikiBgmLink.href = `https://bgm.tv/subject_search?search_text=${encodeURIComponent(animeTitle)}&cat=2`;
+            }
+            if (wikiDesc) {
+                wikiDesc.textContent = `点击下方按钮在 Bangumi 查看关于《${animeTitle}》的详细评分与资讯。`;
+            }
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        loadHistory();
+        loadAnimeExtras();
+        loadBangumiWiki();
+    });
 </script>
