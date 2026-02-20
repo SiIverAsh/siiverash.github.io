@@ -15,16 +15,17 @@
     .wrapper {
         display: block;
         padding: 70px 12px 20px;
-        z-index: auto !important;
+        z-index: auto !important; /* 解除层叠上下文锁定 */
     }
 
+    /* 侧边栏抽屉样式 */
     .sidebar {
         position: fixed;
         left: -320px;
         top: 0;
         width: 290px;
         height: 100vh;
-        z-index: 1000; /* 调低层级 */
+        z-index: 1000; 
         transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         box-shadow: 15px 0 50px rgba(0,0,0,0.3);
         overflow-y: auto;
@@ -82,6 +83,7 @@
         border-radius: 20px;
     }
 
+    /* 顶部菜单按钮样式 */
     #mobile-menu-toggle {
         display: flex !important;
         position: fixed;
@@ -94,7 +96,7 @@
         backdrop-filter: blur(15px);
         border: 1px solid var(--glass-border);
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        z-index: 1001; /* 按钮层级调低 */
+        z-index: 1001; 
         align-items: center;
         justify-content: center;
         font-size: 1.2em;
@@ -102,6 +104,7 @@
         cursor: pointer;
     }
 
+    /* 背景遮罩层 */
     .sidebar-overlay {
         display: none;
         position: fixed;
@@ -123,11 +126,12 @@
         display: none !important;
     }
 
+    /* 顶部搜索框样式 */
     #mobile-search-placeholder {
         display: block;
         margin-bottom: 20px;
         width: 100%;
-        z-index: 1; /* 确保非常低 */
+        z-index: 1;
     }
 
     #mobile-search-placeholder .search-box-card {
@@ -147,13 +151,14 @@
         z-index: 1001 !important;
     }
 
-    /* 终极层级：绝对覆盖一切 */
+    /* 邮箱弹窗手机端层级加固 */
     .email-pop {
         z-index: 2147483647 !important;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
 }
 
-/* Utils */
+/* Desktop Utility Hiding */
 @media (min-width: 769px) {
     #mobile-menu-toggle { display: none !important; }
 }

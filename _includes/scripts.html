@@ -1,4 +1,7 @@
 <script>
+    /**
+     * 更新时钟功能，包含时间、日期及农历展示
+     */
     function updateClock() {
         const now = new Date();
         const timeEl = document.getElementById('clock-time');
@@ -15,6 +18,9 @@
     }
     setInterval(updateClock, 1000); updateClock();
 
+    /**
+     * 加载侧边栏历史记录数据
+     */
     function loadHistory() {
         const container = document.getElementById('history-content');
         if (container && window.siteData && window.siteData.history) {
@@ -24,15 +30,28 @@
         }
     }
 
+    /**
+     * 展示邮箱弹窗，支持移动端自适应居中显示
+     */
     function showEmail(event, email) {
         event.stopPropagation();
         const oldTip = document.getElementById('email-tooltip');
         if (oldTip) oldTip.remove();
+        
+        // 手机端专用：创建独立背景遮罩层以隔离视觉干扰
+        let emailOverlay = null;
+        if (window.innerWidth <= 768) {
+            emailOverlay = document.createElement('div');
+            emailOverlay.id = 'email-pop-overlay';
+            emailOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.3);z-index:2147483646;backdrop-filter:blur(2px);';
+        }
+        
         const tip = document.createElement('div');
         tip.id = 'email-tooltip';
         tip.className = 'glass-card email-pop';
         tip.textContent = email;
         
+        // 移动端全屏居中，桌面端跟随鼠标点击位置
         if (window.innerWidth <= 768) {
             tip.style.left = '50%';
             tip.style.top = '50%';
@@ -42,16 +61,30 @@
             tip.style.top = (event.pageY + 10) + 'px';
         }
         
+        // 挂载弹窗至专用容器或 body
         const container = document.getElementById('email-pop-container') || document.body;
+        if (emailOverlay) container.appendChild(emailOverlay);
         container.appendChild(tip);
+
+        // 点击空白处关闭弹窗
         const closeTip = () => {
             tip.classList.add('fade-out');
-            setTimeout(() => tip.remove(), 300);
+            if (emailOverlay) {
+                emailOverlay.style.opacity = '0';
+                emailOverlay.style.transition = '0.3s';
+            }
+            setTimeout(() => {
+                tip.remove();
+                if (emailOverlay) emailOverlay.remove();
+            }, 300);
             document.removeEventListener('click', closeTip);
         };
         setTimeout(() => document.addEventListener('click', closeTip), 10);
     }
 
+    /**
+     * 初始化全站搜索模块
+     */
     const sinput = document.getElementById('search-input');
     const sresults = document.getElementById('results-container');
     if(sinput) {
@@ -66,6 +99,9 @@
         });
     }
 
+    /**
+     * 深色模式主题切换逻辑
+     */
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     const icon = themeToggle ? themeToggle.querySelector('i') : null;
@@ -88,6 +124,9 @@
         });
     }
 
+    /**
+     * 动漫相关组件初始化
+     */
     function loadAnimeExtras() {
         const cvName = document.getElementById('cv-name');
         if (cvName && window.siteData && window.siteData.cv_recommend) {
@@ -102,12 +141,15 @@
         }
     }
 
+    /**
+     * 初始化页面组件
+     */
     window.addEventListener('DOMContentLoaded', () => {
         loadHistory();
         loadAnimeExtras();
         if (typeof loadBangumiWiki === 'function') loadBangumiWiki();
 
-        // 移动端适配逻辑
+        // 移动端适配逻辑：侧边栏切换与元素搬运
         const menuToggle = document.getElementById('mobile-menu-toggle');
         const sidebar = document.querySelector('.sidebar');
         const overlay = document.querySelector('.sidebar-overlay');
@@ -115,7 +157,7 @@
         const mobileSearchPlaceholder = document.getElementById('mobile-search-placeholder');
 
         if (menuToggle && sidebar && overlay) {
-            // 处理 DOM 搬运：只搬运搜索框
+            // 在小屏幕下将搜索卡片移动至主内容区顶部占位符
             const handleResize = () => {
                 const searchCard = document.querySelector('.search-box-card');
                 if (window.innerWidth <= 768 && searchCard && mobileSearchPlaceholder) {
@@ -124,14 +166,13 @@
                     }
                 } else if (window.innerWidth > 768 && searchCard && extraSidebar) {
                     if (!extraSidebar.contains(searchCard)) {
-                        // 搜索框通常是 extra-sidebar 的第一个子元素
                         extraSidebar.insertBefore(searchCard, extraSidebar.firstChild);
                     }
                 }
             };
 
             window.addEventListener('resize', handleResize);
-            handleResize(); // 初始化执行一次
+            handleResize();
 
             const toggleSidebar = () => {
                 sidebar.classList.toggle('active');
@@ -142,7 +183,7 @@
             menuToggle.addEventListener('click', toggleSidebar);
             overlay.addEventListener('click', toggleSidebar);
 
-            // 点击导航项自动关闭
+            // 点击导航项后自动关闭菜单
             document.querySelectorAll('.nav-item').forEach(item => {
                 item.addEventListener('click', () => {
                     if (sidebar.classList.contains('active')) toggleSidebar();
