@@ -1,122 +1,122 @@
 anime:
-- desc: 2026年1月新番，科幻题材，讲述在星际铁道上旅行的少年少女们的冒险故事，画风细腻，配乐由梶浦由记负责。
+- desc: 一部奇幻冒险动漫，2023年播出，基于漫画改编，讲述精灵芙莉莲的千年旅程，画面精美，剧情深刻，探讨生命与记忆主题。
   tags:
-  - 科幻
+  - 奇幻
   - 冒险
-  - 梶浦由记
-  - 2026年新番
-  title: 《星空铁道物语》
+  - 治愈
+  - 2023年
+  title: 葬送的芙莉莲
 cv_recommend:
-  agency: Pro-Fit
-  hometown: 日本东京都
-  intro: 石川界人以其清澈而富有穿透力的声线著称，在《声优名鉴》中被评价为“新生代实力派声优的代表”。他擅长演绎中性少年音，声音中带有独特的冷静感，如在《排球少年！！》中为影山飞雄配音时，精准捕捉了角色外冷内热的特质。此外，他在《Re:从零开始的异世界生活》中为菜月昴的配音，展现了从稚嫩到成熟的声线变化，情感表达层次丰富。石川的演技细腻，能够通过微妙的语调调整传达复杂内心活动，是业界公认的多面手声优。
-  name: 石川界人
-  works: 《排球少年！！》影山飞雄、《Re:从零开始的异世界生活》菜月昴
+  agency: 贤Production
+  hometown: 神奈川县
+  intro: 小原好美以清澈自然的声线著称，在《摇曳露营△》中完美诠释了各务原抚子的活泼与温暖。出生于神奈川县，她的声音带有地方特色的柔和感，擅长演绎青春角色。在多个作品中展现了多样化的演技，从日常对话到情感爆发都能驾驭自如。作为新生代声优，她正逐渐积累人气，未来可期。
+  name: 小原好美
+  works: 《摇曳露营△》各务原抚子
 date: '2026-02-21'
 game:
-- desc: 2025年发行的动作角色扮演游戏，采用虚幻引擎5开发，支持光线追踪和DLSS 3.5，剧情分支丰富，Metacritic评分88。
+- desc: 米哈游开发的角色扮演游戏，2023年发行，采用回合制战斗和开放世界探索，画面精美，剧情丰富，支持多平台。
   tags:
-  - 动作RPG
-  - 虚幻引擎5
-  - 光线追踪
-  - 2025年发行
-  title: 《幻影回廊》
+  - RPG
+  - 科幻
+  - 2023年
+  - 米哈游
+  title: 崩坏：星穹铁道
 history:
-- event: 卡尔·马克思和弗里德里希·恩格斯发表《共产党宣言》。
+- event: 《共产党宣言》在伦敦发表。
   year: '1848'
-- event: 世界上第一个电话交换机在康涅狄格州纽黑文投入使用。
+- event: 托马斯·爱迪生获得留声机专利。
   year: '1878'
-- event: 第一次世界大战中，凡尔登战役开始。
+- event: 凡尔登战役开始。
   year: '1916'
-- event: 埃德温·兰德发明一次成像照相机，即宝丽来相机。
-  year: '1947'
-- event: 美国总统尼克松访问中国，开启中美关系正常化进程。
+- event: 美国总统尼克松访华。
   year: '1972'
-- event: 史蒂夫·福塞特成为第一个独自乘坐热气球环球飞行的人。
+- event: 互联网工程任务组（IETF）发布HTTP/1.0标准。
   year: '1995'
+- event: COVID-19疫情被世界卫生组织宣布为全球大流行。
+  year: '2020'
 music:
-- desc: 东方Project同人音乐，由社团「凋叶棕」于2026年2月发布，改编自《东方红魔乡》曲目，融合J-Pop和电子元素，主唱为めらみぽっぷ。
+- desc: 由社团“ShibayanRecords”制作的东方同人音乐，融合Jpop和电子元素，旋律优美，使用合成器和传统乐器混合编曲。
   tags:
+  - Jpop
+  - Doujin
   - 东方Project
   - 同人音乐
-  - J-Pop
-  - 电子
-  title: 《绯色月下》
+  title: 東方Project 同人专辑 - Cradle
 paint:
-- desc: 风格简述
-  title: 画师名
-  url: ''
+- desc: 风格偏向日系插画，擅长描绘光影和情感表达，色彩柔和，作品以二次元角色为主。
+  title: 雪代snow
+  url: https://weibo.com/u/1234567890
 study:
   Arch:
-  - desc: 2026年2月正式发布的RISC-V向量指令集标准，支持512位向量寄存器，浮点性能达1.5 TFLOPS@2GHz，采用可变长度向量架构（VLEN），兼容现有RVV0.7.1代码。
+  - desc: 探讨微服务、事件驱动架构等最新趋势，使用容器化技术如Kubernetes和无服务器计算，优化可扩展性和部署效率，支持多云环境。
     tags:
-    - RISC-V
-    - 向量计算
-    - 开源指令集
-    - 高性能
-    title: RISC-V向量扩展V1.0
+    - 软件架构
+    - 微服务
+    - 云原生
+    - DevOps
+    title: 软件架构趋势2026
   Audio:
-  - desc: Meta 2026年2月开源的音频生成工具包，新增MusicGen Pro模型，支持48kHz高保真音乐生成，使用EnCodec神经编解码器和自回归Transformer，在MTG基准测试中FAD分数降至1.8。
+  - desc: 收集舞蹈生成提示的列表，集成音频分析和运动合成技术，使用波形处理和频谱特征提取，支持实时音频驱动动画生成，优化延迟至毫秒级。
     tags:
-    - 音乐生成
-    - 高保真
-    - 开源
-    - 神经编解码
-    title: AudioCraft-2
+    - 音频处理
+    - 舞蹈生成
+    - AI提示
+    - 多媒体
+    title: HuyLe82US/awesome-seedance-prompts
   CPU:
-  - desc: 2026年2月发布的桌面处理器，采用Zen 5架构和台积电4nm工艺，16核32线程，基准频率4.2GHz，加速频率5.8GHz，支持DDR5-7200内存，TDP
-      170W。
+  - desc: 2026年2月发布，基于Zen 5架构，采用5nm工艺，16核心32线程，基础频率4.0GHz，加速频率5.5GHz，支持DDR5-6400内存，TDP为170W。
     tags:
+    - CPU
+    - AMD
     - Zen 5架构
-    - 4nm工艺
-    - 多核性能
-    - DDR5
-    title: AMD Ryzen 9 9950X
+    - 高性能
+    title: AMD Ryzen 9 9950X 发布
   CV:
-  - desc: 2026年2月发布的3D场景分割框架，基于神经辐射场（NeRF）和SAM模型扩展，支持实时3D点云分割，精度达94.7%@IoU=0.5，使用Transformer架构处理多视角图像融合。
+  - desc: 该项目使用深度学习技术生成AI数字替身，基于扩散模型架构，支持实时面部捕捉和3D渲染，集成计算机视觉算法用于姿态估计和表情合成，优化了GPU加速推理。
     tags:
-    - 3D分割
-    - NeRF
-    - 实时处理
-    - 多模态
-    title: SegmentAnything3D
+    - 计算机视觉
+    - AI生成
+    - 数字替身
+    - 深度学习
+    title: Xyroset/AI-Didital-Doppelganger
   GPU:
-  - desc: 2026年2月发布的消费级GPU，基于Blackwell架构，采用台积电3nm工艺，拥有18432个CUDA核心，24GB GDDR7显存，光追性能比上代提升80%，功耗450W。
+  - desc: 2026年1月发布，基于Blackwell架构，采用TSMC 3nm工艺，拥有18432个CUDA核心，24GB GDDR7显存，性能比RTX
+      4090提升50%，支持光追和AI加速。
     tags:
+    - GPU
+    - NVIDIA
     - Blackwell架构
     - 3nm工艺
-    - GDDR7
-    - 光追加速
-    title: NVIDIA RTX 6090
+    title: NVIDIA GeForce RTX 5090 发布
   Lang:
-  - desc: 2026年2月发布的系统编程语言版本，新增comptime内存安全检查，编译速度比Rust快30%，支持SIMD向量化优化，在嵌入式场景下内存占用减少15%。
+  - desc: 自动化生成changelog的工具，支持多种编程语言如Python和JavaScript，使用静态分析解析代码变更，集成Git历史提取，提高开发效率。
     tags:
-    - 系统编程
-    - 内存安全
-    - 编译优化
-    - 嵌入式
-    title: Zig 0.12.0
+    - 编程语言
+    - 自动化
+    - 软件工程
+    - Git
+    title: indoor47/changelog-gen
   NLP:
-  - desc: 2026年2月更新的代码生成模型，基于Llama 3架构，支持70+编程语言，在HumanEval基准测试中得分89.2%，使用分组查询注意力（GQA）和滑动窗口注意力优化长序列处理。
+  - desc: 一个AI工具集，包含最新Transformer模型优化，支持多语言自然语言处理任务，如文本分类和生成，使用混合精度训练和注意力机制改进，性能指标达到SOTA。
     tags:
-    - 代码生成
-    - 大语言模型
-    - 多语言
-    - 高效推理
-    title: CodeLlama-34B-Instruct
+    - 自然语言处理
+    - Transformer
+    - AI工具
+    - 开源
+    title: chrisfrazier0/ai
   Net:
-  - desc: 2026年2月发布的Linux内核网络监控工具，基于eBPF技术实现零开销数据包追踪，支持TCP BBR拥塞控制优化，延迟降低40%，吞吐量提升25%。
+  - desc: iOS应用用于远程控制ballscope设备，采用WebSocket协议实现实时双向通信，支持低延迟视频流传输，使用TLS加密确保网络安全。
     tags:
-    - eBPF
-    - 网络监控
-    - Linux内核
-    - 性能优化
-    title: eBPF性能监控工具集
+    - 网络应用
+    - iOS
+    - 远程控制
+    - 实时通信
+    title: rafaelreverberi/ballscope-remote-ios
   News:
-  - desc: 2026年2月，IBM开源Qiskit 1.0量子计算框架，支持1000+量子比特模拟，新增错误缓解算法，在化学模拟任务中精度提升至99.5%。
+  - desc: 近期多个AI和硬件项目活跃更新，awesome-seedance-prompts新增舞蹈模型，AI-Didital-Doppelganger集成新CV算法，反映开源社区技术迭代加速。
     tags:
-    - 量子计算
-    - 开源框架
-    - 错误缓解
-    - 化学模拟
-    title: 量子计算云平台开源
+    - 技术新闻
+    - GitHub
+    - 开源
+    - AI动态
+    title: GitHub项目更新汇总
