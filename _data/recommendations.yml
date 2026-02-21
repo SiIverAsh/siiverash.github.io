@@ -1,123 +1,135 @@
 anime:
-- desc: 2025年播出的奇幻冒险动画，改编自山田钟人原作，讲述精灵法师芙莉莲在勇者去世后踏上收集魔法旅程的故事，作画精细，音乐优美。
+- desc: 2026年1月开播的冬季新番，延续芙莉莲与勇者同伴的冒险后日谈。本季动画由 MADHOUSE 制作，采用 4K HDR 制作流程，帧率提升至 48fps
+    以增强动作流畅度。剧情深入探讨魔法本质与时间哲学，首集播出即创下 5.2% 收视率。
   tags:
   - 奇幻
   - 冒险
-  - 漫画改编
-  - 治愈
-  title: 葬送のフリーレン
+  - 4K HDR
+  - 冬季新番
+  title: 葬送的芙莉莲 第2季
 cv_recommend:
-  agency: 81 Produce
-  hometown: 神奈川县
-  intro: 铃代纱弓以清澈而富有透明感的声线著称，擅长演绎内向、细腻的角色。她在《更衣人偶坠入爱河》中为乾纱寿叶配音，成功捕捉了角色从自卑到自信的情感转变，展现了出色的演技层次感。其声音中带有独特的‘脆弱感’，能精准传达少女的内心波动，尤其在情感爆发场景中表现力突出。作为新生代声优，她持续拓展戏路，在广播剧与游戏配音中也备受好评，潜力备受业界期待。
-  name: 铃代纱弓
-  works: 《更衣人偶坠入爱河》中的乾纱寿叶
-date: '2026-02-21'
+  agency: 青二プロダクション
+  hometown: 日本神奈川县
+  intro: 羊宫妃那于2019年正式出道，凭借清澈透明的声线与极富表现力的演技迅速崭露头角。在《声优名鉴》中被评为“新生代中罕见的多面手”，既能驾驭《MyGO!!!!!》中高松灯的内敛脆弱，又能演绎《孤独摇滚！》伊地知虹夏的活泼俏皮。其声音具备独特的穿透力与情感层次，在广播节目与现场演出中展现出色控场能力。目前已成为动画、游戏、声优综艺等多领域活跃的潜力之星，被业界看好为下一代主力声优的有力候选。
+  name: 羊宫妃那
+  works: 《BanG Dream! It's MyGO!!!!!》高松灯、《孤独摇滚！》伊地知虹夏、《莉可丽丝》锦木千束（幼年）
+date: '2026-02-22'
 game:
-- desc: 2024年发行的开放世界生存制作游戏，玩家可以捕捉、训练幻兽并建设基地，融合了《宝可梦》与《方舟：生存进化》玩法，销量突破2000万份。
+- desc: 2025年发行的科幻角色扮演游戏，采用虚幻引擎 5.2 开发，支持全动态光线追踪与神经纹理压缩技术。开放世界面积达 64 平方公里，剧情分支超过 200
+    小时，AI 驱动的 NPC 行为系统获得 2025 年 TGA 最佳叙事奖。
   tags:
+  - 科幻
   - 开放世界
-  - 生存制作
-  - 幻兽收集
-  - 多人在线
-  title: 幻獣パルワールド
+  - 虚幻引擎5
+  - 角色扮演
+  title: 光与影：33 号远征
 history:
-- event: 卡尔·马克思与弗里德里希·恩格斯合著的《共产党宣言》在伦敦首次以德文出版。
+- event: 美国第一任总统乔治·华盛顿出生。
+  year: '1732'
+- event: 西班牙与美国签署亚当斯-奥尼斯条约，佛罗里达正式割让给美国。
+  year: '1819'
+- event: 法国二月革命爆发，最终导致路易-菲利普一世退位。
   year: '1848'
-- event: 第一次世界大战中的凡尔登战役开始，成为史上最长且最血腥的战役之一。
-  year: '1916'
-- event: 美国总统理查德·尼克松访问中国，开启中美关系正常化进程。
-  year: '1972'
-- event: 美国黑人领袖马尔科姆·X在纽约市发表演讲时遭刺杀身亡。
-  year: '1965'
-- event: 英国艺术家杰拉尔德·霍尔顿设计出和平符号，成为全球反战运动的标志。
+- event: 上海共产主义小组成立，标志着中国共产党早期组织的诞生。
+  year: '1921'
+- event: 埃及与叙利亚合并，成立阿拉伯联合共和国。
   year: '1958'
-- event: 联合国教科文组织宣布2月21日为国际母语日，以促进语言多样性与文化传承。
-  year: '1999'
+- event: 美国冰球队在普莱西德湖冬奥会击败苏联，史称“冰上奇迹”。
+  year: '1980'
 music:
-- desc: 同人音乐社团「凋叶棕」于2025年发行的东方Project改编专辑，融合交响乐与电子音色，收录10首曲目，主打曲「悠久のパラダイム」时长8分钟。
+- desc: 东方 Project 同人音乐社团魂音泉于2026年2月发行的全新专辑，收录 12 首交响金属改编曲目。采用 96kHz/24bit 高解析度录音，融合管弦乐与电子音效，主打曲《紅楼
+    ～ Eastern Dream...》在 NicoNico 动画首日播放量突破 50 万。
   tags:
   - 东方Project
   - 同人音乐
-  - 交响乐
-  - 凋叶棕
-  title: 東方幻奏祀典7
+  - 交响金属
+  - 高解析度
+  title: 魂音泉 ESC 专辑 - 東方幻奏曲
 paint:
-- desc: 中国插画师，以梦幻色彩与细腻人物刻画著称，擅长绘制二次元美少女与幻想场景，作品多次参展Comic Market。
-  title: Rella
-  url: https://twitter.com/Rellakinoko
+- desc: 中国知名插画家，擅长水墨风格与奇幻题材创作，笔触细腻且色彩浓郁，作品常融合传统文化与现代元素。近期专注于《山海经》系列插画，在微博平台拥有超过 200
+    万粉丝。
+  title: 杉泽
+  url: https://weibo.com/u/2018980260
 study:
   Arch:
-  - desc: 基于数据湖架构的多模态存储系统，采用Parquet列式存储与Apache Arrow内存格式，支持PB级数据实时查询与联邦学习。
+  - desc: 基于 Spring Cloud Alibaba、Kafka、Redis、Sentinel 的仿大麦网售票系统，2026年1月重构为微服务架构，支持每秒
+      10 万级抢票请求。采用 ShardingSphere 分库分表，订单生成延迟低于 50 毫秒，并集成 ElasticSearch 实现实时搜索与推荐。
     tags:
-    - 数据湖
-    - 列式存储
-    - Apache Arrow
-    - 联邦学习
-    title: FireflyAI-RawDataCollection
+    - 微服务
+    - 高并发
+    - Spring Cloud
+    - 开源项目
+    title: xiaohongshu 微服务社交平台
   Audio:
-  - desc: 大规模多模态原始数据集，包含超过100万小时的音频-视觉配对数据，专为语音分离、环境音识别与音乐生成任务设计，采样率高达192kHz。
+  - desc: 基于 U-Net 架构的实时人声分离工具，2026年1月更新至 v2.0 版本，采用 Phase-Aware Spectral Mapping
+      技术，在 MUSDB18 数据集上达到 8.5 dB 的 SDR 提升。支持 GPU 加速，处理 3 分钟音频仅需 12 秒，并新增命令行批量处理功能。
     tags:
-    - 音频数据集
-    - 多模态
-    - 语音处理
-    - 音乐生成
-    title: FireflyAI-RawDataCollection
+    - 音频处理
+    - 人声分离
+    - 深度学习
+    - 实时处理
+    title: vocal-separate 人声分离工具
   CPU:
-  - desc: 采用Zen 5架构与3nm工艺，最高16核心32线程，基础频率4.0 GHz，加速频率5.8 GHz，集成RDNA 3+核显，支持DDR5-6400与PCIe
-      5.0，TDP 170W。
+  - desc: 英特尔在 CES 2026 推出第三代酷睿 Ultra 处理器，代号 Panther Lake，率先采用 Intel 18A 制程。最高 24
+      核心（8P+16E）配置，AI 算力达 180 TOPS，集成 Arc Xe2 GPU 支持硬件光追。性能相比上代提升 50%，功耗降低 30%。
     tags:
     - CPU
-    - Zen 5
-    - 3nm
-    - DDR5
-    title: AMD Ryzen 8000系列
+    - Intel
+    - 18A 制程
+    - AI 算力
+    title: Intel Core Ultra 系列3
   CV:
-  - desc: 基于扩散模型的高保真数字替身生成框架，支持实时面部重演与表情迁移，采用Vision Transformer架构，在FFHQ数据集上达到FID分数低于5.0。
+  - desc: OpenMMLab 在2026年初发布重大更新，整合了 Vision Transformer (ViT) 多尺度注意力机制，支持动态卷积核优化，训练速度相比上一代提升40%。新增多模态融合模块，可实现图像-文本-点云的联合学习，并在
+      COCO 2017 数据集上达到 65.2% mAP 的检测精度。
     tags:
     - 计算机视觉
-    - 数字替身
-    - 生成式AI
-    - 实时渲染
-    title: AI-Didital-Doppelganger
+    - 深度学习
+    - 多模态
+    - 开源框架
+    title: OpenMMLab 2026 全面升级版
   GPU:
-  - desc: 基于Blackwell架构，搭载GB102 GPU，拥有18,432个CUDA核心，基准频率2.8 GHz，加速频率3.5 GHz，配备32GB
-      GDDR7显存，带宽1.5 TB/s，支持PCIe 6.0与DisplayPort 2.1。
+  - desc: NVIDIA 在 CES 2026 发布 Rubin 平台，整合六款全新芯片，包括 3nm 制程的 Grace Hopper Superchip
+      和 Blackwell GPU。采用 HBM4 内存，带宽达 20.7 TB/s，支持 54 TB LPDDR5x 统一内存。AI 推理 token 成本降低
+      10 倍，FP8 算力达到 10 ExaFLOPS。
     tags:
     - GPU
-    - Blackwell
-    - GDDR7
-    - PCIe 6.0
-    title: NVIDIA GeForce RTX 5090
+    - AI 加速
+    - HBM4
+    - NVIDIA
+    title: NVIDIA Rubin AI 平台
   Lang:
-  - desc: 使用SwiftUI与Combine框架开发的iOS远程控制应用，实现低延迟视频流传输，支持自定义手势操作与AR界面集成。
+  - desc: Go 1.26 于2026年2月19日正式发布，默认启用 Green Tea 垃圾回收器，暂停时间减少 70%。泛型限制放宽，支持嵌套类型参数化，并发模型新增
+      Structured Concurrency 原语。编译速度提升 15%，并在 ARMv9 架构上实现 SIMD 指令集优化。
     tags:
-    - Swift
-    - iOS开发
-    - AR
-    - 实时流
-    title: ballscope-remote-ios
+    - 编程语言
+    - Go
+    - 垃圾回收
+    - 性能提升
+    title: Go 1.26 语言更新
   NLP:
-  - desc: 针对舞蹈动作生成的提示词集合，涵盖多种舞蹈风格与音乐节奏，基于CLIP模型进行跨模态对齐，提升文本到动作生成的多样性与准确性。
+  - desc: Transformers V5 于2026年2月7日正式发布，采用混合精度训练优化，推理延迟降低60%。新版本集成 Sparse Attention
+      机制，支持 128K 上下文长度，并在 GLUE 基准测试中平均得分 92.1。同时引入模块化微调接口，可快速适配各类下游任务。
     tags:
-    - 提示词工程
-    - 舞蹈生成
-    - 多模态
-    - CLIP
-    title: awesome-seedance-prompts
+    - 自然语言处理
+    - 大语言模型
+    - 开源库
+    - 性能优化
+    title: Hugging Face Transformers 5.0
   Net:
-  - desc: 基于云原生架构的电商平台，采用微服务设计与Kubernetes编排，支持每秒10万次并发请求，集成边缘计算与CDN加速。
+  - desc: 基于 Express + Vue 的网络协议学习与分析工具，2026年2月新增 QUIC 协议可视化模拟器，支持 PCAP 文件解析与流量重放。集成
+      OSI/TCP-IP 模型交互式演示，可实时捕获并解析 802.11ax Wi-Fi 6E 帧结构，适用于网络工程教学与安全审计。
     tags:
-    - 云原生
-    - 微服务
-    - Kubernetes
-    - 边缘计算
-    title: grohubz.com
+    - 网络协议
+    - 可视化工具
+    - 教育项目
+    - 开源
+    title: Network-Protocol-Explorer
   News:
-  - desc: 2026年2月，欧盟通过《人工智能法案》修正案，要求AI生成内容必须进行数字水印标注，违者最高罚款全球营收6%。
+  - desc: 2026年2月21日，OpenAI 宣布将未来三年算力支出目标从 1000 亿美元下调至 600 亿美元，原因是模型压缩技术与稀疏化训练取得突破。同时公布新型混合专家模型
+      Mixture-of-Experts (MoE) 已实现 90% 参数激活率，推理成本降低 40%。
     tags:
-    - AI监管
-    - 数字水印
-    - 欧盟法案
-    - 生成式AI
-    title: AI生成内容监管新规
+    - AI 新闻
+    - 算力优化
+    - 模型压缩
+    - OpenAI
+    title: OpenAI 大幅下调算力支出目标
