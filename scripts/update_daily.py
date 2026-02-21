@@ -9,12 +9,10 @@ from datetime import datetime, timedelta, timezone
 from openai import OpenAI
 from typing import List, Dict, Any, cast, Iterable
 from openai.types.chat import ChatCompletionToolParam, ChatCompletionMessageParam
+from duckduckgo_search import DDGS
 
 api_key = os.getenv("DEEPSEEK_API_KEY")
 base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
-
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-GOOGLE_CSE_ID = os.getenv("GOOGLE_CSE_ID")
 
 client = OpenAI(api_key=api_key, base_url=base_url)
 
@@ -23,38 +21,29 @@ def get_beijing_time():
     return datetime.now(timezone(timedelta(hours=8)))
 
 def web_search(query: str):
-    print(f"🔍 正在执行 Google 联网搜索: {query}...")
-    if not GOOGLE_API_KEY or not GOOGLE_CSE_ID:
-        return "错误：未配置 Google Search API 凭据。请确保环境变量中包含 GOOGLE_API_KEY 和 GOOGLE_CSE_ID。"
-
+    """
+    使用 DuckDuckGo 进行联网搜索，完全免费且无需 API Key。
+    """
+    print(f"🔍 正在执行 DuckDuckGo 联网搜索: {query}...")
     try:
-        url = "https://www.googleapis.com/customsearch/v1"
-        params = {
-            "key": GOOGLE_API_KEY,
-            "cx": GOOGLE_CSE_ID,
-            "q": query,
-            "num": 3  # 获取前 3 条结果
-        }
-        
-        response = requests.get(url, params=params, timeout=10)
-        response.raise_for_status()
-        results = response.json().get("items", [])
-
-        if not results:
-            return f"Google 搜索未找到关于 '{query}' 的实时信息。"
-        
-        # 格式化搜索结果
-        search_context = []
-        for i, r in enumerate(results, 1):
-            title = r.get("title")
-            snippet = r.get("snippet")
-            link = r.get("link")
-            search_context.append(f"[{i}] 标题: {title}\n摘要: {snippet}\n链接: {link}")
-        
-        return "\n\n".join(search_context)
+        with DDGS() as ddgs:
+            # 获取前 3 条结果
+            results = list(ddgs.text(query, max_results=3))
+            if not results:
+                return f"DuckDuckGo 未找到关于 '{query}' 的实时信息。"
+            
+            # 格式化搜索结果
+            search_context = []
+            for i, r in enumerate(results, 1):
+                title = r.get("title", "无标题")
+                snippet = r.get("body", "无摘要")
+                link = r.get("href", "无链接")
+                search_context.append(f"[{i}] 标题: {title}\n摘要: {snippet}\n链接: {link}")
+            
+            return "\n\n".join(search_context)
     except Exception as e:
-        print(f"Google 搜索发生错误: {e}")
-        return f"搜索失败: {e}。请尝试基于你已有的知识库回答。"
+        print(f"DuckDuckGo 搜索发生错误: {e}")
+        return f"搜索失败: {e}。这通常是由于 GitHub Actions 环境下的网络策略限制导致的。请尝试基于你已有的知识库回答，并告知用户实时搜索受限。"
 
 # 定义工具元数据
 tools: list[ChatCompletionToolParam] = [
@@ -90,13 +79,6 @@ def get_realtime_context():
 def clean_json_string(raw_str):
     json_str = re.sub(r'```json\s*|\s*```', '', raw_str).strip()
     return json_str
-
-def clear_reasoning_content(messages):
-    for message in messages:
-        if hasattr(message, 'reasoning_content'):
-            message.reasoning_content = None
-        elif isinstance(message, dict) and 'reasoning_content' in message:
-            message['reasoning_content'] = None
 
 def get_ai_recommendation(context):
     if not api_key:
@@ -171,7 +153,7 @@ def get_ai_recommendation(context):
     sub_turn = 1
     while True:
         try:
-            # 官方推荐：在多轮工具调用（Tool Call）期间，messages 历史必须包含完整的 reasoning_content，严禁清除。
+            # 官方推荐：在多轮工具调用期间，历史必须包含完整的 reasoning_content
             
             response = client.chat.completions.create(
                 model='deepseek-chat', 
@@ -182,7 +164,7 @@ def get_ai_recommendation(context):
             )
             
             message = response.choices[0].message
-            # 手动补全 reasoning_content 并存入历史消息
+            # 手动补全 reasoning_content
             msg_dict = message.model_dump()
             if hasattr(message, 'reasoning_content') and message.reasoning_content:
                 msg_dict['reasoning_content'] = message.reasoning_content
