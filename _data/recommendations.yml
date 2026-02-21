@@ -1,126 +1,126 @@
 anime:
-- desc: 2025年10月新番，扳机社制作，赛博朋克题材，采用全3D细胞着色渲染技术，帧率稳定48FPS，动作场景使用AI插帧至120FPS。
+- desc: A-1 Pictures制作，2026年冬季新番，延续第一季剧情，采用全3D CGI渲染结合2D作画，战斗场景帧率提升至60fps，音效由知名团队SACRA
+    MUSIC制作。
   tags:
-  - 赛博朋克
-  - 3D渲染
-  - AI插帧
-  - 扳机社
-  title: '《Rebuild: Cyberpunk Eden》'
+  - 动作
+  - 奇幻
+  - 韩国漫画改编
+  - 2026年冬季
+  title: 《Solo Leveling》第二季
 cv_recommend:
-  agency: Stay Luck
-  hometown: 东京都
-  intro: 石川界人以清澈而富有穿透力的中性少年音著称，尤其在演绎理性冷静的角色时展现出色控制力。其声线兼具少年的清爽与成年的稳重，在《排球少年！！》中塑造的影山飞雄将天才二传手的执着与孤独感刻画得入木三分。近年来更在《咒术回战》中通过七海建人一角，展现了对复杂成年角色内心挣扎的细腻诠释。他的配音往往带着一种克制的情感张力，非常适合需要内在矛盾与理性外表的角色。
-  name: 石川界人
-  works: 《排球少年！！》影山飞雄、《约定的梦幻岛》诺曼、《咒术回战》七海建人
+  agency: ARTSVISION
+  hometown: 日本埼玉县
+  intro: 古川慎以其低沉而富有磁性的声线著称，尤其在演绎冷酷反派角色时，能精准把握角色的阴郁与压迫感。在《我的英雄学院》中，他将死柄木弔的扭曲与疯狂诠释得淋漓尽致，声音中带有的嘶哑与间歇性的尖锐感，完美呈现了角色内心的不稳定。同时，他也擅长中性少年音，在《黑执事》等作品中展现了清澈而柔和的演绎。其声音可塑性极强，从冷峻反派到温润少年均能驾驭，是新生代中不可多得的实力派声优。
+  name: 古川慎
+  works: 《我的英雄学院》死柄木弔、《黑执事》威廉·T·史皮尔斯
 date: '2026-02-21'
 game:
-- desc: 2025年发行的太空模拟RPG，采用虚幻引擎5.3，支持DLSS 4.0与光线重构技术，星球生成算法基于ProcGen 2.0，可探索星系超2000亿个。
+- desc: Game Science开发的动作RPG，2024年8月发行，基于Unreal Engine 5打造，支持光追全局光照与DLSS 3.5，剧情改编自《西游记》，Metacritic评分88。
   tags:
-  - 太空模拟
-  - 虚幻引擎5.3
-  - DLSS 4.0
-  - 程序生成
-  title: '《Stellar Nexus: Beyond》'
+  - 动作角色扮演
+  - 中国神话
+  - Unreal Engine 5
+  - 2024年发行
+  title: 《黑神话：悟空》
 history:
-- event: 卡尔·马克思与弗里德里希·恩格斯合著的《共产党宣言》在伦敦出版。
+- event: 《共产党宣言》首次在伦敦出版。
   year: '1848'
-- event: 第一次世界大战凡尔登战役开始，成为历史上伤亡最惨重的战役之一。
+- event: 第一次世界大战凡尔登战役开始。
   year: '1916'
-- event: 美国总统理查德·尼克松访问中国，开启中美关系正常化进程。
+- event: 《纽约客》杂志创刊号发行。
+  year: '1925'
+- event: 美国总统理查德·尼克松访华，开启中美关系正常化进程。
   year: '1972'
-- event: 史蒂夫·乔布斯重返苹果公司，随后推出iMac拯救公司于危难。
+- event: 史蒂夫·福布斯宣布竞选美国总统。
   year: '1995'
-- event: 科索沃宣布脱离塞尔维亚独立，获得多国承认。
+- event: 科索沃宣布脱离塞尔维亚独立。
   year: '2008'
-- event: 美国宇航局宣布开普勒太空望远镜发现最小系外行星Kepler-37b。
-  year: '2013'
 music:
-- desc: 东方Project同人音乐社团幽閉サテライト2025年专辑，融合Trance与Future Bass，采用96kHz/24bit母带录制，动态范围达18dB。
+- desc: 东方Project同人社团幽閉サテライト2026年新曲，融合Trance与和风元素，BPM 148，时长4分32秒，收录于专辑《華鳥風月》，配信平台包括Spotify与Apple
+    Music。
   tags:
   - 东方Project
   - 同人音乐
   - Trance
-  - 高解析度
-  title: 《幽閉サテライト - 月に叢雲華に風》
+  - 和风
+  title: 幽閉サテライト《月に叢雲華に風》
 paint:
-- desc: 擅长赛博朋克与机械少女题材，色彩对比强烈，线条精细，常用Clip Studio Paint与Blender结合创作。
-  title: 画师：墨鱼
-  url: https://weibo.com/u/1234567890
+- desc: 擅长奇幻色彩与细腻光影的插画师，作品多以少女与神话为主题，色彩浓郁且充满幻想感，在国内外同人圈享有较高人气。
+  title: Rella
+  url: https://twitter.com/Rella_Fantasy
 study:
   Arch:
-  - desc: 采用微服务化插件架构，核心通信层基于gRPC-Web与WebSocket双通道冗余，容器化部署支持K8s自动扩缩容，故障转移时间<200ms。
+  - desc: 采用事件驱动架构，服务间通过gRPC通信，容器化部署于AWS EKS，使用Redis缓存与Kafka消息队列，系统可用性达99.99%，支持水平扩展至千节点。
     tags:
     - 微服务
-    - gRPC-Web
-    - Kubernetes
+    - 事件驱动
+    - 容器化
     - 高可用
-    title: ballscope-remote-ios (系统架构)
+    title: 数字替身系统微服务架构设计
   Audio:
-  - desc: 大规模多语言语音数据集采集管道，支持112种语言的噪声抑制与说话人分离，采用Wav2Vec 2.0特征提取，已收录超过10万小时标注音频，信噪比均值达25dB。
+  - desc: iOS平台的高性能远程控制应用，基于WebRTC实现低延迟音频视频流传输（延迟<50ms），支持多声道音频采集与空间音频渲染，集成Core ML进行环境音降噪。
     tags:
-    - 语音数据集
-    - 多语言
-    - Wav2Vec2
-    - 噪声抑制
-    title: AcE77505/FireflyAI-RawDataCollection
+    - iOS开发
+    - 实时流媒体
+    - 音频处理
+    - 远程控制
+    title: 'ballscope-remote-ios: 球面摄像机远程控制应用'
   CPU:
-  - desc: Zen 5架构，16核32线程，基准频率4.5GHz，加速频率5.8GHz，采用台积电3nm FinFET工艺，L3缓存64MB，支持DDR5-7200内存，TDP
-      170W。
+  - desc: Zen 6架构，16核32线程，基准频率4.5GHz，加速频率5.8GHz，L3缓存64MB，支持DDR5-7200内存，制程为台积电3nm，TDP
+      170W，单核性能提升22%。
     tags:
-    - Zen 5
-    - 3nm
-    - 16核
-    - DDR5-7200
-    title: AMD Ryzen 9 9950X (2026年2月上市)
+    - AMD
+    - Zen 6
+    - 3nm制程
+    - 多核性能
+    title: AMD Ryzen 9 9950X性能解析
   CV:
-  - desc: 基于Diffusion模型的实时数字人生成框架，支持多模态输入（RGB-D摄像头、麦克风阵列），采用NeRF+GAN混合架构，实现亚毫秒级唇形同步与微表情控制，在NVIDIA
-      RTX 4090上可达120FPS实时渲染。
+  - desc: 基于扩散模型的实时数字替身生成系统，采用多模态条件输入（文本、音频、图像），支持4K分辨率输出，模型参数量达7B，推理延迟低于100ms，集成NeRF渲染技术实现逼真光照与表情同步。
     tags:
-    - 数字人
-    - Diffusion
-    - NeRF
+    - AI生成
+    - 计算机视觉
+    - 扩散模型
     - 实时渲染
-    title: Xyroset/AI-Digital-Doppelganger
+    title: 'AI-Didital-Doppelganger: AI数字替身生成器'
   GPU:
-  - desc: 基于Blackwell GB202核心，台积电3nm工艺，搭载24GB GDDR7显存（32Gbps速率），光追性能较RTX 4090提升80%，支持PCIe
-      6.0 x16接口，TDP 600W。
+  - desc: 基于Blackwell架构，台积电3nm工艺，集成24,576个CUDA核心，GDDR7显存32GB，带宽1.5TB/s，光追性能较上代提升2.3倍，功耗450W，支持PCIe
+      6.0。
     tags:
+    - NVIDIA
     - Blackwell
-    - 3nm
-    - GDDR7
-    - 光追
-    title: NVIDIA RTX 5090 (2026年1月发布)
+    - 3nm工艺
+    - 光追加速
+    title: NVIDIA RTX 5090首发评测
   Lang:
-  - desc: SwiftUI + Combine实现的iOS远程控制框架，内嵌LuaJIT脚本引擎，支持动态加载Python/Rust插件，跨设备延迟低于15ms。
+  - desc: 基于Python asyncio的分布式数据爬虫，支持中、英、日等10种语言，日采集量超1TB，内置数据清洗与标注流水线，兼容Hugging Face数据集格式。
     tags:
-    - SwiftUI
-    - LuaJIT
-    - 跨平台
-    - 低延迟
-    title: rafaelreverberi/ballscope-remote-ios
+    - Python
+    - 数据工程
+    - 多语言
+    - 异步编程
+    title: 'FireflyAI-RawDataCollection: 多语言数据采集工具'
   NLP:
-  - desc: 面向舞蹈生成AI（如Stable Diffusion Video）的提示词工程库，涵盖500+种舞蹈风格标签体系，集成CLIP语义增强与Motion
-      Graph时序优化，在SVD-XL模型上实现动作连贯性提升40%。
+  - desc: 针对Stable Diffusion等生成模型的舞蹈动作提示词集合，包含超过5000条结构化提示，支持姿势控制、节奏同步、风格迁移，优化提示词长度与语义密度以提升生成质量。
     tags:
     - 提示工程
     - 舞蹈生成
-    - CLIP
-    - SVD-XL
-    title: HuyLe82US/awesome-seedance-prompts
+    - 多模态AI
+    - 数据集
+    title: 'awesome-seedance-prompts: 舞蹈生成提示词库'
   Net:
-  - desc: 基于Rust+WebAssembly的高并发电商后端架构，采用QUIC协议替代TCP/IP，实现HTTP/3全栈部署，在64核服务器上支持每秒5万次商品查询请求。
+  - desc: 采用微服务架构的电商系统，前端基于React 19+TypeScript，后端使用Node.js 22与GraphQL，数据库为PostgreSQL
+      16，部署于Kubernetes集群，支持每秒万级并发请求。
     tags:
-    - QUIC
-    - HTTP/3
-    - Rust
+    - 全栈开发
+    - 微服务
+    - GraphQL
     - 高并发
-    title: DineshPawar7/grohubz.com
+    title: 'grohubz.com: 电子商务平台全栈项目'
   News:
-  - desc: 2026年2月15日，该数据集通过IEEE 1850-2025标准认证，成为首个支持实时流式标注的开放语音数据集，已接入Hugging Face
-      Datasets平台。
+  - desc: 过去一周AI类项目star增长超30%，数字替身与提示工程方向热度最高，开源模型参数规模突破10B成新常态，开发者工具向低代码化演进。
     tags:
-    - IEEE认证
-    - 语音数据集
-    - Hugging Face
-    - 开放数据
-    title: FireflyAI-RawDataCollection获IEEE数据集认证
+    - GitHub趋势
+    - AI开源
+    - 开发者生态
+    - 周报
+    title: GitHub AI项目趋势周报
