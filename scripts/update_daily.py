@@ -6,13 +6,75 @@ import re
 import sys
 import random
 from datetime import datetime, timedelta, timezone
+from openai import OpenAI
+from typing import List, Dict, Any, cast, Iterable
+from openai.types.chat import ChatCompletionToolParam, ChatCompletionMessageParam
 
 api_key = os.getenv("DEEPSEEK_API_KEY")
-api_url = "https://api.deepseek.com/chat/completions"
+base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_CSE_ID = os.getenv("GOOGLE_CSE_ID")
+
+client = OpenAI(api_key=api_key, base_url=base_url)
 
 def get_beijing_time():
     """获取北京时间 (UTC+8)"""
     return datetime.now(timezone(timedelta(hours=8)))
+
+def web_search(query: str):
+    print(f"🔍 正在执行 Google 联网搜索: {query}...")
+    if not GOOGLE_API_KEY or not GOOGLE_CSE_ID:
+        return "错误：未配置 Google Search API 凭据。请确保环境变量中包含 GOOGLE_API_KEY 和 GOOGLE_CSE_ID。"
+
+    try:
+        url = "https://www.googleapis.com/customsearch/v1"
+        params = {
+            "key": GOOGLE_API_KEY,
+            "cx": GOOGLE_CSE_ID,
+            "q": query,
+            "num": 3  # 获取前 3 条结果
+        }
+        
+        response = requests.get(url, params=params, timeout=10)
+        response.raise_for_status()
+        results = response.json().get("items", [])
+
+        if not results:
+            return f"Google 搜索未找到关于 '{query}' 的实时信息。"
+        
+        # 格式化搜索结果
+        search_context = []
+        for i, r in enumerate(results, 1):
+            title = r.get("title")
+            snippet = r.get("snippet")
+            link = r.get("link")
+            search_context.append(f"[{i}] 标题: {title}\n摘要: {snippet}\n链接: {link}")
+        
+        return "\n\n".join(search_context)
+    except Exception as e:
+        print(f"Google 搜索发生错误: {e}")
+        return f"搜索失败: {e}。请尝试基于你已有的知识库回答。"
+
+# 定义工具元数据
+tools: list[ChatCompletionToolParam] = [
+    {
+        "type": "function",
+        "function": {
+            "name": "web_search",
+            "description": "当需要核实或获取任何分类（包括但不限于硬件参数、AI技术细节、声优代表作、画师社交账号链接、游戏发行信息、音乐社团、历史真实事件等）的实时准确信息时调用。该工具用于彻底消除幻觉，确保所有输出内容与客观事实完全一致。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {"type": "string", "description": "针对待核实内容的具体搜索关键词。为了提高精度，应包含具体的实体名称、年份或版本号（例如：'RTX 5090 规格参数'、'声优 羊宫妃那 2024 角色'、'画师 米山舞 X/Twitter 链接'）。"}
+                },
+                "required": ["query"]
+            },
+        }
+    }
+]
+
+TOOL_MAP = {"web_search": web_search}
 
 def get_realtime_context():
     try:
@@ -29,13 +91,17 @@ def clean_json_string(raw_str):
     json_str = re.sub(r'```json\s*|\s*```', '', raw_str).strip()
     return json_str
 
+def clear_reasoning_content(messages):
+    for message in messages:
+        if hasattr(message, 'reasoning_content'):
+            message.reasoning_content = None
+        elif isinstance(message, dict) and 'reasoning_content' in message:
+            message['reasoning_content'] = None
+
 def get_ai_recommendation(context):
     if not api_key:
         return None
 
-    headers = {"Content-Type": "application/json", "Authorization": "Bearer " + api_key}
-
-    # 引入随机种子强制模型变换推荐角度
     va_focus = [
         "今天请侧重推荐2015年后出道、目前人气极高的新锐/潜力声优。",
         "今天请侧重推荐1990-2005年间活跃的、拥有经典代表作的骨灰级/大牌声优。",
@@ -51,7 +117,7 @@ def get_ai_recommendation(context):
     
     要求：
     1. 每个分类（Study下的 9 个指定子类、Anime、Music、Paint、Game）必须提供正好 1 个推荐项。
-    2. Study 下必须严格使用这 9 个键名：CV, NLP, Audio, Net, Lang, Arch, GPU, CPU, News。你必须根据实时背景将 GitHub 项目分类放入这些子类中。
+    2. Study 下必须严格使用这 9 个键名：CV, NLP, Audio, Net, Lang, Arch, GPU, CPU, News。你必须根据实时背景将 GitHub 项目分类放入 these 子类中。
     3. desc 必须输出最新的硬核技术细节（如架构特性、工艺制程、性能指标）。
     4. 严禁使用任何引导性废话。
     5. 针对 GPU 和 CPU 领域，必须关注最近一个月内的动态。
@@ -97,23 +163,54 @@ def get_ai_recommendation(context):
     
     prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context).replace("{CURRENT_DATE}", str(get_beijing_time().date())).replace("{DAILY_FOCUS}", daily_focus)
 
-    payload = {
-        "model": "deepseek-reasoner",
-        "messages": [
-            {"role": "system", "content": "你是一个全能的数字生活与技术博主，精通硬件、AI、动漫及二次元文化。你拒绝平庸，总是能挖掘出冷门但实力极强的技术、艺术和声优。"},
-            {"role": "user", "content": prompt}
-        ],
-        "response_format": {"type": "json_object"},
-        "temperature": 1.3
-    }
+    messages: List[ChatCompletionMessageParam] = [
+        {"role": "system", "content": "你是一个全能的数字生活与技术博主，精通硬件、AI、动漫及二次元文化。你拒绝平庸，在面临不确定的技术细节（如未发布的显卡）或声优作品时，必须使用 web_search 工具进行核实，以确保 100% 的准确性。"},
+        {"role": "user", "content": prompt}
+    ]
 
-    try:
-        response = requests.post(api_url, headers=headers, json=payload, timeout=60)
-        response.raise_for_status()
-        return response.json()['choices'][0]['message']['content']
-    except Exception as e:
-        print(f"Error calling AI API: {e}")
-        return None
+    sub_turn = 1
+    while True:
+        try:
+            # 每一轮开始前清除历史思考内容
+            clear_reasoning_content(messages)
+            
+            response = client.chat.completions.create(
+                model='deepseek-chat', 
+                messages=messages,
+                tools=tools,
+                response_format={"type": "json_object"},
+                extra_body={ "thinking": { "type": "enabled" } } 
+            )
+            
+            message = response.choices[0].message
+            messages.append(cast(ChatCompletionMessageParam, message.model_dump()))
+
+            reasoning = getattr(message, 'reasoning_content', None)
+            if reasoning:
+                print(f"--- AI Thinking (Turn {sub_turn}) ---\n{reasoning}\n")
+
+            tool_calls = message.tool_calls
+            if not tool_calls:
+                return message.content
+
+            # 处理工具调用
+            for tool in tool_calls:
+                if tool.type == 'function':
+                    tool_name = tool.function.name
+                    tool_args = json.loads(tool.function.arguments)
+                    tool_func = TOOL_MAP[tool_name]
+                    
+                    tool_result = tool_func(**tool_args)
+                    
+                    messages.append({
+                        "role": "tool",
+                        "tool_call_id": tool.id,
+                        "content": tool_result,
+                    })
+            sub_turn += 1
+        except Exception as e:
+            print(f"AI API Turn Error: {e}")
+            return None
 
 def update_yaml():
     context = get_realtime_context()
