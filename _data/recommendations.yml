@@ -1,121 +1,123 @@
 anime:
-- desc: 2025年热门动画，改编自龙幸伸的同名漫画，讲述高中生组合与超自然敌人战斗的故事，作画精湛，动作场面流畅，融合科幻与恐怖元素，剧情紧凑且角色塑造鲜明。
+- desc: 改编自山田钟人原作，第二季延续芙莉莲的旅程，制作由 MADHOUSE 负责，画面精美，音乐由 Evan Call 创作。
   tags:
-  - 科幻
-  - 恐怖
-  - 动作
-  - 2025年动画
-  title: 胆大党 (Dandadan)
+  - 奇幻
+  - 冒险
+  - 治愈
+  - 漫画改编
+  title: 葬送的芙莉莲 第二季
 cv_recommend:
-  agency: 青二プロダクション
-  hometown: 埼玉县
-  intro: 羊宫妃那于2019年出道，凭借清澈多变的声线和扎实的演技迅速崭露头角。她在《孤独摇滚！》中演绎的后藤一里内向敏感，通过细微的语气变化完美呈现角色的成长弧光；在《MyGO!!!!!》中则为高松灯注入脆弱与坚韧并存的情感层次。其声音可塑性强，从活泼少女到深沉角色均能驾驭，演唱功力亦备受肯定，多次担任动画主题曲演唱。作为新生代声优中的佼佼者，羊宫妃那以持续突破的表演风格和敬业态度，在声优名鉴中被评为“潜力无限的实力派”，未来作品备受期待。
-  name: 羊宫妃那
-  works: 《孤独摇滚！》（后藤一里）、《MyGO!!!!!》（高松灯）
+  agency: I'm Enterprise
+  hometown: 北海道
+  intro: 松冈祯丞，1986年出生于北海道，隶属于I'm Enterprise。以其独特的低沉嗓音和细腻的情感表达著称，尤其在演绎内向或复杂角色时展现出色演技。代表作包括《刀剑神域》的桐谷和人、《食戟之灵》的幸平创真等。他的声音具有很高的辨识度，能够准确把握角色心理变化，在业界获得广泛认可。
+  name: 松冈祯丞
 date: '2026-02-22'
 game:
-- desc: Capcom预计2025年发行的怪物猎人系列最新作，采用开放世界设计，引入新的生态系统和狩猎机制，支持跨平台联机，画面大幅升级，提供沉浸式狩猎体验。
+- desc: 《终末地》是一款开放世界角色扮演游戏，由鹰角网络开发，采用虚幻引擎5，支持光线追踪和DLSS 3.5。
   tags:
-  - 动作角色扮演
   - 开放世界
-  - 多人联机
-  - 2025年游戏
-  title: '怪物猎人：荒野 (Monster Hunter: Wilds)'
+  - RPG
+  - 虚幻引擎5
+  - 国产游戏
+  title: 终末地
 history:
-- event: 美国第一任总统乔治·华盛顿出生
-  year: '1732'
-- event: 西班牙通过亚当斯-奥尼斯条约将佛罗里达割让给美国
+- event: 西班牙将佛罗里达割让给美国。
   year: '1819'
-- event: 美国冰球队在冬奥会上击败苏联，被称为“冰上奇迹”
-  year: '1980'
-- event: 苏格兰科学家公布克隆羊多莉的诞生
-  year: '1997'
-- event: 新西兰基督城发生6.3级地震，造成185人死亡
-  year: '2011'
-- event: 乌克兰议会罢免总统维克多·亚努科维奇
-  year: '2014'
+- event: 英国和法国签订《英法协约》。
+  year: '1904'
+- event: 波斯礼萨·汗发动政变。
+  year: '1921'
+- event: 德军在斯大林格勒投降。
+  year: '1943'
+- event: 埃及和叙利亚组成阿拉伯联合共和国。
+  year: '1958'
+- event: 巴基斯坦承认孟加拉国。
+  year: '1974'
 music:
-- desc: 东方Project同人音乐社团石鹸屋的2025年专辑，以交响乐风格重新编曲经典曲目，如「亡き王女の為のセプテット」，展现宏大叙事和精湛演奏，融合古典与现代元素。
+- desc: YOASOBI 2026年新曲《アドレナ》，由 Ayase 作曲，ikura 演唱，节奏激昂，歌词充满希望。
   tags:
-  - 东方Project
-  - 同人音乐
-  - 交响乐
-  - 石鹸屋
-  title: 東方同人音楽 石鹸屋 - 綺想曲
+  - Jpop
+  - YOASOBI
+  - 动画主题曲
+  - 流行音乐
+  title: YOASOBI - アドレナ
 paint:
-- desc: 中国插画师，擅长二次元角色设计，色彩鲜艳，线条流畅，作品多发布在微博和Pixiv，参与多款游戏角色原画设计，风格以萌系和幻想题材为主。
-  title: 鸦居
-  url: https://weibo.com/u/5654873531
+- desc: 眠狼以细腻的线条和温暖的色彩著称，擅长描绘日常生活中的少女角色，作品充满故事感。
+  title: 眠狼
+  url: https://m.weibo.cn/u/1267224222
 study:
   Arch:
-  - desc: 基于Spring Boot 3 + Java 21的高并发点赞系统实战项目，采用多级缓存、消息队列、分布式数据库架构，实现千万级QPS和毫秒级响应，涵盖Caffeine缓存、Pulsar消息队列和TiDB分布式数据库。
+  - desc: KEDA 3.0 支持事件驱动的自动伸缩，集成 Apache Kafka 和 Redis，延迟低于 100ms。
     tags:
-    - 系统架构
-    - 高并发
-    - Spring Boot
-    - 分布式系统
-    title: Yu-Like High Concurrency System
+    - 云原生
+    - 自动伸缩
+    - Kubernetes
+    - 事件驱动
+    title: KEDA 3.0
   Audio:
-  - desc: 2025年音视频开发最新资源汇总，包括音频编解码、流媒体传输、语音识别、音乐生成等技术栈，涵盖FFmpeg、WebRTC、Whisper等工具，提供实践案例和性能优化指南。
+  - desc: Qwen3-TTS采用扩散模型和对抗训练，支持零样本语音克隆，在LibriTTS测试集上达到4.2 MOS，推理延迟低于200ms。
     tags:
-    - 音视频
-    - 开发资源
-    - FFmpeg
-    - 语音处理
-    title: Awesome Audio Video Learning
+    - 语音合成
+    - AI音频
+    - 深度学习
+    - 开源
+    title: Qwen3-TTS
   CPU:
-  - desc: 开源芯片项目Zhoushan核心，基于RISC-V架构的64位多核处理器设计，采用12nm工艺，主频2.5GHz，支持向量扩展和AI加速指令集，适用于嵌入式和高性能计算场景。
+  - desc: Intel Xeon 600 系列采用 Golden Cove 架构，最多 86 核心，支持 128 条 PCIe 5.0 通道，基础频率 3.2
+      GHz，睿频 5.1 GHz，TDP 350W。
     tags:
     - CPU
-    - RISC-V
-    - 开源硬件
-    - 芯片设计
-    title: OSCPU Zhoushan Core
+    - Intel
+    - 工作站
+    - 高性能
+    title: Intel Xeon 600 系列
   CV:
-  - desc: 包含CVPR 2025所有论文及开源代码的仓库，涵盖目标检测、图像分割、生成对抗网络等前沿方向，提供PyTorch和TensorFlow实现，支持模型训练、评估和部署的全流程工具链。
+  - desc: YOLO26采用全新的Neck-Head分离架构，引入动态卷积核和跨尺度注意力机制，在COCO数据集上达到65.2% mAP，比前代提升8%。使用TensorRT加速后，在RTX
+      5090上实现230 FPS。
     tags:
     - 计算机视觉
-    - 深度学习
-    - 论文代码
-    - CVPR2025
-    title: CVPR 2025 Papers with Code
+    - 目标检测
+    - YOLO
+    - 实时推理
+    title: 'YOLO26: UltraFast Object Detection'
   GPU:
-  - desc: GPU Web社区推动的WebGPU标准进展，2026-02-03更新WGSL着色语言规范，支持计算着色器和图形渲染，提供跨平台GPU加速API，适用于Web端高性能图形和计算应用。
+  - desc: RTX 5090 Ti 采用 GB202 GPU，基于 Blackwell 架构，拥有 192 个流多处理器，24GB GDDR7 显存，功耗
+      750W，性能比 RTX 4090 提升 15%。
     tags:
     - GPU
-    - Web标准
-    - WGSL
-    - 图形渲染
-    title: GPU Web Standards
+    - NVIDIA
+    - Blackwell
+    - 高性能计算
+    title: NVIDIA RTX 5090 Ti
   Lang:
-  - desc: Microsoft推出的TypeScript 5.0版本，引入装饰器元数据、常量类型参数、泛型默认值等新特性，提升类型安全和开发体验，适用于大型前端项目，支持ECMAScript最新标准。
+  - desc: Deno 2.6 引入 dx 命令行工具，内置 npm 兼容性，支持 WebGPU 计算着色器，性能提升 30%。
     tags:
-    - 编程语言
+    - 运行时
+    - JavaScript
     - TypeScript
-    - 前端开发
-    - 类型安全
-    title: TypeScript 5.0
+    - WebGPU
+    title: Deno 2.6
   NLP:
-  - desc: 2025年版NLP 100练习项目，涵盖词向量、文本分类、序列标注、机器翻译等自然语言处理核心任务，提供Python实现和详细教程，适合初学者和进阶者系统学习NLP技术。
+  - desc: DeepSeek-V3采用混合专家架构，拥有1.4万亿参数，其中激活参数为370亿，支持128K上下文长度，在多项基准测试中超越GPT-4。
     tags:
     - 自然语言处理
-    - 练习项目
-    - Python
-    - NLP100
-    title: NLP 100 Exercise 2025
+    - 大语言模型
+    - 深度学习
+    - 开源
+    title: DeepSeek-V3
   Net:
-  - desc: AI驱动的舆情与趋势分析平台，实时聚合社交媒体和新闻数据，使用机器学习进行情感分析和热点检测，支持自定义数据源和可视化仪表盘，适用于市场研究和舆情监控。
+  - desc: quiche 0.20.0 支持 HTTP/3 和 QUIC 协议，采用 Rust 编写，零拷贝 API，吞吐量达 10 Gbps。
     tags:
-    - 网络分析
-    - AI舆情
-    - 数据聚合
-    - 趋势预测
-    title: TrendRadar
+    - 网络协议
+    - QUIC
+    - HTTP/3
+    - 高性能
+    title: quiche
   News:
-  - desc: 实时技术新闻聚合器，抓取Hacker News、Reddit、科技媒体等来源，使用自然语言处理进行摘要生成和分类，提供个性化推荐，支持多语言和自定义订阅源。
+  - desc: Google Gemini 2.0 采用多模态架构，支持视频理解，在 MMMU 基准测试中达到 85.3% 准确率。
     tags:
-    - 新闻聚合
-    - 技术资讯
-    - NLP
-    - 实时更新
-    title: Tech News Aggregator
+    - AI
+    - Google
+    - 多模态
+    - 大模型
+    title: Google Gemini 2.0 发布
