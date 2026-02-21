@@ -1,122 +1,126 @@
 anime:
-- desc: 一部奇幻冒险动漫，2023年播出，基于漫画改编，讲述精灵芙莉莲的千年旅程，画面精美，剧情深刻，探讨生命与记忆主题。
+- desc: A-1 Pictures制作，2026年冬季新番，延续第一季剧情，采用全3D CGI渲染结合2D作画，战斗场景帧率提升至60fps，音效由知名团队SACRA
+    MUSIC制作。
   tags:
+  - 动作
   - 奇幻
-  - 冒险
-  - 治愈
-  - 2023年
-  title: 葬送的芙莉莲
+  - 韩国漫画改编
+  - 2026年冬季
+  title: 《Solo Leveling》第二季
 cv_recommend:
-  agency: 贤Production
-  hometown: 神奈川县
-  intro: 小原好美以清澈自然的声线著称，在《摇曳露营△》中完美诠释了各务原抚子的活泼与温暖。出生于神奈川县，她的声音带有地方特色的柔和感，擅长演绎青春角色。在多个作品中展现了多样化的演技，从日常对话到情感爆发都能驾驭自如。作为新生代声优，她正逐渐积累人气，未来可期。
-  name: 小原好美
-  works: 《摇曳露营△》各务原抚子
+  agency: ARTSVISION
+  hometown: 日本埼玉县
+  intro: 古川慎以其低沉而富有磁性的声线著称，尤其在演绎冷酷反派角色时，能精准把握角色的阴郁与压迫感。在《我的英雄学院》中，他将死柄木弔的扭曲与疯狂诠释得淋漓尽致，声音中带有的嘶哑与间歇性的尖锐感，完美呈现了角色内心的不稳定。同时，他也擅长中性少年音，在《黑执事》等作品中展现了清澈而柔和的演绎。其声音可塑性极强，从冷峻反派到温润少年均能驾驭，是新生代中不可多得的实力派声优。
+  name: 古川慎
+  works: 《我的英雄学院》死柄木弔、《黑执事》威廉·T·史皮尔斯
 date: '2026-02-21'
 game:
-- desc: 米哈游开发的角色扮演游戏，2023年发行，采用回合制战斗和开放世界探索，画面精美，剧情丰富，支持多平台。
+- desc: Game Science开发的动作RPG，2024年8月发行，基于Unreal Engine 5打造，支持光追全局光照与DLSS 3.5，剧情改编自《西游记》，Metacritic评分88。
   tags:
-  - RPG
-  - 科幻
-  - 2023年
-  - 米哈游
-  title: 崩坏：星穹铁道
+  - 动作角色扮演
+  - 中国神话
+  - Unreal Engine 5
+  - 2024年发行
+  title: 《黑神话：悟空》
 history:
-- event: 《共产党宣言》在伦敦发表。
+- event: 《共产党宣言》首次在伦敦出版。
   year: '1848'
-- event: 托马斯·爱迪生获得留声机专利。
-  year: '1878'
-- event: 凡尔登战役开始。
+- event: 第一次世界大战凡尔登战役开始。
   year: '1916'
-- event: 美国总统尼克松访华。
+- event: 《纽约客》杂志创刊号发行。
+  year: '1925'
+- event: 美国总统理查德·尼克松访华，开启中美关系正常化进程。
   year: '1972'
-- event: 互联网工程任务组（IETF）发布HTTP/1.0标准。
+- event: 史蒂夫·福布斯宣布竞选美国总统。
   year: '1995'
-- event: COVID-19疫情被世界卫生组织宣布为全球大流行。
-  year: '2020'
+- event: 科索沃宣布脱离塞尔维亚独立。
+  year: '2008'
 music:
-- desc: 由社团“ShibayanRecords”制作的东方同人音乐，融合Jpop和电子元素，旋律优美，使用合成器和传统乐器混合编曲。
+- desc: 东方Project同人社团幽閉サテライト2026年新曲，融合Trance与和风元素，BPM 148，时长4分32秒，收录于专辑《華鳥風月》，配信平台包括Spotify与Apple
+    Music。
   tags:
-  - Jpop
-  - Doujin
   - 东方Project
   - 同人音乐
-  title: 東方Project 同人专辑 - Cradle
+  - Trance
+  - 和风
+  title: 幽閉サテライト《月に叢雲華に風》
 paint:
-- desc: 风格偏向日系插画，擅长描绘光影和情感表达，色彩柔和，作品以二次元角色为主。
-  title: 雪代snow
-  url: https://weibo.com/u/1234567890
+- desc: 擅长奇幻色彩与细腻光影的插画师，作品多以少女与神话为主题，色彩浓郁且充满幻想感，在国内外同人圈享有较高人气。
+  title: Rella
+  url: https://twitter.com/Rella_Fantasy
 study:
   Arch:
-  - desc: 探讨微服务、事件驱动架构等最新趋势，使用容器化技术如Kubernetes和无服务器计算，优化可扩展性和部署效率，支持多云环境。
+  - desc: 采用事件驱动架构，服务间通过gRPC通信，容器化部署于AWS EKS，使用Redis缓存与Kafka消息队列，系统可用性达99.99%，支持水平扩展至千节点。
     tags:
-    - 软件架构
     - 微服务
-    - 云原生
-    - DevOps
-    title: 软件架构趋势2026
+    - 事件驱动
+    - 容器化
+    - 高可用
+    title: 数字替身系统微服务架构设计
   Audio:
-  - desc: 收集舞蹈生成提示的列表，集成音频分析和运动合成技术，使用波形处理和频谱特征提取，支持实时音频驱动动画生成，优化延迟至毫秒级。
+  - desc: iOS平台的高性能远程控制应用，基于WebRTC实现低延迟音频视频流传输（延迟<50ms），支持多声道音频采集与空间音频渲染，集成Core ML进行环境音降噪。
     tags:
+    - iOS开发
+    - 实时流媒体
     - 音频处理
-    - 舞蹈生成
-    - AI提示
-    - 多媒体
-    title: HuyLe82US/awesome-seedance-prompts
-  CPU:
-  - desc: 2026年2月发布，基于Zen 5架构，采用5nm工艺，16核心32线程，基础频率4.0GHz，加速频率5.5GHz，支持DDR5-6400内存，TDP为170W。
-    tags:
-    - CPU
-    - AMD
-    - Zen 5架构
-    - 高性能
-    title: AMD Ryzen 9 9950X 发布
-  CV:
-  - desc: 该项目使用深度学习技术生成AI数字替身，基于扩散模型架构，支持实时面部捕捉和3D渲染，集成计算机视觉算法用于姿态估计和表情合成，优化了GPU加速推理。
-    tags:
-    - 计算机视觉
-    - AI生成
-    - 数字替身
-    - 深度学习
-    title: Xyroset/AI-Didital-Doppelganger
-  GPU:
-  - desc: 2026年1月发布，基于Blackwell架构，采用TSMC 3nm工艺，拥有18432个CUDA核心，24GB GDDR7显存，性能比RTX
-      4090提升50%，支持光追和AI加速。
-    tags:
-    - GPU
-    - NVIDIA
-    - Blackwell架构
-    - 3nm工艺
-    title: NVIDIA GeForce RTX 5090 发布
-  Lang:
-  - desc: 自动化生成changelog的工具，支持多种编程语言如Python和JavaScript，使用静态分析解析代码变更，集成Git历史提取，提高开发效率。
-    tags:
-    - 编程语言
-    - 自动化
-    - 软件工程
-    - Git
-    title: indoor47/changelog-gen
-  NLP:
-  - desc: 一个AI工具集，包含最新Transformer模型优化，支持多语言自然语言处理任务，如文本分类和生成，使用混合精度训练和注意力机制改进，性能指标达到SOTA。
-    tags:
-    - 自然语言处理
-    - Transformer
-    - AI工具
-    - 开源
-    title: chrisfrazier0/ai
-  Net:
-  - desc: iOS应用用于远程控制ballscope设备，采用WebSocket协议实现实时双向通信，支持低延迟视频流传输，使用TLS加密确保网络安全。
-    tags:
-    - 网络应用
-    - iOS
     - 远程控制
-    - 实时通信
-    title: rafaelreverberi/ballscope-remote-ios
-  News:
-  - desc: 近期多个AI和硬件项目活跃更新，awesome-seedance-prompts新增舞蹈模型，AI-Didital-Doppelganger集成新CV算法，反映开源社区技术迭代加速。
+    title: 'ballscope-remote-ios: 球面摄像机远程控制应用'
+  CPU:
+  - desc: Zen 6架构，16核32线程，基准频率4.5GHz，加速频率5.8GHz，L3缓存64MB，支持DDR5-7200内存，制程为台积电3nm，TDP
+      170W，单核性能提升22%。
     tags:
-    - 技术新闻
-    - GitHub
-    - 开源
-    - AI动态
-    title: GitHub项目更新汇总
+    - AMD
+    - Zen 6
+    - 3nm制程
+    - 多核性能
+    title: AMD Ryzen 9 9950X性能解析
+  CV:
+  - desc: 基于扩散模型的实时数字替身生成系统，采用多模态条件输入（文本、音频、图像），支持4K分辨率输出，模型参数量达7B，推理延迟低于100ms，集成NeRF渲染技术实现逼真光照与表情同步。
+    tags:
+    - AI生成
+    - 计算机视觉
+    - 扩散模型
+    - 实时渲染
+    title: 'AI-Didital-Doppelganger: AI数字替身生成器'
+  GPU:
+  - desc: 基于Blackwell架构，台积电3nm工艺，集成24,576个CUDA核心，GDDR7显存32GB，带宽1.5TB/s，光追性能较上代提升2.3倍，功耗450W，支持PCIe
+      6.0。
+    tags:
+    - NVIDIA
+    - Blackwell
+    - 3nm工艺
+    - 光追加速
+    title: NVIDIA RTX 5090首发评测
+  Lang:
+  - desc: 基于Python asyncio的分布式数据爬虫，支持中、英、日等10种语言，日采集量超1TB，内置数据清洗与标注流水线，兼容Hugging Face数据集格式。
+    tags:
+    - Python
+    - 数据工程
+    - 多语言
+    - 异步编程
+    title: 'FireflyAI-RawDataCollection: 多语言数据采集工具'
+  NLP:
+  - desc: 针对Stable Diffusion等生成模型的舞蹈动作提示词集合，包含超过5000条结构化提示，支持姿势控制、节奏同步、风格迁移，优化提示词长度与语义密度以提升生成质量。
+    tags:
+    - 提示工程
+    - 舞蹈生成
+    - 多模态AI
+    - 数据集
+    title: 'awesome-seedance-prompts: 舞蹈生成提示词库'
+  Net:
+  - desc: 采用微服务架构的电商系统，前端基于React 19+TypeScript，后端使用Node.js 22与GraphQL，数据库为PostgreSQL
+      16，部署于Kubernetes集群，支持每秒万级并发请求。
+    tags:
+    - 全栈开发
+    - 微服务
+    - GraphQL
+    - 高并发
+    title: 'grohubz.com: 电子商务平台全栈项目'
+  News:
+  - desc: 过去一周AI类项目star增长超30%，数字替身与提示工程方向热度最高，开源模型参数规模突破10B成新常态，开发者工具向低代码化演进。
+    tags:
+    - GitHub趋势
+    - AI开源
+    - 开发者生态
+    - 周报
+    title: GitHub AI项目趋势周报
