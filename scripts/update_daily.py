@@ -171,8 +171,7 @@ def get_ai_recommendation(context):
     sub_turn = 1
     while True:
         try:
-            # 每一轮开始前清除历史思考内容
-            clear_reasoning_content(messages)
+            # 官方推荐：在多轮工具调用（Tool Call）期间，messages 历史必须包含完整的 reasoning_content，严禁清除。
             
             response = client.chat.completions.create(
                 model='deepseek-chat', 
@@ -183,12 +182,19 @@ def get_ai_recommendation(context):
             )
             
             message = response.choices[0].message
-            messages.append(cast(ChatCompletionMessageParam, message.model_dump()))
+            # 手动补全 reasoning_content 并存入历史消息
+            msg_dict = message.model_dump()
+            if hasattr(message, 'reasoning_content') and message.reasoning_content:
+                msg_dict['reasoning_content'] = message.reasoning_content
+            
+            messages.append(cast(ChatCompletionMessageParam, msg_dict))
 
+            # 获取思考内容并打印
             reasoning = getattr(message, 'reasoning_content', None)
             if reasoning:
                 print(f"--- AI Thinking (Turn {sub_turn}) ---\n{reasoning}\n")
 
+            # 关键：判断是否存在工具调用
             tool_calls = message.tool_calls
             if not tool_calls:
                 return message.content
@@ -200,6 +206,7 @@ def get_ai_recommendation(context):
                     tool_args = json.loads(tool.function.arguments)
                     tool_func = TOOL_MAP[tool_name]
                     
+                    # 执行真实搜索
                     tool_result = tool_func(**tool_args)
                     
                     messages.append({
