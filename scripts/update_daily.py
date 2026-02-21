@@ -98,13 +98,12 @@ def get_ai_recommendation(context):
     prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context).replace("{CURRENT_DATE}", str(get_beijing_time().date())).replace("{DAILY_FOCUS}", daily_focus)
 
     payload = {
-        "model": "deepseek-chat",
+        "model": "deepseek-reasoner",
         "messages": [
             {"role": "system", "content": "你是一个全能的数字生活与技术博主，精通硬件、AI、动漫及二次元文化。你拒绝平庸，总是能挖掘出冷门但实力极强的技术、艺术和声优。"},
             {"role": "user", "content": prompt}
         ],
         "response_format": {"type": "json_object"},
-        "max_tokens": 6000,
         "temperature": 1.3
     }
 
@@ -124,7 +123,6 @@ def update_yaml():
             cleaned_content = clean_json_string(raw_content)
             ai_content = json.loads(cleaned_content)
             
-            # 修正 Paint 处理逻辑，直接提取 ID/链接
             paint_list = []
             for item in ai_content.get('paint', []):
                 paint_list.append({
