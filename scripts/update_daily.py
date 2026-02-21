@@ -125,6 +125,7 @@ def get_ai_recommendation(context):
     daily_focus = random.choice(va_focus)
 
     prompt_template = """
+    你不用节省时间，请你慢慢思考。
     今天是 {CURRENT_DATE}。你是一个全能的数字生活与技术博主，精通硬件、AI、动漫及二次元文化。你以输出信息的高准确性著称。
     请基于近期（一个月以内或是一个星期内）的实时背景：{CONTEXT_PLACEHOLDER}，为一名软件工程硕士生提供每日推荐。
     
