@@ -1,123 +1,122 @@
 anime:
-- desc: 改编自山田钟人原作，第二季延续芙莉莲的旅程，制作由 MADHOUSE 负责，画面精美，音乐由 Evan Call 创作。
+- desc: 改编自同名轻小说，讲述魔女与人类少年的冒险故事。制作由MAPPA负责，作画精度达到8K分辨率，采用实时渲染背景和3DCG融合技术。
   tags:
   - 奇幻
   - 冒险
-  - 治愈
-  - 漫画改编
-  title: 葬送的芙莉莲 第二季
+  - MAPPA
+  - 轻小说改编
+  title: 魔女と旅をする (Witch's Journey)
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 北海道
-  intro: 松冈祯丞，1986年出生于北海道，隶属于I'm Enterprise。以其独特的低沉嗓音和细腻的情感表达著称，尤其在演绎内向或复杂角色时展现出色演技。代表作包括《刀剑神域》的桐谷和人、《食戟之灵》的幸平创真等。他的声音具有很高的辨识度，能够准确把握角色心理变化，在业界获得广泛认可。
-  name: 松冈祯丞
+  agency: 青二プロダクション
+  hometown: 埼玉县
+  intro: 羊宫妃那于2020年出道，凭借《孤独摇滚！》后藤一里一角迅速走红。其嗓音清澈中略带沙哑，能精准演绎从活泼少女到深沉角色的多种声线。在《莉可丽丝》和《晚安世界》中的表现进一步展现了她的演技广度。作为青二プロダクション的新生代，她以稳定的现场发挥和独特的音色备受业界关注，被视为未来主演声优的有力竞争者。
+  name: 羊宫妃那
 date: '2026-02-22'
 game:
-- desc: 《终末地》是一款开放世界角色扮演游戏，由鹰角网络开发，采用虚幻引擎5，支持光线追踪和DLSS 3.5。
+- desc: Atlus开发的奇幻RPG，采用Unity引擎打造，支持DLSS 3.5，画面达到4K/60fps，战斗系统融合即时与回合制，剧本量超100万字。
   tags:
-  - 开放世界
   - RPG
-  - 虚幻引擎5
-  - 国产游戏
-  title: 终末地
+  - 奇幻
+  - Atlus
+  - 2024年
+  title: 'Metaphor: ReFantazio'
 history:
-- event: 西班牙将佛罗里达割让给美国。
-  year: '1819'
-- event: 英国和法国签订《英法协约》。
-  year: '1904'
-- event: 波斯礼萨·汗发动政变。
-  year: '1921'
-- event: 德军在斯大林格勒投降。
-  year: '1943'
-- event: 埃及和叙利亚组成阿拉伯联合共和国。
-  year: '1958'
-- event: 巴基斯坦承认孟加拉国。
+- event: 乔治·华盛顿出生，美国第一任总统。
+  year: '1732'
+- event: 克隆羊多利诞生，标志着克隆技术的重大突破。
+  year: '1997'
+- event: 第十三届冬季奥运会在美国普莱西德湖开幕。
+  year: '1980'
+- event: 法国二月革命爆发，导致七月王朝垮台。
+  year: '1848'
+- event: 巴基斯坦承认孟加拉国独立。
   year: '1974'
+- event: 新西兰克赖斯特彻奇发生6.3级地震，造成185人死亡。
+  year: '2011'
 music:
-- desc: YOASOBI 2026年新曲《アドレナ》，由 Ayase 作曲，ikura 演唱，节奏激昂，歌词充满希望。
+- desc: 2025年发行的数字单曲，流媒体播放量突破5亿次，融合放克与摇滚元素，采用32轨道录音和母带处理，动态范围达16dB。
   tags:
   - Jpop
-  - YOASOBI
-  - 动画主题曲
-  - 流行音乐
-  title: YOASOBI - アドレナ
+  - Official髭男dism
+  - 放克摇滚
+  - 2025年
+  title: Official髭男dism - SOULSOUP
 paint:
-- desc: 眠狼以细腻的线条和温暖的色彩著称，擅长描绘日常生活中的少女角色，作品充满故事感。
-  title: 眠狼
-  url: https://m.weibo.cn/u/1267224222
+- desc: 日本知名插画家，以独特的色彩运用和动态构图著称，作品多用于动画宣传和游戏角色设计。
+  title: 米山舞
+  url: https://twitter.com/yoneyamai
 study:
   Arch:
-  - desc: KEDA 3.0 支持事件驱动的自动伸缩，集成 Apache Kafka 和 Redis，延迟低于 100ms。
+  - desc: 涵盖微服务、事件驱动、CQRS等模式，包含CAP定理实践和分布式事务解决方案，附有AWS/GCP部署案例和性能调优指标。
     tags:
-    - 云原生
-    - 自动伸缩
-    - Kubernetes
-    - 事件驱动
-    title: KEDA 3.0
+    - 系统设计
+    - 架构模式
+    - 分布式系统
+    - 最佳实践
+    title: 'System Design Handbook: Scalable Architecture Guide'
   Audio:
-  - desc: Qwen3-TTS采用扩散模型和对抗训练，支持零样本语音克隆，在LibriTTS测试集上达到4.2 MOS，推理延迟低于200ms。
+  - desc: 基于Diffusion模型的语音合成与转换，支持24kHz高保真音频，RTF低于0.5，集成NSF-HiFiGAN声码器，提供跨语言声音克隆和实时变声功能。
     tags:
-    - 语音合成
-    - AI音频
+    - 语音处理
     - 深度学习
-    - 开源
-    title: Qwen3-TTS
+    - 音频合成
+    - 实时
+    title: 'Voxudio: Neural Voice Processing Toolkit'
   CPU:
-  - desc: Intel Xeon 600 系列采用 Golden Cove 架构，最多 86 核心，支持 128 条 PCIe 5.0 通道，基础频率 3.2
-      GHz，睿频 5.1 GHz，TDP 350W。
+  - desc: 用于测试Intel Core Ultra 3系列（Panther Lake，18A工艺，24核心，Arc Xe-LPG+显卡，DDR5-6400支持）的性能计数器，提供周期级精度和缓存命中率分析。
     tags:
-    - CPU
-    - Intel
-    - 工作站
-    - 高性能
-    title: Intel Xeon 600 系列
+    - 性能测试
+    - CPU架构
+    - 基准测试
+    - 开源
+    title: 'Google Benchmark: CPU Microbenchmark Framework'
   CV:
-  - desc: YOLO26采用全新的Neck-Head分离架构，引入动态卷积核和跨尺度注意力机制，在COCO数据集上达到65.2% mAP，比前代提升8%。使用TensorRT加速后，在RTX
-      5090上实现230 FPS。
+  - desc: 基于PyTorch的YOLOv11架构，支持TensorRT推理，在COCO数据集上达到56.8% mAP，模型体积仅6.5MB，支持边缘设备部署。最新版本集成动态标签分配和跨阶段局部网络优化。
     tags:
     - 计算机视觉
     - 目标检测
-    - YOLO
+    - PyTorch
     - 实时推理
-    title: 'YOLO26: UltraFast Object Detection'
+    title: 'Ultralytics YOLOv11: Real-Time Object Detection'
   GPU:
-  - desc: RTX 5090 Ti 采用 GB202 GPU，基于 Blackwell 架构，拥有 192 个流多处理器，24GB GDDR7 显存，功耗
-      750W，性能比 RTX 4090 提升 15%。
+  - desc: 针对CUDA 12.5开发，支持RTX 5090 Ti的GB202核心（台积电3nm工艺，18432个CUDA核心，功耗750W，24GB GDDR7显存），包含张量核心编程和Multi-Instance
+      GPU实例。
     tags:
-    - GPU
-    - NVIDIA
-    - Blackwell
+    - GPU编程
+    - CUDA
     - 高性能计算
-    title: NVIDIA RTX 5090 Ti
+    - NVIDIA
+    title: 'NVIDIA CUDA Samples: GPU Programming Examples'
   Lang:
-  - desc: Deno 2.6 引入 dx 命令行工具，内置 npm 兼容性，支持 WebGPU 计算着色器，性能提升 30%。
+  - desc: 设计用于中文开发者的静态类型语言，支持泛型、模式匹配和所有权系统，编译为WASM，包管理器内置自动依赖解析。
     tags:
-    - 运行时
-    - JavaScript
-    - TypeScript
-    - WebGPU
-    title: Deno 2.6
+    - 编程语言
+    - 中文编程
+    - 编译器
+    - 开源
+    title: 'Kunyu: Chinese Programming Language'
   NLP:
-  - desc: DeepSeek-V3采用混合专家架构，拥有1.4万亿参数，其中激活参数为370亿，支持128K上下文长度，在多项基准测试中超越GPT-4。
+  - desc: 提供预训练模型如Llama 3.1、Mixtral 8x22B，支持MoE架构，上下文长度达128K tokens，量化后INT4精度下每秒生成512
+      tokens。集成Direct Preference Optimization和RLHF工具链。
     tags:
     - 自然语言处理
-    - 大语言模型
-    - 深度学习
+    - Transformer
+    - 预训练模型
     - 开源
-    title: DeepSeek-V3
+    title: 'Hugging Face Transformers: State-of-the-Art NLP'
   Net:
-  - desc: quiche 0.20.0 支持 HTTP/3 和 QUIC 协议，采用 Rust 编写，零拷贝 API，吞吐量达 10 Gbps。
+  - desc: 采用Radix树路由，支持中间件链，单核QPS可达150k，内存占用仅2MB，集成JSON验证和Swagger文档自动生成。
     tags:
-    - 网络协议
-    - QUIC
-    - HTTP/3
+    - 网络编程
+    - Go语言
+    - Web框架
     - 高性能
-    title: quiche
+    title: 'Gin: High-Performance Go Web Framework'
   News:
-  - desc: Google Gemini 2.0 采用多模态架构，支持视频理解，在 MMMU 基准测试中达到 85.3% 准确率。
+  - desc: 采用多任务学习模型，结合用户行为序列和知识图谱，CTR提升18%，支持实时新闻流处理，每日更新千万级文章。
     tags:
-    - AI
-    - Google
-    - 多模态
-    - 大模型
-    title: Google Gemini 2.0 发布
+    - 新闻推荐
+    - 机器学习
+    - 个性化
+    - 大数据
+    title: 'Microsoft NewsRecommendation: AI-Powered News Aggregator'
