@@ -1,4 +1,4 @@
 requests
 pyyaml
 openai
-duckduckgo-search
+ddgs

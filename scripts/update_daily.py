@@ -9,7 +9,8 @@ from datetime import datetime, timedelta, timezone
 from openai import OpenAI
 from typing import List, Dict, Any, cast, Iterable
 from openai.types.chat import ChatCompletionToolParam, ChatCompletionMessageParam
-from duckduckgo_search import DDGS
+from ddgs import DDGS
+import time
 
 api_key = os.getenv("DEEPSEEK_API_KEY")
 base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
@@ -22,28 +23,33 @@ def get_beijing_time():
 
 def web_search(query: str):
     """
-    使用 DuckDuckGo 进行联网搜索，完全免费且无需 API Key。
+    使用最新的 DDGS 库进行联网搜索。
     """
-    print(f"🔍 正在执行 DuckDuckGo 联网搜索: {query}...")
-    try:
-        with DDGS() as ddgs:
-            # 获取前 3 条结果
-            results = list(ddgs.text(query, max_results=3))
-            if not results:
-                return f"DuckDuckGo 未找到关于 '{query}' 的实时信息。"
-            
-            # 格式化搜索结果
-            search_context = []
-            for i, r in enumerate(results, 1):
-                title = r.get("title", "无标题")
-                snippet = r.get("body", "无摘要")
-                link = r.get("href", "无链接")
-                search_context.append(f"[{i}] 标题: {title}\n摘要: {snippet}\n链接: {link}")
-            
-            return "\n\n".join(search_context)
-    except Exception as e:
-        print(f"DuckDuckGo 搜索发生错误: {e}")
-        return f"搜索失败: {e}。这通常是由于 GitHub Actions 环境下的网络策略限制导致的。请尝试基于你已有的知识库回答，并告知用户实时搜索受限。"
+    print(f"🔍 正在执行联网搜索: {query}...")
+    # 增加重试机制，GitHub Actions 的网络有时不稳定
+    max_retries = 2
+    for attempt in range(max_retries + 1):
+        try:
+            with DDGS() as ddgs:
+                results = list(ddgs.text(query, max_results=3))
+                if not results:
+                    return f"未找到关于 '{query}' 的实时信息。"
+                
+                search_context = []
+                for i, r in enumerate(results, 1):
+                    title = r.get("title", "无标题")
+                    snippet = r.get("body", "无摘要")
+                    link = r.get("href", "无链接")
+                    search_context.append(f"[{i}] 标题: {title}\n摘要: {snippet}\n链接: {link}")
+                
+                return "\n\n".join(search_context)
+        except Exception as e:
+            if attempt < max_retries:
+                print(f"搜索尝试 {attempt + 1} 失败，正在重试... 错误: {e}")
+                time.sleep(2)
+                continue
+            print(f"搜索最终失败: {e}")
+            return f"搜索失败: {e}。请基于你的知识库尝试回答。"
 
 # 定义工具元数据
 tools: list[ChatCompletionToolParam] = [
