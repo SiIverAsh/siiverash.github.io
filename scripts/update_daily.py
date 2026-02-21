@@ -9,11 +9,12 @@ from datetime import datetime, timedelta, timezone
 from openai import OpenAI
 from typing import List, Dict, Any, cast, Iterable
 from openai.types.chat import ChatCompletionToolParam, ChatCompletionMessageParam
-from ddgs import DDGS
-import time
 
 api_key = os.getenv("DEEPSEEK_API_KEY")
 base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+
+# Exa API 配置 (原 Metaphor)
+EXA_API_KEY = os.getenv("EXA_API_KEY")
 
 client = OpenAI(api_key=api_key, base_url=base_url)
 
@@ -23,33 +24,50 @@ def get_beijing_time():
 
 def web_search(query: str):
     """
-    使用最新的 DDGS 库进行联网搜索。
+    使用 Exa AI (原 Metaphor) 进行语义搜索。
+    Exa 会自动解析网页最相关的片段 (highlights)，并过滤垃圾信息。
     """
-    print(f"🔍 正在执行联网搜索: {query}...")
-    # 增加重试机制，GitHub Actions 的网络有时不稳定
-    max_retries = 2
-    for attempt in range(max_retries + 1):
-        try:
-            with DDGS() as ddgs:
-                results = list(ddgs.text(query, max_results=3))
-                if not results:
-                    return f"未找到关于 '{query}' 的实时信息。"
-                
-                search_context = []
-                for i, r in enumerate(results, 1):
-                    title = r.get("title", "无标题")
-                    snippet = r.get("body", "无摘要")
-                    link = r.get("href", "无链接")
-                    search_context.append(f"[{i}] 标题: {title}\n摘要: {snippet}\n链接: {link}")
-                
-                return "\n\n".join(search_context)
-        except Exception as e:
-            if attempt < max_retries:
-                print(f"搜索尝试 {attempt + 1} 失败，正在重试... 错误: {e}")
-                time.sleep(2)
-                continue
-            print(f"搜索最终失败: {e}")
-            return f"搜索失败: {e}。请基于你的知识库尝试回答。"
+    print(f"🔍 正在执行 Exa 语义搜索: {query}...")
+    if not EXA_API_KEY:
+        return "错误：未配置 EXA_API_KEY 环境变量。请在 GitHub Secrets 中添加该密钥。"
+
+    try:
+        url = "https://api.exa.ai/search"
+        headers = {
+            "x-api-key": EXA_API_KEY,
+            "Content-Type": "application/json"
+        }
+        data = {
+            "query": query,
+            "useAutoprompt": True, # 自动优化用户的搜索提问
+            "numResults": 3,       # 返回前 3 条最相关的结果
+            "highlights": {        # 获取网页中与搜索词最匹配的文字片段
+                "numSentences": 5  # 每个片段包含 5 句话，确保上下文丰富
+            }
+        }
+        
+        response = requests.post(url, json=data, headers=headers, timeout=15)
+        response.raise_for_status()
+        results = response.json().get("results", [])
+
+        if not results:
+            return f"Exa 未能找到关于 '{query}' 的深度信息。"
+        
+        # 格式化搜索结果
+        search_context = []
+        for i, r in enumerate(results, 1):
+            title = r.get("title", "无标题")
+            url_link = r.get("url", "无链接")
+            # 提取高亮片段 (Highlights)
+            highlights = r.get("highlights", [])
+            snippet = "\n".join(highlights) if highlights else "无法提取文字片段，请直接访问链接。"
+            
+            search_context.append(f"[{i}] 标题: {title}\n摘要片段: {snippet}\n链接: {url_link}")
+        
+        return "\n\n".join(search_context)
+    except Exception as e:
+        print(f"Exa 搜索发生错误: {e}")
+        return f"Exa 搜索失败: {e}。请基于你已有的知识库回答。"
 
 # 定义工具元数据
 tools: list[ChatCompletionToolParam] = [
@@ -61,7 +79,7 @@ tools: list[ChatCompletionToolParam] = [
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "query": {"type": "string", "description": "针对待核实内容的具体搜索关键词。为了提高精度，应包含具体的实体名称、年份或版本号（例如：'RTX 5090 规格参数'、'声优 羊宫妃那 2024 角色'、'画师 米山舞 X/Twitter 链接'）。"}
+                    "query": {"type": "string", "description": "针对待核实内容的具体搜索关键词。应包含具体的实体名称、年份或版本号（例如：'RTX 5090 规格参数'、'声优 羊宫妃那 2024 角色'、'画师 米山舞 X/Twitter 链接'）。"}
                 },
                 "required": ["query"]
             },
@@ -85,6 +103,13 @@ def get_realtime_context():
 def clean_json_string(raw_str):
     json_str = re.sub(r'```json\s*|\s*```', '', raw_str).strip()
     return json_str
+
+def clear_reasoning_content(messages):
+    for message in messages:
+        if hasattr(message, 'reasoning_content'):
+            message.reasoning_content = None
+        elif isinstance(message, dict) and 'reasoning_content' in message:
+            message['reasoning_content'] = None
 
 def get_ai_recommendation(context):
     if not api_key:
@@ -170,7 +195,7 @@ def get_ai_recommendation(context):
             )
             
             message = response.choices[0].message
-            # 手动补全 reasoning_content
+            # 手动补全 reasoning_content 并存入历史消息
             msg_dict = message.model_dump()
             if hasattr(message, 'reasoning_content') and message.reasoning_content:
                 msg_dict['reasoning_content'] = message.reasoning_content

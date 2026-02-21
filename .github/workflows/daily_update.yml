@@ -30,8 +30,7 @@ jobs:
     - name: Run update script
       env:
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-        GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+        EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
       run: |
         python scripts/update_daily.py
 
