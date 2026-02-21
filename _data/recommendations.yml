@@ -1,135 +1,121 @@
 anime:
-- desc: 2026年1月开播的冬季新番，延续芙莉莲与勇者同伴的冒险后日谈。本季动画由 MADHOUSE 制作，采用 4K HDR 制作流程，帧率提升至 48fps
-    以增强动作流畅度。剧情深入探讨魔法本质与时间哲学，首集播出即创下 5.2% 收视率。
-  tags:
-  - 奇幻
-  - 冒险
-  - 4K HDR
-  - 冬季新番
-  title: 葬送的芙莉莲 第2季
-cv_recommend:
-  agency: 青二プロダクション
-  hometown: 日本神奈川县
-  intro: 羊宫妃那于2019年正式出道，凭借清澈透明的声线与极富表现力的演技迅速崭露头角。在《声优名鉴》中被评为“新生代中罕见的多面手”，既能驾驭《MyGO!!!!!》中高松灯的内敛脆弱，又能演绎《孤独摇滚！》伊地知虹夏的活泼俏皮。其声音具备独特的穿透力与情感层次，在广播节目与现场演出中展现出色控场能力。目前已成为动画、游戏、声优综艺等多领域活跃的潜力之星，被业界看好为下一代主力声优的有力候选。
-  name: 羊宫妃那
-  works: 《BanG Dream! It's MyGO!!!!!》高松灯、《孤独摇滚！》伊地知虹夏、《莉可丽丝》锦木千束（幼年）
-date: '2026-02-22'
-game:
-- desc: 2025年发行的科幻角色扮演游戏，采用虚幻引擎 5.2 开发，支持全动态光线追踪与神经纹理压缩技术。开放世界面积达 64 平方公里，剧情分支超过 200
-    小时，AI 驱动的 NPC 行为系统获得 2025 年 TGA 最佳叙事奖。
+- desc: 2025年热门动画，改编自龙幸伸的同名漫画，讲述高中生组合与超自然敌人战斗的故事，作画精湛，动作场面流畅，融合科幻与恐怖元素，剧情紧凑且角色塑造鲜明。
   tags:
   - 科幻
+  - 恐怖
+  - 动作
+  - 2025年动画
+  title: 胆大党 (Dandadan)
+cv_recommend:
+  agency: 青二プロダクション
+  hometown: 埼玉县
+  intro: 羊宫妃那于2019年出道，凭借清澈多变的声线和扎实的演技迅速崭露头角。她在《孤独摇滚！》中演绎的后藤一里内向敏感，通过细微的语气变化完美呈现角色的成长弧光；在《MyGO!!!!!》中则为高松灯注入脆弱与坚韧并存的情感层次。其声音可塑性强，从活泼少女到深沉角色均能驾驭，演唱功力亦备受肯定，多次担任动画主题曲演唱。作为新生代声优中的佼佼者，羊宫妃那以持续突破的表演风格和敬业态度，在声优名鉴中被评为“潜力无限的实力派”，未来作品备受期待。
+  name: 羊宫妃那
+  works: 《孤独摇滚！》（后藤一里）、《MyGO!!!!!》（高松灯）
+date: '2026-02-22'
+game:
+- desc: Capcom预计2025年发行的怪物猎人系列最新作，采用开放世界设计，引入新的生态系统和狩猎机制，支持跨平台联机，画面大幅升级，提供沉浸式狩猎体验。
+  tags:
+  - 动作角色扮演
   - 开放世界
-  - 虚幻引擎5
-  - 角色扮演
-  title: 光与影：33 号远征
+  - 多人联机
+  - 2025年游戏
+  title: '怪物猎人：荒野 (Monster Hunter: Wilds)'
 history:
-- event: 美国第一任总统乔治·华盛顿出生。
+- event: 美国第一任总统乔治·华盛顿出生
   year: '1732'
-- event: 西班牙与美国签署亚当斯-奥尼斯条约，佛罗里达正式割让给美国。
+- event: 西班牙通过亚当斯-奥尼斯条约将佛罗里达割让给美国
   year: '1819'
-- event: 法国二月革命爆发，最终导致路易-菲利普一世退位。
-  year: '1848'
-- event: 上海共产主义小组成立，标志着中国共产党早期组织的诞生。
-  year: '1921'
-- event: 埃及与叙利亚合并，成立阿拉伯联合共和国。
-  year: '1958'
-- event: 美国冰球队在普莱西德湖冬奥会击败苏联，史称“冰上奇迹”。
+- event: 美国冰球队在冬奥会上击败苏联，被称为“冰上奇迹”
   year: '1980'
+- event: 苏格兰科学家公布克隆羊多莉的诞生
+  year: '1997'
+- event: 新西兰基督城发生6.3级地震，造成185人死亡
+  year: '2011'
+- event: 乌克兰议会罢免总统维克多·亚努科维奇
+  year: '2014'
 music:
-- desc: 东方 Project 同人音乐社团魂音泉于2026年2月发行的全新专辑，收录 12 首交响金属改编曲目。采用 96kHz/24bit 高解析度录音，融合管弦乐与电子音效，主打曲《紅楼
-    ～ Eastern Dream...》在 NicoNico 动画首日播放量突破 50 万。
+- desc: 东方Project同人音乐社团石鹸屋的2025年专辑，以交响乐风格重新编曲经典曲目，如「亡き王女の為のセプテット」，展现宏大叙事和精湛演奏，融合古典与现代元素。
   tags:
   - 东方Project
   - 同人音乐
-  - 交响金属
-  - 高解析度
-  title: 魂音泉 ESC 专辑 - 東方幻奏曲
+  - 交响乐
+  - 石鹸屋
+  title: 東方同人音楽 石鹸屋 - 綺想曲
 paint:
-- desc: 中国知名插画家，擅长水墨风格与奇幻题材创作，笔触细腻且色彩浓郁，作品常融合传统文化与现代元素。近期专注于《山海经》系列插画，在微博平台拥有超过 200
-    万粉丝。
-  title: 杉泽
-  url: https://weibo.com/u/2018980260
+- desc: 中国插画师，擅长二次元角色设计，色彩鲜艳，线条流畅，作品多发布在微博和Pixiv，参与多款游戏角色原画设计，风格以萌系和幻想题材为主。
+  title: 鸦居
+  url: https://weibo.com/u/5654873531
 study:
   Arch:
-  - desc: 基于 Spring Cloud Alibaba、Kafka、Redis、Sentinel 的仿大麦网售票系统，2026年1月重构为微服务架构，支持每秒
-      10 万级抢票请求。采用 ShardingSphere 分库分表，订单生成延迟低于 50 毫秒，并集成 ElasticSearch 实现实时搜索与推荐。
+  - desc: 基于Spring Boot 3 + Java 21的高并发点赞系统实战项目，采用多级缓存、消息队列、分布式数据库架构，实现千万级QPS和毫秒级响应，涵盖Caffeine缓存、Pulsar消息队列和TiDB分布式数据库。
     tags:
-    - 微服务
+    - 系统架构
     - 高并发
-    - Spring Cloud
-    - 开源项目
-    title: xiaohongshu 微服务社交平台
+    - Spring Boot
+    - 分布式系统
+    title: Yu-Like High Concurrency System
   Audio:
-  - desc: 基于 U-Net 架构的实时人声分离工具，2026年1月更新至 v2.0 版本，采用 Phase-Aware Spectral Mapping
-      技术，在 MUSDB18 数据集上达到 8.5 dB 的 SDR 提升。支持 GPU 加速，处理 3 分钟音频仅需 12 秒，并新增命令行批量处理功能。
+  - desc: 2025年音视频开发最新资源汇总，包括音频编解码、流媒体传输、语音识别、音乐生成等技术栈，涵盖FFmpeg、WebRTC、Whisper等工具，提供实践案例和性能优化指南。
     tags:
-    - 音频处理
-    - 人声分离
-    - 深度学习
-    - 实时处理
-    title: vocal-separate 人声分离工具
+    - 音视频
+    - 开发资源
+    - FFmpeg
+    - 语音处理
+    title: Awesome Audio Video Learning
   CPU:
-  - desc: 英特尔在 CES 2026 推出第三代酷睿 Ultra 处理器，代号 Panther Lake，率先采用 Intel 18A 制程。最高 24
-      核心（8P+16E）配置，AI 算力达 180 TOPS，集成 Arc Xe2 GPU 支持硬件光追。性能相比上代提升 50%，功耗降低 30%。
+  - desc: 开源芯片项目Zhoushan核心，基于RISC-V架构的64位多核处理器设计，采用12nm工艺，主频2.5GHz，支持向量扩展和AI加速指令集，适用于嵌入式和高性能计算场景。
     tags:
     - CPU
-    - Intel
-    - 18A 制程
-    - AI 算力
-    title: Intel Core Ultra 系列3
+    - RISC-V
+    - 开源硬件
+    - 芯片设计
+    title: OSCPU Zhoushan Core
   CV:
-  - desc: OpenMMLab 在2026年初发布重大更新，整合了 Vision Transformer (ViT) 多尺度注意力机制，支持动态卷积核优化，训练速度相比上一代提升40%。新增多模态融合模块，可实现图像-文本-点云的联合学习，并在
-      COCO 2017 数据集上达到 65.2% mAP 的检测精度。
+  - desc: 包含CVPR 2025所有论文及开源代码的仓库，涵盖目标检测、图像分割、生成对抗网络等前沿方向，提供PyTorch和TensorFlow实现，支持模型训练、评估和部署的全流程工具链。
     tags:
     - 计算机视觉
     - 深度学习
-    - 多模态
-    - 开源框架
-    title: OpenMMLab 2026 全面升级版
+    - 论文代码
+    - CVPR2025
+    title: CVPR 2025 Papers with Code
   GPU:
-  - desc: NVIDIA 在 CES 2026 发布 Rubin 平台，整合六款全新芯片，包括 3nm 制程的 Grace Hopper Superchip
-      和 Blackwell GPU。采用 HBM4 内存，带宽达 20.7 TB/s，支持 54 TB LPDDR5x 统一内存。AI 推理 token 成本降低
-      10 倍，FP8 算力达到 10 ExaFLOPS。
+  - desc: GPU Web社区推动的WebGPU标准进展，2026-02-03更新WGSL着色语言规范，支持计算着色器和图形渲染，提供跨平台GPU加速API，适用于Web端高性能图形和计算应用。
     tags:
     - GPU
-    - AI 加速
-    - HBM4
-    - NVIDIA
-    title: NVIDIA Rubin AI 平台
+    - Web标准
+    - WGSL
+    - 图形渲染
+    title: GPU Web Standards
   Lang:
-  - desc: Go 1.26 于2026年2月19日正式发布，默认启用 Green Tea 垃圾回收器，暂停时间减少 70%。泛型限制放宽，支持嵌套类型参数化，并发模型新增
-      Structured Concurrency 原语。编译速度提升 15%，并在 ARMv9 架构上实现 SIMD 指令集优化。
+  - desc: Microsoft推出的TypeScript 5.0版本，引入装饰器元数据、常量类型参数、泛型默认值等新特性，提升类型安全和开发体验，适用于大型前端项目，支持ECMAScript最新标准。
     tags:
     - 编程语言
-    - Go
-    - 垃圾回收
-    - 性能提升
-    title: Go 1.26 语言更新
+    - TypeScript
+    - 前端开发
+    - 类型安全
+    title: TypeScript 5.0
   NLP:
-  - desc: Transformers V5 于2026年2月7日正式发布，采用混合精度训练优化，推理延迟降低60%。新版本集成 Sparse Attention
-      机制，支持 128K 上下文长度，并在 GLUE 基准测试中平均得分 92.1。同时引入模块化微调接口，可快速适配各类下游任务。
+  - desc: 2025年版NLP 100练习项目，涵盖词向量、文本分类、序列标注、机器翻译等自然语言处理核心任务，提供Python实现和详细教程，适合初学者和进阶者系统学习NLP技术。
     tags:
     - 自然语言处理
-    - 大语言模型
-    - 开源库
-    - 性能优化
-    title: Hugging Face Transformers 5.0
+    - 练习项目
+    - Python
+    - NLP100
+    title: NLP 100 Exercise 2025
   Net:
-  - desc: 基于 Express + Vue 的网络协议学习与分析工具，2026年2月新增 QUIC 协议可视化模拟器，支持 PCAP 文件解析与流量重放。集成
-      OSI/TCP-IP 模型交互式演示，可实时捕获并解析 802.11ax Wi-Fi 6E 帧结构，适用于网络工程教学与安全审计。
+  - desc: AI驱动的舆情与趋势分析平台，实时聚合社交媒体和新闻数据，使用机器学习进行情感分析和热点检测，支持自定义数据源和可视化仪表盘，适用于市场研究和舆情监控。
     tags:
-    - 网络协议
-    - 可视化工具
-    - 教育项目
-    - 开源
-    title: Network-Protocol-Explorer
+    - 网络分析
+    - AI舆情
+    - 数据聚合
+    - 趋势预测
+    title: TrendRadar
   News:
-  - desc: 2026年2月21日，OpenAI 宣布将未来三年算力支出目标从 1000 亿美元下调至 600 亿美元，原因是模型压缩技术与稀疏化训练取得突破。同时公布新型混合专家模型
-      Mixture-of-Experts (MoE) 已实现 90% 参数激活率，推理成本降低 40%。
+  - desc: 实时技术新闻聚合器，抓取Hacker News、Reddit、科技媒体等来源，使用自然语言处理进行摘要生成和分类，提供个性化推荐，支持多语言和自定义订阅源。
     tags:
-    - AI 新闻
-    - 算力优化
-    - 模型压缩
-    - OpenAI
-    title: OpenAI 大幅下调算力支出目标
+    - 新闻聚合
+    - 技术资讯
+    - NLP
+    - 实时更新
+    title: Tech News Aggregator
