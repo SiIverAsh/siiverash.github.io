@@ -41,7 +41,6 @@ def process_lifecycle():
         if not filename.endswith(".md") or filename == "BLOG_TEMPLATE.md": continue
         filepath = os.path.join(POSTS_DIR, filename)
         
-        # 哨兵逻辑：如果 Git 认为文件没动，直接跳过，保护时间戳不被误触
         if not get_git_status(filepath):
             continue
 
@@ -60,13 +59,13 @@ def process_lifecycle():
 
         needs_update = False
         
-        # 1. 发布时间：仅针对占位符初始化
+        # 1. 发布时间
         if not fm_date or "UPLOAD_TIME" in fm_date or "2026-01-01" in fm_date:
             front_matter["date"] = now_str
             front_matter["last_modified_at"] = now_str
             needs_update = True
         else:
-            # 2. 更新时间：精准变动监测
+            # 2. 更新时间
             committed_body = get_git_body(filepath)
             current_body = body.replace('\r\n', '\n').strip()
 
@@ -76,7 +75,6 @@ def process_lifecycle():
                 print(f"✅ [监测到更新] {filename}")
                 needs_update = True
             elif not fm_mod or fm_mod != fm_date:
-                # 兼容性修复：如果文件已动但不需要更新时间，则确保 mod 等于 date（隐藏图标）
                 front_matter["last_modified_at"] = fm_date
                 needs_update = True
 
@@ -86,7 +84,7 @@ def process_lifecycle():
             front_matter["last_modified_at"] = to_str(front_matter.get("last_modified_at"))
             
             fm_yaml = yaml.dump(front_matter, allow_unicode=True, sort_keys=False).strip()
-            # 保持 body 原始格式，绝不删除开头或结尾的换行符
+            # 保持 body 原始格式
             new_content = f"---\n{fm_yaml}\n---\n{body}"
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(new_content)
