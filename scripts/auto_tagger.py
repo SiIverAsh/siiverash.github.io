@@ -32,10 +32,10 @@ def get_tags_from_ai(title, content, category, existing_tags):
     
     guidance = ""
     if category == "study": guidance = "这是一篇学习笔记。请侧重提取技术领域词。"
-    elif category == "anime": guidance = "这是一篇动漫相关博文。请务必提取作品名称作为首个标签。"
+    elif category == "anime": guidance = "这是一篇动漫相关博文。请务必提取作品名称作为首个标签、要根据该动漫的真实内容来提取其他标签。"
     elif category == "music": guidance = "这是一篇音乐鉴赏。请提取社团/作者名、曲风。"
     elif category == "paint": guidance = "这是一篇绘画分享。请提取其中的人物、风格。"
-    elif category == "game": guidance = "这是一篇游戏记录。请务必提取游戏名称作为首个标签。"
+    elif category == "game": guidance = "这是一篇游戏记录。请务必提取游戏名称作为首个标签、要根据游戏的真实内容来提取其他标签。"
     elif category == "snap": guidance = "这是一篇摄影作品。请提取镜头焦段、拍摄地点。"
     elif category == "asmr": guidance = "这是一篇助眠相关内容。请提取作者名。"
     elif category == "emo": guidance = "这是一篇心情随笔。请提取情感意象或核心感悟。"
@@ -77,7 +77,6 @@ def process_posts():
             post_body = parts[2]
         except: continue
 
-        # 核心修改：仅在标签缺失时进行 AI 打标，不再触碰任何日期逻辑
         if not front_matter.get("tags") or len(front_matter["tags"]) == 0:
             title = front_matter.get("title", "")
             category = (front_matter.get("categories") or [""])[0].lower()
