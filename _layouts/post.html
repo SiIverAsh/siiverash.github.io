@@ -8,10 +8,10 @@ layout: default
         <div style="color: var(--text-muted); font-size: 0.9em; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
             {% assign publish_time = page.date | date: "%Y-%m-%d %H:%M" %}
             {% assign update_time = page.last_modified_at | date: "%Y-%m-%d %H:%M" %}
-            <span><i class="fas fa-calendar-day"></i> {{ publish_time }}</span>
+            <span title="发布时间"><i class="fas fa-history"></i> {{ publish_time }}</span>
             {% if page.last_modified_at and publish_time != update_time %}
             <span>|</span>
-            <span title="最后更新时间"><i class="fas fa-history"></i> {{ update_time }}</span>
+            <span title="最后更新时间"><i class="fas fa-calendar-check"></i> {{ update_time }}</span>
             {% endif %}
             <span>|</span>
             <span><i class="fas fa-folder-open"></i> {% for cat in page.categories %}<span style="color: var(--primary-color)">{{ cat }}</span>{% endfor %}</span>
