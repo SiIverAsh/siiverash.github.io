@@ -27,14 +27,11 @@ def get_git_body(filepath, ref="HEAD"):
 def process_lifecycle():
     if not os.path.exists(POSTS_DIR): return
     now_str = get_beijing_time().strftime(DATE_FORMAT)
-    
     is_ci = os.getenv("GITHUB_ACTIONS") == "true"
 
     for filename in os.listdir(POSTS_DIR):
         if not filename.endswith(".md") or filename == "BLOG_TEMPLATE.md": continue
         filepath = os.path.join(POSTS_DIR, filename)
-        
-        # CI 环境对比上一个提交 ，本地对比当前 HEAD
         compare_ref = "HEAD^1" if is_ci else "HEAD"
 
         with open(filepath, 'r', encoding='utf-8') as f:
@@ -52,31 +49,35 @@ def process_lifecycle():
 
         needs_update = False
         
-        # 1. 发布时间处理
+        # 1. 发布时间处理：仅针对占位符进行初始化
         if not fm_date or "UPLOAD_TIME" in fm_date or "2026-01-01" in fm_date:
             front_matter["date"] = now_str
-            front_matter["last_modified_at"] = now_str
-            fm_date = now_str
-            fm_mod = now_str
+            # 极简原则：新发布时不添加更新时间字段
+            if "last_modified_at" in front_matter:
+                del front_matter["last_modified_at"]
             print(f"🆕 [发布初始化] {filename} (已锁定发布日期)", flush=True)
             needs_update = True
-        
-        # 2. 更新时间监测
-        current_body = body.replace('\r\n', '\n').strip()
-        committed_body = get_git_body(filepath, ref=compare_ref)
+        else:
+            # 2. 更新时间监测：精准变动监测
+            current_body = body.replace('\r\n', '\n').strip()
+            committed_body = get_git_body(filepath, ref=compare_ref)
 
-        if committed_body is not None and current_body != committed_body:
-            front_matter["last_modified_at"] = now_str
-            print(f"📝 [正文内容更新] {filename} (检测到正文变动，已更新 last_modified_at)", flush=True)
-            needs_update = True
-        elif not fm_mod or fm_mod != fm_date:
-            front_matter["last_modified_at"] = fm_date
-            print(f"🧹 [日期规范化] {filename} (已同步更新时间字段)", flush=True)
-            needs_update = True
+            if committed_body is not None and current_body != committed_body:
+                # 仅在正文确实变动时才创建/更新 last_modified_at
+                front_matter["last_modified_at"] = now_str
+                print(f"📝 [正文内容更新] {filename} (检测到变动，已更新时间戳)", flush=True)
+                needs_update = True
+            elif fm_mod and (fm_mod == fm_date):
+                # 极简原则：如果更新时间等于发布时间，则视为冗余，直接删除该字段
+                del front_matter["last_modified_at"]
+                print(f"🧹 [清理冗余数据] {filename} (已移除与发布日期相同的更新时间字段)", flush=True)
+                needs_update = True
 
         if needs_update:
             front_matter["date"] = to_str(front_matter.get("date"))
-            front_matter["last_modified_at"] = to_str(front_matter.get("last_modified_at"))
+            if "last_modified_at" in front_matter:
+                front_matter["last_modified_at"] = to_str(front_matter["last_modified_at"])
+            
             fm_yaml = yaml.dump(front_matter, allow_unicode=True, sort_keys=False).strip()
             new_content = f"---\n{fm_yaml}\n---\n{body}"
             with open(filepath, 'w', encoding='utf-8') as f:
