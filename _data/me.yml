@@ -25,3 +25,8 @@ game:
     ram: "32GB DDR5 6000MT/s"
     storage: "WD SN5000 1T*2 "
 
+# 爱慕尼康
+snap:
+  equipment:
+    camera: "Nikon Z8"
+    lens: "Nikon Z 24-120mm f/4 S"

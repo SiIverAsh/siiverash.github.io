@@ -58,7 +58,7 @@ def web_search(query: str):
         for i, r in enumerate(results, 1):
             title = r.get("title", "无标题")
             url_link = r.get("url", "无链接")
-            # 提取高亮片段 (Highlights)
+            # 提取高亮片段 
             highlights = r.get("highlights", [])
             snippet = "\n".join(highlights) if highlights else "无法提取文字片段，请直接访问链接。"
             
@@ -115,35 +115,33 @@ def get_ai_recommendation(context):
     if not api_key:
         return None
 
-    va_focus = [
-        "今天请侧重推荐2015年后出道、目前人气极高的新锐/潜力声优。",
-        "今天请侧重推荐1990-2005年间活跃的、拥有经典代表作的骨灰级/大牌声优。",
-        "今天请侧重推荐擅长『冷酷反派』或『中性少年音』的特色型声优。",
-        "今天请侧重推荐在『同人/广播剧/舞台剧』领域同样活跃的跨界声优。",
-        "今天请侧重推荐出生于『东京都以外』且带有地方特色或独特声线的声优。"
-    ]
-    daily_focus = random.choice(va_focus)
+    # va_focus = [
+    #     "今天请侧重推荐2015年后出道、目前人气极高的新锐/潜力声优。",
+    #     "今天请侧重推荐1990-2005年间活跃的、拥有经典代表作的骨灰级/大牌声优。",
+    #     "今天请侧重推荐擅长『冷酷反派』或『中性少年音』的特色型声优。",
+    #     "今天请侧重推荐在『同人/广播剧/舞台剧』领域同样活跃的跨界声优。",
+    #     "今天请侧重推荐出生于『东京都以外』且带有地方特色或独特声线的声优。"
+    # ]
+    # daily_focus = random.choice(va_focus)
 
     prompt_template = """
-    你不用节省时间，请你慢慢思考。
+    Please think carefully, lowely and accurately.
     今天是 {CURRENT_DATE}。你是一个全能的数字生活与技术博主，精通硬件、AI、动漫及二次元文化。你以输出信息的高准确性著称。
-    请基于近期（一个月以内或是一个星期内）的实时背景：{CONTEXT_PLACEHOLDER}，为一名软件工程硕士生提供每日推荐。
+    请基于（三个月、一个月以内）近期真实背景：{CONTEXT_PLACEHOLDER}，为一名软件工程硕士生提供每日推荐。
     
     要求：
     1. 每个分类（Study下的 9 个指定子类、Anime、Music、Paint、Game）必须提供正好 1 个推荐项。
-    2. Study 下必须严格使用这 9 个键名：CV, NLP, Audio, Net, Lang, Arch, GPU, CPU, News。你必须根据实时背景将 GitHub 项目分类放入 these 子类中。
+    2. Study 下必须严格使用这 9 个键名：CV, NLP, Audio, Net, Lang, Arch, GPU, CPU, News。你必须根据实时背景（例如github上的最新项目等）。
     3. desc 必须输出最新的硬核技术细节（如架构特性、工艺制程、性能指标）。
     4. 严禁使用任何引导性废话。
-    5. 针对 GPU 和 CPU 领域，必须关注最近一个月内的动态。
+    5. 针对 GPU 和 CPU 领域，必须关注最近半年内的动态。
     6. 每个内容项（Study、Anime、Music、Game）必须包含至少 4 个 tags。
     7. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等。
     8. 对于Paint，画师不一定是知名的，可以推荐国内平台的画师，但是必须提供真实的画师链接（可以是X，也可以是微博等等）（不确定则留空）。
     9. 对于history推荐内容为“历史上的今天”，必须提供 6 条不同数据。
     10. **CV推荐**：
-       - {DAILY_FOCUS}
-       - 必须严格参考**《声优名鉴》(声優名鑑)**数据，推荐一位日本声优，每天都得推荐不同的声优，禁止一直推荐同一个。
-       - **严禁**重复推荐声优。
-       - 必须包含：姓名(name)、所属事务所(agency)、出生地(hometown)、以及一段基于名鉴风格的专业评价(intro,大约150字即可)。代表作如果你不知道可以不写，但是写出来的代表作一定要正确。
+       - 必须严格参考**《声优名鉴》(声優名鑑)**数据，推荐一位日本声优，每天都要推荐不同的声优，**严禁** 一直推荐同一个。
+       - 必须包含：姓名(name)、所属事务所(agency)、出生地(hometown)、以及一段基于名鉴风格的专业评价(intro,大约150字即可)。
     11. 对于game推荐的内容尽量是近几年发行的游戏。
     12. 所有的回答请务必用中文。
     
@@ -174,8 +172,8 @@ def get_ai_recommendation(context):
     }}
     """
     
-    prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context).replace("{CURRENT_DATE}", str(get_beijing_time().date())).replace("{DAILY_FOCUS}", daily_focus)
-
+    prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context).replace("{CURRENT_DATE}", str(get_beijing_time().date()))
+    # prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context).replace("{CURRENT_DATE}", str(get_beijing_time().date())).replace("{DAILY_FOCUS}", daily_focus)
     messages: List[ChatCompletionMessageParam] = [
         {"role": "system", "content": "你是一个全能的数字生活与技术博主，精通硬件、AI、动漫及二次元文化。你拒绝平庸，在面临不确定的技术细节（如未发布的显卡）或声优作品时，必须使用 web_search 工具进行核实，以确保 100% 的准确性。"},
         {"role": "user", "content": prompt}
@@ -184,8 +182,7 @@ def get_ai_recommendation(context):
     sub_turn = 1
     while True:
         try:
-            # 官方推荐：在多轮工具调用期间，历史必须包含完整的 reasoning_content
-            
+            # 包含完整的 reasoning_content
             response = client.chat.completions.create(
                 model='deepseek-chat', 
                 messages=messages,
@@ -197,17 +194,15 @@ def get_ai_recommendation(context):
             message = response.choices[0].message
             # 手动补全 reasoning_content 并存入历史消息
             msg_dict = message.model_dump()
-            if hasattr(message, 'reasoning_content') and message.reasoning_content:
-                msg_dict['reasoning_content'] = message.reasoning_content
+            reasoning = getattr(message, 'reasoning_content', None)
+            if reasoning:
+                msg_dict['reasoning_content'] = reasoning
             
             messages.append(cast(ChatCompletionMessageParam, msg_dict))
 
-            # 获取思考内容并打印
-            reasoning = getattr(message, 'reasoning_content', None)
             if reasoning:
                 print(f"--- AI Thinking (Turn {sub_turn}) ---\n{reasoning}\n")
 
-            # 关键：判断是否存在工具调用
             tool_calls = message.tool_calls
             if not tool_calls:
                 return message.content

@@ -20,7 +20,7 @@
 </div>
 {% endif %}
 
-<!-- 动漫分类页：显示追番与神作 -->
+<!-- 动漫分类页：显示追番 -->
 {% if page.url contains '/categories/anime' %}
 <div class="extra-box glass-card">
     <div class="extra-title"><i class="fas fa-play-circle"></i> 正在追番 (Watching)</div>
@@ -75,6 +75,22 @@
 </div>
 {% endif %}
 
+<!-- snap分类页：显示装备 -->
+{% if page.url contains '/categories/snap' %}
+<div class="extra-box glass-card">
+    <div class="extra-title"><i class="fas fa-tower-pc"></i> 装备 (equipment)</div>
+    <div style="font-size: 0.85em; color: var(--text-main);">
+        <div style="margin-bottom: 10px;">
+            <div style="color: var(--primary-color); font-weight: bold;"><i class="fas fa-camera"></i> Camera</div>
+            <div>{{ site.data.me.snap.equipment.camera }}</div>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <div style="color: #f09199; font-weight: bold;"><i class="fas fa-dot-circle"></i> Lens</div>
+            <div>{{ site.data.me.snap.equipment.lens }}</div>
+    </div>
+</div>
+{% endif %}
+
 <!-- 每日声优推荐 -->
 {% if page.url contains '/categories/anime' %}
 <div class="extra-box glass-card">
@@ -112,14 +128,12 @@
 
         let animeName = "";
         
-        // 1. 尝试从标签中提取 (优先级高)
+        // 1. 尝试从标签中提取 
         const tagContainer = document.getElementById('data-post-tags');
         if (tagContainer) {
             const tags = tagContainer.textContent.split(',');
             const skip = ['动漫', '二次元', '恋爱番', '热血番', '成长', '漫评', '感想', '番剧', '青春', '治愈', '科幻', '悬疑', '日常', '校园', '奇幻', '战斗', '3D彼女', '图像', '绘画', '随笔'];
-            // 注意：'3D彼女' 如果出现在这里可能会被跳过，如果它是唯一的特定标签
-            // 我们重新定义：排除掉非常通用的词，保留看起来像名字的词
-            const generalTags = ['动漫', '二次元', '恋爱番', '热血番', '成长', '漫评', '感想', '番剧', '青春', '治愈', '科幻', '悬疑', '日常', '校园', '奇幻', '战斗', '图像', '绘画', '随笔', '新年'];
+            const generalTags = ['动漫', '恋爱番', '热血番', '成长', '漫评', '感想', '番剧', '青春', '治愈', '科幻', '悬疑', '日常', '校园', '奇幻', '战斗', '图像', '绘画', '随笔', '新年'];
             
             for (let t of tags) {
                 let cleanT = t.trim();
@@ -143,7 +157,7 @@
             wikiDesc.textContent = "点击下方按钮在 Bangumi 查看关于《" + animeName + "》的详细评分与资讯。";
         }
     }
-    // 立即尝试执行一次，并注册到 DOMContentLoaded 兜底
+    // 立即尝试执行一次，注册到 DOMContentLoaded 兜底
     loadBangumiWiki();
 </script>
 {% endif %}

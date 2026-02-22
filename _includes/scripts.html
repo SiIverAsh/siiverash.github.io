@@ -1,6 +1,6 @@
 <script>
     /**
-     * 更新时钟功能，包含时间、日期及农历展示
+     * 更新时钟功能
      */
     function updateClock() {
         const now = new Date();
@@ -31,7 +31,7 @@
     }
 
     /**
-     * 动漫相关组件初始化（声优推荐）
+     * 声优推荐
      */
     function loadAnimeExtras() {
         const cvName = document.getElementById('cv-name');
@@ -47,9 +47,6 @@
         }
     }
 
-    /**
-     * 展示邮箱弹窗，支持移动端自适应居中显示
-     */
     function showEmail(event, email) {
         event.stopPropagation();
         const oldTip = document.getElementById('email-tooltip');
@@ -158,7 +155,7 @@
         const mobileSearchContainer = document.getElementById('mobile-search-container');
         const searchOverlay = document.getElementById('mobile-search-overlay');
 
-        // 处理移动端适配逻辑：侧边栏切换与搜索框搬运
+        // 处理移动端适配逻辑
         if (sidebar && sidebarOverlay && mobileSearchContainer && searchOverlay) {
             
             const handleResize = () => {

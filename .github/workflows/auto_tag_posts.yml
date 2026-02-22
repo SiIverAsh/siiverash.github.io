@@ -32,14 +32,19 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: python scripts/auto_tagger.py
 
+      - name: Run Subject Extractor
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python scripts/extract_subject.py
+
       - name: Commit and Push Tags
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action [AI Tagger]"
           git add _posts/*.md
-          # 只有在有变动（即 AI 生成了新标签）时才提交
+          # 只有在有变动（即 AI 生成了新标签或提取了作品名）时才提交
           git diff --quiet && git diff --staged --quiet || (
-            git commit -m "AI: Automatically generated tags for blog posts"
+            git commit -m "AI: Automatically generated tags and subjects for blog posts"
             git pull --rebase origin main
             git push
           )
