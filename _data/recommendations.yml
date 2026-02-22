@@ -1,122 +1,130 @@
 anime:
-- desc: 改编自同名轻小说，讲述魔女与人类少年的冒险故事。制作由MAPPA负责，作画精度达到8K分辨率，采用实时渲染背景和3DCG融合技术。
+- desc: 2026年冬季播出，延续精灵法师弗莉莲的千年旅程，采用 4K HDR 制作，每集作画张数超 10 万枚，配乐由 Evan Call 再度操刀。
   tags:
   - 奇幻
-  - 冒险
-  - MAPPA
-  - 轻小说改编
-  title: 魔女と旅をする (Witch's Journey)
+  - 治愈
+  - 续作
+  - 高画质
+  title: 'Frieren: Beyond Journey''s End Season 2'
 cv_recommend:
-  agency: 青二プロダクション
-  hometown: 埼玉县
-  intro: 羊宫妃那于2020年出道，凭借《孤独摇滚！》后藤一里一角迅速走红。其嗓音清澈中略带沙哑，能精准演绎从活泼少女到深沉角色的多种声线。在《莉可丽丝》和《晚安世界》中的表现进一步展现了她的演技广度。作为青二プロダクション的新生代，她以稳定的现场发挥和独特的音色备受业界关注，被视为未来主演声优的有力竞争者。
-  name: 羊宫妃那
+  agency: アクセルワン
+  hometown: 東京都
+  intro: 以其清澈透明的声线和广泛的情感表达范围而备受赞誉。在配音工作中展现出卓越的演技多样性，能够精准驾驭从活泼少女到沉稳女性等多种角色类型。专业评论称赞其声音具有独特的穿透力和感染力，在业内被誉为「声音的宝石箱」。近年来在广播节目和音乐领域也活跃发展，展现了多栖艺人的全面实力。
+  name: 水瀬いのり
 date: '2026-02-22'
 game:
-- desc: Atlus开发的奇幻RPG，采用Unity引擎打造，支持DLSS 3.5，画面达到4K/60fps，战斗系统融合即时与回合制，剧本量超100万字。
+- desc: Supergiant Games 开发的 roguelike 动作游戏，采用全新咒术系统，支持 4K 120fps，包含 100+ 种武器变体，剧情分支达
+    30 小时以上。
   tags:
-  - RPG
-  - 奇幻
-  - Atlus
-  - 2024年
-  title: 'Metaphor: ReFantazio'
+  - 动作游戏
+  - roguelike
+  - 神话
+  - 独立游戏
+  title: Hades II
 history:
-- event: 乔治·华盛顿出生，美国第一任总统。
+- event: 乔治·华盛顿出生，美国首任总统。
   year: '1732'
-- event: 克隆羊多利诞生，标志着克隆技术的重大突破。
-  year: '1997'
-- event: 第十三届冬季奥运会在美国普莱西德湖开幕。
+- event: 亚当斯-奥尼斯条约签署，西班牙将佛罗里达割让给美国。
+  year: '1819'
+- event: 李政道、杨振宁提出宇称不守恒定律，后获诺贝尔物理学奖。
+  year: '1956'
+- event: 美国冰球队在冬奥会击败苏联，史称「冰上奇迹」。
   year: '1980'
-- event: 法国二月革命爆发，导致七月王朝垮台。
-  year: '1848'
-- event: 巴基斯坦承认孟加拉国独立。
-  year: '1974'
-- event: 新西兰克赖斯特彻奇发生6.3级地震，造成185人死亡。
-  year: '2011'
+- event: 苏格兰科学家宣布克隆羊多莉诞生。
+  year: '1997'
+- event: 索尼正式发布 PlayStation 3 游戏机。
+  year: '2006'
 music:
-- desc: 2025年发行的数字单曲，流媒体播放量突破5亿次，融合放克与摇滚元素，采用32轨道录音和母带处理，动态范围达16dB。
+- desc: 同人音乐社团 Crest 最新东方 Project 改编专辑，融合交响乐与电子元素，收录 12 首曲目，动态范围达 24bit/96kHz，限量 1000
+    张发售。
   tags:
-  - Jpop
-  - Official髭男dism
-  - 放克摇滚
-  - 2025年
-  title: Official髭男dism - SOULSOUP
+  - 同人音乐
+  - 东方Project
+  - 交响乐
+  - 高音质
+  title: Crest - Touhou Arrange 2025
 paint:
-- desc: 日本知名插画家，以独特的色彩运用和动态构图著称，作品多用于动画宣传和游戏角色设计。
+- desc: 以色彩鲜艳、构图大胆著称的插画家，擅长融合传统绘画与数字艺术，作品多次入选「Illustration展」。
   title: 米山舞
-  url: https://twitter.com/yoneyamai
+  url: https://www.artstation.com/yoneyamai
 study:
   Arch:
-  - desc: 涵盖微服务、事件驱动、CQRS等模式，包含CAP定理实践和分布式事务解决方案，附有AWS/GCP部署案例和性能调优指标。
+  - desc: 基于 AI 代理的完全自主 DevOps 平台，采用微服务架构，支持多云基础设施管理，集成 AWS/GitHub API，每日可处理 10 万次部署，平均故障恢复时间小于
+      5 分钟。
     tags:
-    - 系统设计
-    - 架构模式
-    - 分布式系统
-    - 最佳实践
-    title: 'System Design Handbook: Scalable Architecture Guide'
+    - DevOps
+    - AI代理
+    - 微服务
+    - 云计算
+    title: Agentic DevOps
   Audio:
-  - desc: 基于Diffusion模型的语音合成与转换，支持24kHz高保真音频，RTF低于0.5，集成NSF-HiFiGAN声码器，提供跨语言声音克隆和实时变声功能。
+  - desc: Sony Research 提出的视频到音频合成模型，采用扩散 Transformer 架构，支持 48kHz 高清音频生成，在 VGGSound
+      数据集上达到 4.12 FAD 分数，推理延迟低于 200ms。
     tags:
-    - 语音处理
-    - 深度学习
     - 音频合成
-    - 实时
-    title: 'Voxudio: Neural Voice Processing Toolkit'
+    - 扩散模型
+    - 多模态
+    - 索尼
+    title: MMAudio
   CPU:
-  - desc: 用于测试Intel Core Ultra 3系列（Panther Lake，18A工艺，24核心，Arc Xe-LPG+显卡，DDR5-6400支持）的性能计数器，提供周期级精度和缓存命中率分析。
+  - desc: 采用 Intel 4nm 工艺，16 个性能核 + 8 个能效核配置，集成 74 TOPS NPU，支持 LPDDR5X-8500 内存，单线程性能提升
+      28%，全核 Turbo 频率达 5.8GHz。
     tags:
-    - 性能测试
-    - CPU架构
-    - 基准测试
-    - 开源
-    title: 'Google Benchmark: CPU Microbenchmark Framework'
+    - CPU
+    - Intel
+    - Nova Lake
+    - AI加速
+    title: Intel Core Ultra 400 Nova Lake-S
   CV:
-  - desc: 基于PyTorch的YOLOv11架构，支持TensorRT推理，在COCO数据集上达到56.8% mAP，模型体积仅6.5MB，支持边缘设备部署。最新版本集成动态标签分配和跨阶段局部网络优化。
+  - desc: UCSC-VLAA 开源的视觉编码器家族，采用混合卷积-注意力架构，支持最高 1024x1024 分辨率输入，在 ImageNet-1K 上达到
+      88.5% top-1 准确率，模型大小从 10M 到 300M 参数可调。
     tags:
     - 计算机视觉
-    - 目标检测
-    - PyTorch
-    - 实时推理
-    title: 'Ultralytics YOLOv11: Real-Time Object Detection'
+    - Transformer
+    - 开源
+    - 多模态
+    title: OpenVision
   GPU:
-  - desc: 针对CUDA 12.5开发，支持RTX 5090 Ti的GB202核心（台积电3nm工艺，18432个CUDA核心，功耗750W，24GB GDDR7显存），包含张量核心编程和Multi-Instance
-      GPU实例。
+  - desc: 基于 Blackwell Ultra 架构，采用 4nm 工艺，搭载 192 个流多处理器，24GB GDDR7 显存，带宽 1.5TB/s，光追性能较上代提升
+      2.3 倍，功耗 450W。
     tags:
-    - GPU编程
-    - CUDA
-    - 高性能计算
+    - GPU
     - NVIDIA
-    title: 'NVIDIA CUDA Samples: GPU Programming Examples'
+    - Blackwell
+    - 游戏
+    title: NVIDIA GeForce RTX 5090
   Lang:
-  - desc: 设计用于中文开发者的静态类型语言，支持泛型、模式匹配和所有权系统，编译为WASM，包管理器内置自动依赖解析。
+  - desc: Go 语言 2025 年重大更新，引入泛型类型别名、弱指针机制，垃圾收集器暂停时间减少 40%，编译速度提升 25%，新增 arm64e 架构支持。
     tags:
     - 编程语言
-    - 中文编程
+    - Go
+    - 性能优化
     - 编译器
-    - 开源
-    title: 'Kunyu: Chinese Programming Language'
+    title: Go 1.24
   NLP:
-  - desc: 提供预训练模型如Llama 3.1、Mixtral 8x22B，支持MoE架构，上下文长度达128K tokens，量化后INT4精度下每秒生成512
-      tokens。集成Direct Preference Optimization和RLHF工具链。
+  - desc: 基于 Go 语言的微型 GPT 实现，采用仅解码器 Transformer 架构，支持 125M 参数规模，使用 BPE 分词器，在 CPU 上可实现实时文本生成，内存占用低于
+      500MB。
     tags:
     - 自然语言处理
+    - Go
     - Transformer
-    - 预训练模型
-    - 开源
-    title: 'Hugging Face Transformers: State-of-the-Art NLP'
+    - 轻量级
+    title: go-microgpt
   Net:
-  - desc: 采用Radix树路由，支持中间件链，单核QPS可达150k，内存占用仅2MB，集成JSON验证和Swagger文档自动生成。
+  - desc: GitHub 官方推出的 Model Context Protocol 服务器，提供 RESTful API 接口，支持仓库搜索、代码审查、Issue
+      管理等 15 种工具，延迟低于 100ms，兼容 OpenAI Agents SDK。
     tags:
-    - 网络编程
-    - Go语言
-    - Web框架
-    - 高性能
-    title: 'Gin: High-Performance Go Web Framework'
+    - MCP
+    - GitHub
+    - API
+    - 开发工具
+    title: GitHub MCP Server
   News:
-  - desc: 采用多任务学习模型，结合用户行为序列和知识图谱，CTR提升18%，支持实时新闻流处理，每日更新千万级文章。
+  - desc: Google 推出浏览器端 Model Context Protocol 实现，可将任何网站转化为 AI 代理可交互接口，基于 WebAssembly
+      技术，延迟低于 50ms，已集成至 Chrome 118 版本。
     tags:
-    - 新闻推荐
-    - 机器学习
-    - 个性化
-    - 大数据
-    title: 'Microsoft NewsRecommendation: AI-Powered News Aggregator'
+    - MCP
+    - Google
+    - 浏览器
+    - AI代理
+    title: Google 发布 WebMCP
