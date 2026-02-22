@@ -149,6 +149,7 @@ def process_posts():
             new_tags = get_tags_from_ai(title, post_body.strip(), category, existing_tags)
             if new_tags:
                 front_matter["tags"] = new_tags
+                front_matter["last_modified_at"] = get_beijing_time().strftime("%Y-%m-%d %H:%M:%S +0800")
                 needs_update = True
 
         if needs_update:
