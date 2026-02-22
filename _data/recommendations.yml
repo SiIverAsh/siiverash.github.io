@@ -1,130 +1,120 @@
 anime:
-- desc: 2026年冬季播出，延续精灵法师弗莉莲的千年旅程，采用 4K HDR 制作，每集作画张数超 10 万枚，配乐由 Evan Call 再度操刀。
+- desc: 2026年冬季播出的奇幻冒险动画，延续前作剧情，制作精良，音乐由Evan Call负责，画面表现力突出。
   tags:
   - 奇幻
+  - 冒险
   - 治愈
-  - 续作
-  - 高画质
-  title: 'Frieren: Beyond Journey''s End Season 2'
+  - '2026'
+  title: 葬送的芙莉莲 第二季
 cv_recommend:
-  agency: アクセルワン
-  hometown: 東京都
-  intro: 以其清澈透明的声线和广泛的情感表达范围而备受赞誉。在配音工作中展现出卓越的演技多样性，能够精准驾驭从活泼少女到沉稳女性等多种角色类型。专业评论称赞其声音具有独特的穿透力和感染力，在业内被誉为「声音的宝石箱」。近年来在广播节目和音乐领域也活跃发展，展现了多栖艺人的全面实力。
-  name: 水瀬いのり
-date: '2026-02-22'
+  agency: Across Entertainment
+  hometown: 日本埼玉县
+  intro: 新生代声优，声音清澈柔和，擅长演绎活泼少女角色，演技自然细腻，在广播节目和活动中展现多样才华，受到业内好评。
+  name: 羊宫妃那
+date: '2026-02-23'
 game:
-- desc: Supergiant Games 开发的 roguelike 动作游戏，采用全新咒术系统，支持 4K 120fps，包含 100+ 种武器变体，剧情分支达
-    30 小时以上。
+- desc: 2025年发行的科幻冒险游戏，采用虚幻引擎5开发，支持光线追踪，剧情围绕星际探索展开。
   tags:
-  - 动作游戏
-  - roguelike
-  - 神话
-  - 独立游戏
-  title: Hades II
+  - 科幻
+  - 冒险
+  - 虚幻引擎5
+  - '2025'
+  title: 光与影：33号远征队
 history:
-- event: 乔治·华盛顿出生，美国首任总统。
-  year: '1732'
-- event: 亚当斯-奥尼斯条约签署，西班牙将佛罗里达割让给美国。
-  year: '1819'
-- event: 李政道、杨振宁提出宇称不守恒定律，后获诺贝尔物理学奖。
-  year: '1956'
-- event: 美国冰球队在冬奥会击败苏联，史称「冰上奇迹」。
-  year: '1980'
-- event: 苏格兰科学家宣布克隆羊多莉诞生。
-  year: '1997'
-- event: 索尼正式发布 PlayStation 3 游戏机。
-  year: '2006'
+- event: 古腾堡印刷完成首部《古腾堡圣经》，标志着西方活字印刷术的成熟。
+  year: '1455'
+- event: 阿拉莫战役开始，成为德州独立战争的关键战役。
+  year: '1836'
+- event: 硫磺岛战役中，美军在折钵山升起国旗，象征二战太平洋战场的转折。
+  year: '1945'
+- event: 超新星SN 1987A在大麦哲伦云中被发现，是近代最亮的超新星。
+  year: '1987'
+- event: 日本H-IIA火箭成功发射，搭载多颗卫星进入轨道。
+  year: '2005'
+- event: 德国物理学家维尔纳·海森堡提出不确定性原理，奠定量子力学基础。
+  year: '1927'
 music:
-- desc: 同人音乐社团 Crest 最新东方 Project 改编专辑，融合交响乐与电子元素，收录 12 首曲目，动态范围达 24bit/96kHz，限量 1000
-    张发售。
+- desc: 2025年发行的东方Project同人音乐精选集，收录多首爵士、电子风格改编曲目，由TAMAONSEN社团制作。
   tags:
   - 同人音乐
   - 东方Project
-  - 交响乐
-  - 高音质
-  title: Crest - Touhou Arrange 2025
+  - 爵士
+  - '2025'
+  title: THE SELECTED WORKS OF TAMAONSEN 7
 paint:
-- desc: 以色彩鲜艳、构图大胆著称的插画家，擅长融合传统绘画与数字艺术，作品多次入选「Illustration展」。
-  title: 米山舞
-  url: https://www.artstation.com/yoneyamai
+- desc: 中国插画家，以独特的无脸古风插画风格著称，作品多描绘古典人物与场景。
+  title: 呼葱觅蒜
+  url: https://weibo.com/5507569981
 study:
   Arch:
-  - desc: 基于 AI 代理的完全自主 DevOps 平台，采用微服务架构，支持多云基础设施管理，集成 AWS/GitHub API，每日可处理 10 万次部署，平均故障恢复时间小于
-      5 分钟。
+  - desc: ARM公司2025年推出的v9.5架构扩展，增强SVE2指令集，支持机密计算领域，提升AI工作负载性能。
     tags:
-    - DevOps
-    - AI代理
-    - 微服务
-    - 云计算
-    title: Agentic DevOps
+    - ARM
+    - 处理器架构
+    - SVE2
+    - AI加速
+    title: ARMv9.5架构发布
   Audio:
-  - desc: Sony Research 提出的视频到音频合成模型，采用扩散 Transformer 架构，支持 48kHz 高清音频生成，在 VGGSound
-      数据集上达到 4.12 FAD 分数，推理延迟低于 200ms。
+  - desc: 达摩院2025年开源的语音识别框架，基于Paraformer架构，支持实时流式识别，在多个中文数据集上达到SOTA精度。
     tags:
-    - 音频合成
-    - 扩散模型
-    - 多模态
-    - 索尼
-    title: MMAudio
+    - 语音识别
+    - 端到端
+    - 开源
+    - Python
+    title: FunASR端到端语音识别工具包
   CPU:
-  - desc: 采用 Intel 4nm 工艺，16 个性能核 + 8 个能效核配置，集成 74 TOPS NPU，支持 LPDDR5X-8500 内存，单线程性能提升
-      28%，全核 Turbo 频率达 5.8GHz。
+  - desc: Zen 5架构桌面处理器，16核32线程，5.7GHz加速频率，采用台积电4nm工艺，L3缓存64MB，支持DDR5-6400。
     tags:
     - CPU
-    - Intel
-    - Nova Lake
-    - AI加速
-    title: Intel Core Ultra 400 Nova Lake-S
+    - AMD
+    - Zen5
+    - 4nm
+    title: AMD Ryzen 9 9950X
   CV:
-  - desc: UCSC-VLAA 开源的视觉编码器家族，采用混合卷积-注意力架构，支持最高 1024x1024 分辨率输入，在 ImageNet-1K 上达到
-      88.5% top-1 准确率，模型大小从 10M 到 300M 参数可调。
+  - desc: CVPR 2025会议论文及开源代码合集，涵盖目标检测、图像分割、三维重建等前沿方向，包含数百个GitHub项目，支持实时跟踪最新研究进展。
     tags:
     - 计算机视觉
-    - Transformer
+    - CVPR
     - 开源
-    - 多模态
-    title: OpenVision
+    - 深度学习
+    title: CVPR 2025 Papers with Code Collection
   GPU:
-  - desc: 基于 Blackwell Ultra 架构，采用 4nm 工艺，搭载 192 个流多处理器，24GB GDDR7 显存，带宽 1.5TB/s，光追性能较上代提升
-      2.3 倍，功耗 450W。
+  - desc: 基于Blackwell架构的旗舰显卡，采用GB202核心，4nm工艺，922亿晶体管，搭载24GB GDDR7显存，性能较上代提升60%。
     tags:
     - GPU
     - NVIDIA
     - Blackwell
-    - 游戏
+    - 4nm
     title: NVIDIA GeForce RTX 5090
   Lang:
-  - desc: Go 语言 2025 年重大更新，引入泛型类型别名、弱指针机制，垃圾收集器暂停时间减少 40%，编译速度提升 25%，新增 arm64e 架构支持。
+  - desc: 2025年发布的Go 1.24版本，引入泛型改进、性能优化，新增arena包用于内存管理，编译速度提升15%。
     tags:
+    - Go
     - 编程语言
-    - Go
-    - 性能优化
-    - 编译器
-    title: Go 1.24
+    - 性能
+    - 开源
+    title: Go 1.24编程语言更新
   NLP:
-  - desc: 基于 Go 语言的微型 GPT 实现，采用仅解码器 Transformer 架构，支持 125M 参数规模，使用 BPE 分词器，在 CPU 上可实现实时文本生成，内存占用低于
-      500MB。
+  - desc: 阿里云2025年发布的多模态语言模型，支持文本、图像、音频输入，参数量达720亿，基于混合专家架构，在多项基准测试中领先。
     tags:
-    - 自然语言处理
-    - Go
-    - Transformer
-    - 轻量级
-    title: go-microgpt
+    - NLP
+    - 多模态
+    - 大语言模型
+    - 开源
+    title: Qwen2.5-Omni多模态大模型
   Net:
-  - desc: GitHub 官方推出的 Model Context Protocol 服务器，提供 RESTful API 接口，支持仓库搜索、代码审查、Issue
-      管理等 15 种工具，延迟低于 100ms，兼容 OpenAI Agents SDK。
+  - desc: 2025年发布的mitmproxy 12.0版本，新增HTTP/3支持，增强TLS解密能力，提供Python API用于流量分析。
     tags:
-    - MCP
-    - GitHub
-    - API
-    - 开发工具
-    title: GitHub MCP Server
+    - 网络
+    - HTTP代理
+    - 安全
+    - Python
+    title: mitmproxy 12.0 HTTP代理工具
   News:
-  - desc: Google 推出浏览器端 Model Context Protocol 实现，可将任何网站转化为 AI 代理可交互接口，基于 WebAssembly
-      技术，延迟低于 50ms，已集成至 Chrome 118 版本。
+  - desc: 2026年2月，科大讯飞推出星火X2大模型，参数规模达万亿，强调算力安全与内容安全，在多项中文任务中超越GPT-4。
     tags:
-    - MCP
-    - Google
-    - 浏览器
-    - AI代理
-    title: Google 发布 WebMCP
+    - AI
+    - 大模型
+    - 科大讯飞
+    - '2026'
+    title: 科大讯飞发布星火X2大模型
