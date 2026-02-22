@@ -4,7 +4,6 @@ categories:
 date: 2026-02-22 20:14:52 +0800
 layout: post
 tags:
-- SSH
 - Windows
 - 远程连接
 - OpenSSH
