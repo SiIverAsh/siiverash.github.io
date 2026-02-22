@@ -27,21 +27,25 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: 1. Manage Blog Lifecycle (Dates)
+      # 第一步：独立管理生命周期（时间戳）
+      - name: 1. Manage Lifecycle
         run: python scripts/blog_lifecycle_manager.py
 
-      - name: 2. AI Tagging & Subject Extraction
+      # 第二步：基于时间戳定稿后的内容进行 AI 打标
+      - name: 2. AI Tagging
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
           python scripts/auto_tagger.py
           python scripts/extract_subject.py
 
-      - name: 3. Commit and Push Changes
+      # 第三步：统一原子化提交，彻底避免冲突
+      - name: 3. Atomic Commit and Push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action [Bot]"
           git add _posts/*.md
+          # 只有在确实有变动时才推送，并使用 rebase 确保链路平滑
           git diff --staged --quiet || (
             git commit -m "Automated: Update blog lifecycle and AI tags"
             git pull --rebase origin main
