@@ -9,18 +9,18 @@ DATE_FORMAT = "%Y-%m-%d %H:%M:%S +0800"
 def get_beijing_time():
     return datetime.now(timezone(timedelta(hours=8)))
 
-def format_date(dt_obj):
-    if isinstance(dt_obj, datetime):
-        return dt_obj.strftime(DATE_FORMAT)
-    return str(dt_obj)
+def to_str(val):
+    """强制将日期对象或其他类型转换为标准格式字符串"""
+    if isinstance(val, datetime):
+        return val.strftime(DATE_FORMAT)
+    return str(val) if val else ""
 
 def get_git_body(filepath):
+    """从 Git 获取最近一次提交的正文，统一换行符"""
     try:
         git_path = filepath.replace('\\', '/')
-        # 获取 Git 记录中的原始正文
         content = subprocess.check_output(['git', 'show', f'HEAD:{git_path}'], encoding='utf-8', stderr=subprocess.DEVNULL)
         parts = content.split('---', 2)
-        # 统一换行符并去除首尾空格，防止 Windows/Linux 差异导致误判
         return parts[2].replace('\r\n', '\n').strip() if len(parts) >= 3 else ""
     except:
         return None
@@ -39,46 +39,46 @@ def process_lifecycle():
         if len(parts) < 3: continue
 
         try:
+            # 使用原生解析，随后立即转换类型以防对比失败
             front_matter = yaml.safe_load(parts[1])
             body = parts[2]
+            
+            # 关键修复：统一转为字符串，消除对象与字符串对比的 bug
+            fm_date = to_str(front_matter.get("date"))
+            fm_mod = to_str(front_matter.get("last_modified_at"))
         except: continue
 
         needs_update = False
         
-        current_date = front_matter.get("date")
-        current_date_str = format_date(current_date)
-        
-        # 发布时间锁定逻辑
-        is_new = not current_date or "UPLOAD_TIME" in current_date_str or "2026-01-01" in current_date_str
-        
-        if is_new:
+        # 1. 发布时间处理
+        if not fm_date or "UPLOAD_TIME" in fm_date or "2026-01-01" in fm_date:
             front_matter["date"] = now_str
             front_matter["last_modified_at"] = now_str
+            fm_date = now_str # 更新当前引用
+            fm_mod = now_str
             needs_update = True
-        else:
-            # 强制补齐缺失的更新时间
-            if not front_matter.get("last_modified_at"):
-                front_matter["last_modified_at"] = current_date_str
-                needs_update = True
-            
-            # 核心修复：对比时消除换行符差异
-            committed_body = get_git_body(filepath)
-            current_body = body.replace('\r\n', '\n').strip()
-            
-            if committed_body is not None and current_body != committed_body:
-                front_matter["last_modified_at"] = now_str
-                print(f"📝 [更新检测] {filename} 正文确实发生了变动")
-                needs_update = True
-            else:
-                # 额外修复：如果当前已经显示了虚假更新时间，且内容未变，则将其强制归位
-                if front_matter.get("last_modified_at") != current_date_str:
-                    front_matter["last_modified_at"] = current_date_str
-                    print(f"🧹 [清理] 已重置 {filename} 的虚假更新时间")
-                    needs_update = True
+        
+        # 2. 更新时间监测
+        committed_body = get_git_body(filepath)
+        current_body = body.replace('\r\n', '\n').strip()
+
+        # 逻辑：正文变动则更新时间；正文没变但字段缺失/虚假更新则清理
+        if committed_body is not None and current_body != committed_body:
+            front_matter["last_modified_at"] = now_str
+            needs_update = True
+        elif not fm_mod or fm_mod != fm_date:
+            # 如果内容没变，但更新时间存在且不等于发布时间，则视为“虚假更新”，将其归位
+            front_matter["last_modified_at"] = fm_date
+            needs_update = True
 
         if needs_update:
+            # 写入时确保日期是字符串
+            front_matter["date"] = to_str(front_matter.get("date"))
+            front_matter["last_modified_at"] = to_str(front_matter.get("last_modified_at"))
+            
             fm_yaml = yaml.dump(front_matter, allow_unicode=True, sort_keys=False).strip()
-            new_content = f"---\n{fm_yaml}\n---\n\n{body.lstrip()}"
+            # 关键修复：保持 body 原样，不使用 lstrip()
+            new_content = f"---\n{fm_yaml}\n---\n{body}"
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(new_content)
 
