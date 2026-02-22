@@ -1,4 +1,4 @@
-name: Auto Process Blog Posts
+name: Blog Automation
 
 on:
   push:
@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'
           cache: 'pip'
@@ -27,11 +27,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # 第一步：独立管理生命周期（时间戳）
-      - name: 1. Manage Lifecycle
+      - name: 1. Manage Blog Time Lifecycle
         run: python scripts/blog_lifecycle_manager.py
 
-      # 第二步：基于时间戳定稿后的内容进行 AI 打标
       - name: 2. AI Tagging
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -39,15 +37,13 @@ jobs:
           python scripts/auto_tagger.py
           python scripts/extract_subject.py
 
-      # 第三步：统一原子化提交，彻底避免冲突
       - name: 3. Atomic Commit and Push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action [Bot]"
           git add _posts/*.md
-          # 只有在确实有变动时才推送，并使用 rebase 确保链路平滑
           git diff --staged --quiet || (
-            git commit -m "Automated: Update blog lifecycle and AI tags"
+            git commit -m "Automated: Blog Automation (Lifecycle & AI Tags)"
             git pull --rebase origin main
             git push
           )
