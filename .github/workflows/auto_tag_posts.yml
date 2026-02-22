@@ -1,16 +1,16 @@
-name: Auto Tag Blog Posts
+name: Auto Process Blog Posts
 
 on:
   push:
     paths:
-      - '_posts/**' #
-  workflow_dispatch: # 手动触发
+      - '_posts/**'
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  tagging:
+  process-blog:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -22,29 +22,28 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-          cache: 'pip' # 启用 pip 缓存
+          cache: 'pip'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run Auto Tagger
+      - name: 1. Manage Blog Lifecycle (Dates)
+        run: python scripts/blog_lifecycle_manager.py
+
+      - name: 2. AI Tagging & Subject Extraction
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-        run: python scripts/auto_tagger.py
+        run: |
+          python scripts/auto_tagger.py
+          python scripts/extract_subject.py
 
-      - name: Run Subject Extractor
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-        run: python scripts/extract_subject.py
-
-      - name: Commit and Push Tags
+      - name: 3. Commit and Push Changes
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action [AI Tagger]"
+          git config --local user.name "GitHub Action [Bot]"
           git add _posts/*.md
-          # 只有在有变动（即 AI 生成了新标签或提取了作品名）时才提交
-          git diff --quiet && git diff --staged --quiet || (
-            git commit -m "AI: Automatically generated tags and subjects for blog posts"
+          git diff --staged --quiet || (
+            git commit -m "Automated: Update blog lifecycle and AI tags"
             git pull --rebase origin main
             git push
           )
