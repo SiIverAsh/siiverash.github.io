@@ -1,120 +1,124 @@
 anime:
-- desc: 2026年冬季播出的奇幻冒险动画，延续前作剧情，制作精良，音乐由Evan Call负责，画面表现力突出。
+- desc: 2025年10月播出的电视动画，改编自同名轻小说。讲述吸血鬼少女因社恐而隐居，却被迫卷入种族斗争的故事。动画制作由Studio Bind负责，画面精美，氛围营造出色。
   tags:
+  - 吸血鬼
+  - 社恐
   - 奇幻
-  - 冒险
-  - 治愈
-  - '2026'
-  title: 葬送的芙莉莲 第二季
+  - 2025年10月番
+  title: ひきこまり吸血姫の悶々
 cv_recommend:
-  agency: Across Entertainment
-  hometown: 日本埼玉县
-  intro: 新生代声优，声音清澈柔和，擅长演绎活泼少女角色，演技自然细腻，在广播节目和活动中展现多样才华，受到业内好评。
-  name: 羊宫妃那
-date: '2026-02-23'
+  agency: アミューズ
+  hometown: 日本神奈川県
+  intro: 伊藤美来是一位日本声优，隶属于アミューズ事务所。她以其清澈透明的声线而闻名，擅长演绎各种角色。自出道以来，她参与了多项声优活动，并赢得了粉丝的喜爱。她的声音具有高度的辨识度和表现力，在业界备受好评。
+  name: 伊藤美来
+date: '2026-02-24'
 game:
-- desc: 2025年发行的科幻冒险游戏，采用虚幻引擎5开发，支持光线追踪，剧情围绕星际探索展开。
+- desc: CAPCOM预计2025年发行的动作角色扮演游戏，为《怪物猎人》系列最新作。采用开放世界设计，支持跨平台联机，引入新的生态系统与狩猎机制。
   tags:
-  - 科幻
-  - 冒险
-  - 虚幻引擎5
-  - '2025'
-  title: 光与影：33号远征队
+  - 动作RPG
+  - 开放世界
+  - 多人联机
+  - 2025年发行
+  title: 怪物猎人 荒野
 history:
-- event: 古腾堡印刷完成首部《古腾堡圣经》，标志着西方活字印刷术的成熟。
-  year: '1455'
-- event: 阿拉莫战役开始，成为德州独立战争的关键战役。
-  year: '1836'
-- event: 硫磺岛战役中，美军在折钵山升起国旗，象征二战太平洋战场的转折。
-  year: '1945'
-- event: 超新星SN 1987A在大麦哲伦云中被发现，是近代最亮的超新星。
-  year: '1987'
-- event: 日本H-IIA火箭成功发射，搭载多颗卫星进入轨道。
-  year: '2005'
-- event: 德国物理学家维尔纳·海森堡提出不确定性原理，奠定量子力学基础。
-  year: '1927'
+- event: 教皇格里高利十三世颁布格里高利历。
+  year: '1582'
+- event: 《共产党宣言》在伦敦出版。
+  year: '1848'
+- event: 德国工人党改名为民族社会主义德国工人党（纳粹党）。
+  year: '1920'
+- event: 胡安·庇隆当选阿根廷总统。
+  year: '1946'
+- event: 日本天皇裕仁去世。
+  year: '1989'
+- event: 科索沃宣布独立。
+  year: '2008'
 music:
-- desc: 2025年发行的东方Project同人音乐精选集，收录多首爵士、电子风格改编曲目，由TAMAONSEN社团制作。
+- desc: YOASOBI于2025年发布的新单曲，延续其独特的叙事风格与电子流行曲风。歌曲以游戏玩家为主题，探讨虚拟与现实的界限，MV采用AI生成动画，引发广泛讨论。
   tags:
-  - 同人音乐
-  - 东方Project
-  - 爵士
-  - '2025'
-  title: THE SELECTED WORKS OF TAMAONSEN 7
+  - J-pop
+  - YOASOBI
+  - 电子流行
+  - 2025年单曲
+  title: YOASOBI - PLAYERS
 paint:
-- desc: 中国插画家，以独特的无脸古风插画风格著称，作品多描绘古典人物与场景。
-  title: 呼葱觅蒜
-  url: https://weibo.com/5507569981
+- desc: 中国插画师，以绚丽的色彩和梦幻的风格著称，擅长描绘少女与幻想题材。作品多见于游戏宣传与同人创作。
+  title: Rella
+  url: https://twitter.com/Rellakinoko
 study:
   Arch:
-  - desc: ARM公司2025年推出的v9.5架构扩展，增强SVE2指令集，支持机密计算领域，提升AI工作负载性能。
+  - desc: 天玑9500于2025年2月发布，采用台积电3nm工艺，集成ARM Cortex-X5核心与Immortalis-G925 GPU。支持LPDDR5X-8533内存与UFS
+      4.1存储，AI算力达60 TOPS，功耗降低25%。
     tags:
+    - 移动SoC
+    - 3nm
     - ARM
-    - 处理器架构
-    - SVE2
-    - AI加速
-    title: ARMv9.5架构发布
+    - AI算力
+    title: 联发科天玑9500：3nm工艺旗舰移动SoC
   Audio:
-  - desc: 达摩院2025年开源的语音识别框架，基于Paraformer架构，支持实时流式识别，在多个中文数据集上达到SOTA精度。
+  - desc: Fish-Speech 1.5于2025年10月开源，采用扩散模型与流式生成技术，支持中、英、日等10种语言，音质MOS得分4.8。模型结构包含StyleGAN2编码器与Transformer解码器，实现10秒语音克隆与实时合成。
     tags:
-    - 语音识别
-    - 端到端
+    - 语音合成
+    - 扩散模型
+    - 多语言
     - 开源
-    - Python
-    title: FunASR端到端语音识别工具包
+    title: Fish-Speech：下一代多语言TTS系统
   CPU:
-  - desc: Zen 5架构桌面处理器，16核32线程，5.7GHz加速频率，采用台积电4nm工艺，L3缓存64MB，支持DDR5-6400。
+  - desc: AMD在CES 2026发布锐龙AI 400系列，采用Zen 5架构与RDNA 3.5 GPU，集成XDNA 2 NPU，AI算力达60 TOPS。支持LPDDR5x-7500内存与PCIe
+      5.0，针对Windows 11 AI功能优化。
     tags:
-    - CPU
-    - AMD
-    - Zen5
-    - 4nm
-    title: AMD Ryzen 9 9950X
+    - 处理器
+    - Zen 5
+    - NPU
+    - AI PC
+    title: AMD锐龙AI 400系列：集成NPU的AI PC处理器
   CV:
-  - desc: CVPR 2025会议论文及开源代码合集，涵盖目标检测、图像分割、三维重建等前沿方向，包含数百个GitHub项目，支持实时跟踪最新研究进展。
+  - desc: RF-DETR是2025年提出的新型目标检测架构，结合神经架构搜索（NAS）与Transformer，在COCO数据集上达到62.3 AP，推理速度较YOLOv8提升40%。采用自适应注意力机制与动态卷积，支持多尺度特征融合。
     tags:
-    - 计算机视觉
-    - CVPR
-    - 开源
-    - 深度学习
-    title: CVPR 2025 Papers with Code Collection
+    - 目标检测
+    - Transformer
+    - 神经架构搜索
+    - 实时推理
+    title: RF-DETR：实时检测Transformer的神经架构搜索
   GPU:
-  - desc: 基于Blackwell架构的旗舰显卡，采用GB202核心，4nm工艺，922亿晶体管，搭载24GB GDDR7显存，性能较上代提升60%。
+  - desc: RTX 5090 Ti预计2026年第一季度发布，基于GB202 GPU，配备16384个CUDA核心与32GB GDDR7显存。支持DLSS
+      4.5与光线追踪超采样，性能较RTX 4090提升70%，功耗450W。
     tags:
-    - GPU
-    - NVIDIA
+    - 显卡
     - Blackwell
-    - 4nm
-    title: NVIDIA GeForce RTX 5090
+    - GDDR7
+    - 光线追踪
+    title: NVIDIA RTX 5090 Ti：Blackwell架构旗舰显卡
   Lang:
-  - desc: 2025年发布的Go 1.24版本，引入泛型改进、性能优化，新增arena包用于内存管理，编译速度提升15%。
+  - desc: Python 3.13.7于2025年11月发布，引入基于MLIR的JIT编译器‘PyTorch’，性能提升达30%。新增模式匹配、异步生成器语法糖，并优化内存管理，支持ARM64架构与Windows
+      Subsystem for Linux。
     tags:
-    - Go
     - 编程语言
-    - 性能
-    - 开源
-    title: Go 1.24编程语言更新
-  NLP:
-  - desc: 阿里云2025年发布的多模态语言模型，支持文本、图像、音频输入，参数量达720亿，基于混合专家架构，在多项基准测试中领先。
-    tags:
-    - NLP
-    - 多模态
-    - 大语言模型
-    - 开源
-    title: Qwen2.5-Omni多模态大模型
-  Net:
-  - desc: 2025年发布的mitmproxy 12.0版本，新增HTTP/3支持，增强TLS解密能力，提供Python API用于流量分析。
-    tags:
-    - 网络
-    - HTTP代理
-    - 安全
+    - JIT
     - Python
-    title: mitmproxy 12.0 HTTP代理工具
-  News:
-  - desc: 2026年2月，科大讯飞推出星火X2大模型，参数规模达万亿，强调算力安全与内容安全，在多项中文任务中超越GPT-4。
+    - 性能优化
+    title: Python 3.13.7：JIT编译器与语法革新
+  NLP:
+  - desc: Qwen2.5-Max于2025年3月发布，参数量达7200亿，基于MoE架构，支持128K上下文长度。在MMLU基准上得分92.5，集成强化学习与对抗训练，具备强大的代码生成与多模态理解能力。
     tags:
-    - AI
-    - 大模型
-    - 科大讯飞
-    - '2026'
-    title: 科大讯飞发布星火X2大模型
+    - 大语言模型
+    - MoE
+    - 多模态
+    - 代码生成
+    title: 通义千问Qwen2.5-Max：端到端旗舰语言模型
+  Net:
+  - desc: RFC9800于2025年7月正式发布，定义了SRv6（Segment Routing over IPv6）的核心规范，支持128位地址空间与可编程数据平面。该标准由中国移动牵头制定，提升网络可扩展性与安全性，为5G/6G网络奠定基础。
+    tags:
+    - 网络协议
+    - SRv6
+    - IPv6
+    - 5G
+    title: SRv6核心标准RFC9800：新一代互联网基础协议
+  News:
+  - desc: 2026年2月12日，国家网信办发布新规，要求AI生成内容必须标注‘AI标识’，严厉打击传播虚假不实信息行为。新规涵盖深度学习生成文本、图像、视频，违者最高罚款100万元。
+    tags:
+    - AI监管
+    - 网络安全
+    - 政策
+    - 虚假信息
+    title: 网信部门整治无AI标识虚假信息
