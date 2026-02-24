@@ -24,6 +24,23 @@ layout: default
 
         <div id="tag-pills-container" class="tag-pills-container">
             <span class="tag-pill active" data-value="all" onclick="selectTag(this)">全部标签</span>
+            <div id="hot-tags-area" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+            
+            <!-- 更多标签下拉框 -->
+            <div class="more-tags-wrapper" id="more-tags-wrapper" style="display: none;">
+                <div class="more-btn" id="more-tags-btn">
+                    <span>更多标签</span>
+                    <i class="fas fa-plus" style="font-size: 0.8em; margin-left: 5px;"></i>
+                </div>
+                <div class="more-tags-dropdown" id="more-tags-dropdown">
+                    <div id="dropdown-tags-grid" class="dropdown-tags-grid"></div>
+                    <div class="dropdown-pagination">
+                        <button onclick="changeTagPage(-1)" id="tag-prev-btn" class="tag-nav-btn"><i class="fas fa-chevron-left"></i></button>
+                        <span id="tag-page-info">1/1</span>
+                        <button onclick="changeTagPage(1)" id="tag-next-btn" class="tag-nav-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -76,10 +93,13 @@ layout: default
 
 <script>
     const itemsPerPage = 8;
+    const tagsPerTagPage = 12; // 下拉框每页显示的标签数
     let currentPage = 1;
+    let currentTagPage = 1;
     let filteredItems = [];
     let activeTag = 'all';
     let activeYear = 'all';
+    let allSortedTags = []; // 存储所有标签数据
     const allItems = Array.from(document.querySelectorAll('.post-item'));
 
     function initFilters() {
@@ -108,25 +128,25 @@ layout: default
             yearOptionsContainer.appendChild(opt);
         });
 
-        const sortedTags = Object.keys(tagCounts).sort((a, b) => {
-            if (tagCounts[b] !== tagCounts[a]) return tagCounts[b] - tagCounts[a];
-            return a.localeCompare(b);
-        });
+        // 对标签进行排序并存入数组
+        allSortedTags = Object.keys(tagCounts).map(t => ({
+            name: t,
+            count: tagCounts[t]
+        })).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 
-        const tagContainer = document.getElementById('tag-pills-container');
-        sortedTags.forEach(t => {
-            const pill = document.createElement('span');
-            pill.className = 'tag-pill';
-            pill.innerHTML = `${t} <small style="opacity:0.5; font-size:0.8em;">${tagCounts[t]}</small>`;
-            pill.dataset.value = t;
-            pill.onclick = () => selectTag(pill);
-            tagContainer.appendChild(pill);
-        });
+        renderTags();
 
-        // 自定义下拉框开关逻辑
+        // 更多标签开关逻辑
+        const moreWrapper = document.getElementById('more-tags-wrapper');
+        const moreBtn = document.getElementById('more-tags-btn');
+        moreBtn.onclick = (e) => {
+            e.stopPropagation();
+            moreWrapper.classList.toggle('open');
+        };
+
+        // 年份下拉框开关逻辑
         const customSelect = document.getElementById('year-custom-select');
         const trigger = customSelect.querySelector('.select-trigger');
-        
         trigger.onclick = (e) => {
             e.stopPropagation();
             customSelect.classList.toggle('open');
@@ -134,7 +154,67 @@ layout: default
 
         document.addEventListener('click', () => {
             customSelect.classList.remove('open');
+            moreWrapper.classList.remove('open');
         });
+    }
+
+    function renderTags() {
+        const hotContainer = document.getElementById('hot-tags-area');
+        const dropdownGrid = document.getElementById('dropdown-tags-grid');
+        const moreWrapper = document.getElementById('more-tags-wrapper');
+
+        hotContainer.innerHTML = '';
+        dropdownGrid.innerHTML = '';
+
+        // 1. 渲染前 10 个热门标签
+        const hotTags = allSortedTags.slice(0, 10);
+        hotTags.forEach(tag => {
+            const pill = createTagPill(tag);
+            hotContainer.appendChild(pill);
+        });
+
+        // 2. 处理剩余标签分页
+        const remainingTags = allSortedTags.slice(10);
+        if (remainingTags.length > 0) {
+            moreWrapper.style.display = 'inline-block';
+            const totalTagPages = Math.ceil(remainingTags.length / tagsPerTagPage);
+            const start = (currentTagPage - 1) * tagsPerTagPage;
+            const end = start + tagsPerTagPage;
+
+            remainingTags.slice(start, end).forEach(tag => {
+                const pill = createTagPill(tag, true);
+                dropdownGrid.appendChild(pill);
+            });
+
+            document.getElementById('tag-page-info').textContent = `${currentTagPage} / ${totalTagPages}`;
+            document.getElementById('tag-prev-btn').disabled = currentTagPage === 1;
+            document.getElementById('tag-next-btn').disabled = currentTagPage === totalTagPages;
+        } else {
+            moreWrapper.style.display = 'none';
+        }
+    }
+
+    function createTagPill(tag, inDropdown = false) {
+        const pill = document.createElement('span');
+        pill.className = 'tag-pill';
+        if (tag.name === activeTag) pill.classList.add('active');
+        pill.innerHTML = `${tag.name} <small style="opacity:0.5; font-size:0.8em;">${tag.count}</small>`;
+        pill.dataset.value = tag.name;
+        pill.onclick = (e) => {
+            if (inDropdown) e.stopPropagation(); // 阻止点击下拉框内标签导致关闭
+            selectTag(pill);
+        };
+        return pill;
+    }
+
+    function changeTagPage(delta) {
+        const remainingTagsCount = allSortedTags.length - 10;
+        const totalTagPages = Math.ceil(remainingTagsCount / tagsPerTagPage);
+        const newPage = currentTagPage + delta;
+        if (newPage >= 1 && newPage <= totalTagPages) {
+            currentTagPage = newPage;
+            renderTags();
+        }
     }
 
     function selectYear(val, text) {
@@ -148,9 +228,15 @@ layout: default
     }
 
     function selectTag(element) {
+        // 全局取消所有标签的 active 状态
         document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
-        element.classList.add('active');
-        activeTag = element.dataset.value;
+        
+        const val = element.dataset.value;
+        activeTag = val;
+
+        // 如果点击的是特定标签，让该标签值对应的所有 pill 都变亮
+        document.querySelectorAll(`.tag-pill[data-value="${val}"]`).forEach(p => p.classList.add('active'));
+        
         applyFilters();
     }
 
@@ -217,7 +303,6 @@ layout: default
 
     .year-filter-box { display: flex; align-items: center; gap: 12px; }
     
-    /* 自定义下拉框样式：实现真正的圆润和毛玻璃 */
     .custom-select {
         position: relative;
         min-width: 140px;
@@ -252,7 +337,7 @@ layout: default
         backdrop-filter: blur(20px) saturate(180%);
         -webkit-backdrop-filter: blur(20px) saturate(180%);
         border: 1px solid var(--glass-border);
-        border-radius: 16px; /* 关键：圆润的下拉框 */
+        border-radius: 16px; 
         box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         z-index: 1000;
         display: none;
@@ -301,10 +386,105 @@ layout: default
         display: flex; 
         flex-wrap: wrap; 
         gap: 8px; 
-        max-height: 150px; 
-        overflow-y: auto; 
         padding: 15px 5px 5px 0;
         border-top: 1px dashed var(--glass-border);
+        align-items: center;
+    }
+
+    /* 更多标签包装器 */
+    .more-tags-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .more-btn {
+        display: flex;
+        align-items: center;
+        padding: 5px 15px;
+        background: rgba(127, 178, 216, 0.1);
+        color: var(--primary-color);
+        border-radius: 25px;
+        font-size: 0.85em;
+        cursor: pointer;
+        transition: 0.3s;
+        border: 1.5px solid var(--primary-color);
+        font-weight: bold;
+    }
+
+    .more-btn:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: scale(1.05);
+    }
+
+    /* 下拉框样式 */
+    .more-tags-dropdown {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        width: 320px;
+        background: var(--glass-bg);
+        backdrop-filter: blur(25px) saturate(180%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%);
+        border: 1px solid var(--glass-border);
+        border-radius: 20px;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.25);
+        z-index: 1000;
+        padding: 15px;
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        animation: fadeInDown 0.3s ease;
+    }
+
+    .more-tags-wrapper.open .more-tags-dropdown {
+        display: flex;
+    }
+
+    .dropdown-tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        min-height: 100px;
+        align-content: flex-start;
+    }
+
+    .dropdown-pagination {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 12px;
+        border-top: 1px solid var(--glass-border);
+    }
+
+    .tag-nav-btn {
+        background: none;
+        border: 1px solid var(--glass-border);
+        color: var(--primary-color);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    .tag-nav-btn:hover:not(:disabled) {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .tag-nav-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+
+    #tag-page-info {
+        font-size: 0.85em;
+        color: var(--text-muted);
+        font-weight: bold;
     }
 
     .tag-pill {
