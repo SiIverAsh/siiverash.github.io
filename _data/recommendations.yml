@@ -1,124 +1,133 @@
 anime:
-- desc: 2025年10月播出的电视动画，改编自同名轻小说。讲述吸血鬼少女因社恐而隐居，却被迫卷入种族斗争的故事。动画制作由Studio Bind负责，画面精美，氛围营造出色。
+- desc: 2026年1月开播的奇幻冒险动画第二季，延续芙莉莲的千年旅程，制作精良，情感细腻。
   tags:
-  - 吸血鬼
-  - 社恐
   - 奇幻
-  - 2025年10月番
-  title: ひきこまり吸血姫の悶々
+  - 冒险
+  - 治愈
+  - 续作
+  - 冬季新番
+  title: 葬送的芙莉莲 第二季
 cv_recommend:
-  agency: アミューズ
-  hometown: 日本神奈川県
-  intro: 伊藤美来是一位日本声优，隶属于アミューズ事务所。她以其清澈透明的声线而闻名，擅长演绎各种角色。自出道以来，她参与了多项声优活动，并赢得了粉丝的喜爱。她的声音具有高度的辨识度和表现力，在业界备受好评。
-  name: 伊藤美来
-date: '2026-02-24'
+  agency: Across Entertainment
+  hometown: 日本神奈川县
+  intro: 羊宫妃那是日本新生代声优，以清澈透明的声线与多变的演技著称。她能够精准驾驭从少女到成熟女性的各类角色，音域宽广，情感表达细腻。在配音工作中注重角色内心世界的刻画，通过微妙的语气变化传递复杂情绪。其专业素养受到业内好评，被视为具有潜力的声优之一。
+  name: 羊宫妃那
+date: '2026-02-25'
 game:
-- desc: CAPCOM预计2025年发行的动作角色扮演游戏，为《怪物猎人》系列最新作。采用开放世界设计，支持跨平台联机，引入新的生态系统与狩猎机制。
+- desc: 2025年发行的《星际战甲》大型扩展，引入1999年代背景，全新剧情与玩法，画面升级。
   tags:
-  - 动作RPG
-  - 开放世界
-  - 多人联机
-  - 2025年发行
-  title: 怪物猎人 荒野
+  - 动作游戏
+  - 科幻
+  - 免费游戏
+  - 扩展包
+  - 在线合作
+  title: Warframe：1999
 history:
-- event: 教皇格里高利十三世颁布格里高利历。
-  year: '1582'
-- event: 《共产党宣言》在伦敦出版。
-  year: '1848'
-- event: 德国工人党改名为民族社会主义德国工人党（纳粹党）。
-  year: '1920'
-- event: 胡安·庇隆当选阿根廷总统。
-  year: '1946'
-- event: 日本天皇裕仁去世。
-  year: '1989'
-- event: 科索沃宣布独立。
-  year: '2008'
+- event: 塞缪尔·柯尔特获得左轮手枪专利。
+  year: '1836'
+- event: 希拉姆·罗兹·雷维尔斯宣誓就职，成为美国第一位黑人参议员。
+  year: '1870'
+- event: 美国俄勒冈州成为第一个征收汽油税的州。
+  year: '1919'
+- event: 捷克斯洛伐克共产党夺取政权。
+  year: '1948'
+- event: 赫鲁晓夫在苏共二十大上作秘密报告。
+  year: '1956'
+- event: 菲律宾人民力量革命爆发。
+  year: '1986'
 music:
-- desc: YOASOBI于2025年发布的新单曲，延续其独特的叙事风格与电子流行曲风。歌曲以游戏玩家为主题，探讨虚拟与现实的界限，MV采用AI生成动画，引发广泛讨论。
+- desc: 2025年东方Project同人音乐专辑，融合热带浩室风格，旋律轻快，编曲精致，适合放松聆听。
   tags:
-  - J-pop
-  - YOASOBI
-  - 电子流行
-  - 2025年单曲
-  title: YOASOBI - PLAYERS
+  - 东方Project
+  - 同人音乐
+  - 浩室
+  - 电子音乐
+  - 放松
+  title: 东方热带浩室参上！
 paint:
-- desc: 中国插画师，以绚丽的色彩和梦幻的风格著称，擅长描绘少女与幻想题材。作品多见于游戏宣传与同人创作。
-  title: Rella
-  url: https://twitter.com/Rellakinoko
+- desc: 中国画师，擅长古风插画，作品细腻唯美，色彩柔和。
+  title: 呼葱觅蒜
+  url: https://weibo.com/5507569981/HCI6cqF9N
 study:
   Arch:
-  - desc: 天玑9500于2025年2月发布，采用台积电3nm工艺，集成ARM Cortex-X5核心与Immortalis-G925 GPU。支持LPDDR5X-8533内存与UFS
-      4.1存储，AI算力达60 TOPS，功耗降低25%。
+  - desc: 2025年开源的微服务架构与脚手架，提供高可用、高扩展、高观测的分布式系统解决方案，集成服务网格与混沌工程。
     tags:
-    - 移动SoC
-    - 3nm
-    - ARM
-    - AI算力
-    title: 联发科天玑9500：3nm工艺旗舰移动SoC
-  Audio:
-  - desc: Fish-Speech 1.5于2025年10月开源，采用扩散模型与流式生成技术，支持中、英、日等10种语言，音质MOS得分4.8。模型结构包含StyleGAN2编码器与Transformer解码器，实现10秒语音克隆与实时合成。
-    tags:
-    - 语音合成
-    - 扩散模型
-    - 多语言
+    - 微服务
+    - 企业架构
+    - 分布式系统
+    - 脚手架
     - 开源
-    title: Fish-Speech：下一代多语言TTS系统
-  CPU:
-  - desc: AMD在CES 2026发布锐龙AI 400系列，采用Zen 5架构与RDNA 3.5 GPU，集成XDNA 2 NPU，AI算力达60 TOPS。支持LPDDR5x-7500内存与PCIe
-      5.0，针对Windows 11 AI功能优化。
+    title: microapp企业级微服务架构
+  Audio:
+  - desc: OpenAI 2025年升级的语音转录模型，在保持质量的前提下速度提升8倍，支持多语言，错误率降低15%，适用于实时语音转文字场景。
     tags:
-    - 处理器
-    - Zen 5
+    - 语音识别
+    - 多语言
+    - 实时转录
+    - AI模型
+    - 开源
+    title: Whisper Turbo语音转录模型
+  CPU:
+  - desc: 采用Arrow Lake架构，Intel 20A工艺，集成NPU单元，支持LPDDR6内存，单核性能提升20%，能效比优化30%，适用于AI PC。
+    tags:
+    - CPU
+    - Arrow Lake架构
+    - 20A工艺
     - NPU
     - AI PC
-    title: AMD锐龙AI 400系列：集成NPU的AI PC处理器
+    title: Intel Core Ultra 200系列处理器
   CV:
-  - desc: RF-DETR是2025年提出的新型目标检测架构，结合神经架构搜索（NAS）与Transformer，在COCO数据集上达到62.3 AP，推理速度较YOLOv8提升40%。采用自适应注意力机制与动态卷积，支持多尺度特征融合。
+  - desc: 阿里巴巴2025年开源的视频生成模型，基于扩散Transformer架构，支持1024x576分辨率视频生成，推理速度较前代提升3倍，参数量达50亿，融合多模态条件控制。
     tags:
-    - 目标检测
-    - Transformer
-    - 神经架构搜索
-    - 实时推理
-    title: RF-DETR：实时检测Transformer的神经架构搜索
+    - 视频生成
+    - 多模态
+    - 开源
+    - AI模型
+    - 扩散模型
+    title: 通义万相Wan2.1视频模型
   GPU:
-  - desc: RTX 5090 Ti预计2026年第一季度发布，基于GB202 GPU，配备16384个CUDA核心与32GB GDDR7显存。支持DLSS
-      4.5与光线追踪超采样，性能较RTX 4090提升70%，功耗450W。
+  - desc: 基于Blackwell架构，采用5nm工艺，搭载192GB GDDR7显存，支持PCIe 6.0，性能较RTX 4090提升70%，功耗450W，专为AI与高清游戏设计。
     tags:
-    - 显卡
-    - Blackwell
-    - GDDR7
-    - 光线追踪
-    title: NVIDIA RTX 5090 Ti：Blackwell架构旗舰显卡
+    - GPU
+    - Blackwell架构
+    - 5nm工艺
+    - AI加速
+    - 游戏显卡
+    title: NVIDIA GeForce RTX 5090
   Lang:
-  - desc: Python 3.13.7于2025年11月发布，引入基于MLIR的JIT编译器‘PyTorch’，性能提升达30%。新增模式匹配、异步生成器语法糖，并优化内存管理，支持ARM64架构与Windows
-      Subsystem for Linux。
+  - desc: 2025年更新的多人协作代码编辑器，采用Rust编写，支持实时协同编辑、低延迟渲染，集成AI代码补全，性能较VSCode提升50%。
     tags:
-    - 编程语言
-    - JIT
-    - Python
-    - 性能优化
-    title: Python 3.13.7：JIT编译器与语法革新
+    - 代码编辑器
+    - 协作开发
+    - Rust
+    - 高性能
+    - 开源
+    title: Zed高性能代码编辑器
   NLP:
-  - desc: Qwen2.5-Max于2025年3月发布，参数量达7200亿，基于MoE架构，支持128K上下文长度。在MMLU基准上得分92.5，集成强化学习与对抗训练，具备强大的代码生成与多模态理解能力。
+  - desc: 智谱AI于2025年发布的GLM-4.5模型，具备Agentic、Reasoning、Coding (ARC) 能力，上下文窗口达128K，支持多轮对话与工具调用，在权威基准上超越GPT-4
+      Turbo。
     tags:
     - 大语言模型
-    - MoE
-    - 多模态
+    - AI代理
     - 代码生成
-    title: 通义千问Qwen2.5-Max：端到端旗舰语言模型
+    - 多轮对话
+    - 开源
+    title: GLM-4.5大型语言模型
   Net:
-  - desc: RFC9800于2025年7月正式发布，定义了SRv6（Segment Routing over IPv6）的核心规范，支持128位地址空间与可编程数据平面。该标准由中国移动牵头制定，提升网络可扩展性与安全性，为5G/6G网络奠定基础。
+  - desc: 基于eBPF的零侵入式AI代理可观测性工具，支持对Claude Code、Gemini CLI等LLM的实时监控，提供细粒度性能指标与异常检测。
     tags:
-    - 网络协议
-    - SRv6
-    - IPv6
-    - 5G
-    title: SRv6核心标准RFC9800：新一代互联网基础协议
+    - eBPF
+    - 可观测性
+    - AI代理
+    - 性能监控
+    - 开源
+    title: agentsight eBPF可观测性工具
   News:
-  - desc: 2026年2月12日，国家网信办发布新规，要求AI生成内容必须标注‘AI标识’，严厉打击传播虚假不实信息行为。新规涵盖深度学习生成文本、图像、视频，违者最高罚款100万元。
+  - desc: 2026年2月，OpenAI推出Frontier模型，参数量达10万亿，在多任务推理与代码生成方面超越人类水平，推动AGI发展。
     tags:
-    - AI监管
-    - 网络安全
-    - 政策
-    - 虚假信息
-    title: 网信部门整治无AI标识虚假信息
+    - OpenAI
+    - AGI
+    - 大模型
+    - AI突破
+    - 科技新闻
+    title: OpenAI发布Frontier模型
