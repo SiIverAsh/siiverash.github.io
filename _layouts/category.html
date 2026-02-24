@@ -97,7 +97,7 @@ layout: default
     let currentPage = 1;
     let currentTagPage = 1;
     let filteredItems = [];
-    let activeTag = 'all';
+    let activeTags = []; // 存储所有选中的标签名
     let activeYear = 'all';
     let allSortedTags = []; // 存储所有标签数据
     const allItems = Array.from(document.querySelectorAll('.post-item'));
@@ -108,7 +108,7 @@ layout: default
         
         allItems.forEach(item => {
             years.add(item.dataset.year);
-            const tags = item.dataset.tags.split(',');
+            const tags = (item.dataset.tags || "").split(',');
             tags.forEach(t => {
                 const cleanT = t.trim();
                 if (cleanT) {
@@ -192,12 +192,18 @@ layout: default
         } else {
             moreWrapper.style.display = 'none';
         }
+
+        // 刷新“全部标签”的高亮状态
+        const allPill = document.querySelector('.tag-pill[data-value="all"]');
+        if (allPill) {
+            allPill.classList.toggle('active', activeTags.length === 0);
+        }
     }
 
     function createTagPill(tag, inDropdown = false) {
         const pill = document.createElement('span');
         pill.className = 'tag-pill';
-        if (tag.name === activeTag) pill.classList.add('active');
+        if (activeTags.includes(tag.name)) pill.classList.add('active');
         pill.innerHTML = `${tag.name} <small style="opacity:0.5; font-size:0.8em;">${tag.count}</small>`;
         pill.dataset.value = tag.name;
         pill.onclick = (e) => {
@@ -228,22 +234,40 @@ layout: default
     }
 
     function selectTag(element) {
-        // 全局取消所有标签的 active 状态
-        document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
-        
         const val = element.dataset.value;
-        activeTag = val;
 
-        // 如果点击的是特定标签，让该标签值对应的所有 pill 都变亮
-        document.querySelectorAll(`.tag-pill[data-value="${val}"]`).forEach(p => p.classList.add('active'));
-        
+        if (val === 'all') {
+            activeTags = [];
+        } else {
+            const index = activeTags.indexOf(val);
+            if (index > -1) {
+                activeTags.splice(index, 1); // 存在则取消选择
+            } else {
+                activeTags.push(val); // 不存在则加入
+            }
+        }
+
+        // 更新 UI 高亮状态
+        document.querySelectorAll('.tag-pill').forEach(p => {
+            const pVal = p.dataset.value;
+            if (pVal === 'all') {
+                p.classList.toggle('active', activeTags.length === 0);
+            } else {
+                p.classList.toggle('active', activeTags.includes(pVal));
+            }
+        });
+
         applyFilters();
     }
 
     function applyFilters() {
         filteredItems = allItems.filter(item => {
             const matchesYear = activeYear === 'all' || item.dataset.year === activeYear;
-            const matchesTag = activeTag === 'all' || item.dataset.tags.split(',').includes(activeTag);
+            
+            // 多选 AND 逻辑：文章必须包含所有已选标签
+            const postTags = (item.dataset.tags || "").split(',').map(t => t.trim());
+            const matchesTag = activeTags.length === 0 || activeTags.every(t => postTags.includes(t));
+            
             return matchesYear && matchesTag;
         });
         currentPage = 1;
