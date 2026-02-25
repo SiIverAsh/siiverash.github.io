@@ -89,6 +89,66 @@ tools: list[ChatCompletionToolParam] = [
 
 TOOL_MAP = {"web_search": web_search}
 
+HISTORY_FILE = "_data/history.json"
+MAX_HISTORY_DAYS = 10
+
+def load_history():
+    """从文件加载历史推荐记录"""
+    if os.path.exists(HISTORY_FILE):
+        try:
+            with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
+                history = json.load(f)
+                # 获取所有历史标题的平铺列表
+                all_titles = []
+                for date in history:
+                    all_titles.extend(history[date])
+                return all_titles, history
+        except Exception as e:
+            print(f"加载历史记录失败: {e}")
+            return [], {}
+    return [], {}
+
+def save_history(new_data, history_dict):
+    """保存当前推荐到历史记录，并只保留最近 N 天"""
+    today = str(get_beijing_time().date())
+    
+    # 提取所有标题/名称
+    titles = []
+    
+    # Study 分类
+    study = new_data.get('study', {})
+    for cat in study:
+        for item in study[cat]:
+            if isinstance(item, dict) and item.get('title'):
+                titles.append(item.get('title'))
+            
+    # 其他分类
+    for cat in ['anime', 'music', 'game']:
+        for item in new_data.get(cat, []):
+            if isinstance(item, dict) and item.get('title'):
+                titles.append(item.get('title'))
+            
+    # Paint (title 就是画师名)
+    for item in new_data.get('paint', []):
+        if isinstance(item, dict) and item.get('title'):
+            titles.append(item.get('title'))
+        
+    # CV
+    cv = new_data.get('cv_recommend', {})
+    if cv and isinstance(cv, dict) and cv.get('name'):
+        titles.append(cv.get('name'))
+    
+    # 过滤空值并更新历史
+    history_dict[today] = list(set([t for t in titles if t]))
+    
+    # 只保留最近 MAX_HISTORY_DAYS 天
+    sorted_dates = sorted(history_dict.keys(), reverse=True)
+    new_history = {date: history_dict[date] for date in sorted_dates[:MAX_HISTORY_DAYS]}
+    
+    os.makedirs(os.path.dirname(HISTORY_FILE), exist_ok=True)
+    with open(HISTORY_FILE, 'w', encoding='utf-8') as f:
+        json.dump(new_history, f, ensure_ascii=False, indent=2)
+
 def get_realtime_context():
     try:
         yesterday = (get_beijing_time() - timedelta(days=1)).strftime('%Y-%m-%d')
@@ -111,23 +171,19 @@ def clear_reasoning_content(messages):
         elif isinstance(message, dict) and 'reasoning_content' in message:
             message['reasoning_content'] = None
 
-def get_ai_recommendation(context):
+def get_ai_recommendation(context, history_titles):
     if not api_key:
         return None
 
-    # va_focus = [
-    #     "今天请侧重推荐2015年后出道、目前人气极高的新锐/潜力声优。",
-    #     "今天请侧重推荐1990-2005年间活跃的、拥有经典代表作的骨灰级/大牌声优。",
-    #     "今天请侧重推荐擅长『冷酷反派』或『中性少年音』的特色型声优。",
-    #     "今天请侧重推荐在『同人/广播剧/舞台剧』领域同样活跃的跨界声优。",
-    #     "今天请侧重推荐出生于『东京都以外』且带有地方特色或独特声线的声优。"
-    # ]
-    # daily_focus = random.choice(va_focus)
+    history_str = "、".join(history_titles[-30:]) if history_titles else "无"
 
     prompt_template = """
     Please think carefully, lowely and accurately.
     今天是 {CURRENT_DATE}。你是一个全能的数字生活与技术博主，精通硬件、AI、动漫及二次元文化。你以输出信息的高准确性著称。
     请基于（三个月、一个月以内）近期真实背景：{CONTEXT_PLACEHOLDER}，为一名软件工程硕士生提供每日推荐。
+    
+    **重要排除项（以下内容最近已推荐过，绝对禁止重复推荐）：**
+    {HISTORY_BLOCK}
     
     必须的要求：
     1. 每个分类（Study下的 9 个指定子类、Anime、Music、Paint、Game）必须提供正好 1 个推荐项。
@@ -146,7 +202,7 @@ def get_ai_recommendation(context):
        - **严禁提及**：绝对禁止提及任何具体的动漫作品或角色名称。
     11. 对于game推荐的内容尽量是近几年发行的游戏。
     12. 所有的回答请务必用中文。
-    13. 一定不要推荐与之前重复的内容
+    13. 一定不要推荐与之前重复的内容（参考上方的“重要排除项”）。
     
     必须输出以下 JSON 格式：
     {{
@@ -175,7 +231,12 @@ def get_ai_recommendation(context):
     }}
     """
     
-    prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context).replace("{CURRENT_DATE}", str(get_beijing_time().date()))
+    history_block = f"最近已推荐过的内容（请避开）：{history_str}" if history_titles else "暂无最近推荐记录。"
+    
+    prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context) \
+                           .replace("{CURRENT_DATE}", str(get_beijing_time().date())) \
+                           .replace("{HISTORY_BLOCK}", history_block)
+
     # prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context).replace("{CURRENT_DATE}", str(get_beijing_time().date())).replace("{DAILY_FOCUS}", daily_focus)
     messages: List[ChatCompletionMessageParam] = [
         {"role": "system", "content": "你是一个全能的数字生活与技术博主，精通硬件、AI、动漫及二次元文化。你拒绝平庸，在面临不确定的技术细节（如未发布的显卡）或声优作品时，必须使用 web_search 工具进行核实，以确保 100% 的准确性。"},
@@ -195,7 +256,7 @@ def get_ai_recommendation(context):
             )
             
             message = response.choices[0].message
-            # 手动补全 reasoning_content 并存入历史消息
+            # 补全 reasoning_content 并存入历史消息
             msg_dict = message.model_dump()
             reasoning = getattr(message, 'reasoning_content', None)
             if reasoning:
@@ -231,8 +292,9 @@ def get_ai_recommendation(context):
             return None
 
 def update_yaml():
+    history_titles, history_dict = load_history()
     context = get_realtime_context()
-    raw_content = get_ai_recommendation(context)
+    raw_content = get_ai_recommendation(context, history_titles)
     if raw_content:
         try:
             cleaned_content = clean_json_string(raw_content)
@@ -260,7 +322,12 @@ def update_yaml():
             with open('_data/recommendations.yml', 'w', encoding='utf-8') as f:
                 yaml.dump(data, f, allow_unicode=True)
             print("Successfully updated _data/recommendations.yml")
+            
+            # 保存历史记录
+            save_history(ai_content, history_dict)
+            print("Successfully updated _data/history.json")
         except json.JSONDecodeError as e:
+
             print(f"JSON Decode Error: {e}")
             sys.exit(1)
         except Exception as e:
