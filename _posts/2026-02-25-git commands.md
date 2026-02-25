@@ -1,11 +1,18 @@
 ---
 layout: post
-title: "git命令"
-date: UPLOAD_TIME
+title: git命令
+date: 2026-02-25 22:58:48 +0800
 categories: study
-tags: []
-subject: ""
+tags:
+- Git
+- 版本控制
+- 编程工具
+- 技术教程
+- 软件开发
+subject: ''
 ---
+
+
 
 > 总结了一下自己用的 git 命令。
 
