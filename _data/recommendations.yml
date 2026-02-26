@@ -1,123 +1,120 @@
 anime:
-- desc: 2025年冬季新番，改编自同名漫画，讲述职场新人女主与冷酷上司的办公室恋爱喜剧，作画精细，节奏轻松，反映当代职场生态。
+- desc: 这部动画设定在近未来，探索生命与死亡的主题，以其独特的视觉风格和音乐著称。
   tags:
-  - 职场
-  - 恋爱
-  - 喜剧
-  - 日常
-  title: この会社に好きな人がいる
+  - 科幻
+  - 渡边信一郎
+  - 2025年
+  - 动画
+  title: LAZARUS：渡边信一郎导演的科幻新作
 cv_recommend:
-  agency: 81 Produce
-  hometown: 日本神奈川县
-  intro: 根据《声优名鉴》数据，花守由美里以清澈透明的少女音色著称，嗓音具有独特的透明感和灵活性，能够驾驭从活泼开朗到内向细腻的多种角色类型。她的发音准确且情感表达丰富，在业内获得高度评价，被认为是一位具有广阔发展潜力的新生代声优。
-  name: 花守由美里
-date: '2026-02-26'
+  agency: 青二事务所
+  hometown: 埼玉县
+  intro: 羊宫妃那以其清澈透明的声线著称，擅长演绎从少女到成熟女性的多种角色。她的声音具有独特的穿透力，能够准确传达情感细微变化，在业内获得高度评价。
+  name: 羊宫妃那
+date: '2026-02-27'
 game:
-- desc: 2025年10月发售，继承前作硬核中世纪RPG玩法，地图扩大3倍，加入动态天气、政治系统，战斗采用物理模拟，支持光追和DLSS 3.5。
+- desc: 由Embark Studios开发，主打PvE合作战斗，采用先进物理引擎和破坏系统，支持跨平台游玩。
   tags:
-  - RPG
-  - 历史
-  - 写实
-  - 开放世界
-  title: 天国：拯救2
+  - 射击游戏
+  - 免费
+  - 合作
+  - 2025年
+  title: ARC Raiders：免费团队射击游戏新作
 history:
-- event: 日本二二六事件，皇道派军官发动政变未遂。
-  year: '1936'
-- event: 纽约世界贸易中心发生炸弹爆炸，造成6人死亡。
-  year: '1993'
-- event: 索尼正式发布PlayStation 4家用游戏机。
-  year: '2013'
-- event: 法兰西第二共和国宣布成立，路易·拿破仑当选总统。
-  year: '1848'
-- event: 拿破仑·波拿巴逃离厄尔巴岛，开始百日王朝。
-  year: '1815'
-- event: 美国国会通过法案，建立大峡谷国家公园。
-  year: '1919'
+- event: 亨利四世加冕为法国国王
+  year: '1594'
+- event: 德国国会纵火案
+  year: '1933'
+- event: 台湾二二八事件
+  year: '1947'
+- event: 美国印第安人运动占领伤膝河
+  year: '1973'
+- event: 美国宪法第二十二修正案获得批准
+  year: '1951'
+- event: 智利发生8.8级大地震
+  year: '2010'
 music:
-- desc: 2025年东方Project同人专辑，由社团「Fragile Online」创作，融合交响乐与电子音色，重新编曲《少女绮想曲》等经典曲目，录制品质达专业级。
+- desc: 由社团“玲瓏のHydrangea”制作的第五张专辑，收录多首东方曲目的钢琴与交响乐改编，音质细腻。
   tags:
   - 东方Project
   - 同人音乐
-  - 交响
-  - 电子
-  title: 東方錦上京 〜 Fossilized Wonders.
+  - 钢琴
+  - 交响乐
+  title: 虹色ファンタジア / 玲瓏のHydrangea：东方Project同人音乐新作
 paint:
-- desc: 中国新生代插画师，色彩鲜明、线条流畅，擅长二次元角色设计，作品多见于微博和推特，风格兼具可爱与时尚感。
-  title: 抖抖 (oreorainbow030)
-  url: https://m.weibo.cn/profile/1871920410
+- desc: 擅长萌系插画，色彩明亮，角色设计可爱
+  title: 小酷软糖_
+  url: https://www.mihuashi.com/profiles/1467171
 study:
   Arch:
-  - desc: RISC-V 2025年批准V1.1向量扩展和P扩展（Packed SIMD），支持512位向量寄存器，新增矩阵运算指令，面向AI负载性能提升3倍，开源核蜂鸟E203已集成。
+  - desc: 采用3nm工艺，核心数量大幅增加，IPC提升约15%，支持DDR5-7200内存。
     tags:
-    - RISC-V
-    - 指令集
-    - 开源
-    - 处理器
-    title: RISC-V 2025扩展：向量与AI指令集
+    - 处理器架构
+    - AMD
+    - Zen 6
+    - 3nm
+    title: AMD Zen 6架构细节曝光：核心数大增，面积几乎不变
   Audio:
-  - desc: 快手2025年开源AudioGen-Omni，基于扩散Transformer架构，可接受视频输入同步生成人声、歌声、音效，支持48kHz高保真音频，在AudioCaps测试集上FAD得分0.18。
+  - desc: 基于扩散模型，支持多语言语音克隆，延迟低于100ms，提供实时流式合成能力。
     tags:
-    - 音频生成
-    - 多模态
-    - 扩散模型
+    - 语音合成
+    - TTS
+    - AI生成
     - 开源
-    title: AudioGen-Omni：统一多模态音频生成
+    title: Qwen3-TTS：超低延迟流式语音合成模型
   CPU:
-  - desc: 2025年Q3上市，采用Intel 20A工艺（后转台积电3nm），集成Lion Cove性能核和Skymont能效核，支持DDR5-6400，PCIe
-      5.0，AI加速单元性能提升4倍。
+  - desc: 采用Zen 5架构，集成RDNA 3.5显卡和专用AI引擎，支持AM5平台，能效比提升20%。
     tags:
     - CPU
-    - Intel
-    - Arrow Lake
-    - chiplet
-    title: Intel Arrow Lake：首个桌面Chiplet架构
+    - APU
+    - AMD
+    - AI引擎
+    title: AMD Gorgon Point APU：集成AI引擎的桌面处理器
   CV:
-  - desc: YOLOv10 于2025年发布，首次实现完全端到端训练，消除NMS后处理，采用新骨干网络和标签分配策略，在COCO数据集上AP达到56.8%，速度较YOLOv9提升15%。
+  - desc: 基于Transformer架构，支持长达10万帧的视频输入，具备精细的时空关系感知能力，在多项视频理解基准测试中达到SOTA。
     tags:
-    - 目标检测
-    - 实时
-    - 端到端
-    - YOLO
-    title: YOLOv10：实时端到端目标检测新范式
+    - 计算机视觉
+    - 视频理解
+    - 多模态
+    - 开源模型
+    title: 书生InternVideo2.5：万帧长视频理解新标杆
   GPU:
-  - desc: 2025年Q4发布，采用台积电3nm工艺，GB202核心含192组SM，搭载32GB GDDR7显存，光追性能提升2.5倍，Tensor Core第四代支持FP8精度，TDP
-      500W。
+  - desc: 基于Xe2架构，配备16GB GDDR6显存，支持硬件光线追踪和AI加速，性能对标NVIDIA RTX 5060。
     tags:
     - GPU
-    - Blackwell
-    - 3nm
-    - 光追
-    title: NVIDIA GeForce RTX 5090：Blackwell架构首发
+    - Intel
+    - Arc
+    - Battlemage
+    title: Intel Arc Battlemage B770：中高端GPU新选择
   Lang:
-  - desc: Rust 1.89.0 于2025年8月发布，引入#[derive(Default)]改进、const泛型增强、编译器速度提升12%，新增std::sync::Mutex::try_lock_for
-      API，强化异步生态兼容。
+  - desc: Deno 2.7版本提升了与Node.js模块的兼容性，稳定了Temporal API，并支持Windows on Arm架构。
     tags:
-    - Rust
-    - 系统编程
-    - 内存安全
-    - 编译器
-    title: Rust 1.89.0：内存安全与并发新特性
+    - 编程语言
+    - JavaScript
+    - 运行时
+    - Deno
+    title: Deno 2.7：强化Node.js兼容性与Temporal稳定性
   NLP:
-  - desc: OpenAI 于2025年8月发布GPT-5，参数规模达10万亿，支持文本、图像、音频、视频多模态输入输出，在专业考试中达到博士水平，推理能力和上下文窗口（128K）大幅提升。
+  - desc: 采用混合专家架构，参数规模达千亿级别，支持128K上下文长度，在推理、代码生成等任务上表现突出。
     tags:
-    - 大型语言模型
-    - 多模态
+    - 自然语言处理
+    - 大模型
+    - 开源
     - AI
-    - OpenAI
-    title: GPT-5：多模态博士级AI模型
+    title: Qwen3.5：阿里开源大模型性能逼近Sonnet 4.5
   Net:
-  - desc: 2025年HTTP/3全球部署率突破70%，基于QUIC协议实现0-RTT连接，彻底解决队头阻塞，平均延迟降低30%，TLS 1.3加密集成，支持多路复用和连接迁移。
+  - desc: eBPF技术在过去一年中在性能监控、网络安全、容器网络等领域取得显著进展，新增了动态加载和实时编译特性。
     tags:
-    - HTTP/3
-    - QUIC
-    - 网络协议
-    - 性能优化
-    title: HTTP/3 全面部署与QUIC协议优化
+    - 网络
+    - eBPF
+    - 内核
+    - 可编程
+    title: eBPF 2025：内核可编程性新突破
   News:
-  - desc: 2025年8月OpenAI正式发布GPT-5，在BAR、USMLE等专业考试中超过95%人类专家，多模态能力覆盖科研、创作、编程，引发新一轮AI竞赛与伦理讨论。
+  - desc: 中国在光通信及6G领域突破关键技术，预计2030年商用，推动万亿级产业赛道。
     tags:
-    - AI
-    - GPT-5
-    - OpenAI
-    - 突破
-    title: GPT-5发布：AI达到博士水平引全球关注
+    - 6G
+    - 通信
+    - 科技新闻
+    - 中国
+    title: 6G技术从愿景到实景：中国科学家取得新进展
