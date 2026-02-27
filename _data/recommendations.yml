@@ -1,120 +1,137 @@
 anime:
-- desc: 这部动画设定在近未来，探索生命与死亡的主题，以其独特的视觉风格和音乐著称。
+- desc: 2026年1月16日开播，延续芙莉莲与伙伴们的旅程，探索魔法世界的深层秘密。本季制作由 MADHOUSE 负责，原作漫画累计发行突破 3000 万册。动画保持高水准作画与情感细腻的叙事风格，新增「魔法学会篇」剧情，描绘芙莉莲与人类魔法师的羁绊。
   tags:
-  - 科幻
-  - 渡边信一郎
-  - 2025年
-  - 动画
-  title: LAZARUS：渡边信一郎导演的科幻新作
+  - 动漫
+  - 奇幻
+  - 治愈
+  - 续作
+  title: 葬送的芙莉莲 第二季
 cv_recommend:
-  agency: 青二事务所
-  hometown: 埼玉县
-  intro: 羊宫妃那以其清澈透明的声线著称，擅长演绎从少女到成熟女性的多种角色。她的声音具有独特的穿透力，能够准确传达情感细微变化，在业内获得高度评价。
-  name: 羊宫妃那
-date: '2026-02-27'
+  agency: I'm Enterprise
+  hometown: 日本东京都
+  intro: 内田真礼自2009年出道以来，以其清澈而富有表现力的声线在声优界确立独特地位。她的声音可塑性强，能够驾驭从活泼少女到沉稳御姐的多种角色类型，演技细腻且情感传达精准。专业评论普遍称赞其对角色的深刻理解与声音控制的稳定性，在广播节目与现场活动中亦展现出优秀的即兴能力与亲和力。近年来，她在音乐领域同样活跃，发行多张个人专辑，进一步拓展了艺术边界。
+  name: 内田真礼
+date: '2026-02-28'
 game:
-- desc: 由Embark Studios开发，主打PvE合作战斗，采用先进物理引擎和破坏系统，支持跨平台游玩。
+- desc: CAPCOM 于2025年2月28日发售的全新开放世界狩猎动作游戏。采用 RE ENGINE 2.0 开发，地图面积达 100 平方公里，支持 4
+    人联机与跨平台游玩。新增「生态链系统」与动态天气，怪物行为更加智能，武器种类增至 18 种，首发销量突破 1200 万份。
   tags:
-  - 射击游戏
-  - 免费
-  - 合作
-  - 2025年
-  title: ARC Raiders：免费团队射击游戏新作
+  - 动作游戏
+  - 开放世界
+  - 多人合作
+  - Capcom
+  title: 怪物猎人：荒野
 history:
-- event: 亨利四世加冕为法国国王
-  year: '1594'
-- event: 德国国会纵火案
-  year: '1933'
-- event: 台湾二二八事件
+- event: 台湾发生二二八事件，是台湾现代史上的重要悲剧事件。
   year: '1947'
-- event: 美国印第安人运动占领伤膝河
-  year: '1973'
-- event: 美国宪法第二十二修正案获得批准
-  year: '1951'
-- event: 智利发生8.8级大地震
-  year: '2010'
+- event: 世界贸易组织（WTO）的前身关税及贸易总协定（GATT）乌拉圭回合谈判结束，为WTO的成立奠定基础。
+  year: '1993'
+- event: 瑞典首相奥洛夫·帕尔梅在斯德哥尔摩遇刺身亡。
+  year: '1986'
+- event: 詹姆斯·沃森和弗朗西斯·克里克宣布发现DNA双螺旋结构。
+  year: '1953'
+- event: 伦敦地铁发生摩尔盖特事故，造成43人死亡。
+  year: '1975'
+- event: 全球新冠肺炎病例数突破8万，世界卫生组织将疫情全球风险级别提升至“非常高”。
+  year: '2020'
 music:
-- desc: 由社团“玲瓏のHydrangea”制作的第五张专辑，收录多首东方曲目的钢琴与交响乐改编，音质细腻。
+- desc: ZUTOMAYO（ずっとまよ）于2026年2月14日发行数字单曲《メディアノーチェ》，歌曲延续其独特的电子摇滚风格，融合拉丁节奏与合成器音色。MV
+    由导演 山戸結希 执导，采用复古胶片质感画面，歌词探讨信息时代的人际疏离。在 Billboard Japan Hot 100 首周空降第 3 位。
   tags:
-  - 东方Project
-  - 同人音乐
-  - 钢琴
-  - 交响乐
-  title: 虹色ファンタジア / 玲瓏のHydrangea：东方Project同人音乐新作
+  - Jpop
+  - ZUTOMAYO
+  - 音乐视频
+  - 2026新曲
+  title: ZUTOMAYO 2026年首支单曲《メディアノーチェ》
 paint:
-- desc: 擅长萌系插画，色彩明亮，角色设计可爱
-  title: 小酷软糖_
-  url: https://www.mihuashi.com/profiles/1467171
+- desc: 擅长日系清新插画，色彩柔和，角色可爱，作品多以少女、日常与幻想题材为主。在微博拥有超过 50 万粉丝，商业合作包括《原神》《明日方舟》等游戏角色设计。
+  title: 栗子熟了_w
+  url: https://m.weibo.cn/u/2554546793
 study:
   Arch:
-  - desc: 采用3nm工艺，核心数量大幅增加，IPC提升约15%，支持DDR5-7200内存。
+  - desc: 2026年1月 RISC-V 国际基金会正式批准 RVV 2.0 向量扩展标准，支持 512 位向量长度与矩阵运算指令。同时，中国电科14所成功流片首颗
+      16 核 RISC-V 服务器芯片，采用 5nm 工艺，主频 3.8GHz，支持 PCIe 6.0 与 DDR5-8000。开源工具链 GCC 14.2
+      与 LLVM 19 已全面支持 RVV 2.0。
     tags:
     - 处理器架构
-    - AMD
-    - Zen 6
-    - 3nm
-    title: AMD Zen 6架构细节曝光：核心数大增，面积几乎不变
+    - RISC-V
+    - 开源硬件
+    - 向量计算
+    title: RISC-V 2026年1月技术动态：向量扩展与生态进展
   Audio:
-  - desc: 基于扩散模型，支持多语言语音克隆，延迟低于100ms，提供实时流式合成能力。
+  - desc: Step-Audio 基于 30B 参数的多模态架构，支持文本到语音、语音克隆、语音编辑与实时对话。采用扩散模型与流式生成技术，延迟低于 200ms。在
+      LibriTTS 测试集上 MOS 达 4.5，支持 40+ 语言与方言，开源版本提供 1B、3B、30B 三个规模，配套 ComfyUI 插件与 ModelScope
+      部署工具链。
     tags:
+    - 音频生成
     - 语音合成
-    - TTS
-    - AI生成
-    - 开源
-    title: Qwen3-TTS：超低延迟流式语音合成模型
+    - 多模态AI
+    - 开源模型
+    title: Step-Audio：实时语音交互多模态大模型
   CPU:
-  - desc: 采用Zen 5架构，集成RDNA 3.5显卡和专用AI引擎，支持AM5平台，能效比提升20%。
+  - desc: Lunar Lake 采用 Intel 18A 工艺，首次实现 CPU、GPU、NPU 与内存的 3D Foveros 封装。配备 8 个核心（4
+      个 Lion Cove P-core + 4 个 Skymont E-core），集成 Battlemage GPU 与第 4 代 NPU（AI 算力
+      60 TOPS）。在相同性能下功耗降低 40%，支持 LPDDR5X-8500 统一内存，面向 AI PC 设计。
     tags:
+    - 处理器
     - CPU
-    - APU
-    - AMD
-    - AI引擎
-    title: AMD Gorgon Point APU：集成AI引擎的桌面处理器
+    - Intel
+    - AI加速
+    title: Intel Lunar Lake：能效比提升40%的AI笔记本处理器
   CV:
-  - desc: 基于Transformer架构，支持长达10万帧的视频输入，具备精细的时空关系感知能力，在多项视频理解基准测试中达到SOTA。
+  - desc: YOLOE-26 采用新颖的视觉-语言联合架构，支持开放词汇的实时目标检测与分割。模型基于 Transformer 编码器-解码器设计，融合 CLIP
+      风格的视觉-语言对齐预训练，在 COCO 数据集上达到 65.3% mAP，同时保持 120 FPS 的实时推理速度。支持零样本迁移，可直接通过自然语言描述识别未见类别。
     tags:
     - 计算机视觉
-    - 视频理解
-    - 多模态
+    - 目标检测
+    - 图像分割
     - 开源模型
-    title: 书生InternVideo2.5：万帧长视频理解新标杆
+    title: YOLOE-26：实时开放词汇分割模型
   GPU:
-  - desc: 基于Xe2架构，配备16GB GDDR6显存，支持硬件光线追踪和AI加速，性能对标NVIDIA RTX 5060。
+  - desc: RTX 5080 移动版采用 NVIDIA Blackwell GB205 GPU，基于台积电 4NP 工艺，集成 96 个 SM 单元（12288
+      个 CUDA 核心），搭载 16GB GDDR7 显存，带宽 896 GB/s。支持 DLSS 4.0 与光线重构，在 3DMark Time Spy
+      Extreme 中得分 18500，功耗仅 175W，能效比相比上代提升 65%。
     tags:
+    - 显卡
     - GPU
-    - Intel
-    - Arc
-    - Battlemage
-    title: Intel Arc Battlemage B770：中高端GPU新选择
+    - Blackwell架构
+    - 移动平台
+    title: NVIDIA GeForce RTX 5080移动版：Blackwell架构能效突破
   Lang:
-  - desc: Deno 2.7版本提升了与Node.js模块的兼容性，稳定了Temporal API，并支持Windows on Arm架构。
+  - desc: Go 1.26 引入 runtime/secret 包，实现「阅后即焚」式敏感数据内存管理，彻底消除密钥、令牌等机密信息在内存中的残留风险。新增并发原语
+      sync.WaitGroup.WithContext 支持上下文取消，优化了 Goroutine 调度器的公平性，在 64 核服务器上高并发场景性能提升
+      18%。标准库加入对 Temporal API 的正式支持。
     tags:
     - 编程语言
-    - JavaScript
-    - 运行时
-    - Deno
-    title: Deno 2.7：强化Node.js兼容性与Temporal稳定性
+    - Go
+    - 内存安全
+    - 并发编程
+    title: Go 1.26：内存安全与并发新特性
   NLP:
-  - desc: 采用混合专家架构，参数规模达千亿级别，支持128K上下文长度，在推理、代码生成等任务上表现突出。
+  - desc: GLM-5 参数量达 1.8T，采用混合专家（MoE）架构，激活参数 280B。支持 128K 上下文长度，在中文、英文、代码、数学等多项基准测试中超越
+      GPT-4.5。首次引入「智能体工程」范式，原生支持工具调用、多轮对话规划与自主任务分解，开源版本包括 GLM-5-8B、GLM-5-70B 及 GLM-5-1.8T（稀疏激活）。
     tags:
     - 自然语言处理
-    - 大模型
-    - 开源
-    - AI
-    title: Qwen3.5：阿里开源大模型性能逼近Sonnet 4.5
+    - 大语言模型
+    - 开源AI
+    - 智能体
+    title: GLM-5：新一代开源大模型推动智能体工程
   Net:
-  - desc: eBPF技术在过去一年中在性能监控、网络安全、容器网络等领域取得显著进展，新增了动态加载和实时编译特性。
+  - desc: 最新研究《Evaluating the Impact of Packet Scheduling and Congestion Control Algorithms
+      on MPTCP Performance over Heterogeneous Networks》（arXiv:2511.14550）提出基于深度强化学习的动态子流调度算法。在
+      5G/Wi-Fi 6E/卫星多链路环境下，相比标准 MPTCP，该算法将吞吐量提升 47%，延迟降低 32%，丢包恢复时间缩短 60%。
     tags:
-    - 网络
-    - eBPF
-    - 内核
-    - 可编程
-    title: eBPF 2025：内核可编程性新突破
+    - 网络协议
+    - MPTCP
+    - 异构网络
+    - 性能优化
+    title: MPTCP异构网络性能优化研究新进展
   News:
-  - desc: 中国在光通信及6G领域突破关键技术，预计2030年商用，推动万亿级产业赛道。
+  - desc: 2026年2月27日，小米集团创始人雷军在北京举行小米汽车安全理念发布会，宣布在主动安全、被动安全、电池安全与数据安全四大领域投入十倍行业标准资源。首发车型
+      SU7 Max 采用一体式压铸后车身，配备 16 个安全气囊与自研的「星河」AI 驾驶系统，已通过中国 C-NCAP 与欧洲 Euro NCAP 双重五星预认证。
     tags:
-    - 6G
-    - 通信
     - 科技新闻
-    - 中国
-    title: 6G技术从愿景到实景：中国科学家取得新进展
+    - 小米汽车
+    - 雷军
+    - 自动驾驶
+    title: 小米汽车安全理念发布会：雷军详解10倍投入造车
