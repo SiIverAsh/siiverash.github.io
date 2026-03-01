@@ -186,8 +186,8 @@ def get_ai_recommendation(context, history_titles):
     {HISTORY_BLOCK}
     
     必须的要求：
-    1. 每个分类（Study下的 9 个指定子类、Anime、Music、Paint、Game）必须提供正好 1 个推荐项。
-    2. Study 下必须严格使用这 9 个键名：CV, NLP, Audio, Net, Lang, Arch, GPU, CPU, News。你必须根据实时背景（例如github上的最新项目等）。
+    1. 每个分类（Study下的 9 个指定子类、Anime, Music, Paint, Game）必须提供正好 1 个推荐项。
+    2. Study 下必须严格使用这 9 个键名：Computer Vision, NLP, Audio, Net, Lang, Arch, GPU, CPU, News。请注意：Computer Vision 指的是计算机视觉（AI 领域），与声优（Character Voice）完全无关。你必须根据实时背景（例如github上的最新项目等）。
     3. desc 必须输出最新的硬核技术细节（如架构特性、工艺制程、性能指标）。
     4. 严禁使用任何引导性废话。
     5. 针对 GPU 和 CPU 领域，必须关注最近半年内的动态。
@@ -195,7 +195,8 @@ def get_ai_recommendation(context, history_titles):
     7. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等。
     8. 对于Paint，画师不一定是知名的，可以推荐国内平台的画师，但是必须提供真实的画师链接（可以是X，也可以是微博等等）（不确定则留空）。
     9. 对于history推荐内容为“历史上的今天”，必须提供 6 条不同数据。
-    10. **CV推荐**：
+    10. **CV推荐 (声优相关)**：
+       - 此项与 Study 中的 Computer Vision 无关。
        - 必须严格参考**《声优名鉴》(声優名鑑)**数据。
        - 必须包含：姓名(name)、所属事务所(agency)、出生地(hometown)、以及一段专业评价(intro,大约150字)。
        - **强制事实对齐**：如果搜索结果没提到，宁可不写，也不准编造。
@@ -207,7 +208,7 @@ def get_ai_recommendation(context, history_titles):
     必须输出以下 JSON 格式：
     {{
       "study": {{
-        "CV": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+        "Computer Vision": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
         "NLP": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
         "Audio": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
         "Net": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],

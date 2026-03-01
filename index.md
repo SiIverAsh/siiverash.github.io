@@ -16,7 +16,7 @@ title: Welcome to My HP!
     </div>
 
     <div id="sub-tags-area" style="margin-top: 25px; display: none; animation: fadeIn 0.5s;">
-        <span class="sub-tag" onclick="showStudyDetail('CV')">视觉 (CV)</span>
+        <span class="sub-tag" onclick="showStudyDetail('Computer Vision')">计算机视觉 (Computer Vision)</span>
         <span class="sub-tag" onclick="showStudyDetail('NLP')">语言 (NLP)</span>
         <span class="sub-tag" onclick="showStudyDetail('Audio')">音频 (Audio)</span>
         <span class="sub-tag" onclick="showStudyDetail('Net')">网络 (Net)</span>
