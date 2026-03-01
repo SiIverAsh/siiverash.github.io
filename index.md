@@ -82,13 +82,22 @@ title: Welcome to My HP!
     .stat-card {
         background: var(--glass-bg);
         color: var(--text-main);
-        padding: 15px;
+        padding: clamp(10px, 1.5vw, 25px);
         border-radius: 20px;
-        width: 90px;
+        width: clamp(85px, 12vw, 140px); /* 宽度随屏幕缩放 */
         cursor: pointer;
         transition: 0.3s;
         border: 1px solid var(--glass-border);
         box-shadow: var(--shadow);
+    }
+
+    .stat-card h3 {
+        font-size: clamp(1.2em, 2.5vw, 2.4em);
+        margin-bottom: clamp(5px, 1vw, 12px);
+    }
+
+    .stat-card p {
+        font-size: clamp(0.85em, 1.2vw, 1.2em);
     }
 
     .stat-card:hover {
@@ -98,13 +107,13 @@ title: Welcome to My HP!
 
     .sub-tag {
         display: inline-block;
-        padding: 6px 12px;
+        padding: clamp(4px, 0.8vw, 10px) clamp(8px, 1.5vw, 20px);
         margin: 4px;
         background: var(--glass-bg);
         border: 1px solid #1d508a;
         color: #1d508a;
-        border-radius: 12px;
-        font-size: 0.8em;
+        border-radius: clamp(8px, 1vw, 16px);
+        font-size: clamp(0.75em, 0.9vw, 1em);
         cursor: pointer;
         transition: 0.3s;
         font-weight: bold;
@@ -116,46 +125,20 @@ title: Welcome to My HP!
     }
 
     .recommend-box {
-        margin-top: 20px;
+        margin-top: clamp(20px, 3vw, 40px);
         background: var(--glass-bg);
         color: var(--text-main);
-        border-radius: 24px;
-        padding: 25px;
+        border-radius: clamp(20px, 2.5vw, 36px);
+        padding: clamp(15px, 2.5vw, 40px);
         border: 2px dashed var(--primary-color);
         box-shadow: var(--shadow);
     }
 
-    .twitter-btn {
-        display: inline-block;
-        background: #1da1f2;
-        color: white;
-        padding: 6px 15px;
-        border-radius: 15px;
-        text-decoration: none;
-        font-size: 0.85em;
-        font-weight: bold;
-        transition: 0.3s;
+    .recommend-box h3 {
+        font-size: clamp(1.2em, 2vw, 1.8em);
     }
 
-    .twitter-btn:hover {
-        background: #0c85d0;
-        transform: scale(1.05);
-    }
-
-    .mini-tag {
-        display: inline-block;
-        background: rgba(127, 178, 216, 0.1);
-        color: #1d508a;
-        padding: 2px 10px;
-        border-radius: 10px;
-        font-size: 0.75em;
-        margin: 5px;
-        border: 1px solid #1d508a;
-    }
-
-    .dark-mode .mini-tag {
-        color: var(--primary-color) !important;
-        border-color: var(--primary-color) !important;
-        background: rgba(74, 144, 226, 0.2) !important;
+    .recommend-box p {
+        font-size: clamp(0.9em, 1.1vw, 1.15em);
     }
 </style>
