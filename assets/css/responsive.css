@@ -29,7 +29,7 @@
         box-shadow: 15px 0 50px rgba(0,0,0,0.3);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        border-radius: 0 30px 30px 0;
+        border-radius: 0;
         background: rgba(255, 255, 255, 0.85) !important;
         backdrop-filter: blur(15px) saturate(180%);
         -webkit-backdrop-filter: blur(15px) saturate(180%);
@@ -42,7 +42,7 @@
     }
     .sidebar::-webkit-scrollbar-thumb {
         background: var(--primary-color);
-        border-radius: 10px;
+        border-radius: 0;
         opacity: 0.5;
     }
     .sidebar::-webkit-scrollbar-track {
@@ -84,7 +84,7 @@
 
     .content-card {
         padding: 25px 18px;
-        border-radius: 20px;
+        border-radius: 0;
     }
 
 
@@ -94,7 +94,7 @@
         top: 15px;
         width: 42px;
         height: 42px;
-        border-radius: 12px;
+        border-radius: 0;
         background: var(--glass-bg);
         backdrop-filter: blur(15px);
         border: 1px solid var(--glass-border);

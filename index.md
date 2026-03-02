@@ -83,7 +83,7 @@ title: Welcome to My HP!
         background: var(--glass-bg);
         color: var(--text-main);
         padding: clamp(10px, 1.5vw, 25px);
-        border-radius: 20px;
+        border-radius: 0;
         width: clamp(85px, 12vw, 140px); /* 宽度随屏幕缩放 */
         cursor: pointer;
         transition: 0.3s;
@@ -112,7 +112,7 @@ title: Welcome to My HP!
         background: var(--glass-bg);
         border: 1px solid #1d508a;
         color: #1d508a;
-        border-radius: clamp(8px, 1vw, 16px);
+        border-radius: 0;
         font-size: clamp(0.75em, 0.9vw, 1em);
         cursor: pointer;
         transition: 0.3s;
@@ -128,7 +128,7 @@ title: Welcome to My HP!
         margin-top: clamp(20px, 3vw, 40px);
         background: var(--glass-bg);
         color: var(--text-main);
-        border-radius: clamp(20px, 2.5vw, 36px);
+        border-radius: 0;
         padding: clamp(15px, 2.5vw, 40px);
         border: 2px dashed var(--primary-color);
         box-shadow: var(--shadow);
