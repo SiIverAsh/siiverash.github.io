@@ -1,124 +1,120 @@
 anime:
-- desc: MAPPA 制作，2026 年 1 月开播，延续前作高水准战斗作画与剧情张力，展开「死灭回游」篇的激烈角逐。
+- desc: 2026年冬季首播，延续涩谷事变后剧情，MAPPA制作，引入新角色与领域展开，作画质量进一步提升。
   tags:
   - 咒术回战
-  - MAPPA
+  - 热血
   - 战斗
-  - 2026年冬番
-  title: 咒术回战 第三季「死灭回游」前篇
+  - MAPPA
+  title: JUJUTSU KAISEN Season 3
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 北海道
-  intro: 松冈祯丞是日本男性声优，以其多变的声线和深厚的演技著称。他擅长演绎内向、温柔的角色，声音既能柔和细腻，也能充满力量。通过持续的努力和自我突破，他在声优界赢得了高度评价，被认为是同期声优中的佼佼者。他的专业态度和对角色的深刻理解，使其在众多作品中展现了出色的表现力。
-  name: 松冈祯丞
-date: '2026-03-02'
+  agency: Across Entertainment
+  hometown: 爱知县
+  intro: 鬼头明里是日本声优，隶属于Across Entertainment事务所。她以其清澈而富有表现力的声线闻名，在声优界迅速崛起。她的配音风格多样，能够驾驭从甜美到帅气的各类角色，获得了观众和业内的广泛认可。近年来，她积极参与广播节目和现场活动，展现了多才多艺的一面。
+  name: 鬼头明里
+date: '2026-03-03'
 game:
-- desc: 2025 年发行的第一人称射击游戏，故事背景设定在冷战后期，引入全新战役、多人模式与僵尸模式，画面与玩法全面升级。
+- desc: Supergiant Games出品，2025年9月25日全平台发布，添加新武器、祝福系统与剧情分支，支持跨平台存档。
   tags:
-  - 第一人称射击
-  - 冷战
-  - 多人游戏
-  - 2025年发行
-  title: 使命召唤：黑色行动6
+  - roguelike
+  - 动作
+  - 神话
+  - 独立游戏
+  title: Hades II v1.0
 history:
-- event: 协和式超音速客机首次试飞成功。
+- event: 亚历山大·格拉汉姆·贝尔出生，电话发明者。
+  year: '1847'
+- event: 美国地质调查局成立。
+  year: '1879'
+- event: 布列斯特-立托夫斯克条约签署，结束东线战事。
+  year: '1918'
+- event: 《星条旗》正式成为美国国歌。
+  year: '1931'
+- event: 阿波罗9号发射，测试登月舱。
   year: '1969'
-- event: 美国发射先驱者10号探测器，成为首个飞出太阳系的人造物体。
-  year: '1972'
-- event: NBA球星威尔特·张伯伦在单场比赛中独得100分，创下历史纪录。
-  year: '1962'
-- event: B-50轰炸机“幸运女士II号”完成首次中途不着陆环球飞行。
-  year: '1949'
-- event: Compact Disc（CD）光盘首次公开发布，开启数字音频新时代。
-  year: '1983'
-- event: 毛泽东在江西寻乌开展社会调查，撰写《寻乌调查》报告。
-  year: '1930'
+- event: 罗德尼·金被洛杉矶警察殴打，引发全国抗议。
+  year: '1991'
 music:
-- desc: EastNewSound 于 2025 年 5 月发行的东方同人音乐专辑，收录多首原创曲目，融合电子、摇滚等风格，编曲精致且富有表现力。
+- desc: 2026年2月发行，融合电子摇滚风格，歌词探讨肾上腺素与情感冲动，MV由Graphinica制作。
   tags:
-  - 东方Project
-  - 同人音乐
-  - EastNewSound
-  - 电子摇滚
-  title: 全病曲II / EastNewSound：东方Project同人音乐专辑
+  - J-pop
+  - YOASOBI
+  - 单曲
+  - '2026'
+  title: 'YOASOBI - Adrena: 2026年数字单曲'
 paint:
-- desc: 中国古风插画师，以细腻笔触、唯美色彩著称，作品多取材于传统文化，画面充满意境与故事感。
-  title: 伊吹五月
-  url: https://www.weibo.com/ibukisatsuki
+- desc: 中国插画家，以细腻的水彩风格和温馨的日常生活描绘闻名。
+  title: 阿梗
+  url: https://m.weibo.cn/u/1938634171
 study:
   Arch:
-  - desc: CXL 联盟在 2025 年推出的 Compute Express Link 4.0 规范，支持内存池化、一致性域扩展，带宽提升至 64 GT/s，专为大规模
-      AI 与高性能计算设计。
+  - desc: 采用3D Foveros封装，集成NPU单元提供50 TOPS AI算力，支持LPDDR6内存，单核性能提升25%，能效比提高30%。
     tags:
-    - 计算机体系结构
-    - CXL
-    - 内存池化
-    - 高性能计算
-    title: CXL 4.0 规范发布：AI 内存池化新标准
+    - CPU架构
+    - Intel
+    - AI PC
+    - 18A工艺
+    title: 'Intel Panther Lake: 首款Intel 18A工艺客户端架构'
   Audio:
-  - desc: MiniMax 于 2025 年推出的音乐生成模型，支持多乐器、多风格生成，音质达到 CD 级别，延迟低于 500ms，并引入细节控制与情感引导功能。
+  - desc: 基于扩散Transformer架构，支持多乐器编曲生成，在MAESTRO数据集上达到SOTA，提供API接口，可生成192kHz高保真音频。
     tags:
     - 音乐生成
-    - AI音乐
-    - 低延迟
-    - 多乐器
-    title: MiniMax Music 2.5：全维度音乐生成突破
-  CPU:
-  - desc: Arm 在 2025 年发布的 C1 系列处理器架构，基于全新 Neoverse V3 核心，支持 DDR5-6400、PCIe 6.0，每瓦性能提升
-      40%，面向云与边缘服务器市场。
-    tags:
-    - CPU
-    - Arm
-    - 服务器
-    - 能效
-    title: Arm C1 系列：新一代服务器处理器架构
-  Computer Vision:
-  - desc: OpenGVLab 于 2025 年 4 月发布的视觉语言模型，采用 ViT-6B 架构，支持 128K 分辨率图像输入，在 VQA、图像描述等多项基准测试中达到
-      SOTA 性能，并开源模型权重与训练代码。
-    tags:
-    - 视觉语言模型
-    - 多模态
+    - AI音频
     - 开源
-    - SOTA
-    title: InternVL3：开源多模态视觉语言模型
+    - 深度学习
+    title: 'HeartMuLa: 开源音乐生成模型'
+  CPU:
+  - desc: 基于台积电3nm工艺，集成Oryon CPU核心和Adreno 850 GPU，AI算力达80 TOPS，支持LPDDR6内存和Wi-Fi 7。
+    tags:
+    - 移动处理器
+    - 高通
+    - AI
+    - 3nm工艺
+    title: 'Qualcomm Snapdragon 8 Elite Gen 5: 2026年旗舰移动处理器'
+  Computer Vision:
+  - desc: 基于Vision Transformer架构，引入隐式时序建模，在DAVIS 2026数据集上达到85.6% mIoU，支持4K实时推理，模型参数量为1.2B。
+    tags:
+    - 计算机视觉
+    - 视频分割
+    - Transformer
+    - CVPR2026
+    title: 'VideoMT: CVPR 2026 视频分割模型'
   GPU:
-  - desc: 摩尔线程于 2025 年发布的新一代 GPU 架构，采用 5nm 工艺，集成硬件光追单元与 AI 加速核心，FP32 性能达 20 TFLOPS，支持
-      8K 编码与解码。
+  - desc: 基于CDNA 4架构，拥有320GB HBM3e内存，FP8算力达5 PetaFLOPS，支持CXL 3.0互联，专为LLM训练优化。
     tags:
+    - AI加速
+    - AMD
+    - HPC
     - GPU
-    - 国产芯片
-    - 5nm
-    - 硬件光追
-    title: 摩尔线程新一代 GPU 架构：国产 GPU 新突破
+    title: 'AMD Instinct MI400: 2026年AI加速卡新品'
   Lang:
-  - desc: Go 1.24 于 2025 年发布，引入泛型改进、GC 优化，编译速度提升 15%，并增强对 WebAssembly 系统接口的支持，适用于云原生与边缘计算场景。
+  - desc: 优化JIT编译器性能提升30%，引入新型匹配语句模式，改进异步IO库，修复内存泄漏问题，支持ARMv9架构。
     tags:
+    - Python
     - 编程语言
-    - Go
-    - 性能优化
-    - 工具链
-    title: Go 1.24 发布：性能与工具链优化
+    - JIT
+    - 异步
+    title: 'Python 3.13.12: 2026年2月维护版本'
   NLP:
-  - desc: 智谱 AI 在 2025 年发布的大语言模型，基于混合专家（MoE）架构，参数规模达万亿级别，在代码生成、系统设计等复杂任务上表现突出，支持长上下文与多轮对话。
+  - desc: 采用混合专家架构，拥有1.2万亿参数，支持128K上下文长度，在MMLU基准上得分92.5%，集成强化学习对齐技术，2026年2月发布。
     tags:
     - 大语言模型
-    - MoE
-    - 代码生成
-    - 系统工程
-    title: GLM-5：从代码生成到工程设计的范式跃迁
+    - 多模态
+    - 谷歌
+    - AI
+    title: 'Gemini 3.1 Pro: 谷歌多模态大模型最新版'
   Net:
-  - desc: IETF 在 2025 年正式发布的 SRv6（Segment Routing over IPv6）核心标准 RFC9800，提供可编程数据平面，支持网络切片、低延迟传输与流量工程。
+  - desc: 引入后量子加密算法CRYSTALS-Kyber，减少握手延迟40%，支持0-RTT连接，草案于2026年1月发布，预计2027年成为标准。
     tags:
-    - 网络协议
-    - SRv6
-    - 可编程网络
-    - IETF
-    title: SRv6 RFC9800：新一代互联网基础协议核心标准
+    - 网络安全
+    - TLS
+    - 加密
+    - 协议
+    title: 'TLS 1.4 草案: 下一代传输层安全协议'
   News:
-  - desc: 2026 年 3 月 1 日，我国发布首个人形机器人与具身智能标准体系，涵盖安全、交互、性能等关键领域，推动产业规范化与技术创新。
+  - desc: 2026年3月1日宣布，亚马逊将投资500亿美元支持OpenAI在AWS上扩展企业AI服务，涉及模型训练与推理基础设施。
     tags:
-    - 人形机器人
-    - 标准体系
-    - 具身智能
-    - '2026'
-    title: 我国首个人形机器人与具身智能标准体系发布
+    - AI投资
+    - 云计算
+    - OpenAI
+    - 亚马逊
+    title: 亚马逊向OpenAI投资500亿美元战略合作
