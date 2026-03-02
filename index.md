@@ -107,13 +107,13 @@ title: Welcome to My HP!
 
     .sub-tag {
         display: inline-block;
-        padding: clamp(4px, 0.8vw, 10px) clamp(8px, 1.5vw, 20px);
-        margin: 4px;
+        padding: clamp(3px, 0.6vw, 8px) clamp(6px, 1.2vw, 16px);
+        margin: 3px;
         background: var(--glass-bg);
         border: 1px solid #1d508a;
         color: #1d508a;
         border-radius: 0;
-        font-size: clamp(0.75em, 0.9vw, 1em);
+        font-size: clamp(0.7em, 0.8vw, 0.9em);
         cursor: pointer;
         transition: 0.3s;
         font-weight: bold;
@@ -125,20 +125,32 @@ title: Welcome to My HP!
     }
 
     .recommend-box {
-        margin-top: clamp(20px, 3vw, 40px);
+        margin-top: clamp(15px, 2vw, 30px);
         background: var(--glass-bg);
         color: var(--text-main);
         border-radius: 0;
-        padding: clamp(15px, 2.5vw, 40px);
+        padding: clamp(10px, 2vw, 30px);
         border: 2px dashed var(--primary-color);
         box-shadow: var(--shadow);
     }
 
     .recommend-box h3 {
-        font-size: clamp(1.2em, 2vw, 1.8em);
+        font-size: clamp(1em, 1.8vw, 1.5em);
     }
 
     .recommend-box p {
-        font-size: clamp(0.85em, 1vw, 1.05em);
+        font-size: clamp(0.8em, 0.9vw, 1em);
+    }
+
+    .mini-tag {
+        display: inline-block;
+        background: rgba(29, 80, 138, 0.1);
+        color: var(--primary-color);
+        padding: 2px 8px;
+        font-size: 0.75em;
+        margin-right: 5px;
+        margin-top: 5px;
+        border: 1px solid var(--glass-border);
+        font-weight: bold;
     }
 </style>
