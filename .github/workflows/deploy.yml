@@ -2,18 +2,22 @@
 name: Deploy Jekyll site to Pages
 
 on:
+  # 当代码推送到 main 分支时运行
   push:
     branches: ["main"]
+  # 支持手动触发
   workflow_dispatch:
 
+# 设置权限，允许 Actions 部署到 GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# 确保同一时间只有一个部署在进行
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -30,6 +34,9 @@ jobs:
         with:
           source: ./
           destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
 
   deploy:
     environment:
