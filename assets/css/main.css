@@ -59,6 +59,25 @@ html {
 
 /* 3. 布局结构  */
 
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 0;
+    box-shadow: var(--shadow);
+}
+
+.extra-box {
+    padding: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 0;
+    box-shadow: var(--shadow);
+}
+
 .wrapper {
     width: 95%;
     max-width: 1400px; /* 默认最大宽度 */
