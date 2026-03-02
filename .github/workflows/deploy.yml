@@ -2,19 +2,15 @@
 name: Deploy Jekyll site to Pages
 
 on:
-  # 当代码推送到 main 分支时运行
   push:
     branches: ["main"]
-  # 支持手动触发
   workflow_dispatch:
 
-# 设置权限，允许 Actions 部署到 GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 确保同一时间只有一个部署在进行
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -26,24 +22,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
-        run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/jekyll-build-pages@v1
         with:
-          path: ./_site
+          source: ./
+          destination: ./_site
 
   deploy:
     environment:
