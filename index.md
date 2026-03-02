@@ -92,7 +92,7 @@ title: Welcome to My HP!
     }
 
     .stat-card h3 {
-        font-size: clamp(1.2em, 2.5vw, 2.4em);
+        font-size: clamp(1em, 2vw, 1.8em);
         margin-bottom: clamp(5px, 1vw, 12px);
     }
 
