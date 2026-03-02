@@ -93,19 +93,57 @@ html {
     transition: max-width 0.3s ease, gap 0.3s ease;
 }
 
-/* 针对大屏幕 (2K, 4K) 的自动扩展 */
+/* ==========================================================================
+   15. 多分辨率适配 (1080p to 4K)
+   ========================================================================== */
+
+/* 默认适配 (针对 1080p 及以下屏幕，如 1920x1080) */
+.wrapper {
+    max-width: 1400px;
+    grid-template-columns: 260px minmax(0, 1fr) 280px;
+    gap: 25px;
+    padding: 40px 20px;
+}
+.sidebar { width: 260px; }
+.extra-sidebar { width: 280px; }
+.content-card { max-width: 850px; }
+
+/* 针对大屏幕 (如 2K 分辨率 2560px) */
 @media (min-width: 1600px) {
     .wrapper {
-        max-width: 1800px;
+        max-width: 1600px;
+        grid-template-columns: 280px minmax(0, 1fr) 300px;
         gap: 35px;
     }
+    .sidebar { width: 280px; }
+    .extra-sidebar { width: 300px; }
+    .content-card { max-width: 900px; }
 }
 
-@media (min-width: 2200px) {
+/* 针对 4K 分辨率 (3840px 及以上) */
+@media (min-width: 2500px) {
     .wrapper {
-        max-width: 2200px;
-        gap: 50px;
+        max-width: 1800px; /* 限制最大宽度，防止内容拉得太宽 */
+        grid-template-columns: 300px minmax(0, 1fr) 320px; /* 适度增加侧边栏，但不夸张 */
+        gap: 50px; /* 增大间距，增加呼吸感，防止视觉重叠 */
+        padding: 80px 40px;
     }
+
+    .content-card {
+        max-width: 950px; /* 相比之前的 1100px 进行了缩小，提高阅读舒适度 */
+        padding: 50px;
+        font-size: 1.15em; /* 适度增大字号，匹配 4K 视觉 */
+    }
+
+    .sidebar { width: 300px; }
+    .extra-sidebar { width: 320px; }
+
+    .avatar {
+        width: 130px;
+        height: 130px;
+    }
+
+    #clock-time { font-size: 2.8em; }
 }
 
 .main-content {
@@ -125,7 +163,6 @@ html {
     padding: 30px 20px;
     text-align: center;
     animation-name: slideInLeft;
-    width: 260px;
 }
 
 .extra-sidebar {
@@ -134,14 +171,6 @@ html {
     gap: 20px;
     animation-name: slideInRight;
     align-self: start;
-    width: 280px;
-}
-
-/* 大屏幕下侧边栏同步加宽 */
-@media (min-width: 1800px) {
-    .wrapper { grid-template-columns: 300px minmax(0, 1fr) 320px; }
-    .sidebar { width: 300px; }
-    .extra-sidebar { width: 320px; }
 }
 
 /* 7. 博客内容优化 */
@@ -156,21 +185,6 @@ html {
     font-size: 1.05em;
     line-height: 1.75;
     transition: max-width 0.3s ease;
-}
-
-@media (min-width: 1600px) {
-    .content-card {
-        max-width: 1000px;
-        font-size: 1.15em;
-    }
-}
-
-@media (min-width: 2200px) {
-    .content-card {
-        max-width: 1200px;
-        font-size: 1.25em;
-        padding: 60px;
-    }
 }
 
 /* 深色模式内容适配 */
@@ -435,33 +449,4 @@ footer {
 #visitor-count {
     font-weight: bold;
     color: var(--primary-color);
-}
-
-/* ==========================================================================
-   15. 大屏幕适配 (4K / Large Screens)
-   ========================================================================== */
-
-@media (min-width: 1800px) {
-    .wrapper {
-        max-width: 1800px; /* 整体宽度从 1400px 增加到 1800px */
-        grid-template-columns: 320px minmax(0, 1fr) 350px; /* 侧边栏按比例加宽 */
-        gap: 40px; /* 增加间距 */
-        padding: 60px 40px;
-    }
-
-    .content-card {
-        max-width: 1100px; /* 内容区从 850px 增加到 1100px */
-        padding: 60px; /* 增加内边距 */
-        font-size: 1.2em; /* 适当增加字号 */
-    }
-
-    .sidebar { width: 320px; }
-    .extra-sidebar { width: 350px; }
-
-    .avatar {
-        width: 140px; /* 头像调大 */
-        height: 140px;
-    }
-
-    #clock-time { font-size: 3em; } /* 时钟调大 */
 }
