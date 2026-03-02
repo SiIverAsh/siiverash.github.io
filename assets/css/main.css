@@ -173,6 +173,110 @@ html {
     align-self: start;
 }
 
+/* 5. 全站搜索  */
+
+.search-box-card {
+    overflow: visible !important;
+    z-index: 10002 !important;
+}
+
+.search-wrapper {
+    position: relative;
+    z-index: 10003 !important;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 0;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-main);
+    outline: none;
+    box-sizing: border-box;
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+.dark-mode #search-input {
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+}
+
+#results-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 10px 0;
+    margin-top: 12px;
+    max-height: 350px;
+    overflow-y: auto;
+    z-index: 2147483647 !important;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 0;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    display: none;
+    border: 1px solid var(--glass-border);
+}
+
+.dark-mode #results-container {
+    background: rgba(30, 30, 35, 0.85) !important;
+}
+
+#results-container li {
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode #results-container li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#results-container a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.95em;
+    display: block;
+    padding: 12px 20px;
+    transition: 0.2s;
+}
+
+#results-container a:hover {
+    background: rgba(29, 80, 138, 0.1);
+    color: var(--primary-color);
+}
+
+/* 6. 时钟组件 */
+
+.clock-box {
+    text-align: center;
+}
+
+#clock-time {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+#clock-date {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+#clock-lunar {
+    font-size: 0.85em;
+    color: var(--primary-color);
+    margin-top: 5px;
+    font-weight: bold;
+}
+
 /* 7. 博客内容优化 */
 
 .content-card {
