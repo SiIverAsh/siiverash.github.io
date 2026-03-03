@@ -1,11 +1,38 @@
-@media (max-width: 1100px) {
+
+@media (max-width: 1350px) {
+    .wrapper {
+        grid-template-columns: 240px minmax(0, 1fr) 260px; /* 适度缩小侧边栏 */
+        gap: 20px;
+        padding: 40px 15px;
+    }
+    .sidebar { width: 240px; }
+    .extra-sidebar { width: 260px; }
+}
+
+/* 针对窄屏笔记本或横向平板 */
+@media (max-width: 1200px) {
+    .wrapper {
+        grid-template-columns: 220px minmax(0, 1fr) 240px;
+        gap: 15px;
+    }
+    .sidebar { width: 220px; }
+    .extra-sidebar { width: 240px; }
+}
+
+@media (max-width: 1150px) {
     .wrapper {
         grid-template-columns: 260px 1fr;
-        gap: 15px;
-        padding: 20px 15px;
+        gap: 20px;
+        padding: 30px 20px;
     }
     .extra-sidebar {
-        display: none;
+        display: none; 
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        grid-template-columns: 220px 1fr;
     }
 }
 

@@ -78,7 +78,7 @@
 <!-- snap分类页：显示装备 -->
 {% if page.url contains '/categories/snap' %}
 <div class="extra-box glass-card">
-    <div class="extra-title"><i class="fas fa-tower-pc"></i> 装备 (equipment)</div>
+    <div class="extra-title"><i class="fas fa-camera-retro"></i> 装备 (equipment)</div>
     <div style="font-size: 0.85em; color: var(--text-main);">
         <div style="margin-bottom: 10px;">
             <div style="color: var(--primary-color); font-weight: bold;"><i class="fas fa-camera"></i> Camera</div>
@@ -87,6 +87,7 @@
         <div style="margin-bottom: 10px;">
             <div style="color: #f09199; font-weight: bold;"><i class="fas fa-dot-circle"></i> Lens</div>
             <div>{{ site.data.me.snap.equipment.lens }}</div>
+        </div>
     </div>
 </div>
 {% endif %}
@@ -156,7 +157,6 @@
             wikiDesc.textContent = "点击下方按钮在 Bangumi 查看关于《" + animeName + "》的详细评分与资讯。";
         }
     }
-    // 立即尝试执行一次，注册到 DOMContentLoaded 兜底
     loadBangumiWiki();
 </script>
 {% endif %}
