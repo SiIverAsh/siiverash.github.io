@@ -1,120 +1,132 @@
 anime:
-- desc: 2026年冬季首播，延续涩谷事变后剧情，MAPPA制作，引入新角色与领域展开，作画质量进一步提升。
+- desc: 高桥留美子原作改编的电视动画《MAO》定于2026年4月4日首播，讲述少年少女穿越时空的奇幻冒险，制作由动画工房负责。
   tags:
-  - 咒术回战
-  - 热血
-  - 战斗
-  - MAPPA
-  title: JUJUTSU KAISEN Season 3
+  - 高桥留美子
+  - 奇幻冒险
+  - 时空穿越
+  - 动画工房
+  - 2026年4月新番
+  title: MAO
 cv_recommend:
-  agency: Across Entertainment
-  hometown: 爱知县
-  intro: 鬼头明里是日本声优，隶属于Across Entertainment事务所。她以其清澈而富有表现力的声线闻名，在声优界迅速崛起。她的配音风格多样，能够驾驭从甜美到帅气的各类角色，获得了观众和业内的广泛认可。近年来，她积极参与广播节目和现场活动，展现了多才多艺的一面。
-  name: 鬼头明里
-date: '2026-03-03'
+  agency: マウスプロモーション
+  hometown: 东京都
+  intro: ファイルーズあい以清澈有力的声线著称，擅长演绎从活泼少女到严肃角色的多种类型，声音具有高辨识度和情感穿透力。她通过精准的语调控制和情感投入，在配音工作中展现出广泛的演技范围。其专业表现受到业内认可，常为各类媒体作品注入鲜明个性。
+  name: ファイルーズあい
+date: '2026-03-04'
 game:
-- desc: Supergiant Games出品，2025年9月25日全平台发布，添加新武器、祝福系统与剧情分支，支持跨平台存档。
+- desc: Capcom 预计2026年3月推出的《生化危机9》延续系列生存恐怖风格，采用RE引擎强化画面表现，加入开放世界元素与全新剧情线。
   tags:
-  - roguelike
-  - 动作
-  - 神话
-  - 独立游戏
-  title: Hades II v1.0
+  - 生存恐怖
+  - Capcom
+  - RE引擎
+  - 开放世界
+  - 2026年3月发行
+  title: 生化危机9
 history:
-- event: 亚历山大·格拉汉姆·贝尔出生，电话发明者。
-  year: '1847'
-- event: 美国地质调查局成立。
-  year: '1879'
-- event: 布列斯特-立托夫斯克条约签署，结束东线战事。
-  year: '1918'
-- event: 《星条旗》正式成为美国国歌。
-  year: '1931'
-- event: 阿波罗9号发射，测试登月舱。
-  year: '1969'
-- event: 罗德尼·金被洛杉矶警察殴打，引发全国抗议。
-  year: '1991'
+- event: 腓特烈一世当选罗马人民的国王。
+  year: 1152年
+- event: 拉玛铁菩提一世建立阿瑜陀耶王国。
+  year: 1351年
+- event: 美国宪法正式生效。
+  year: 1789年
+- event: 富兰克林·罗斯福就任美国总统。
+  year: 1933年
+- event: 查理·卓别林被授予爵士爵位。
+  year: 1975年
+- event: 瑞士加入联合国。
+  year: 2001年
 music:
-- desc: 2026年2月发行，融合电子摇滚风格，歌词探讨肾上腺素与情感冲动，MV由Graphinica制作。
+- desc: YOASOBI 于2026年1月发布的新曲《アドレナ》，延续电子流行风格，歌词探讨肾上腺素与青春冲动，旋律充满能量感。
   tags:
-  - J-pop
   - YOASOBI
-  - 单曲
-  - '2026'
-  title: 'YOASOBI - Adrena: 2026年数字单曲'
+  - J-POP
+  - 电子流行
+  - 2026新曲
+  - Ayase
+  title: YOASOBI 《アドレナ》
 paint:
-- desc: 中国插画家，以细腻的水彩风格和温馨的日常生活描绘闻名。
-  title: 阿梗
-  url: https://m.weibo.cn/u/1938634171
+- desc: 擅长日系插画与角色设计，色彩鲜明且线条流畅，常参与游戏原画与同人创作。
+  title: 鸦居
+  url: https://weibo.com/u/5654873531
 study:
   Arch:
-  - desc: 采用3D Foveros封装，集成NPU单元提供50 TOPS AI算力，支持LPDDR6内存，单核性能提升25%，能效比提高30%。
+  - desc: WebAssembly 2.0 标准正式发布，新增多线程、SIMD、异常处理等核心特性，实现接近原生代码的执行效率，推动跨平台应用开发。
     tags:
-    - CPU架构
-    - Intel
-    - AI PC
-    - 18A工艺
-    title: 'Intel Panther Lake: 首款Intel 18A工艺客户端架构'
+    - WebAssembly
+    - 跨平台
+    - 高性能计算
+    - Web标准
+    - 编译器
+    title: WebAssembly 2.0
   Audio:
-  - desc: 基于扩散Transformer架构，支持多乐器编曲生成，在MAESTRO数据集上达到SOTA，提供API接口，可生成192kHz高保真音频。
+  - desc: HeartMuLa 是2026年开源的强大音乐生成模型，支持多语言音乐生成与音文处理，采用扩散Transformer架构，可一站式实现音乐创作与编辑。
     tags:
-    - 音乐生成
-    - AI音频
+    - 音频生成
+    - 音乐AI
     - 开源
+    - 多语言
     - 深度学习
-    title: 'HeartMuLa: 开源音乐生成模型'
+    title: HeartMuLa
   CPU:
-  - desc: 基于台积电3nm工艺，集成Oryon CPU核心和Adreno 850 GPU，AI算力达80 TOPS，支持LPDDR6内存和Wi-Fi 7。
+  - desc: Intel Core Ultra 3 系列采用18A制程，集成新一代Arc显卡，游戏性能提升76%，支持先进AI加速指令集，续航大幅优化。
     tags:
-    - 移动处理器
-    - 高通
-    - AI
-    - 3nm工艺
-    title: 'Qualcomm Snapdragon 8 Elite Gen 5: 2026年旗舰移动处理器'
+    - CPU
+    - 18A制程
+    - AI PC
+    - 集成显卡
+    - 能效优化
+    title: Intel Core Ultra 3 (Panther Lake)
   Computer Vision:
-  - desc: 基于Vision Transformer架构，引入隐式时序建模，在DAVIS 2026数据集上达到85.6% mIoU，支持4K实时推理，模型参数量为1.2B。
+  - desc: Ultralytics YOLO26 是下一代实时目标检测模型，采用原生端到端架构，专为边缘计算优化，支持更高效的部署，在COCO数据集上实现更高精度与速度平衡。
     tags:
     - 计算机视觉
-    - 视频分割
-    - Transformer
-    - CVPR2026
-    title: 'VideoMT: CVPR 2026 视频分割模型'
+    - 目标检测
+    - YOLO
+    - 边缘计算
+    - 开源
+    title: Ultralytics YOLO26
   GPU:
-  - desc: 基于CDNA 4架构，拥有320GB HBM3e内存，FP8算力达5 PetaFLOPS，支持CXL 3.0互联，专为LLM训练优化。
+  - desc: AMD Instinct MI455X 采用2nm制程与HBM4内存，集成超过22000个计算单元，FP64性能达400 TFLOPS，专为AI训练与高性能计算设计。
     tags:
-    - AI加速
-    - AMD
-    - HPC
     - GPU
-    title: 'AMD Instinct MI400: 2026年AI加速卡新品'
+    - AI加速
+    - HBM4
+    - 2nm制程
+    - 高性能计算
+    title: AMD Instinct MI455X
   Lang:
-  - desc: 优化JIT编译器性能提升30%，引入新型匹配语句模式，改进异步IO库，修复内存泄漏问题，支持ARMv9架构。
+  - desc: Go 1.26 引入 go fix 工具链强化代码现代化，改进垃圾回收器并增强并发原语，显著提升大规模后端服务的性能与可维护性。
     tags:
-    - Python
     - 编程语言
-    - JIT
-    - 异步
-    title: 'Python 3.13.12: 2026年2月维护版本'
+    - Go
+    - 并发编程
+    - 性能优化
+    - 开源
+    title: Go 1.26
   NLP:
-  - desc: 采用混合专家架构，拥有1.2万亿参数，支持128K上下文长度，在MMLU基准上得分92.5%，集成强化学习对齐技术，2026年2月发布。
+  - desc: DeepSeek V4 Lite 拥有2000亿参数，在多项基准测试中性能接近顶级开源模型，支持中英文双语，推理效率显著提升，适用于低成本大模型部署。
     tags:
+    - 自然语言处理
     - 大语言模型
-    - 多模态
-    - 谷歌
-    - AI
-    title: 'Gemini 3.1 Pro: 谷歌多模态大模型最新版'
+    - 开源
+    - 中文AI
+    - 深度学习
+    title: DeepSeek V4 Lite
   Net:
-  - desc: 引入后量子加密算法CRYSTALS-Kyber，减少握手延迟40%，支持0-RTT连接，草案于2026年1月发布，预计2027年成为标准。
+  - desc: Tuic 是基于QUIC的下一代高性能代理传输协议，采用现代加密技术，显著降低延迟并提升吞吐量，支持多路复用与0-RTT连接，适用于高并发场景。
     tags:
-    - 网络安全
-    - TLS
-    - 加密
-    - 协议
-    title: 'TLS 1.4 草案: 下一代传输层安全协议'
+    - 网络协议
+    - QUIC
+    - 代理技术
+    - 高性能
+    - 加密传输
+    title: Tuic 协议
   News:
-  - desc: 2026年3月1日宣布，亚马逊将投资500亿美元支持OpenAI在AWS上扩展企业AI服务，涉及模型训练与推理基础设施。
+  - desc: 2026年3月3日，中国发布全球首个人形机器人与具身智能标准体系，涵盖安全、互操作性与伦理规范，推动行业规范化发展。
     tags:
-    - AI投资
-    - 云计算
-    - OpenAI
-    - 亚马逊
-    title: 亚马逊向OpenAI投资500亿美元战略合作
+    - 人形机器人
+    - 具身智能
+    - 标准体系
+    - AI伦理
+    - 行业规范
+    title: 首个人形机器人与具身智能标准体系发布
