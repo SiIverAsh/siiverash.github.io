@@ -176,10 +176,19 @@
             document.getElementById('mobile-menu-toggle')?.addEventListener('click', () => {
                 sidebar.classList.toggle('active');
                 sidebarOverlay.classList.toggle('active');
+                extraSidebar.classList.remove('active'); // 互斥
+            });
+
+            // 右侧信息栏开关
+            document.getElementById('mobile-extra-toggle')?.addEventListener('click', () => {
+                extraSidebar.classList.toggle('active');
+                sidebarOverlay.classList.toggle('active');
+                sidebar.classList.remove('active'); // 互斥
             });
 
             sidebarOverlay.addEventListener('click', () => {
                 sidebar.classList.remove('active');
+                extraSidebar.classList.remove('active');
                 sidebarOverlay.classList.remove('active');
             });
 
