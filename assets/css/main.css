@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
-/* 1. 变量定义 */
+/* 0. 基础修正：确保所有元素的宽度计算包含内边距 */
+* {
+    box-sizing: border-box;
+}
 
+/* 1. 变量定义 */
 :root {
     --primary-color: #1d508a;
     --text-main: #111111;
@@ -78,14 +82,14 @@ html {
     box-shadow: var(--shadow);
 }
 
-/* 核心比例布局：使用百分比防止重叠 */
+/* 核心比例布局：minmax(0, 1fr) 防止溢出 */
 .wrapper {
     width: 98%;
     max-width: 1800px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 18% 1fr 20%; /* 关键：固定比例 */
-    gap: 25px;
+    grid-template-columns: 18% minmax(0, 1fr) 20%; 
+    gap: 30px;
     padding: 40px 10px;
     min-height: calc(100vh - 80px);
     align-items: start;
@@ -98,24 +102,21 @@ html {
    15. 多分辨率适配 (大屏增强)
    ========================================================================== */
 
-/* 针对大屏幕 (2K/4K) 仅调整最大宽度和字号，不改变比例 */
 @media (min-width: 1600px) {
     .wrapper {
         max-width: 1600px;
-        gap: 35px;
+        gap: 40px;
     }
-    .content-card { max-width: 1000px; }
 }
 
 @media (min-width: 2500px) {
     .wrapper {
         max-width: 2200px;
-        gap: 50px;
+        gap: 60px;
         padding: 80px 40px;
     }
 
     .content-card {
-        max-width: 1200px;
         padding: 50px;
         font-size: 1.15em;
     }
@@ -126,16 +127,17 @@ html {
 
 .main-content {
     animation: slideInUp 0.8s ease;
-    min-width: 0;
+    min-width: 0; /* 允许 grid 项缩小到比内容更小 */
 }
 
 .sidebar, 
 .extra-sidebar {
     position: sticky;
     top: 40px;
-    width: 100%; /* 填充比例格位 */
+    width: 100%;
     height: fit-content;
     animation: 0.8s ease;
+    overflow: hidden; /* 防止内部元素溢出 */
 }
 
 .sidebar {
@@ -262,7 +264,7 @@ html {
     padding: 40px;
     min-height: 400px;
     width: 100%;
-    max-width: 900px;
+    max-width: 100%; /* 关键：不要让它超出 Grid 单元格 */
     margin: 0 auto;
     overflow-wrap: break-word;
     font-size: 1.05em;
