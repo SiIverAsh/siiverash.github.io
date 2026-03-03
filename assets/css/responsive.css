@@ -1,27 +1,17 @@
-/* 针对中型屏幕 (笔记本电脑) - 激进地减小侧边栏，防止 1245px 重叠 */
-@media (max-width: 1350px) {
+
+/* 针对桌面端和中型屏幕，维持比例布局，不使用固定像素 */
+@media (min-width: 1151px) {
     .wrapper {
-        grid-template-columns: 220px minmax(0, 1fr) 240px; 
-        gap: 15px;
-        padding: 40px 10px;
+        grid-template-columns: 18% 1fr 20%; 
+        gap: 25px;
     }
-    .sidebar { width: 220px; }
-    .extra-sidebar { width: 240px; }
+    .sidebar, .extra-sidebar { width: 100%; }
 }
 
-/* 针对窄屏笔记本或横向平板 - 1245px 以下进一步压榨空间 */
-@media (max-width: 1245px) {
-    .wrapper {
-        grid-template-columns: 200px minmax(0, 1fr) 220px;
-        gap: 10px;
-    }
-    .sidebar { width: 200px; }
-    .extra-sidebar { width: 220px; }
-}
-
+/* 针对窄屏笔记本或横向平板 (1150px 以下) */
 @media (max-width: 1150px) {
     .wrapper {
-        grid-template-columns: 260px 1fr;
+        grid-template-columns: 22% 1fr; /* 隐藏右侧，调大左侧比例 */
         gap: 20px;
         padding: 30px 20px;
     }
@@ -30,13 +20,7 @@
     }
 }
 
-@media (max-width: 900px) {
-    .wrapper {
-        grid-template-columns: 220px 1fr;
-    }
-}
-
-
+/* 移动端处理 (768px 以下) */
 @media (max-width: 768px) {
     .wrapper {
         display: block;
@@ -44,7 +28,7 @@
         z-index: auto !important; 
     }
 
-
+    /* 左侧侧边栏移动端样式 (抽屉) */
     .sidebar {
         position: fixed;
         left: -320px;
@@ -63,7 +47,7 @@
         padding: 80px 20px 40px !important;
     }
 
-    /* 右侧侧边栏移动端样式 (抽屉式) */
+    /* 右侧侧边栏移动端样式 (抽屉) */
     .extra-sidebar {
         display: flex !important;
         position: fixed;
@@ -83,7 +67,10 @@
         padding: 80px 15px 40px !important;
     }
 
-    /* 优化侧边栏滚动条样式 */
+    .sidebar.active { left: 0; }
+    .extra-sidebar.active { right: 0; }
+
+    /* 优化侧边栏滚动条 */
     .sidebar::-webkit-scrollbar, .extra-sidebar::-webkit-scrollbar {
         width: 4px;
     }
@@ -92,53 +79,12 @@
         border-radius: 0;
         opacity: 0.5;
     }
-    .sidebar::-webkit-scrollbar-track, .extra-sidebar::-webkit-scrollbar-track {
-        background: transparent;
-    }
 
     .dark-mode .sidebar, .dark-mode .extra-sidebar {
         background: rgba(20, 20, 25, 0.85) !important;
     }
 
-    .sidebar.active {
-        left: 0;
-    }
-    
-    .extra-sidebar.active {
-        right: 0;
-    }
-
-    .sidebar h2 {
-        color: var(--primary-color) !important;
-        font-weight: 800;
-        margin-bottom: 20px;
-        letter-spacing: 1px;
-    }
-
-    .sidebar .avatar {
-        width: 90px;
-        height: 90px;
-        margin-bottom: 20px;
-        border: 3px solid white;
-    }
-
-    .sidebar .nav-item {
-        background: rgba(255, 255, 255, 0.15) !important;
-        padding: 12px 20px;
-        margin: 10px 0;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .main-content {
-        width: 100%;
-    }
-
-    .content-card {
-        padding: 25px 18px;
-        border-radius: 0;
-    }
-
-
+    /* 按钮控制 */
     #mobile-menu-toggle, #mobile-extra-toggle, #mobile-search-toggle, #theme-toggle {
         display: flex !important;
         position: fixed;
@@ -159,7 +105,7 @@
     }
 
     #mobile-menu-toggle { left: 15px; }
-    #mobile-extra-toggle { right: 119px; } /* 新增按钮位置 */
+    #mobile-extra-toggle { right: 119px; } 
     #mobile-search-toggle { right: 67px; } 
     #theme-toggle { right: 15px !important; top: 15px !important; }
 
@@ -217,13 +163,11 @@
     
     .sidebar-overlay.active { display: block; }
 
-
     .email-pop {
         z-index: 2147483647 !important;
         box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
 }
-
 
 @media (min-width: 769px) {
     #mobile-menu-toggle, #mobile-extra-toggle, #mobile-search-toggle, .search-overlay { display: none !important; }

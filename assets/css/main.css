@@ -78,71 +78,49 @@ html {
     box-shadow: var(--shadow);
 }
 
+/* 核心比例布局：使用百分比防止重叠 */
 .wrapper {
-    width: 95%;
-    max-width: 1400px; /* 默认最大宽度 */
+    width: 98%;
+    max-width: 1800px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 260px minmax(0, 1fr) 280px;
-    gap: 20px;
-    padding: 40px 0;
+    grid-template-columns: 18% 1fr 20%; /* 关键：固定比例 */
+    gap: 25px;
+    padding: 40px 10px;
     min-height: calc(100vh - 80px);
     align-items: start;
     position: relative;
     z-index: auto;
-    transition: max-width 0.3s ease, gap 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 /* ==========================================================================
-   15. 多分辨率适配 (1080p to 4K)
+   15. 多分辨率适配 (大屏增强)
    ========================================================================== */
 
-/* 默认适配 (针对 1080p 及以下屏幕，如 1920x1080) */
-.wrapper {
-    max-width: 1400px;
-    grid-template-columns: 260px minmax(0, 1fr) 280px;
-    gap: 25px;
-    padding: 40px 20px;
-}
-.sidebar { width: 260px; }
-.extra-sidebar { width: 280px; }
-.content-card { max-width: 850px; }
-
-/* 针对大屏幕 (如 2K 分辨率 2560px) */
+/* 针对大屏幕 (2K/4K) 仅调整最大宽度和字号，不改变比例 */
 @media (min-width: 1600px) {
     .wrapper {
         max-width: 1600px;
-        grid-template-columns: 280px minmax(0, 1fr) 300px;
         gap: 35px;
     }
-    .sidebar { width: 280px; }
-    .extra-sidebar { width: 300px; }
-    .content-card { max-width: 900px; }
+    .content-card { max-width: 1000px; }
 }
 
-/* 针对 4K 分辨率 (3840px 及以上) */
 @media (min-width: 2500px) {
     .wrapper {
-        max-width: 1800px; /* 限制最大宽度，防止内容拉得太宽 */
-        grid-template-columns: 300px minmax(0, 1fr) 320px; /* 适度增加侧边栏，但不夸张 */
-        gap: 50px; /* 增大间距，增加呼吸感，防止视觉重叠 */
+        max-width: 2200px;
+        gap: 50px;
         padding: 80px 40px;
     }
 
     .content-card {
-        max-width: 950px; /* 相比之前的 1100px 进行了缩小，提高阅读舒适度 */
+        max-width: 1200px;
         padding: 50px;
-        font-size: 1.15em; /* 适度增大字号，匹配 4K 视觉 */
+        font-size: 1.15em;
     }
 
-    .sidebar { width: 300px; }
-    .extra-sidebar { width: 320px; }
-
-    .avatar {
-        width: 130px;
-        height: 130px;
-    }
-
+    .avatar { width: 130px; height: 130px; }
     #clock-time { font-size: 2.8em; }
 }
 
@@ -155,6 +133,7 @@ html {
 .extra-sidebar {
     position: sticky;
     top: 40px;
+    width: 100%; /* 填充比例格位 */
     height: fit-content;
     animation: 0.8s ease;
 }
@@ -283,7 +262,7 @@ html {
     padding: 40px;
     min-height: 400px;
     width: 100%;
-    max-width: 850px;
+    max-width: 900px;
     margin: 0 auto;
     overflow-wrap: break-word;
     font-size: 1.05em;
