@@ -301,9 +301,8 @@ html {
 
 /* 8. 代码块  */
 
-div.highlighter-rouge, 
-.highlight, 
-pre, 
+div.highlighter-rouge,
+.highlight,
 code {
     background-color: var(--code-bg) !important;
     color: var(--text-main) !important;
@@ -311,14 +310,24 @@ code {
     border: 1px solid var(--glass-border);
 }
 
-.dark-mode pre, 
-.dark-mode .highlight, 
-.dark-mode .highlight pre, 
+/* Pre handles layout, wrapper handles visual styling */
+pre {
+    background-color: transparent !important;
+    color: var(--text-main) !important;
+    border: none !important;
+    border-radius: 0;
+}
+
+.dark-mode .highlight,
 .dark-mode code {
     background-color: #1e1e1e !important;
     color: #eeeeee !important;
 }
 
+.dark-mode pre {
+    background-color: transparent !important;
+    color: #eeeeee !important;
+}
 /* 9. 导航与社交 */
 
 .avatar {
