@@ -1,110 +1,127 @@
-date: '2026-03-07'
+algorithm:
+- desc: 通过迭代训练弱学习器（决策树），最小化损失函数，实现高性能分类与回归的经典机器学习算法，广泛应用于数据挖掘竞赛。
+  tags:
+  - 机器学习
+  - 集成学习
+  - GBDT
+  - 分类回归
+  title: 梯度提升决策树（GBDT）：经典集成学习算法
+cv_recommend:
+  agency: IM Enterprise
+  hometown: 日本神奈川县
+  intro: 长谷川育美是日本新生代声优，隶属于IM Enterprise事务所。她拥有清澈透明的音色和广泛的声音表现力，能够驾驭从少女到成熟女性的多种角色类型。其扎实的配音功底和细腻的情感表达在业内备受认可，被誉为具有高度可塑性的实力派声优。近年来，她凭借出色的专业素养和不断精进的技艺，在声优界崭露头角，受到观众和业界的广泛关注。
+  name: 长谷川育美
+date: '2026-03-08'
+history:
+- event: 纽约妇女纺织工人罢工，成为国际妇女节起源之一。
+  year: '1908'
+- event: 俄国二月革命爆发（儒略历2月23日，公历3月8日）。
+  year: '1917'
+- event: 联合国正式确认国际妇女节。
+  year: '1975'
+- event: 中国广州首次庆祝三八国际妇女节。
+  year: '1924'
+- event: 香港地铁港岛线启用。
+  year: '1990'
+- event: 马来西亚航空公司MH370航班失联。
+  year: '2014'
+llm:
+- desc: Gemini 3.1 Pro在推理任务上性能相比前代提升一倍，成本效率实现革命性突破，支持更长上下文与多模态交互。
+  tags:
+  - 大语言模型
+  - Google
+  - Gemini
+  - 推理
+  title: Google Gemini 3.1 Pro：推理性能翻倍，成本效率突破
+new_project:
+- desc: GitHub趋势榜单首位，24.5万Star刷新增长纪录，提供完整的AI助手框架与回溯清理机制，支持快速部署与扩展。
+  tags:
+  - 开源
+  - AI助手
+  - GitHub
+  - 趋势
+  title: OpenClaw：AI智能体助手框架
+  url: https://github.com/Work-Fisher/openclaw-ai-assistant-framework
+paper:
+- desc: ICLR 2026论文：通过求解器-验证器间隙理论建模大语言模型自我改进训练动态，为LLM自优化提供理论框架。
+  tags:
+  - ICLR
+  - 大语言模型
+  - 理论建模
+  - 自我改进
+  title: Theoretical Modeling of Large Language Model Self-Improvement Training Dynamics
+    Through Solver-Verifier Gap
+  url: https://iclr.cc/virtual/2026/poster/10010371
 tech:
   Arch:
-  - desc: 该框架基于微服务与事件驱动架构，集成LLM编排、工具调用与记忆管理模块，支持多智能体协作与自主决策，提供容器化部署方案，已在金融、医疗场景验证。
+  - desc: K3芯片基于RVA23指令集，集成专用AI加速单元，支持高性能计算与智能场景，采用先进制程工艺，能效比领先。
     tags:
-    - 系统架构
-    - AI智能体
-    - 微服务
-    - 企业级
-    title: 企业 Agentic AI 架构框架：2026全景解析
-  Audio:
-  - desc: Ming-omni-tts融合语音、音乐、音效生成于单一模型，基于扩散Transformer架构，支持情感条件控制与零样本跨语言合成，在LibriTTS测试集上自然度评分4.8/5。
-    tags:
-    - 语音合成
-    - 多模态
-    - 深度学习
-    - 开源
-    title: Ming-omni-tts：统一多模态音频生成模型
-  CPU:
-  - desc: 锐龙AI 400系列基于Zen 6架构与RDNA 4核显，采用4nm工艺，集成60 TOPS NPU，支持192GB DDR5内存，L3缓存增至256MB，多线程性能提升40%。
-    tags:
-    - CPU
-    - AI处理器
-    - AMD
-    - 高性能
-    title: AMD锐龙AI 400系列：NPU算力60 TOPS
-  Computer Vision:
-  - desc: PaddleOCR-VL-1.5采用0.9B参数多任务架构，集成视觉-语言预训练技术，新增曲面文档文本定位与印章识别模块，支持端到端实时推理。
-    tags:
-    - OCR
-    - 文档解析
-    - 计算机视觉
-    - 开源模型
-    title: PaddleOCR-VL-1.5开源：新增文本定位与印章识别能力
-  GPU:
-  - desc: Rubin平台采用台积电2nm工艺，集成GPU、CPU、NPU芯片，支持HBM4内存与NVLink 5.0互联，FP8算力达10 PetaFLOPS。
-    tags:
-    - GPU
+    - 计算机架构
+    - RISC-V
     - AI芯片
     - 高性能计算
-    - 英伟达
-    title: 英伟达Rubin架构：6款新芯片整合AI超级计算机
+    title: 进迭时空K3芯片：全球首款RVA23高性能RISC-V AI芯片
+  Audio:
+  - desc: Speech-01基于全新生成式架构，支持多语种、多情感语音合成，音质超清，相似度极高，可实现高度拟人化的语音交互。
+    tags:
+    - 音频生成
+    - 语音合成
+    - 多情感
+    - 大模型
+    title: MiniMax Speech-01：超拟人多情感语音生成模型
+  CPU:
+  - desc: 至强6+拥有288个核心、864MB三级缓存，采用最新制程，面向6G与云原生市场，支持高密度计算与能效优化。
+    tags:
+    - CPU
+    - Intel
+    - 服务器
+    - 高性能计算
+    title: Intel 至强6+：288核心服务器处理器
+  Computer Vision:
+  - desc: YOLO26采用全新架构，支持无NMS推理，在CPU上性能提升43%，专为边缘视觉AI优化，同时提供5种尺寸模型以兼顾速度与精度。
+    tags:
+    - 计算机视觉
+    - 目标检测
+    - YOLO
+    - 边缘AI
+    title: YOLO26：下一代实时目标检测模型
+  GPU:
+  - desc: Xe3P为Intel新一代独立GPU，架构升级带来20-25%性能提升，支持高级光追与AI加速，计划2026年正式发布。
+    tags:
+    - GPU
+    - Intel
+    - Xe3P
+    - 独立显卡
+    title: Intel Xe3P：下一代Xe架构独立GPU
   Lang:
-  - desc: Go 1.26默认启用Green Tea垃圾回收器，大幅降低STW时间至亚毫秒级；引入ARM64与x86 SIMD指令集优化，数值计算性能提升5倍；泛型限制放宽，支持更多类型参数。
+  - desc: Go 1.26引入new(expr)语法、默认启用绿茶GC、支持goroutine死锁检测，工具链进一步智能化，运行时性能显著提升。
     tags:
     - 编程语言
     - Go
-    - 性能优化
-    - 垃圾回收
-    title: Go 1.26发布：Green Tea GC与SIMD加速
+    - 性能
+    - 工具链
+    title: Go 1.26：性能提升与智能工具链
   NLP:
-  - desc: Ling-2.5-1T基于混合专家(MoE)架构，参数量达1万亿，支持中英日韩等100+语言实时生成，推理延迟低于100ms，采用动态路由与稀疏激活技术。
+  - desc: Llama 4支持高达1000万上下文长度，集成视觉与语言多模态能力，完全开源，在多项基准测试中达到领先水平。
     tags:
-    - 大语言模型
-    - MoE
-    - 多语言
+    - NLP
+    - 多模态
     - 开源
-    title: 蚂蚁开源万亿参数即时模型 Ling-2.5-1T
+    - 大语言模型
+    title: Meta Llama 4：开源多模态大模型
   Net:
-  - desc: Tuic基于QUIC协议优化，采用0-RTT连接建立与向前保密加密，支持多路复用与拥塞控制算法，在恶劣网络环境下较HTTP/3提升300%吞吐量，延迟降低50%。
+  - desc: WebMCP是W3C推出的标准化协议，用于实现AI代理与Web浏览器的安全、高效交互，支持上下文传递与实时通信。
     tags:
     - 网络协议
-    - QUIC
-    - 高性能
-    - 代理
-    title: Tuic协议：下一代高速代理传输协议
+    - AI代理
+    - W3C
+    - 标准化
+    title: WebMCP：W3C官方AI代理浏览器交互标准
   News:
-  - desc: 中国科学技术大学研究团队利用超导电路与光子纠缠技术，实现18个光量子比特的全局纠缠，保真度达99.5%，为大规模量子计算奠定基础。
+  - desc: 中国团队成功研制500+比特超导量子芯片，刷新世界纪录，相干时间与门保真度达到实用水平，千比特芯片研发进展顺利。
     tags:
     - 量子计算
-    - 科研突破
-    - 中国科技
-    - 物理学
-    title: 潘建伟团队实现18个光量子比特纠缠，刷新世界纪录
-paper:
-- title: "Attention Is All You Need"
-  desc: "这篇由Google团队在NeurIPS 2017发表的经典论文，提出了完全基于注意力机制的Transformer架构，彻底改变了NLP领域的范式，是当前所有大语言模型的基础。"
-  tags: ["NeurIPS", "Transformer", "NLP", "经典"]
-  url: "https://arxiv.org/abs/1706.03762"
-llm:
-- title: "DeepSeek-V3 开源模型发布"
-  desc: "DeepSeek-V3 采用混合专家（MoE）架构，总参数量达到 671B。在保持极高推理效率的同时，在数学、代码和通用逻辑推理评测中全面对标世界顶尖闭源模型。"
-  tags: ["MoE架构", "开源LLM", "DeepSeek", "671B"]
-algorithm:
-- title: "谱聚类 (Spectral Clustering) 优化"
-  desc: "基于图论的聚类算法，通过对样本数据的拉普拉斯矩阵进行特征分解，在降维后的空间中使用K-Means等方法进行聚类，非常适合处理非凸边界的流形数据，在声纹聚类中表现优异。"
-  tags: ["谱聚类", "无监督学习", "图论", "降维"]
-new_project:
-- title: "Cam++ ONNX Runtime 部署"
-  desc: "实现了高精度的实时声纹识别。该项目优化了CAM++模型的ONNX导出与推理过程，加入了基于动态阈值策略的自动K值检测，大幅降低了推理延迟，并支持现代化数据可视化。"
-  tags: ["ONNX", "声纹识别", "推理优化", "C++"]
-  url: "https://github.com/siiverash"
-history:
-- event: 亚历山大·贝尔获得电话专利（美国专利第174,465号）
-  year: '1876'
-- event: 希特勒下令德军重新占领莱茵兰，违反《凡尔赛条约》
-  year: '1936'
-- event: 美国阿拉巴马州塞尔玛举行“血腥星期日”民权游行
-  year: '1965'
-- event: 美国宇航局开普勒太空望远镜发射，用于搜寻系外行星
-  year: '2009'
-- event: 第82届奥斯卡颁奖典礼举行，凯瑟琳·比奇洛成为首位获得最佳导演奖的女性
-  year: '2010'
-- event: 国际妇女节前夕，全球多地举行女性权益游行
-  year: '2020'
-cv_recommend:
-  agency: Across Entertainment
-  hometown: 日本神奈川县
-  intro: 古贺葵以其清澈明亮的声线著称，擅长演绎活泼开朗的少女角色。她通过精准的情绪把控和细腻的台词表现力，在多个作品中展现出广泛的音域和角色适应性。在声优业界中，她以勤奋的态度和不断精进的演技获得认可。
-  name: 古贺葵
+    - 超导芯片
+    - 国产
+    - 突破
+    title: 国产500+比特超导量子芯片发布，千比特已在路上
