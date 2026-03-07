@@ -180,13 +180,13 @@ def get_ai_recommendation(context, history_titles):
     {HISTORY_BLOCK}
     
     必须的要求：
-    1. 每个分类（Tech下的 9 个指定子类、Paper, LLM, Algorithm, New Project）必须提供正好 1 个推荐项。
+    1. 每个分类（Tech下的 9 个指定子类）必须提供正好 1 个推荐项。
     2. Tech 下必须严格使用这 9 个键名：Computer Vision, NLP, Audio, Net, Lang, Arch, GPU, CPU, News。
     3. desc 必须输出最新的硬核技术细节（如架构特性、工艺制程、性能指标）。
     4. 严禁使用任何引导性废话。
     5. 针对 GPU 和 CPU 领域，必须关注最近半年内的动态。
-    6. 每个内容项必须包含至少 4 个 tags。
-    7. 对于Paper推荐，必须是近期的顶会论文（如CVPR, ACL, NeurIPS等），并提供真实论文链接（url）。
+    6. 每个内容项必须包含至少 3 个 tags。
+    7. 对于Paper推荐，必须是近期的顶会论文（如ICLR, ACL, NeurIPS等），并提供真实论文链接（url）。
     8. 对于LLM推荐，推荐近期重要的大语言模型进展、开源模型或研究。
     9. 对于Algorithm推荐，推荐传统机器学习算法或常见基础算法。
     10. 对于New Project推荐，必须是GitHub上近期Trending榜单里的高质量开源项目，提供真实链接（url）。
@@ -296,13 +296,21 @@ def update_yaml():
             cleaned_content = clean_json_string(raw_content)
             ai_content = json.loads(cleaned_content)
             
+            paint_list = []
+            for item in ai_content.get('paint', []):
+                paint_list.append({
+                    'title': item.get('title', ''),
+                    'desc': item.get('desc', ''),
+                    'url': item.get('id_url', '')
+                })
+
             data = {
                 'date': str(get_beijing_time().date()),
-                'tech': ai_content.get('tech', {}),
-                'paper': ai_content.get('paper', []),
-                'llm': ai_content.get('llm', []),
-                'algorithm': ai_content.get('algorithm', []),
-                'new_project': ai_content.get('new_project', []),
+                'study': ai_content.get('study', {}),
+                'anime': ai_content.get('anime', []),
+                'music': ai_content.get('music', []),
+                'game': ai_content.get('game', []),
+                'paint': paint_list,
                 'history': ai_content.get('history', []),
                 'cv_recommend': ai_content.get('cv_recommend', {})
             }
