@@ -296,21 +296,13 @@ def update_yaml():
             cleaned_content = clean_json_string(raw_content)
             ai_content = json.loads(cleaned_content)
             
-            paint_list = []
-            for item in ai_content.get('paint', []):
-                paint_list.append({
-                    'title': item.get('title', ''),
-                    'desc': item.get('desc', ''),
-                    'url': item.get('id_url', '')
-                })
-
             data = {
                 'date': str(get_beijing_time().date()),
-                'study': ai_content.get('study', {}),
-                'anime': ai_content.get('anime', []),
-                'music': ai_content.get('music', []),
-                'game': ai_content.get('game', []),
-                'paint': paint_list,
+                'tech': ai_content.get('tech', {}),
+                'paper': ai_content.get('paper', []),
+                'llm': ai_content.get('llm', []),
+                'algorithm': ai_content.get('algorithm', []),
+                'new_project': ai_content.get('new_project', []),
                 'history': ai_content.get('history', []),
                 'cv_recommend': ai_content.get('cv_recommend', {})
             }
