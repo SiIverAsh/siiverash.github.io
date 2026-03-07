@@ -115,26 +115,20 @@ def save_history(new_data, history_dict):
     # 提取所有标题/名称
     titles = []
     
-    # Study 分类
-    study = new_data.get('study', {})
-    for cat in study:
-        for item in study[cat]:
+    # Tech 分类
+    tech = new_data.get('tech', {})
+    for cat in tech:
+        for item in tech[cat]:
             if isinstance(item, dict) and item.get('title'):
                 titles.append(item.get('title'))
-            
+
     # 其他分类
-    for cat in ['anime', 'music', 'game']:
+    for cat in ['paper', 'llm', 'algorithm', 'new_project']:
         for item in new_data.get(cat, []):
             if isinstance(item, dict) and item.get('title'):
                 titles.append(item.get('title'))
-            
-    # Paint (title 就是画师名)
-    for item in new_data.get('paint', []):
-        if isinstance(item, dict) and item.get('title'):
-            titles.append(item.get('title'))
-        
-    # CV
-    cv = new_data.get('cv_recommend', {})
+
+    # CV    cv = new_data.get('cv_recommend', {})
     if cv and isinstance(cv, dict) and cv.get('name'):
         titles.append(cv.get('name'))
     
@@ -186,28 +180,29 @@ def get_ai_recommendation(context, history_titles):
     {HISTORY_BLOCK}
     
     必须的要求：
-    1. 每个分类（Study下的 9 个指定子类、Anime, Music, Paint, Game）必须提供正好 1 个推荐项。
-    2. Study 下必须严格使用这 9 个键名：Computer Vision, NLP, Audio, Net, Lang, Arch, GPU, CPU, News。请注意：Computer Vision 指的是计算机视觉（AI 领域），与声优（Character Voice）完全无关。你必须根据实时背景（例如github上的最新项目等）。
+    1. 每个分类（Tech下的 9 个指定子类、Paper, LLM, Algorithm, New Project）必须提供正好 1 个推荐项。
+    2. Tech 下必须严格使用这 9 个键名：Computer Vision, NLP, Audio, Net, Lang, Arch, GPU, CPU, News。
     3. desc 必须输出最新的硬核技术细节（如架构特性、工艺制程、性能指标）。
     4. 严禁使用任何引导性废话。
     5. 针对 GPU 和 CPU 领域，必须关注最近半年内的动态。
-    6. 每个内容项（Study、Anime、Music、Game）必须包含至少 4 个 tags。
-    7. 对于music推荐的内容尽量是Jpop、Doujin（例如东方porject）等。
-    8. 对于Paint，画师不一定是知名的，可以推荐国内平台的画师，但是必须提供真实的画师链接（可以是X，也可以是微博等等）（不确定则留空）。
-    9. 对于history推荐内容为“历史上的今天”，必须提供 6 条不同数据。
-    10. **CV推荐 (声优相关)**：
-       - 此项与 Study 中的 Computer Vision 无关。
+    6. 每个内容项必须包含至少 4 个 tags。
+    7. 对于Paper推荐，必须是近期的顶会论文（如CVPR, ACL, NeurIPS等），并提供真实论文链接（url）。
+    8. 对于LLM推荐，推荐近期重要的大语言模型进展、开源模型或研究。
+    9. 对于Algorithm推荐，推荐传统机器学习算法或常见基础算法。
+    10. 对于New Project推荐，必须是GitHub上近期Trending榜单里的高质量开源项目，提供真实链接（url）。
+    11. 对于history推荐内容为“历史上的今天”，必须提供 6 条不同数据。
+    12. **CV推荐 (声优相关)**：
+       - 此项与 Tech 中的 Computer Vision 无关。
        - 必须严格参考**《声优名鉴》(声優名鑑)**数据。
        - 必须包含：姓名(name)、所属事务所(agency)、出生地(hometown)、以及一段专业评价(intro,大约150字)。
        - **强制事实对齐**：如果搜索结果没提到，宁可不写，也不准编造。
        - **严禁提及**：绝对禁止提及任何具体的动漫作品或角色名称。
-    11. 对于game推荐的内容尽量是近几年发行的游戏。
-    12. 所有的回答请务必用中文。
-    13. 一定不要推荐与之前重复的内容（参考上方的“重要排除项”）。
+    13. 所有的回答请务必用中文。
+    14. 一定不要推荐与之前重复的内容（参考上方的“重要排除项”）。
     
     必须输出以下 JSON 格式：
     {{
-      "study": {{
+      "tech": {{
         "Computer Vision": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
         "NLP": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
         "Audio": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
@@ -218,10 +213,10 @@ def get_ai_recommendation(context, history_titles):
         "CPU": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
         "News": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}]
       }},
-      "anime": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-      "music": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
-      "paint": [{"title": "画师名", "desc": "风格简述", "id_url": "真实的账号链接"}],
-      "game": [{"title": "..", "desc": "..", "tags": ["A", "B", "C", "D"]}],
+      "paper": [{"title": "..", "desc": "顶会论文推荐", "tags": ["A", "B", "C", "D"], "url": "论文链接"}],
+      "llm": [{"title": "..", "desc": "大语言模型相关", "tags": ["A", "B", "C", "D"]}],
+      "algorithm": [{"title": "..", "desc": "传统机器学习或常见算法", "tags": ["A", "B", "C", "D"]}],
+      "new_project": [{"title": "..", "desc": "GitHub上trend里的最新项目", "tags": ["A", "B", "C", "D"], "url": "项目链接"}],
       "history": [{"year": "..", "event": ".."}],
       "cv_recommend": {{
         "name": "声优名", 
@@ -301,21 +296,13 @@ def update_yaml():
             cleaned_content = clean_json_string(raw_content)
             ai_content = json.loads(cleaned_content)
             
-            paint_list = []
-            for item in ai_content.get('paint', []):
-                paint_list.append({
-                    'title': item.get('title', ''),
-                    'desc': item.get('desc', ''),
-                    'url': item.get('id_url', '')
-                })
-
             data = {
                 'date': str(get_beijing_time().date()),
-                'study': ai_content.get('study', {}),
-                'anime': ai_content.get('anime', []),
-                'music': ai_content.get('music', []),
-                'game': ai_content.get('game', []),
-                'paint': paint_list,
+                'tech': ai_content.get('tech', {}),
+                'paper': ai_content.get('paper', []),
+                'llm': ai_content.get('llm', []),
+                'algorithm': ai_content.get('algorithm', []),
+                'new_project': ai_content.get('new_project', []),
                 'history': ai_content.get('history', []),
                 'cv_recommend': ai_content.get('cv_recommend', {})
             }
