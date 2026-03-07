@@ -128,7 +128,8 @@ def save_history(new_data, history_dict):
             if isinstance(item, dict) and item.get('title'):
                 titles.append(item.get('title'))
 
-    # CV    cv = new_data.get('cv_recommend', {})
+    # CV
+    cv = new_data.get('cv_recommend', {})
     if cv and isinstance(cv, dict) and cv.get('name'):
         titles.append(cv.get('name'))
     
