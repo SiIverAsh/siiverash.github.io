@@ -161,7 +161,70 @@
 </script>
 {% endif %}
 
+<!-- 文章目录 (TOC) -->
+{% if page.layout == 'post' %}
+<div class="extra-box glass-card toc-card">
+    <div class="extra-title"><i class="fas fa-list-ul"></i> 文章目录</div>
+    <div id="toc-container" style="max-height: 400px; overflow-y: auto; padding-right: 5px;"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const content = document.querySelector('.post-content');
+    const tocContainer = document.getElementById('toc-container');
+    if (!content || !tocContainer) return;
+
+    const headings = content.querySelectorAll('h2, h3, h4');
+    if (headings.length === 0) {
+        document.querySelector('.toc-card').style.display = 'none';
+        return;
+    }
+
+    const tocList = document.createElement('ul');
+    tocList.style.listStyle = 'none';
+    tocList.style.padding = '0';
+    tocList.style.margin = '0';
+    tocList.style.fontSize = '0.9em';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            heading.id = 'heading-' + index;
+        }
+
+        const level = parseInt(heading.tagName.substring(1));
+        const listItem = document.createElement('li');
+        
+        // h2 -> 0, h3 -> 15px, h4 -> 30px
+        listItem.style.marginLeft = ((level - 2) * 15) + 'px';
+        listItem.style.marginBottom = '8px';
+        listItem.style.lineHeight = '1.4';
+
+        const link = document.createElement('a');
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent;
+        link.className = 'toc-link';
+        link.style.color = 'var(--text-main)';
+        link.style.textDecoration = 'none';
+        link.style.display = 'block';
+        link.style.borderLeft = '2px solid transparent';
+        link.style.paddingLeft = '8px';
+        link.style.transition = '0.3s';
+
+        listItem.appendChild(link);
+        tocList.appendChild(listItem);
+    });
+
+    tocContainer.appendChild(tocList);
+});
+</script>
+{% endif %}
+
 <style>
+    .toc-link:hover {
+        color: var(--primary-color) !important;
+        border-left: 2px solid var(--primary-color) !important;
+        background: rgba(127, 178, 216, 0.1);
+    }
     .moe-btn { display: inline-block; background: var(--primary-color); color: white !important; padding: 6px 12px; border-radius: 0; text-decoration: none; font-size: 0.8em; font-weight: bold; transition: 0.3s; }
     .moe-btn:hover { filter: brightness(1.1); transform: scale(1.05); }
     .bgm-btn { display: inline-block; background: #f09199; color: white !important; padding: 6px 12px; border-radius: 0; text-decoration: none; font-size: 0.8em; font-weight: bold; transition: 0.3s; }
