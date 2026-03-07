@@ -40,6 +40,22 @@ layout: default
 
 <script>
 document.querySelectorAll('pre').forEach((codeBlock) => {
+    // 创建外层容器
+    const wrapper = document.createElement('div');
+    wrapper.className = 'code-terminal-wrapper';
+
+    // 创建顶部的控制栏（macOS 小圆点）
+    const header = document.createElement('div');
+    header.className = 'code-terminal-header';
+    header.innerHTML = `
+        <div class="terminal-buttons">
+            <span class="btn close"></span>
+            <span class="btn min"></span>
+            <span class="btn max"></span>
+        </div>
+    `;
+
+    // 复制按钮
     const button = document.createElement('button');
     button.className = 'copy-code-button';
     button.type = 'button';
@@ -54,29 +70,78 @@ document.querySelectorAll('pre').forEach((codeBlock) => {
         });
     });
 
-    codeBlock.style.position = 'relative';
-    codeBlock.appendChild(button);
+    // 将 pre 标签用 wrapper 包裹起来，并将 header 和按钮加进去
+    codeBlock.parentNode.insertBefore(wrapper, codeBlock);
+    wrapper.appendChild(header);
+    header.appendChild(button); // 把复制按钮放在 header 里
+    wrapper.appendChild(codeBlock);
 });
 </script>
 
 <style>
+    /* 代码块终端风格外壳 */
+    .code-terminal-wrapper {
+        position: relative;
+        margin: 25px 0;
+        border-radius: 8px; /* 圆角外壳 */
+        background: var(--code-bg);
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+    }
+
+    /* 终端顶部栏 */
+    .code-terminal-header {
+        position: relative;
+        background: rgba(0, 0, 0, 0.05);
+        padding: 8px 15px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--glass-border);
+    }
+    
+    .dark-mode .code-terminal-header {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* 三个小圆点 */
+    .code-terminal-wrapper .terminal-buttons {
+        display: flex;
+        gap: 6px;
+    }
+
+    .code-terminal-wrapper .terminal-buttons .btn {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .code-terminal-wrapper .btn.close { background-color: #ff5f56; }
+    .code-terminal-wrapper .btn.min { background-color: #ffbd2e; }
+    .code-terminal-wrapper .btn.max { background-color: #27c93f; }
+
+    /* 复制按钮样式调整，放在右上角 */
     .copy-code-button {
         position: absolute;
         right: 10px;
-        top: 10px;
+        top: 50%;
+        transform: translateY(-50%);
         background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: #888;
-        padding: 4px 8px;
-        border-radius: 0;
+        border: 1px solid var(--glass-border);
+        color: var(--text-muted);
+        padding: 3px 10px;
+        border-radius: 4px;
         cursor: pointer;
         font-size: 0.75rem;
         transition: 0.3s;
         opacity: 0; 
         z-index: 10;
+        font-weight: bold;
     }
-    pre:hover .copy-code-button { opacity: 1; }
-    .copy-code-button:hover { background: var(--primary-color); color: white; }
+    
+    .code-terminal-wrapper:hover .copy-code-button { opacity: 1; }
+    .copy-code-button:hover { background: var(--primary-color); color: white; border-color: var(--primary-color); }
 
     .post-tag {
         display: inline-block;
@@ -92,6 +157,15 @@ document.querySelectorAll('pre').forEach((codeBlock) => {
     .post-content { line-height: 1.8; color: var(--text-main); font-size: 1.1em; }
     .post-content h2, .post-content h3 { color: var(--primary-color); margin-top: 35px; border-left: 4px solid var(--primary-color); padding-left: 15px; font-weight: 600; }
     .post-content img { max-width: 90%; display: block; margin: 25px auto; border-radius: 0; box-shadow: var(--shadow); }
-    .post-content code { background: var(--code-bg); color: var(--primary-color); padding: 2px 6px; border-radius: 0; font-family: 'Consolas', monospace; font-size: 0.9em; }
-    .post-content pre { background: var(--code-bg); padding: 18px; border-radius: 0; overflow-x: auto; border: 1px solid var(--glass-border); }
+    .post-content code { background: var(--code-bg); color: var(--primary-color); padding: 2px 6px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 0.9em; }
+    
+    /* 覆盖掉原有的 pre 样式，因为现在外层有 wrapper 负责背景和圆角 */
+    .post-content pre { 
+        background: transparent; 
+        padding: 15px 20px; 
+        border-radius: 0; 
+        overflow-x: auto; 
+        border: none;
+        margin: 0;
+    }
 </style>
