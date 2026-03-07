@@ -53,10 +53,10 @@ title: Welcome to My HP!
                 <span class="btn min"></span>
                 <span class="btn max"></span>
             </div>
-            <div class="terminal-title">siiverash@macbook: ~/workspace</div>
+            <div class="terminal-title">siiverash@ubuntu: ~/workspace</div>
         </div>
         <div class="terminal-body" id="terminal-body">
-            <p><span class="prompt">siiverash@macbook:~$</span> <span class="command">ls -l ./recent_posts/</span></p>
+            <p><span class="prompt">siiverash@ubuntu:~$</span> <span class="command">ls -l ./recent_posts/</span></p>
             <ul class="terminal-post-list">
                 {% for post in site.posts limit:5 %}
                 <li>
@@ -67,7 +67,7 @@ title: Welcome to My HP!
                 </li>
                 {% endfor %}
             </ul>
-            <p style="margin-top: 15px;"><span class="prompt">siiverash@macbook:~$</span> <span class="typing-animation">Waiting for input...</span><span class="cursor"></span></p>
+            <p style="margin-top: 15px;"><span class="prompt">siiverash@ubuntu:~$</span> <span class="typing-animation">Waiting for input...</span><span class="cursor"></span></p>
         </div>
     </div>
 </div>
@@ -104,9 +104,9 @@ title: Welcome to My HP!
     function typeCommand(cmdText, callback) {
         const tb = document.getElementById('terminal-body');
         // Keep the previous history but remove the typing animation prompt
-        const historyHTML = tb.innerHTML.replace(/<p[^>]*><span class="prompt">siiverash@macbook:~\$<\/span> <span class="typing-animation">.*?<\/span><span class="cursor"><\/span><\/p>/, '');
+        const historyHTML = tb.innerHTML.replace(/<p[^>]*><span class="prompt">siiverash@ubuntu:~\$<\/span> <span class="typing-animation">.*?<\/span><span class="cursor"><\/span><\/p>/, '');
         
-        const newCmdHTML = `<p><span class="prompt">siiverash@macbook:~$</span> <span class="command">${cmdText}</span></p>
+        const newCmdHTML = `<p><span class="prompt">siiverash@ubuntu:~$</span> <span class="command">${cmdText}</span></p>
                             <p id="loading-text" style="color: #8b949e; margin-top: 5px;">> Fetching data from database...</p>`;
         
         tb.innerHTML = historyHTML + newCmdHTML;
@@ -138,7 +138,7 @@ title: Welcome to My HP!
                 ${tagsHtml}
                 ${linkHtml}
             </div>
-            <p style="margin-top: 15px;"><span class="prompt">siiverash@macbook:~$</span> <span class="typing-animation">Waiting for input...</span><span class="cursor"></span></p>
+            <p style="margin-top: 15px;"><span class="prompt">siiverash@ubuntu:~$</span> <span class="typing-animation">Waiting for input...</span><span class="cursor"></span></p>
         `;
         
         tb.innerHTML += outputHTML;
