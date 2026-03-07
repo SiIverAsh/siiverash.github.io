@@ -40,11 +40,11 @@ layout: default
 
 <script>
 document.querySelectorAll('pre').forEach((codeBlock) => {
-    // 创建外层容器
+    // 终端外壳
     const wrapper = document.createElement('div');
     wrapper.className = 'code-terminal-wrapper';
 
-    // 创建顶部的控制栏（macOS 小圆点）
+    // 终端顶部栏及圆点
     const header = document.createElement('div');
     header.className = 'code-terminal-header';
     header.innerHTML = `
@@ -70,10 +70,10 @@ document.querySelectorAll('pre').forEach((codeBlock) => {
         });
     });
 
-    // 将 pre 标签用 wrapper 包裹起来，并将 header 和按钮加进去
+    // 将元素插入DOM
     codeBlock.parentNode.insertBefore(wrapper, codeBlock);
     wrapper.appendChild(header);
-    header.appendChild(button); // 把复制按钮放在 header 里
+    header.appendChild(button); // 将复制按钮放在header内
     wrapper.appendChild(codeBlock);
 });
 </script>
