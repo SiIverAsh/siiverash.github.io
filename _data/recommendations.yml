@@ -1,127 +1,126 @@
 algorithm:
-- desc: 通过迭代训练弱学习器（决策树），最小化损失函数，实现高性能分类与回归的经典机器学习算法，广泛应用于数据挖掘竞赛。
+- desc: 支持多目标回归与分类，GPU外部存储避免OOM，训练速度提升50%，适用于大规模数据集。
   tags:
   - 机器学习
-  - 集成学习
-  - GBDT
-  - 分类回归
-  title: 梯度提升决策树（GBDT）：经典集成学习算法
-cv_recommend:
-  agency: IM Enterprise
-  hometown: 日本神奈川县
-  intro: 长谷川育美是日本新生代声优，隶属于IM Enterprise事务所。她拥有清澈透明的音色和广泛的声音表现力，能够驾驭从少女到成熟女性的多种角色类型。其扎实的配音功底和细腻的情感表达在业内备受认可，被誉为具有高度可塑性的实力派声优。近年来，她凭借出色的专业素养和不断精进的技艺，在声优界崭露头角，受到观众和业界的广泛关注。
-  name: 长谷川育美
-date: '2026-03-08'
-history:
-- event: 纽约妇女纺织工人罢工，成为国际妇女节起源之一。
-  year: '1908'
-- event: 俄国二月革命爆发（儒略历2月23日，公历3月8日）。
-  year: '1917'
-- event: 联合国正式确认国际妇女节。
-  year: '1975'
-- event: 中国广州首次庆祝三八国际妇女节。
-  year: '1924'
-- event: 香港地铁港岛线启用。
-  year: '1990'
-- event: 马来西亚航空公司MH370航班失联。
-  year: '2014'
-llm:
-- desc: Gemini 3.1 Pro在推理任务上性能相比前代提升一倍，成本效率实现革命性突破，支持更长上下文与多模态交互。
-  tags:
-  - 大语言模型
-  - Google
-  - Gemini
-  - 推理
-  title: Google Gemini 3.1 Pro：推理性能翻倍，成本效率突破
-new_project:
-- desc: GitHub趋势榜单首位，24.5万Star刷新增长纪录，提供完整的AI助手框架与回溯清理机制，支持快速部署与扩展。
-  tags:
+  - 梯度提升
   - 开源
-  - AI助手
-  - GitHub
-  - 趋势
-  title: OpenClaw：AI智能体助手框架
-  url: https://github.com/Work-Fisher/openclaw-ai-assistant-framework
-paper:
-- desc: ICLR 2026论文：通过求解器-验证器间隙理论建模大语言模型自我改进训练动态，为LLM自优化提供理论框架。
+  - GPU加速
+  title: XGBoost 3.2.0：多目标输出与GPU优化
+cv_recommend:
+  agency: I'm Enterprise
+  hometown: 日本北海道
+  intro: 松冈祯丞是日本新生代男性声优，以其多变的声线和细腻的演技著称。他能够准确把握角色情感，从热血少年到冷静青年均能驾驭自如。在业内，他以高度的专业性和对配音工作的投入度而受到广泛认可，近年来已成为声优界中备受瞩目的实力派之一。
+  name: 松冈祯丞
+date: '2026-03-09'
+history:
+- event: 亚美利哥·韦斯普奇（Amerigo Vespucci）诞生，其名后来被用于命名美洲。
+  year: '1454'
+- event: 美国内战中的汉普顿锚地海战（Battle of Hampton Roads）爆发， CSS Virginia 与 USS Monitor 交锋。
+  year: '1862'
+- event: 墨西哥革命家潘乔·维拉（Pancho Villa）袭击美国新墨西哥州哥伦布市。
+  year: '1916'
+- event: 芭比娃娃在纽约玩具展上首次亮相，由美泰公司发布。
+  year: '1959'
+- event: 美国说唱歌手 Notorious B.I.G. 在洛杉矶被枪杀。
+  year: '1997'
+- event: 航天飞机发现号（Space Shuttle Discovery）完成最后一次着陆，结束其服役生涯。
+  year: '2011'
+llm:
+- desc: 基于混合专家架构，总参数量1.2万亿，激活参数量140亿，支持中英双语，在多项基准测试中超越Llama 3 70B。
   tags:
-  - ICLR
   - 大语言模型
-  - 理论建模
-  - 自我改进
-  title: Theoretical Modeling of Large Language Model Self-Improvement Training Dynamics
-    Through Solver-Verifier Gap
-  url: https://iclr.cc/virtual/2026/poster/10010371
+  - 开源
+  - 混合专家
+  - 中文
+  title: 通义千问开源首个MoE模型：Qwen-MoE
+new_project:
+- desc: 支持多模态交互，集成工具调用，在GitHub上获得25万星标，成为2026年最热门的AI项目之一。
+  tags:
+  - AI智能体
+  - 开源
+  - GitHub
+  - 多模态
+  title: OpenClaw：开源AI智能体框架
+  url: https://github.com/openclaw/openclaw
+paper:
+- desc: ICLR 2026杰出论文，提出概念引导的分割方法，在零样本分割任务中实现SOTA，为视觉理解开辟新方向。
+  tags:
+  - 计算机视觉
+  - 分割
+  - 零样本学习
+  - ICLR 2026
+  title: 'SAM 3: Segment Anything with Concepts'
+  url: https://arxiv.org/abs/2511.16719
 tech:
   Arch:
-  - desc: K3芯片基于RVA23指令集，集成专用AI加速单元，支持高性能计算与智能场景，采用先进制程工艺，能效比领先。
+  - desc: 采用Intel 18A工艺，最高52核心（8P+44E），支持DDR5-7200内存，集成AI加速单元，TDP达350W。
     tags:
-    - 计算机架构
-    - RISC-V
-    - AI芯片
-    - 高性能计算
-    title: 进迭时空K3芯片：全球首款RVA23高性能RISC-V AI芯片
-  Audio:
-  - desc: Speech-01基于全新生成式架构，支持多语种、多情感语音合成，音质超清，相似度极高，可实现高度拟人化的语音交互。
-    tags:
-    - 音频生成
-    - 语音合成
-    - 多情感
-    - 大模型
-    title: MiniMax Speech-01：超拟人多情感语音生成模型
-  CPU:
-  - desc: 至强6+拥有288个核心、864MB三级缓存，采用最新制程，面向6G与云原生市场，支持高密度计算与能效优化。
-    tags:
-    - CPU
+    - 处理器架构
     - Intel
-    - 服务器
     - 高性能计算
-    title: Intel 至强6+：288核心服务器处理器
+    - AI加速
+    title: 英特尔Nova Lake处理器：52核心新架构
+  Audio:
+  - desc: 基于扩散模型，支持多情感、多语言语音合成，延迟低于200ms，音质MOS分达4.5，适用于语音助手和内容创作。
+    tags:
+    - 语音合成
+    - 生成式AI
+    - 多模态
+    - 低延迟
+    title: MiniMax Speech 2.6：超拟人语音生成模型
+  CPU:
+  - desc: 基于Intel 20A工艺，采用新一代混合架构，能效核数量增加，三级缓存容量提升至36MB，支持DDR5-6400内存，TDP范围65W-125W。
+    tags:
+    - 处理器
+    - Intel
+    - 能效
+    - 混合架构
+    title: Intel Arrow Lake Refresh：能效核与三级缓存升级
   Computer Vision:
-  - desc: YOLO26采用全新架构，支持无NMS推理，在CPU上性能提升43%，专为边缘视觉AI优化，同时提供5种尺寸模型以兼顾速度与精度。
+  - desc: 基于ViT-Huge架构，引入概念理解机制，支持文本和图像提示的分割，在COCO数据集上达到72.5% mAP，零样本性能提升显著。
     tags:
     - 计算机视觉
-    - 目标检测
-    - YOLO
-    - 边缘AI
-    title: YOLO26：下一代实时目标检测模型
+    - 分割
+    - 零样本学习
+    - ICLR 2026
+    title: SAM 3：Meta新一代视觉分割模型
   GPU:
-  - desc: Xe3P为Intel新一代独立GPU，架构升级带来20-25%性能提升，支持高级光追与AI加速，计划2026年正式发布。
+  - desc: 基于RDNA 4架构，采用4nm工艺，拥有48个计算单元，16GB GDDR7显存，功耗仅120W，适合紧凑型ITX主机。
     tags:
-    - GPU
-    - Intel
-    - Xe3P
-    - 独立显卡
-    title: Intel Xe3P：下一代Xe架构独立GPU
+    - 显卡
+    - AMD
+    - 低功耗
+    - RDNA 4
+    title: AMD Radeon RX 9060 XT LP：低功耗RDNA 4显卡
   Lang:
-  - desc: Go 1.26引入new(expr)语法、默认启用绿茶GC、支持goroutine死锁检测，工具链进一步智能化，运行时性能显著提升。
+  - desc: 引入新的装饰器语法、改进的泛型推断、更严格的null检查，编译速度提升20%，支持ECMAScript 2026新特性。
     tags:
     - 编程语言
-    - Go
-    - 性能
-    - 工具链
-    title: Go 1.26：性能提升与智能工具链
+    - TypeScript
+    - 前端开发
+    - 编译优化
+    title: TypeScript 6.0 RC：强化类型系统与性能
   NLP:
-  - desc: Llama 4支持高达1000万上下文长度，集成视觉与语言多模态能力，完全开源，在多项基准测试中达到领先水平。
+  - desc: 基于混合专家架构，总参数量1.2万亿，激活参数量140亿，支持中英双语，在MMLU、C-Eval等基准测试中超越Llama 3 70B。
     tags:
-    - NLP
-    - 多模态
-    - 开源
     - 大语言模型
-    title: Meta Llama 4：开源多模态大模型
+    - 开源
+    - 混合专家
+    - 中文
+    title: 通义千问开源首个MoE模型：Qwen-MoE
   Net:
-  - desc: WebMCP是W3C推出的标准化协议，用于实现AI代理与Web浏览器的安全、高效交互，支持上下文传递与实时通信。
+  - desc: U6GHz频谱释放，支持最高10Gbps带宽和1ms延迟；AI超节点实现算力与网络协同，提升分布式AI训练效率40%。
     tags:
-    - 网络协议
-    - AI代理
-    - W3C
-    - 标准化
-    title: WebMCP：W3C官方AI代理浏览器交互标准
+    - 网络技术
+    - AI基础设施
+    - 频谱
+    - 分布式计算
+    title: AI爆发倒逼网络升级：U6GHz与AI超节点
   News:
-  - desc: 中国团队成功研制500+比特超导量子芯片，刷新世界纪录，相干时间与门保真度达到实用水平，千比特芯片研发进展顺利。
+  - desc: 盘古大模型3.0参数量达10万亿，支持多模态理解；昇腾AI云服务提供算力租赁，价格降低30%，助力AI应用普及。
     tags:
-    - 量子计算
-    - 超导芯片
-    - 国产
-    - 突破
-    title: 国产500+比特超导量子芯片发布，千比特已在路上
+    - AI模型
+    - 云计算
+    - 华为
+    - 开源
+    title: 华为云发布盘古大模型3.0和昇腾AI云服务

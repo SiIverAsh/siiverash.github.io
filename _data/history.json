@@ -1,4 +1,19 @@
 {
+  "2026-03-09": [
+    "AMD Radeon RX 9060 XT LP：低功耗RDNA 4显卡",
+    "通义千问开源首个MoE模型：Qwen-MoE",
+    "AI爆发倒逼网络升级：U6GHz与AI超节点",
+    "英特尔Nova Lake处理器：52核心新架构",
+    "XGBoost 3.2.0：多目标输出与GPU优化",
+    "松冈祯丞",
+    "SAM 3：Meta新一代视觉分割模型",
+    "华为云发布盘古大模型3.0和昇腾AI云服务",
+    "OpenClaw：开源AI智能体框架",
+    "Intel Arrow Lake Refresh：能效核与三级缓存升级",
+    "SAM 3: Segment Anything with Concepts",
+    "MiniMax Speech 2.6：超拟人语音生成模型",
+    "TypeScript 6.0 RC：强化类型系统与性能"
+  ],
   "2026-03-08": [
     "Google Gemini 3.1 Pro：推理性能翻倍，成本效率突破",
     "Intel Xe3P：下一代Xe架构独立GPU",
@@ -142,21 +157,5 @@
     "GLM-5：新一代开源大模型推动智能体工程",
     "Step-Audio：实时语音交互多模态大模型",
     "葬送的芙莉莲 第二季"
-  ],
-  "2026-02-27": [
-    "ARC Raiders：免费团队射击游戏新作",
-    "羊宫妃那",
-    "AMD Zen 6架构细节曝光：核心数大增，面积几乎不变",
-    "LAZARUS：渡边信一郎导演的科幻新作",
-    "虹色ファンタジア / 玲瓏のHydrangea：东方Project同人音乐新作",
-    "Intel Arc Battlemage B770：中高端GPU新选择",
-    "Deno 2.7：强化Node.js兼容性与Temporal稳定性",
-    "小酷软糖_",
-    "AMD Gorgon Point APU：集成AI引擎的桌面处理器",
-    "6G技术从愿景到实景：中国科学家取得新进展",
-    "eBPF 2025：内核可编程性新突破",
-    "书生InternVideo2.5：万帧长视频理解新标杆",
-    "Qwen3-TTS：超低延迟流式语音合成模型",
-    "Qwen3.5：阿里开源大模型性能逼近Sonnet 4.5"
   ]
 }
