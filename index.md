@@ -75,7 +75,11 @@ title: Welcome to My HP!
 <script>
     function handleTechClick() {
         document.getElementById('tech-sub-tags').style.display = 'block';
-        typeCommand(`./fetch_recommendation.sh --category tech`);
+        typeCommand(`./fetch_recommendation.sh --category tech`, function() {
+            const tb = document.getElementById('terminal-body');
+            tb.innerHTML += `<p style="margin-top: 15px;"><span class="prompt">siiverash@ubuntu:~$</span> <span class="typing-animation">Waiting for input...</span><span class="cursor"></span></p>`;
+            tb.scrollTop = tb.scrollHeight;
+        });
     }
 
     function showTechDetail(sub) {
@@ -103,17 +107,19 @@ title: Welcome to My HP!
 
     function typeCommand(cmdText, callback) {
         const tb = document.getElementById('terminal-body');
-        // Keep the previous history but remove the typing animation prompt
-        const historyHTML = tb.innerHTML.replace(/<p[^>]*><span class="prompt">siiverash@ubuntu:~\$<\/span> <span class="typing-animation">.*?<\/span><span class="cursor"><\/span><\/p>/, '');
+        // Keep the previous history but remove all typing animation prompts
+        const historyHTML = tb.innerHTML.replace(/<p[^>]*><span class="prompt">siiverash@ubuntu:~\$<\/span> <span class="typing-animation">.*?<\/span><span class="cursor"><\/span><\/p>/g, '');
         
+        const loadingId = 'loading-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
         const newCmdHTML = `<p><span class="prompt">siiverash@ubuntu:~$</span> <span class="command">${cmdText}</span></p>
-                            <p id="loading-text" style="color: #8b949e; margin-top: 5px;">> Fetching data from database...</p>`;
+                            <p id="${loadingId}" style="color: #8b949e; margin-top: 5px;">> Fetching data from database...</p>`;
         
         tb.innerHTML = historyHTML + newCmdHTML;
         tb.scrollTop = tb.scrollHeight;
 
         setTimeout(() => {
-            document.getElementById('loading-text').style.display = 'none';
+            const loadingEl = document.getElementById(loadingId);
+            if (loadingEl) loadingEl.remove();
             if(callback) callback();
         }, 600); // 模拟延迟
     }
