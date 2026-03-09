@@ -264,7 +264,7 @@ html {
     padding: 40px;
     min-height: 400px;
     width: 100%;
-    max-width: 100%; /* 关键：不要让它超出 Grid 单元格 */
+    max-width: 100%; 
     margin: 0 auto;
     overflow-wrap: break-word;
     font-size: 1.05em;
@@ -307,10 +307,9 @@ code {
     background-color: var(--code-bg) !important;
     color: var(--text-main) !important;
     border-radius: 0;
-    border: 1px solid var(--glass-border);
+    border: none !important;
 }
 
-/* Pre handles layout, wrapper handles visual styling */
 pre {
     background-color: transparent !important;
     color: var(--text-main) !important;
@@ -341,7 +340,6 @@ pre {
     cursor: pointer;
 }
 
-/* 历史上的今天内容字体调小 */
 #history-content {
     font-size: 0.85em;
     line-height: 1.6;
@@ -429,7 +427,7 @@ pre {
     backdrop-filter: blur(15px);
     border-radius: 0;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    z-index: 20000 !important; /* 调整为合理的最高梯队 */
+    z-index: 20000 !important;
     animation: popIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     border: 1px solid var(--glass-border);
 }
@@ -519,11 +517,8 @@ pre {
     }
 }
 
-/* 响应式布局已移至 assets/css/responsive.css */
 
-/* ==========================================================================
-   14. 页脚与统计 (Footer & Stats)
-   ========================================================================== */
+/* 13. 页脚与统计 (Footer & Stats) */
 
 footer {
     margin-top: 50px;
