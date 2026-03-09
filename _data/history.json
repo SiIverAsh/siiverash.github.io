@@ -1,4 +1,20 @@
 {
+  "2026-03-10": [
+    "SAM 3: Meta新一代视觉分割模型",
+    "OpenAI BiDi双向语音模型",
+    "通义千问QwQ-32B开源推理模型",
+    "鬼头明里",
+    "localGPT：本地文档聊天AI",
+    "华为首款7nm ARM服务器芯片",
+    "CatBoost 1.2.8：梯度提升库重大更新",
+    "ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware Semantic Analysis and Sparsity Optimization",
+    "OpenAI发布GPT-5.4大一统模型",
+    "AMD Zen 6架构确认2026年发布",
+    "TypeScript 6.0 RC发布",
+    "GPT-5.4：OpenAI新一代多模态大模型",
+    "Intel Arc B770 Battlemage显卡",
+    "华为U6GHz全系列网络产品"
+  ],
   "2026-03-09": [
     "AMD Radeon RX 9060 XT LP：低功耗RDNA 4显卡",
     "通义千问开源首个MoE模型：Qwen-MoE",
@@ -141,21 +157,5 @@
     "生化危机9：安魂曲：生存恐怖新篇章",
     "内田真礼：声线多变的实力派声优",
     "内田真礼"
-  ],
-  "2026-02-28": [
-    "小米汽车安全理念发布会：雷军详解10倍投入造车",
-    "怪物猎人：荒野",
-    "Go 1.26：内存安全与并发新特性",
-    "MPTCP异构网络性能优化研究新进展",
-    "YOLOE-26：实时开放词汇分割模型",
-    "Intel Lunar Lake：能效比提升40%的AI笔记本处理器",
-    "栗子熟了_w",
-    "ZUTOMAYO 2026年首支单曲《メディアノーチェ》",
-    "内田真礼",
-    "NVIDIA GeForce RTX 5080移动版：Blackwell架构能效突破",
-    "RISC-V 2026年1月技术动态：向量扩展与生态进展",
-    "GLM-5：新一代开源大模型推动智能体工程",
-    "Step-Audio：实时语音交互多模态大模型",
-    "葬送的芙莉莲 第二季"
   ]
 }

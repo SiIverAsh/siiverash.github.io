@@ -1,126 +1,129 @@
 algorithm:
-- desc: 支持多目标回归与分类，GPU外部存储避免OOM，训练速度提升50%，适用于大规模数据集。
+- desc: CatBoost梯度提升库1.2.8版本，全面支持Python 3.13与NumPy 2.x，引入新型对称树结构，训练速度提升20%。
   tags:
   - 机器学习
   - 梯度提升
-  - 开源
-  - GPU加速
-  title: XGBoost 3.2.0：多目标输出与GPU优化
+  - CatBoost
+  - 开源库
+  title: CatBoost 1.2.8：梯度提升库重大更新
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 日本北海道
-  intro: 松冈祯丞是日本新生代男性声优，以其多变的声线和细腻的演技著称。他能够准确把握角色情感，从热血少年到冷静青年均能驾驭自如。在业内，他以高度的专业性和对配音工作的投入度而受到广泛认可，近年来已成为声优界中备受瞩目的实力派之一。
-  name: 松冈祯丞
-date: '2026-03-09'
+  agency: 青二Production
+  hometown: 千叶县
+  intro: 鬼头明里是日本新生代女性声优，隶属于青二Production。她出生于千叶县，拥有清澈透明的音色和细腻的情感表达能力，在配音工作中展现出极高的可塑性。业内评价其声线兼具少女的灵动与成熟的沉稳，能够精准把握角色内心世界，通过细微的语气变化传递复杂情绪。她注重演技的深度挖掘，不断挑战多样化的角色类型，在声优界迅速崭露头角，被誉为拥有‘天使之声’的实力派。
+  name: 鬼头明里
+date: '2026-03-10'
 history:
-- event: 亚美利哥·韦斯普奇（Amerigo Vespucci）诞生，其名后来被用于命名美洲。
-  year: '1454'
-- event: 美国内战中的汉普顿锚地海战（Battle of Hampton Roads）爆发， CSS Virginia 与 USS Monitor 交锋。
-  year: '1862'
-- event: 墨西哥革命家潘乔·维拉（Pancho Villa）袭击美国新墨西哥州哥伦布市。
-  year: '1916'
-- event: 芭比娃娃在纽约玩具展上首次亮相，由美泰公司发布。
+- event: 亚历山大·格拉汉姆·贝尔发明电话，并进行首次通话。
+  year: '1876'
+- event: 东京大轰炸开始，美军对东京进行大规模空袭。
+  year: '1945'
+- event: 西藏起义日，西藏地区爆发大规模抗议活动。
   year: '1959'
-- event: 美国说唱歌手 Notorious B.I.G. 在洛杉矶被枪杀。
-  year: '1997'
-- event: 航天飞机发现号（Space Shuttle Discovery）完成最后一次着陆，结束其服役生涯。
-  year: '2011'
+- event: 纳斯达克综合指数达到5132点历史峰值，标志互联网泡沫顶峰。
+  year: '2000'
+- event: 美国火星勘测轨道飞行器成功进入环火星轨道。
+  year: '2006'
+- event: OpenAI发布GPT-5.4模型，推动多模态AI发展。
+  year: '2026'
 llm:
-- desc: 基于混合专家架构，总参数量1.2万亿，激活参数量140亿，支持中英双语，在多项基准测试中超越Llama 3 70B。
+- desc: OpenAI发布的GPT-5.4模型，参数量约1.8万亿，支持图像、语音、文本多模态统一理解，在MMLU基准上准确率达92.5%。
   tags:
   - 大语言模型
-  - 开源
-  - 混合专家
-  - 中文
-  title: 通义千问开源首个MoE模型：Qwen-MoE
-new_project:
-- desc: 支持多模态交互，集成工具调用，在GitHub上获得25万星标，成为2026年最热门的AI项目之一。
-  tags:
-  - AI智能体
-  - 开源
-  - GitHub
+  - OpenAI
   - 多模态
-  title: OpenClaw：开源AI智能体框架
-  url: https://github.com/openclaw/openclaw
+  - GPT-5.4
+  title: GPT-5.4：OpenAI新一代多模态大模型
+new_project:
+- desc: GitHub趋势项目，支持在本地设备上使用GPT模型与文档聊天，无需网络，100%隐私保护，基于LangChain和LlamaIndex构建。
+  tags:
+  - 本地AI
+  - 文档聊天
+  - 隐私保护
+  - 开源
+  title: localGPT：本地文档聊天AI
+  url: https://github.com/PromtEngineer/localGPT
 paper:
-- desc: ICLR 2026杰出论文，提出概念引导的分割方法，在零样本分割任务中实现SOTA，为视觉理解开辟新方向。
+- desc: ICLR 2026高分论文，提出三维熵感知语义分析与稀疏优化方法，实现高效视觉自回归建模，在ImageNet生成任务上取得SOTA。
   tags:
   - 计算机视觉
-  - 分割
-  - 零样本学习
+  - 自回归模型
   - ICLR 2026
-  title: 'SAM 3: Segment Anything with Concepts'
-  url: https://arxiv.org/abs/2511.16719
+  - 稀疏优化
+  title: 'ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware
+    Semantic Analysis and Sparsity Optimization'
+  url: https://arxiv.org/abs/2602.22948
 tech:
   Arch:
-  - desc: 采用Intel 18A工艺，最高52核心（8P+44E），支持DDR5-7200内存，集成AI加速单元，TDP达350W。
+  - desc: 华为发布全球首款7纳米工艺ARM服务器芯片，基于自主泰山核心，支持128核，功耗低于200W，面向高性能计算市场。
     tags:
-    - 处理器架构
-    - Intel
-    - 高性能计算
-    - AI加速
-    title: 英特尔Nova Lake处理器：52核心新架构
+    - ARM
+    - 服务器芯片
+    - 华为
+    - 7nm
+    title: 华为首款7nm ARM服务器芯片
   Audio:
-  - desc: 基于扩散模型，支持多情感、多语言语音合成，延迟低于200ms，音质MOS分达4.5，适用于语音助手和内容创作。
+  - desc: OpenAI研发的新型双向语音模型，可实时监听并调整回复，支持抗打断对话，延迟低于200ms，拟于2026年Q1发布。
     tags:
-    - 语音合成
-    - 生成式AI
-    - 多模态
-    - 低延迟
-    title: MiniMax Speech 2.6：超拟人语音生成模型
+    - 语音模型
+    - OpenAI
+    - 实时交互
+    - 抗打断
+    title: OpenAI BiDi双向语音模型
   CPU:
-  - desc: 基于Intel 20A工艺，采用新一代混合架构，能效核数量增加，三级缓存容量提升至36MB，支持DDR5-6400内存，TDP范围65W-125W。
+  - desc: AMD确认2026年发布Zen 6架构，采用台积电2nm工艺，最高48核，288MB缓存，IPC提升超过30%。
     tags:
-    - 处理器
-    - Intel
-    - 能效
-    - 混合架构
-    title: Intel Arrow Lake Refresh：能效核与三级缓存升级
+    - CPU
+    - AMD
+    - Zen 6
+    - 2nm
+    title: AMD Zen 6架构确认2026年发布
   Computer Vision:
-  - desc: 基于ViT-Huge架构，引入概念理解机制，支持文本和图像提示的分割，在COCO数据集上达到72.5% mAP，零样本性能提升显著。
+  - desc: Meta于2026年发布的Segment Anything Model 3（SAM 3），采用概念驱动的统一分割架构，参数量848M，支持图像与视频的零样本泛化分割，在COCO数据集上实现mAP
+      62.1%的新高。
     tags:
     - 计算机视觉
-    - 分割
+    - 图像分割
+    - Meta
     - 零样本学习
-    - ICLR 2026
-    title: SAM 3：Meta新一代视觉分割模型
+    title: 'SAM 3: Meta新一代视觉分割模型'
   GPU:
-  - desc: 基于RDNA 4架构，采用4nm工艺，拥有48个计算单元，16GB GDDR7显存，功耗仅120W，适合紧凑型ITX主机。
+  - desc: 英特尔预计2026年CES发布的Arc B770显卡，采用Battlemage架构，4nm工艺，16GB GDDR7显存，性能对标RTX 5060。
     tags:
     - 显卡
-    - AMD
-    - 低功耗
-    - RDNA 4
-    title: AMD Radeon RX 9060 XT LP：低功耗RDNA 4显卡
+    - Intel
+    - Battlemage
+    - 4nm
+    title: Intel Arc B770 Battlemage显卡
   Lang:
-  - desc: 引入新的装饰器语法、改进的泛型推断、更严格的null检查，编译速度提升20%，支持ECMAScript 2026新特性。
+  - desc: Microsoft于2026年3月发布的TypeScript 6.0候选版本，引入全新Go-based编译器后端，编译速度提升40%，并支持ECMAScript
+      2026标准。
     tags:
     - 编程语言
     - TypeScript
-    - 前端开发
-    - 编译优化
-    title: TypeScript 6.0 RC：强化类型系统与性能
+    - Microsoft
+    - 编译器
+    title: TypeScript 6.0 RC发布
   NLP:
-  - desc: 基于混合专家架构，总参数量1.2万亿，激活参数量140亿，支持中英双语，在MMLU、C-Eval等基准测试中超越Llama 3 70B。
+  - desc: 阿里于2026年开源的全新推理模型，采用混合专家架构，参数量32B，支持128K上下文长度，在数学推理基准GSM8K上准确率达92%。
     tags:
-    - 大语言模型
-    - 开源
-    - 混合专家
-    - 中文
-    title: 通义千问开源首个MoE模型：Qwen-MoE
+    - 自然语言处理
+    - 开源模型
+    - 阿里
+    - 推理模型
+    title: 通义千问QwQ-32B开源推理模型
   Net:
-  - desc: U6GHz频谱释放，支持最高10Gbps带宽和1ms延迟；AI超节点实现算力与网络协同，提升分布式AI训练效率40%。
+  - desc: 华为在MWC 2026发布的U6GHz（5925-7125MHz）全系列网络产品，支持5G-A向6G演进，峰值速率达10Gbps，时延低于1ms。
     tags:
-    - 网络技术
-    - AI基础设施
-    - 频谱
-    - 分布式计算
-    title: AI爆发倒逼网络升级：U6GHz与AI超节点
-  News:
-  - desc: 盘古大模型3.0参数量达10万亿，支持多模态理解；昇腾AI云服务提供算力租赁，价格降低30%，助力AI应用普及。
-    tags:
-    - AI模型
-    - 云计算
+    - 5G-A
+    - 6G
     - 华为
-    - 开源
-    title: 华为云发布盘古大模型3.0和昇腾AI云服务
+    - 网络基础设施
+    title: 华为U6GHz全系列网络产品
+  News:
+  - desc: OpenAI于2026年3月发布GPT-5.4，作为首个大一统多模态模型，在电脑操控任务上达到75%成功率，超越人类水平。
+    tags:
+    - OpenAI
+    - GPT-5.4
+    - 多模态
+    - AI突破
+    title: OpenAI发布GPT-5.4大一统模型
