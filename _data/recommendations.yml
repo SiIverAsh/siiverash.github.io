@@ -1,129 +1,126 @@
 algorithm:
-- desc: CatBoost梯度提升库1.2.8版本，全面支持Python 3.13与NumPy 2.x，引入新型对称树结构，训练速度提升20%。
+- desc: 微软发布LightGBM 4.6.0，引入新的直方图算法与GPU加速，训练速度提升2倍，内存占用减少30%，支持大规模数据与分布式计算。
   tags:
   - 机器学习
   - 梯度提升
-  - CatBoost
-  - 开源库
-  title: CatBoost 1.2.8：梯度提升库重大更新
+  - 开源
+  - 性能优化
+  title: LightGBM 4.6.0 发布与性能优化
 cv_recommend:
-  agency: 青二Production
-  hometown: 千叶县
-  intro: 鬼头明里是日本新生代女性声优，隶属于青二Production。她出生于千叶县，拥有清澈透明的音色和细腻的情感表达能力，在配音工作中展现出极高的可塑性。业内评价其声线兼具少女的灵动与成熟的沉稳，能够精准把握角色内心世界，通过细微的语气变化传递复杂情绪。她注重演技的深度挖掘，不断挑战多样化的角色类型，在声优界迅速崭露头角，被誉为拥有‘天使之声’的实力派。
-  name: 鬼头明里
-date: '2026-03-10'
+  agency: 青二プロダクション
+  hometown: 日本神奈川县
+  intro: 羊宫妃那是日本新生代声优，以其清澈透明的音色与出色的演技广度备受瞩目。她能够精准驾驭从活泼少女到沉稳成年女性的多样角色，情感表达细腻自然。在配音工作中注重角色内心刻画，通过微妙的语气变化展现人物成长轨迹。行业评论称赞其声音具备独特的穿透力与辨识度，在多人对话场景中也能保持鲜明的个性表现。作为青二事务所重点培养的声优之一，她持续通过广播节目与现场活动磨练技艺，展现出扎实的基本功与持续进步的潜力。
+  name: 羊宫妃那
+date: '2026-03-11'
 history:
-- event: 亚历山大·格拉汉姆·贝尔发明电话，并进行首次通话。
-  year: '1876'
-- event: 东京大轰炸开始，美军对东京进行大规模空袭。
-  year: '1945'
-- event: 西藏起义日，西藏地区爆发大规模抗议活动。
-  year: '1959'
-- event: 纳斯达克综合指数达到5132点历史峰值，标志互联网泡沫顶峰。
-  year: '2000'
-- event: 美国火星勘测轨道飞行器成功进入环火星轨道。
-  year: '2006'
-- event: OpenAI发布GPT-5.4模型，推动多模态AI发展。
-  year: '2026'
+- event: 日本东北地区发生9.0级大地震并引发海啸，造成重大人员伤亡与核泄漏事故。
+  year: '2011'
+- event: 西班牙马德里发生系列火车爆炸案，造成191人死亡，超过2000人受伤。
+  year: '2004'
+- event: 立陶宛最高苏维埃宣布脱离苏联独立，成为首个宣布独立的苏联加盟共和国。
+  year: '1990'
+- event: 米哈伊尔·戈尔巴乔夫当选为苏联共产党中央委员会总书记，开启改革与开放时期。
+  year: '1985'
+- event: 美国总统富兰克林·罗斯福签署《租借法案》，为二战盟国提供军事物资援助。
+  year: '1941'
+- event: 苏维埃俄国将首都从彼得格勒迁至莫斯科，莫斯科自此成为苏联及俄罗斯联邦首都。
+  year: '1918'
 llm:
-- desc: OpenAI发布的GPT-5.4模型，参数量约1.8万亿，支持图像、语音、文本多模态统一理解，在MMLU基准上准确率达92.5%。
+- desc: 浪潮开源万亿参数多模态基础模型，支持图像、文本、音频统一理解，在权威评测中超越GPT-4o，具备强大的推理与生成能力。
   tags:
   - 大语言模型
-  - OpenAI
   - 多模态
-  - GPT-5.4
-  title: GPT-5.4：OpenAI新一代多模态大模型
-new_project:
-- desc: GitHub趋势项目，支持在本地设备上使用GPT模型与文档聊天，无需网络，100%隐私保护，基于LangChain和LlamaIndex构建。
-  tags:
-  - 本地AI
-  - 文档聊天
-  - 隐私保护
   - 开源
-  title: localGPT：本地文档聊天AI
-  url: https://github.com/PromtEngineer/localGPT
+  - 万亿参数
+  title: Yuan3.0 Ultra：万亿参数多模态大模型
+new_project:
+- desc: GitHub Trending项目，提供粒子群、蚁群等优化算法的纯Python实现，接口简洁，支持并行计算与自定义适应度函数。
+  tags:
+  - 优化算法
+  - Python
+  - 开源
+  - GitHub
+  title: MiroFish：轻量级群智能优化框架
+  url: https://github.com/666ghj/MiroFish
 paper:
-- desc: ICLR 2026高分论文，提出三维熵感知语义分析与稀疏优化方法，实现高效视觉自回归建模，在ImageNet生成任务上取得SOTA。
+- desc: NeurIPS 2025 Spotlight论文，提出模态解耦学习框架，实现任意模态间的物体重识别，在多个基准数据集上取得SOTA性能。
   tags:
   - 计算机视觉
-  - 自回归模型
-  - ICLR 2026
-  - 稀疏优化
-  title: 'ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware
-    Semantic Analysis and Sparsity Optimization'
-  url: https://arxiv.org/abs/2602.22948
+  - 跨模态
+  - 重识别
+  - NeurIPS
+  title: MDReID：跨模态解耦学习的新范式
+  url: https://arxiv.org/abs/2510.23301
 tech:
   Arch:
-  - desc: 华为发布全球首款7纳米工艺ARM服务器芯片，基于自主泰山核心，支持128核，功耗低于200W，面向高性能计算市场。
+  - desc: 集成六款专用芯片（CPU、GPU、DPU、NIC等），采用台积电2nm工艺，支持HBM4内存与CXL 4.0互连，实现10倍能效提升与线性扩展。
     tags:
-    - ARM
-    - 服务器芯片
-    - 华为
-    - 7nm
-    title: 华为首款7nm ARM服务器芯片
+    - 计算机架构
+    - AI芯片
+    - HBM4
+    - CXL
+    title: NVIDIA Vera Rubin 新一代AI平台架构
   Audio:
-  - desc: OpenAI研发的新型双向语音模型，可实时监听并调整回复，支持抗打断对话，延迟低于200ms，拟于2026年Q1发布。
+  - desc: 支持零样本语音克隆，5秒音频即可复现音色，延迟低于200ms，提供多种语言与情感控制，采用扩散模型与神经声码器技术。
     tags:
-    - 语音模型
-    - OpenAI
-    - 实时交互
-    - 抗打断
-    title: OpenAI BiDi双向语音模型
+    - 语音合成
+    - AI音频
+    - 开源
+    - 低延迟
+    title: Qwen3-TTS 高质量语音合成与克隆系统
   CPU:
-  - desc: AMD确认2026年发布Zen 6架构，采用台积电2nm工艺，最高48核，288MB缓存，IPC提升超过30%。
+  - desc: 采用台积电2nm工艺，最高48核心96线程，集成288MB缓存，支持DDR6内存与PCIe 6.0，单核性能提升30%，能效比优化40%。
     tags:
     - CPU
     - AMD
-    - Zen 6
+    - Zen6
     - 2nm
-    title: AMD Zen 6架构确认2026年发布
+    title: AMD Zen 6 架构：2nm工艺与48核设计
   Computer Vision:
-  - desc: Meta于2026年发布的Segment Anything Model 3（SAM 3），采用概念驱动的统一分割架构，参数量848M，支持图像与视频的零样本泛化分割，在COCO数据集上实现mAP
-      62.1%的新高。
+  - desc: 阿里最新开源32B参数视觉语言模型，支持高分辨率图像理解与细粒度视觉定位，采用混合专家架构，在VQA、视觉推理基准上达到SOTA。
     tags:
     - 计算机视觉
-    - 图像分割
-    - Meta
-    - 零样本学习
-    title: 'SAM 3: Meta新一代视觉分割模型'
+    - 多模态
+    - 开源
+    - 大模型
+    title: 通义Qwen3-VL 32B视觉语言模型
   GPU:
-  - desc: 英特尔预计2026年CES发布的Arc B770显卡，采用Battlemage架构，4nm工艺，16GB GDDR7显存，性能对标RTX 5060。
+  - desc: 基于Xe²架构，配备32GB GDDR7显存，支持硬件光线追踪与AI加速，FP32性能达40 TFLOPS，专为CAD、渲染与科学计算优化。
     tags:
-    - 显卡
+    - GPU
+    - 专业显卡
     - Intel
-    - Battlemage
-    - 4nm
-    title: Intel Arc B770 Battlemage显卡
+    - Xe架构
+    title: Intel Arc Pro B70 新一代专业显卡
   Lang:
-  - desc: Microsoft于2026年3月发布的TypeScript 6.0候选版本，引入全新Go-based编译器后端，编译速度提升40%，并支持ECMAScript
-      2026标准。
+  - desc: 微软发布TypeScript 6.0 RC，引入新的装饰器语法、更严格的null检查、改进的泛型推断，并优化大型项目编译性能，提升开发者体验。
     tags:
     - 编程语言
     - TypeScript
-    - Microsoft
-    - 编译器
-    title: TypeScript 6.0 RC发布
+    - 前端
+    - 工具链
+    title: TypeScript 6.0 RC 新特性详解
   NLP:
-  - desc: 阿里于2026年开源的全新推理模型，采用混合专家架构，参数量32B，支持128K上下文长度，在数学推理基准GSM8K上准确率达92%。
+  - desc: 阿里巴巴发布Qwen3.5系列，最大参数3970亿，支持128K上下文，在中文理解、代码生成、数学推理方面超越GPT-4 Turbo，采用分组查询注意力与MoE架构。
     tags:
     - 自然语言处理
-    - 开源模型
-    - 阿里
-    - 推理模型
-    title: 通义千问QwQ-32B开源推理模型
+    - 大语言模型
+    - 开源
+    - AI
+    title: Qwen3.5 新一代开源大语言模型
   Net:
-  - desc: 华为在MWC 2026发布的U6GHz（5925-7125MHz）全系列网络产品，支持5G-A向6G演进，峰值速率达10Gbps，时延低于1ms。
+  - desc: 中国移动研究院发布AONP框架，实现智能体间自主协商与资源调度，支持异构网络融合，提供毫秒级端到端延迟与99.999%可靠性。
     tags:
-    - 5G-A
-    - 6G
-    - 华为
-    - 网络基础设施
-    title: 华为U6GHz全系列网络产品
+    - 网络协议
+    - 智能体
+    - 5G
+    - 物联网
+    title: AONP 智能体互联网开放网络协议框架
   News:
-  - desc: OpenAI于2026年3月发布GPT-5.4，作为首个大一统多模态模型，在电脑操控任务上达到75%成功率，超越人类水平。
+  - desc: 腾讯将QQ浏览器升级为AI浏览器，集成QBot助手，支持智能搜索、内容生成与多轮对话，基于混元大模型实现上下文感知。
     tags:
-    - OpenAI
-    - GPT-5.4
-    - 多模态
-    - AI突破
-    title: OpenAI发布GPT-5.4大一统模型
+    - 浏览器
+    - AI助手
+    - 腾讯
+    - 新闻
+    title: QQ浏览器全面AI化：推出QBot助手
