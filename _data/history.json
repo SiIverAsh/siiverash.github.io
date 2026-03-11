@@ -1,4 +1,19 @@
 {
+  "2026-03-12": [
+    "UniAudio: An Audio Foundation Model Toward Universal Audio Generation",
+    "Go 1.26 发布：泛型限制放宽与Green Tea GC默认启用",
+    "Speculative Decoding：大语言模型推理加速算法",
+    "Intel Xeon 6 处理器：基于Intel 3工艺，能效比提升50%",
+    "腾讯“All in”AI入口战：马化腾官宣全系“龙虾”矩阵",
+    "MetaClaw：能通过对话学习与进化的AI智能体框架",
+    "石川由依",
+    "NVIDIA DLSS 4.5：第二代Transformer AI模型超分辨率与6倍帧生成",
+    "Tuic协议：下一代高性能代理传输协议",
+    "NVIDIA RTX 5050：首款搭载9GB GDDR7显存的入门级GPU",
+    "Intel Nova Lake：2026年末发布的全新CPU架构",
+    "通义千问Qwen3.5：阿里新一代开源大模型",
+    "UniAudioGen：统一音频生成模型在ICLR 2026上实现SOTA"
+  ],
   "2026-03-11": [
     "LightGBM 4.6.0 发布与性能优化",
     "MDReID：跨模态解耦学习的新范式",
@@ -141,21 +156,5 @@
     "亚马逊向OpenAI投资500亿美元战略合作",
     "阿梗",
     "HeartMuLa: 开源音乐生成模型"
-  ],
-  "2026-03-02": [
-    "使命召唤：黑色行动6",
-    "GLM-5：从代码生成到工程设计的范式跃迁",
-    "MiniMax Music 2.5：全维度音乐生成突破",
-    "咒术回战 第三季「死灭回游」前篇",
-    "SRv6 RFC9800：新一代互联网基础协议核心标准",
-    "全病曲II / EastNewSound：东方Project同人音乐专辑",
-    "Go 1.24 发布：性能与工具链优化",
-    "我国首个人形机器人与具身智能标准体系发布",
-    "Arm C1 系列：新一代服务器处理器架构",
-    "伊吹五月",
-    "松冈祯丞",
-    "摩尔线程新一代 GPU 架构：国产 GPU 新突破",
-    "InternVL3：开源多模态视觉语言模型",
-    "CXL 4.0 规范发布：AI 内存池化新标准"
   ]
 }
