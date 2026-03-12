@@ -1,4 +1,19 @@
 {
+  "2026-03-13": [
+    "Clawith: OpenClaw for Teams",
+    "英伟达未来五年豪掷260亿美元开发AI大模型",
+    "NVIDIA Nemotron 3 Super",
+    "羊宫妃那",
+    "随机森林算法",
+    "通义千问QwQ-32B推理模型",
+    "6G AI原生网络技术",
+    "AMD Ryzen 9 9950X处理器",
+    "SAM 3: Segment Anything with Concepts",
+    "Rust 1.94.0稳定版",
+    "NVIDIA GeForce RTX 5090",
+    "龙芯3C6000 32核服务器CPU",
+    "Ming-omni-tts统一音频生成模型"
+  ],
   "2026-03-12": [
     "UniAudio: An Audio Foundation Model Toward Universal Audio Generation",
     "Go 1.26 发布：泛型限制放宽与Green Tea GC默认启用",
@@ -140,21 +155,5 @@
     "生化危机9",
     "DeepSeek V4 Lite",
     "AMD Instinct MI455X"
-  ],
-  "2026-03-03": [
-    "Python 3.13.12: 2026年2月维护版本",
-    "Hades II v1.0",
-    "Gemini 3.1 Pro: 谷歌多模态大模型最新版",
-    "VideoMT: CVPR 2026 视频分割模型",
-    "Intel Panther Lake: 首款Intel 18A工艺客户端架构",
-    "AMD Instinct MI400: 2026年AI加速卡新品",
-    "TLS 1.4 草案: 下一代传输层安全协议",
-    "Qualcomm Snapdragon 8 Elite Gen 5: 2026年旗舰移动处理器",
-    "鬼头明里",
-    "YOASOBI - Adrena: 2026年数字单曲",
-    "JUJUTSU KAISEN Season 3",
-    "亚马逊向OpenAI投资500亿美元战略合作",
-    "阿梗",
-    "HeartMuLa: 开源音乐生成模型"
   ]
 }

@@ -1,126 +1,131 @@
 algorithm:
-- desc: 通过并行草案生成与验证，实现2-3倍推理速度提升，广泛应用于现代LLM服务。
+- desc: 经典集成学习算法，通过构建多棵决策树并投票实现分类或回归，具有抗过拟合、处理高维数据能力强等优点，适用于大规模数据集。
   tags:
-  - 推理优化
-  - 算法
-  - LLM加速
-  - 并行计算
-  title: Speculative Decoding：大语言模型推理加速算法
-cv_recommend:
-  agency: mitt management
-  hometown: 日本兵库县
-  intro: 石川由依是日本知名声优，以其清澈而富有穿透力的声线著称。她在演技上注重细节，能够通过声音精准刻画角色内心世界，业界普遍认为其表现力深厚。多年来，她持续拓展声线范围，展现了从冷静到温柔等多种风格的驾驭能力。
-  name: 石川由依
-date: '2026-03-12'
-history:
-- event: 孙中山逝世。
-  year: '1925'
-- event: 甘地开始食盐进军。
-  year: '1930'
-- event: 杜鲁门主义宣布，冷战正式开始。
-  year: '1947'
-- event: 中国设立植树节。
-  year: '1979'
-- event: 蒂姆·伯纳斯-李提出万维网提案。
-  year: '1989'
-- event: 世界卫生组织发布SARS全球警报。
-  year: '2003'
-llm:
-- desc: 基于MoE架构的1100亿参数模型，在中文NLP基准上超越GPT-4 Turbo，支持128K上下文与多模态交互。
-  tags:
-  - 大语言模型
-  - 开源
-  - 中文NLP
-  - 阿里云
-  title: 通义千问Qwen3.5：阿里新一代开源大模型
-new_project:
-- desc: 开源AI代理框架，支持自然语言交互、持续学习与自主进化，适用于个性化助手场景。
-  tags:
-  - AI代理
-  - 开源框架
-  - 对话式AI
   - 机器学习
-  title: MetaClaw：能通过对话学习与进化的AI智能体框架
-  url: https://github.com/aiming-lab/MetaClaw
-paper:
-- desc: ICLR 2026投稿论文，提出基于扩散Transformer的统一音频生成框架，在文本到音频、音乐生成等多项基准上实现SOTA。
+  - 集成学习
+  - 分类算法
+  - 传统算法
+  title: 随机森林算法
+cv_recommend:
+  agency: Across Entertainment
+  hometown: 日本神奈川县
+  intro: 羊宫妃那是日本新生代声优中的佼佼者，隶属于Across Entertainment事务所。她拥有清澈透明的声线和出色的音域控制能力，擅长演绎从青春少女到成熟女性的多种角色类型。其演技以细腻的情感表达和自然的台词处理著称，在业内获得了‘声音的变色龙’美誉。2025年获得声优奖新人奖，展现了强大的发展潜力。她注重声音与角色灵魂的融合，每次演出都经过精心揣摩，为作品注入独特的生命力。
+  name: 羊宫妃那
+date: '2026-03-13'
+history:
+- event: 威廉·赫歇尔发现天王星。
+  year: '1781'
+- event: 克莱德·汤博发现冥王星。
+  year: '1930'
+- event: 中国核潜艇首次发射运载火箭。
+  year: '1988'
+- event: 中国批准《联合国海洋法公约》。
+  year: '1996'
+- event: 豪尔赫·马里奥·贝尔格里奥当选为教皇方济各。
+  year: '2013'
+- event: 世界卫生组织宣布COVID-19为大流行病。
+  year: '2020'
+llm:
+- desc: 2026年3月发布的开源大语言模型，参数量700B，在MMLU、GSM8K等基准测试中全面领先，专为AI智能体设计，支持128K上下文长度。
   tags:
-  - 音频生成
-  - 基础模型
-  - ICLR 2026
-  - 多任务学习
-  title: 'UniAudio: An Audio Foundation Model Toward Universal Audio Generation'
-  url: https://openreview.net/forum?id=nhgTmx1TZJ
+  - 开源LLM
+  - 英伟达
+  - 智能体
+  - 基准测试
+  title: NVIDIA Nemotron 3 Super
+new_project:
+- desc: 2026年3月GitHub趋势榜首的开源项目，为团队提供统一的AI协作平台，集成代码生成、文档理解和项目管理功能，支持多模型切换。
+  tags:
+  - 开源工具
+  - 团队协作
+  - AI平台
+  - GitHub趋势
+  title: 'Clawith: OpenClaw for Teams'
+  url: https://github.com/dataelement/Clawith
+paper:
+- desc: ICLR 2026顶会论文，提出基于概念的分割框架，实现开放集视觉理解。
+  tags:
+  - 图像分割
+  - 概念理解
+  - ICLR2026
+  - 计算机视觉
+  title: 'SAM 3: Segment Anything with Concepts'
+  url: https://openreview.net/forum?id=r35clVtGzw
 tech:
   Arch:
-  - desc: 采用Intel 18A工艺，桌面版最高52核异构设计（16P+32E+4LPE），支持DDR5-8000与全新LGA1851接口。
+  - desc: 龙芯中科2026年验证成功的国产服务器处理器，采用完全自主的LA指令集架构，32核心支持四路128核配置，主频3.0 GHz，SPECint_rate2017得分2100。集成安全加密引擎，功耗控制在180W。
     tags:
-    - CPU架构
-    - Intel
-    - Nova Lake
-    - 异构计算
-    title: Intel Nova Lake：2026年末发布的全新CPU架构
+    - 处理器架构
+    - 国产CPU
+    - 服务器
+    - 自主指令集
+    title: 龙芯3C6000 32核服务器CPU
   Audio:
-  - desc: ICLR 2026论文提出的统一音频生成基础模型，采用扩散Transformer架构，在文本到音频、音乐生成等多项任务上实现SOTA。
+  - desc: 蚂蚁集团2026年开源的全栈音频生成模型，单一架构支持语音合成、音乐生成、音效生成，采用扩散Transformer实现24kHz高保真输出，情感控制维度达10类，实时生成延迟低于100ms。在Blizzard
+      2026评测中MOS得分4.5。
     tags:
     - 音频生成
-    - 多任务学习
-    - ICLR 2026
-    - SOTA
-    title: UniAudioGen：统一音频生成模型在ICLR 2026上实现SOTA
+    - 语音合成
+    - 多模态
+    - 开源
+    title: Ming-omni-tts统一音频生成模型
   CPU:
-  - desc: 基于Intel 3工艺，最高128核心，集成AI加速单元，能效比较上代提升50%，专为数据中心与AI工作负载优化。
+  - desc: 2026年CES发布的Zen 5架构桌面旗舰，16核32线程，4nm工艺，基准频率4.5 GHz，加速频率5.8 GHz，L3缓存64MB。集成Ryzen
+      AI 400系列NPU，算力60 TOPS，游戏性能相比上代提升35%。
     tags:
-    - CPU
-    - Intel
-    - 服务器处理器
+    - 处理器
+    - 桌面CPU
+    - Zen5
     - AI加速
-    title: Intel Xeon 6 处理器：基于Intel 3工艺，能效比提升50%
+    title: AMD Ryzen 9 9950X处理器
   Computer Vision:
-  - desc: 搭载第二代Transformer AI模型，实现6倍动态多帧生成与超分辨率升级，显著提升游戏渲染效率与画质。
+  - desc: ICLR 2026最佳论文之一，提出基于概念的分割框架，通过概念融合模块实现零样本开放集分割，在COCO val2017上达到68.9 mAP，相比SAM
+      2提升12.5%。架构采用双流视觉Transformer，支持自然语言概念引导。
     tags:
     - 计算机视觉
-    - AI超分辨率
-    - 游戏渲染
-    - NVIDIA
-    title: NVIDIA DLSS 4.5：第二代Transformer AI模型超分辨率与6倍帧生成
+    - 图像分割
+    - 概念理解
+    - ICLR2026
+    title: 'SAM 3: Segment Anything with Concepts'
   GPU:
-  - desc: 搭载9GB GDDR7显存，基于GB206 GPU核心，维持130W功耗，为入门级市场带来显著性能提升。
+  - desc: 2026年1月发布的Blackwell架构旗舰显卡，搭载32GB GDDR7显存，显存带宽1.5 TB/s，FP32算力120 TFLOPS，光追性能相比RTX
+      4090提升2.3倍。采用台积电3nm工艺，功耗600W，支持DP 2.1接口。
     tags:
-    - GPU
-    - NVIDIA
+    - 显卡
+    - 游戏硬件
+    - AI加速
     - GDDR7
-    - 入门级显卡
-    title: NVIDIA RTX 5050：首款搭载9GB GDDR7显存的入门级GPU
+    title: NVIDIA GeForce RTX 5090
   Lang:
-  - desc: 正式放宽泛型使用限制，默认启用Green Tea垃圾回收器，提升内存管理效率，同时优化C语言互操作性性能。
+  - desc: 2026年3月5日发布的Rust新版本，引入array_windows方法简化滑动窗口处理，改进所有权系统减少15%内存占用，并发库支持无锁数据结构，编译速度提升20%。新增对RISC-V
+      128位扩展的支持。
     tags:
     - 编程语言
-    - Go
-    - 垃圾回收
-    - 泛型
-    title: Go 1.26 发布：泛型限制放宽与Green Tea GC默认启用
+    - 系统编程
+    - 内存安全
+    - 性能优化
+    title: Rust 1.94.0稳定版
   NLP:
-  - desc: 基于MoE架构的1100亿参数开源模型，在中文NLP基准上超越GPT-4 Turbo，支持128K上下文与多模态交互。
+  - desc: 阿里云2026年3月开源的高效推理模型，参数量32B，采用MoE架构激活参数仅8B，在中文推理基准C-Eval上达到92.3%准确率，支持16K上下文长度。通过思维链蒸馏技术，推理速度比同等规模模型快3倍。
     tags:
     - 大语言模型
-    - 开源
+    - 推理优化
+    - 开源模型
     - 中文NLP
-    - 阿里云
-    title: 通义千问Qwen3.5：阿里新一代开源大模型
+    title: 通义千问QwQ-32B推理模型
   Net:
-  - desc: 基于UDP的下一代高性能代理传输协议，采用前向纠错与连接复用技术，实现低延迟、高吞吐量的安全数据传输。
+  - desc: 高通在MWC 2026展示的AI-native 6G原型系统，集成AI实时调度算法，峰值速率达1 Tbps，空口延迟低于1毫秒，支持分布式AI模型训练。采用太赫兹频段和智能反射表面，频谱效率提升5倍。
     tags:
-    - 网络协议
-    - 代理技术
-    - 高性能传输
-    - UDP
-    title: Tuic协议：下一代高性能代理传输协议
+    - 6G
+    - AI原生网络
+    - 移动通信
+    - MWC2026
+    title: 6G AI原生网络技术
   News:
-  - desc: 马化腾宣布全系‘龙虾’AI产品矩阵，微信将上线‘绝密级’AI智能体，全面整合搜索、社交与内容生态。
+  - desc: 2026年3月12日宣布的战略投资计划，将用于建设超算集群训练万亿参数开源模型，目标在2027年前推出全球最顶尖的AI系统。投资涵盖芯片研发、数据中心建设和人才培养。
     tags:
-    - AI战略
-    - 腾讯
-    - 微信AI
-    - 智能体
-    title: 腾讯“All in”AI入口战：马化腾官宣全系“龙虾”矩阵
+    - AI投资
+    - 大模型
+    - 英伟达
+    - 战略规划
+    title: 英伟达未来五年豪掷260亿美元开发AI大模型
