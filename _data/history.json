@@ -1,4 +1,20 @@
 {
+  "2026-03-14": [
+    "特斯拉Optimus 3人形机器人今夏投产",
+    "SRv6核心标准RFC9800发布",
+    "OpenClaw：执行型AI智能体开源项目",
+    "ViT-5：全面升级视觉骨干网络",
+    "Aurora：通用多模态时序预测模型",
+    "DIPOLE：扩散模型强化调优新范式",
+    "Qwen3-TTS：超低延迟语音合成与克隆框架",
+    "AMD Zen6架构：2nm工艺、48核288MB缓存",
+    "NVIDIA Rubin平台：3360亿晶体管AI超算平台",
+    "Qwen2.5-Omni：阿里开源全模态大模型",
+    "3D堆叠技术实现历史性跨越：芯片密度与能效突破",
+    "英伟达Nemotron 3 Super开源大语言模型",
+    "Python 3.14正式发布：性能与特性全面提升",
+    "石川由依"
+  ],
   "2026-03-13": [
     "Clawith: OpenClaw for Teams",
     "英伟达未来五年豪掷260亿美元开发AI大模型",
@@ -139,21 +155,5 @@
     "Intel Celestial GPU：Xe3P架构与内部代工首秀",
     "Intel Core Ultra Series 3：首款18A工艺处理器",
     "杉泽（百鬼画师）"
-  ],
-  "2026-03-04": [
-    "YOASOBI 《アドレナ》",
-    "ファイルーズあい",
-    "Tuic 协议",
-    "HeartMuLa",
-    "MAO",
-    "Ultralytics YOLO26",
-    "Intel Core Ultra 3 (Panther Lake)",
-    "WebAssembly 2.0",
-    "鸦居",
-    "首个人形机器人与具身智能标准体系发布",
-    "Go 1.26",
-    "生化危机9",
-    "DeepSeek V4 Lite",
-    "AMD Instinct MI455X"
   ]
 }

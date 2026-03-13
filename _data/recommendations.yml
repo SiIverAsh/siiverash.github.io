@@ -1,131 +1,127 @@
 algorithm:
-- desc: 经典集成学习算法，通过构建多棵决策树并投票实现分类或回归，具有抗过拟合、处理高维数据能力强等优点，适用于大规模数据集。
+- desc: ICLR 2026提出的时序预测架构，融合时间序列、图像与文本数据，在M5与ETT数据集上，RMSE比传统方法降低31%，支持零样本迁移。
   tags:
-  - 机器学习
-  - 集成学习
-  - 分类算法
-  - 传统算法
-  title: 随机森林算法
+  - 算法
+  - 时序预测
+  - 多模态
+  - ICLR
+  title: Aurora：通用多模态时序预测模型
 cv_recommend:
-  agency: Across Entertainment
-  hometown: 日本神奈川县
-  intro: 羊宫妃那是日本新生代声优中的佼佼者，隶属于Across Entertainment事务所。她拥有清澈透明的声线和出色的音域控制能力，擅长演绎从青春少女到成熟女性的多种角色类型。其演技以细腻的情感表达和自然的台词处理著称，在业内获得了‘声音的变色龙’美誉。2025年获得声优奖新人奖，展现了强大的发展潜力。她注重声音与角色灵魂的融合，每次演出都经过精心揣摩，为作品注入独特的生命力。
-  name: 羊宫妃那
-date: '2026-03-13'
+  agency: Mausu Promotion
+  hometown: 日本兵库县
+  intro: 石川由依是日本女性声优，以清澈而富有穿透力的嗓音著称。她于2000年代出道，经过多年磨练，在声音表现上展现出广泛的适应能力，能够驾驭从少女到成熟女性的多种音域。其配音技巧扎实，情感表达细腻，尤其在情感激烈的场景中能准确传达角色内心波动。近年来，她持续活跃于声优界，不断拓展演艺范围，备受业界关注。
+  name: 石川由依
+date: '2026-03-14'
 history:
-- event: 威廉·赫歇尔发现天王星。
-  year: '1781'
-- event: 克莱德·汤博发现冥王星。
-  year: '1930'
-- event: 中国核潜艇首次发射运载火箭。
-  year: '1988'
-- event: 中国批准《联合国海洋法公约》。
-  year: '1996'
-- event: 豪尔赫·马里奥·贝尔格里奥当选为教皇方济各。
-  year: '2013'
-- event: 世界卫生组织宣布COVID-19为大流行病。
-  year: '2020'
+- event: 阿尔伯特·爱因斯坦出生于德国乌尔姆。
+  year: '1879'
+- event: 卡尔·马克思在伦敦逝世。
+  year: '1883'
+- event: 第一次世界大战中，英国战舰“伊丽莎白女王号”下水。
+  year: '1915'
+- event: 美国波音公司推出B-17“飞行堡垒”轰炸机。
+  year: '1932'
+- event: 美国最高法院裁定“纽约时报诉沙利文案”，确立媒体诽谤诉讼的“实际恶意”原则。
+  year: '1964'
+- event: 物理学家斯蒂芬·霍金在英国剑桥逝世。
+  year: '2018'
 llm:
-- desc: 2026年3月发布的开源大语言模型，参数量700B，在MMLU、GSM8K等基准测试中全面领先，专为AI智能体设计，支持128K上下文长度。
+- desc: 7B参数规模，支持文本、图像、音频、视频多模态输入输出，在VQA、ASR等基准上超越GPT-4o，开源版本包含预训练与指令微调权重。
   tags:
-  - 开源LLM
-  - 英伟达
-  - 智能体
-  - 基准测试
-  title: NVIDIA Nemotron 3 Super
+  - LLM
+  - 多模态
+  - 开源
+  - 阿里
+  title: Qwen2.5-Omni：阿里开源全模态大模型
 new_project:
-- desc: 2026年3月GitHub趋势榜首的开源项目，为团队提供统一的AI协作平台，集成代码生成、文档理解和项目管理功能，支持多模型切换。
+- desc: GitHub热榜第一，25万星标，实现自主任务执行的AI智能体框架，支持自然语言指令到代码执行，集成强化学习与模拟环境。
   tags:
-  - 开源工具
-  - 团队协作
-  - AI平台
-  - GitHub趋势
-  title: 'Clawith: OpenClaw for Teams'
-  url: https://github.com/dataelement/Clawith
+  - 开源项目
+  - AI
+  - 智能体
+  - GitHub
+  title: OpenClaw：执行型AI智能体开源项目
+  url: https://github.com/openclaw/openclaw
 paper:
-- desc: ICLR 2026顶会论文，提出基于概念的分割框架，实现开放集视觉理解。
+- desc: ICLR 2026论文，提出基于分布优化与策略梯度的扩散模型微调方法，在图像生成与语音合成任务中，将训练稳定性提升70%，采样速度加快2倍。
   tags:
-  - 图像分割
-  - 概念理解
-  - ICLR2026
-  - 计算机视觉
-  title: 'SAM 3: Segment Anything with Concepts'
-  url: https://openreview.net/forum?id=r35clVtGzw
+  - 论文
+  - ICLR
+  - 扩散模型
+  - 强化学习
+  title: DIPOLE：扩散模型强化调优新范式
+  url: https://zhuanlan.zhihu.com/p/2004975976812134555
 tech:
   Arch:
-  - desc: 龙芯中科2026年验证成功的国产服务器处理器，采用完全自主的LA指令集架构，32核心支持四路128核配置，主频3.0 GHz，SPECint_rate2017得分2100。集成安全加密引擎，功耗控制在180W。
+  - desc: 采用混合键合与硅通孔（TSV）技术，实现12层晶圆堆叠，晶体管密度提升至5倍，互连延迟降低60%，功耗减少35%，首个商用产品已应用于AI加速卡。
     tags:
-    - 处理器架构
-    - 国产CPU
-    - 服务器
-    - 自主指令集
-    title: 龙芯3C6000 32核服务器CPU
+    - 架构
+    - 3D堆叠
+    - 芯片
+    - 半导体
+    title: 3D堆叠技术实现历史性跨越：芯片密度与能效突破
   Audio:
-  - desc: 蚂蚁集团2026年开源的全栈音频生成模型，单一架构支持语音合成、音乐生成、音效生成，采用扩散Transformer实现24kHz高保真输出，情感控制维度达10类，实时生成延迟低于100ms。在Blizzard
-      2026评测中MOS得分4.5。
+  - desc: Qwen3-TTS基于流式Transformer架构，端到端延迟降至97ms，支持3秒语音克隆与一句话音色设计，在MOS评分上达到4.52，开源7B参数版本，集成情绪控制与多语言混合合成。
     tags:
-    - 音频生成
+    - 音频
     - 语音合成
-    - 多模态
+    - TTS
     - 开源
-    title: Ming-omni-tts统一音频生成模型
+    title: Qwen3-TTS：超低延迟语音合成与克隆框架
   CPU:
-  - desc: 2026年CES发布的Zen 5架构桌面旗舰，16核32线程，4nm工艺，基准频率4.5 GHz，加速频率5.8 GHz，L3缓存64MB。集成Ryzen
-      AI 400系列NPU，算力60 TOPS，游戏性能相比上代提升35%。
+  - desc: Zen6采用台积电2nm工艺，最高48核心/96线程，L3缓存288MB，支持DDR5-8000与PCIe 6.0，单核频率突破5.8GHz，在SPECint2017基准中提升52%。
     tags:
-    - 处理器
-    - 桌面CPU
-    - Zen5
-    - AI加速
-    title: AMD Ryzen 9 9950X处理器
+    - CPU
+    - AMD
+    - Zen6
+    - 2nm
+    title: AMD Zen6架构：2nm工艺、48核288MB缓存
   Computer Vision:
-  - desc: ICLR 2026最佳论文之一，提出基于概念的分割框架，通过概念融合模块实现零样本开放集分割，在COCO val2017上达到68.9 mAP，相比SAM
-      2提升12.5%。架构采用双流视觉Transformer，支持自然语言概念引导。
+  - desc: ViT-5采用分层注意力机制与动态路径规划，在ImageNet-1K上达到91.2% top-1精度，比前代提升3.5%，支持4K分辨率实时推理，参数量仅85M，首次引入可变形卷积增强局部特征提取。
     tags:
     - 计算机视觉
-    - 图像分割
-    - 概念理解
-    - ICLR2026
-    title: 'SAM 3: Segment Anything with Concepts'
+    - Vision Transformer
+    - 骨干网络
+    - ViT-5
+    title: ViT-5：全面升级视觉骨干网络
   GPU:
-  - desc: 2026年1月发布的Blackwell架构旗舰显卡，搭载32GB GDDR7显存，显存带宽1.5 TB/s，FP32算力120 TFLOPS，光追性能相比RTX
-      4090提升2.3倍。采用台积电3nm工艺，功耗600W，支持DP 2.1接口。
+  - desc: Rubin平台集成六款芯片：GPU、CPU、DPU、NIC、Switch与内存控制器，采用台积电3nm工艺，总晶体管3360亿，FP8算力达10
+      ExaFLOPS，支持NVLink 5.0与CXL 3.0互联。
     tags:
-    - 显卡
-    - 游戏硬件
-    - AI加速
-    - GDDR7
-    title: NVIDIA GeForce RTX 5090
+    - GPU
+    - AI
+    - NVIDIA
+    - Rubin
+    title: NVIDIA Rubin平台：3360亿晶体管AI超算平台
   Lang:
-  - desc: 2026年3月5日发布的Rust新版本，引入array_windows方法简化滑动窗口处理，改进所有权系统减少15%内存占用，并发库支持无锁数据结构，编译速度提升20%。新增对RISC-V
-      128位扩展的支持。
+  - desc: Python 3.14引入JIT编译器Pyston-Lite，整数运算性能提升40%，内存占用降低25%，新增模式匹配增强语法、异步上下文管理器，并默认启用GraalVM原生镜像支持。
     tags:
     - 编程语言
-    - 系统编程
-    - 内存安全
-    - 性能优化
-    title: Rust 1.94.0稳定版
+    - Python
+    - 版本更新
+    - 性能
+    title: Python 3.14正式发布：性能与特性全面提升
   NLP:
-  - desc: 阿里云2026年3月开源的高效推理模型，参数量32B，采用MoE架构激活参数仅8B，在中文推理基准C-Eval上达到92.3%准确率，支持16K上下文长度。通过思维链蒸馏技术，推理速度比同等规模模型快3倍。
+  - desc: Nemotron 3 Super采用MoE架构，总参数量340B，激活参数12B，支持128K上下文长度，在MMLU基准上得分85.7，集成强化学习从人类反馈（RLHF）与宪法AI（CAI）对齐技术，开源版本包含预训练、指令微调与多模态扩展权重。
     tags:
+    - NLP
     - 大语言模型
-    - 推理优化
-    - 开源模型
-    - 中文NLP
-    title: 通义千问QwQ-32B推理模型
-  Net:
-  - desc: 高通在MWC 2026展示的AI-native 6G原型系统，集成AI实时调度算法，峰值速率达1 Tbps，空口延迟低于1毫秒，支持分布式AI模型训练。采用太赫兹频段和智能反射表面，频谱效率提升5倍。
-    tags:
-    - 6G
-    - AI原生网络
-    - 移动通信
-    - MWC2026
-    title: 6G AI原生网络技术
-  News:
-  - desc: 2026年3月12日宣布的战略投资计划，将用于建设超算集群训练万亿参数开源模型，目标在2027年前推出全球最顶尖的AI系统。投资涵盖芯片研发、数据中心建设和人才培养。
-    tags:
-    - AI投资
-    - 大模型
+    - 开源
     - 英伟达
-    - 战略规划
-    title: 英伟达未来五年豪掷260亿美元开发AI大模型
+    title: 英伟达Nemotron 3 Super开源大语言模型
+  Net:
+  - desc: RFC9800定义Segment Routing IPv6（SRv6）的扩展头格式与操作码，支持128位段标识符，实现微秒级路径编程，可与SDN、NFV无缝集成，提升网络可编程性与效率。
+    tags:
+    - 网络
+    - SRv6
+    - 协议
+    - 标准
+    title: SRv6核心标准RFC9800发布
+  News:
+  - desc: 特斯拉宣布Optimus 3将于2026年夏季量产，采用新一代执行器与视觉系统，续航时间8小时，负载能力20kg，单价降至2万美元以下，已获10万台订单。
+    tags:
+    - 新闻
+    - 机器人
+    - 特斯拉
+    - Optimus
+    title: 特斯拉Optimus 3人形机器人今夏投产
