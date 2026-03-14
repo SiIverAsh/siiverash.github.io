@@ -1,127 +1,128 @@
 algorithm:
-- desc: ICLR 2026提出的时序预测架构，融合时间序列、图像与文本数据，在M5与ETT数据集上，RMSE比传统方法降低31%，支持零样本迁移。
+- desc: 首次原生支持多目标回归与分类，允许单模型同时预测多个标签。新增GPU外部存储支持，可处理超过1TB的训练数据，推理速度提升30%。集成Shapley值解释与自动超参优化，成为传统机器学习库的里程碑更新。
   tags:
-  - 算法
-  - 时序预测
-  - 多模态
-  - ICLR
-  title: Aurora：通用多模态时序预测模型
+  - XGBoost
+  - 机器学习
+  - 多目标学习
+  - GPU加速
+  title: XGBoost 3.2.0 发布：多目标输出与 GPU 外部存储支持
 cv_recommend:
-  agency: Mausu Promotion
-  hometown: 日本兵库县
-  intro: 石川由依是日本女性声优，以清澈而富有穿透力的嗓音著称。她于2000年代出道，经过多年磨练，在声音表现上展现出广泛的适应能力，能够驾驭从少女到成熟女性的多种音域。其配音技巧扎实，情感表达细腻，尤其在情感激烈的场景中能准确传达角色内心波动。近年来，她持续活跃于声优界，不断拓展演艺范围，备受业界关注。
-  name: 石川由依
-date: '2026-03-14'
+  agency: I'm Enterprise
+  hometown: 日本神奈川县
+  intro: 内田真礼是日本知名声优兼歌手，隶属于I'm Enterprise事务所。她出生于神奈川县，以其多变的声线和精准的情感表达在业界备受赞誉。她的声音可塑性极强，能够驾驭从甜美到冷峻的各种角色类型，在配音工作中展现出卓越的专业素养。同时，她也在音乐领域积极发展，发行了多张个人专辑，展现了多元化的艺术才华。
+  name: 内田真礼
+date: '2026-03-15'
 history:
-- event: 阿尔伯特·爱因斯坦出生于德国乌尔姆。
-  year: '1879'
-- event: 卡尔·马克思在伦敦逝世。
-  year: '1883'
-- event: 第一次世界大战中，英国战舰“伊丽莎白女王号”下水。
-  year: '1915'
-- event: 美国波音公司推出B-17“飞行堡垒”轰炸机。
-  year: '1932'
-- event: 美国最高法院裁定“纽约时报诉沙利文案”，确立媒体诽谤诉讼的“实际恶意”原则。
-  year: '1964'
-- event: 物理学家斯蒂芬·霍金在英国剑桥逝世。
-  year: '2018'
+- event: 罗马独裁官尤利乌斯·凯撒在元老院被刺杀，标志着罗马共和国的终结。
+  year: 公元前44年
+- event: 纳粹德国军队占领捷克斯洛伐克剩余领土，完全吞并该国。
+  year: 1939年
+- event: 美国总统林登·B·约翰逊在国会发表演讲，呼吁通过《投票权法案》。
+  year: 1965年
+- event: 第一个“.com”域名symbolics.com被注册，标志着商业互联网时代的开端。
+  year: 1985年
+- event: 叙利亚反政府示威升级为全面内战，导致持续多年的冲突与人道主义危机。
+  year: 2011年
+- event: 新西兰克赖斯特彻奇两座清真寺发生枪击事件，造成51人死亡，40人受伤。
+  year: 2019年
 llm:
-- desc: 7B参数规模，支持文本、图像、音频、视频多模态输入输出，在VQA、ASR等基准上超越GPT-4o，开源版本包含预训练与指令微调权重。
+- desc: 采用混合专家架构，1200亿参数，支持32K上下文，在Agent任务中吞吐量相比稠密模型提升5倍。开源权重包括Base、Instruct、Reward模型，在HellaSwag、MMLU等基准上达到SOTA，专为智能体推理优化。
   tags:
-  - LLM
-  - 多模态
-  - 开源
-  - 阿里
-  title: Qwen2.5-Omni：阿里开源全模态大模型
-new_project:
-- desc: GitHub热榜第一，25万星标，实现自主任务执行的AI智能体框架，支持自然语言指令到代码执行，集成强化学习与模拟环境。
-  tags:
-  - 开源项目
-  - AI
+  - 开源大模型
+  - 混合专家
   - 智能体
+  - NVIDIA
+  title: NVIDIA Nemotron 3 Super：120B参数开源大模型，吞吐量提升5倍
+new_project:
+- desc: GitHub上trend里的最新项目
+  tags:
+  - AI助手
+  - 开源
+  - 自动化
   - GitHub
-  title: OpenClaw：执行型AI智能体开源项目
+  title: OpenClaw：个人AI助手开源项目
   url: https://github.com/openclaw/openclaw
 paper:
-- desc: ICLR 2026论文，提出基于分布优化与策略梯度的扩散模型微调方法，在图像生成与语音合成任务中，将训练稳定性提升70%，采样速度加快2倍。
+- desc: 顶会论文推荐
   tags:
-  - 论文
-  - ICLR
-  - 扩散模型
-  - 强化学习
-  title: DIPOLE：扩散模型强化调优新范式
-  url: https://zhuanlan.zhihu.com/p/2004975976812134555
+  - 多模态
+  - 视觉语言模型
+  - 细粒度识别
+  - ICLR 2026
+  title: Make Multi-modal LLMs Excel in Fine-grained Visual Recognition
+  url: https://arxiv.org/pdf/2602.07605
 tech:
   Arch:
-  - desc: 采用混合键合与硅通孔（TSV）技术，实现12层晶圆堆叠，晶体管密度提升至5倍，互连延迟降低60%，功耗减少35%，首个商用产品已应用于AI加速卡。
+  - desc: 采用台积电3nm FinFET工艺，集成291亿晶体管，CPU为1+3+4三簇架构，包括一颗Cortex-X5超大核（3.4GHz）。GPU为Immortalis-G720，支持硬件光追，AI算力达60
+      TOPS，能效比前代提升25%。
     tags:
-    - 架构
-    - 3D堆叠
-    - 芯片
-    - 半导体
-    title: 3D堆叠技术实现历史性跨越：芯片密度与能效突破
+    - 移动芯片
+    - 3nm工艺
+    - 联发科
+    - 天玑
+    title: 联发科发布天玑9400+旗舰芯片
   Audio:
-  - desc: Qwen3-TTS基于流式Transformer架构，端到端延迟降至97ms，支持3秒语音克隆与一句话音色设计，在MOS评分上达到4.52，开源7B参数版本，集成情绪控制与多语言混合合成。
+  - desc: 基于500万小时多语言语音数据训练，支持3秒语音克隆与细粒度情感、音色调控。采用扩散模型与Transformer结合架构，首包延迟仅97ms，MOS评分达4.5，同时开源32B参数量版本，支持实时端侧部署。
     tags:
-    - 音频
     - 语音合成
-    - TTS
-    - 开源
-    title: Qwen3-TTS：超低延迟语音合成与克隆框架
+    - 语音克隆
+    - 开源模型
+    - 阿里
+    title: Qwen3-TTS：开源语音克隆与AI语音生成模型
   CPU:
-  - desc: Zen6采用台积电2nm工艺，最高48核心/96线程，L3缓存288MB，支持DDR5-8000与PCIe 6.0，单核频率突破5.8GHz，在SPECint2017基准中提升52%。
+  - desc: 基于Zen 5架构，采用4nm工艺，最高8核16线程，集成RDNA 3.5核显与专用AI引擎（算力50 TOPS）。支持PCIe 5.0与DDR5-6400，单线程性能提升15%，AI推理能效比前代提升40%，面向AI
+      PC市场。
     tags:
     - CPU
     - AMD
-    - Zen6
-    - 2nm
-    title: AMD Zen6架构：2nm工艺、48核288MB缓存
+    - Zen 5
+    - AI引擎
+    title: AMD Ryzen AI 400 系列台式机处理器发布：至高8核，AI性能提升
   Computer Vision:
-  - desc: ViT-5采用分层注意力机制与动态路径规划，在ImageNet-1K上达到91.2% top-1精度，比前代提升3.5%，支持4K分辨率实时推理，参数量仅85M，首次引入可变形卷积增强局部特征提取。
+  - desc: 3DThinker采用Transformer架构，首次实现从单张2D图像进行3D几何推理，支持有限视角下的空间理解与补全。模型在超过1000万组3D-2D对齐数据上训练，参数量达50B，在ShapeNet、ScanNet等基准上相比现有VLM提升超过30%的3D重建精度。
     tags:
     - 计算机视觉
-    - Vision Transformer
-    - 骨干网络
-    - ViT-5
-    title: ViT-5：全面升级视觉骨干网络
+    - 3D推理
+    - 视觉语言模型
+    - CVPR 2026
+    title: CVPR 2026 | 清华美团发布3DThinker：首个具备3D“脑补”能力的视觉大模型
   GPU:
-  - desc: Rubin平台集成六款芯片：GPU、CPU、DPU、NIC、Switch与内存控制器，采用台积电3nm工艺，总晶体管3360亿，FP8算力达10
-      ExaFLOPS，支持NVLink 5.0与CXL 3.0互联。
+  - desc: Feynman采用全新流式多处理器架构，集成超过1800亿晶体管，单卡FP8算力达10 PFLOPS，功耗1000W以上。支持显存一致性缓存与硬件级动态并行，AI训练性能相比Hopper提升30倍，预计2026年下半年量产。
     tags:
     - GPU
-    - AI
     - NVIDIA
-    - Rubin
-    title: NVIDIA Rubin平台：3360亿晶体管AI超算平台
+    - 1.6nm工艺
+    - AI算力
+    title: NVIDIA Feynman 架构亮相：首发台积电 A16 1.6nm 工艺
   Lang:
-  - desc: Python 3.14引入JIT编译器Pyston-Lite，整数运算性能提升40%，内存占用降低25%，新增模式匹配增强语法、异步上下文管理器，并默认启用GraalVM原生镜像支持。
+  - desc: 引入全新装饰器语法、改进的类型推断与泛型约束，首次原生支持Go语言互操作，允许直接调用Go模块。编译速度提升20%，捆绑体积减少15%，同时提供更严格的空值检查与模式匹配语法，预计2026年3月底正式发布。
     tags:
+    - TypeScript
     - 编程语言
-    - Python
-    - 版本更新
-    - 性能
-    title: Python 3.14正式发布：性能与特性全面提升
+    - Go生态
+    - 微软
+    title: TypeScript 6.0 RC 发布：面向 Go 生态的桥梁
   NLP:
-  - desc: Nemotron 3 Super采用MoE架构，总参数量340B，激活参数12B，支持128K上下文长度，在MMLU基准上得分85.7，集成强化学习从人类反馈（RLHF）与宪法AI（CAI）对齐技术，开源版本包含预训练、指令微调与多模态扩展权重。
+  - desc: Llama 3采用混合专家架构，预训练数据规模达15万亿token，最大模型参数量超过4000亿。支持128K上下文长度，在MMLU、GSM8K等基准上性能持平GPT-4，同时开源7B、13B、70B三个版本，推理效率相比前代提升40%。
     tags:
-    - NLP
     - 大语言模型
     - 开源
-    - 英伟达
-    title: 英伟达Nemotron 3 Super开源大语言模型
+    - 混合专家
+    - Meta
+    title: Meta发布Llama 3：使用15T数据预训练，最大参数超4000亿
   Net:
-  - desc: RFC9800定义Segment Routing IPv6（SRv6）的扩展头格式与操作码，支持128位段标识符，实现微秒级路径编程，可与SDN、NFV无缝集成，提升网络可编程性与效率。
+  - desc: 基于QUIC协议深度优化，引入零RTT连接建立与前向安全加密，在100ms延迟环境下吞吐量比传统TCP代理提升5倍。支持多路复用与流量伪装，头部开销仅2字节，已提交IETF草案，成为下一代隐私增强传输标准候选。
     tags:
-    - 网络
-    - SRv6
-    - 协议
-    - 标准
-    title: SRv6核心标准RFC9800发布
+    - 网络协议
+    - QUIC
+    - 高性能代理
+    - 隐私增强
+    title: Tuic协议：下一代高速代理传输协议
   News:
-  - desc: 特斯拉宣布Optimus 3将于2026年夏季量产，采用新一代执行器与视觉系统，续航时间8小时，负载能力20kg，单价降至2万美元以下，已获10万台订单。
+  - desc: o3/o4-mini首次引入图像思考机制，无需外部视觉编码器，直接处理像素级输入。在VQA、图像描述等任务上准确率超越GPT-4V，推理速度提升10倍，模型参数量仅20B，支持端到端多模态指令跟随。
     tags:
-    - 新闻
-    - 机器人
-    - 特斯拉
-    - Optimus
-    title: 特斯拉Optimus 3人形机器人今夏投产
+    - OpenAI
+    - 视觉推理
+    - 多模态
+    - 算力提升
+    title: OpenAI 发布 o3/o4-mini：视觉推理模型，算力提升十倍
