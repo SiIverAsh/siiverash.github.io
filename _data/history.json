@@ -1,4 +1,20 @@
 {
+  "2026-03-16": [
+    "karpathy/autoresearch：AI智能体自动化研究框架",
+    "Fish Audio开源S2：词级精细控制的AI语音生成模型",
+    "Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio Gradient Optimizer",
+    "NVIDIA下代GPU费曼亮相：首发1.6nm工艺、功耗1000W以上",
+    "字节跳动Seed2.0正式发布，对标GPT-5与Gemini 3 Pro",
+    "第三代英特尔酷睿Ultra处理器正式亮相，采用Intel 18A制程",
+    "YOLO26 正式开源：无NMS推理与CPU性能提升43%",
+    "DeepSeek V4开源发布：国产全模态大模型",
+    "WebMCP提案曝光：标准化Web与AI模型交互协议",
+    "谷歌发布Gemini Embedding 2：首个原生多模态嵌入模型",
+    "TypeScript 6.0 RC发布：性能桥梁与Go后端集成",
+    "XGBoost：高效的梯度提升决策树框架",
+    "进迭时空发布K3芯片：60TOPS算力的RISC-V AI CPU",
+    "内田真礼"
+  ],
   "2026-03-15": [
     "XGBoost 3.2.0 发布：多目标输出与 GPU 外部存储支持",
     "内田真礼",
@@ -139,21 +155,5 @@
     "AMD锐龙AI 400系列：NPU算力60 TOPS",
     "东方同人魂音泉ESC专辑CD",
     "Go 1.26发布：Green Tea GC与SIMD加速"
-  ],
-  "2026-03-06": [
-    "最终幻想VII：重生 PC版",
-    "Intel Lunar Lake 规格泄露",
-    "ファイルーズあい",
-    "全球首个气溶胶预报人工智能模型发布",
-    "IETF QUIC v2 草案推进",
-    "YOASOBI 新曲《アドレナ》",
-    "Armv9.5 架构发布",
-    "Rella",
-    "GLM-5 技术报告公开",
-    "Python 3.13 正式发布",
-    "PaddleOCR-VL-1.5 开源",
-    "MiniMax Speech 2.6 发布",
-    "魔法少女与恶曾是敌人。",
-    "AMD RX 9070 XT 显卡曝光"
   ]
 }

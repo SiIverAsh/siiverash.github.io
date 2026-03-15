@@ -1,128 +1,127 @@
 algorithm:
-- desc: 首次原生支持多目标回归与分类，允许单模型同时预测多个标签。新增GPU外部存储支持，可处理超过1TB的训练数据，推理速度提升30%。集成Shapley值解释与自动超参优化，成为传统机器学习库的里程碑更新。
+- desc: XGBoost通过正则化与并行处理优化决策树集成，在分类与回归任务中表现出色，支持自定义损失函数，广泛应用于机器学习竞赛与工业场景。
   tags:
-  - XGBoost
+  - 梯度提升
+  - 决策树
   - 机器学习
-  - 多目标学习
-  - GPU加速
-  title: XGBoost 3.2.0 发布：多目标输出与 GPU 外部存储支持
+  - 开源库
+  title: XGBoost：高效的梯度提升决策树框架
 cv_recommend:
   agency: I'm Enterprise
-  hometown: 日本神奈川县
-  intro: 内田真礼是日本知名声优兼歌手，隶属于I'm Enterprise事务所。她出生于神奈川县，以其多变的声线和精准的情感表达在业界备受赞誉。她的声音可塑性极强，能够驾驭从甜美到冷峻的各种角色类型，在配音工作中展现出卓越的专业素养。同时，她也在音乐领域积极发展，发行了多张个人专辑，展现了多元化的艺术才华。
+  hometown: 东京都
+  intro: 内田真礼是日本知名女性声优，以其清澈而富有表现力的嗓音著称。她毕业于代代木动画学院，2012年正式出道。在职业生涯中，她展现了广泛的声线适应性，从活泼少女到成熟女性都能精准演绎。她的配音注重情感细节，能够深刻传达角色内心世界，因此在业内获得高度评价。除了声优工作，她还积极参与音乐活动，发行多张个人专辑，展现了多方面的艺术才华。
   name: 内田真礼
-date: '2026-03-15'
+date: '2026-03-16'
 history:
-- event: 罗马独裁官尤利乌斯·凯撒在元老院被刺杀，标志着罗马共和国的终结。
-  year: 公元前44年
-- event: 纳粹德国军队占领捷克斯洛伐克剩余领土，完全吞并该国。
-  year: 1939年
-- event: 美国总统林登·B·约翰逊在国会发表演讲，呼吁通过《投票权法案》。
-  year: 1965年
-- event: 第一个“.com”域名symbolics.com被注册，标志着商业互联网时代的开端。
-  year: 1985年
-- event: 叙利亚反政府示威升级为全面内战，导致持续多年的冲突与人道主义危机。
-  year: 2011年
-- event: 新西兰克赖斯特彻奇两座清真寺发生枪击事件，造成51人死亡，40人受伤。
-  year: 2019年
+- event: 斐迪南·麦哲伦到达菲律宾。
+  year: '1521'
+- event: 美国西点军校成立。
+  year: '1802'
+- event: 罗伯特·H·戈达德发射第一枚液体燃料火箭。
+  year: '1926'
+- event: 美军在越南美莱村进行大屠杀。
+  year: '1968'
+- event: 意大利前总理阿尔多·莫罗被红色旅绑架。
+  year: '1978'
+- event: 全球数百万人抗议伊拉克战争。
+  year: '2003'
 llm:
-- desc: 采用混合专家架构，1200亿参数，支持32K上下文，在Agent任务中吞吐量相比稠密模型提升5倍。开源权重包括Base、Instruct、Reward模型，在HellaSwag、MMLU等基准上达到SOTA，专为智能体推理优化。
+- desc: DeepSeek V4参数规模达万亿级别，支持文本、图像、视频生成与理解，在多项基准测试中超越海外模型，提供无限制免费商用许可。
   tags:
-  - 开源大模型
-  - 混合专家
-  - 智能体
-  - NVIDIA
-  title: NVIDIA Nemotron 3 Super：120B参数开源大模型，吞吐量提升5倍
-new_project:
-- desc: GitHub上trend里的最新项目
-  tags:
-  - AI助手
-  - 开源
-  - 自动化
-  - GitHub
-  title: OpenClaw：个人AI助手开源项目
-  url: https://github.com/openclaw/openclaw
-paper:
-- desc: 顶会论文推荐
-  tags:
+  - 大语言模型
   - 多模态
-  - 视觉语言模型
-  - 细粒度识别
+  - 开源
+  - 国产AI
+  title: DeepSeek V4开源发布：国产全模态大模型
+new_project:
+- desc: autoresearch利用大语言模型驱动AI智能体进行自动化文献调研、实验设计与论文撰写，旨在加速科研进程，项目由Andrej Karpathy维护。
+  tags:
+  - AI智能体
+  - 自动化研究
+  - 开源工具
+  - LLM应用
+  title: karpathy/autoresearch：AI智能体自动化研究框架
+  url: https://github.com/karpathy/autoresearch
+paper:
+- desc: 该论文提出递归似然比梯度优化器，用于扩散模型的后训练，实现半阶微调，在图像生成任务中提升训练效率与样本质量，被ICLR 2026收录为口头报告。
+  tags:
+  - 扩散模型
+  - 优化算法
   - ICLR 2026
-  title: Make Multi-modal LLMs Excel in Fine-grained Visual Recognition
-  url: https://arxiv.org/pdf/2602.07605
+  - 深度学习
+  title: 'Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio
+    Gradient Optimizer'
+  url: https://arxiv.org/abs/2502.00639
 tech:
   Arch:
-  - desc: 采用台积电3nm FinFET工艺，集成291亿晶体管，CPU为1+3+4三簇架构，包括一颗Cortex-X5超大核（3.4GHz）。GPU为Immortalis-G720，支持硬件光追，AI算力达60
-      TOPS，能效比前代提升25%。
+  - desc: K3芯片采用RISC-V同构融合计算架构，集成8核设计，提供60TOPS的AI算力，支持边缘智能计算，在能效比上超越多数ARM芯片。
     tags:
-    - 移动芯片
-    - 3nm工艺
-    - 联发科
-    - 天玑
-    title: 联发科发布天玑9400+旗舰芯片
+    - RISC-V
+    - AI芯片
+    - 边缘计算
+    - 高性能
+    title: 进迭时空发布K3芯片：60TOPS算力的RISC-V AI CPU
   Audio:
-  - desc: 基于500万小时多语言语音数据训练，支持3秒语音克隆与细粒度情感、音色调控。采用扩散模型与Transformer结合架构，首包延迟仅97ms，MOS评分达4.5，同时开源32B参数量版本，支持实时端侧部署。
+  - desc: Fish Audio S2具备词级细粒度语音控制能力，支持实时流式生成，基于扩散模型实现高质量音频合成，适用于生产环境中的动态语音交互场景。
     tags:
     - 语音合成
-    - 语音克隆
-    - 开源模型
-    - 阿里
-    title: Qwen3-TTS：开源语音克隆与AI语音生成模型
+    - 细粒度控制
+    - 扩散模型
+    - 开源音频
+    title: Fish Audio开源S2：词级精细控制的AI语音生成模型
   CPU:
-  - desc: 基于Zen 5架构，采用4nm工艺，最高8核16线程，集成RDNA 3.5核显与专用AI引擎（算力50 TOPS）。支持PCIe 5.0与DDR5-6400，单线程性能提升15%，AI推理能效比前代提升40%，面向AI
-      PC市场。
+  - desc: 第三代酷睿Ultra基于Intel 18A工艺，集成新一代NPU与显卡单元，AI算力显著提升，支持全天续航，适用于轻薄本与工作站。
     tags:
-    - CPU
-    - AMD
-    - Zen 5
-    - AI引擎
-    title: AMD Ryzen AI 400 系列台式机处理器发布：至高8核，AI性能提升
+    - Intel
+    - 18A工艺
+    - AI加速
+    - 能效优化
+    title: 第三代英特尔酷睿Ultra处理器正式亮相，采用Intel 18A制程
   Computer Vision:
-  - desc: 3DThinker采用Transformer架构，首次实现从单张2D图像进行3D几何推理，支持有限视角下的空间理解与补全。模型在超过1000万组3D-2D对齐数据上训练，参数量达50B，在ShapeNet、ScanNet等基准上相比现有VLM提升超过30%的3D重建精度。
+  - desc: YOLO26采用原生NMS-Free架构设计，通过ProgLoss训练优化，在INT8量化下实现精度损失<1%，CPU推理速度提升43%，支持边缘设备实时目标检测。
     tags:
-    - 计算机视觉
-    - 3D推理
-    - 视觉语言模型
-    - CVPR 2026
-    title: CVPR 2026 | 清华美团发布3DThinker：首个具备3D“脑补”能力的视觉大模型
+    - 目标检测
+    - 无NMS推理
+    - CPU优化
+    - 边缘AI
+    title: YOLO26 正式开源：无NMS推理与CPU性能提升43%
   GPU:
-  - desc: Feynman采用全新流式多处理器架构，集成超过1800亿晶体管，单卡FP8算力达10 PFLOPS，功耗1000W以上。支持显存一致性缓存与硬件级动态并行，AI训练性能相比Hopper提升30倍，预计2026年下半年量产。
+  - desc: 费曼GPU采用台积电1.6nm工艺，功耗超过1000W，整合小芯片设计，专注于AI与高性能计算，预计将推动Exascale超级计算机发展。
     tags:
-    - GPU
-    - NVIDIA
+    - GPU架构
     - 1.6nm工艺
-    - AI算力
-    title: NVIDIA Feynman 架构亮相：首发台积电 A16 1.6nm 工艺
+    - AI计算
+    - 高性能
+    title: NVIDIA下代GPU费曼亮相：首发1.6nm工艺、功耗1000W以上
   Lang:
-  - desc: 引入全新装饰器语法、改进的类型推断与泛型约束，首次原生支持Go语言互操作，允许直接调用Go模块。编译速度提升20%，捆绑体积减少15%，同时提供更严格的空值检查与模式匹配语法，预计2026年3月底正式发布。
+  - desc: TypeScript 6.0 RC引入新的类型系统特性，编译速度大幅提升，通过Go后端桥接实现更快的构建流程，同时优化了大型项目的代码提示与错误检测。
     tags:
     - TypeScript
-    - 编程语言
-    - Go生态
-    - 微软
-    title: TypeScript 6.0 RC 发布：面向 Go 生态的桥梁
+    - 编译优化
+    - Go集成
+    - 前端开发
+    title: TypeScript 6.0 RC发布：性能桥梁与Go后端集成
   NLP:
-  - desc: Llama 3采用混合专家架构，预训练数据规模达15万亿token，最大模型参数量超过4000亿。支持128K上下文长度，在MMLU、GSM8K等基准上性能持平GPT-4，同时开源7B、13B、70B三个版本，推理效率相比前代提升40%。
+  - desc: Gemini Embedding 2支持文本、图像、音频等多模态输入，生成统一高维向量，基于Transformer架构，在检索任务中实现SOTA性能，可广泛应用于AI代理与知识库构建。
     tags:
-    - 大语言模型
-    - 开源
-    - 混合专家
-    - Meta
-    title: Meta发布Llama 3：使用15T数据预训练，最大参数超4000亿
+    - 多模态嵌入
+    - 检索增强
+    - Transformer
+    - 谷歌AI
+    title: 谷歌发布Gemini Embedding 2：首个原生多模态嵌入模型
   Net:
-  - desc: 基于QUIC协议深度优化，引入零RTT连接建立与前向安全加密，在100ms延迟环境下吞吐量比传统TCP代理提升5倍。支持多路复用与流量伪装，头部开销仅2字节，已提交IETF草案，成为下一代隐私增强传输标准候选。
+  - desc: WebMCP（Web Model Context Protocol）允许AI代理直接与网页交互，将浏览器变为Agent工具箱，基于HTTP/3实现低延迟通信，推动Web自动化与智能体生态发展。
     tags:
-    - 网络协议
-    - QUIC
-    - 高性能代理
-    - 隐私增强
-    title: Tuic协议：下一代高速代理传输协议
+    - Web协议
+    - AI代理
+    - 浏览器自动化
+    - HTTP/3
+    title: WebMCP提案曝光：标准化Web与AI模型交互协议
   News:
-  - desc: o3/o4-mini首次引入图像思考机制，无需外部视觉编码器，直接处理像素级输入。在VQA、图像描述等任务上准确率超越GPT-4V，推理速度提升10倍，模型参数量仅20B，支持端到端多模态指令跟随。
+  - desc: Seed2.0作为多模态大模型平台，支持图像、视频、文本生成与推理，在多项基准测试中达到业界领先水平，开源版本供研究与商用。
     tags:
-    - OpenAI
-    - 视觉推理
+    - 大模型
     - 多模态
-    - 算力提升
-    title: OpenAI 发布 o3/o4-mini：视觉推理模型，算力提升十倍
+    - 开源
+    - 字节跳动
+    title: 字节跳动Seed2.0正式发布，对标GPT-5与Gemini 3 Pro
