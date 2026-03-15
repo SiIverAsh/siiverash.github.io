@@ -190,12 +190,12 @@ def get_ai_recommendation(context, history_titles):
     7. 对于Paper推荐，必须是近期的顶会论文（如ICLR, ACL, NeurIPS等），并提供真实论文链接（url）。
     8. 对于LLM推荐，推荐近期重要的大语言模型进展、开源模型或研究。
     9. 对于Algorithm推荐，推荐传统机器学习算法或常见基础算法。
-    10. 对于New Project推荐，必须是GitHub上近期Trending榜单里的高质量开源项目，提供真实链接（url）。
+    10. 对于New Project推荐，必须是GitHub上里的开源项目，提供真实链接（url）。
     11. 对于history推荐内容为“历史上的今天”，必须提供 6 条不同数据。
     12. **CV推荐 (声优相关)**：
        - 此项与 Tech 中的 Computer Vision 无关。
        - 必须严格参考**《声优名鉴》(声優名鑑)**数据。
-       - 必须包含：姓名(name)、所属事务所(agency)、出生地(hometown)、以及一段专业评价(intro,大约150字)。
+       - 必须包含：姓名(name)、所属事务所(agency)、出生地(hometown)、以及一段评价(intro,大约150字)。
        - **强制事实对齐**：如果搜索结果没提到，宁可不写，也不准编造。
        - **严禁提及**：绝对禁止提及任何具体的动漫作品或角色名称。
     13. 所有的回答请务必用中文。
