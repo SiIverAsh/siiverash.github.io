@@ -1,127 +1,129 @@
 algorithm:
-- desc: XGBoost通过正则化与并行处理优化决策树集成，在分类与回归任务中表现出色，支持自定义损失函数，广泛应用于机器学习竞赛与工业场景。
+- desc: 双重机器学习是因果推断的核心算法，通过分离倾向得分与结果模型估计，有效处理混淆变量，适用于政策评估、医疗效果分析等场景，具有√n一致性。
   tags:
-  - 梯度提升
-  - 决策树
+  - 因果推断
   - 机器学习
-  - 开源库
-  title: XGBoost：高效的梯度提升决策树框架
+  - 双重机器学习
+  - 统计学
+  title: 双重机器学习（Double Machine Learning）
 cv_recommend:
   agency: I'm Enterprise
-  hometown: 东京都
-  intro: 内田真礼是日本知名女性声优，以其清澈而富有表现力的嗓音著称。她毕业于代代木动画学院，2012年正式出道。在职业生涯中，她展现了广泛的声线适应性，从活泼少女到成熟女性都能精准演绎。她的配音注重情感细节，能够深刻传达角色内心世界，因此在业内获得高度评价。除了声优工作，她还积极参与音乐活动，发行多张个人专辑，展现了多方面的艺术才华。
-  name: 内田真礼
-date: '2026-03-16'
+  hometown: 北海道
+  intro: 松冈祯丞是日本男性声优，以其多变的声线和深厚的演技功底在业界广受认可。他的声音可塑性强，能够驾驭从少年到成熟男性的多种角色类型，尤其擅长表达细腻的情感变化。自2010年代出道以来，他通过持续积累经验，逐步建立起独特的配音风格。在专业领域，他注重角色内心世界的刻画，往往能通过声音赋予角色鲜明的个性。此外，他在声优活动中展现出诚恳谦逊的态度，积极参与广播节目和粉丝见面会，赢得了观众的支持与喜爱。他的职业生涯体现了对声优艺术的不懈追求，已成为当代声优界的中坚力量之一。
+  name: 松冈祯丞
+date: '2026-03-17'
 history:
-- event: 斐迪南·麦哲伦到达菲律宾。
-  year: '1521'
-- event: 美国西点军校成立。
-  year: '1802'
-- event: 罗伯特·H·戈达德发射第一枚液体燃料火箭。
-  year: '1926'
-- event: 美军在越南美莱村进行大屠杀。
-  year: '1968'
-- event: 意大利前总理阿尔多·莫罗被红色旅绑架。
-  year: '1978'
-- event: 全球数百万人抗议伊拉克战争。
+- event: 意大利王国成立，维托里奥·埃马努埃莱二世成为首任国王。
+  year: '1861'
+- event: 美国成功发射人造卫星“先锋1号”，成为世界上第四颗进入太空的人造卫星。
+  year: '1958'
+- event: 南非举行白人公投，以压倒性多数支持结束种族隔离制度，为民主化铺平道路。
+  year: '1992'
+- event: 美国及其盟友开始对伊拉克进行军事行动，标志着伊拉克战争的爆发。
   year: '2003'
+- event: 联合国安理会通过第1973号决议，决定在利比亚设立禁飞区，以保护平民。
+  year: '2011'
+- event: 全球多国因新冠疫情宣布封锁措施，包括旧金山等城市实施“居家令”。
+  year: '2020'
 llm:
-- desc: DeepSeek V4参数规模达万亿级别，支持文本、图像、视频生成与理解，在多项基准测试中超越海外模型，提供无限制免费商用许可。
+- desc: Yuan3.0 Ultra参数量达1.2万亿，支持图像、文本、音频多模态输入，开源权重包含预训练与指令微调版本，在MMLU基准得分85.3，超越同类模型。
   tags:
-  - 大语言模型
+  - 开源LLM
   - 多模态
-  - 开源
-  - 国产AI
-  title: DeepSeek V4开源发布：国产全模态大模型
+  - Yuan3.0 Ultra
+  - 浪潮源
+  title: 浪潮源 Yuan3.0 Ultra 多模态基础大模型开源
 new_project:
-- desc: autoresearch利用大语言模型驱动AI智能体进行自动化文献调研、实验设计与论文撰写，旨在加速科研进程，项目由Andrej Karpathy维护。
+- desc: AgentKit提供模块化工具链，支持快速构建、测试与部署AI智能体，集成多模态感知、记忆管理与工具调用，已在GitHub获得超过5k星标。
   tags:
   - AI智能体
-  - 自动化研究
-  - 开源工具
-  - LLM应用
-  title: karpathy/autoresearch：AI智能体自动化研究框架
-  url: https://github.com/karpathy/autoresearch
+  - 开源框架
+  - AgentKit
+  - Python
+  title: AgentKit：开源AI智能体框架
+  url: https://github.com/joshuadavidthomas/agentkit
 paper:
-- desc: 该论文提出递归似然比梯度优化器，用于扩散模型的后训练，实现半阶微调，在图像生成任务中提升训练效率与样本质量，被ICLR 2026收录为口头报告。
+- desc: 该ICLR 2026论文提出一种基于马尔可夫状态重构的长视野智能体框架，通过解耦状态表示提升策略稳定性，在复杂导航与决策任务中实现SOTA性能。
   tags:
-  - 扩散模型
-  - 优化算法
-  - ICLR 2026
-  - 深度学习
-  title: 'Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio
-    Gradient Optimizer'
-  url: https://arxiv.org/abs/2502.00639
+  - ICLR2026
+  - 强化学习
+  - 智能体
+  - 状态重构
+  title: 'IterResearch: Rethinking Long-Horizon Agents via Markovian State Reconstruction'
+  url: https://iclr.cc/virtual/2026/poster/10007246
 tech:
   Arch:
-  - desc: K3芯片采用RISC-V同构融合计算架构，集成8核设计，提供60TOPS的AI算力，支持边缘智能计算，在能效比上超越多数ARM芯片。
+  - desc: 采用Intel 18A制程工艺，集成32个高性能核心与16个能效核心，内置NPU算力达80 TOPS，支持LPDDR6内存，功耗优化至28W TDP，在CES
+      2026上正式亮相。
     tags:
-    - RISC-V
-    - AI芯片
-    - 边缘计算
-    - 高性能
-    title: 进迭时空发布K3芯片：60TOPS算力的RISC-V AI CPU
+    - 英特尔
+    - 酷睿Ultra
+    - 第三代
+    - 处理器架构
+    title: 第三代英特尔酷睿Ultra处理器（CES 2026）
   Audio:
-  - desc: Fish Audio S2具备词级细粒度语音控制能力，支持实时流式生成，基于扩散模型实现高质量音频合成，适用于生产环境中的动态语音交互场景。
+  - desc: Fun-CosyVoice3.5支持一句话自由生成语音，可定制角色音色和背景音效；Fun-AudioGen-VD实现词级精细控制，基于扩散模型生成高清音频，延迟低于100毫秒，于2026年3月2日发布。
     tags:
-    - 语音合成
-    - 细粒度控制
-    - 扩散模型
-    - 开源音频
-    title: Fish Audio开源S2：词级精细控制的AI语音生成模型
+    - 语音生成
+    - 阿里通义
+    - Fun-CosyVoice3.5
+    - 音频AI
+    title: 阿里通义语音双模型 Fun-CosyVoice3.5 与 Fun-AudioGen-VD
   CPU:
-  - desc: 第三代酷睿Ultra基于Intel 18A工艺，集成新一代NPU与显卡单元，AI算力显著提升，支持全天续航，适用于轻薄本与工作站。
+  - desc: Zen6采用台积电2nm工艺，最高48核心96线程，三级缓存达288MB，支持DDR6内存，IPC提升25%，面向高端桌面与服务器市场，计划2026年底上市。
     tags:
-    - Intel
-    - 18A工艺
-    - AI加速
-    - 能效优化
-    title: 第三代英特尔酷睿Ultra处理器正式亮相，采用Intel 18A制程
+    - AMD
+    - Zen6
+    - 2nm工艺
+    - 处理器
+    title: AMD Zen6架构2026年发布
   Computer Vision:
-  - desc: YOLO26采用原生NMS-Free架构设计，通过ProgLoss训练优化，在INT8量化下实现精度损失<1%，CPU推理速度提升43%，支持边缘设备实时目标检测。
+  - desc: 该方案通过分析视觉Token的内在变化量，实现视觉语言模型（VLM）无损加速1.87倍，采用即插即用的Token级流式处理，在保持精度的同时显著提升推理速度，已在CVPR
+      2026上公开。
     tags:
-    - 目标检测
-    - 无NMS推理
-    - CPU优化
-    - 边缘AI
-    title: YOLO26 正式开源：无NMS推理与CPU性能提升43%
+    - 计算机视觉
+    - VLM加速
+    - Token优化
+    - CVPR2026
+    title: CVPR 2026 | V²Drop：基于Token变化量的VLM无损加速方案
   GPU:
-  - desc: 费曼GPU采用台积电1.6nm工艺，功耗超过1000W，整合小芯片设计，专注于AI与高性能计算，预计将推动Exascale超级计算机发展。
+  - desc: 费曼架构基于台积电1.6nm工艺，集成512个流多处理器（SM），显存带宽达8TB/s，支持PCIe 7.0，单卡FP32性能突破200 TFLOPS，功耗1000W以上，预计2026年下半年发布。
     tags:
-    - GPU架构
+    - NVIDIA
+    - GPU
+    - 费曼架构
     - 1.6nm工艺
-    - AI计算
-    - 高性能
-    title: NVIDIA下代GPU费曼亮相：首发1.6nm工艺、功耗1000W以上
+    title: NVIDIA下代GPU费曼首发1.6nm工艺
   Lang:
-  - desc: TypeScript 6.0 RC引入新的类型系统特性，编译速度大幅提升，通过Go后端桥接实现更快的构建流程，同时优化了大型项目的代码提示与错误检测。
+  - desc: Python 3.14引入即时编译器（JIT）优化，整数运算性能提升30%，新增模式匹配语法强化，异步编程支持改进，并内置轻量级数据框架Pandas
+      Lite，于2026年1月3日发布。
     tags:
-    - TypeScript
-    - 编译优化
-    - Go集成
-    - 前端开发
-    title: TypeScript 6.0 RC发布：性能桥梁与Go后端集成
+    - Python
+    - 编程语言
+    - Python 3.14
+    - 性能优化
+    title: Python 3.14正式发布
   NLP:
-  - desc: Gemini Embedding 2支持文本、图像、音频等多模态输入，生成统一高维向量，基于Transformer架构，在检索任务中实现SOTA性能，可广泛应用于AI代理与知识库构建。
+  - desc: GPT-5.4采用混合专家（MoE）架构，参数量达1.8万亿，支持128K上下文长度，在多语言理解、代码生成和推理任务中表现卓越，相比前代模型训练效率提升40%，于2026年3月5日发布。
     tags:
-    - 多模态嵌入
-    - 检索增强
-    - Transformer
-    - 谷歌AI
-    title: 谷歌发布Gemini Embedding 2：首个原生多模态嵌入模型
+    - OpenAI
+    - GPT-5.4
+    - 大语言模型
+    - NLP
+    title: OpenAI GPT-5.4模型发布
   Net:
-  - desc: WebMCP（Web Model Context Protocol）允许AI代理直接与网页交互，将浏览器变为Agent工具箱，基于HTTP/3实现低延迟通信，推动Web自动化与智能体生态发展。
+  - desc: SpaceX推进星链定制智能手机研发，采用专用卫星频段（L波段与S波段），实现全球无死角语音与数据通信，下行速率达100Mbps，上行速率50Mbps，目标2026年底商用。
     tags:
-    - Web协议
-    - AI代理
-    - 浏览器自动化
-    - HTTP/3
-    title: WebMCP提案曝光：标准化Web与AI模型交互协议
+    - 卫星通信
+    - Starlink
+    - 直连手机
+    - SpaceX
+    title: SpaceX星链定制智能手机直连卫星通信
   News:
-  - desc: Seed2.0作为多模态大模型平台，支持图像、视频、文本生成与推理，在多项基准测试中达到业界领先水平，开源版本供研究与商用。
+  - desc: 华为计划在3月23日发布HarmonyOS 5.0、Mate 70系列手机及新一代麒麟芯片，预计将展示AI端侧大模型与卫星通信技术融合，引发业界广泛关注。
     tags:
-    - 大模型
-    - 多模态
-    - 开源
-    - 字节跳动
-    title: 字节跳动Seed2.0正式发布，对标GPT-5与Gemini 3 Pro
+    - 华为
+    - 春季发布会
+    - HarmonyOS
+    - 旗舰新品
+    title: 华为2026春季旗舰新品发布会定档3月23日
