@@ -1,4 +1,20 @@
 {
+  "2026-03-18": [
+    "递归似然比梯度优化器赋能扩散模型后训练",
+    "随机森林：经典集成学习算法",
+    "ARM Neoverse V3：云计算与AI服务器架构",
+    "NVIDIA RTX PRO 5000 72GB Blackwell：专业级AI显卡",
+    "OpenAI Whisper：开源语音识别模型",
+    "AMD Ryzen 9000系列：Zen 5桌面处理器",
+    "花泽香菜",
+    "阿里发布全球首个企业级Agent平台“悟空”",
+    "Fish Speech V1.5：百度多语言TTS模型",
+    "通义万相2.6：阿里云全能视频生成模型",
+    "Wi-Fi 7：下一代无线网络标准",
+    "DeepSeek-V3.2：强化Agent能力的开源LLM",
+    "Python 3.13：JIT编译器与性能革新",
+    "百度文心大模型4.5：开源多模态LLM"
+  ],
   "2026-03-17": [
     "OpenAI GPT-5.4模型发布",
     "华为2026春季旗舰新品发布会定档3月23日",
@@ -139,21 +155,5 @@
     "SAM 3: Segment Anything with Concepts",
     "MiniMax Speech 2.6：超拟人语音生成模型",
     "TypeScript 6.0 RC：强化类型系统与性能"
-  ],
-  "2026-03-08": [
-    "Google Gemini 3.1 Pro：推理性能翻倍，成本效率突破",
-    "Intel Xe3P：下一代Xe架构独立GPU",
-    "国产500+比特超导量子芯片发布，千比特已在路上",
-    "Intel 至强6+：288核心服务器处理器",
-    "进迭时空K3芯片：全球首款RVA23高性能RISC-V AI芯片",
-    "MiniMax Speech-01：超拟人多情感语音生成模型",
-    "长谷川育美",
-    "Meta Llama 4：开源多模态大模型",
-    "YOLO26：下一代实时目标检测模型",
-    "梯度提升决策树（GBDT）：经典集成学习算法",
-    "Go 1.26：性能提升与智能工具链",
-    "WebMCP：W3C官方AI代理浏览器交互标准",
-    "OpenClaw：AI智能体助手框架",
-    "Theoretical Modeling of Large Language Model Self-Improvement Training Dynamics Through Solver-Verifier Gap"
   ]
 }
