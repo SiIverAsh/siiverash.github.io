@@ -1,4 +1,20 @@
 {
+  "2026-03-19": [
+    "NVIDIA RTX 5090 Ti: 750W功耗性能提升15%",
+    "Rust 2.0: 革新系统编程语言",
+    "3DThinker: 3D-Aware Visual Reasoning with Mental Imagery",
+    "ARM v9.5架构: 性能与灵活性新高度",
+    "The Agency: AI智能体专家团队库",
+    "内田真礼",
+    "OpenAI Voice Engine 2026: 15秒复刻人声",
+    "阿里发布全新AI产品‘悟空’",
+    "3DThinker: 首个具备3D‘脑补’能力的视觉大模型",
+    "Google Gemini 2.0: 全线升级的多模态AI模型",
+    "RandOpt: 随机优化新算法",
+    "DeepSeek-V3: 开源大语言模型新标杆",
+    "AMD Ryzen AI 400G系列: Zen 5桌面APU",
+    "6G研发进入系统集成新阶段"
+  ],
   "2026-03-18": [
     "递归似然比梯度优化器赋能扩散模型后训练",
     "随机森林：经典集成学习算法",
@@ -140,20 +156,5 @@
     "GPT-5.4：OpenAI新一代多模态大模型",
     "Intel Arc B770 Battlemage显卡",
     "华为U6GHz全系列网络产品"
-  ],
-  "2026-03-09": [
-    "AMD Radeon RX 9060 XT LP：低功耗RDNA 4显卡",
-    "通义千问开源首个MoE模型：Qwen-MoE",
-    "AI爆发倒逼网络升级：U6GHz与AI超节点",
-    "英特尔Nova Lake处理器：52核心新架构",
-    "XGBoost 3.2.0：多目标输出与GPU优化",
-    "松冈祯丞",
-    "SAM 3：Meta新一代视觉分割模型",
-    "华为云发布盘古大模型3.0和昇腾AI云服务",
-    "OpenClaw：开源AI智能体框架",
-    "Intel Arrow Lake Refresh：能效核与三级缓存升级",
-    "SAM 3: Segment Anything with Concepts",
-    "MiniMax Speech 2.6：超拟人语音生成模型",
-    "TypeScript 6.0 RC：强化类型系统与性能"
   ]
 }
