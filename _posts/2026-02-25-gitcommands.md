@@ -183,3 +183,8 @@ git rebase --abort
 ``` 
 git cherry-pick <commit_id>
 ```
+
+### 6.5 查看存储库占用
+```
+git count-objects -vH
+```
