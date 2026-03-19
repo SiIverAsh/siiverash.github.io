@@ -1,12 +1,19 @@
 ---
 categories:
 - emo
-date: 
+date: 2026-03-19 11:50:51 +0800
 layout: post
 tags:
+- 随笔
+- 软件开发
+- 版本控制
+- 编程工具
+- 网络配置
 title: 该个人网站的整体架构以及后续重构的想法
 subject: ''
 ---
+
+
 
 
 
