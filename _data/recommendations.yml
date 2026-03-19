@@ -1,127 +1,132 @@
 algorithm:
-- desc: 由MIT提出，通过随机梯度估计减少调参需求，在非凸优化问题上收敛速度提升3倍，已开源实现，适用于大规模机器学习任务。
+- desc: 随机森林作为经典集成学习算法，通过NVIDIA cuML森林推理库实现GPU加速，支持批量推理吞吐量提升100倍。最新优化包括基于直方图的特征分裂与并行树构建，在大型数据集上训练速度加快50%。
   tags:
-  - 优化算法
-  - 随机梯度
-  - MIT
-  - 开源
-  title: 'RandOpt: 随机优化新算法'
+  - 机器学习
+  - 随机森林
+  - GPU加速
+  - 传统算法
+  title: 随机森林算法与GPU加速推理
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 日本千叶县
-  intro: 内田真礼是日本知名声优，以清澈多变的声线和精湛的演技著称。她擅长演绎从活泼少女到冷峻角色的多种类型，职业生涯中多次获得声优奖项肯定，包括声优奖主演女优奖。除了配音工作，她在音乐领域也有活跃表现，发行过多张单曲和专辑，备受粉丝喜爱。她的专业素养和广泛的作品范围使其在业内享有很高声誉。
-  name: 内田真礼
-date: '2026-03-19'
+  agency: VIMS
+  hometown: 东京都
+  intro: 梶裕貴是日本知名声优，2006年出道。他以清澈而富有穿透力的少年音著称，嗓音辨识度极高，擅长演绎热血、温柔、深沉等多种角色类型。在配音工作中注重情感表达与角色融合，凭借扎实的演技获得多项声优奖项，包括声优奖主演男优奖。其专业态度与多变的声线备受业界认可，被誉为声优界的实力派代表。
+  name: 梶裕貴
+date: '2026-03-20'
 history:
-- event: 崖山海战，南宋灭亡。
-  year: '1279'
-- event: 太平天国攻占江宁（南京）。
-  year: '1853'
-- event: 冥王星首次被拍摄。
-  year: '1915'
-- event: 悉尼海港大桥通车。
-  year: '1932'
-- event: 第二次世界大战中盟军占领科隆。
-  year: '1945'
-- event: 伊拉克战争开始。
+- event: 拿破仑·波拿巴加冕为法国皇帝。
+  year: '1804'
+- event: 哈里特·比彻·斯托的小说《汤姆叔叔的小屋》正式出版。
+  year: '1852'
+- event: 阿尔伯特·爱因斯坦的广义相对论论文正式发表。
+  year: '1916'
+- event: 突尼斯脱离法国殖民统治，宣布独立。
+  year: '1956'
+- event: 东京地铁发生沙林毒气事件，造成多人伤亡。
+  year: '1995'
+- event: 美国及其盟友发动伊拉克战争。
   year: '2003'
 llm:
-- desc: 参数规模340B，支持128K上下文，在中文和英文基准测试中均超越Llama 3，采用MoE架构，推理效率高，已完全开源。
+- desc: DeepSeek-V4于2026年3月发布，参数量1万亿，上下文长度100万token，在多项基准测试中超越GPT-4。采用MoE架构，开源版本包括基座、对话与代码模型，支持中文、英文等多语言任务。
   tags:
-  - 开源模型
-  - DeepSeek
   - 大语言模型
-  - MoE
-  title: 'DeepSeek-V3: 开源大语言模型新标杆'
-new_project:
-- desc: GitHub趋势项目，提供55个AI专家角色，支持自定义工作流，用于构建虚拟AI公司，已获数千星标，采用模块化设计。
-  tags:
-  - AI智能体
   - 开源
+  - DeepSeek
+  - AI
+  title: 'DeepSeek-V4: 开源万亿参数大模型'
+new_project:
+- desc: OpenClaw是2026年3月活跃的开源项目，集成视觉、语言与语音模块，支持端到端多模态任务。采用模块化设计，提供预训练模型与微调工具，GitHub星标数快速增长。
+  tags:
+  - 开源项目
+  - 多模态AI
   - GitHub
-  - 自动化
-  title: 'The Agency: AI智能体专家团队库'
-  url: https://github.com/msitarzewski/agency-agents
+  - Python
+  title: 'OpenClaw: 开源多模态AI框架'
+  url: https://github.com/openclaw/openclaw
 paper:
-- desc: CVPR 2026最佳论文候选，提出首个通过心理意象实现3D推理的视觉大模型，在3D场景理解任务中超越现有方法。
+- desc: 该论文发表于ICLR 2026，提出将法线估计重构为阴影序列预测问题，通过时序扩散模型生成多光照条件下的阴影序列，进而回归表面法线。在ScanNet与NYUv2数据集上达到SOTA，平均角度误差降低至12.5度。
   tags:
   - 计算机视觉
-  - 3D推理
-  - 心理意象
-  - CVPR 2026
-  title: '3DThinker: 3D-Aware Visual Reasoning with Mental Imagery'
-  url: https://zhuanlan.zhihu.com/p/2015010183710003247
+  - 三维重建
+  - 法线估计
+  - ICLR 2026
+  title: 'RoSE: Monocular Normal Estimation via Shading Sequence Prediction'
+  url: https://arxiv.org/abs/2602.09929
 tech:
   Arch:
-  - desc: 采用新一代Cortex-X5超大核，机器学习性能提升2倍，小核首次更新4年，支持DDR6内存和PCIe 6.0，能效比提升30%，面向移动和服务器市场。
+  - desc: UCIe 1.5标准支持每引脚32Gbps数据速率，总带宽达256GB/s，延迟低于10ns。新增光学互连规范，支持CPO共封装光学，传输距离扩展至100米。兼容PCIe
+      6.0与CXL 3.0，实现异构Chiplet内存一致性访问。已获英特尔、AMD、台积电等厂商支持。
     tags:
-    - 处理器架构
-    - ARM
-    - 能效
-    - 机器学习
-    title: 'ARM v9.5架构: 性能与灵活性新高度'
+    - 芯片设计
+    - Chiplet
+    - 互连标准
+    - 高性能计算
+    title: 'UCIe 1.5: 通用芯片互连标准更新'
   Audio:
-  - desc: 采用扩散模型技术，仅需15秒音频即可克隆音色，支持情感控制和多语言生成，延迟低于100毫秒，已通过安全审核并开放API，音质自然度达4.8分（5分制）。
+  - desc: MiMo-V2-TTS基于扩散模型与Transformer架构，参数量达30亿，支持普通话、河南话、粤语等10种方言，音色克隆仅需3秒样本。在MOS测试中获4.5分，实时推理延迟低于200ms。集成情感控制模块，可调节语速、语调与情感强度，适用于实时交互场景。
     tags:
     - 语音合成
-    - AI克隆
-    - OpenAI
-    - 低延迟
-    title: 'OpenAI Voice Engine 2026: 15秒复刻人声'
+    - TTS
+    - 多方言
+    - AI生成
+    title: '小米MiMo-V2-TTS: 多方言语音合成大模型'
   CPU:
-  - desc: 集成Zen 5 CPU核心和RDNA 3.5 GPU，NPU算力提升212%，支持LPDDR5X内存，TDP范围15-65W，专为AI PC设计，性能较上代提升35%。
+  - desc: 第三代Intel Core Ultra采用Intel 18A工艺，集成8个性能核与16个能效核，最高频率5.8GHz。搭载Arc Xe-LPG+核显，性能较前代提升50%。支持LPDDR6内存，功耗降低30%。AI引擎NPU算力达60
+      TOPS，支持本地200亿参数模型推理。
     tags:
-    - 处理器
-    - AMD
-    - Zen 5
+    - CPU
+    - Intel
+    - 18A工艺
     - AI PC
-    title: 'AMD Ryzen AI 400G系列: Zen 5桌面APU'
+    title: 'Intel Core Ultra 系列3: 18A工艺处理器'
   Computer Vision:
-  - desc: 由清华和美团在CVPR 2026上提出，采用多视角推理机制，支持从单张图像生成连贯的3D语义表示，在NuScenes数据集上达到SOTA，模型参数量达50B。
+  - desc: YOLO26采用NMS-Free原生架构，支持Nano、Small、Medium、Large、XLarge五种尺寸，在COCO数据集上实现平均精度(mAP)达56.7%，同时推理速度较前代提升40%。引入螺旋感知特征融合(SFS)模块，增强跨尺度特征交互，尤其针对小目标检测优化噪声抑制能力。
     tags:
+    - 目标检测
+    - 实时推理
     - 计算机视觉
-    - 3D理解
-    - 视觉大模型
-    - CVPR 2026
-    title: '3DThinker: 首个具备3D‘脑补’能力的视觉大模型'
+    - YOLO
+    title: 'YOLO26: 下一代实时目标检测模型'
   GPU:
-  - desc: 基于Blackwell Next架构，采用台积电3nm工艺，16384个CUDA核心，48GB GDDR7显存，光线追踪性能提升70%，FP32算力达120
-      TFLOPS，预计2026年Q3发布。
+  - desc: AMD采用台积电3nm工艺打造MI355X GPU，集成1530亿晶体管，FP8算力达10 PetaFLOPS，较上代提升35倍。搭载128GB
+      HBM3e内存，带宽8TB/s，支持FP8、FP16、BF16混合精度训练。针对大模型推理优化，Llama 3-70B推理吞吐量达5000 token/秒。
     tags:
-    - 显卡
-    - NVIDIA
-    - 游戏
-    - AI计算
-    title: 'NVIDIA RTX 5090 Ti: 750W功耗性能提升15%'
+    - GPU
+    - AI加速
+    - 3nm工艺
+    - AMD
+    title: 'AMD 3nm GPU: 新一代AI推理加速器'
   Lang:
-  - desc: 引入所有权系统2.0，减少内存管理开销，支持异步无栈协程，编译速度提升40%，兼容性层平滑迁移旧版本代码，已在Linux内核中试用。
+  - desc: Java 26基于OpenJDK 26，引入模式匹配增强、向量API正式版、值类型预览等特性。ZGC垃圾回收器暂停时间降至1ms以下，GraalVM
+      Native Image性能提升50%。支持Project Valhalla的值类型，内存占用减少40%。官方基准显示，Spring Boot应用启动时间加快35%。
     tags:
     - 编程语言
-    - 系统编程
-    - Rust
+    - Java
     - 性能优化
-    title: 'Rust 2.0: 革新系统编程语言'
+    - JVM
+    title: 'Java 26: Oracle新一代LTS版本'
   NLP:
-  - desc: 基于新一代Transformer架构，支持128K上下文长度，在MMLU基准测试中得分92.5%，集成强化学习对齐技术，提供更安全的对话生成，支持多模态输入输出。
+  - desc: DeepSeek-V4拥有1万亿参数，支持100万token上下文长度，在MMLU、GSM8K、HumanEval等基准测试中综合得分达85.6%，超越GPT-4。采用混合专家(MoE)架构，激活参数仅360亿，实现高效推理。支持多模态输入与代码生成，开源版本涵盖基座、对话、代码专用变体。
     tags:
     - 大语言模型
-    - 多模态
-    - Google
-    - AI代理
-    title: 'Google Gemini 2.0: 全线升级的多模态AI模型'
+    - 开源
+    - 深度学习
+    - NLP
+    title: 'DeepSeek-V4: 万亿参数开源大语言模型'
   Net:
-  - desc: 国际电信联盟启动6G标准制定，重点研究太赫兹通信、AI原生空口和语义网络，峰值速率预计达1Tbps，时延低于0.1毫秒，预计2030年商用。
+  - desc: WebTransport API基于QUIC协议，提供低延迟、可靠的双向数据流传输，支持Unreliable Datagrams与可靠流混合传输。在Chrome
+      122+中默认启用，实测延迟较WebSocket降低60%，吞吐量提升3倍。内置拥塞控制与前向纠错(FEC)，适用于实时游戏、视频会议等场景。
     tags:
-    - 6G
-    - 通信技术
-    - 太赫兹
-    - AI原生
-    title: 6G研发进入系统集成新阶段
+    - 网络协议
+    - Web开发
+    - 实时通信
+    - QUIC
+    title: 'WebTransport API: 下一代Web双向通信协议'
   News:
-  - desc: 阿里云推出企业级AI原生平台，集成千问大模型和钉钉工作流，支持自然语言编程和自动化决策，已向全球企业开放，预计降低开发成本50%。
+  - desc: “悟空”平台集成多模态理解、规划与工具调用能力，支持10万级并发Agent实例。内置行业知识库与工作流引擎，可定制金融、制造等场景解决方案。采用混合云部署，数据隔离符合ISO
+      27001标准。开放API支持第三方插件生态，已接入100+企业服务。
     tags:
+    - AI Agent
+    - 企业服务
     - 阿里巴巴
-    - AI平台
-    - 企业应用
-    - 云计算
-    title: 阿里发布全新AI产品‘悟空’
+    - 自动化
+    title: 阿里巴巴发布企业级Agent平台“悟空”

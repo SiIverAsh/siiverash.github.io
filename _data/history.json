@@ -1,4 +1,20 @@
 {
+  "2026-03-20": [
+    "WebTransport API: 下一代Web双向通信协议",
+    "阿里巴巴发布企业级Agent平台“悟空”",
+    "RoSE: Monocular Normal Estimation via Shading Sequence Prediction",
+    "随机森林算法与GPU加速推理",
+    "DeepSeek-V4: 万亿参数开源大语言模型",
+    "梶裕貴",
+    "Intel Core Ultra 系列3: 18A工艺处理器",
+    "YOLO26: 下一代实时目标检测模型",
+    "小米MiMo-V2-TTS: 多方言语音合成大模型",
+    "AMD 3nm GPU: 新一代AI推理加速器",
+    "DeepSeek-V4: 开源万亿参数大模型",
+    "Java 26: Oracle新一代LTS版本",
+    "OpenClaw: 开源多模态AI框架",
+    "UCIe 1.5: 通用芯片互连标准更新"
+  ],
   "2026-03-19": [
     "NVIDIA RTX 5090 Ti: 750W功耗性能提升15%",
     "Rust 2.0: 革新系统编程语言",
@@ -140,21 +156,5 @@
     "NVIDIA Vera Rubin 新一代AI平台架构",
     "Intel Arc Pro B70 新一代专业显卡",
     "羊宫妃那"
-  ],
-  "2026-03-10": [
-    "SAM 3: Meta新一代视觉分割模型",
-    "OpenAI BiDi双向语音模型",
-    "通义千问QwQ-32B开源推理模型",
-    "鬼头明里",
-    "localGPT：本地文档聊天AI",
-    "华为首款7nm ARM服务器芯片",
-    "CatBoost 1.2.8：梯度提升库重大更新",
-    "ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware Semantic Analysis and Sparsity Optimization",
-    "OpenAI发布GPT-5.4大一统模型",
-    "AMD Zen 6架构确认2026年发布",
-    "TypeScript 6.0 RC发布",
-    "GPT-5.4：OpenAI新一代多模态大模型",
-    "Intel Arc B770 Battlemage显卡",
-    "华为U6GHz全系列网络产品"
   ]
 }
