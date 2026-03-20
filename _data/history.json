@@ -1,4 +1,20 @@
 {
+  "2026-03-21": [
+    "NVIDIA Vera Rubin GPU 平台",
+    "vLLM: High-throughput LLM Inference Engine",
+    "特斯拉发布Optimus Gen2人形机器人",
+    "Anthropic Claude 4 系列模型",
+    "进迭时空首发8核RISC-V AI CPU",
+    "Qwen3-TTS 开源语音生成模型",
+    "神谷浩史",
+    "Ruby 4.0.0 编程语言正式发布",
+    "Gated Attention for Large Language Models",
+    "3GPP Release 19 5G-Advanced 标准",
+    "Meta Llama 4 多模态大语言模型",
+    "梯度提升决策树（GBDT）",
+    "Apple M4 芯片正式亮相",
+    "ViT-5: Vision Transformers for The Mid-2020s"
+  ],
   "2026-03-20": [
     "WebTransport API: 下一代Web双向通信协议",
     "阿里巴巴发布企业级Agent平台“悟空”",
@@ -140,21 +156,5 @@
     "Intel Nova Lake：2026年末发布的全新CPU架构",
     "通义千问Qwen3.5：阿里新一代开源大模型",
     "UniAudioGen：统一音频生成模型在ICLR 2026上实现SOTA"
-  ],
-  "2026-03-11": [
-    "LightGBM 4.6.0 发布与性能优化",
-    "MDReID：跨模态解耦学习的新范式",
-    "QQ浏览器全面AI化：推出QBot助手",
-    "TypeScript 6.0 RC 新特性详解",
-    "Qwen3.5 新一代开源大语言模型",
-    "AONP 智能体互联网开放网络协议框架",
-    "AMD Zen 6 架构：2nm工艺与48核设计",
-    "通义Qwen3-VL 32B视觉语言模型",
-    "MiroFish：轻量级群智能优化框架",
-    "Yuan3.0 Ultra：万亿参数多模态大模型",
-    "Qwen3-TTS 高质量语音合成与克隆系统",
-    "NVIDIA Vera Rubin 新一代AI平台架构",
-    "Intel Arc Pro B70 新一代专业显卡",
-    "羊宫妃那"
   ]
 }
