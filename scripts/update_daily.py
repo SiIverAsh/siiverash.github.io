@@ -170,7 +170,7 @@ def get_ai_recommendation(context, history_titles):
     if not api_key:
         return None
 
-    history_str = "、".join(history_titles[-30:]) if history_titles else "无"
+    history_str = "、".join(history_titles[:60]) if history_titles else "无"
 
     prompt_template = """
     Please think carefully, lowely and accurately.
