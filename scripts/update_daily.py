@@ -190,7 +190,7 @@ def get_ai_recommendation(context, history_titles):
     7. 对于Paper推荐，必须是近期的顶会论文（如ICLR, ACL, NeurIPS等），并提供真实论文链接（url）。
     8. 对于LLM推荐，推荐近期重要的大语言模型进展、开源模型或研究。
     9. 对于Algorithm推荐，推荐传统机器学习算法或常见基础算法。
-    10. 对于New Project推荐，必须是GitHub上里的开源项目，提供真实链接（url）。
+    10. 对于New Project推荐，必须是GitHub上里的开源项目，不一定是最新的，但必须提供真实链接（url）。
     11. 对于history推荐内容为“历史上的今天”，必须提供 6 条不同数据。
     12. **CV推荐 (声优相关)**：
        - 此项与 Tech 中的 Computer Vision 无关。
