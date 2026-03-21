@@ -1,127 +1,129 @@
 algorithm:
-- desc: GBDT是一种集成学习算法，通过迭代训练决策树来最小化损失函数，适用于回归与分类任务。具有高精度与可解释性，支持特征重要性评估，广泛用于搜索排序与金融风控。
+- desc: DBSCAN（Density-Based Spatial Clustering of Applications with Noise）是一种基于密度的聚类算法，无需预先指定簇数量，能有效识别噪声点。适用于空间数据聚类，时间复杂度为O(n
+    log n)。
   tags:
-  - 集成学习
-  - 决策树
-  - 机器学习算法
-  - 可解释AI
-  title: 梯度提升决策树（GBDT）
+  - 聚类算法
+  - 无监督学习
+  - 密度聚类
+  - 机器学习
+  title: 'DBSCAN: 基于密度的聚类算法'
 cv_recommend:
-  agency: 青二Production
-  hometown: 千叶县松户市
-  intro: 神谷浩史是日本一线男性声优，以其多变的声线和精湛的演技在业界享有极高声誉。他擅长演绎从热血青年到冷静理智的各类角色，声音兼具清澈与张力，能够精准捕捉人物情感。曾多次获得声优奖项，包括“声优奖”主演男优奖，其专业素养和持续的作品输出使他成为声优行业的标杆人物。除了配音工作，他还积极参与广播节目和活动，展现了广泛的娱乐才能。
-  name: 神谷浩史
-date: '2026-03-21'
+  agency: I'm Enterprise
+  hometown: 北海道
+  intro: 松冈祯丞是日本男性声优，以其独特的嗓音和广泛的角色演绎范围而闻名。他于2010年代初期出道，迅速成为业界中坚力量。其专业态度和扎实的演技功底赢得了众多粉丝的喜爱。
+  name: 松冈祯丞
+date: '2026-03-22'
 history:
-- event: 德国作曲家约翰·塞巴斯蒂安·巴赫出生，被誉为“西方音乐之父”。
-  year: '1685'
-- event: 拿破仑颁布《民法典》（又称《拿破仑法典》），成为现代民法体系的基础。
-  year: '1804'
-- event: 第一次世界大战中，德军发动“皇帝会战”春季攻势，企图突破联军防线。
-  year: '1918'
-- event: 南非沙佩维尔大屠杀发生，69名示威者被警方枪杀，成为反种族隔离运动的重要事件。
+- event: 卢米埃尔兄弟在巴黎首次放映电影，标志着电影时代的开始。
+  year: '1895'
+- event: 激光专利授予肖洛和汤斯，为激光技术发展奠定基础。
   year: '1960'
-- event: 美国阿尔卡特拉斯联邦监狱正式关闭，该监狱以关押重刑犯而闻名。
-  year: '1963'
-- event: 杰克·多西发送第一条推文，社交媒体平台推特（现X）正式诞生。
-  year: '2006'
+- event: 英特尔开始发售奔腾处理器，推动个人电脑性能飞跃。
+  year: '1993'
+- event: 海尔-波普彗星最接近地球，成为20世纪最亮彗星之一。
+  year: '1997'
+- event: 布鲁塞尔发生连环爆炸案，造成重大人员伤亡。
+  year: '2016'
+- event: 联合国设立世界水日，旨在提高全球水资源保护意识。
+  year: '1993'
 llm:
-- desc: Claude 4采用宪法AI技术，支持100万令牌上下文，在HumanEval编码基准上得分92.5%。具备高级推理与多轮对话能力，模型参数规模未公开，提供API与企业级部署方案。
+- desc: 阿里于2026年2月开源Qwen3.5大语言模型，参数量3970亿，在多项基准测试中超越万亿参数模型。支持128K上下文，最大吞吐量提升至19倍，专为企业级应用优化。
   tags:
-  - 大语言模型
-  - 宪法AI
-  - 编码能力
-  - 长上下文
-  title: Anthropic Claude 4 系列模型
+  - 开源LLM
+  - 千问
+  - 大参数
+  - 企业级
+  title: 'Qwen3.5: 阿里开源3970亿参数大语言模型'
 new_project:
-- desc: vLLM采用PagedAttention技术实现高吞吐量与内存高效的LLM推理，支持连续批处理与动态内存管理。相比Hugging Face Transformers，推理速度提升24倍，已集成到众多生产系统。
+- desc: MiroFish 是GitHub上趋势第一的AI群智能引擎，支持百万级智能体协同预测。采用分布式架构，可实现复杂环境模拟与决策优化，已获28K星标。
   tags:
-  - LLM推理
+  - 群智能
   - 开源
-  - 高性能
-  - Python
-  title: 'vLLM: High-throughput LLM Inference Engine'
-  url: https://github.com/vllm-project/vllm
+  - AI引擎
+  - GitHub趋势
+  title: 'MiroFish: AI群智能引擎'
+  url: https://github.com/666ghj/MiroFish
 paper:
-- desc: 该论文提出门控注意力机制，动态控制注意力头激活，在保持性能的同时减少计算开销。在LLaMA-3B模型上实现20%推理速度提升，被NeurIPS 2025收录为最佳论文候选。
+- desc: 该论文被ICLR 2026接收，提出了一种利用历史激活信息来增强图神经网络表达能力的新方法。通过引入时间注意力机制，模型在节点分类和链接预测任务上实现了显著提升。
   tags:
+  - 图神经网络
+  - 历史激活
+  - ICLR 2026
   - 注意力机制
-  - 大语言模型
-  - 高效推理
-  - NeurIPS 2025
-  title: Gated Attention for Large Language Models
-  url: https://arxiv.org/abs/2505.06708
+  title: Learning from Historical Activations in Graph Neural Networks
+  url: https://iclr.cc/virtual/2026/poster/10011197
 tech:
   Arch:
-  - desc: SpacemiT Key Stone K3采用8核RISC-V同构融合架构，主频3.0 GHz，集成FP16/BF16 AI加速单元，功耗15W。支持硬件虚拟化与DDR5-8000内存，AI算力达50
-      TOPS。
+  - desc: NVIDIA Vera CPU 于2026年3月发布，专为代理式AI设计，采用台积电2nm工艺，集成1200亿晶体管。架构上融合ARM Neoverse
+      V3核心与专属AI加速单元，性能较前代提升2倍，功耗降低50%。
     tags:
-    - RISC-V
     - AI芯片
-    - 处理器架构
-    - 低功耗
-    title: 进迭时空首发8核RISC-V AI CPU
+    - 2nm工艺
+    - ARM架构
+    - 服务器CPU
+    title: 'NVIDIA Vera CPU: 专为代理式AI设计的2nm芯片'
   Audio:
-  - desc: Qwen3-TTS基于LLM与残差向量量化（RVQ）架构，支持零样本语音克隆，音色相似度达98%。支持中英日等10种语言，模型参数3B，实时推理延迟低于200ms。
+  - desc: Covo-Audio 是腾讯于2026年3月开源的7B参数端到端音频大模型，支持全双工对话和音色解耦。采用流式推理架构，可实现高保真音频生成与实时交互，在音频理解任务上达到SOTA。
     tags:
-    - 语音合成
-    - 语音克隆
+    - 音频生成
+    - 端到端
     - 开源
-    - 多语言
-    title: Qwen3-TTS 开源语音生成模型
+    - TTS
+    title: 'Covo-Audio: 腾讯开源7B端到端音频大模型'
   CPU:
-  - desc: Apple M4采用第二代3nm工艺，配备10核CPU（4性能核+6能效核）与16核GPU，支持硬件光线追踪。神经引擎性能达40 TOPS，能效比提升50%。
+  - desc: AMD EPYC 8005系列于2026年2月发布，采用Zen5c架构，最高84核168线程，TDP仅225W。支持PCIe 6.0和DDR5-6400内存，专为智能边缘与数据中心设计，每瓦性能提升30%。
     tags:
-    - Apple Silicon
-    - 3nm工艺
-    - 移动处理器
-    - AI加速
-    title: Apple M4 芯片正式亮相
+    - 服务器CPU
+    - Zen5c
+    - 84核
+    - 能效
+    title: 'AMD EPYC 8005系列: Zen5c架构84核服务器处理器'
   Computer Vision:
-  - desc: ViT-5采用分层注意力机制与动态窗口划分，支持最高1024x1024分辨率输入，在ImageNet-26K上达到95.2% top-1准确率。模型参数规模达10B，使用混合精度训练，相比ViT-4推理速度提升1.5倍。
+  - desc: InternVL-U 是上海AI Lab于2026年3月开源的轻量级统一多模态模型，仅4B参数即可实现理解、推理、生成、编辑全栈能力。采用Transformer架构，支持图像、视频、文本多模态输入，在多项基准测试中超越14B参数模型。
     tags:
+    - 多模态
+    - 轻量级
+    - 开源
     - 计算机视觉
-    - 视觉Transformer
-    - 深度学习
-    - 图像分类
-    title: 'ViT-5: Vision Transformers for The Mid-2020s'
+    title: 'InternVL-U: 4B参数轻量级统一多模态模型'
   GPU:
-  - desc: Vera Rubin采用台积电3nm工艺，集成128GB HBM4内存，FP8算力达10 PFLOPS。支持NVLink 5.0互联，功耗450W，相比Blackwell架构性能提升2.5倍。
+  - desc: Intel Arc B770 是英特尔Battlemage系列中高端GPU，预计2026年CES发布，基于Xe2架构，搭载16GB GDDR7显存。支持硬件光线追踪与AI超分辨率，性能对标NVIDIA
+      RTX 5060，功耗200W。
     tags:
-    - GPU
-    - AI加速
-    - 高性能计算
-    - 3nm工艺
-    title: NVIDIA Vera Rubin GPU 平台
+    - 游戏GPU
+    - Xe2架构
+    - GDDR7
+    - 英特尔
+    title: 'Intel Arc B770: Battlemage系列中高端GPU'
   Lang:
-  - desc: Ruby 4.0.0引入ZJIT即时编译器，性能提升2倍，支持Ruby Box隔离环境。新增模式匹配增强与并发原语，内存占用降低30%，兼容RBS类型注解。
+  - desc: Go 1.26 于2026年2月正式发布，主要改进包括泛型限制放宽、GC优化降低延迟40%，以及模块依赖管理的增强。新版本引入‘泛型推断’功能，简化代码编写，提升并发性能。
     tags:
     - 编程语言
-    - Ruby
-    - JIT编译器
+    - 泛型
     - 性能优化
-    title: Ruby 4.0.0 编程语言正式发布
+    - 开源
+    title: 'Go 1.26: 泛型限制放宽与性能优化'
   NLP:
-  - desc: Llama 4采用混合专家（MoE）架构，支持1000万令牌上下文长度，集成图文多模态理解能力。包含17B参数激活的Scout模型，在MMLU基准上得分85.6%，支持16种语言代码生成。
+  - desc: Mistral Small 4 是Mistral AI于2026年3月发布的119B参数大型语言模型，专为推理、多模态和编程任务优化。采用混合专家架构，在推理效率上比前代提升2倍，支持128K上下文长度。
     tags:
     - 大语言模型
+    - 推理
     - 多模态
-    - MoE架构
     - 开源
-    title: Meta Llama 4 多模态大语言模型
+    title: 'Mistral Small 4: 119B参数全能语言模型'
   Net:
-  - desc: Release 19实现AI/ML网络集成、RedCap演进与上行链路增强，峰值速率达10 Gbps，空口延迟低于1ms。支持智能中继与动态频谱共享，为6G演进奠定基础。
+  - desc: ITU-T Y.2502 是国际电信联盟于2026年3月正式发布的算力网络国际标准，由中国联通主导制定。该标准定义了算力资源的抽象、编排与调度框架，支持跨域算力协同，为6G网络奠定基础。
     tags:
-    - 5G
-    - 通信标准
-    - 网络协议
-    - AI集成
-    title: 3GPP Release 19 5G-Advanced 标准
+    - 算力网络
+    - 国际标准
+    - 6G
+    - 网络架构
+    title: 'ITU-T Y.2502: 算力网络国际标准发布'
   News:
-  - desc: Optimus Gen2采用新一代执行器与力/触觉传感器，行走速度提升30%，支持自主操作。功耗降低20%，预计2026年底投入工厂试点应用。
+  - desc: 2026年3月22日，科大讯飞宣布完成星火深度推理大模型X1的全面升级，参数量达500B，在数学推理和代码生成任务上超越GPT-5.4。新模型采用混合专家架构，推理速度提升5倍。
     tags:
-    - 机器人
-    - 人工智能
-    - 特斯拉
-    - 自主系统
-    title: 特斯拉发布Optimus Gen2人形机器人
+    - AI模型
+    - 推理
+    - 升级
+    - 国产
+    title: 科大讯飞完成星火深度推理大模型X1全面升级
