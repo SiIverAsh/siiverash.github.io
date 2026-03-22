@@ -1,129 +1,126 @@
 algorithm:
-- desc: DBSCAN（Density-Based Spatial Clustering of Applications with Noise）是一种基于密度的聚类算法，无需预先指定簇数量，能有效识别噪声点。适用于空间数据聚类，时间复杂度为O(n
-    log n)。
+- desc: 经典的非参数分类与回归算法，基于距离度量（如欧氏距离）进行预测，简单易懂，适用于小规模数据集。
   tags:
-  - 聚类算法
-  - 无监督学习
-  - 密度聚类
-  - 机器学习
-  title: 'DBSCAN: 基于密度的聚类算法'
+  - 分类算法
+  - 回归算法
+  - 距离度量
+  - 机器学习基础
+  title: k-近邻算法 (k-Nearest Neighbors)
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 北海道
-  intro: 松冈祯丞是日本男性声优，以其独特的嗓音和广泛的角色演绎范围而闻名。他于2010年代初期出道，迅速成为业界中坚力量。其专业态度和扎实的演技功底赢得了众多粉丝的喜爱。
-  name: 松冈祯丞
-date: '2026-03-22'
+  agency: 青二事务所
+  hometown: 日本神奈川县
+  intro: 花守由美里以其清澈透明的声线和广泛的角色适应能力而闻名。她于2010年代出道，在配音领域积累了丰富经验，曾获得多个声优奖项。她的声音具有高度的表现力，能够驾驭从少女到成熟女性的多种角色类型。除了动画配音外，她还活跃于游戏、旁白和广播节目等多个领域，展现了多元化的才华。
+  name: 花守由美里
+date: '2026-03-23'
 history:
-- event: 卢米埃尔兄弟在巴黎首次放映电影，标志着电影时代的开始。
-  year: '1895'
-- event: 激光专利授予肖洛和汤斯，为激光技术发展奠定基础。
-  year: '1960'
-- event: 英特尔开始发售奔腾处理器，推动个人电脑性能飞跃。
-  year: '1993'
-- event: 海尔-波普彗星最接近地球，成为20世纪最亮彗星之一。
-  year: '1997'
-- event: 布鲁塞尔发生连环爆炸案，造成重大人员伤亡。
-  year: '2016'
-- event: 联合国设立世界水日，旨在提高全球水资源保护意识。
-  year: '1993'
+- event: 贝尼托·墨索里尼在米兰组建意大利战斗法西斯。
+  year: '1919'
+- event: 德国国会通过《授权法案》，授予阿道夫·希特勒独裁权力。
+  year: '1933'
+- event: 美国首次双子座载人航天飞行（双子座3号）。
+  year: '1965'
+- event: 美国总统罗纳德·里根提出战略防御倡议（星球大战计划）。
+  year: '1983'
+- event: 俄罗斯和平号空间站坠入南太平洋。
+  year: '2001'
+- event: 美国通过《患者保护与平价医疗法案》。
+  year: '2010'
 llm:
-- desc: 阿里于2026年2月开源Qwen3.5大语言模型，参数量3970亿，在多项基准测试中超越万亿参数模型。支持128K上下文，最大吞吐量提升至19倍，专为企业级应用优化。
+- desc: 浪潮开源的多模态基础模型，参数规模达千亿级，支持图像、文本、音频统一理解与生成，在多个基准测试中领先。
   tags:
-  - 开源LLM
-  - 千问
-  - 大参数
-  - 企业级
-  title: 'Qwen3.5: 阿里开源3970亿参数大语言模型'
+  - 多模态
+  - 开源大模型
+  - Yuan3.0
+  - 基础模型
+  title: 浪潮源 Yuan3.0 Ultra 多模态基础大模型开源
 new_project:
-- desc: MiroFish 是GitHub上趋势第一的AI群智能引擎，支持百万级智能体协同预测。采用分布式架构，可实现复杂环境模拟与决策优化，已获28K星标。
+- desc: SakanaAI开源的自我适应大语言模型项目，实现动态权重调整，代码库包含训练和推理实现，支持自定义适配。
   tags:
-  - 群智能
-  - 开源
-  - AI引擎
-  - GitHub趋势
-  title: 'MiroFish: AI群智能引擎'
-  url: https://github.com/666ghj/MiroFish
+  - Transformer
+  - 自适应AI
+  - 开源项目
+  - SakanaAI
+  title: 'Transformer²: Self-Adaptive LLMs GitHub仓库'
+  url: https://github.com/SakanaAI/self-adaptive-llms
 paper:
-- desc: 该论文被ICLR 2026接收，提出了一种利用历史激活信息来增强图神经网络表达能力的新方法。通过引入时间注意力机制，模型在节点分类和链接预测任务上实现了显著提升。
+- desc: 复旦大学和上海交通大学提出的高效大视角合成方法，通过线性复杂度渲染实现高质量3D场景生成，速度提升10倍。
   tags:
-  - 图神经网络
-  - 历史激活
-  - ICLR 2026
-  - 注意力机制
-  title: Learning from Historical Activations in Graph Neural Networks
-  url: https://iclr.cc/virtual/2026/poster/10011197
+  - 3D视觉
+  - 视角合成
+  - 高效渲染
+  - 深度学习
+  title: 'Efficient-LVSM: Faster, Cheaper, and Better Large View Synthesis'
+  url: https://arxiv.org/abs/2602.06478
 tech:
   Arch:
-  - desc: NVIDIA Vera CPU 于2026年3月发布，专为代理式AI设计，采用台积电2nm工艺，集成1200亿晶体管。架构上融合ARM Neoverse
-      V3核心与专属AI加速单元，性能较前代提升2倍，功耗降低50%。
+  - desc: 采用3D堆叠和存算一体技术，国产AI芯片能效比提升50%，算力密度翻倍，支持大规模并行计算，突破传统架构限制。
     tags:
+    - 3D堆叠
+    - 存算一体
     - AI芯片
-    - 2nm工艺
-    - ARM架构
-    - 服务器CPU
-    title: 'NVIDIA Vera CPU: 专为代理式AI设计的2nm芯片'
+    - 国产架构
+    title: 3D新架构推动国产AI芯片弯道超车
   Audio:
-  - desc: Covo-Audio 是腾讯于2026年3月开源的7B参数端到端音频大模型，支持全双工对话和音色解耦。采用流式推理架构，可实现高保真音频生成与实时交互，在音频理解任务上达到SOTA。
+  - desc: Fish Audio S2支持词级精细控制，实时调整音色、语调和情感，采用深度学习生成高质量语音，延迟低于50毫秒。
     tags:
-    - 音频生成
-    - 端到端
-    - 开源
-    - TTS
-    title: 'Covo-Audio: 腾讯开源7B端到端音频大模型'
+    - 语音合成
+    - 细粒度控制
+    - 实时音频
+    - AI语音
+    title: 'Fish Audio S2: 词级精细AI语音控制'
   CPU:
-  - desc: AMD EPYC 8005系列于2026年2月发布，采用Zen5c架构，最高84核168线程，TDP仅225W。支持PCIe 6.0和DDR5-6400内存，专为智能边缘与数据中心设计，每瓦性能提升30%。
+  - desc: 至强6采用全新核心架构，支持DDR5内存和PCIe 6.0，集成AI加速单元，单核性能提升25%，适用于数据中心和AI负载。
     tags:
+    - 至强6
     - 服务器CPU
-    - Zen5c
-    - 84核
-    - 能效
-    title: 'AMD EPYC 8005系列: Zen5c架构84核服务器处理器'
+    - AI加速
+    - Intel
+    title: Intel至强6处理器正式发布：主控处理器新标杆
   Computer Vision:
-  - desc: InternVL-U 是上海AI Lab于2026年3月开源的轻量级统一多模态模型，仅4B参数即可实现理解、推理、生成、编辑全栈能力。采用Transformer架构，支持图像、视频、文本多模态输入，在多项基准测试中超越14B参数模型。
+  - desc: 腾讯开源的YOLO-Master采用混合专家（MoE）架构，在CVPR2026上提出，支持端侧自适应计算，实时检测速度提升40%，准确率提高5%。
     tags:
-    - 多模态
-    - 轻量级
-    - 开源
-    - 计算机视觉
-    title: 'InternVL-U: 4B参数轻量级统一多模态模型'
+    - 目标检测
+    - 混合专家
+    - 实时AI
+    - 腾讯开源
+    title: 'YOLO-Master: 混合专家MoE赋能实时目标检测'
   GPU:
-  - desc: Intel Arc B770 是英特尔Battlemage系列中高端GPU，预计2026年CES发布，基于Xe2架构，搭载16GB GDDR7显存。支持硬件光线追踪与AI超分辨率，性能对标NVIDIA
-      RTX 5060，功耗200W。
+  - desc: Intel Xe3P基于全新架构，支持硬件光线追踪和AI加速，采用4nm工艺，性能较上代提升30%，功耗降低15%。
     tags:
-    - 游戏GPU
-    - Xe2架构
-    - GDDR7
-    - 英特尔
-    title: 'Intel Arc B770: Battlemage系列中高端GPU'
+    - Intel GPU
+    - Xe3P
+    - 光线追踪
+    - AI加速
+    title: Intel Xe3P GPU架构2026年落地：年更策略开启
   Lang:
-  - desc: Go 1.26 于2026年2月正式发布，主要改进包括泛型限制放宽、GC优化降低延迟40%，以及模块依赖管理的增强。新版本引入‘泛型推断’功能，简化代码编写，提升并发性能。
+  - desc: Python 3.13引入新的JIT编译器，垃圾回收机制改进，支持模式匹配语法，性能提升达20%，适用于数据科学和Web开发。
     tags:
+    - Python
     - 编程语言
-    - 泛型
+    - JIT编译
     - 性能优化
-    - 开源
-    title: 'Go 1.26: 泛型限制放宽与性能优化'
+    title: Python 3.13正式发布：JIT编译器与性能优化
   NLP:
-  - desc: Mistral Small 4 是Mistral AI于2026年3月发布的119B参数大型语言模型，专为推理、多模态和编程任务优化。采用混合专家架构，在推理效率上比前代提升2倍，支持128K上下文长度。
+  - desc: 由Transformer原作者提出，Transformer²具备动态权重调整能力，模型可根据输入自适应更新网络结构，突破传统静态架构，提升泛化能力。
     tags:
-    - 大语言模型
-    - 推理
-    - 多模态
-    - 开源
-    title: 'Mistral Small 4: 119B参数全能语言模型'
+    - Transformer
+    - 自适应
+    - 动态权重
+    - AI架构
+    title: 'Transformer²: 自适应大语言模型动态调整权重'
   Net:
-  - desc: ITU-T Y.2502 是国际电信联盟于2026年3月正式发布的算力网络国际标准，由中国联通主导制定。该标准定义了算力资源的抽象、编排与调度框架，支持跨域算力协同，为6G网络奠定基础。
+  - desc: 中国电信实现波长交换光网络（WSON）算力互联现网验证，端到端延迟低至50毫秒，支持动态算力调度，提升网络效率。
     tags:
     - 算力网络
-    - 国际标准
-    - 6G
-    - 网络架构
-    title: 'ITU-T Y.2502: 算力网络国际标准发布'
+    - 光通信
+    - 低延迟
+    - 中国电信
+    title: 中国电信完成业界首个50毫秒级WSON算力互联现网验证
   News:
-  - desc: 2026年3月22日，科大讯飞宣布完成星火深度推理大模型X1的全面升级，参数量达500B，在数学推理和代码生成任务上超越GPT-5.4。新模型采用混合专家架构，推理速度提升5倍。
+  - desc: 苹果春季发布会推出搭载M5芯片的MacBook Air和MacBook Pro，性能提升40%，能效优化，同时发布新款iPad和Apple Watch。
     tags:
-    - AI模型
-    - 推理
-    - 升级
-    - 国产
-    title: 科大讯飞完成星火深度推理大模型X1全面升级
+    - 苹果
+    - M5芯片
+    - 新品发布
+    - 春季发布会
+    title: 苹果2026年3月线上发布五款新品，含M5 MacBooks

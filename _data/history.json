@@ -1,4 +1,20 @@
 {
+  "2026-03-23": [
+    "浪潮源 Yuan3.0 Ultra 多模态基础大模型开源",
+    "3D新架构推动国产AI芯片弯道超车",
+    "Python 3.13正式发布：JIT编译器与性能优化",
+    "k-近邻算法 (k-Nearest Neighbors)",
+    "花守由美里",
+    "Transformer²: 自适应大语言模型动态调整权重",
+    "Efficient-LVSM: Faster, Cheaper, and Better Large View Synthesis",
+    "Transformer²: Self-Adaptive LLMs GitHub仓库",
+    "Intel Xe3P GPU架构2026年落地：年更策略开启",
+    "中国电信完成业界首个50毫秒级WSON算力互联现网验证",
+    "YOLO-Master: 混合专家MoE赋能实时目标检测",
+    "Fish Audio S2: 词级精细AI语音控制",
+    "苹果2026年3月线上发布五款新品，含M5 MacBooks",
+    "Intel至强6处理器正式发布：主控处理器新标杆"
+  ],
   "2026-03-22": [
     "ITU-T Y.2502: 算力网络国际标准发布",
     "NVIDIA Vera CPU: 专为代理式AI设计的2nm芯片",
@@ -142,20 +158,5 @@
     "英伟达Nemotron 3 Super开源大语言模型",
     "Python 3.14正式发布：性能与特性全面提升",
     "石川由依"
-  ],
-  "2026-03-13": [
-    "Clawith: OpenClaw for Teams",
-    "英伟达未来五年豪掷260亿美元开发AI大模型",
-    "NVIDIA Nemotron 3 Super",
-    "羊宫妃那",
-    "随机森林算法",
-    "通义千问QwQ-32B推理模型",
-    "6G AI原生网络技术",
-    "AMD Ryzen 9 9950X处理器",
-    "SAM 3: Segment Anything with Concepts",
-    "Rust 1.94.0稳定版",
-    "NVIDIA GeForce RTX 5090",
-    "龙芯3C6000 32核服务器CPU",
-    "Ming-omni-tts统一音频生成模型"
   ]
 }
