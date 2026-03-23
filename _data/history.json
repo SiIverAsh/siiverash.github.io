@@ -1,4 +1,20 @@
 {
+  "2026-03-24": [
+    "AMD RDNA 4 架构：能效比再创新高",
+    "Google Gemini 2.0 Flash: 轻量级多模态模型",
+    "Proxy-GS: Unified Occlusion Priors for Training and Inference in 3D Gaussian Splatting",
+    "中国量子网络突破：可扩展量子中继实现",
+    "水濑祈",
+    "TypeScript 6.0: 静态类型系统重大升级",
+    "支持向量机 (Support Vector Machines)",
+    "Google Gemini 2.0 Flash: 高效多模态推理模型",
+    "全球首个太空AI+地面机器人闭环完成",
+    "Meta AudioCraft 2: 文本到音频生成框架",
+    "AMD Ryzen 9000 系列：Zen 5架构桌面处理器",
+    "MLX: Apple Silicon 原生机器学习框架",
+    "CXL 3.0: 内存共享协议新标准",
+    "Proxy-GS: Efficient 3D Gaussian Splatting via Proxy Mesh"
+  ],
   "2026-03-23": [
     "浪潮源 Yuan3.0 Ultra 多模态基础大模型开源",
     "3D新架构推动国产AI芯片弯道超车",
@@ -142,21 +158,5 @@
     "Meta发布Llama 3：使用15T数据预训练，最大参数超4000亿",
     "NVIDIA Nemotron 3 Super：120B参数开源大模型，吞吐量提升5倍",
     "AMD Ryzen AI 400 系列台式机处理器发布：至高8核，AI性能提升"
-  ],
-  "2026-03-14": [
-    "特斯拉Optimus 3人形机器人今夏投产",
-    "SRv6核心标准RFC9800发布",
-    "OpenClaw：执行型AI智能体开源项目",
-    "ViT-5：全面升级视觉骨干网络",
-    "Aurora：通用多模态时序预测模型",
-    "DIPOLE：扩散模型强化调优新范式",
-    "Qwen3-TTS：超低延迟语音合成与克隆框架",
-    "AMD Zen6架构：2nm工艺、48核288MB缓存",
-    "NVIDIA Rubin平台：3360亿晶体管AI超算平台",
-    "Qwen2.5-Omni：阿里开源全模态大模型",
-    "3D堆叠技术实现历史性跨越：芯片密度与能效突破",
-    "英伟达Nemotron 3 Super开源大语言模型",
-    "Python 3.14正式发布：性能与特性全面提升",
-    "石川由依"
   ]
 }

@@ -1,126 +1,127 @@
 algorithm:
-- desc: 经典的非参数分类与回归算法，基于距离度量（如欧氏距离）进行预测，简单易懂，适用于小规模数据集。
+- desc: 传统机器学习分类算法，通过寻找最大间隔超平面实现数据分割，适用于高维空间，核技巧可处理非线性问题，广泛应用于模式识别。
   tags:
+  - 机器学习
   - 分类算法
-  - 回归算法
-  - 距离度量
-  - 机器学习基础
-  title: k-近邻算法 (k-Nearest Neighbors)
+  - 核方法
+  - 统计学习
+  title: 支持向量机 (Support Vector Machines)
 cv_recommend:
-  agency: 青二事务所
-  hometown: 日本神奈川县
-  intro: 花守由美里以其清澈透明的声线和广泛的角色适应能力而闻名。她于2010年代出道，在配音领域积累了丰富经验，曾获得多个声优奖项。她的声音具有高度的表现力，能够驾驭从少女到成熟女性的多种角色类型。除了动画配音外，她还活跃于游戏、旁白和广播节目等多个领域，展现了多元化的才华。
-  name: 花守由美里
-date: '2026-03-23'
+  agency: アクセルワン
+  hometown: 东京都
+  intro: 水濑祈是日本知名声优，隶属于Axel One事务所。她以其清澈而多变的嗓音著称，能够驾驭多种角色类型，从活泼开朗到深沉内敛均能精准演绎。自出道以来，她凭借出色的演技获得了多项声优奖项，在业界享有高度评价。她的声音表现范围广泛，技术扎实，成为了近年来最受瞩目的声优之一，持续为声音表演领域注入新活力。
+  name: 水濑祈
+date: '2026-03-24'
 history:
-- event: 贝尼托·墨索里尼在米兰组建意大利战斗法西斯。
-  year: '1919'
-- event: 德国国会通过《授权法案》，授予阿道夫·希特勒独裁权力。
-  year: '1933'
-- event: 美国首次双子座载人航天飞行（双子座3号）。
-  year: '1965'
-- event: 美国总统罗纳德·里根提出战略防御倡议（星球大战计划）。
-  year: '1983'
-- event: 俄罗斯和平号空间站坠入南太平洋。
-  year: '2001'
-- event: 美国通过《患者保护与平价医疗法案》。
-  year: '2010'
+- event: 罗伯特·科赫宣布发现结核杆菌
+  year: '1882'
+- event: 英国代表会议召开
+  year: '1914'
+- event: 南京事件发生
+  year: '1927'
+- event: 美国探险者1号卫星发射
+  year: '1958'
+- event: 北约开始轰炸南联盟
+  year: '1999'
+- event: 北京奥运会火炬接力启动
+  year: '2008'
 llm:
-- desc: 浪潮开源的多模态基础模型，参数规模达千亿级，支持图像、文本、音频统一理解与生成，在多个基准测试中领先。
+- desc: 2026年3月发布，参数量120B，专为高效推理设计，支持图像、文本、音频多模态输入，在多项基准测试中领先，适用于边缘设备部署。
   tags:
+  - 大语言模型
   - 多模态
-  - 开源大模型
-  - Yuan3.0
-  - 基础模型
-  title: 浪潮源 Yuan3.0 Ultra 多模态基础大模型开源
+  - 高效推理
+  - Google
+  title: 'Google Gemini 2.0 Flash: 轻量级多模态模型'
 new_project:
-- desc: SakanaAI开源的自我适应大语言模型项目，实现动态权重调整，代码库包含训练和推理实现，支持自定义适配。
+- desc: Apple开源的高性能机器学习框架，专为M系列芯片优化，支持动态图计算与GPU加速，简化模型部署，提升推理效率。
   tags:
-  - Transformer
-  - 自适应AI
-  - 开源项目
-  - SakanaAI
-  title: 'Transformer²: Self-Adaptive LLMs GitHub仓库'
-  url: https://github.com/SakanaAI/self-adaptive-llms
+  - 机器学习框架
+  - Apple Silicon
+  - 开源
+  - GPU加速
+  title: 'MLX: Apple Silicon 原生机器学习框架'
+  url: https://github.com/ml-explore/mlx
 paper:
-- desc: 复旦大学和上海交通大学提出的高效大视角合成方法，通过线性复杂度渲染实现高质量3D场景生成，速度提升10倍。
+- desc: CVPR 2026满分论文，提出通过代理网格引入遮挡先验，大幅加速3D高斯溅射的训练与推理效率，提升渲染质量。
   tags:
-  - 3D视觉
-  - 视角合成
-  - 高效渲染
-  - 深度学习
-  title: 'Efficient-LVSM: Faster, Cheaper, and Better Large View Synthesis'
-  url: https://arxiv.org/abs/2602.06478
+  - 3D重建
+  - 高斯溅射
+  - 遮挡处理
+  - CVPR2026
+  title: 'Proxy-GS: Unified Occlusion Priors for Training and Inference in 3D Gaussian
+    Splatting'
+  url: https://arxiv.org/abs/2509.24421
 tech:
   Arch:
-  - desc: 采用3D堆叠和存算一体技术，国产AI芯片能效比提升50%，算力密度翻倍，支持大规模并行计算，突破传统架构限制。
+  - desc: 2026年第一季度正式落地，支持内存池化与设备间直接内存访问，延迟降低至100纳秒，带宽提升至256GB/s，显著降低数据中心TCO约16%。
     tags:
-    - 3D堆叠
-    - 存算一体
-    - AI芯片
-    - 国产架构
-    title: 3D新架构推动国产AI芯片弯道超车
+    - 芯片互连
+    - 内存共享
+    - 数据中心
+    - CXL
+    title: 'CXL 3.0: 内存共享协议新标准'
   Audio:
-  - desc: Fish Audio S2支持词级精细控制，实时调整音色、语调和情感，采用深度学习生成高质量语音，延迟低于50毫秒。
+  - desc: 2026年1月开源更新，引入扩散Transformer架构，支持48kHz高保真音频生成，训练数据扩展至100万小时，客观指标（FAD）提升25%，生成质量显著优化。
     tags:
-    - 语音合成
-    - 细粒度控制
-    - 实时音频
-    - AI语音
-    title: 'Fish Audio S2: 词级精细AI语音控制'
+    - 音频生成
+    - 扩散模型
+    - 开源
+    - Meta
+    title: 'Meta AudioCraft 2: 文本到音频生成框架'
   CPU:
-  - desc: 至强6采用全新核心架构，支持DDR5内存和PCIe 6.0，集成AI加速单元，单核性能提升25%，适用于数据中心和AI负载。
+  - desc: 2026年1月发布，基于4nm工艺，核心数达16核32线程，单核性能提升25%，支持DDR5-6400内存，TDP 170W，IPC改进显著。
     tags:
-    - 至强6
-    - 服务器CPU
-    - AI加速
-    - Intel
-    title: Intel至强6处理器正式发布：主控处理器新标杆
+    - 处理器
+    - Zen5
+    - 4nm
+    - AMD
+    title: AMD Ryzen 9000 系列：Zen 5架构桌面处理器
   Computer Vision:
-  - desc: 腾讯开源的YOLO-Master采用混合专家（MoE）架构，在CVPR2026上提出，支持端侧自适应计算，实时检测速度提升40%，准确率提高5%。
+  - desc: CVPR 2026满分论文，提出通过轻量代理网格统一遮挡先验，实现3D高斯溅射2.5倍渲染加速，显存占用降低30%，支持实时高保真3D重建。
     tags:
-    - 目标检测
-    - 混合专家
-    - 实时AI
-    - 腾讯开源
-    title: 'YOLO-Master: 混合专家MoE赋能实时目标检测'
+    - 3D重建
+    - 高斯溅射
+    - 渲染加速
+    - CVPR2026
+    title: 'Proxy-GS: Efficient 3D Gaussian Splatting via Proxy Mesh'
   GPU:
-  - desc: Intel Xe3P基于全新架构，支持硬件光线追踪和AI加速，采用4nm工艺，性能较上代提升30%，功耗降低15%。
+  - desc: 2026年CES发布，采用3nm工艺，CU单元增至96个，光追性能提升80%，支持DP 2.1接口，功耗控制在300W以内，能效比较前代提升50%。
     tags:
-    - Intel GPU
-    - Xe3P
-    - 光线追踪
-    - AI加速
-    title: Intel Xe3P GPU架构2026年落地：年更策略开启
+    - 显卡架构
+    - AMD
+    - 3nm
+    - 光追
+    title: AMD RDNA 4 架构：能效比再创新高
   Lang:
-  - desc: Python 3.13引入新的JIT编译器，垃圾回收机制改进，支持模式匹配语法，性能提升达20%，适用于数据科学和Web开发。
+  - desc: 2026年3月正式发布，引入新型类型推断算法，支持Go语言后端编译，编译速度提升50%，添加装饰器元数据等新特性，增强大型项目维护性。
     tags:
-    - Python
     - 编程语言
-    - JIT编译
-    - 性能优化
-    title: Python 3.13正式发布：JIT编译器与性能优化
+    - 类型安全
+    - 微软
+    - 前端开发
+    title: 'TypeScript 6.0: 静态类型系统重大升级'
   NLP:
-  - desc: 由Transformer原作者提出，Transformer²具备动态权重调整能力，模型可根据输入自适应更新网络结构，突破传统静态架构，提升泛化能力。
+  - desc: 2026年3月发布，采用MoE混合专家架构，参数量120B，支持128K上下文长度，在MMLU基准得分92.5%，推理速度较前代提升40%，集成多模态输入处理。
     tags:
-    - Transformer
-    - 自适应
-    - 动态权重
-    - AI架构
-    title: 'Transformer²: 自适应大语言模型动态调整权重'
+    - 大语言模型
+    - 多模态
+    - MoE
+    - Google
+    title: 'Google Gemini 2.0 Flash: 高效多模态推理模型'
   Net:
-  - desc: 中国电信实现波长交换光网络（WSON）算力互联现网验证，端到端延迟低至50毫秒，支持动态算力调度，提升网络效率。
+  - desc: 2026年3月，中国科研团队完成可扩展量子中继搭建，实现500公里量子密钥分发，误码率低于1%，为量子互联网奠定基础，推动安全通信技术发展。
     tags:
-    - 算力网络
-    - 光通信
-    - 低延迟
-    - 中国电信
-    title: 中国电信完成业界首个50毫秒级WSON算力互联现网验证
+    - 量子网络
+    - 量子通信
+    - 量子中继
+    - 中国科技
+    title: 中国量子网络突破：可扩展量子中继实现
   News:
-  - desc: 苹果春季发布会推出搭载M5芯片的MacBook Air和MacBook Pro，性能提升40%，能效优化，同时发布新款iPad和Apple Watch。
+  - desc: 2026年3月17日，国星宇航成功验证太空算力跨域控制，实现天基AI决策与地面机器人执行的全自主闭环，响应时间小于1秒，推动太空自动化技术。
     tags:
-    - 苹果
-    - M5芯片
-    - 新品发布
-    - 春季发布会
-    title: 苹果2026年3月线上发布五款新品，含M5 MacBooks
+    - 太空科技
+    - 人工智能
+    - 机器人
+    - 自主系统
+    title: 全球首个太空AI+地面机器人闭环完成
