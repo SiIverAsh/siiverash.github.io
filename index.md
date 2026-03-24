@@ -164,15 +164,15 @@ title: Welcome to My HP!
         color: var(--text-main, #d1d5db);
         padding: 15px 10px;
         border-radius: 10px;
-        width: calc(20% - 15px);
+        width: calc((100% - 60px) / 5);
         min-width: 140px;
-        flex-grow: 1;
         cursor: pointer;
         transition: 0.3s;
         border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
         box-shadow: var(--shadow, 0 8px 32px 0 rgba(0, 0, 0, 0.3));
         text-align: center;
         backdrop-filter: blur(10px);
+        box-sizing: border-box;
     }
 
     .tech-card h3 {
