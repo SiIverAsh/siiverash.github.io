@@ -1,4 +1,20 @@
 {
+  "2026-03-25": [
+    "MiniMax Speech 2.5语音合成模型",
+    "Tuic协议：下一代高性能代理传输协议",
+    "Marvell下一代CXL交换芯片实现内存池化",
+    "Intel Core Ultra 300系列Panther Lake处理器",
+    "NVIDIA Blackwell Ultra GPU发布",
+    "月之暗面Kimi K2.5开源大模型",
+    "OpenClaw：个人AI助手开源项目",
+    "Behavior Learning (BL) - ICLR 2026论文",
+    "MiniMax M2.1：多语言编程模型",
+    "内田真礼",
+    "理想汽车MindVLA-o1自动驾驶基础模型",
+    "全球首款通用具身大模型AWE 3.0发布",
+    "朴素贝叶斯分类器",
+    "华为仓颉编程语言正式预览"
+  ],
   "2026-03-24": [
     "AMD RDNA 4 架构：能效比再创新高",
     "Google Gemini 2.0 Flash: 轻量级多模态模型",
@@ -142,21 +158,5 @@
     "XGBoost：高效的梯度提升决策树框架",
     "进迭时空发布K3芯片：60TOPS算力的RISC-V AI CPU",
     "内田真礼"
-  ],
-  "2026-03-15": [
-    "XGBoost 3.2.0 发布：多目标输出与 GPU 外部存储支持",
-    "内田真礼",
-    "Make Multi-modal LLMs Excel in Fine-grained Visual Recognition",
-    "Tuic协议：下一代高速代理传输协议",
-    "NVIDIA Feynman 架构亮相：首发台积电 A16 1.6nm 工艺",
-    "联发科发布天玑9400+旗舰芯片",
-    "OpenAI 发布 o3/o4-mini：视觉推理模型，算力提升十倍",
-    "TypeScript 6.0 RC 发布：面向 Go 生态的桥梁",
-    "Qwen3-TTS：开源语音克隆与AI语音生成模型",
-    "OpenClaw：个人AI助手开源项目",
-    "CVPR 2026 | 清华美团发布3DThinker：首个具备3D“脑补”能力的视觉大模型",
-    "Meta发布Llama 3：使用15T数据预训练，最大参数超4000亿",
-    "NVIDIA Nemotron 3 Super：120B参数开源大模型，吞吐量提升5倍",
-    "AMD Ryzen AI 400 系列台式机处理器发布：至高8核，AI性能提升"
   ]
 }
