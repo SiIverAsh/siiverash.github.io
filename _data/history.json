@@ -1,4 +1,19 @@
 {
+  "2026-03-26": [
+    "AMD Zen 6 架构",
+    "钉钉发布 AI 工作平台悟空",
+    "Gated Attention for Large Language Models",
+    "石川由依",
+    "小米自研 MiMo-V2-TTS 语言合成大模型",
+    "阿里巴巴玄铁 C950",
+    "Ultralytics YOLO26",
+    "OpenAI GPT-5.4 模型",
+    "AMD RDNA 5 显卡",
+    "Rust 1.94.0",
+    "随机森林算法",
+    "百度文心 5.0 正式版",
+    "WebTransport API"
+  ],
   "2026-03-25": [
     "MiniMax Speech 2.5语音合成模型",
     "Tuic协议：下一代高性能代理传输协议",
@@ -142,21 +157,5 @@
     "浪潮源 Yuan3.0 Ultra 多模态基础大模型开源",
     "松冈祯丞",
     "阿里通义语音双模型 Fun-CosyVoice3.5 与 Fun-AudioGen-VD"
-  ],
-  "2026-03-16": [
-    "karpathy/autoresearch：AI智能体自动化研究框架",
-    "Fish Audio开源S2：词级精细控制的AI语音生成模型",
-    "Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio Gradient Optimizer",
-    "NVIDIA下代GPU费曼亮相：首发1.6nm工艺、功耗1000W以上",
-    "字节跳动Seed2.0正式发布，对标GPT-5与Gemini 3 Pro",
-    "第三代英特尔酷睿Ultra处理器正式亮相，采用Intel 18A制程",
-    "YOLO26 正式开源：无NMS推理与CPU性能提升43%",
-    "DeepSeek V4开源发布：国产全模态大模型",
-    "WebMCP提案曝光：标准化Web与AI模型交互协议",
-    "谷歌发布Gemini Embedding 2：首个原生多模态嵌入模型",
-    "TypeScript 6.0 RC发布：性能桥梁与Go后端集成",
-    "XGBoost：高效的梯度提升决策树框架",
-    "进迭时空发布K3芯片：60TOPS算力的RISC-V AI CPU",
-    "内田真礼"
   ]
 }
