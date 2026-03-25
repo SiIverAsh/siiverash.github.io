@@ -137,7 +137,7 @@ html {
     width: 100%;
     height: fit-content;
     animation: 0.8s ease;
-    overflow: hidden; /* 防止内部元素溢出 */
+    overflow: visible;
 }
 
 .sidebar {
@@ -164,6 +164,7 @@ html {
 .search-wrapper {
     position: relative;
     z-index: 10003 !important;
+    margin-top: 20px;
 }
 
 #search-input {
@@ -195,9 +196,7 @@ html {
     max-height: 350px;
     overflow-y: auto;
     z-index: 2147483647 !important;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: #ffffff;
     border-radius: 0;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     display: none;
@@ -205,7 +204,7 @@ html {
 }
 
 .dark-mode #results-container {
-    background: rgba(30, 30, 35, 0.85) !important;
+    background: #1e1e23 !important;
 }
 
 #results-container li {
@@ -581,6 +580,4 @@ footer {
 .dark-mode .search-highlight {
     background-color: #ffd54f;
     color: #000 !important;
-}
-ba(255, 193, 7, 0.2);
 }
