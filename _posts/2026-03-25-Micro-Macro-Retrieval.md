@@ -4,9 +4,9 @@ categories:
 date: 2026-03-19 11:50:51 +0800
 layout: post
 tags:
-- 技术教程
-- 软件开发
-- 版本控制
+- ICLR
+- 幻觉
+- RAG
 title: Micro-Macro Retrieval 笔记
 subject: ''
 ---
@@ -61,11 +61,11 @@ subject: ''
 
 GRPO 不仅用于优化最终答案生成还监督模型的生成行为，包括何时调用检索、如何编写json仓库、如何在回答时引用仓库信息
 
-#### 检索结果掩码（Retrieval Result Mask）：
+#### 检索结果掩码（Retrieval Result Mask）
 
 在计算 loss 时，模型仅对自身生成的 Token ，对于外部返回的检索结果，用二进制掩码mt进行剔除，为的是防止错误的信用分配，保证稳定训练。 
 
-#### KL 约束：
+#### KL 约束
 
 引入了 D<sub>kl</sub> 正则化项，可以保证更新后的策略π<sub>θ</sub>不会偏离原始基座模型太远。
 
