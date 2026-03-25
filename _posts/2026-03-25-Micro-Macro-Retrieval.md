@@ -4,10 +4,13 @@ categories:
 date: 2026-03-19 11:50:51 +0800
 layout: post
 tags:
-
+- 技术教程
+- 软件开发
+- 版本控制
 title: Micro-Macro Retrieval 笔记
 subject: ''
 ---
+
 
 
 
