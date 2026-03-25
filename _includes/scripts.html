@@ -102,9 +102,31 @@
             searchInput: sinput, 
             resultsContainer: sresults,
             json: '{{ site.baseurl }}/search.json',
-            searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-            noResultsText: '<li><p style="padding:0 15px; color:#999;">无内容</p></li>',
-            limit: 8
+            searchResultTemplate: '<li><a href="{url}"><div class="search-result-title">{title}</div><div class="search-result-meta"><i class="fas fa-calendar-alt"></i> {date}</div><div class="search-result-snippet">{content}</div></a></li>',
+            noResultsText: '<li><p style="padding:15px; color:var(--text-main);">没有找到相关内容哦...</p></li>',
+            limit: 8,
+            templateMiddleware: function(prop, value, template) {
+                if (prop === 'content') {
+                    const query = sinput.value.toLowerCase().trim();
+                    if (!query) return '';
+                    const contentLower = value.toLowerCase();
+                    const index = contentLower.indexOf(query);
+                    if (index === -1) {
+                        return value.substring(0, 80) + '...';
+                    }
+                    const start = Math.max(0, index - 30);
+                    const end = Math.min(value.length, index + query.length + 50);
+                    let snippet = value.substring(start, end);
+                    if (start > 0) snippet = '...' + snippet;
+                    if (end < value.length) snippet = snippet + '...';
+                    
+                    // 高亮关键词
+                    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+                    snippet = snippet.replace(regex, '<span class="search-highlight">$1</span>');
+                    return snippet;
+                }
+                return value;
+            }
         });
     }
 
