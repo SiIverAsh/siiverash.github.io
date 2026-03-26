@@ -1,136 +1,127 @@
 algorithm:
-- desc: 随机森林是一种集成学习算法，通过构建多棵决策树并投票或平均进行预测，具有高准确性、抗过拟合和可解释性强的特点，适用于分类和回归任务，是机器学习基础算法之一。
+- desc: 集成学习算法，通过迭代训练弱学习器（决策树）来最小化损失函数，广泛应用于分类和回归任务，具有高精度和鲁棒性。
   tags:
-  - 机器学习
-  - 集成学习
-  - 决策树
-  - 分类算法
-  title: 随机森林算法
+  - Machine Learning
+  - Ensemble
+  - Boosting
+  - Decision Trees
+  title: 梯度提升决策树（Gradient Boosting Decision Trees）
 cv_recommend:
-  agency: Mausu Promotion
-  hometown: 日本兵库县
-  intro: 石川由依以其清澈而富有穿透力的声线著称，在配音工作中展现出极强的角色塑造能力。她擅长通过细腻的情感表达赋予角色深度，其专业素养和持续进步的演技备受业界认可。她的声音具备良好的可塑性和表现力，能够适应多种类型的角色需求，在业内积累了广泛的声誉。
-  name: 石川由依
-date: '2026-03-26'
+  agency: Across Entertainment
+  hometown: 日本大阪府
+  intro: 上田丽奈是一位日本女性声优，以其清澈明亮的声线著称。她于2010年代出道，在多个作品中展现了出色的演技。她的声音可塑性强，能够驾驭从活泼到深沉的不同角色类型。她积极参与广播节目和活动，积累了丰富的人气。
+  name: 上田丽奈
+date: '2026-03-27'
 history:
-- event: 贝多芬于维也纳逝世，享年57岁。
-  year: '1827'
-- event: 孟加拉国宣布独立，开始与巴基斯坦的战争。
-  year: '1971'
-- event: 弗拉基米尔·普京当选俄罗斯总统，开始第一个任期。
-  year: '2000'
-- event: 乔纳斯·索尔克博士宣布成功研发脊髓灰质炎疫苗。
-  year: '1953'
-- event: 欧盟七国《申根协定》正式生效，实现人员自由流动。
-  year: '1995'
-- event: 韩国军舰“天安号”沉没，造成46名官兵死亡。
-  year: '2010'
+- event: 特内里费空难：两架波音747客机在西班牙特内里费岛相撞，造成583人死亡，成为航空史上最严重的空难之一。
+  year: '1977'
+- event: 阿拉斯加地震：美国阿拉斯加发生9.2级大地震，引发海啸，造成约139人死亡，是北美洲有记录以来最强的地震。
+  year: '1964'
+- event: 侵华日军遗弃在华化学毒剂泄漏事件：中国黑龙江省齐齐哈尔市发生侵华日军遗弃化学毒剂泄漏，导致多人伤亡。
+  year: '2003'
+- event: 北约轰炸塞尔维亚：北约开始对塞尔维亚进行空中打击，标志着科索沃战争的升级。
+  year: '1999'
+- event: 白银星期四（Silver Thursday）：白银价格在一天内暴跌50%，引发全球金融市场震荡。
+  year: '1980'
+- event: 布鲁塞尔恐袭：比利时布鲁塞尔发生连环恐怖袭击，包括机场和地铁站爆炸，造成32人死亡，300余人受伤。
+  year: '2016'
 llm:
-- desc: OpenAI 发布 GPT-5.4 模型，参数规模达 1.8 万亿，支持 128K 上下文长度，在推理和代码生成任务中表现优异，同时降低了 API
-    调用成本，并增强了多轮对话稳定性。
+- desc: DeepSeek-V3开源大语言模型，参数规模达721B，采用MoE架构，上下文窗口扩展至128K，在多语言基准测试中领先，支持代码生成和复杂推理。
   tags:
-  - 大语言模型
-  - OpenAI
-  - 推理能力
-  - 代码生成
-  title: OpenAI GPT-5.4 模型
+  - LLM
+  - Open Source
+  - MoE
+  - Multilingual
+  title: 'DeepSeek-V3: 开源大语言模型新版本'
 new_project:
-- desc: Ultralytics YOLO26 是 YOLO 系列的最新实现，提供五种尺寸的预训练模型，支持目标检测、实例分割和姿态估计，易于部署和定制，采用
-    PyTorch 框架，文档和社区支持完善。
+- desc: 字节跳动开源的长视距AI智能体平台，支持多智能体协作和复杂任务规划，适用于自动化工作流，已在GitHub上获得高星关注。
   tags:
-  - 计算机视觉
-  - 目标检测
-  - 开源项目
-  - Python
-  title: Ultralytics YOLO26
-  url: https://github.com/ultralytics/ultralytics
+  - AI Agent
+  - Open Source
+  - Automation
+  - ByteDance
+  title: 'DeerFlow 2.0: 字节跳动开源AI智能体平台'
+  url: https://github.com/bytedance/deer-flow
 paper:
-- desc: 该 NeurIPS 2025 论文提出门控注意力机制，通过非线性和稀疏性优化，解决注意力机制中的计算冗余问题，在多项基准测试中提升模型效率 20%，同时保持模型性能。
+- desc: ICLR 2026论文，提出通过代表性头引导的稀疏注意力机制，在长序列任务中实现高效推理，减少计算开销同时保持模型性能。
   tags:
-  - 注意力机制
-  - 大语言模型
-  - 稀疏计算
-  - NeurIPS2025
-  title: Gated Attention for Large Language Models
-  url: https://arxiv.org/abs/2505.06708
+  - Attention
+  - Sparse
+  - ICLR 2026
+  - Efficiency
+  title: 'ProxyAttn: Guided Sparse Attention via Representative Heads'
+  url: https://iclr.cc/virtual/2026/poster/10007621
 tech:
   Arch:
-  - desc: AMD Zen 6 架构采用 2nm 工艺，最高 48 核设计，配备 288MB 缓存（L2+L3），支持 DDR6 内存和 CXL 3.0，单核性能较
-      Zen 5 提升 25%，能效比改善 30%。
+  - desc: ARM v9.5架构引入指针认证扩展（PAE3）和内存标记扩展（MTE3），提升安全性和性能；支持更细粒度的权限控制，适用于移动和服务器芯片。
     tags:
-    - 微架构
-    - 处理器
-    - 2nm工艺
-    - 高性能计算
-    title: AMD Zen 6 架构
+    - ARM
+    - Architecture
+    - Security
+    - Performance
+    title: 'ARM v9.5架构: 性能与安全性增强'
   Audio:
-  - desc: 小米发布的 MiMo-V2-TTS 支持河南话、粤语等多种方言，采用端到端生成架构，音色自然度达 4.8 MOS（平均意见分），同时实现 100ms
-      级实时合成，并集成情感控制和韵律调整。
+  - desc: 基于深度学习的实时音频驱动面部动画模型，支持3D面部网格生成，延迟低于10毫秒，通过音频信号直接驱动面部肌肉运动，适用于虚拟角色和元宇宙应用。
     tags:
-    - 语音合成
-    - TTS
-    - 方言支持
-    - 实时生成
-    title: 小米自研 MiMo-V2-TTS 语言合成大模型
+    - Audio
+    - Facial Animation
+    - Real-time
+    - NVIDIA
+    title: 'NVIDIA Audio2Face 3D: Real-time Audio-driven Facial Animation'
   CPU:
-  - desc: 阿里巴巴达摩院发布的玄铁 C950 采用 5nm 工艺，16 核 RISC-V 架构，主频 3.5GHz，性能达到 ARM Neoverse V2
-      的 120%，能效比提升 30%，专为云原生和 AI 负载优化。
+  - desc: AMD EPYC 9005系列（Turin）基于Zen 5架构，最高192核心，支持12通道DDR5-7200内存，TDP达500W，性能较上代提升40%，适用于高性能计算和云服务器。
     tags:
-    - 处理器
-    - RISC-V
-    - 服务器CPU
-    - 能效优化
-    title: 阿里巴巴玄铁 C950
+    - CPU
+    - AMD
+    - Zen 5
+    - Server
+    title: AMD EPYC 9005系列（Turin）
   Computer Vision:
-  - desc: YOLO26 是 Ultralytics 推出的最新版本，采用混合专家 (MoE) 架构，支持实时目标检测、实例分割和姿态估计，在 COCO 数据集上实现
-      65.2% mAP，同时推理速度比前代提升 40%，支持 TensorRT 和 ONNX 部署。
+  - desc: CVPR 2026论文提出的即插即用加速方案，通过动态分析视觉Token的内在变化量，智能丢弃冗余Token，实现视觉语言模型推理速度提升1.87倍，同时保持精度无损。
     tags:
-    - 计算机视觉
-    - 目标检测
-    - YOLO
-    - 实时推理
-    title: Ultralytics YOLO26
+    - Computer Vision
+    - VLM
+    - Acceleration
+    - Token Dropping
+    title: 'V²Drop: Variation-aware Vision Token Dropping for Faster VLM Inference'
   GPU:
-  - desc: AMD RDNA 5 架构采用 3nm 工艺，最高 96 个计算单元，搭载 GDDR7 显存，光追性能提升 80%，支持硬件级 AI 加速，能效比再创新高，预计
-      2026 年第二季度上市。
+  - desc: NVIDIA Feynman GPU架构采用台积电A16（1.6nm）工艺，集成288GB HBM4内存，带宽达22TB/s，AI算力提升至50
+      PFLOPs，专为下一代AI训练和推理设计。
     tags:
-    - 图形处理器
-    - 游戏显卡
-    - 3nm工艺
-    - 光追加速
-    title: AMD RDNA 5 显卡
+    - GPU
+    - NVIDIA
+    - TSMC A16
+    - HBM4
+    title: 'NVIDIA Feynman GPU架构: 台积电A16制程'
   Lang:
-  - desc: Rust 1.94.0 正式发布，引入 29 项稳定 API，增强 RISC-V 架构支持，Cargo 配置更灵活，编译速度提升 15%，内存安全性进一步强化，同时优化了并发编程和错误处理机制。
+  - desc: Rust 1.95.0引入if let guards语法，增强模式匹配表达能力；优化编译后端，提升增量编译性能15%，同时改进错误消息可读性。
     tags:
-    - 编程语言
-    - 系统编程
-    - 内存安全
-    - 性能优化
-    title: Rust 1.94.0
+    - Rust
+    - Programming Language
+    - Compiler
+    - Pattern Matching
+    title: 'Rust 1.95.0: 模式匹配增强与性能优化'
   NLP:
-  - desc: 百度发布的文心 5.0 正式版拥有 2.4 万亿参数，采用全模态架构，支持文本、图像、音频、视频的多模态理解与生成，在中文理解基准测试 C-Eval
-      和 CMMLU 中超越 GPT-5，同时支持 128K 上下文长度。
+  - desc: Claude 4采用混合专家（MoE）架构，参数规模达2万亿，上下文窗口扩展至1M tokens，在编码和推理基准测试中表现卓越，支持更复杂的多轮对话和任务处理。
     tags:
-    - 自然语言处理
-    - 大语言模型
-    - 多模态
-    - 中文理解
-    title: 百度文心 5.0 正式版
+    - LLM
+    - Anthropic
+    - MoE
+    - Large Context
+    title: 'Claude 4: Anthropic''s Latest LLM'
   Net:
-  - desc: WebTransport API 是 W3C 制定的下一代 Web 双向通信标准，基于 QUIC 协议，支持低延迟、高并发的数据传输，可替代 WebSocket
-      用于实时音视频传输，提供可靠和不可靠传输模式。
+  - desc: 华为推出的智能体驱动移动宽带架构，基于意图感知网络和AI智能体，实现网络资源动态调度，提升5G-A网络效率30%，支持自动驾驶和工业物联网等场景。
     tags:
-    - 网络协议
-    - Web开发
-    - 实时通信
-    - QUIC
-    title: WebTransport API
+    - Networking
+    - 5G
+    - AI Agent
+    - Huawei
+    title: '华为Agentic MBB: 移动AI时代网络新架构'
   News:
-  - desc: 钉钉正式推出 AI 工作平台“悟空”，集成大模型能力，支持智能日程安排、文档自动生成、会议实时摘要等功能，基于阿里通义大模型，旨在提升企业办公效率
-      50% 以上。
+  - desc: 谷歌推出TurboQuant算法，通过3位量化技术，在无精度损失情况下将大模型内存占用降低至1/6，显著减少显存需求，助力边缘设备部署。
     tags:
-    - 企业软件
-    - AI办公
-    - 生产力工具
-    - 钉钉
-    title: 钉钉发布 AI 工作平台悟空
+    - AI
+    - Memory Optimization
+    - Quantization
+    - Google
+    title: 谷歌新算法大幅降低AI内存开销

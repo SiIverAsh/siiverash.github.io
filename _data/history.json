@@ -1,4 +1,20 @@
 {
+  "2026-03-27": [
+    "Rust 1.95.0: 模式匹配增强与性能优化",
+    "DeerFlow 2.0: 字节跳动开源AI智能体平台",
+    "Claude 4: Anthropic's Latest LLM",
+    "NVIDIA Feynman GPU架构: 台积电A16制程",
+    "谷歌新算法大幅降低AI内存开销",
+    "AMD EPYC 9005系列（Turin）",
+    "华为Agentic MBB: 移动AI时代网络新架构",
+    "NVIDIA Audio2Face 3D: Real-time Audio-driven Facial Animation",
+    "DeepSeek-V3: 开源大语言模型新版本",
+    "上田丽奈",
+    "ARM v9.5架构: 性能与安全性增强",
+    "梯度提升决策树（Gradient Boosting Decision Trees）",
+    "ProxyAttn: Guided Sparse Attention via Representative Heads",
+    "V²Drop: Variation-aware Vision Token Dropping for Faster VLM Inference"
+  ],
   "2026-03-26": [
     "AMD Zen 6 架构",
     "钉钉发布 AI 工作平台悟空",
@@ -141,21 +157,5 @@
     "DeepSeek-V3.2：强化Agent能力的开源LLM",
     "Python 3.13：JIT编译器与性能革新",
     "百度文心大模型4.5：开源多模态LLM"
-  ],
-  "2026-03-17": [
-    "OpenAI GPT-5.4模型发布",
-    "华为2026春季旗舰新品发布会定档3月23日",
-    "NVIDIA下代GPU费曼首发1.6nm工艺",
-    "SpaceX星链定制智能手机直连卫星通信",
-    "Python 3.14正式发布",
-    "IterResearch: Rethinking Long-Horizon Agents via Markovian State Reconstruction",
-    "CVPR 2026 | V²Drop：基于Token变化量的VLM无损加速方案",
-    "第三代英特尔酷睿Ultra处理器（CES 2026）",
-    "双重机器学习（Double Machine Learning）",
-    "AgentKit：开源AI智能体框架",
-    "AMD Zen6架构2026年发布",
-    "浪潮源 Yuan3.0 Ultra 多模态基础大模型开源",
-    "松冈祯丞",
-    "阿里通义语音双模型 Fun-CosyVoice3.5 与 Fun-AudioGen-VD"
   ]
 }
