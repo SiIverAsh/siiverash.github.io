@@ -92,74 +92,108 @@
     }
 
     /**
-     * 初始化全站搜索模块
+     * 主题切换加载与控制
      */
-    const sinput = document.getElementById('search-input');
-    const sresults = document.getElementById('results-container');
-    if(sinput) {
-        sinput.addEventListener('input', () => { sresults.style.display = sinput.value ? 'block' : 'none'; });
-        SimpleJekyllSearch({
-            searchInput: sinput, 
-            resultsContainer: sresults,
-            json: '{{ site.baseurl }}/search.json',
-            searchResultTemplate: '<li><a href="{url}"><div class="search-result-title">{title}</div><div class="search-result-meta"><i class="fas fa-calendar-alt"></i> {date}</div><div class="search-result-snippet">{content}</div></a></li>',
-            noResultsText: '<li><p style="padding:15px; color:var(--text-main);">没有找到相关内容哦...</p></li>',
-            limit: 8,
-            templateMiddleware: function(prop, value, template) {
-                if (prop === 'content') {
-                    const query = sinput.value.toLowerCase().trim();
-                    if (!query) return '';
-                    const contentLower = value.toLowerCase();
-                    const index = contentLower.indexOf(query);
-                    if (index === -1) {
-                        return value.substring(0, 80) + '...';
-                    }
-                    const start = Math.max(0, index - 30);
-                    const end = Math.min(value.length, index + query.length + 50);
-                    let snippet = value.substring(start, end);
-                    if (start > 0) snippet = '...' + snippet;
-                    if (end < value.length) snippet = snippet + '...';
-                    
-                    // 高亮关键词
-                    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-                    snippet = snippet.replace(regex, '<span class="search-highlight">$1</span>');
-                    return snippet;
-                }
-                return value;
+    const themeToggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    const body = document.body;
+
+    function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        root.classList.toggle('dark-mode', isDark);
+        body.classList.toggle('dark-mode', isDark);
+
+        const icon = themeToggle?.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-moon', isDark);
+            icon.classList.toggle('fa-sun', !isDark);
+        }
+
+        if (themeToggle) {
+            themeToggle.setAttribute('aria-label', isDark ? '切换到浅色模式' : '切换到深色模式');
+            themeToggle.setAttribute('title', isDark ? '切换到浅色模式' : '切换到深色模式');
+        }
+    }
+
+    function getPreferredTheme() {
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || savedTheme === 'light') {
+                return savedTheme;
             }
+        } catch (e) {}
+
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    applyTheme(getPreferredTheme());
+
+    if (window.matchMedia) {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        mediaQuery.addEventListener?.('change', (event) => {
+            let savedTheme = null;
+            try {
+                savedTheme = localStorage.getItem('theme');
+            } catch (e) {}
+
+            if (!savedTheme) {
+                applyTheme(event.matches ? 'dark' : 'light');
+            }
+        });
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const nextTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+            applyTheme(nextTheme);
+            try {
+                localStorage.setItem('theme', nextTheme);
+            } catch (e) {}
         });
     }
 
     /**
-     * 主题切换加载与控制
+     * 初始化全站搜索模块
      */
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    
-    // 初始加载主题
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-        body.classList.add('dark-mode');
-        const icon = themeToggle?.querySelector('i');
-        if(icon) icon.classList.replace('fa-sun', 'fa-moon');
-    }
+    const sinput = document.getElementById('search-input');
+    const sresults = document.getElementById('results-container');
+    if (sinput && sresults) {
+        sinput.addEventListener('input', () => { sresults.style.display = sinput.value ? 'block' : 'none'; });
 
-    if(themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const isDark = body.classList.contains('dark-mode');
-            const icon = themeToggle.querySelector('i');
-            if(icon) {
-                if (isDark) { 
-                    icon.classList.replace('fa-sun', 'fa-moon'); 
-                    localStorage.setItem('theme', 'dark'); 
-                } else { 
-                    icon.classList.replace('fa-moon', 'fa-sun'); 
-                    localStorage.setItem('theme', 'light'); 
+        if (typeof window.SimpleJekyllSearch === 'function') {
+            window.SimpleJekyllSearch({
+                searchInput: sinput,
+                resultsContainer: sresults,
+                json: '{{ site.baseurl }}/search.json',
+                searchResultTemplate: '<li><a href="{url}"><div class="search-result-title">{title}</div><div class="search-result-meta"><i class="fas fa-calendar-alt"></i> {date}</div><div class="search-result-snippet">{content}</div></a></li>',
+                noResultsText: '<li><p style="padding:15px; color:var(--text-main);">没有找到相关内容哦...</p></li>',
+                limit: 8,
+                templateMiddleware: function(prop, value, template) {
+                    if (prop === 'content') {
+                        const query = sinput.value.toLowerCase().trim();
+                        if (!query) return '';
+                        const contentLower = value.toLowerCase();
+                        const index = contentLower.indexOf(query);
+                        if (index === -1) {
+                            return value.substring(0, 80) + '...';
+                        }
+                        const start = Math.max(0, index - 30);
+                        const end = Math.min(value.length, index + query.length + 50);
+                        let snippet = value.substring(start, end);
+                        if (start > 0) snippet = '...' + snippet;
+                        if (end < value.length) snippet = snippet + '...';
+
+                        // 高亮关键词
+                        const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+                        snippet = snippet.replace(regex, '<span class="search-highlight">$1</span>');
+                        return snippet;
+                    }
+                    return value;
                 }
-            }
-        });
+            });
+        } else {
+            console.warn('SimpleJekyllSearch failed to load; search is disabled, theme toggle remains available.');
+        }
     }
 
     /**
