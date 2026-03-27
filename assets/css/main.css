@@ -271,6 +271,52 @@ html {
     transition: max-width 0.3s ease;
 }
 
+/* 博文表格 */
+.post-content table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 0.95em;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.post-content thead {
+    background: rgba(29, 80, 138, 0.12);
+}
+
+.post-content th,
+.post-content td {
+    padding: 10px 14px;
+    border: 1px solid var(--glass-border);
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.post-content th {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.post-content tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.dark-mode .post-content table {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.dark-mode .post-content thead {
+    background: rgba(74, 144, 226, 0.16);
+}
+
+.dark-mode .post-content tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+
 /* 深色模式内容适配 */
 .dark-mode .content-card p, 
 .dark-mode .content-card li, 
