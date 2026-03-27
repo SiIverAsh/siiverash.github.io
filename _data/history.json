@@ -1,4 +1,20 @@
 {
+  "2026-03-28": [
+    "InternVL-U: 4B参数轻量级统一多模态模型",
+    "Intel Arc Pro B70显卡",
+    "北京发布“量超智通”融合计算平台",
+    "PAGE-4D: Disentangled Pose and Geometry Estimation for 4D Perception",
+    "花泽香菜",
+    "Apple M4芯片",
+    "mem7：基于Rust的长期记忆存储系统",
+    "AudioX: 港科大统一音频生成模型",
+    "MQTT over QUIC协议标准化",
+    "K-Means聚类算法",
+    "Qwen3-Embedding系列模型",
+    "Arm AGI CPU架构发布",
+    "Google Gemma 3 270M",
+    "Go 1.24正式发布"
+  ],
   "2026-03-27": [
     "Rust 1.95.0: 模式匹配增强与性能优化",
     "DeerFlow 2.0: 字节跳动开源AI智能体平台",
@@ -141,21 +157,5 @@
     "DeepSeek-V3: 开源大语言模型新标杆",
     "AMD Ryzen AI 400G系列: Zen 5桌面APU",
     "6G研发进入系统集成新阶段"
-  ],
-  "2026-03-18": [
-    "递归似然比梯度优化器赋能扩散模型后训练",
-    "随机森林：经典集成学习算法",
-    "ARM Neoverse V3：云计算与AI服务器架构",
-    "NVIDIA RTX PRO 5000 72GB Blackwell：专业级AI显卡",
-    "OpenAI Whisper：开源语音识别模型",
-    "AMD Ryzen 9000系列：Zen 5桌面处理器",
-    "花泽香菜",
-    "阿里发布全球首个企业级Agent平台“悟空”",
-    "Fish Speech V1.5：百度多语言TTS模型",
-    "通义万相2.6：阿里云全能视频生成模型",
-    "Wi-Fi 7：下一代无线网络标准",
-    "DeepSeek-V3.2：强化Agent能力的开源LLM",
-    "Python 3.13：JIT编译器与性能革新",
-    "百度文心大模型4.5：开源多模态LLM"
   ]
 }

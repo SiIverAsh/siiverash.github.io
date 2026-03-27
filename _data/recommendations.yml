@@ -1,127 +1,126 @@
 algorithm:
-- desc: 集成学习算法，通过迭代训练弱学习器（决策树）来最小化损失函数，广泛应用于分类和回归任务，具有高精度和鲁棒性。
+- desc: 经典无监督机器学习算法，通过迭代将数据划分为K个簇，最小化簇内平方误差，广泛应用于数据分割、图像压缩与模式识别，时间复杂度O(n*k*t)。
   tags:
-  - Machine Learning
-  - Ensemble
-  - Boosting
-  - Decision Trees
-  title: 梯度提升决策树（Gradient Boosting Decision Trees）
+  - 聚类
+  - 无监督学习
+  - 机器学习
+  - 数据挖掘
+  title: K-Means聚类算法
 cv_recommend:
-  agency: Across Entertainment
-  hometown: 日本大阪府
-  intro: 上田丽奈是一位日本女性声优，以其清澈明亮的声线著称。她于2010年代出道，在多个作品中展现了出色的演技。她的声音可塑性强，能够驾驭从活泼到深沉的不同角色类型。她积极参与广播节目和活动，积累了丰富的人气。
-  name: 上田丽奈
-date: '2026-03-27'
+  agency: 大泽事务所（Osawa Inc.）
+  hometown: 东京都
+  intro: 日本知名声优，以其清澈温柔的声线著称。她擅长演绎多种角色类型，从活泼少女到沉稳女性都能准确把握。在配音工作中注重情感表达，声音具有极高的辨识度。她长期活跃于声优行业，积累了丰富的演出经验，并积极参与音乐活动，发行多张个人专辑。
+  name: 花泽香菜
+date: '2026-03-28'
 history:
-- event: 特内里费空难：两架波音747客机在西班牙特内里费岛相撞，造成583人死亡，成为航空史上最严重的空难之一。
-  year: '1977'
-- event: 阿拉斯加地震：美国阿拉斯加发生9.2级大地震，引发海啸，造成约139人死亡，是北美洲有记录以来最强的地震。
-  year: '1964'
-- event: 侵华日军遗弃在华化学毒剂泄漏事件：中国黑龙江省齐齐哈尔市发生侵华日军遗弃化学毒剂泄漏，导致多人伤亡。
-  year: '2003'
-- event: 北约轰炸塞尔维亚：北约开始对塞尔维亚进行空中打击，标志着科索沃战争的升级。
-  year: '1999'
-- event: 白银星期四（Silver Thursday）：白银价格在一天内暴跌50%，引发全球金融市场震荡。
-  year: '1980'
-- event: 布鲁塞尔恐袭：比利时布鲁塞尔发生连环恐怖袭击，包括机场和地铁站爆炸，造成32人死亡，300余人受伤。
-  year: '2016'
+- event: 罗马皇帝佩蒂纳克斯被禁卫军刺杀，导致罗马帝国陷入动荡。
+  year: '193'
+- event: 德国物理学家海因里希·威廉·奥尔斯特定律发表，奠定了电磁学基础。
+  year: '1802'
+- event: 美国宾夕法尼亚州三里岛核电站发生部分堆芯熔毁事故，成为核能安全重要警示。
+  year: '1979'
+- event: 印度尼西亚苏门答腊附近发生8.6级地震，引发海啸，造成重大人员伤亡。
+  year: '2005'
+- event: 日本福岛第一核电站因地震和海啸发生核泄漏事故，引发全球对核安全的关注。
+  year: '2011'
+- event: 美国新冠肺炎确诊病例超过10万例，成为全球疫情重要转折点。
+  year: '2020'
 llm:
-- desc: DeepSeek-V3开源大语言模型，参数规模达721B，采用MoE架构，上下文窗口扩展至128K，在多语言基准测试中领先，支持代码生成和复杂推理。
+- desc: Google开源的超高效小型语言模型，参数量270M，专为边缘设备设计，在多项基准测试中超越同类模型，支持多语言任务，推理内存占用仅500MB，适合移动端部署。
   tags:
-  - LLM
-  - Open Source
-  - MoE
-  - Multilingual
-  title: 'DeepSeek-V3: 开源大语言模型新版本'
+  - 轻量级
+  - 开源
+  - 边缘AI
+  - 多语言
+  title: Google Gemma 3 270M
 new_project:
-- desc: 字节跳动开源的长视距AI智能体平台，支持多智能体协作和复杂任务规划，适用于自动化工作流，已在GitHub上获得高星关注。
+- desc: GitHub开源项目，为AI智能体提供可扩展的长期记忆存储，支持向量检索与时间序列数据管理，适用于对话系统与强化学习，采用Rust编写保证内存安全。
   tags:
-  - AI Agent
-  - Open Source
-  - Automation
-  - ByteDance
-  title: 'DeerFlow 2.0: 字节跳动开源AI智能体平台'
-  url: https://github.com/bytedance/deer-flow
+  - Rust
+  - 记忆存储
+  - AI智能体
+  - 开源
+  title: mem7：基于Rust的长期记忆存储系统
+  url: https://github.com/mem7ai/mem7
 paper:
-- desc: ICLR 2026论文，提出通过代表性头引导的稀疏注意力机制，在长序列任务中实现高效推理，减少计算开销同时保持模型性能。
+- desc: ICLR 2026论文，提出解耦位姿与几何估计的动态重建方法，在动态场景4D感知中达到新标杆，方法在KITTI和NuScenes数据集上实现SOTA，代码已开源。
   tags:
-  - Attention
-  - Sparse
+  - 动态重建
+  - 4D感知
+  - 计算机视觉
   - ICLR 2026
-  - Efficiency
-  title: 'ProxyAttn: Guided Sparse Attention via Representative Heads'
-  url: https://iclr.cc/virtual/2026/poster/10007621
+  title: 'PAGE-4D: Disentangled Pose and Geometry Estimation for 4D Perception'
+  url: https://openreview.net/pdf?id=Nfmzp5PBzr
 tech:
   Arch:
-  - desc: ARM v9.5架构引入指针认证扩展（PAE3）和内存标记扩展（MTE3），提升安全性和性能；支持更细粒度的权限控制，适用于移动和服务器芯片。
+  - desc: Arm专为代理式AI设计的数据中心CPU，采用新一代Neoverse V3核心，支持CXL 3.0内存池化，每瓦性能提升40%，核心数高达192个，单芯片提供1.5TB/s内存带宽，针对LLM推理优化。
     tags:
-    - ARM
-    - Architecture
-    - Security
-    - Performance
-    title: 'ARM v9.5架构: 性能与安全性增强'
+    - CPU架构
+    - Arm
+    - 数据中心
+    - AI加速
+    title: Arm AGI CPU架构发布
   Audio:
-  - desc: 基于深度学习的实时音频驱动面部动画模型，支持3D面部网格生成，延迟低于10毫秒，通过音频信号直接驱动面部肌肉运动，适用于虚拟角色和元宇宙应用。
+  - desc: 香港科技大学发布的单个模型处理语音、音乐、音效生成任务，基于扩散Transformer架构，参数规模5B，在AudioCaps和MusicCaps上达到SOTA，支持文本到音频、音频风格迁移等多种任务，推理延迟低于200ms。
     tags:
-    - Audio
-    - Facial Animation
-    - Real-time
-    - NVIDIA
-    title: 'NVIDIA Audio2Face 3D: Real-time Audio-driven Facial Animation'
+    - 音频生成
+    - 统一模型
+    - ICLR 2026
+    - 扩散模型
+    title: 'AudioX: 港科大统一音频生成模型'
   CPU:
-  - desc: AMD EPYC 9005系列（Turin）基于Zen 5架构，最高192核心，支持12通道DDR5-7200内存，TDP达500W，性能较上代提升40%，适用于高性能计算和云服务器。
+  - desc: 基于台积电3nm工艺，配备12核CPU（8性能核+4能效核），16核GPU，支持统一内存架构达128GB，神经引擎算力提升至40 TOPS，CPU单核性能较M3提升20%，能效比提高30%。
     tags:
-    - CPU
-    - AMD
-    - Zen 5
-    - Server
-    title: AMD EPYC 9005系列（Turin）
+    - Apple
+    - M4
+    - 3nm工艺
+    - 移动计算
+    title: Apple M4芯片
   Computer Vision:
-  - desc: CVPR 2026论文提出的即插即用加速方案，通过动态分析视觉Token的内在变化量，智能丢弃冗余Token，实现视觉语言模型推理速度提升1.87倍，同时保持精度无损。
+  - desc: 上海AI Lab开源，采用混合专家架构，4B参数实现视觉理解、推理、生成、编辑一体化，支持多分辨率输入，在ImageNet、COCO等多模态基准测试中达到SOTA，模型尺寸仅4B，推理效率较同类模型提升30%。
     tags:
-    - Computer Vision
-    - VLM
-    - Acceleration
-    - Token Dropping
-    title: 'V²Drop: Variation-aware Vision Token Dropping for Faster VLM Inference'
+    - 多模态
+    - 计算机视觉
+    - 开源
+    - AI
+    title: 'InternVL-U: 4B参数轻量级统一多模态模型'
   GPU:
-  - desc: NVIDIA Feynman GPU架构采用台积电A16（1.6nm）工艺，集成288GB HBM4内存，带宽达22TB/s，AI算力提升至50
-      PFLOPs，专为下一代AI训练和推理设计。
+  - desc: 基于Battlemage架构，32GB GDDR7显存，提供367 TOPS INT8算力，支持PCIe 6.0，针对本地AI推理与专业图形工作站优化，光线追踪性能较上代提升50%，功耗250W。
     tags:
     - GPU
-    - NVIDIA
-    - TSMC A16
-    - HBM4
-    title: 'NVIDIA Feynman GPU架构: 台积电A16制程'
+    - Intel
+    - AI推理
+    - 专业图形
+    title: Intel Arc Pro B70显卡
   Lang:
-  - desc: Rust 1.95.0引入if let guards语法，增强模式匹配表达能力；优化编译后端，提升增量编译性能15%，同时改进错误消息可读性。
+  - desc: Go语言最新版本，引入运行时性能优化，垃圾回收暂停时间减少20%，标准库增加泛型容器，支持WebAssembly System Interface，编译器后端重构提升ARM64架构性能15%。
     tags:
-    - Rust
-    - Programming Language
-    - Compiler
-    - Pattern Matching
-    title: 'Rust 1.95.0: 模式匹配增强与性能优化'
+    - 编程语言
+    - Go
+    - 性能优化
+    - 开源
+    title: Go 1.24正式发布
   NLP:
-  - desc: Claude 4采用混合专家（MoE）架构，参数规模达2万亿，上下文窗口扩展至1M tokens，在编码和推理基准测试中表现卓越，支持更复杂的多轮对话和任务处理。
+  - desc: 通义千问发布的多语言文本嵌入模型，支持128K上下文长度，采用对比学习与指令微调，在MTEB基准上领先，提供变长编码能力，模型参数规模从0.1B到7B可选，支持中英日韩等近百种语言。
     tags:
-    - LLM
-    - Anthropic
-    - MoE
-    - Large Context
-    title: 'Claude 4: Anthropic''s Latest LLM'
+    - 文本嵌入
+    - 多语言
+    - NLP
+    - 开源
+    title: Qwen3-Embedding系列模型
   Net:
-  - desc: 华为推出的智能体驱动移动宽带架构，基于意图感知网络和AI智能体，实现网络资源动态调度，提升5G-A网络效率30%，支持自动驾驶和工业物联网等场景。
+  - desc: IETF草案将MQTT协议与QUIC传输层结合，提供低延迟、高可靠的车联网通信，支持0-RTT连接建立，多路复用避免队头阻塞，实测在5G网络下延迟降低40%，吞吐量提升2倍。
     tags:
-    - Networking
-    - 5G
-    - AI Agent
-    - Huawei
-    title: '华为Agentic MBB: 移动AI时代网络新架构'
+    - 网络协议
+    - QUIC
+    - MQTT
+    - 车联网
+    title: MQTT over QUIC协议标准化
   News:
-  - desc: 谷歌推出TurboQuant算法，通过3位量化技术，在无精度损失情况下将大模型内存占用降低至1/6，显著减少显存需求，助力边缘设备部署。
+  - desc: 破解传统算力瓶颈，整合量子计算、超级计算与智能计算，提供每秒百亿亿次混合算力，支持大规模AI训练与科学仿真，平台采用国产芯片与软件栈，已部署于北京数据中心。
     tags:
-    - AI
-    - Memory Optimization
-    - Quantization
-    - Google
-    title: 谷歌新算法大幅降低AI内存开销
+    - 量子计算
+    - 超级计算
+    - 融合平台
+    - AI算力
+    title: 北京发布“量超智通”融合计算平台
