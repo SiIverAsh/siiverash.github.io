@@ -167,6 +167,36 @@
         z-index: 2147483647 !important;
         box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
+
+    .content-card {
+        padding: 24px 16px;
+    }
+
+    .post-content {
+        font-size: 1em !important;
+    }
+
+    .post-content h2,
+    .post-content h3 {
+        padding-left: 10px !important;
+    }
+
+    .post-content table {
+        font-size: 0.88em;
+    }
+
+    .post-content th,
+    .post-content td {
+        padding: 8px 10px;
+    }
+
+    .post-content pre {
+        font-size: 0.9em;
+    }
+
+    .post-content img {
+        max-width: 100% !important;
+    }
 }
 
 @media (min-width: 769px) {

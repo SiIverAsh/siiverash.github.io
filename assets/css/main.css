@@ -273,14 +273,12 @@ html {
 
 /* 博文表格 */
 .post-content table {
-    display: block;
     width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
     border-collapse: collapse;
     margin: 24px 0;
     font-size: 0.95em;
     background: rgba(255, 255, 255, 0.18);
+    table-layout: auto;
 }
 
 .post-content thead {
@@ -315,6 +313,71 @@ html {
 
 .dark-mode .post-content tbody tr:nth-child(even) {
     background: rgba(255, 255, 255, 0.03);
+}
+
+.post-content {
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.post-content p,
+.post-content li,
+.post-content blockquote,
+.post-content td,
+.post-content th {
+    overflow-wrap: break-word;
+}
+
+.post-content a {
+    color: var(--primary-color);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+    word-break: break-all;
+}
+
+.post-content ul,
+.post-content ol {
+    padding-left: 1.6em;
+    margin: 1em 0;
+}
+
+.post-content li + li {
+    margin-top: 0.45em;
+}
+
+.post-content blockquote {
+    margin: 1.5em 0;
+    padding: 0.9em 1.1em;
+    border-left: 4px solid var(--primary-color);
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--text-main);
+}
+
+.post-content blockquote > :first-child {
+    margin-top: 0;
+}
+
+.post-content blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+.post-content hr {
+    border: 0;
+    border-top: 1px dashed var(--glass-border);
+    margin: 2em 0;
+}
+
+.post-content iframe,
+.post-content video {
+    max-width: 100%;
+}
+
+.post-content pre {
+    max-width: 100%;
+}
+
+.dark-mode .post-content blockquote {
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* 深色模式内容适配 */
