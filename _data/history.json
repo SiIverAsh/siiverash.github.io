@@ -1,4 +1,19 @@
 {
+  "2026-03-29": [
+    "松冈祯丞",
+    "Rubin架构: 英伟达在GTC 2026发布的新一代GPU平台",
+    "MiniMax-01: 开源大规模混合注意力推理模型",
+    "AMD Ryzen 9000系列: 基于Zen 6架构的桌面处理器",
+    "Java 26发布: 甲骨文推出JDK 26，带来数千项改进",
+    "DualToken: Towards Unifying Visual Understanding and Generation with Dual Visual Vocabularies",
+    "Nemotron 3 Super: NVIDIA开源混合Mamba-Transformer MoE模型",
+    "支持向量机 (SVM)",
+    "flash-moe: 在笔记本电脑上运行397B参数模型的开源项目",
+    "LPU芯片: 英伟达发布语言处理单元，专为AI推理加速",
+    "科大讯飞人工智能计算机华东制造基地在浙江金华投产",
+    "Lyria 3 Pro: 谷歌推出可生成3分钟结构化歌曲的音频模型",
+    "AONP框架: 中国移动发布智能体互联网开放网络协议"
+  ],
   "2026-03-28": [
     "InternVL-U: 4B参数轻量级统一多模态模型",
     "Intel Arc Pro B70显卡",
@@ -141,21 +156,5 @@
     "Java 26: Oracle新一代LTS版本",
     "OpenClaw: 开源多模态AI框架",
     "UCIe 1.5: 通用芯片互连标准更新"
-  ],
-  "2026-03-19": [
-    "NVIDIA RTX 5090 Ti: 750W功耗性能提升15%",
-    "Rust 2.0: 革新系统编程语言",
-    "3DThinker: 3D-Aware Visual Reasoning with Mental Imagery",
-    "ARM v9.5架构: 性能与灵活性新高度",
-    "The Agency: AI智能体专家团队库",
-    "内田真礼",
-    "OpenAI Voice Engine 2026: 15秒复刻人声",
-    "阿里发布全新AI产品‘悟空’",
-    "3DThinker: 首个具备3D‘脑补’能力的视觉大模型",
-    "Google Gemini 2.0: 全线升级的多模态AI模型",
-    "RandOpt: 随机优化新算法",
-    "DeepSeek-V3: 开源大语言模型新标杆",
-    "AMD Ryzen AI 400G系列: Zen 5桌面APU",
-    "6G研发进入系统集成新阶段"
   ]
 }

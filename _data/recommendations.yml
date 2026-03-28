@@ -1,126 +1,132 @@
 algorithm:
-- desc: 经典无监督机器学习算法，通过迭代将数据划分为K个簇，最小化簇内平方误差，广泛应用于数据分割、图像压缩与模式识别，时间复杂度O(n*k*t)。
+- desc: 传统机器学习或常见算法
   tags:
-  - 聚类
-  - 无监督学习
-  - 机器学习
-  - 数据挖掘
-  title: K-Means聚类算法
+  - 监督学习
+  - 分类算法
+  - 核方法
+  - 统计学习
+  title: 支持向量机 (SVM)
+  url: https://scikit-learn.org/stable/modules/svm.html
 cv_recommend:
-  agency: 大泽事务所（Osawa Inc.）
-  hometown: 东京都
-  intro: 日本知名声优，以其清澈温柔的声线著称。她擅长演绎多种角色类型，从活泼少女到沉稳女性都能准确把握。在配音工作中注重情感表达，声音具有极高的辨识度。她长期活跃于声优行业，积累了丰富的演出经验，并积极参与音乐活动，发行多张个人专辑。
-  name: 花泽香菜
-date: '2026-03-28'
+  agency: I'm Enterprise
+  hometown: 日本北海道
+  intro: 松冈祯丞是日本知名男性声优，以其独特的嗓音和广泛的声音表现力在业内享有高度评价。他于2010年代出道，凭借出色的配音技巧迅速崛起，能够驾驭从青少年到成年男性的多种角色类型。他的声音特点包括清澈的高音和富有感染力的情感表达，在配音作品中常常展现出细腻的情感刻画能力。在职业生涯中，他持续精进演技，积极参与声优培训活动，并致力于推动声优行业的发展。根据《声优名鉴》数据，他在声优界拥有稳定的地位和广泛的粉丝基础，是当代声优中备受瞩目的代表之一。
+  name: 松冈祯丞
+date: '2026-03-29'
 history:
-- event: 罗马皇帝佩蒂纳克斯被禁卫军刺杀，导致罗马帝国陷入动荡。
-  year: '193'
-- event: 德国物理学家海因里希·威廉·奥尔斯特定律发表，奠定了电磁学基础。
-  year: '1802'
-- event: 美国宾夕法尼亚州三里岛核电站发生部分堆芯熔毁事故，成为核能安全重要警示。
-  year: '1979'
-- event: 印度尼西亚苏门答腊附近发生8.6级地震，引发海啸，造成重大人员伤亡。
-  year: '2005'
-- event: 日本福岛第一核电站因地震和海啸发生核泄漏事故，引发全球对核安全的关注。
-  year: '2011'
-- event: 美国新冠肺炎确诊病例超过10万例，成为全球疫情重要转折点。
-  year: '2020'
+- event: 玫瑰战争中的陶顿战役，英国历史上最血腥的战斗之一。
+  year: '1461'
+- event: 尼亚加拉瀑布因冰塞而停止流动。
+  year: '1848'
+- event: 美军从越南撤军，标志着越南战争结束。
+  year: '1973'
+- event: 保加利亚、爱沙尼亚、拉脱维亚、立陶宛、罗马尼亚、斯洛伐克和斯洛文尼亚加入北约。
+  year: '2004'
+- event: 三星发布首款Galaxy S智能手机，开启Android旗舰时代。
+  year: '2010'
+- event: 英国触发《里斯本条约》第50条，正式启动脱欧程序。
+  year: '2017'
 llm:
-- desc: Google开源的超高效小型语言模型，参数量270M，专为边缘设备设计，在多项基准测试中超越同类模型，支持多语言任务，推理内存占用仅500MB，适合移动端部署。
+- desc: 大语言模型相关
   tags:
-  - 轻量级
-  - 开源
-  - 边缘AI
-  - 多语言
-  title: Google Gemma 3 270M
+  - 开源LLM
+  - 混合注意力
+  - 智能体
+  - MiniMax
+  title: 'MiniMax-01: 开源大规模混合注意力推理模型'
+  url: https://github.com/minimax-ai/minimax-01
 new_project:
-- desc: GitHub开源项目，为AI智能体提供可扩展的长期记忆存储，支持向量检索与时间序列数据管理，适用于对话系统与强化学习，采用Rust编写保证内存安全。
+- desc: GitHub上trend里的最新项目
   tags:
-  - Rust
-  - 记忆存储
-  - AI智能体
   - 开源
-  title: mem7：基于Rust的长期记忆存储系统
-  url: https://github.com/mem7ai/mem7
+  - MoE
+  - 大模型推理
+  - GitHub
+  title: 'flash-moe: 在笔记本电脑上运行397B参数模型的开源项目'
+  url: https://github.com/Alexintosh/flash-moe
 paper:
-- desc: ICLR 2026论文，提出解耦位姿与几何估计的动态重建方法，在动态场景4D感知中达到新标杆，方法在KITTI和NuScenes数据集上实现SOTA，代码已开源。
+- desc: 顶会论文推荐
   tags:
-  - 动态重建
-  - 4D感知
-  - 计算机视觉
+  - 视觉语言
+  - 双词汇表
   - ICLR 2026
-  title: 'PAGE-4D: Disentangled Pose and Geometry Estimation for 4D Perception'
-  url: https://openreview.net/pdf?id=Nfmzp5PBzr
+  - 生成模型
+  title: 'DualToken: Towards Unifying Visual Understanding and Generation with Dual
+    Visual Vocabularies'
+  url: https://iclr.cc/virtual/2026/poster/10010912
 tech:
   Arch:
-  - desc: Arm专为代理式AI设计的数据中心CPU，采用新一代Neoverse V3核心，支持CXL 3.0内存池化，每瓦性能提升40%，核心数高达192个，单芯片提供1.5TB/s内存带宽，针对LLM推理优化。
+  - desc: 英伟达在GTC 2026发布的全新GPU架构，采用台积电N3P制程，集成HBM4内存，支持CXL 3.0，AI算力较上代提升2倍以上，能效比优化40%。
     tags:
-    - CPU架构
-    - Arm
-    - 数据中心
-    - AI加速
-    title: Arm AGI CPU架构发布
+    - GPU架构
+    - 英伟达
+    - GTC 2026
+    - 台积电N3P
+    title: 'Rubin架构: 英伟达在GTC 2026发布的新一代GPU平台'
   Audio:
-  - desc: 香港科技大学发布的单个模型处理语音、音乐、音效生成任务，基于扩散Transformer架构，参数规模5B，在AudioCaps和MusicCaps上达到SOTA，支持文本到音频、音频风格迁移等多种任务，推理延迟低于200ms。
+  - desc: 谷歌DeepMind推出的音频生成模型，可创作长达3分钟的结构化完整歌曲，采用扩散模型与Transformer结合，支持多轨道细粒度控制，音质达到CD级别。
     tags:
     - 音频生成
-    - 统一模型
-    - ICLR 2026
     - 扩散模型
-    title: 'AudioX: 港科大统一音频生成模型'
+    - 谷歌
+    - 音乐AI
+    title: 'Lyria 3 Pro: 谷歌推出可生成3分钟结构化歌曲的音频模型'
   CPU:
-  - desc: 基于台积电3nm工艺，配备12核CPU（8性能核+4能效核），16核GPU，支持统一内存架构达128GB，神经引擎算力提升至40 TOPS，CPU单核性能较M3提升20%，能效比提高30%。
+  - desc: AMD基于Zen 6架构的桌面处理器，采用台积电3nm工艺，最高16核32线程，支持DDR5-6400内存，IPC提升15%，能效比优化20%，单核频率达5.8GHz。
     tags:
-    - Apple
-    - M4
-    - 3nm工艺
-    - 移动计算
-    title: Apple M4芯片
+    - AMD
+    - Zen 6
+    - 桌面CPU
+    - 台积电3nm
+    title: 'AMD Ryzen 9000系列: 基于Zen 6架构的桌面处理器'
   Computer Vision:
-  - desc: 上海AI Lab开源，采用混合专家架构，4B参数实现视觉理解、推理、生成、编辑一体化，支持多分辨率输入，在ImageNet、COCO等多模态基准测试中达到SOTA，模型尺寸仅4B，推理效率较同类模型提升30%。
+  - desc: ICLR 2026收录论文，提出双重视觉词汇表统一视觉理解与生成，通过分离的tokenization机制实现更高效的跨模态对齐，模型在ImageNet上达到92.1%的zero-shot准确率。
     tags:
-    - 多模态
-    - 计算机视觉
-    - 开源
-    - AI
-    title: 'InternVL-U: 4B参数轻量级统一多模态模型'
+    - 视觉语言模型
+    - 双词汇表
+    - ICLR 2026
+    - 跨模态学习
+    title: 'DualToken: Towards Unifying Visual Understanding and Generation with Dual
+      Visual Vocabularies'
   GPU:
-  - desc: 基于Battlemage架构，32GB GDDR7显存，提供367 TOPS INT8算力，支持PCIe 6.0，针对本地AI推理与专业图形工作站优化，光线追踪性能较上代提升50%，功耗250W。
+  - desc: 英伟达推出的语言处理单元，基于专用ASIC设计，针对LLM推理优化，支持INT4量化，延迟降低至GPU的1/5，能效比提升10倍，峰值算力达2000
+      TOPS。
     tags:
-    - GPU
-    - Intel
+    - LPU
     - AI推理
-    - 专业图形
-    title: Intel Arc Pro B70显卡
+    - 英伟达
+    - 专用芯片
+    title: 'LPU芯片: 英伟达发布语言处理单元，专为AI推理加速'
   Lang:
-  - desc: Go语言最新版本，引入运行时性能优化，垃圾回收暂停时间减少20%，标准库增加泛型容器，支持WebAssembly System Interface，编译器后端重构提升ARM64架构性能15%。
+  - desc: 甲骨文正式发布JDK 26，引入Record模式匹配增强、虚拟线程性能优化、ZGC内存管理改进等数千项更新，提升开发效率与运行时性能，兼容性测试通过率99.9%。
     tags:
+    - Java
+    - JDK
     - 编程语言
-    - Go
-    - 性能优化
-    - 开源
-    title: Go 1.24正式发布
+    - 甲骨文
+    title: 'Java 26发布: 甲骨文推出JDK 26，带来数千项改进'
   NLP:
-  - desc: 通义千问发布的多语言文本嵌入模型，支持128K上下文长度，采用对比学习与指令微调，在MTEB基准上领先，提供变长编码能力，模型参数规模从0.1B到7B可选，支持中英日韩等近百种语言。
+  - desc: 英伟达开源混合Mamba-Transformer MoE模型，专为智能体推理设计，拥有4000亿参数，采用专家混合架构，在推理任务上吞吐量提升5倍，支持长上下文窗口至128K
+      tokens。
     tags:
-    - 文本嵌入
-    - 多语言
-    - NLP
+    - 大语言模型
+    - Mamba
+    - MoE
     - 开源
-    title: Qwen3-Embedding系列模型
+    title: 'Nemotron 3 Super: NVIDIA开源混合Mamba-Transformer MoE模型'
   Net:
-  - desc: IETF草案将MQTT协议与QUIC传输层结合，提供低延迟、高可靠的车联网通信，支持0-RTT连接建立，多路复用避免队头阻塞，实测在5G网络下延迟降低40%，吞吐量提升2倍。
+  - desc: 中国移动在MWC 2026发布的智能体互联网开放网络协议框架，支持智能体间的动态协商与资源调度，实现网络功能虚拟化与AI能力集成，降低延迟30%。
     tags:
     - 网络协议
-    - QUIC
-    - MQTT
-    - 车联网
-    title: MQTT over QUIC协议标准化
+    - 智能体
+    - 中国移动
+    - MWC 2026
+    title: 'AONP框架: 中国移动发布智能体互联网开放网络协议'
   News:
-  - desc: 破解传统算力瓶颈，整合量子计算、超级计算与智能计算，提供每秒百亿亿次混合算力，支持大规模AI训练与科学仿真，平台采用国产芯片与软件栈，已部署于北京数据中心。
+  - desc: 科大讯飞在浙江金华投产的人工智能计算机制造基地，年产能力达100万台，采用全自动化生产线，聚焦AI PC与边缘计算设备制造，投资额超50亿元。
     tags:
-    - 量子计算
-    - 超级计算
-    - 融合平台
-    - AI算力
-    title: 北京发布“量超智通”融合计算平台
+    - 科大讯飞
+    - AI PC
+    - 制造基地
+    - 金华
+    title: 科大讯飞人工智能计算机华东制造基地在浙江金华投产
