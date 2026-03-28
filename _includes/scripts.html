@@ -204,6 +204,14 @@
         loadAnimeExtras();
         if (typeof loadBangumiWiki === 'function') loadBangumiWiki();
 
+        // 自动为文章内的表格添加滚动外层
+        document.querySelectorAll('.post-content table').forEach(table => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-wrapper';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+        });
+
         const sidebar = document.querySelector('.sidebar');
         const sidebarOverlay = document.querySelector('.sidebar-overlay');
         const extraSidebar = document.querySelector('.extra-sidebar');
