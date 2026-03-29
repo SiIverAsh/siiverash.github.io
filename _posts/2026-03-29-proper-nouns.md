@@ -4,10 +4,13 @@ categories:
 date: 2026-03-25 18:50:51 +0800
 layout: post
 tags:
-
+- 机器学习
+- 神经网络
+- 深度学习
 title: 见过的论文里的专有名词
 subject: ''
 ---
+
 
 
 
