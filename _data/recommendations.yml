@@ -1,132 +1,133 @@
 algorithm:
-- desc: 传统机器学习或常见算法
+- desc: K-NN 是一种基于实例的学习算法，通过计算样本间距离（如欧氏距离）进行分类或回归，适用于非线性数据，但计算复杂度随数据量线性增长。
   tags:
-  - 监督学习
+  - 机器学习
   - 分类算法
-  - 核方法
-  - 统计学习
-  title: 支持向量机 (SVM)
-  url: https://scikit-learn.org/stable/modules/svm.html
+  - 距离度量
+  - 传统算法
+  title: K-最近邻算法（K-Nearest Neighbors）
 cv_recommend:
   agency: I'm Enterprise
-  hometown: 日本北海道
-  intro: 松冈祯丞是日本知名男性声优，以其独特的嗓音和广泛的声音表现力在业内享有高度评价。他于2010年代出道，凭借出色的配音技巧迅速崛起，能够驾驭从青少年到成年男性的多种角色类型。他的声音特点包括清澈的高音和富有感染力的情感表达，在配音作品中常常展现出细腻的情感刻画能力。在职业生涯中，他持续精进演技，积极参与声优培训活动，并致力于推动声优行业的发展。根据《声优名鉴》数据，他在声优界拥有稳定的地位和广泛的粉丝基础，是当代声优中备受瞩目的代表之一。
-  name: 松冈祯丞
-date: '2026-03-29'
+  hometown: 东京都
+  intro: 早见沙织以其清澈透明的音色和广泛的角色适应度而闻名，擅长演绎冷静理性的角色，在声优业界以高演技和专业态度备受赞誉。她的声音表现力强，能够精准把握角色情感，作品覆盖多种类型，积累了丰富的配音经验。
+  name: 早见沙织
+date: '2026-03-30'
 history:
-- event: 玫瑰战争中的陶顿战役，英国历史上最血腥的战斗之一。
-  year: '1461'
-- event: 尼亚加拉瀑布因冰塞而停止流动。
-  year: '1848'
-- event: 美军从越南撤军，标志着越南战争结束。
-  year: '1973'
-- event: 保加利亚、爱沙尼亚、拉脱维亚、立陶宛、罗马尼亚、斯洛伐克和斯洛文尼亚加入北约。
-  year: '2004'
-- event: 三星发布首款Galaxy S智能手机，开启Android旗舰时代。
+- event: 克里米亚战争结束，签订《巴黎和约》。
+  year: '1856'
+- event: 美国以720万美元从俄罗斯购买阿拉斯加。
+  year: '1867'
+- event: 第二次世界大战中，苏联军队占领但泽（今格但斯克）。
+  year: '1945'
+- event: 美国总统罗纳德·里根在华盛顿遇刺未遂。
+  year: '1981'
+- event: 苹果公司发布第一代iPad，开启平板电脑时代。
   year: '2010'
-- event: 英国触发《里斯本条约》第50条，正式启动脱欧程序。
-  year: '2017'
+- event: SpaceX完成首次全私人宇航员任务（Inspiration4）。
+  year: '2022'
 llm:
-- desc: 大语言模型相关
+- desc: Meta 开源 Llama 3.2 视觉语言模型，参数量 1B，支持图像和文本多模态理解，可在移动设备上运行，推理速度较前代提升 50%，推动边缘
+    AI 发展。
   tags:
-  - 开源LLM
-  - 混合注意力
-  - 智能体
-  - MiniMax
-  title: 'MiniMax-01: 开源大规模混合注意力推理模型'
-  url: https://github.com/minimax-ai/minimax-01
-new_project:
-- desc: GitHub上trend里的最新项目
-  tags:
+  - 大语言模型
+  - 多模态
   - 开源
-  - MoE
-  - 大模型推理
-  - GitHub
-  title: 'flash-moe: 在笔记本电脑上运行397B参数模型的开源项目'
-  url: https://github.com/Alexintosh/flash-moe
-paper:
-- desc: 顶会论文推荐
+  - Meta
+  title: Meta Llama 3.2 视觉语言模型开源
+new_project:
+- desc: OpenClaw 是一个开源 AI 智能体框架，支持插件扩展和自动化任务，可定制个人助手，基于大型语言模型，在 GitHub 上获得超过 10k 星标。
   tags:
-  - 视觉语言
-  - 双词汇表
-  - ICLR 2026
-  - 生成模型
-  title: 'DualToken: Towards Unifying Visual Understanding and Generation with Dual
-    Visual Vocabularies'
-  url: https://iclr.cc/virtual/2026/poster/10010912
+  - AI 智能体
+  - 开源
+  - 自动化
+  - GitHub
+  title: OpenClaw：开源 AI 私人助理框架
+  url: https://github.com/openclaw
+paper:
+- desc: 该 ICLR 2026 论文提出协同核心集 informed 自适应时间张量分解方法，用于高效时间序列分析和模式发现，在多个基准数据集上实现 SOTA
+    性能。
+  tags:
+  - 时间序列
+  - 张量分解
+  - 核心集
+  - ICLR2026
+  title: 'SONATA: Synergistic Coreset Informed Adaptive Temporal Tensor Factorization'
+  url: https://openreview.net/forum?id=P1PZBR6a4S
 tech:
   Arch:
-  - desc: 英伟达在GTC 2026发布的全新GPU架构，采用台积电N3P制程，集成HBM4内存，支持CXL 3.0，AI算力较上代提升2倍以上，能效比优化40%。
+  - desc: 华为在 MWC 2026 发布 Atlas 950 超节点集群，支持 FP8 精度，提供 16 EFLOPS AI 算力，基于昇腾 910B 处理器，支持
+      8192 张卡互联，适用于 ExaScale AI 训练。
     tags:
-    - GPU架构
-    - 英伟达
-    - GTC 2026
-    - 台积电N3P
-    title: 'Rubin架构: 英伟达在GTC 2026发布的新一代GPU平台'
+    - 算力底座
+    - AI 集群
+    - 华为
+    - FP8
+    title: 华为 Atlas 950 超节点算力底座
   Audio:
-  - desc: 谷歌DeepMind推出的音频生成模型，可创作长达3分钟的结构化完整歌曲，采用扩散模型与Transformer结合，支持多轨道细粒度控制，音质达到CD级别。
+  - desc: Covo-Audio 是腾讯开源的 7B 参数语音语言模型，支持实时全双工对话、音色解耦与智能音频生成，基于 Transformer 架构，在
+      LibriSpeech 测试集上达到 SOTA 效果。
     tags:
     - 音频生成
-    - 扩散模型
-    - 谷歌
-    - 音乐AI
-    title: 'Lyria 3 Pro: 谷歌推出可生成3分钟结构化歌曲的音频模型'
-  CPU:
-  - desc: AMD基于Zen 6架构的桌面处理器，采用台积电3nm工艺，最高16核32线程，支持DDR5-6400内存，IPC提升15%，能效比优化20%，单核频率达5.8GHz。
-    tags:
-    - AMD
-    - Zen 6
-    - 桌面CPU
-    - 台积电3nm
-    title: 'AMD Ryzen 9000系列: 基于Zen 6架构的桌面处理器'
-  Computer Vision:
-  - desc: ICLR 2026收录论文，提出双重视觉词汇表统一视觉理解与生成，通过分离的tokenization机制实现更高效的跨模态对齐，模型在ImageNet上达到92.1%的zero-shot准确率。
-    tags:
-    - 视觉语言模型
-    - 双词汇表
-    - ICLR 2026
-    - 跨模态学习
-    title: 'DualToken: Towards Unifying Visual Understanding and Generation with Dual
-      Visual Vocabularies'
-  GPU:
-  - desc: 英伟达推出的语言处理单元，基于专用ASIC设计，针对LLM推理优化，支持INT4量化，延迟降低至GPU的1/5，能效比提升10倍，峰值算力达2000
-      TOPS。
-    tags:
-    - LPU
-    - AI推理
-    - 英伟达
-    - 专用芯片
-    title: 'LPU芯片: 英伟达发布语言处理单元，专为AI推理加速'
-  Lang:
-  - desc: 甲骨文正式发布JDK 26，引入Record模式匹配增强、虚拟线程性能优化、ZGC内存管理改进等数千项更新，提升开发效率与运行时性能，兼容性测试通过率99.9%。
-    tags:
-    - Java
-    - JDK
-    - 编程语言
-    - 甲骨文
-    title: 'Java 26发布: 甲骨文推出JDK 26，带来数千项改进'
-  NLP:
-  - desc: 英伟达开源混合Mamba-Transformer MoE模型，专为智能体推理设计，拥有4000亿参数，采用专家混合架构，在推理任务上吞吐量提升5倍，支持长上下文窗口至128K
-      tokens。
-    tags:
-    - 大语言模型
-    - Mamba
-    - MoE
+    - 语音合成
     - 开源
-    title: 'Nemotron 3 Super: NVIDIA开源混合Mamba-Transformer MoE模型'
+    - 腾讯
+    title: 'Covo-Audio: 腾讯开源端到端音频大模型'
+  CPU:
+  - desc: AMD Ryzen AI 400G 处理器采用 Zen 5 架构，最高 12 核 24 线程，集成 RDNA 3.5 显卡，内置 XDNA 2
+      AI 加速引擎，AI 性能较上代提升 2 倍。
+    tags:
+    - CPU
+    - AMD
+    - Zen5
+    - AI 加速
+    title: AMD Ryzen AI 400G 处理器基于 Zen 5 架构
+  Computer Vision:
+  - desc: SAM 3 在 ICLR 2026 上提出，引入概念分割能力，能够理解高级语义概念并支持 3D 重建，模型架构基于视觉 Transformer
+      增强，支持零样本泛化与多模态提示。
+    tags:
+    - 计算机视觉
+    - 图像分割
+    - 多模态
+    - ICLR2026
+    title: 'SAM 3: Segment Anything with Concepts'
+  GPU:
+  - desc: AMD 扩展 RDNA 4m 集成显卡架构，新增 GFX1171 和 GFX1172 目标，针对 Zen 6 APU，采用 3nm 制程，AI
+      计算性能提升 35%，支持硬件光线追踪。
+    tags:
+    - GPU
+    - AMD
+    - 集成显卡
+    - RDNA4m
+    title: AMD RDNA 4m 架构新增 GFX1171/GFX1172 目标
+  Lang:
+  - desc: Go 1.26 引入 Green Tea 垃圾回收器，显著降低延迟；泛型限制放宽，支持更灵活的类型参数；性能整体提升 15%，SIMD 指令集加速数值计算。
+    tags:
+    - 编程语言
+    - Go
+    - 垃圾回收
+    - 性能提升
+    title: Go 1.26 版本正式发布
+  NLP:
+  - desc: RAG 2.0 架构在 2026 年演进，实现端到端检索与生成一体化，支持多模态检索与动态上下文融合，提升回答准确性和推理能力，延迟降低 40%。
+    tags:
+    - NLP
+    - 检索增强生成
+    - AI 架构
+    - '2026'
+    title: 'RAG 2.0: 检索增强生成的最新实践'
   Net:
-  - desc: 中国移动在MWC 2026发布的智能体互联网开放网络协议框架，支持智能体间的动态协商与资源调度，实现网络功能虚拟化与AI能力集成，降低延迟30%。
+  - desc: Hysteria 2 协议基于 QUIC 开发，在弱网环境下提供卓越的传输性能，支持多路复用和抗丢包，速度较传统代理提升 300% 以上，已广泛部署于边缘网络。
     tags:
     - 网络协议
-    - 智能体
-    - 中国移动
-    - MWC 2026
-    title: 'AONP框架: 中国移动发布智能体互联网开放网络协议'
+    - 代理
+    - QUIC
+    - 性能优化
+    title: 'Hysteria 2: 基于 QUIC 的高性能代理协议'
   News:
-  - desc: 科大讯飞在浙江金华投产的人工智能计算机制造基地，年产能力达100万台，采用全自动化生产线，聚焦AI PC与边缘计算设备制造，投资额超50亿元。
+  - desc: “通通”3.0 具备具身智能系统，支持情绪识别、虚实交互与多模态感知，可指挥机器人和智能家居，基于大模型实现自主决策，标志通用人工智能落地进展。
     tags:
-    - 科大讯飞
-    - AI PC
-    - 制造基地
-    - 金华
-    title: 科大讯飞人工智能计算机华东制造基地在浙江金华投产
+    - 人工智能
+    - 机器人
+    - 通用智能
+    - '2026'
+    title: 全球首个通用智能人“通通”3.0 正式发布

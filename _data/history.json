@@ -1,4 +1,20 @@
 {
+  "2026-03-30": [
+    "OpenClaw：开源 AI 私人助理框架",
+    "Go 1.26 版本正式发布",
+    "Meta Llama 3.2 视觉语言模型开源",
+    "AMD RDNA 4m 架构新增 GFX1171/GFX1172 目标",
+    "SONATA: Synergistic Coreset Informed Adaptive Temporal Tensor Factorization",
+    "Covo-Audio: 腾讯开源端到端音频大模型",
+    "Hysteria 2: 基于 QUIC 的高性能代理协议",
+    "华为 Atlas 950 超节点算力底座",
+    "RAG 2.0: 检索增强生成的最新实践",
+    "早见沙织",
+    "K-最近邻算法（K-Nearest Neighbors）",
+    "AMD Ryzen AI 400G 处理器基于 Zen 5 架构",
+    "全球首个通用智能人“通通”3.0 正式发布",
+    "SAM 3: Segment Anything with Concepts"
+  ],
   "2026-03-29": [
     "松冈祯丞",
     "Rubin架构: 英伟达在GTC 2026发布的新一代GPU平台",
@@ -140,21 +156,5 @@
     "梯度提升决策树（GBDT）",
     "Apple M4 芯片正式亮相",
     "ViT-5: Vision Transformers for The Mid-2020s"
-  ],
-  "2026-03-20": [
-    "WebTransport API: 下一代Web双向通信协议",
-    "阿里巴巴发布企业级Agent平台“悟空”",
-    "RoSE: Monocular Normal Estimation via Shading Sequence Prediction",
-    "随机森林算法与GPU加速推理",
-    "DeepSeek-V4: 万亿参数开源大语言模型",
-    "梶裕貴",
-    "Intel Core Ultra 系列3: 18A工艺处理器",
-    "YOLO26: 下一代实时目标检测模型",
-    "小米MiMo-V2-TTS: 多方言语音合成大模型",
-    "AMD 3nm GPU: 新一代AI推理加速器",
-    "DeepSeek-V4: 开源万亿参数大模型",
-    "Java 26: Oracle新一代LTS版本",
-    "OpenClaw: 开源多模态AI框架",
-    "UCIe 1.5: 通用芯片互连标准更新"
   ]
 }
