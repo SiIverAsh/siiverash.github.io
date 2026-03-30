@@ -1,133 +1,129 @@
 algorithm:
-- desc: K-NN 是一种基于实例的学习算法，通过计算样本间距离（如欧氏距离）进行分类或回归，适用于非线性数据，但计算复杂度随数据量线性增长。
+- desc: 传统机器学习算法，通过构建多棵决策树并投票提升预测精度，支持分类与回归任务，具有抗过拟合与高可解释性特点。
   tags:
-  - 机器学习
+  - 集成学习
+  - 决策树
   - 分类算法
-  - 距离度量
-  - 传统算法
-  title: K-最近邻算法（K-Nearest Neighbors）
+  - 机器学习
+  title: 随机森林（Random Forest）集成学习算法
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 东京都
-  intro: 早见沙织以其清澈透明的音色和广泛的角色适应度而闻名，擅长演绎冷静理性的角色，在声优业界以高演技和专业态度备受赞誉。她的声音表现力强，能够精准把握角色情感，作品覆盖多种类型，积累了丰富的配音经验。
-  name: 早见沙织
-date: '2026-03-30'
+  agency: Sony Music Artists
+  hometown: 日本东京都
+  intro: 水濑祈是日本女性声优，隶属Sony Music Artists事务所。她以其清澈甜美的声线与广泛的演技范围著称，能够驾驭从幼女到成熟女性的多样角色。在声优生涯中，她荣获多项大奖，包括‘声优奖’最佳女主角奖。除了配音工作，她还活跃于音乐领域，发行了多张畅销单曲和专辑，展现了出色的歌唱实力。她的专业态度与多才多艺使其在业内备受赞誉。
+  name: 水濑祈
+date: '2026-03-31'
 history:
-- event: 克里米亚战争结束，签订《巴黎和约》。
-  year: '1856'
-- event: 美国以720万美元从俄罗斯购买阿拉斯加。
-  year: '1867'
-- event: 第二次世界大战中，苏联军队占领但泽（今格但斯克）。
-  year: '1945'
-- event: 美国总统罗纳德·里根在华盛顿遇刺未遂。
-  year: '1981'
-- event: 苹果公司发布第一代iPad，开启平板电脑时代。
-  year: '2010'
-- event: SpaceX完成首次全私人宇航员任务（Inspiration4）。
-  year: '2022'
+- event: 埃菲尔铁塔正式开放。
+  year: '1889'
+- event: 爱因斯坦发表狭义相对论。
+  year: '1905'
+- event: 苏联发射月球10号探测器。
+  year: '1966'
+- event: 互联网域名管理组织ICANN成立。
+  year: '1998'
+- event: 视频分享网站YouTube上线。
+  year: '2005'
+- event: 中国首次实现5G网络商用。
+  year: '2019'
 llm:
-- desc: Meta 开源 Llama 3.2 视觉语言模型，参数量 1B，支持图像和文本多模态理解，可在移动设备上运行，推理速度较前代提升 50%，推动边缘
-    AI 发展。
+- desc: 2026年3月发布，推理成本降低三分之二，上下文窗口扩展至200K tokens，在数学与代码基准测试中超越 GPT-4 Turbo。
   tags:
+  - Claude
   - 大语言模型
-  - 多模态
-  - 开源
-  - Meta
-  title: Meta Llama 3.2 视觉语言模型开源
+  - 低成本
+  - 长上下文
+  title: Anthropic Claude 4.5 大语言模型
 new_project:
-- desc: OpenClaw 是一个开源 AI 智能体框架，支持插件扩展和自动化任务，可定制个人助手，基于大型语言模型，在 GitHub 上获得超过 10k 星标。
+- desc: GitHub上trend里的最新项目，涵盖 AI 加速器、编译器、分布式训练等系统设计资源，提供实践指南与代码示例。
   tags:
-  - AI 智能体
+  - AI系统
   - 开源
-  - 自动化
+  - 分布式训练
   - GitHub
-  title: OpenClaw：开源 AI 私人助理框架
-  url: https://github.com/openclaw
+  title: microsoft/AI-System 开源项目
+  url: https://github.com/microsoft/AI-System
 paper:
-- desc: 该 ICLR 2026 论文提出协同核心集 informed 自适应时间张量分解方法，用于高效时间序列分析和模式发现，在多个基准数据集上实现 SOTA
-    性能。
+- desc: 顶会论文推荐
   tags:
-  - 时间序列
-  - 张量分解
-  - 核心集
-  - ICLR2026
-  title: 'SONATA: Synergistic Coreset Informed Adaptive Temporal Tensor Factorization'
-  url: https://openreview.net/forum?id=P1PZBR6a4S
+  - 自回归
+  - 视觉生成
+  - 多尺度
+  - ICLR 2026
+  title: 'MVAR: Visual Autoregressive Modeling with Scale and Spatial Markovian Conditioning'
+  url: https://arxiv.org/abs/2505.12742
 tech:
   Arch:
-  - desc: 华为在 MWC 2026 发布 Atlas 950 超节点集群，支持 FP8 精度，提供 16 EFLOPS AI 算力，基于昇腾 910B 处理器，支持
-      8192 张卡互联，适用于 ExaScale AI 训练。
+  - desc: 采用 Intel 18A 工艺与 3D 封装技术，集成288个能效核心，共享864MB L3 缓存，支持 PCIe 6.0 与 CXL 3.0，专为
+      AI 负载优化。
     tags:
-    - 算力底座
-    - AI 集群
-    - 华为
-    - FP8
-    title: 华为 Atlas 950 超节点算力底座
+    - 服务器CPU
+    - Intel 18A
+    - 3D封装
+    - AI优化
+    title: 英特尔至强6+ 处理器架构
   Audio:
-  - desc: Covo-Audio 是腾讯开源的 7B 参数语音语言模型，支持实时全双工对话、音色解耦与智能音频生成，基于 Transformer 架构，在
-      LibriSpeech 测试集上达到 SOTA 效果。
+  - desc: 2026年3月推出，专为低延迟语音交互设计，端到端延迟低于100ms，支持多语言实时转录与情感分析，基于扩散模型提升音频生成质量。
     tags:
-    - 音频生成
-    - 语音合成
-    - 开源
-    - 腾讯
-    title: 'Covo-Audio: 腾讯开源端到端音频大模型'
+    - 实时音频
+    - 低延迟
+    - 语音交互
+    - Google AI
+    title: Google Gemini 3.1 Flash Live 实时音频模型
   CPU:
-  - desc: AMD Ryzen AI 400G 处理器采用 Zen 5 架构，最高 12 核 24 线程，集成 RDNA 3.5 显卡，内置 XDNA 2
-      AI 加速引擎，AI 性能较上代提升 2 倍。
+  - desc: 5纳米制程，RISC-V 架构原生支持千亿参数大模型，SPECint2006 得分突破70分，性能较上一代提升3倍，集成硬件安全模块。
     tags:
-    - CPU
-    - AMD
-    - Zen5
-    - AI 加速
-    title: AMD Ryzen AI 400G 处理器基于 Zen 5 架构
+    - RISC-V
+    - 5纳米
+    - 服务器CPU
+    - AI加速
+    title: 阿里玄铁C950 RISC-V 处理器
   Computer Vision:
-  - desc: SAM 3 在 ICLR 2026 上提出，引入概念分割能力，能够理解高级语义概念并支持 3D 重建，模型架构基于视觉 Transformer
-      增强，支持零样本泛化与多模态提示。
+  - desc: ICLR 2026 论文，提出多尺度空间马尔可夫条件自回归视觉建模框架，通过分层表示学习实现高质量图像生成，支持多视图一致性生成。
     tags:
-    - 计算机视觉
-    - 图像分割
-    - 多模态
-    - ICLR2026
-    title: 'SAM 3: Segment Anything with Concepts'
+    - 自回归模型
+    - 视觉生成
+    - 多尺度
+    - ICLR 2026
+    title: 'MVAR: Visual Autoregressive Modeling with Scale and Spatial Markovian
+      Conditioning'
   GPU:
-  - desc: AMD 扩展 RDNA 4m 集成显卡架构，新增 GFX1171 和 GFX1172 目标，针对 Zen 6 APU，采用 3nm 制程，AI
-      计算性能提升 35%，支持硬件光线追踪。
+  - desc: 基于 Battlemage Xe2 架构，配备32个 Xe 核心与32GB GDDR6 ECC 显存，支持 PCIe 5.0 x16，FP32
+      算力达40 TFLOPS，针对 AI 推理与图形渲染优化。
     tags:
-    - GPU
-    - AMD
-    - 集成显卡
-    - RDNA4m
-    title: AMD RDNA 4m 架构新增 GFX1171/GFX1172 目标
+    - 工作站显卡
+    - Xe2架构
+    - 32GB显存
+    - AI推理
+    title: Intel Arc Pro B65 工作站显卡
   Lang:
-  - desc: Go 1.26 引入 Green Tea 垃圾回收器，显著降低延迟；泛型限制放宽，支持更灵活的类型参数；性能整体提升 15%，SIMD 指令集加速数值计算。
+  - desc: 2026年3月更新，引入增量 JIT 编译器提升性能30%，新增 Pattern Matching 语法糖，改进异步编程 asyncio 模块，并优化内存管理。
     tags:
+    - Python
     - 编程语言
-    - Go
-    - 垃圾回收
-    - 性能提升
-    title: Go 1.26 版本正式发布
+    - JIT 编译器
+    - 异步编程
+    title: Python 3.13.12 版本发布
   NLP:
-  - desc: RAG 2.0 架构在 2026 年演进，实现端到端检索与生成一体化，支持多模态检索与动态上下文融合，提升回答准确性和推理能力，延迟降低 40%。
+  - desc: 2026年3月发布，采用新一代注意力机制与混合专家架构，参数规模达万亿级，在中文理解与代码生成任务中超越GPT-4o，支持128K上下文长度。
     tags:
-    - NLP
-    - 检索增强生成
-    - AI 架构
-    - '2026'
-    title: 'RAG 2.0: 检索增强生成的最新实践'
+    - 大语言模型
+    - 中文理解
+    - 代码生成
+    - 万亿参数
+    title: 百度文心一言4.0 Turbo 大模型
   Net:
-  - desc: Hysteria 2 协议基于 QUIC 开发，在弱网环境下提供卓越的传输性能，支持多路复用和抗丢包，速度较传统代理提升 300% 以上，已广泛部署于边缘网络。
+  - desc: 基于 QUIC 协议深度优化，实现多路复用与0-RTT 连接，传输效率提升50%，支持 AES-256-GCM 加密，适用于高延迟网络环境。
     tags:
-    - 网络协议
-    - 代理
+    - 代理协议
     - QUIC
-    - 性能优化
-    title: 'Hysteria 2: 基于 QUIC 的高性能代理协议'
+    - 低延迟
+    - 多路复用
+    title: TUIC 协议：下一代高速代理传输协议
   News:
-  - desc: “通通”3.0 具备具身智能系统，支持情绪识别、虚实交互与多模态感知，可指挥机器人和智能家居，基于大模型实现自主决策，标志通用人工智能落地进展。
+  - desc: 2026年3月公开，搭载自研 AI 芯片与高精度执行器，全身自由度达56个，支持自主导航与物体操作，预计夏季量产。
     tags:
-    - 人工智能
-    - 机器人
-    - 通用智能
-    - '2026'
-    title: 全球首个通用智能人“通通”3.0 正式发布
+    - 人形机器人
+    - 特斯拉
+    - AI芯片
+    - 自主导航
+    title: 特斯拉第三代机器人 Optimus Gen3 亮相

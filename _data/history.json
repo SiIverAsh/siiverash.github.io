@@ -1,4 +1,19 @@
 {
+  "2026-03-31": [
+    "水濑祈",
+    "阿里玄铁C950 RISC-V 处理器",
+    "Python 3.13.12 版本发布",
+    "特斯拉第三代机器人 Optimus Gen3 亮相",
+    "随机森林（Random Forest）集成学习算法",
+    "MVAR: Visual Autoregressive Modeling with Scale and Spatial Markovian Conditioning",
+    "Intel Arc Pro B65 工作站显卡",
+    "英特尔至强6+ 处理器架构",
+    "百度文心一言4.0 Turbo 大模型",
+    "TUIC 协议：下一代高速代理传输协议",
+    "Anthropic Claude 4.5 大语言模型",
+    "microsoft/AI-System 开源项目",
+    "Google Gemini 3.1 Flash Live 实时音频模型"
+  ],
   "2026-03-30": [
     "OpenClaw：开源 AI 私人助理框架",
     "Go 1.26 版本正式发布",
@@ -140,21 +155,5 @@
     "DBSCAN: 基于密度的聚类算法",
     "科大讯飞完成星火深度推理大模型X1全面升级",
     "AMD EPYC 8005系列: Zen5c架构84核服务器处理器"
-  ],
-  "2026-03-21": [
-    "NVIDIA Vera Rubin GPU 平台",
-    "vLLM: High-throughput LLM Inference Engine",
-    "特斯拉发布Optimus Gen2人形机器人",
-    "Anthropic Claude 4 系列模型",
-    "进迭时空首发8核RISC-V AI CPU",
-    "Qwen3-TTS 开源语音生成模型",
-    "神谷浩史",
-    "Ruby 4.0.0 编程语言正式发布",
-    "Gated Attention for Large Language Models",
-    "3GPP Release 19 5G-Advanced 标准",
-    "Meta Llama 4 多模态大语言模型",
-    "梯度提升决策树（GBDT）",
-    "Apple M4 芯片正式亮相",
-    "ViT-5: Vision Transformers for The Mid-2020s"
   ]
 }
