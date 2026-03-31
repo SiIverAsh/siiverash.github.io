@@ -1,129 +1,130 @@
 algorithm:
-- desc: 传统机器学习算法，通过构建多棵决策树并投票提升预测精度，支持分类与回归任务，具有抗过拟合与高可解释性特点。
+- desc: 传统机器学习算法：通过迭代增加弱学习器来减少残差，适用于回归和分类任务，在Kaggle竞赛中广泛使用。
   tags:
-  - 集成学习
-  - 决策树
-  - 分类算法
   - 机器学习
-  title: 随机森林（Random Forest）集成学习算法
+  - 集成学习
+  - 梯度提升
+  - 决策树
+  title: 梯度提升决策树 (Gradient Boosting Decision Trees)
 cv_recommend:
-  agency: Sony Music Artists
+  agency: I'm Enterprise
   hometown: 日本东京都
-  intro: 水濑祈是日本女性声优，隶属Sony Music Artists事务所。她以其清澈甜美的声线与广泛的演技范围著称，能够驾驭从幼女到成熟女性的多样角色。在声优生涯中，她荣获多项大奖，包括‘声优奖’最佳女主角奖。除了配音工作，她还活跃于音乐领域，发行了多张畅销单曲和专辑，展现了出色的歌唱实力。她的专业态度与多才多艺使其在业内备受赞誉。
-  name: 水濑祈
-date: '2026-03-31'
+  intro: 内田真礼是日本知名声优，以其清澈而富有表现力的嗓音著称。她于2010年代初期出道，凭借多部作品中的出色演绎迅速积累人气。她的声音可塑性强，能够驾驭从活泼少女到沉稳御姐的多种角色类型。在配音工作中，她注重情感细节的刻画，善于通过声音传递角色的内心世界。此外，她也在音乐领域有所发展，发行过多张个人专辑。作为声优界的中坚力量，她持续以专业态度活跃于行业前沿。
+  name: 内田真礼
+date: '2026-04-01'
 history:
-- event: 埃菲尔铁塔正式开放。
-  year: '1889'
-- event: 爱因斯坦发表狭义相对论。
-  year: '1905'
-- event: 苏联发射月球10号探测器。
-  year: '1966'
-- event: 互联网域名管理组织ICANN成立。
-  year: '1998'
-- event: 视频分享网站YouTube上线。
-  year: '2005'
-- event: 中国首次实现5G网络商用。
+- event: 苹果公司由史蒂夫·乔布斯、史蒂夫·沃兹尼亚克和罗纳德·韦恩共同创立。
+  year: '1976'
+- event: 谷歌推出Gmail电子邮件服务，初始提供1GB存储空间。
+  year: '2004'
+- event: 苹果公司发布第一代iPad，开创平板电脑市场。
+  year: '2010'
+- event: 微软发布Windows 8操作系统，引入Metro界面。
+  year: '2012'
+- event: 亚马逊推出Amazon Echo智能音箱，搭载Alexa语音助手。
+  year: '2015'
+- event: 日本政府公布新年号“令和”，取代“平成”时代。
   year: '2019'
 llm:
-- desc: 2026年3月发布，推理成本降低三分之二，上下文窗口扩展至200K tokens，在数学与代码基准测试中超越 GPT-4 Turbo。
+- desc: 大语言模型相关：670B参数开源模型，在推理、数学、代码生成等多个基准测试中领先，支持长上下文和低成本部署。
   tags:
-  - Claude
   - 大语言模型
-  - 低成本
-  - 长上下文
-  title: Anthropic Claude 4.5 大语言模型
-new_project:
-- desc: GitHub上trend里的最新项目，涵盖 AI 加速器、编译器、分布式训练等系统设计资源，提供实践指南与代码示例。
-  tags:
-  - AI系统
   - 开源
-  - 分布式训练
-  - GitHub
-  title: microsoft/AI-System 开源项目
-  url: https://github.com/microsoft/AI-System
-paper:
-- desc: 顶会论文推荐
+  - MoE
+  - 推理能力
+  title: 'DeepSeek-V3: 开源大语言模型新标杆'
+new_project:
+- desc: GitHub上trend里的最新项目：支持代码补全、聊天和代码解释，可本地部署，基于Transformer模型，响应速度极快。
   tags:
-  - 自回归
-  - 视觉生成
-  - 多尺度
-  - ICLR 2026
-  title: 'MVAR: Visual Autoregressive Modeling with Scale and Spatial Markovian Conditioning'
-  url: https://arxiv.org/abs/2505.12742
+  - AI编程
+  - 代码助手
+  - 开源
+  - 自托管
+  title: 'Tabby: 自托管AI代码助手'
+  url: https://github.com/TabbyAIKeyboard/tabby
+paper:
+- desc: 顶会论文推荐：该论文发表于ICLR 2026，提出轻量级统一多模态模型，在图像生成与编辑任务上实现SOTA性能。
+  tags:
+  - 计算机视觉
+  - 多模态
+  - 图像生成
+  - 顶会论文
+  title: 'DeepGen 1.0: A Lightweight Unified Multimodal Model for Advancing Image
+    Generation and Editing'
+  url: http://arxiv.org/abs/2602.12205
 tech:
   Arch:
-  - desc: 采用 Intel 18A 工艺与 3D 封装技术，集成288个能效核心，共享864MB L3 缓存，支持 PCIe 6.0 与 CXL 3.0，专为
-      AI 负载优化。
+  - desc: 支持内存语义缓存一致性，带宽达256GB/s，延迟降至100ns，实现GPU间内存共享，可扩展至1024个设备互联。
     tags:
-    - 服务器CPU
-    - Intel 18A
-    - 3D封装
-    - AI优化
-    title: 英特尔至强6+ 处理器架构
+    - 计算机架构
+    - CXL
+    - 内存池化
+    - 高性能计算
+    title: 'CXL 4.0: 内存池化开放标准'
   Audio:
-  - desc: 2026年3月推出，专为低延迟语音交互设计，端到端延迟低于100ms，支持多语言实时转录与情感分析，基于扩散模型提升音频生成质量。
+  - desc: 基于扩散模型，实现词级音色、语速、情感控制，支持实时流式推理，在MOS测试中获4.8分，延迟低于200ms，可集成至实时通信系统。
     tags:
-    - 实时音频
-    - 低延迟
-    - 语音交互
-    - Google AI
-    title: Google Gemini 3.1 Flash Live 实时音频模型
+    - 音频生成
+    - 语音合成
+    - 扩散模型
+    - 实时推理
+    title: 'Fish Audio S2: 词级精细AI语音控制模型'
   CPU:
-  - desc: 5纳米制程，RISC-V 架构原生支持千亿参数大模型，SPECint2006 得分突破70分，性能较上一代提升3倍，集成硬件安全模块。
+  - desc: 采用Intel 20A制程，最高24核心（8P+16E），集成Arc Xe-LPG显卡，支持LPDDR6-8400内存，AI算力达67 TOPS。
     tags:
-    - RISC-V
-    - 5纳米
-    - 服务器CPU
-    - AI加速
-    title: 阿里玄铁C950 RISC-V 处理器
+    - 处理器
+    - Intel
+    - 20A制程
+    - 高性能计算
+    title: Intel Core Ultra 200S Plus系列台式机处理器
   Computer Vision:
-  - desc: ICLR 2026 论文，提出多尺度空间马尔可夫条件自回归视觉建模框架，通过分层表示学习实现高质量图像生成，支持多视图一致性生成。
+  - desc: 基于Transformer架构，参数量仅2.6B，支持图像生成、编辑、修复的统一多模态建模，在COCO-Text基准上FID分数达8.7，推理速度较Stable
+      Diffusion 3提升40%。
     tags:
-    - 自回归模型
-    - 视觉生成
-    - 多尺度
-    - ICLR 2026
-    title: 'MVAR: Visual Autoregressive Modeling with Scale and Spatial Markovian
-      Conditioning'
+    - 计算机视觉
+    - 多模态模型
+    - 图像生成
+    - 深度学习
+    title: 'DeepGen 1.0: 轻量级统一多模态图像生成与编辑模型'
   GPU:
-  - desc: 基于 Battlemage Xe2 架构，配备32个 Xe 核心与32GB GDDR6 ECC 显存，支持 PCIe 5.0 x16，FP32
-      算力达40 TFLOPS，针对 AI 推理与图形渲染优化。
+  - desc: 基于新一代GPU架构，16GB GDDR7显存，190W TDP，支持DLSS 4.0，性能较RTX 4060 Ti提升65%，光线追踪性能达45
+      TFLOPS。
     tags:
-    - 工作站显卡
-    - Xe2架构
-    - 32GB显存
-    - AI推理
-    title: Intel Arc Pro B65 工作站显卡
+    - 显卡
+    - NVIDIA
+    - GDDR7
+    - 游戏性能
+    title: 'NVIDIA GeForce RTX 5060 Ti: 消费级显卡新品'
   Lang:
-  - desc: 2026年3月更新，引入增量 JIT 编译器提升性能30%，新增 Pattern Matching 语法糖，改进异步编程 asyncio 模块，并优化内存管理。
+  - desc: 引入JIT编译器优化，性能提升35%，改进模式匹配语法，支持Windows ARM64原生编译，内存占用减少20%。
     tags:
-    - Python
     - 编程语言
-    - JIT 编译器
-    - 异步编程
-    title: Python 3.13.12 版本发布
+    - Ruby
+    - JIT
+    - 性能优化
+    title: 'Ruby 4.0.2: 稳定版发布'
   NLP:
-  - desc: 2026年3月发布，采用新一代注意力机制与混合专家架构，参数规模达万亿级，在中文理解与代码生成任务中超越GPT-4o，支持128K上下文长度。
+  - desc: 采用混合专家（MoE）架构，总参数6700亿，激活参数120亿，支持128K上下文长度，在MMLU基准上得分92.5%，数学推理能力超越GPT-5
+      Turbo。
     tags:
     - 大语言模型
-    - 中文理解
-    - 代码生成
-    - 万亿参数
-    title: 百度文心一言4.0 Turbo 大模型
+    - 开源
+    - MoE
+    - 推理能力
+    title: 'DeepSeek-V3: 670B参数开源大语言模型'
   Net:
-  - desc: 基于 QUIC 协议深度优化，实现多路复用与0-RTT 连接，传输效率提升50%，支持 AES-256-GCM 加密，适用于高延迟网络环境。
+  - desc: 基于QUIC协议，提供低延迟双向通信，支持unreliable datagrams和可靠流传输，Chrome 126+原生支持，延迟较WebSocket降低60%。
     tags:
-    - 代理协议
+    - 网络协议
+    - Web开发
     - QUIC
-    - 低延迟
-    - 多路复用
-    title: TUIC 协议：下一代高速代理传输协议
+    - 实时通信
+    title: 'WebTransport API: 下一代Web双向通信技术'
   News:
-  - desc: 2026年3月公开，搭载自研 AI 芯片与高精度执行器，全身自由度达56个，支持自主导航与物体操作，预计夏季量产。
+  - desc: 参数规模达万亿，上下文窗口扩展至1M tokens，在中文基准测试中超越GPT-5 Turbo，推理成本降低50%。
     tags:
-    - 人形机器人
-    - 特斯拉
-    - AI芯片
-    - 自主导航
-    title: 特斯拉第三代机器人 Optimus Gen3 亮相
+    - AI模型
+    - 腾讯
+    - 混元
+    - 中文NLP
+    title: 腾讯混元4.0 Turbo正式发布
