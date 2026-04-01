@@ -1,4 +1,20 @@
 {
+  "2026-04-02": [
+    "雨宫天",
+    "Qwen3.5",
+    "NVIDIA RTX PRO 4500",
+    "Gaia2: Benchmarking LLM Agents on Dynamic and Asynchronous Environments",
+    "ChatGLM-4 Ultra",
+    "YOLO26",
+    "Arm AGI CPU",
+    "Rust 1.94.0",
+    "Intel Core Ultra 300系列",
+    "K-均值聚类",
+    "2026中关村论坛年会发布21项重大科技成果",
+    "Qwen3-TTS",
+    "DeerFlow 2.0",
+    "tRPC-Agent-Go"
+  ],
   "2026-04-01": [
     "腾讯混元4.0 Turbo正式发布",
     "NVIDIA GeForce RTX 5060 Ti: 消费级显卡新品",
@@ -139,21 +155,5 @@
     "MLX: Apple Silicon 原生机器学习框架",
     "CXL 3.0: 内存共享协议新标准",
     "Proxy-GS: Efficient 3D Gaussian Splatting via Proxy Mesh"
-  ],
-  "2026-03-23": [
-    "浪潮源 Yuan3.0 Ultra 多模态基础大模型开源",
-    "3D新架构推动国产AI芯片弯道超车",
-    "Python 3.13正式发布：JIT编译器与性能优化",
-    "k-近邻算法 (k-Nearest Neighbors)",
-    "花守由美里",
-    "Transformer²: 自适应大语言模型动态调整权重",
-    "Efficient-LVSM: Faster, Cheaper, and Better Large View Synthesis",
-    "Transformer²: Self-Adaptive LLMs GitHub仓库",
-    "Intel Xe3P GPU架构2026年落地：年更策略开启",
-    "中国电信完成业界首个50毫秒级WSON算力互联现网验证",
-    "YOLO-Master: 混合专家MoE赋能实时目标检测",
-    "Fish Audio S2: 词级精细AI语音控制",
-    "苹果2026年3月线上发布五款新品，含M5 MacBooks",
-    "Intel至强6处理器正式发布：主控处理器新标杆"
   ]
 }
