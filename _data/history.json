@@ -1,4 +1,20 @@
 {
+  "2026-04-04": [
+    "水树奈奈",
+    "Swift 6.3",
+    "facebookresearch/sam2",
+    "Segment and Matte Anything in a Unified Model",
+    "NVIDIA Rubin AI加速平台",
+    "商汤发布流式多模态大模型",
+    "高通X105 5G调制解调器及射频",
+    "DBSCAN聚类算法",
+    "AMD Ryzen AI 400系列处理器",
+    "LongCat-AudioDiT音频生成模型",
+    "AMD Zen 5架构",
+    "Mistral Small 4",
+    "Google Gemma 4开源大模型",
+    "Segment Anything 2 (SAM2)"
+  ],
   "2026-04-03": [
     "NVIDIA GeForce RTX 5080",
     "Apple M5 Pro 芯片",
@@ -138,21 +154,5 @@
     "随机森林算法",
     "百度文心 5.0 正式版",
     "WebTransport API"
-  ],
-  "2026-03-25": [
-    "MiniMax Speech 2.5语音合成模型",
-    "Tuic协议：下一代高性能代理传输协议",
-    "Marvell下一代CXL交换芯片实现内存池化",
-    "Intel Core Ultra 300系列Panther Lake处理器",
-    "NVIDIA Blackwell Ultra GPU发布",
-    "月之暗面Kimi K2.5开源大模型",
-    "OpenClaw：个人AI助手开源项目",
-    "Behavior Learning (BL) - ICLR 2026论文",
-    "MiniMax M2.1：多语言编程模型",
-    "内田真礼",
-    "理想汽车MindVLA-o1自动驾驶基础模型",
-    "全球首款通用具身大模型AWE 3.0发布",
-    "朴素贝叶斯分类器",
-    "华为仓颉编程语言正式预览"
   ]
 }

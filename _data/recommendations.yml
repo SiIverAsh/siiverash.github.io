@@ -1,132 +1,126 @@
 algorithm:
-- desc: 支持向量机是经典监督学习算法，通过寻找最大间隔超平面进行分类，适用于高维空间，具备核技巧处理非线性问题，在模式识别、文本分类等领域广泛应用。
+- desc: 基于密度的聚类算法，无需预设簇数量，能识别噪声点，适用于空间数据挖掘，时间复杂度为O(n log n)，核心参数为邻域半径和最小样本数。
   tags:
-  - 监督学习
-  - 分类算法
-  - 核方法
-  - 经典算法
-  title: 支持向量机 (Support Vector Machines)
+  - 聚类算法
+  - 无监督学习
+  - 密度聚类
+  - 机器学习
+  title: DBSCAN聚类算法
 cv_recommend:
-  agency: Pro-Fit
-  hometown: 日本爱知县
-  intro: 鬼头明里是日本新生代声优，以清澈透明的音色和广泛的声音表现力受到业界关注。她具备稳定的演技实力和独特的角色塑造能力，在多个媒体领域活跃，其专业态度和不断精进的声音技巧赢得了观众和同行的认可。
-  name: 鬼头明里
-date: '2026-04-03'
+  agency: StarCraft
+  hometown: 爱媛县
+  intro: 水树奈奈是日本知名声优兼歌手，出生于爱媛县，所属事务所为StarCraft。她以独特的嗓音和广泛的音域著称，在声优和音乐领域均有卓越成就。多年来，她持续活跃于行业前沿，积累了丰富的演出经验，深受粉丝喜爱。
+  name: 水树奈奈
+date: '2026-04-04'
 history:
-- event: 网易公司成立，成为中国早期互联网企业之一。
-  year: '1995'
-- event: 美国诉微软案判决，微软被认定违反反垄断法。
-  year: '2000'
-- event: 苹果公司发布第一代iPad，开创平板电脑时代。
-  year: '2010'
-- event: AlphaGo击败李世石，人工智能在围棋领域取得突破。
-  year: '2016'
-- event: 世界卫生组织宣布COVID-19全球大流行。
-  year: '2020'
-- event: OpenAI发布ChatGPT，引发生成式AI浪潮。
-  year: '2023'
+- event: 微软公司成立
+  year: '1975'
+- event: 马丁·路德·金遇刺
+  year: '1968'
+- event: 北约成立
+  year: '1949'
+- event: 电子衍射实验验证德布罗意假说
+  year: '1932'
+- event: 第二次马恩河战役开始
+  year: '1918'
+- event: 美国总统威廉·亨利·哈里森逝世，约翰·泰勒继任
+  year: '1841'
 llm:
-- desc: Phi-4-Reasoning-Vision-15B 是微软开源的多模态推理模型，参数量150亿，融合视觉与语言理解，支持自主决策何时使用视觉输入，在复杂推理任务中表现优异，适用于智能体与AI助手场景。
+- desc: Mistral AI发布的高效能模型，三位一体设计，在逻辑推理、代码生成和数学能力上表现突出，参数量为12B，推理速度较前代提升30%。
   tags:
-  - 多模态模型
-  - 推理引擎
+  - 大语言模型
   - 开源
-  - 微软
-  title: Microsoft Phi-4-Reasoning-Vision-15B
+  - Mistral
+  - 高效能
+  title: Mistral Small 4
 new_project:
-- desc: MLC LLM 是通用 LLM 部署引擎，支持将大语言模型编译优化后部署到各类边缘设备，提供跨平台推理框架，2026年持续活跃更新，推动本地AI应用普及。
+- desc: Segment Anything 2官方代码库，提供零样本图像分割的实现，支持点、框、文本提示，模型基于视觉Transformer，代码库包含预训练模型和推理示例。
   tags:
-  - LLM部署
+  - 图像分割
+  - 计算机视觉
   - 开源
-  - 边缘计算
-  - 编译优化
-  title: mlc-ai/mlc-llm
-  url: https://github.com/mlc-ai/mlc-llm
+  - Facebook Research
+  title: facebookresearch/sam2
+  url: https://github.com/facebookresearch/sam2
 paper:
-- desc: 该论文提出双视觉词汇表方法，统一视觉理解与生成任务，在 ICLR 2026 上展示，通过分离内容与结构词汇提升多模态性能，为视觉-语言模型提供新范式。
+- desc: CVPR 2026论文，提出统一模型实现图像分割与蒙版生成，通过共享编码器和任务特定解码器，提升多任务效率，在多个数据集上达到SOTA。
   tags:
   - 计算机视觉
-  - 多模态
-  - ICLR2026
-  - 视觉词汇表
-  title: 'DualToken: Towards Unifying Visual Understanding and Generation with Dual
-    Visual Vocabularies'
-  url: https://iclr.cc/virtual/2026/poster/10010912
+  - 图像分割
+  - 蒙版生成
+  - 统一模型
+  title: Segment and Matte Anything in a Unified Model
+  url: https://arxiv.org/abs/2601.12147
 tech:
   Arch:
-  - desc: AMD EPYC 8005 系列基于 Zen5c 架构，提供最高 84 核心 168 线程，TDP 仅 225W，采用 4nm 工艺，支持 PCIe
-      5.0 和 DDR5，专为智能边缘和数据中心设计，能效比提升 40%。
+  - desc: AMD新一代处理器架构，采用4nm制程，IPC提升达25%，集成NPU提供60 TOPS算力，支持DDR5内存和PCIe 5.0。
     tags:
-    - 服务器CPU
-    - Zen5c架构
-    - 高能效
-    - 4nm工艺
-    title: AMD EPYC 8005 系列服务器处理器
+    - 处理器架构
+    - AMD
+    - Zen5
+    - NPU
+    title: AMD Zen 5架构
   Audio:
-  - desc: UALM 是 NVIDIA 提出的统一音频语言模型，旨在统一音频理解与生成，采用多任务学习框架，在 ICLR 2026 上展示，支持音频分类、转录、生成等任务，基于大规模音频-文本对训练。
+  - desc: 基于扩散Transformer的音频生成模型，说话人相似度指标提升至0.818，支持高质量语音克隆，提供1B和3.5B参数版本，训练数据涵盖多语言。
     tags:
-    - 音频理解
-    - 多任务学习
-    - ICLR2026
-    - NVIDIA
-    title: Unified Audio Language Model (UALM)
+    - 音频生成
+    - 扩散模型
+    - 语音克隆
+    - AI
+    title: LongCat-AudioDiT音频生成模型
   CPU:
-  - desc: Apple M5 Pro 芯片采用 3nm 工艺，集成 12 核 CPU（8性能核+4能效核）和 16 核 GPU，支持统一内存架构，NPU 算力达
-      40 TOPS，专为专业工作流优化，能效比领先。
+  - desc: 基于Zen 5架构，最高12核24线程，集成NPU提供60 TOPS算力，采用AM5插座，支持DDR5-6400内存，专为AI PC优化。
     tags:
-    - Apple Silicon
-    - 3nm工艺
-    - 高性能
-    - 能效比
-    title: Apple M5 Pro 芯片
+    - 处理器
+    - AMD
+    - Zen5
+    - AI PC
+    title: AMD Ryzen AI 400系列处理器
   Computer Vision:
-  - desc: BiRefNet 是一个开源的高分辨率二值化图像分割框架，采用双边参考机制，支持多场景精细分割与抠图，在 2026 年更新至 2026.2 版本，优化了边缘精度和推理速度，适用于图像编辑、医疗影像分析等场景。
+  - desc: 基于视觉Transformer的零样本图像分割模型，支持点、框、文本提示，实现高精度分割，模型参数量达10亿级别，在多个基准测试中领先。
     tags:
+    - 计算机视觉
     - 图像分割
-    - 开源框架
-    - 高分辨率
-    - 二值化
-    title: 'BiRefNet: 开源高分辨率二值化图像分割框架'
+    - 零样本学习
+    - Transformer
+    title: Segment Anything 2 (SAM2)
   GPU:
-  - desc: NVIDIA GeForce RTX 5080 预计采用 Blackwell 架构，配备 16GB GDDR7 显存，支持 PCIe 5.0，光追性能提升
-      50%，DLSS 4 技术，能效比进一步优化，面向 2026 年高端游戏与创作市场。
+  - desc: 采用3nm工艺，集成3360亿晶体管，提供50 PFLOPS AI算力，支持HBM4内存，性能相比Blackwell提升5倍，专为大规模AI训练设计。
     tags:
-    - 消费级显卡
-    - Blackwell架构
-    - GDDR7
-    - 光追加速
-    title: NVIDIA GeForce RTX 5080
+    - GPU
+    - AI加速
+    - NVIDIA
+    - 3nm工艺
+    title: NVIDIA Rubin AI加速平台
   Lang:
-  - desc: Mojo 2.0 是 Modular 公司推出的 AI 基础设施编程语言，基于 Python 语法但具备静态类型、零成本抽象和高效 GPU 支持，专为高性能计算和机器学习编译优化，支持
-      SIMD 和异步并行。
+  - desc: 苹果发布的Swift编程语言新版本，支持原生Android应用开发，C互操作性增强，引入并发模型改进，编译速度提升20%。
     tags:
     - 编程语言
-    - AI基础设施
-    - 高性能计算
-    - Python兼容
-    title: Mojo 2.0 编程语言
+    - Swift
+    - iOS
+    - Android
+    title: Swift 6.3
   NLP:
-  - desc: Phi-4-Reasoning-Vision-15B 是微软发布的高效紧凑多模态推理模型，参数量为150亿，融合视觉与语言理解，支持自主决策何时使用视觉输入，在复杂推理任务中表现出色，基于
-      Transformer 架构优化能效比。
+  - desc: 31B参数开源大语言模型，采用混合专家架构，性能达到头部水准，支持多语言任务，可在手机端离线运行，推理效率提升40%。
     tags:
-    - 多模态模型
-    - 推理引擎
+    - 大语言模型
     - 开源
-    - 微软
-    title: Microsoft Phi-4-Reasoning-Vision-15B
+    - Google
+    - 31B参数
+    title: Google Gemma 4开源大模型
   Net:
-  - desc: 中国移动研究院在2026年3月发布智能体互联网开放网络协议AONP框架，定义智能体间通信标准，支持低延迟、高可靠通信，包含智能体网关实现服务发现与负载均衡，适用于分布式AI系统。
+  - desc: 支持5G Advanced关键跃升，提供最高10Gbps下行速率，集成AI增强功能，功耗降低30%，为移动设备和物联网提供更优连接。
     tags:
-    - 网络协议
-    - 智能体通信
-    - 开放标准
-    - 中国移动
-    title: 智能体互联网开放网络协议AONP框架
+    - 5G
+    - 调制解调器
+    - 高通
+    - 移动网络
+    title: 高通X105 5G调制解调器及射频
   News:
-  - desc: 华为在2026年3月发布新一代算力芯片，基于自研架构，支持 FP16 算力达 400 TFLOPS，能效比提升 30%，面向 AI 训练和推理场景，强化国产算力生态，推动产业智能化。
+  - desc: 商汤科技发布对标GPT-4o的流式多模态大模型，支持实时多模态交互，文本、图像、音频同步处理，延迟低于200毫秒，推动人机交互革命。
     tags:
-    - 华为
-    - 算力芯片
-    - AI加速
-    - 国产替代
-    title: 华为发布新一代算力芯片
+    - 多模态
+    - 大模型
+    - 商汤
+    - 实时交互
+    title: 商汤发布流式多模态大模型
