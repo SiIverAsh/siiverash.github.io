@@ -1,126 +1,142 @@
 algorithm:
-- desc: 基于密度的聚类算法，无需预设簇数量，能识别噪声点，适用于空间数据挖掘，时间复杂度为O(n log n)，核心参数为邻域半径和最小样本数。
+- desc: 主成分分析是一种无监督线性降维算法，通过正交变换将数据投影到方差最大的方向上。计算协方差矩阵的特征值与特征向量，保留前 k 个主成分以保留大部分方差。时间复杂度
+    O(n^3)，适用于数据压缩与可视化。
   tags:
-  - 聚类算法
+  - 降维
   - 无监督学习
-  - 密度聚类
-  - 机器学习
-  title: DBSCAN聚类算法
+  - 特征提取
+  - 统计
+  title: 主成分分析 (Principal Component Analysis)
 cv_recommend:
-  agency: StarCraft
-  hometown: 爱媛县
-  intro: 水树奈奈是日本知名声优兼歌手，出生于爱媛县，所属事务所为StarCraft。她以独特的嗓音和广泛的音域著称，在声优和音乐领域均有卓越成就。多年来，她持续活跃于行业前沿，积累了丰富的演出经验，深受粉丝喜爱。
-  name: 水树奈奈
-date: '2026-04-04'
+  agency: I'm Enterprise
+  hometown: 日本兵库县
+  intro: 上田丽奈以其清澈透明的音色和广泛的声音表现力而闻名，能够驾驭从少女到成熟女性的多种角色。她通过扎实的演技和情感投入，在声优界建立了独特的地位。自出道以来，她持续参与各类配音工作，获得了观众和业内的好评。
+  name: 上田丽奈
+date: '2026-04-05'
 history:
-- event: 微软公司成立
-  year: '1975'
-- event: 马丁·路德·金遇刺
-  year: '1968'
-- event: 北约成立
-  year: '1949'
-- event: 电子衍射实验验证德布罗意假说
-  year: '1932'
-- event: 第二次马恩河战役开始
-  year: '1918'
-- event: 美国总统威廉·亨利·哈里森逝世，约翰·泰勒继任
-  year: '1841'
+- event: 四五运动爆发，是中国大陆的一场群众抗议活动。
+  year: '1976'
+- event: 温斯顿·丘吉尔辞去英国首相职务，由安东尼·艾登接任。
+  year: '1955'
+- event: 美国阿波罗6号任务发射，这是阿波罗计划的最后一次无人测试飞行。
+  year: '1969'
+- event: 朝鲜发射火箭，引发国际社会广泛关注与谴责。
+  year: '2009'
+- event: 苏联宣布废除《苏日中立条约》，为对日宣战做准备。
+  year: '1945'
+- event: 塞尔维亚军队包围波斯尼亚首都萨拉热窝，波黑战争开始。
+  year: '1992'
 llm:
-- desc: Mistral AI发布的高效能模型，三位一体设计，在逻辑推理、代码生成和数学能力上表现突出，参数量为12B，推理速度较前代提升30%。
+- desc: Anthropic 发布的 Claude 3.5 Sonnet 模型，参数规模 70B，在推理与创意写作任务中超越 GPT-4o。采用宪法 AI 训练方法，支持
+    200K 上下文窗口。在 MMLU 基准上得分 92.5%，代码生成 HumanEval 通过率 88%。推理速度比前代提升 2 倍。
   tags:
   - 大语言模型
-  - 开源
-  - Mistral
-  - 高效能
-  title: Mistral Small 4
+  - Anthropic
+  - 宪法AI
+  - 推理
+  title: Claude 3.5 Sonnet
 new_project:
-- desc: Segment Anything 2官方代码库，提供零样本图像分割的实现，支持点、框、文本提示，模型基于视觉Transformer，代码库包含预训练模型和推理示例。
+- desc: vLLM 是一个高吞吐量、内存高效的 LLM 推理引擎，采用 PagedAttention 算法实现 KV 缓存的高效管理。支持连续批处理与动态分片，在
+    A100 GPU 上实现 10 倍吞吐量提升。项目开源，兼容 Hugging Face 模型。
   tags:
-  - 图像分割
-  - 计算机视觉
+  - LLM推理
   - 开源
-  - Facebook Research
-  title: facebookresearch/sam2
-  url: https://github.com/facebookresearch/sam2
+  - 高性能
+  - Python
+  title: vLLM
+  url: https://github.com/vllm-project/vllm
 paper:
-- desc: CVPR 2026论文，提出统一模型实现图像分割与蒙版生成，通过共享编码器和任务特定解码器，提升多任务效率，在多个数据集上达到SOTA。
+- desc: ICLR 2026 论文，提出统一框架 AudioX，支持文本、图像、视频到音频的生成任务。采用分层扩散模型与跨模态对齐损失，在 AudioCaps
+    测试集上取得 4.5 的 MOS 分。模型参数 1.2B，训练数据集包含 100 万小时多模态数据。
   tags:
-  - 计算机视觉
-  - 图像分割
-  - 蒙版生成
-  - 统一模型
-  title: Segment and Matte Anything in a Unified Model
-  url: https://arxiv.org/abs/2601.12147
+  - 音频生成
+  - 多模态
+  - ICLR 2026
+  - 扩散模型
+  title: 'AudioX: A Unified Framework for Anything-to-Audio Generation'
+  url: https://iclr.cc/virtual/2026/poster/10007216
 tech:
   Arch:
-  - desc: AMD新一代处理器架构，采用4nm制程，IPC提升达25%，集成NPU提供60 TOPS算力，支持DDR5内存和PCIe 5.0。
+  - desc: Blackwell Next 是 NVIDIA 下一代 GPU 架构，采用台积电 3nm 工艺，集成 192 个流式多处理器（SM），每个 SM
+      包含 128 个 FP32 核心。支持第 5 代 Tensor Core，稀疏计算性能提升 4 倍。内存系统搭载 128MB L2 缓存与 32GB HBM4，带宽达
+      8TB/s。专为万亿参数 AI 模型训练优化。
     tags:
-    - 处理器架构
-    - AMD
-    - Zen5
-    - NPU
-    title: AMD Zen 5架构
+    - GPU架构
+    - 3nm工艺
+    - AI计算
+    - NVIDIA
+    title: NVIDIA Blackwell Next 架构
   Audio:
-  - desc: 基于扩散Transformer的音频生成模型，说话人相似度指标提升至0.818，支持高质量语音克隆，提供1B和3.5B参数版本，训练数据涵盖多语言。
+  - desc: Gemini 3.1 Flash Live 是谷歌推出的实时语音生成模型，专为低延迟交互设计。采用流式编码器-解码器架构，端到端延迟低于 200
+      毫秒，支持 50 种语言。模型使用扩散变压器进行声学建模，在 LibriSpeech 测试集上词错误率降至 2.1%。参数规模 8B，可部署在边缘设备。
     tags:
-    - 音频生成
-    - 扩散模型
-    - 语音克隆
-    - AI
-    title: LongCat-AudioDiT音频生成模型
+    - 语音合成
+    - 实时生成
+    - 低延迟
+    - Google
+    title: Gemini 3.1 Flash Live
   CPU:
-  - desc: 基于Zen 5架构，最高12核24线程，集成NPU提供60 TOPS算力，采用AM5插座，支持DDR5-6400内存，专为AI PC优化。
+  - desc: AMD EPYC Venice 采用 Zen 6 架构，基于台积电 2nm 工艺，最高 256 核心，512 线程。每个 CCD 包含 16 核心，共享
+      64MB L3 缓存。支持 DDR6 内存与 CXL 4.0，内存带宽达 1TB/s。基准频率 3.5GHz，加速频率 5.0GHz，典型 TDP 400W。在
+      SPECint 2017 测试中得分 1800。
     tags:
-    - 处理器
-    - AMD
-    - Zen5
-    - AI PC
-    title: AMD Ryzen AI 400系列处理器
+    - 服务器CPU
+    - Zen6
+    - 2nm工艺
+    - 256核心
+    title: AMD EPYC Venice Zen 6 CPU
   Computer Vision:
-  - desc: 基于视觉Transformer的零样本图像分割模型，支持点、框、文本提示，实现高精度分割，模型参数量达10亿级别，在多个基准测试中领先。
+  - desc: SAM 3 在 SAM 2 基础上引入概念提示机制，支持通过文本描述进行零样本分割。采用混合编码器架构，整合视觉 Transformer 与概念嵌入层，在
+      COCO 数据集上实现 58.7% mIoU（零样本），比前代提升 12%。模型参数 650M，支持实时推理。
     tags:
     - 计算机视觉
     - 图像分割
     - 零样本学习
-    - Transformer
-    title: Segment Anything 2 (SAM2)
+    - ICLR 2026
+    title: 'SAM 3: Segment Anything with Concepts'
   GPU:
-  - desc: 采用3nm工艺，集成3360亿晶体管，提供50 PFLOPS AI算力，支持HBM4内存，性能相比Blackwell提升5倍，专为大规模AI训练设计。
+  - desc: NVIDIA GeForce RTX 5090 基于 Blackwell Next 架构，配备 32GB GDDR7 显存，位宽 512-bit，带宽
+      1.5TB/s。核心频率 2.8GHz，拥有 192 个 SM，共 24576 个 CUDA 核心。支持 PCIe 6.0，TDP 500W。在 4K
+      光追游戏中性能比 RTX 4090 提升 70%。
     tags:
-    - GPU
+    - 显卡
+    - 游戏
     - AI加速
-    - NVIDIA
-    - 3nm工艺
-    title: NVIDIA Rubin AI加速平台
+    - GDDR7
+    title: NVIDIA GeForce RTX 5090
   Lang:
-  - desc: 苹果发布的Swift编程语言新版本，支持原生Android应用开发，C互操作性增强，引入并发模型改进，编译速度提升20%。
+  - desc: Python 3.14 引入即时编译器（JIT）加速模式，通过 LLVM 后端将热点代码编译为原生机器码，性能提升最高达 5 倍。新增模式匹配语法、改进的错误信息与类型系统。内存管理采用区域化分配器，减少碎片化。标准库增加异步
+      I/O 模块的协程调度优化。
     tags:
     - 编程语言
-    - Swift
-    - iOS
-    - Android
-    title: Swift 6.3
+    - 性能优化
+    - JIT
+    - Python
+    title: Python 3.14
   NLP:
-  - desc: 31B参数开源大语言模型，采用混合专家架构，性能达到头部水准，支持多语言任务，可在手机端离线运行，推理效率提升40%。
+  - desc: Qwen3.6-Plus 是阿里通义千问系列的最新升级，采用 MoE 架构，激活参数 240B，总参数 1.2T。在编程基准 HumanEval
+      上达到 92.5% 的通过率，支持 128K 上下文长度。使用分组查询注意力与旋转位置编码，推理速度比 Qwen3.5 提升 40%。
     tags:
     - 大语言模型
     - 开源
-    - Google
-    - 31B参数
-    title: Google Gemma 4开源大模型
+    - 编程能力
+    - MoE
+    title: Qwen3.6-Plus
   Net:
-  - desc: 支持5G Advanced关键跃升，提供最高10Gbps下行速率，集成AI增强功能，功耗降低30%，为移动设备和物联网提供更优连接。
+  - desc: ITU-T Y.2502 标准定义了算力网络的架构与协议，实现计算资源的动态调度与池化。标准基于 IPv6 扩展头承载算力需求描述，支持微秒级资源分配。核心机制包括算力感知路由协议（CARP）与分布式资源编排器（DRO），可提升数据中心资源利用率
+      30% 以上。
     tags:
-    - 5G
-    - 调制解调器
-    - 高通
-    - 移动网络
-    title: 高通X105 5G调制解调器及射频
+    - 网络协议
+    - 算力网络
+    - 国际标准
+    - 资源调度
+    title: ITU-T Y.2502 算力网络国际标准
   News:
-  - desc: 商汤科技发布对标GPT-4o的流式多模态大模型，支持实时多模态交互，文本、图像、音频同步处理，延迟低于200毫秒，推动人机交互革命。
+  - desc: 智元AI宣布将于 2026 年 4 月 7 日启动“AI发布周”，每日发布具身智能领域自研成果。预计将推出新一代机器人操作系统、多模态感知芯片与实时决策算法。活动聚焦物理
+      AI 与通用机器人技术，旨在推动产业落地。
     tags:
-    - 多模态
-    - 大模型
-    - 商汤
-    - 实时交互
-    title: 商汤发布流式多模态大模型
+    - AI新闻
+    - 具身智能
+    - 机器人
+    - 发布会
+    title: 智元AI发布周即将启幕

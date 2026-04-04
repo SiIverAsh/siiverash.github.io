@@ -1,4 +1,20 @@
 {
+  "2026-04-05": [
+    "ITU-T Y.2502 算力网络国际标准",
+    "vLLM",
+    "主成分分析 (Principal Component Analysis)",
+    "上田丽奈",
+    "NVIDIA Blackwell Next 架构",
+    "Qwen3.6-Plus",
+    "NVIDIA GeForce RTX 5090",
+    "SAM 3: Segment Anything with Concepts",
+    "Gemini 3.1 Flash Live",
+    "智元AI发布周即将启幕",
+    "Claude 3.5 Sonnet",
+    "Python 3.14",
+    "AMD EPYC Venice Zen 6 CPU",
+    "AudioX: A Unified Framework for Anything-to-Audio Generation"
+  ],
   "2026-04-04": [
     "水树奈奈",
     "Swift 6.3",
@@ -139,20 +155,5 @@
     "梯度提升决策树（Gradient Boosting Decision Trees）",
     "ProxyAttn: Guided Sparse Attention via Representative Heads",
     "V²Drop: Variation-aware Vision Token Dropping for Faster VLM Inference"
-  ],
-  "2026-03-26": [
-    "AMD Zen 6 架构",
-    "钉钉发布 AI 工作平台悟空",
-    "Gated Attention for Large Language Models",
-    "石川由依",
-    "小米自研 MiMo-V2-TTS 语言合成大模型",
-    "阿里巴巴玄铁 C950",
-    "Ultralytics YOLO26",
-    "OpenAI GPT-5.4 模型",
-    "AMD RDNA 5 显卡",
-    "Rust 1.94.0",
-    "随机森林算法",
-    "百度文心 5.0 正式版",
-    "WebTransport API"
   ]
 }
