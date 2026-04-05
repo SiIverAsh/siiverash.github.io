@@ -1,142 +1,130 @@
 algorithm:
-- desc: 主成分分析是一种无监督线性降维算法，通过正交变换将数据投影到方差最大的方向上。计算协方差矩阵的特征值与特征向量，保留前 k 个主成分以保留大部分方差。时间复杂度
-    O(n^3)，适用于数据压缩与可视化。
+- desc: 集成学习算法，通过构建多个决策树并聚合结果（如投票或平均）来提高分类或回归的准确性和鲁棒性，适用于高维数据和非线性关系。
   tags:
-  - 降维
-  - 无监督学习
-  - 特征提取
-  - 统计
-  title: 主成分分析 (Principal Component Analysis)
+  - 集成学习
+  - 决策树
+  - 分类
+  - 回归
+  title: 随机森林 (Random Forest)
 cv_recommend:
   agency: I'm Enterprise
-  hometown: 日本兵库县
-  intro: 上田丽奈以其清澈透明的音色和广泛的声音表现力而闻名，能够驾驭从少女到成熟女性的多种角色。她通过扎实的演技和情感投入，在声优界建立了独特的地位。自出道以来，她持续参与各类配音工作，获得了观众和业内的好评。
-  name: 上田丽奈
-date: '2026-04-05'
+  hometown: 北海道
+  intro: 松冈祯丞是日本知名声优，以其独特的嗓音和广泛的声音表现力而闻名。他擅长演绎从少年到青年的多种角色，在声优界拥有高度认可。他的职业生涯涵盖了多个领域，展现了卓越的配音技巧和艺术感染力。
+  name: 松冈祯丞
+date: '2026-04-06'
 history:
-- event: 四五运动爆发，是中国大陆的一场群众抗议活动。
-  year: '1976'
-- event: 温斯顿·丘吉尔辞去英国首相职务，由安东尼·艾登接任。
-  year: '1955'
-- event: 美国阿波罗6号任务发射，这是阿波罗计划的最后一次无人测试飞行。
-  year: '1969'
-- event: 朝鲜发射火箭，引发国际社会广泛关注与谴责。
-  year: '2009'
-- event: 苏联宣布废除《苏日中立条约》，为对日宣战做准备。
-  year: '1945'
-- event: 塞尔维亚军队包围波斯尼亚首都萨拉热窝，波黑战争开始。
+- event: 第一届现代奥运会在希腊雅典开幕。
+  year: '1896'
+- event: 美国探险家罗伯特·皮里宣布到达北极。
+  year: '1909'
+- event: 国际通信卫星组织（Intelsat）发射第一颗商业通信卫星“晨鸟”（Early Bird）。
+  year: '1965'
+- event: 微软发布Windows 3.1操作系统。
   year: '1992'
+- event: 意大利拉奎拉发生6.3级地震。
+  year: '2009'
+- event: 事件视界望远镜发布首张黑洞照片。
+  year: '2019'
 llm:
-- desc: Anthropic 发布的 Claude 3.5 Sonnet 模型，参数规模 70B，在推理与创意写作任务中超越 GPT-4o。采用宪法 AI 训练方法，支持
-    200K 上下文窗口。在 MMLU 基准上得分 92.5%，代码生成 HumanEval 通过率 88%。推理速度比前代提升 2 倍。
+- desc: DeepSeek于2026年4月推出的下一代大语言模型，采用混合专家（MoE）架构，参数量达1T，上下文长度支持100万token，具备多模态输入能力，在推理、编程和长期记忆任务中表现卓越。
   tags:
   - 大语言模型
-  - Anthropic
-  - 宪法AI
-  - 推理
-  title: Claude 3.5 Sonnet
-new_project:
-- desc: vLLM 是一个高吞吐量、内存高效的 LLM 推理引擎，采用 PagedAttention 算法实现 KV 缓存的高效管理。支持连续批处理与动态分片，在
-    A100 GPU 上实现 10 倍吞吐量提升。项目开源，兼容 Hugging Face 模型。
-  tags:
-  - LLM推理
-  - 开源
-  - 高性能
-  - Python
-  title: vLLM
-  url: https://github.com/vllm-project/vllm
-paper:
-- desc: ICLR 2026 论文，提出统一框架 AudioX，支持文本、图像、视频到音频的生成任务。采用分层扩散模型与跨模态对齐损失，在 AudioCaps
-    测试集上取得 4.5 的 MOS 分。模型参数 1.2B，训练数据集包含 100 万小时多模态数据。
-  tags:
-  - 音频生成
+  - MoE
   - 多模态
-  - ICLR 2026
+  - 长上下文
+  title: DeepSeek V4
+new_project:
+- desc: Microsoft开源的深度学习优化库，支持ZeRO-3、梯度检查点、混合精度训练，大幅提升大模型训练的效率和可扩展性。
+  tags:
+  - 深度学习
+  - 分布式训练
+  - 优化库
+  - 大模型
+  title: DeepSpeed
+  url: https://github.com/deepspeedai/deepspeed
+paper:
+- desc: ICLR 2026接收论文，提出一种用于扩散模型的新型微调方法，通过递归似然比优化器提高样本质量和训练稳定性。
+  tags:
   - 扩散模型
-  title: 'AudioX: A Unified Framework for Anything-to-Audio Generation'
-  url: https://iclr.cc/virtual/2026/poster/10007216
+  - 微调
+  - 优化算法
+  - 生成模型
+  title: 'Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio
+    Optimizer'
+  url: https://iclr.cc/virtual/2026/poster/10011022
 tech:
   Arch:
-  - desc: Blackwell Next 是 NVIDIA 下一代 GPU 架构，采用台积电 3nm 工艺，集成 192 个流式多处理器（SM），每个 SM
-      包含 128 个 FP32 核心。支持第 5 代 Tensor Core，稀疏计算性能提升 4 倍。内存系统搭载 128MB L2 缓存与 32GB HBM4，带宽达
-      8TB/s。专为万亿参数 AI 模型训练优化。
+  - desc: Intel预计于2026年推出的Lunar Lake处理器，采用18A工艺，集成NPU提供50 TOPS AI算力，支持统一内存架构，内存带宽达8533
+      MT/s，能效比提升30%。
     tags:
-    - GPU架构
-    - 3nm工艺
-    - AI计算
-    - NVIDIA
-    title: NVIDIA Blackwell Next 架构
+    - 处理器架构
+    - AI PC
+    - 统一内存
+    - 18A工艺
+    title: 'Intel Lunar Lake: 下一代AI PC架构'
   Audio:
-  - desc: Gemini 3.1 Flash Live 是谷歌推出的实时语音生成模型，专为低延迟交互设计。采用流式编码器-解码器架构，端到端延迟低于 200
-      毫秒，支持 50 种语言。模型使用扩散变压器进行声学建模，在 LibriSpeech 测试集上词错误率降至 2.1%。参数规模 8B，可部署在边缘设备。
+  - desc: 微软于2026年3月发布的语音识别模型，基于Transformer架构，参数量500M，支持100+种语言，词错误率（WER）低至3.5%，在多个基准测试中达到SOTA，适用于实时转录和音频分析。
     tags:
-    - 语音合成
-    - 实时生成
+    - 语音识别
+    - 多语言
     - 低延迟
-    - Google
-    title: Gemini 3.1 Flash Live
+    - Transformer
+    title: 'MAI-Transcribe-1: 微软高精度语音转录模型'
   CPU:
-  - desc: AMD EPYC Venice 采用 Zen 6 架构，基于台积电 2nm 工艺，最高 256 核心，512 线程。每个 CCD 包含 16 核心，共享
-      64MB L3 缓存。支持 DDR6 内存与 CXL 4.0，内存带宽达 1TB/s。基准频率 3.5GHz，加速频率 5.0GHz，典型 TDP 400W。在
-      SPECint 2017 测试中得分 1800。
+  - desc: Intel于2026年3月发布的Xeon 6+ Clearwater Forest服务器处理器，采用Intel 3工艺，集成288个能效核，支持12通道DDR5-6400和PCIe
+      6.0，TDP 350W，针对AI网络优化。
     tags:
     - 服务器CPU
-    - Zen6
-    - 2nm工艺
-    - 256核心
-    title: AMD EPYC Venice Zen 6 CPU
+    - 多核
+    - AI优化
+    - Intel 3工艺
+    title: 'Intel Xeon 6+ 288核: 服务器处理器新品'
   Computer Vision:
-  - desc: SAM 3 在 SAM 2 基础上引入概念提示机制，支持通过文本描述进行零样本分割。采用混合编码器架构，整合视觉 Transformer 与概念嵌入层，在
-      COCO 数据集上实现 58.7% mIoU（零样本），比前代提升 12%。模型参数 650M，支持实时推理。
+  - desc: 智谱AI于2026年4月发布的多模态编码模型，深度融合视觉与代码能力，基于GLM-5架构，参数量约130B，支持根据图像或视频输入生成可执行代码，在代码生成和视觉理解基准上达到SOTA水平。
     tags:
-    - 计算机视觉
-    - 图像分割
-    - 零样本学习
-    - ICLR 2026
-    title: 'SAM 3: Segment Anything with Concepts'
+    - 多模态
+    - 代码生成
+    - 视觉理解
+    - 大模型
+    title: 'GLM-5V-Turbo: 多模态编程基座模型'
   GPU:
-  - desc: NVIDIA GeForce RTX 5090 基于 Blackwell Next 架构，配备 32GB GDDR7 显存，位宽 512-bit，带宽
-      1.5TB/s。核心频率 2.8GHz，拥有 192 个 SM，共 24576 个 CUDA 核心。支持 PCIe 6.0，TDP 500W。在 4K
-      光追游戏中性能比 RTX 4090 提升 70%。
+  - desc: AMD于2026年3月公布的RDNA 4m核显架构，用于Zen6 APU，集成XDNA2 AI引擎，提供20 TOPS AI算力，支持光线追踪和HDMI
+      2.1，性能提升50%。
     tags:
-    - 显卡
-    - 游戏
-    - AI加速
-    - GDDR7
-    title: NVIDIA GeForce RTX 5090
+    - GPU架构
+    - AI计算
+    - 核显
+    - 光线追踪
+    title: 'AMD RDNA 4m: 新一代核显AI架构'
   Lang:
-  - desc: Python 3.14 引入即时编译器（JIT）加速模式，通过 LLVM 后端将热点代码编译为原生机器码，性能提升最高达 5 倍。新增模式匹配语法、改进的错误信息与类型系统。内存管理采用区域化分配器，减少碎片化。标准库增加异步
-      I/O 模块的协程调度优化。
+  - desc: Go语言于2026年2月发布的1.26版本，引入递归泛型支持，GC停顿时间减少30%，新增SIMD加速指令集，编译速度提升15%，标准库增加多个并发和网络优化包。
     tags:
     - 编程语言
+    - 泛型
     - 性能优化
-    - JIT
-    - Python
-    title: Python 3.14
+    - 并发
+    title: 'Go 1.26: 递归泛型与性能提升'
   NLP:
-  - desc: Qwen3.6-Plus 是阿里通义千问系列的最新升级，采用 MoE 架构，激活参数 240B，总参数 1.2T。在编程基准 HumanEval
-      上达到 92.5% 的通过率，支持 128K 上下文长度。使用分组查询注意力与旋转位置编码，推理速度比 Qwen3.5 提升 40%。
+  - desc: DeepSeek于2026年4月推出的下一代大语言模型，采用混合专家（MoE）架构，参数量达1T，上下文长度支持100万token，具备多模态输入能力，在推理、编程和长期记忆任务中表现卓越。
     tags:
     - 大语言模型
-    - 开源
-    - 编程能力
     - MoE
-    title: Qwen3.6-Plus
+    - 多模态
+    - 长上下文
+    title: 'DeepSeek V4: 万亿参数MoE语言模型'
   Net:
-  - desc: ITU-T Y.2502 标准定义了算力网络的架构与协议，实现计算资源的动态调度与池化。标准基于 IPv6 扩展头承载算力需求描述，支持微秒级资源分配。核心机制包括算力感知路由协议（CARP）与分布式资源编排器（DRO），可提升数据中心资源利用率
-      30% 以上。
+  - desc: 诺基亚在MWC 2026上发布的移动网络技术预测，提出AI原生6G架构，采用太赫兹频段，峰值速率达1Tbps，延迟低于0.1ms，支持网络切片2.0和端到端AI优化。
     tags:
-    - 网络协议
-    - 算力网络
-    - 国际标准
-    - 资源调度
-    title: ITU-T Y.2502 算力网络国际标准
+    - 6G
+    - AI原生
+    - 太赫兹
+    - 网络切片
+    title: '诺基亚2026移动网络技术预判: AI原生6G愿景'
   News:
-  - desc: 智元AI宣布将于 2026 年 4 月 7 日启动“AI发布周”，每日发布具身智能领域自研成果。预计将推出新一代机器人操作系统、多模态感知芯片与实时决策算法。活动聚焦物理
-      AI 与通用机器人技术，旨在推动产业落地。
+  - desc: 奥尼电子于2026年3月26日发布的AI推理算力全栈产品，支持8张NVIDIA Blackwell GPU，提供10 PFLOPS FP8算力，集成液冷散热，面向大模型训练和推理场景。
     tags:
-    - AI新闻
-    - 具身智能
-    - 机器人
-    - 发布会
-    title: 智元AI发布周即将启幕
+    - AI工作站
+    - 推理算力
+    - GPU集群
+    - 液冷
+    title: 奥尼龙虾工作站全栈产品正式发布

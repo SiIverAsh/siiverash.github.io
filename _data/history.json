@@ -1,4 +1,20 @@
 {
+  "2026-04-06": [
+    "AMD RDNA 4m: 新一代核显AI架构",
+    "Intel Lunar Lake: 下一代AI PC架构",
+    "奥尼龙虾工作站全栈产品正式发布",
+    "Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio Optimizer",
+    "Intel Xeon 6+ 288核: 服务器处理器新品",
+    "DeepSpeed",
+    "松冈祯丞",
+    "MAI-Transcribe-1: 微软高精度语音转录模型",
+    "GLM-5V-Turbo: 多模态编程基座模型",
+    "诺基亚2026移动网络技术预判: AI原生6G愿景",
+    "DeepSeek V4",
+    "Go 1.26: 递归泛型与性能提升",
+    "随机森林 (Random Forest)",
+    "DeepSeek V4: 万亿参数MoE语言模型"
+  ],
   "2026-04-05": [
     "ITU-T Y.2502 算力网络国际标准",
     "vLLM",
@@ -139,21 +155,5 @@
     "Arm AGI CPU架构发布",
     "Google Gemma 3 270M",
     "Go 1.24正式发布"
-  ],
-  "2026-03-27": [
-    "Rust 1.95.0: 模式匹配增强与性能优化",
-    "DeerFlow 2.0: 字节跳动开源AI智能体平台",
-    "Claude 4: Anthropic's Latest LLM",
-    "NVIDIA Feynman GPU架构: 台积电A16制程",
-    "谷歌新算法大幅降低AI内存开销",
-    "AMD EPYC 9005系列（Turin）",
-    "华为Agentic MBB: 移动AI时代网络新架构",
-    "NVIDIA Audio2Face 3D: Real-time Audio-driven Facial Animation",
-    "DeepSeek-V3: 开源大语言模型新版本",
-    "上田丽奈",
-    "ARM v9.5架构: 性能与安全性增强",
-    "梯度提升决策树（Gradient Boosting Decision Trees）",
-    "ProxyAttn: Guided Sparse Attention via Representative Heads",
-    "V²Drop: Variation-aware Vision Token Dropping for Faster VLM Inference"
   ]
 }
