@@ -1,4 +1,20 @@
 {
+  "2026-04-07": [
+    "ERNIE 5.0: 统一多模态基础模型",
+    "K-Means 聚类算法",
+    "LlamaIndex: 文档代理与 OCR 平台",
+    "Locality-Attending Vision Transformer",
+    "花泽香菜",
+    "ERNIE 5.0: 2.4 万亿参数原生全模态大模型",
+    "AMD 噪声抑制技术 (Adrenalin 26.3.1)",
+    "AMD CDNA 4 计算架构",
+    "Rust 1.94.0 稳定版发布",
+    "GPT-6 性能曝光：40% 性能提升与 2M 上下文",
+    "Intel Arc Pro B70 Battlemage 专业显卡",
+    "YOLO26: 下一代实时目标检测架构",
+    "MediaTek Filogic 8000 Wi-Fi 8 芯片组",
+    "ARM AGI CPU (Neoverse V3)"
+  ],
   "2026-04-06": [
     "AMD RDNA 4m: 新一代核显AI架构",
     "Intel Lunar Lake: 下一代AI PC架构",
@@ -139,21 +155,5 @@
     "科大讯飞人工智能计算机华东制造基地在浙江金华投产",
     "Lyria 3 Pro: 谷歌推出可生成3分钟结构化歌曲的音频模型",
     "AONP框架: 中国移动发布智能体互联网开放网络协议"
-  ],
-  "2026-03-28": [
-    "InternVL-U: 4B参数轻量级统一多模态模型",
-    "Intel Arc Pro B70显卡",
-    "北京发布“量超智通”融合计算平台",
-    "PAGE-4D: Disentangled Pose and Geometry Estimation for 4D Perception",
-    "花泽香菜",
-    "Apple M4芯片",
-    "mem7：基于Rust的长期记忆存储系统",
-    "AudioX: 港科大统一音频生成模型",
-    "MQTT over QUIC协议标准化",
-    "K-Means聚类算法",
-    "Qwen3-Embedding系列模型",
-    "Arm AGI CPU架构发布",
-    "Google Gemma 3 270M",
-    "Go 1.24正式发布"
   ]
 }
