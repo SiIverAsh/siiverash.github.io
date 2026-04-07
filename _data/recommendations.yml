@@ -1,142 +1,130 @@
 algorithm:
-- desc: K-Means 是一种基于距离的无监督聚类算法，通过迭代更新聚类中心与样本分配，最小化类内平方和误差。时间复杂度 O(n·k·t)，适用于大规模数据预处理与特征压缩，是数据挖掘与计算机视觉的基础工具。
+- desc: 一种非线性降维算法，基于流形学习，适用于高维数据可视化，保留局部结构且计算效率高，广泛用于单细胞转录组学和图像分析。
   tags:
-  - 聚类
-  - 无监督学习
-  - 数据挖掘
-  - 机器学习
-  title: K-Means 聚类算法
+  - Dimensionality Reduction
+  - Manifold Learning
+  - Visualization
+  - Machine Learning
+  title: UMAP (Uniform Manifold Approximation and Projection)
 cv_recommend:
-  agency: 大泽事务所
-  hometown: 东京都
-  intro: 花泽香菜是日本知名声优，以其清澈柔和的声线著称。她于 2006 年出道，凭借多部作品中的出色演绎获得广泛认可。其声音具有高度的辨识度与表现力，能够细腻诠释从少女到成熟女性的各类角色。在配音之外，她也活跃于音乐领域，发行过多张个人专辑，展现了多元化的艺术才能。作为声优界的代表人物之一，她持续为行业注入活力，深受粉丝喜爱。
-  name: 花泽香菜
-date: '2026-04-07'
+  agency: Pro-Fit
+  hometown: 日本爱知县
+  intro: 鬼头明里是日本新生代声优中的佼佼者，以其极具辨识度的清澈声线与出色的情感把控能力闻名。她能够灵活驾驭从少女到成熟女性等多种角色类型，嗓音可塑性极强。2021年荣获第15回声优奖助演女优奖，业界公认其拥有“怪物级”的演技天赋。毕业于Pro-Fit声优养成所，目前活跃于多个领域，持续展现多元化的声音表现力。
+  name: 鬼头明里
+date: '2026-04-08'
 history:
-- event: 法国国民公会正式采纳米制系统，奠定国际单位制基础。
-  year: '1795'
-- event: 美国贝尔实验室首次公开演示电视系统，实现实时图像传输。
-  year: '1927'
-- event: 世界卫生组织（WHO）在日内瓦成立，成为联合国专门机构。
-  year: '1948'
-- event: IBM 推出 System/360 大型机系列，开创计算机兼容性时代。
-  year: '1964'
-- event: 卢旺达大屠杀开始，导致约 80 万人丧生，引发国际社会关注。
-  year: '1994'
-- event: 美国 NASA 发射火星奥德赛号探测器，用于火星表面测绘与辐射测量。
-  year: '2001'
+- event: 西班牙艺术家巴勃罗·毕加索逝世。
+  year: '1973'
+- event: 教宗若望保禄二世逝世。
+  year: '2005'
+- event: 英国前首相玛格丽特·撒切尔逝世。
+  year: '2013'
+- event: 印度与中华人民共和国建立外交关系。
+  year: '1950'
+- event: 中国成功发射第一颗静止轨道试验通信卫星（东方红二号）。
+  year: '1984'
+- event: 微软正式停止对 Windows XP 系统的技术支持。
+  year: '2014'
 llm:
-- desc: 百度 ERNIE 5.0 是首个 2.4 万亿参数的原生全模态大模型，采用稀疏 MoE 设计与跨模态对齐预训练，在文本、图像、音频、视频任务上实现零样本
-    SOTA。支持 128K 上下文，推理效率较稠密模型提升 5 倍，已在百舸·AI 云平台开放 API。
+- desc: Meta 发布的开源多模态大语言模型，支持图文理解，采用混合专家架构，千万上下文长度，为开发者提供强大工具，Apache 2.0 许可。
   tags:
-  - 多模态
+  - Open Source
+  - Multimodal
   - MoE
-  - 零样本学习
-  - 百度
-  title: 'ERNIE 5.0: 统一多模态基础模型'
+  - Large Scale
+  title: Meta Llama 4
 new_project:
-- desc: LlamaIndex 是一个开源框架，用于构建基于大语言模型的文档问答与检索系统。支持多种文件格式解析、向量化存储与语义搜索，集成 OCR 引擎与多模态理解，可部署为本地代理或云端服务，已在
-    GitHub 获得 25k+ stars。
+- desc: 统一高效的百种大模型微调框架，支持 LLaMA、ChatGLM 等模型，提供可视化界面和分布式训练，简化微调流程，GitHub 星标超 20k。
   tags:
-  - 文档处理
-  - LLM 应用
-  - 开源框架
-  - Python
-  title: 'LlamaIndex: 文档代理与 OCR 平台'
-  url: https://github.com/run-llama/llama_index
+  - Fine-Tuning
+  - LLM
+  - Open Source
+  - GitHub
+  title: LLaMA-Factory
+  url: https://github.com/hiyouga/LLaMA-Factory
 paper:
-- desc: 该论文发表于 ICLR 2026，提出了一种局部注意力机制，通过动态感受野调整，在 ImageNet 上达到 89.2% 的 top-1 准确率，同时将计算复杂度降低
-    35%。方法结合了卷积的归纳偏置与 Transformer 的全局建模能力，适用于高分辨率图像分类。
+- desc: ICLR 2026 论文，发现文言文作为越狱提示可 100% 成功攻击顶级大模型，揭示了 AI 安全的新漏洞，基于生物启发搜索优化提示。
   tags:
-  - 视觉 Transformer
-  - 注意力机制
-  - 图像分类
-  - ICLR
-  title: Locality-Attending Vision Transformer
-  url: https://iclr.cc/virtual/2026/poster/10010083
+  - AI Security
+  - Jailbreaking
+  - LLM
+  - ICLR 2026
+  title: 'Obscure but Effective: Classical Chinese Jailbreak Prompt Optimization via
+    Bio-Inspired Search'
+  url: https://arxiv.org/abs/2602.22983
 tech:
   Arch:
-  - desc: CDNA 4 采用第二代矩阵核心（Matrix Core 2.0），支持 FP8、BF16、FP16 混合精度计算，峰值算力达 2.3 PetaFLOPS。集成
-      8 通道 HBM3e 内存，带宽 6.4 TB/s，配备一致性 Fabric 互联技术，延迟降低 40%。专为 AI 训练与推理优化，能效比较前代提升
-      2.5 倍。
+  - desc: GUC 的 UCIe 64G IP 在台积电 3nm 工艺节点上完成流片，实现芯片间高速互连（64 GT/s），为 Chiplet 架构提供关键技术支持，降低延迟和功耗。
     tags:
-    - GPU 架构
-    - AI 计算
-    - HBM3e
-    - AMD
-    title: AMD CDNA 4 计算架构
+    - Chiplet
+    - UCIe
+    - 3nm
+    - Semiconductor
+    title: UCIe 64G IP 在台积电 N3P 上完成设计定案
   Audio:
-  - desc: AMD Software Adrenalin Edition 26.3.1 集成新一代实时噪声抑制算法，基于深度神经网络实现 48 kHz 采样率下
-      98% 背景噪声消除，延迟低于 2 ms。支持 GPU 硬件加速，占用显存仅 50 MB，兼容所有 RDNA 3/4 架构显卡，语音清晰度指标 PESQ
-      达 4.2。
+  - desc: 通义实验室发布的语音生成模型，支持 Freestyle 自然语言自由生成语音，实现一句话控声，在说话人相似度指标上达到 0.818，基于扩散Transformer架构。
     tags:
-    - 音频处理
-    - 实时降噪
-    - GPU 加速
-    - AMD
-    title: AMD 噪声抑制技术 (Adrenalin 26.3.1)
+    - Audio Generation
+    - Speech Synthesis
+    - AI
+    - Deep Learning
+    title: 阿里通义实验室 Fun-AudioGen
   CPU:
-  - desc: ARM AGI CPU 采用台积电 3nm 工艺，基于 Neoverse V3 微架构，拥有 192 个核心，支持 SVE2 512 位向量单元。集成一致性网状网络，缓存容量
-      384 MB，内存带宽 1 TB/s。专为 AGI 工作负载设计，整数性能达 2.5 倍于前代，能效提升 60%。
+  - desc: Intel 正式发布酷睿 Ultra 300 系列 CPU，采用 Lunar Lake 架构，集成 AI 加速单元（NPU 算力 60 TOPS），游戏性能提升
+      77%，续航长达 27 小时。
     tags:
-    - 服务器 CPU
-    - AI 加速
-    - 3nm 工艺
-    - ARM
-    title: ARM AGI CPU (Neoverse V3)
-  Computer Vision:
-  - desc: YOLO26 基于 YOLOv11 架构，引入动态卷积核与自适应特征融合机制，支持 8K 分辨率下 60 FPS 实时检测，在 COCO 数据集上
-      mAP 达 65.2%，较前代提升 15%。采用混合精度训练与稀疏注意力机制，模型参数量控制在 120M，兼顾精度与效率。
-    tags:
-    - 目标检测
-    - 实时推理
-    - 深度学习
-    - YOLO
-    title: 'YOLO26: 下一代实时目标检测架构'
-  GPU:
-  - desc: Arc Pro B70 基于 Xe2 Battlemage 架构，搭载 32 GB GDDR7 显存，带宽 1.2 TB/s，支持 PCIe 7.0
-      ×16。集成 128 个 Xe 核心与 512 个 XMX AI 单元，INT8 算力达 367 TOPS。支持硬件光线追踪 3.0 与 AV1 双编码引擎，面向
-      AI 推理与专业可视化应用。
-    tags:
-    - 专业显卡
-    - AI 推理
-    - GDDR7
+    - CPU
     - Intel
-    title: Intel Arc Pro B70 Battlemage 专业显卡
+    - AI PC
+    - Lunar Lake
+    title: Intel 酷睿 Ultra 300 系列
+  Computer Vision:
+  - desc: ViT-5 是视觉 Transformer 的最新迭代，采用改进的注意力机制、分层设计和增强的跨尺度特征融合，在 ImageNet 上达到 86.0%
+      的 top-1 准确率，参数量约 1B，支持高分辨率图像输入。
+    tags:
+    - Vision Transformer
+    - Image Classification
+    - Deep Learning
+    - Computer Vision
+    title: 'ViT-5: Vision Transformers for The Mid-2020s'
+  GPU:
+  - desc: AMD 推出的 2nm AI 加速器系列，采用新一代 CDNA 架构，配备 HBM3e 内存（带宽达 6 TB/s），在 MLPerf Inference
+      6.0 中取得突破性成果。
+    tags:
+    - AI Accelerator
+    - AMD
+    - 2nm
+    - HBM3e
+    title: AMD Instinct MI400 系列
   Lang:
-  - desc: Rust 1.94.0 引入数组窗口迭代器（`array_windows`/`array_chunks`），消除边界检查开销，编译时性能提升 12%。全面支持
-      TOML 1.1 标准库，优化了 async/await 生成器代码生成，并行编译速度提升 18%。新增 `std::net::IpAddr` 常量方法，增强网络编程安全性。
+  - desc: Oracle 正式发布 Java 26，引入语言创新（如模式匹配增强）、类库优化、性能提升（ZGC 改进）与安全性增强，兼容性保持领先。
     tags:
-    - 编程语言
-    - 系统编程
-    - 性能优化
-    - Rust
-    title: Rust 1.94.0 稳定版发布
+    - Programming Language
+    - Java
+    - Release
+    - Performance
+    title: Java 26 发布
   NLP:
-  - desc: 百度 ERNIE 5.0 采用 MoE 稀疏架构，参数量达 2.4 万亿，训练 token 数 20T，支持文本、图像、音频、视频原生统一编码。创新性引入因果注意力与跨模态对齐损失，在
-      128K 上下文长度下保持 98% 的序列建模效率，零样本任务性能超越 GPT-6 基准 7%。
+  - desc: Meta 推出的新一代开源大语言模型，采用混合专家架构，支持文本与图像统一处理，上下文长度达千万级别，在多项基准测试中超越同类模型，参数量约 400B。
     tags:
-    - 大语言模型
-    - 多模态
-    - MoE
-    - ERNIE
-    title: 'ERNIE 5.0: 2.4 万亿参数原生全模态大模型'
+    - Large Language Model
+    - Open Source
+    - Multimodal
+    - AI
+    title: Meta Llama 4
   Net:
-  - desc: Filogic 8000 系列采用台积电 4nm 工艺，集成 4×4 MIMO 320 MHz 信道，支持 4096-QAM 调制，理论峰值速率达
-      40 Gbps。内置 AI 调度引擎，可动态分配频谱资源，降低 30% 延迟，同时兼容 IEEE 802.11be 标准，并集成了 10 GbE PHY
-      与蓝牙 6.5。
+  - desc: 博通推出的企业级 Wi-Fi 8 接入点芯片组，支持 6GHz 频段、多链路操作和 AI 优化体验，峰值速率达 40 Gbps，专为智能家居和商业场景设计。
     tags:
     - Wi-Fi 8
-    - 芯片组
-    - 高速无线
-    - MediaTek
-    title: MediaTek Filogic 8000 Wi-Fi 8 芯片组
+    - Networking
+    - Chipset
+    - Broadcom
+    title: Broadcom 统一 Wi-Fi 8 平台
   News:
-  - desc: OpenAI GPT-6 据称采用混合专家模型（MoE）架构，参数量约 10 万亿，训练数据达 100T token。支持原生多模态输入，上下文窗口扩展至
-      200 万 token，在推理与代码生成任务中性能较 GPT-5 提升 40%。预计 2026 年 4 月中旬发布。
+  - desc: 微软宣布 Build 2026 开发者大会将于 6 月在旧金山举行，聚焦 AI 技术，承诺无废话内容，限额定员 2500 人，深化高端技术交流。
     tags:
-    - 大语言模型
-    - OpenAI
-    - MoE
-    - AGI
-    title: GPT-6 性能曝光：40% 性能提升与 2M 上下文
+    - Microsoft
+    - Developer Conference
+    - AI
+    - Build 2026
+    title: 微软 Build 2026 开发者大会日期确定
