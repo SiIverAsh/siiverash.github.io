@@ -25,7 +25,12 @@ layout: default
             {% endif %}
         </div>
 
-        {% if page.excerpt %}
+        {% assign post_summary = page.summary | default: page.description %}
+        {% if post_summary %}
+        <div class="post-summary">
+            {{ post_summary | strip_html | strip_newlines }}
+        </div>
+        {% elsif page.content contains '<!--more-->' and page.excerpt %}
         <div class="post-summary">
             {{ page.excerpt | strip_html | strip_newlines }}
         </div>
@@ -45,74 +50,21 @@ layout: default
         {{ content }}
     </div>
 
-    <section class="post-navigation">
-        <div class="nav-card">
-            <div class="nav-card-title"><i class="fas fa-chevron-left"></i> 上一篇</div>
-            {% if page.previous and page.previous.url %}
-            <a class="nav-post-link" href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
-            <div class="nav-post-meta">{{ page.previous.date | date: "%Y-%m-%d" }}</div>
-            {% else %}
-            <div class="nav-post-empty">没有更早的文章了。</div>
-            {% endif %}
-        </div>
+    <footer class="post-footer">
+        <a href="javascript:history.back()" class="back-link">
+            ← 返回列表
+        </a>
+    </footer>
 
-        <div class="nav-card nav-card-center">
-            <a href="javascript:history.back()" class="back-link">
-                <i class="fas fa-arrow-left"></i> 返回列表
-            </a>
-        </div>
-
-        <div class="nav-card">
-            <div class="nav-card-title">下一篇 <i class="fas fa-chevron-right"></i></div>
-            {% if page.next and page.next.url %}
-            <a class="nav-post-link" href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
-            <div class="nav-post-meta">{{ page.next.date | date: "%Y-%m-%d" }}</div>
-            {% else %}
-            <div class="nav-post-empty">已经是最新文章。</div>
-            {% endif %}
-        </div>
-    </section>
-
+    <!--
+    相关文章区域先注释掉，后续你要重做这里再打开即可。
     <section class="related-posts">
         <div class="section-title"><i class="fas fa-layer-group"></i> 相关文章</div>
         <div class="related-grid">
-            {% assign related_count = 0 %}
-            {% for post in site.posts %}
-            {% if post.url != page.url %}
-            {% assign matched = false %}
-            {% for cat in post.categories %}
-            {% if page.categories contains cat %}
-            {% assign matched = true %}
-            {% endif %}
-            {% endfor %}
-            {% if matched == false %}
-            {% for tag in post.tags %}
-            {% if page.tags contains tag %}
-            {% assign matched = true %}
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-            {% if matched %}
-            <a class="related-item" href="{{ post.url | relative_url }}">
-                <div class="related-date">{{ post.date | date: "%Y-%m-%d" }}</div>
-                <div class="related-title">{{ post.title }}</div>
-                {% if post.excerpt %}
-                <div class="related-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 90 }}</div>
-                {% endif %}
-            </a>
-            {% assign related_count = related_count | plus: 1 %}
-            {% if related_count >= 4 %}
-            {% break %}
-            {% endif %}
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-
-            {% if related_count == 0 %}
-            <div class="related-empty">暂无相关文章，先从分类或标签开始浏览吧。</div>
-            {% endif %}
+            ...
         </div>
     </section>
+    -->
 </article>
 
 <script>
@@ -319,143 +271,20 @@ layout: default
         margin: 0;
     }
 
-    .post-navigation {
-        margin-top: 48px;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 16px;
-        align-items: stretch;
-    }
-
-    .nav-card,
-    .related-item,
-    .related-empty {
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid var(--glass-border);
-        box-shadow: var(--shadow);
-    }
-
-    .dark-mode .nav-card,
-    .dark-mode .related-item,
-    .dark-mode .related-empty {
-        background: rgba(255, 255, 255, 0.05);
-    }
-
-    .nav-card {
-        padding: 18px 16px;
-        min-height: 120px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .nav-card-center {
-        align-items: center;
-        text-align: center;
-    }
-
-    .nav-card-title {
-        color: var(--text-muted);
-        font-size: 0.85em;
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    .nav-post-link {
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 700;
-        line-height: 1.5;
-        display: inline-block;
-    }
-
-    .nav-post-link:hover,
-    .back-link:hover {
-        text-decoration: underline;
-        text-underline-offset: 0.18em;
-    }
-
-    .nav-post-meta,
-    .nav-post-empty {
-        margin-top: 8px;
-        color: var(--text-muted);
-        font-size: 0.85em;
-        line-height: 1.5;
-    }
-
     .back-link {
         color: var(--primary-color);
         text-decoration: none;
         font-weight: 700;
     }
 
-    .related-posts {
-        margin-top: 42px;
-    }
-
-    .section-title {
-        color: var(--primary-color);
-        font-size: 1.15em;
-        font-weight: 700;
-        margin-bottom: 16px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .related-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-    }
-
-    .related-item {
-        display: block;
-        padding: 16px 18px;
-        text-decoration: none;
-        color: var(--text-main);
-        transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .related-item:hover {
-        transform: translateY(-2px);
-        border-color: var(--primary-color);
-    }
-
-    .related-date {
-        color: var(--text-muted);
-        font-size: 0.8em;
-        margin-bottom: 8px;
-    }
-
-    .related-title {
-        color: var(--primary-color);
-        font-weight: 700;
-        line-height: 1.4;
-        margin-bottom: 8px;
-    }
-
-    .related-excerpt {
-        color: var(--text-main);
-        font-size: 0.9em;
-        line-height: 1.6;
-        opacity: 0.9;
-    }
-
-    .related-empty {
-        padding: 16px 18px;
-        color: var(--text-muted);
+    .post-footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px dashed rgba(0,0,0,0.1);
+        text-align: center;
     }
 
     @media (max-width: 900px) {
-        .post-navigation,
-        .related-grid {
-            grid-template-columns: 1fr;
-        }
-
         .post-summary {
             text-align: left;
         }
