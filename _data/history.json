@@ -1,4 +1,18 @@
 {
+  "2026-04-09": [
+    "microsoft/TypeScript",
+    "AMD Ryzen 9000 系列桌面 CPU",
+    "中国首款 6nm 真自研 GPU 正式发售",
+    "PCI Express 7.0 标准正式定案",
+    "美团 LongCat-AudioDiT 音频生成模型",
+    "英特尔入局马斯克“Terafab”项目",
+    "梯度提升决策树 (Gradient Boosting Decision Trees)",
+    "内田真礼",
+    "Mixtral 8x22B Instruct",
+    "TypeScript 6.0 正式发布",
+    "Block Recurrent Dynamics in Vision Transformers",
+    "联发科携手耕兴取得全球首份 Wi-Fi 8 认证"
+  ],
   "2026-04-08": [
     "Java 26 发布",
     "UCIe 64G IP 在台积电 N3P 上完成设计定案",
@@ -139,21 +153,5 @@
     "Anthropic Claude 4.5 大语言模型",
     "microsoft/AI-System 开源项目",
     "Google Gemini 3.1 Flash Live 实时音频模型"
-  ],
-  "2026-03-30": [
-    "OpenClaw：开源 AI 私人助理框架",
-    "Go 1.26 版本正式发布",
-    "Meta Llama 3.2 视觉语言模型开源",
-    "AMD RDNA 4m 架构新增 GFX1171/GFX1172 目标",
-    "SONATA: Synergistic Coreset Informed Adaptive Temporal Tensor Factorization",
-    "Covo-Audio: 腾讯开源端到端音频大模型",
-    "Hysteria 2: 基于 QUIC 的高性能代理协议",
-    "华为 Atlas 950 超节点算力底座",
-    "RAG 2.0: 检索增强生成的最新实践",
-    "早见沙织",
-    "K-最近邻算法（K-Nearest Neighbors）",
-    "AMD Ryzen AI 400G 处理器基于 Zen 5 架构",
-    "全球首个通用智能人“通通”3.0 正式发布",
-    "SAM 3: Segment Anything with Concepts"
   ]
 }

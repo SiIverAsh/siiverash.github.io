@@ -1,130 +1,135 @@
 algorithm:
-- desc: 一种非线性降维算法，基于流形学习，适用于高维数据可视化，保留局部结构且计算效率高，广泛用于单细胞转录组学和图像分析。
+- desc: 集成学习算法，通过迭代训练决策树来最小化损失函数，近年来在 XGBoost、LightGBM 等实现中加入 GPU 加速、稀疏数据优化与直方图算法，提升训练速度与准确性。
   tags:
-  - Dimensionality Reduction
-  - Manifold Learning
-  - Visualization
-  - Machine Learning
-  title: UMAP (Uniform Manifold Approximation and Projection)
+  - 集成学习
+  - 决策树
+  - 优化算法
+  - 机器学习基础
+  title: 梯度提升决策树 (Gradient Boosting Decision Trees)
 cv_recommend:
-  agency: Pro-Fit
-  hometown: 日本爱知县
-  intro: 鬼头明里是日本新生代声优中的佼佼者，以其极具辨识度的清澈声线与出色的情感把控能力闻名。她能够灵活驾驭从少女到成熟女性等多种角色类型，嗓音可塑性极强。2021年荣获第15回声优奖助演女优奖，业界公认其拥有“怪物级”的演技天赋。毕业于Pro-Fit声优养成所，目前活跃于多个领域，持续展现多元化的声音表现力。
-  name: 鬼头明里
-date: '2026-04-08'
+  agency: I'm Enterprise
+  hometown: 日本兵库县
+  intro: 内田真礼是日本知名声优，以其清澈多变的声线著称。她于2010年代出道，凭借扎实的配音技巧和独特的音色在业界迅速积累人气。她的声音可塑性极强，能够驾驭从活泼少女到冷静成熟女性的多种角色类型，深受听众喜爱。除了配音工作，她也积极参与音乐活动，发行多张个人单曲和专辑，展现出色的歌唱实力。内田真礼以专业的态度和持续的精进，在声优领域树立了良好的口碑，是新生代声优中的代表性人物之一。
+  name: 内田真礼
+date: '2026-04-09'
 history:
-- event: 西班牙艺术家巴勃罗·毕加索逝世。
-  year: '1973'
-- event: 教宗若望保禄二世逝世。
-  year: '2005'
-- event: 英国前首相玛格丽特·撒切尔逝世。
-  year: '2013'
-- event: 印度与中华人民共和国建立外交关系。
-  year: '1950'
-- event: 中国成功发射第一颗静止轨道试验通信卫星（东方红二号）。
-  year: '1984'
-- event: 微软正式停止对 Windows XP 系统的技术支持。
-  year: '2014'
+- event: 美国内战结束，罗伯特·李将军在阿波马托克斯法院向尤利西斯·格兰特将军投降。
+  year: '1865'
+- event: NASA 正式宣布水星计划的首批七名宇航员，为美国载人航天奠定基础。
+  year: '1959'
+- event: 马丁·路德·金葬礼在亚特兰大埃比尼泽浸信会教堂举行，数万人参加悼念。
+  year: '1968'
+- event: 格鲁吉亚最高苏维埃宣布脱离苏联独立，成为首个在苏联解体前宣布独立的加盟共和国。
+  year: '1991'
+- event: 伊拉克战争期间，美军攻占巴格达，萨达姆·侯赛因政权倒台。
+  year: '2003'
+- event: 全球 COVID-19 疫情加剧，单日新增确诊病例突破 10 万例，多国实施封锁措施。
+  year: '2020'
 llm:
-- desc: Meta 发布的开源多模态大语言模型，支持图文理解，采用混合专家架构，千万上下文长度，为开发者提供强大工具，Apache 2.0 许可。
+- desc: 开源混合专家大语言模型，总参数量 1760 亿，每令牌激活 8 个专家，支持 128K 上下文，在多项基准测试中表现优异，适用于复杂指令跟随与代码生成。
   tags:
-  - Open Source
-  - Multimodal
-  - MoE
-  - Large Scale
-  title: Meta Llama 4
+  - 开源模型
+  - 混合专家
+  - 长上下文
+  - 指令调优
+  title: Mixtral 8x22B Instruct
 new_project:
-- desc: 统一高效的百种大模型微调框架，支持 LLaMA、ChatGLM 等模型，提供可视化界面和分布式训练，简化微调流程，GitHub 星标超 20k。
+- desc: TypeScript 编程语言的官方 GitHub 仓库，包含编译器、语言服务及工具链，近期更新至 6.0 版本，支持新特性并优化性能。
   tags:
-  - Fine-Tuning
-  - LLM
-  - Open Source
-  - GitHub
-  title: LLaMA-Factory
-  url: https://github.com/hiyouga/LLaMA-Factory
+  - 编程语言
+  - 编译器
+  - 开源工具
+  - JavaScript 超集
+  title: microsoft/TypeScript
+  url: https://github.com/microsoft/TypeScript
 paper:
-- desc: ICLR 2026 论文，发现文言文作为越狱提示可 100% 成功攻击顶级大模型，揭示了 AI 安全的新漏洞，基于生物启发搜索优化提示。
+- desc: ICLR 2026 顶会论文，探讨视觉Transformer中的块循环动态机制，通过递归计算提升特征表示效率，在减少参数量的同时保持高精度。
   tags:
-  - AI Security
-  - Jailbreaking
-  - LLM
-  - ICLR 2026
-  title: 'Obscure but Effective: Classical Chinese Jailbreak Prompt Optimization via
-    Bio-Inspired Search'
-  url: https://arxiv.org/abs/2602.22983
+  - 计算机视觉
+  - Transformer
+  - 递归网络
+  - 高效计算
+  title: Block Recurrent Dynamics in Vision Transformers
+  url: https://arxiv.org/abs/2512.19941
 tech:
   Arch:
-  - desc: GUC 的 UCIe 64G IP 在台积电 3nm 工艺节点上完成流片，实现芯片间高速互连（64 GT/s），为 Chiplet 架构提供关键技术支持，降低延迟和功耗。
+  - desc: PCI-SIG 于 2026 年第一季度定案 PCIe 7.0 规范，每通道速率提升至 128 GT/s，x16 双向带宽达 512 GB/s。采用
+      PAM4 调制、低功耗 L0p 状态与前向纠错技术，专为 AI 训练与 HPC 场景设计，预计 2028 年量产。
     tags:
-    - Chiplet
-    - UCIe
-    - 3nm
-    - Semiconductor
-    title: UCIe 64G IP 在台积电 N3P 上完成设计定案
+    - 高速互连
+    - PAM4 调制
+    - 带宽翻倍
+    - AI 基础设施
+    title: PCI Express 7.0 标准正式定案
   Audio:
-  - desc: 通义实验室发布的语音生成模型，支持 Freestyle 自然语言自由生成语音，实现一句话控声，在说话人相似度指标上达到 0.818，基于扩散Transformer架构。
+  - desc: 2026年4月开源的高保真音频扩散模型，基于 Transformer 架构在波形潜在空间中操作，支持文本到语音与音色克隆。在 LibriSpeech
+      测试集上说话人相似度指标达 0.818，可生成 24kHz 采样率音频，集成噪声抑制与情感控制模块。
     tags:
-    - Audio Generation
-    - Speech Synthesis
-    - AI
-    - Deep Learning
-    title: 阿里通义实验室 Fun-AudioGen
+    - 扩散模型
+    - 音色克隆
+    - 文本到语音
+    - 开源音频
+    title: 美团 LongCat-AudioDiT 音频生成模型
   CPU:
-  - desc: Intel 正式发布酷睿 Ultra 300 系列 CPU，采用 Lunar Lake 架构，集成 AI 加速单元（NPU 算力 60 TOPS），游戏性能提升
-      77%，续航长达 27 小时。
+  - desc: 基于 Zen 5 架构的 Ryzen 9000 系列于 CES 2026 发布，采用台积电 4nm 工艺，最高 16 核 32 线程，基础频率
+      4.0 GHz，加速频率 5.8 GHz，支持 DDR5-6400 与 PCIe 5.0，TDP 65W-170W，IPC 提升 18%。
     tags:
-    - CPU
-    - Intel
-    - AI PC
-    - Lunar Lake
-    title: Intel 酷睿 Ultra 300 系列
+    - Zen 5 架构
+    - 4nm 工艺
+    - 高频率
+    - 桌面处理器
+    title: AMD Ryzen 9000 系列桌面 CPU
   Computer Vision:
-  - desc: ViT-5 是视觉 Transformer 的最新迭代，采用改进的注意力机制、分层设计和增强的跨尺度特征融合，在 ImageNet 上达到 86.0%
-      的 top-1 准确率，参数量约 1B，支持高分辨率图像输入。
+  - desc: ICLR 2026 论文提出在视觉Transformer中引入块循环动态机制，通过递归计算使每个块能够迭代细化特征表示，显著降低计算复杂度并提升长距离依赖建模能力。实验表明在
+      ImageNet-1K 上仅用 2 个递归块即可达到 DINO v2 96% 的精度，参数量减少 40%。
     tags:
     - Vision Transformer
-    - Image Classification
-    - Deep Learning
-    - Computer Vision
-    title: 'ViT-5: Vision Transformers for The Mid-2020s'
+    - 递归机制
+    - 计算效率
+    - ICLR 2026
+    title: Block Recurrent Dynamics in Vision Transformers
   GPU:
-  - desc: AMD 推出的 2nm AI 加速器系列，采用新一代 CDNA 架构，配备 HBM3e 内存（带宽达 6 TB/s），在 MLPerf Inference
-      6.0 中取得突破性成果。
+  - desc: 砺算科技 TrueGPU 显卡于 2026 年 3 月上市，采用 6nm 工艺，集成 12GB GDDR6 显存，浮点性能 12 TFLOPS，支持
+      DirectX 12 与 Vulkan，兼容超 100 款游戏，性能对标 NVIDIA RTX 4060，功耗 180W。
     tags:
-    - AI Accelerator
-    - AMD
-    - 2nm
-    - HBM3e
-    title: AMD Instinct MI400 系列
+    - 国产 GPU
+    - 6nm 工艺
+    - 游戏显卡
+    - 自主知识产权
+    title: 中国首款 6nm 真自研 GPU 正式发售
   Lang:
-  - desc: Oracle 正式发布 Java 26，引入语言创新（如模式匹配增强）、类库优化、性能提升（ZGC 改进）与安全性增强，兼容性保持领先。
+  - desc: 2026 年 3 月推出的 TypeScript 重大更新，引入类型形参默认值、模板字面量类型推断增强、--moduleResolution bundler
+      模式优化，编译性能提升 30%，并改善与 JavaScript 生态的互操作性，全面支持 ES2026 语法。
     tags:
-    - Programming Language
-    - Java
-    - Release
-    - Performance
-    title: Java 26 发布
+    - 静态类型
+    - 编译优化
+    - JavaScript 生态
+    - 语言特性
+    title: TypeScript 6.0 正式发布
   NLP:
-  - desc: Meta 推出的新一代开源大语言模型，采用混合专家架构，支持文本与图像统一处理，上下文长度达千万级别，在多项基准测试中超越同类模型，参数量约 400B。
+  - desc: Mistral AI 发布的混合专家大语言模型，总参数量 1760 亿，每令牌激活 8 个专家（实际激活 220 亿参数）。支持 128K 上下文长度，在
+      MMLU、HellaSwag 等基准上超越 Llama 3 70B，专为指令跟随和代码生成优化，采用分组查询注意力与滑动窗口缓存技术。
     tags:
-    - Large Language Model
-    - Open Source
-    - Multimodal
-    - AI
-    title: Meta Llama 4
+    - 混合专家
+    - 开源模型
+    - 指令微调
+    - 长上下文
+    title: Mixtral 8x22B Instruct
   Net:
-  - desc: 博通推出的企业级 Wi-Fi 8 接入点芯片组，支持 6GHz 频段、多链路操作和 AI 优化体验，峰值速率达 40 Gbps，专为智能家居和商业场景设计。
+  - desc: 基于 IEEE 802.11bn 标准的 Wi-Fi 8 首次通过 FCC 认证，联发科 Filogic 8000 系列芯片支持多链路操作、4096-QAM
+      调制与 OFDMA 增强，理论峰值速率达 46 Gbps，延迟低于 2ms，为 AR/VR 与 8K 流媒体提供可靠连接。
     tags:
     - Wi-Fi 8
-    - Networking
-    - Chipset
-    - Broadcom
-    title: Broadcom 统一 Wi-Fi 8 平台
+    - FCC 认证
+    - 多链路操作
+    - 低延迟
+    title: 联发科携手耕兴取得全球首份 Wi-Fi 8 认证
   News:
-  - desc: 微软宣布 Build 2026 开发者大会将于 6 月在旧金山举行，聚焦 AI 技术，承诺无废话内容，限额定员 2500 人，深化高端技术交流。
+  - desc: 2026 年 4 月 8 日，英特尔宣布加入马斯克旗下的 Terafab 项目，旨在构建 1 太瓦（1 TW）级 AI 算力基础设施。英特尔将提供其
+      18A 制程芯片制造与 Foveros 先进封装技术，共同推进超大规模 AI 训练集群建设。
     tags:
-    - Microsoft
-    - Developer Conference
-    - AI
-    - Build 2026
-    title: 微软 Build 2026 开发者大会日期确定
+    - AI 算力
+    - 芯片制造
+    - 战略合作
+    - 基础设施
+    title: 英特尔入局马斯克“Terafab”项目
