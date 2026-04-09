@@ -1,135 +1,132 @@
 algorithm:
-- desc: 集成学习算法，通过迭代训练决策树来最小化损失函数，近年来在 XGBoost、LightGBM 等实现中加入 GPU 加速、稀疏数据优化与直方图算法，提升训练速度与准确性。
+- desc: 决策树是一种经典的监督学习算法，通过信息增益或基尼不纯度进行分裂，支持分类与回归任务，可解释性强，适用于小规模数据集。
   tags:
-  - 集成学习
-  - 决策树
-  - 优化算法
-  - 机器学习基础
-  title: 梯度提升决策树 (Gradient Boosting Decision Trees)
+  - 机器学习
+  - 分类
+  - 可解释性
+  - 监督学习
+  title: 决策树 (Decision Trees)
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 日本兵库县
-  intro: 内田真礼是日本知名声优，以其清澈多变的声线著称。她于2010年代出道，凭借扎实的配音技巧和独特的音色在业界迅速积累人气。她的声音可塑性极强，能够驾驭从活泼少女到冷静成熟女性的多种角色类型，深受听众喜爱。除了配音工作，她也积极参与音乐活动，发行多张个人单曲和专辑，展现出色的歌唱实力。内田真礼以专业的态度和持续的精进，在声优领域树立了良好的口碑，是新生代声优中的代表性人物之一。
-  name: 内田真礼
-date: '2026-04-09'
+  agency: AXL-ON
+  hometown: 东京都
+  intro: 水濑祈是日本女性声优、歌手，出生于东京都，所属事务所为AXL-ON。她以清澈多变的声线著称，擅长演绎多种角色类型，曾获得第10回声优奖最佳女优奖，唱功亦备受肯定。
+  name: 水濑祈
+date: '2026-04-10'
 history:
-- event: 美国内战结束，罗伯特·李将军在阿波马托克斯法院向尤利西斯·格兰特将军投降。
-  year: '1865'
-- event: NASA 正式宣布水星计划的首批七名宇航员，为美国载人航天奠定基础。
-  year: '1959'
-- event: 马丁·路德·金葬礼在亚特兰大埃比尼泽浸信会教堂举行，数万人参加悼念。
-  year: '1968'
-- event: 格鲁吉亚最高苏维埃宣布脱离苏联独立，成为首个在苏联解体前宣布独立的加盟共和国。
-  year: '1991'
-- event: 伊拉克战争期间，美军攻占巴格达，萨达姆·侯赛因政权倒台。
-  year: '2003'
-- event: 全球 COVID-19 疫情加剧，单日新增确诊病例突破 10 万例，多国实施封锁措施。
-  year: '2020'
+- event: 泰坦尼克号从英国南安普顿启航，开始其首次也是唯一一次航行。
+  year: '1912'
+- event: 《禁止生物武器公约》在伦敦、莫斯科和华盛顿开放签署。
+  year: '1972'
+- event: 贝尔法斯特协议（耶稣受难日协议）在北爱尔兰签署，结束长达30年的冲突。
+  year: '1998'
+- event: 美国海军长尾鲨号核潜艇在深潜试验中失事，沉入2300米海底，129人遇难。
+  year: '1963'
+- event: 波兰总统专机在俄罗斯斯摩棱斯克附近坠毁，包括总统卡钦斯基在内的96人全部遇难。
+  year: '2010'
+- event: 中国首次北极科学考察队启程，标志着中国极地科考进入新阶段。
+  year: '1989'
 llm:
-- desc: 开源混合专家大语言模型，总参数量 1760 亿，每令牌激活 8 个专家，支持 128K 上下文，在多项基准测试中表现优异，适用于复杂指令跟随与代码生成。
+- desc: Mistral Small 4 是 1190 亿参数的混合专家模型，统一指令、推理与多模态任务，在 MMLU 上获得 85.3 分，开源可商用。
   tags:
-  - 开源模型
-  - 混合专家
-  - 长上下文
-  - 指令调优
-  title: Mixtral 8x22B Instruct
+  - MoE
+  - 多模态
+  - 开源
+  - Mistral AI
+  title: 'Mistral Small 4: 119B 参数 MoE 模型'
 new_project:
-- desc: TypeScript 编程语言的官方 GitHub 仓库，包含编译器、语言服务及工具链，近期更新至 6.0 版本，支持新特性并优化性能。
+- desc: AutoGen 是微软开发的智能体编程框架，支持多智能体对话、任务分解与自动化，广泛应用于 AI 辅助编程与工作流自动化。
   tags:
-  - 编程语言
-  - 编译器
-  - 开源工具
-  - JavaScript 超集
-  title: microsoft/TypeScript
-  url: https://github.com/microsoft/TypeScript
+  - 智能体
+  - 自动化
+  - Python
+  - 微软
+  title: 'AutoGen: 智能体编程框架'
+  url: https://github.com/microsoft/autogen
 paper:
-- desc: ICLR 2026 顶会论文，探讨视觉Transformer中的块循环动态机制，通过递归计算提升特征表示效率，在减少参数量的同时保持高精度。
+- desc: CVPR 2026 满分论文，提出轻量代理网格统一遮挡先验，实现 3D 高斯溅射 2.5 倍渲染加速。
   tags:
-  - 计算机视觉
-  - Transformer
-  - 递归网络
-  - 高效计算
-  title: Block Recurrent Dynamics in Vision Transformers
-  url: https://arxiv.org/abs/2512.19941
+  - 3D渲染
+  - 高斯溅射
+  - 遮挡先验
+  - CVPR 2026
+  title: 'Proxy-GS: Unified Occlusion Priors for Training and Rendering 3D Gaussian
+    Splatting'
+  url: https://arxiv.org/abs/2509.24421
 tech:
   Arch:
-  - desc: PCI-SIG 于 2026 年第一季度定案 PCIe 7.0 规范，每通道速率提升至 128 GT/s，x16 双向带宽达 512 GB/s。采用
-      PAM4 调制、低功耗 L0p 状态与前向纠错技术，专为 AI 训练与 HPC 场景设计，预计 2028 年量产。
+  - desc: 玄铁 C950 是阿里达摩院推出的高性能 RISC-V CPU，采用 5nm 制程，16 核心，SPECint2006 得分 72，首次原生支持千亿参数大模型推理。
     tags:
-    - 高速互连
-    - PAM4 调制
-    - 带宽翻倍
-    - AI 基础设施
-    title: PCI Express 7.0 标准正式定案
+    - RISC-V
+    - CPU
+    - 高性能计算
+    - 阿里达摩院
+    title: 玄铁 C950 RISC-V 处理器
   Audio:
-  - desc: 2026年4月开源的高保真音频扩散模型，基于 Transformer 架构在波形潜在空间中操作，支持文本到语音与音色克隆。在 LibriSpeech
-      测试集上说话人相似度指标达 0.818，可生成 24kHz 采样率音频，集成噪声抑制与情感控制模块。
+  - desc: UALM 是 NVIDIA 提出的统一音频语言模型，集成理解、生成与推理能力，基于 Transformer 架构，在音频问答任务上达到 85%
+      准确率，参数量 1.2B。
     tags:
-    - 扩散模型
-    - 音色克隆
-    - 文本到语音
-    - 开源音频
-    title: 美团 LongCat-AudioDiT 音频生成模型
+    - 音频语言模型
+    - Transformer
+    - 多任务学习
+    - NVIDIA
+    title: 'UALM: 统一音频语言模型'
   CPU:
-  - desc: 基于 Zen 5 架构的 Ryzen 9000 系列于 CES 2026 发布，采用台积电 4nm 工艺，最高 16 核 32 线程，基础频率
-      4.0 GHz，加速频率 5.8 GHz，支持 DDR5-6400 与 PCIe 5.0，TDP 65W-170W，IPC 提升 18%。
+  - desc: AMD EPYC Venice 采用 2nm 制程，最高 256 核心，512 线程，L3 缓存 512 MB，支持 12 通道 DDR6 内存，TDP
+      400W。
     tags:
-    - Zen 5 架构
-    - 4nm 工艺
-    - 高频率
-    - 桌面处理器
-    title: AMD Ryzen 9000 系列桌面 CPU
+    - 服务器 CPU
+    - 2nm
+    - Zen6
+    - AMD
+    title: AMD EPYC Venice Zen6 服务器 CPU
   Computer Vision:
-  - desc: ICLR 2026 论文提出在视觉Transformer中引入块循环动态机制，通过递归计算使每个块能够迭代细化特征表示，显著降低计算复杂度并提升长距离依赖建模能力。实验表明在
-      ImageNet-1K 上仅用 2 个递归块即可达到 DINO v2 96% 的精度，参数量减少 40%。
+  - desc: SAM2 是 Meta 推出的新一代图像与视频通用分割模型，采用 Vision Transformer 架构，支持零样本分割，在 COCO 数据集上实现
+      55.2 mIoU，参数量 640M。
     tags:
+    - 图像分割
+    - 零样本学习
     - Vision Transformer
-    - 递归机制
-    - 计算效率
-    - ICLR 2026
-    title: Block Recurrent Dynamics in Vision Transformers
+    - COCO
+    title: Segment Anything 2 (SAM2)
   GPU:
-  - desc: 砺算科技 TrueGPU 显卡于 2026 年 3 月上市，采用 6nm 工艺，集成 12GB GDDR6 显存，浮点性能 12 TFLOPS，支持
-      DirectX 12 与 Vulkan，兼容超 100 款游戏，性能对标 NVIDIA RTX 4060，功耗 180W。
+  - desc: NVIDIA Rubin GPU 采用 4nm 制程，集成 3360 亿晶体管，搭载 8 颗 HBM4 显存，总容量 288 GB，带宽 22
+      TB/s，支持 FP8 精度 AI 训练。
     tags:
-    - 国产 GPU
-    - 6nm 工艺
-    - 游戏显卡
-    - 自主知识产权
-    title: 中国首款 6nm 真自研 GPU 正式发售
+    - GPU
+    - AI 加速
+    - HBM4
+    - NVIDIA
+    title: NVIDIA Rubin GPU 架构发布
   Lang:
-  - desc: 2026 年 3 月推出的 TypeScript 重大更新，引入类型形参默认值、模板字面量类型推断增强、--moduleResolution bundler
-      模式优化，编译性能提升 30%，并改善与 JavaScript 生态的互操作性，全面支持 ES2026 语法。
+  - desc: Swift 6.3 引入关键语言特性：并发模型改进、泛型增强、编译器性能提升，支持跨平台 ARM 架构，二进制兼容性达 99.9%。
     tags:
-    - 静态类型
-    - 编译优化
-    - JavaScript 生态
-    - 语言特性
-    title: TypeScript 6.0 正式发布
+    - Swift
+    - 编程语言
+    - 并发
+    - 编译器
+    title: Swift 6.3 发布
   NLP:
-  - desc: Mistral AI 发布的混合专家大语言模型，总参数量 1760 亿，每令牌激活 8 个专家（实际激活 220 亿参数）。支持 128K 上下文长度，在
-      MMLU、HellaSwag 等基准上超越 Llama 3 70B，专为指令跟随和代码生成优化，采用分组查询注意力与滑动窗口缓存技术。
+  - desc: Kimi K2.5 是月之暗面推出的万亿参数多模态大语言模型，采用混合专家（MoE）架构，支持文本、图像、音频输入，上下文长度达 128K，MMLU
+      得分 82.5。
     tags:
-    - 混合专家
-    - 开源模型
-    - 指令微调
-    - 长上下文
-    title: Mixtral 8x22B Instruct
+    - 大语言模型
+    - 多模态
+    - MoE
+    - 万亿参数
+    title: Kimi K2.5 万亿参数多模态模型
   Net:
-  - desc: 基于 IEEE 802.11bn 标准的 Wi-Fi 8 首次通过 FCC 认证，联发科 Filogic 8000 系列芯片支持多链路操作、4096-QAM
-      调制与 OFDMA 增强，理论峰值速率达 46 Gbps，延迟低于 2ms，为 AR/VR 与 8K 流媒体提供可靠连接。
+  - desc: 800G 以太网标准（IEEE 802.3dj）正式定案，单通道速率 100 Gb/s，采用 PAM4 调制，支持 800 Gb/s 全双工传输，适用于数据中心互连。
     tags:
-    - Wi-Fi 8
-    - FCC 认证
-    - 多链路操作
-    - 低延迟
-    title: 联发科携手耕兴取得全球首份 Wi-Fi 8 认证
+    - 以太网
+    - 800G
+    - 数据中心网络
+    - IEEE 802.3dj
+    title: 800G 以太网标准定案
   News:
-  - desc: 2026 年 4 月 8 日，英特尔宣布加入马斯克旗下的 Terafab 项目，旨在构建 1 太瓦（1 TW）级 AI 算力基础设施。英特尔将提供其
-      18A 制程芯片制造与 Foveros 先进封装技术，共同推进超大规模 AI 训练集群建设。
+  - desc: 千寻智能在30天内完成约30亿元融资，由云锋基金领投，聚焦具身智能机器人研发，估值突破200亿元。
     tags:
-    - AI 算力
-    - 芯片制造
-    - 战略合作
-    - 基础设施
-    title: 英特尔入局马斯克“Terafab”项目
+    - 融资
+    - 具身智能
+    - 机器人
+    - 初创公司
+    title: 千寻智能30天内融资约30亿元

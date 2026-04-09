@@ -1,4 +1,20 @@
 {
+  "2026-04-10": [
+    "Mistral Small 4: 119B 参数 MoE 模型",
+    "千寻智能30天内融资约30亿元",
+    "Segment Anything 2 (SAM2)",
+    "玄铁 C950 RISC-V 处理器",
+    "NVIDIA Rubin GPU 架构发布",
+    "UALM: 统一音频语言模型",
+    "Kimi K2.5 万亿参数多模态模型",
+    "AMD EPYC Venice Zen6 服务器 CPU",
+    "决策树 (Decision Trees)",
+    "水濑祈",
+    "AutoGen: 智能体编程框架",
+    "Proxy-GS: Unified Occlusion Priors for Training and Rendering 3D Gaussian Splatting",
+    "Swift 6.3 发布",
+    "800G 以太网标准定案"
+  ],
   "2026-04-09": [
     "microsoft/TypeScript",
     "AMD Ryzen 9000 系列桌面 CPU",
@@ -138,20 +154,5 @@
     "Intel Core Ultra 200S Plus系列台式机处理器",
     "DeepSeek-V3: 开源大语言模型新标杆",
     "DeepGen 1.0: 轻量级统一多模态图像生成与编辑模型"
-  ],
-  "2026-03-31": [
-    "水濑祈",
-    "阿里玄铁C950 RISC-V 处理器",
-    "Python 3.13.12 版本发布",
-    "特斯拉第三代机器人 Optimus Gen3 亮相",
-    "随机森林（Random Forest）集成学习算法",
-    "MVAR: Visual Autoregressive Modeling with Scale and Spatial Markovian Conditioning",
-    "Intel Arc Pro B65 工作站显卡",
-    "英特尔至强6+ 处理器架构",
-    "百度文心一言4.0 Turbo 大模型",
-    "TUIC 协议：下一代高速代理传输协议",
-    "Anthropic Claude 4.5 大语言模型",
-    "microsoft/AI-System 开源项目",
-    "Google Gemini 3.1 Flash Live 实时音频模型"
   ]
 }
