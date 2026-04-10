@@ -1,16 +1,16 @@
 ---
 categories:
-  - paper
-date:
+- paper
+date: 2026-04-10 15:02:07 +0800
 layout: post
 tags:
-  - AAAI
-  - 幻觉
-  - VIB
+- AAAI
+- 幻觉
+- VIB
 title: ADAVIB
-subject: ""
-last_modified_at:
+subject: ''
 ---
+
 
 
 
