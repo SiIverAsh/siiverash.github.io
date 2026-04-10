@@ -1,7 +1,7 @@
 ---
 categories:
   - paper
-date: 2026-04-10 18:50:51 +0800
+date:
 layout: post
 tags:
   - AAAI
