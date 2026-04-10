@@ -48,27 +48,22 @@ def process_lifecycle():
         except: continue
 
         needs_update = False
-        
-        # 1. 发布时间处理：仅针对占位符进行初始化
-        if not fm_date or "UPLOAD_TIME" in fm_date or "2026-01-01" in fm_date:
+        current_body = body.replace('\r\n', '\n').strip()
+        committed_body = get_git_body(filepath, ref=compare_ref)
+        is_new_post = committed_body is None
+
+        if is_new_post or not fm_date or "UPLOAD_TIME" in fm_date or "2026-01-01" in fm_date:
             front_matter["date"] = now_str
-            # 极简原则：新发布时不添加更新时间字段
             if "last_modified_at" in front_matter:
                 del front_matter["last_modified_at"]
             print(f"🆕 [发布初始化] {filename} (已锁定发布日期)", flush=True)
             needs_update = True
         else:
-            # 2. 更新时间监测：精准变动监测
-            current_body = body.replace('\r\n', '\n').strip()
-            committed_body = get_git_body(filepath, ref=compare_ref)
-
             if committed_body is not None and current_body != committed_body:
-                # 仅在正文确实变动时才创建/更新 last_modified_at
                 front_matter["last_modified_at"] = now_str
                 print(f"📝 [正文内容更新] {filename} (检测到变动，已更新时间戳)", flush=True)
                 needs_update = True
             elif fm_mod and (fm_mod == fm_date):
-                # 极简原则：如果更新时间等于发布时间，则视为冗余，直接删除该字段
                 del front_matter["last_modified_at"]
                 print(f"🧹 [清理冗余数据] {filename} (已移除与发布日期相同的更新时间字段)", flush=True)
                 needs_update = True
