@@ -1,20 +1,15 @@
-# 自动构建并部署 Jekyll 网站到 GitHub Pages
 name: Deploy Jekyll site to Pages
 
 on:
-  # 当代码推送到 main 分支时运行
   push:
     branches: ["main"]
-  # 支持手动触发
   workflow_dispatch:
 
-# 设置权限，允许 Actions 部署到 GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 确保同一时间只有一个部署在进行
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -25,6 +20,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Normalize blog timestamps
+        run: python scripts/blog_lifecycle_manager.py
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
