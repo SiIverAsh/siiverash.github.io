@@ -50,14 +50,36 @@ layout: default
         {{ content }}
     </div>
 
+        {% assign current_category = page.categories | first %}
+    {% assign previous_post = nil %}
+    {% assign next_post = nil %}
+    {% if current_category %}
+        {% assign seen_current = false %}
+        {% for post in site.posts %}
+            {% if post.categories contains current_category %}
+                {% if post.url == page.url %}
+                    {% assign seen_current = true %}
+                {% elsif seen_current %}
+                    {% if next_post == nil %}
+                        {% assign next_post = post %}
+                    {% endif %}
+                {% else %}
+                    {% assign previous_post = post %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {% assign previous_post = page.previous %}
+        {% assign next_post = page.next %}
+    {% endif %}
     <footer class="post-footer">
         <div class="post-footer-links">
-            {% if page.previous and page.previous.url %}
-            <a href="{{ page.previous.url | relative_url }}" class="back-link">← 上一篇</a>
+            {% if previous_post and previous_post.url %}
+            <a href="{{ previous_post.url | relative_url }}" class="back-link">← 上一篇</a>
             {% endif %}
             <a href="javascript:history.back()" class="back-link">← 返回列表</a>
-            {% if page.next and page.next.url %}
-            <a href="{{ page.next.url | relative_url }}" class="back-link">下一篇 →</a>
+            {% if next_post and next_post.url %}
+            <a href="{{ next_post.url | relative_url }}" class="back-link">下一篇 →</a>
             {% endif %}
             <a href="#top" class="back-link">回到顶部</a>
         </div>
@@ -68,7 +90,7 @@ layout: default
     </button>
 
     <!--
-    相关文章区域先注释掉，后续你要重做这里再打开即可。
+    相关文章区域
     <section class="related-posts">
         <div class="section-title"><i class="fas fa-layer-group"></i> 相关文章</div>
         <div class="related-grid">
