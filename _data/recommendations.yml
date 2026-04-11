@@ -1,132 +1,131 @@
 algorithm:
-- desc: 决策树是一种经典的监督学习算法，通过信息增益或基尼不纯度进行分裂，支持分类与回归任务，可解释性强，适用于小规模数据集。
+- desc: 支持向量机是一种监督学习算法，通过寻找最大间隔超平面进行分类，支持核技巧处理非线性问题，适用于小样本高维度场景，是传统机器学习中的经典方法。
   tags:
-  - 机器学习
-  - 分类
-  - 可解释性
   - 监督学习
-  title: 决策树 (Decision Trees)
+  - 分类算法
+  - 核方法
+  - 最大间隔
+  title: 支持向量机 (Support Vector Machine)
 cv_recommend:
-  agency: AXL-ON
-  hometown: 东京都
-  intro: 水濑祈是日本女性声优、歌手，出生于东京都，所属事务所为AXL-ON。她以清澈多变的声线著称，擅长演绎多种角色类型，曾获得第10回声优奖最佳女优奖，唱功亦备受肯定。
-  name: 水濑祈
-date: '2026-04-10'
+  agency: 东京俳优生活协同组合（俳协）
+  hometown: 广岛县
+  intro: 种崎敦美是日本新生代声优中的杰出代表，以其清澈而多变的声线和高度的演技可塑性闻名。她擅长通过细腻的情感表达塑造角色，在业内获得广泛认可。近年来，她积极参与各类配音工作，展现出稳定的专业素养和持续的成长潜力，成为声优界备受瞩目的实力派之一。
+  name: 种崎敦美
+date: '2026-04-11'
 history:
-- event: 泰坦尼克号从英国南安普顿启航，开始其首次也是唯一一次航行。
-  year: '1912'
-- event: 《禁止生物武器公约》在伦敦、莫斯科和华盛顿开放签署。
-  year: '1972'
-- event: 贝尔法斯特协议（耶稣受难日协议）在北爱尔兰签署，结束长达30年的冲突。
-  year: '1998'
-- event: 美国海军长尾鲨号核潜艇在深潜试验中失事，沉入2300米海底，129人遇难。
-  year: '1963'
-- event: 波兰总统专机在俄罗斯斯摩棱斯克附近坠毁，包括总统卡钦斯基在内的96人全部遇难。
-  year: '2010'
-- event: 中国首次北极科学考察队启程，标志着中国极地科考进入新阶段。
-  year: '1989'
+- event: 布痕瓦尔德集中营被盟军解放，标志着纳粹集中营体系开始瓦解。
+  year: '1945'
+- event: 美国总统杜鲁门就朝鲜战争向全国发表讲话，宣布解除道格拉斯·麦克阿瑟的职务。
+  year: '1951'
+- event: 阿波罗13号任务发射升空，随后发生服务舱氧气罐爆炸，成为NASA史上最著名的救援任务。
+  year: '1970'
+- event: 波斯湾战争正式停火，联合国安理会通过第687号决议，确立停火条件。
+  year: '1991'
+- event: 日本政府将福岛第一核电站事故的核危机级别提升至最高级7级，与切尔诺贝利事故同级。
+  year: '2011'
+- event: 事件视界望远镜（EHT）合作组织发布人类首张黑洞照片，揭示了M87星系中心的超大质量黑洞。
+  year: '2019'
 llm:
-- desc: Mistral Small 4 是 1190 亿参数的混合专家模型，统一指令、推理与多模态任务，在 MMLU 上获得 85.3 分，开源可商用。
+- desc: MiniMax-M1 于2026年3月发布，参数量4560亿，采用混合注意力架构，支持128K上下文，在数学推理与代码生成基准上超越GPT-4，专为长上下文任务设计。
   tags:
-  - MoE
-  - 多模态
-  - 开源
-  - Mistral AI
-  title: 'Mistral Small 4: 119B 参数 MoE 模型'
+  - 开源LLM
+  - 混合架构
+  - 长上下文
+  - 推理优化
+  title: 'MiniMax-M1: 开源大规模混合架构推理模型'
 new_project:
-- desc: AutoGen 是微软开发的智能体编程框架，支持多智能体对话、任务分解与自动化，广泛应用于 AI 辅助编程与工作流自动化。
+- desc: OpenClaw 是2026年GitHub上增长最快的开源项目，基于大模型提供代码生成、重构与优化功能，支持多种编程语言，集成智能助手，显著提升开发效率。
   tags:
-  - 智能体
-  - 自动化
-  - Python
-  - 微软
-  title: 'AutoGen: 智能体编程框架'
-  url: https://github.com/microsoft/autogen
+  - 代码生成
+  - AI辅助开发
+  - 开源工具
+  - 编程助手
+  title: 'OpenClaw: AI驱动的代码生成与重构工具'
+  url: https://github.com/openclaw/openclaw
 paper:
-- desc: CVPR 2026 满分论文，提出轻量代理网格统一遮挡先验，实现 3D 高斯溅射 2.5 倍渲染加速。
+- desc: 该论文发表于NeurIPS 2024，提出异步低精度注意力机制，相比FlashAttention-2提升50%训练速度，同时保持模型精度，为大模型训练提供高效解决方案。
   tags:
-  - 3D渲染
-  - 高斯溅射
-  - 遮挡先验
-  - CVPR 2026
-  title: 'Proxy-GS: Unified Occlusion Priors for Training and Rendering 3D Gaussian
-    Splatting'
-  url: https://arxiv.org/abs/2509.24421
+  - 注意力机制
+  - 优化
+  - 训练加速
+  - 低精度计算
+  title: 'FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision'
+  url: https://arxiv.org/abs/2407.08608
 tech:
   Arch:
-  - desc: 玄铁 C950 是阿里达摩院推出的高性能 RISC-V CPU，采用 5nm 制程，16 核心，SPECint2006 得分 72，首次原生支持千亿参数大模型推理。
+  - desc: Intel Arrow Lake Refresh 于2026年3月推出，采用Intel 20A工艺，最高44核心（8P+32E+4LP E），三级缓存64MB，支持PCIe
+      6.0与DDR5-7200，TDP范围65W-350W。
     tags:
-    - RISC-V
-    - CPU
-    - 高性能计算
-    - 阿里达摩院
-    title: 玄铁 C950 RISC-V 处理器
+    - Intel
+    - 20A工艺
+    - 混合架构
+    - 高性能
+    title: Intel Arrow Lake Refresh 处理器
   Audio:
-  - desc: UALM 是 NVIDIA 提出的统一音频语言模型，集成理解、生成与推理能力，基于 Transformer 架构，在音频问答任务上达到 85%
-      准确率，参数量 1.2B。
+  - desc: AudioSep 是2026年推出的开放领域音频源分离模型，通过自然语言描述实现精准分离，采用对比学习架构，在MusicSep基准上信噪比提升12.5
+      dB，支持实时处理与多场景应用。
     tags:
-    - 音频语言模型
-    - Transformer
-    - 多任务学习
-    - NVIDIA
-    title: 'UALM: 统一音频语言模型'
+    - 音频分离
+    - 自然语言查询
+    - 对比学习
+    - 实时处理
+    title: 'AudioSep: 基于自然语言查询的音频分离模型'
   CPU:
-  - desc: AMD EPYC Venice 采用 2nm 制程，最高 256 核心，512 线程，L3 缓存 512 MB，支持 12 通道 DDR6 内存，TDP
-      400W。
+  - desc: AMD Ryzen 8000G 系列于2026年CES发布，采用Zen5架构与RDNA 4核显，最高8核16线程，集成40 CU图形单元，支持PCIe
+      5.0与DDR5-6000，TDP 65W-120W。
     tags:
-    - 服务器 CPU
-    - 2nm
-    - Zen6
     - AMD
-    title: AMD EPYC Venice Zen6 服务器 CPU
+    - Zen5
+    - APU
+    - 高性能核显
+    title: AMD Ryzen 8000G 系列APU
   Computer Vision:
-  - desc: SAM2 是 Meta 推出的新一代图像与视频通用分割模型，采用 Vision Transformer 架构，支持零样本分割，在 COCO 数据集上实现
-      55.2 mIoU，参数量 640M。
+  - desc: RT-DETR 是2026年最新的实时目标检测模型，采用纯Transformer端到端架构，支持多尺度特征融合与动态查询机制，在COCO数据集上实现75.6%
+      mAP，延迟低于10ms，适用于边缘计算场景。
     tags:
-    - 图像分割
-    - 零样本学习
-    - Vision Transformer
-    - COCO
-    title: Segment Anything 2 (SAM2)
+    - 目标检测
+    - Transformer
+    - 实时推理
+    - 端到端
+    title: 'RT-DETR: 实时端到端目标检测Transformer'
   GPU:
-  - desc: NVIDIA Rubin GPU 采用 4nm 制程，集成 3360 亿晶体管，搭载 8 颗 HBM4 显存，总容量 288 GB，带宽 22
-      TB/s，支持 FP8 精度 AI 训练。
+  - desc: Intel Celestial GPU 基于Xe3架构，采用台积电3nm工艺，集成12个计算单元，支持硬件光追与AI加速，FP32性能达40 TFLOPS，显存带宽1.5
+      TB/s，功耗控制300W以内。
     tags:
-    - GPU
-    - AI 加速
-    - HBM4
-    - NVIDIA
-    title: NVIDIA Rubin GPU 架构发布
+    - Intel GPU
+    - Xe3架构
+    - 3nm工艺
+    - 光追加速
+    title: Intel Celestial GPU
   Lang:
-  - desc: Swift 6.3 引入关键语言特性：并发模型改进、泛型增强、编译器性能提升，支持跨平台 ARM 架构，二进制兼容性达 99.9%。
+  - desc: Python 3.13.13 于2026年4月发布，引入即时编译器（JIT）预览版，性能提升最高达50%，同时优化异步IO、类型系统与内存管理，为科学计算与AI开发提供更强支撑。
     tags:
-    - Swift
-    - 编程语言
-    - 并发
-    - 编译器
-    title: Swift 6.3 发布
+    - Python
+    - JIT
+    - 性能优化
+    - 异步IO
+    title: Python 3.13.13 发布
   NLP:
-  - desc: Kimi K2.5 是月之暗面推出的万亿参数多模态大语言模型，采用混合专家（MoE）架构，支持文本、图像、音频输入，上下文长度达 128K，MMLU
-      得分 82.5。
+  - desc: Gemma 4 于2026年4月发布，包含31B参数，采用混合专家（MoE）架构，在MMLU基准上获得85.3%准确率，支持128K上下文长度，并集成强化学习对齐技术，提升安全性与指令跟随能力。
     tags:
-    - 大语言模型
-    - 多模态
+    - 开源LLM
     - MoE
-    - 万亿参数
-    title: Kimi K2.5 万亿参数多模态模型
+    - 多模态
+    - 强化学习
+    title: 'Gemma 4: 谷歌开源大语言模型'
   Net:
-  - desc: 800G 以太网标准（IEEE 802.3dj）正式定案，单通道速率 100 Gb/s，采用 PAM4 调制，支持 800 Gb/s 全双工传输，适用于数据中心互连。
+  - desc: 华为于2026年3月发布下一代全光网创新方案，基于F5G技术，支持单波800Gbps传输速率，端到端时延低于1ms，具备AI驱动的智能运维与切片能力，为AI时代提供高可靠网络底座。
     tags:
-    - 以太网
-    - 800G
-    - 数据中心网络
-    - IEEE 802.3dj
-    title: 800G 以太网标准定案
+    - 全光网
+    - F5G
+    - 低时延
+    - AI运维
+    title: 华为下一代全光网解决方案
   News:
-  - desc: 千寻智能在30天内完成约30亿元融资，由云锋基金领投，聚焦具身智能机器人研发，估值突破200亿元。
+  - desc: 2026年4月5日，国星宇航宣布成功实现全球首次太空算力操控地面机器人技术验证，通过低轨卫星网络完成毫秒级指令传输，操控精度达厘米级，为太空-地面协同作业开辟新路径。
     tags:
-    - 融资
-    - 具身智能
-    - 机器人
-    - 初创公司
-    title: 千寻智能30天内融资约30亿元
+    - 太空算力
+    - 机器人操控
+    - 卫星通信
+    - 技术验证
+    title: 国星宇航完成全球首次太空算力操控地面机器人验证
