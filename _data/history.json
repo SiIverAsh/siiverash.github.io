@@ -1,4 +1,18 @@
 {
+  "2026-04-12": [
+    "Intel Core Ultra 400HX 移动处理器",
+    "高通X105 5G Advanced调制解调器",
+    "CrewAI: 角色化AI智能体编排框架",
+    "Intel Arc Pro B70 工作站显卡",
+    "滴滴自动驾驶新一代Robotaxi升级",
+    "DBSCAN 密度聚类算法",
+    "Qwen3.6-Plus: 阿里720B参数MoE大模型",
+    "NeoVerse: Enhancing 4D World Model with in-the-wild Monocular Videos",
+    "Go 1.26 正式发布",
+    "松冈祯丞",
+    "Qwen3-ASR: 开源多语言语音识别模型",
+    "全球首个RISC-V存算一体标准研制启动"
+  ],
   "2026-04-11": [
     "RT-DETR: 实时端到端目标检测Transformer",
     "AudioSep: 基于自然语言查询的音频分离模型",
@@ -138,21 +152,5 @@
     "DualToken: Towards Unifying Visual Understanding and Generation with Dual Visual Vocabularies",
     "BiRefNet: 开源高分辨率二值化图像分割框架",
     "智能体互联网开放网络协议AONP框架"
-  ],
-  "2026-04-02": [
-    "雨宫天",
-    "Qwen3.5",
-    "NVIDIA RTX PRO 4500",
-    "Gaia2: Benchmarking LLM Agents on Dynamic and Asynchronous Environments",
-    "ChatGLM-4 Ultra",
-    "YOLO26",
-    "Arm AGI CPU",
-    "Rust 1.94.0",
-    "Intel Core Ultra 300系列",
-    "K-均值聚类",
-    "2026中关村论坛年会发布21项重大科技成果",
-    "Qwen3-TTS",
-    "DeerFlow 2.0",
-    "tRPC-Agent-Go"
   ]
 }

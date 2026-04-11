@@ -1,131 +1,126 @@
 algorithm:
-- desc: 支持向量机是一种监督学习算法，通过寻找最大间隔超平面进行分类，支持核技巧处理非线性问题，适用于小样本高维度场景，是传统机器学习中的经典方法。
+- desc: 传统机器学习或常见算法
   tags:
-  - 监督学习
-  - 分类算法
-  - 核方法
-  - 最大间隔
-  title: 支持向量机 (Support Vector Machine)
+  - Clustering
+  - Density-Based
+  - Unsupervised Learning
+  - Machine Learning
+  title: DBSCAN 密度聚类算法
 cv_recommend:
-  agency: 东京俳优生活协同组合（俳协）
-  hometown: 广岛县
-  intro: 种崎敦美是日本新生代声优中的杰出代表，以其清澈而多变的声线和高度的演技可塑性闻名。她擅长通过细腻的情感表达塑造角色，在业内获得广泛认可。近年来，她积极参与各类配音工作，展现出稳定的专业素养和持续的成长潜力，成为声优界备受瞩目的实力派之一。
-  name: 种崎敦美
-date: '2026-04-11'
+  agency: I'm Enterprise
+  hometown: 日本北海道
+  intro: 松冈祯丞以其独特的少年音色和细腻的情感表达在声优界备受认可。他的嗓音清澈而富有穿透力，能够驾驭从青涩到成熟的多种角色类型。在配音工作中，他注重角色内心世界的刻画，通过语气微调展现人物成长轨迹。其专业素养体现在对台本的深入研究和现场即兴发挥能力，近年来在广播节目主持方面也展现出多样才华。
+  name: 松冈祯丞
+date: '2026-04-12'
 history:
-- event: 布痕瓦尔德集中营被盟军解放，标志着纳粹集中营体系开始瓦解。
+- event: 美国内战开始（萨姆特堡战役）
+  year: '1861'
+- event: 美国总统富兰克林·罗斯福逝世
   year: '1945'
-- event: 美国总统杜鲁门就朝鲜战争向全国发表讲话，宣布解除道格拉斯·麦克阿瑟的职务。
-  year: '1951'
-- event: 阿波罗13号任务发射升空，随后发生服务舱氧气罐爆炸，成为NASA史上最著名的救援任务。
-  year: '1970'
-- event: 波斯湾战争正式停火，联合国安理会通过第687号决议，确立停火条件。
-  year: '1991'
-- event: 日本政府将福岛第一核电站事故的核危机级别提升至最高级7级，与切尔诺贝利事故同级。
-  year: '2011'
-- event: 事件视界望远镜（EHT）合作组织发布人类首张黑洞照片，揭示了M87星系中心的超大质量黑洞。
-  year: '2019'
+- event: 苏联宇航员尤里·加加林成为首个进入太空的人类
+  year: '1961'
+- event: 美国航天飞机哥伦比亚号首次发射
+  year: '1981'
+- event: 乔纳斯·索尔克宣布脊髓灰质炎疫苗试验成功
+  year: '1955'
+- event: 蒋介石发动四一二反革命政变
+  year: '1927'
 llm:
-- desc: MiniMax-M1 于2026年3月发布，参数量4560亿，采用混合注意力架构，支持128K上下文，在数学推理与代码生成基准上超越GPT-4，专为长上下文任务设计。
+- desc: 大语言模型相关
   tags:
-  - 开源LLM
-  - 混合架构
-  - 长上下文
-  - 推理优化
-  title: 'MiniMax-M1: 开源大规模混合架构推理模型'
+  - MoE
+  - Large Language Model
+  - Qwen
+  - AI
+  title: 'Qwen3.6-Plus: 阿里720B参数MoE大模型'
 new_project:
-- desc: OpenClaw 是2026年GitHub上增长最快的开源项目，基于大模型提供代码生成、重构与优化功能，支持多种编程语言，集成智能助手，显著提升开发效率。
+- desc: GitHub上trend里的最新项目
   tags:
-  - 代码生成
-  - AI辅助开发
-  - 开源工具
-  - 编程助手
-  title: 'OpenClaw: AI驱动的代码生成与重构工具'
-  url: https://github.com/openclaw/openclaw
+  - AI Agents
+  - Python
+  - Open Source
+  - Automation
+  title: 'CrewAI: 角色化AI智能体编排框架'
+  url: https://github.com/Alteriom/crewAI
 paper:
-- desc: 该论文发表于NeurIPS 2024，提出异步低精度注意力机制，相比FlashAttention-2提升50%训练速度，同时保持模型精度，为大模型训练提供高效解决方案。
+- desc: 顶会论文推荐
   tags:
-  - 注意力机制
-  - 优化
-  - 训练加速
-  - 低精度计算
-  title: 'FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision'
-  url: https://arxiv.org/abs/2407.08608
+  - 4D Reconstruction
+  - NeRF
+  - World Model
+  - CVPR 2026
+  title: 'NeoVerse: Enhancing 4D World Model with in-the-wild Monocular Videos'
+  url: https://arxiv.org/abs/2601.00393
 tech:
   Arch:
-  - desc: Intel Arrow Lake Refresh 于2026年3月推出，采用Intel 20A工艺，最高44核心（8P+32E+4LP E），三级缓存64MB，支持PCIe
-      6.0与DDR5-7200，TDP范围65W-350W。
+  - desc: 由中国RISC-V产业联盟牵头，旨在定义存算一体架构的指令集扩展、内存接口协议与一致性模型，目标是在AI与边缘计算场景下实现计算能效提升10倍以上。
     tags:
-    - Intel
-    - 20A工艺
-    - 混合架构
-    - 高性能
-    title: Intel Arrow Lake Refresh 处理器
+    - RISC-V
+    - Compute-in-Memory
+    - Standard
+    - Edge AI
+    title: 全球首个RISC-V存算一体标准研制启动
   Audio:
-  - desc: AudioSep 是2026年推出的开放领域音频源分离模型，通过自然语言描述实现精准分离，采用对比学习架构，在MusicSep基准上信噪比提升12.5
-      dB，支持实时处理与多场景应用。
+  - desc: 基于Transformer架构，参数量1.7B，支持52种语言与方言的端到端语音识别，词错误率（WER）在多个基准测试中达到SOTA，提供流式与非流式推理模式。
     tags:
-    - 音频分离
-    - 自然语言查询
-    - 对比学习
-    - 实时处理
-    title: 'AudioSep: 基于自然语言查询的音频分离模型'
-  CPU:
-  - desc: AMD Ryzen 8000G 系列于2026年CES发布，采用Zen5架构与RDNA 4核显，最高8核16线程，集成40 CU图形单元，支持PCIe
-      5.0与DDR5-6000，TDP 65W-120W。
-    tags:
-    - AMD
-    - Zen5
-    - APU
-    - 高性能核显
-    title: AMD Ryzen 8000G 系列APU
-  Computer Vision:
-  - desc: RT-DETR 是2026年最新的实时目标检测模型，采用纯Transformer端到端架构，支持多尺度特征融合与动态查询机制，在COCO数据集上实现75.6%
-      mAP，延迟低于10ms，适用于边缘计算场景。
-    tags:
-    - 目标检测
+    - Speech Recognition
+    - Multilingual
     - Transformer
-    - 实时推理
-    - 端到端
-    title: 'RT-DETR: 实时端到端目标检测Transformer'
+    - Open Source
+    title: 'Qwen3-ASR: 开源多语言语音识别模型'
+  CPU:
+  - desc: 基于Nova Lake架构，采用Intel 20A工艺，最高28核心（8个性能核+16个能效核+4个低功耗能效核），集成Arc Xe-LPG显卡，支持LPDDR5X-7500内存，TDP可达55W。
+    tags:
+    - Intel Core Ultra
+    - Nova Lake
+    - Mobile CPU
+    - Hybrid Architecture
+    title: Intel Core Ultra 400HX 移动处理器
+  Computer Vision:
+  - desc: CVPR 2026满分论文，提出从单目野外视频学习4D世界模型的框架，通过神经辐射场（NeRF）与动态场景表示结合，实现时空连贯的3D重建与物理规律推理。
+    tags:
+    - 4D Reconstruction
+    - NeRF
+    - World Model
+    - Computer Vision
+    title: 'NeoVerse: Enhancing 4D World Model with in-the-wild Monocular Videos'
   GPU:
-  - desc: Intel Celestial GPU 基于Xe3架构，采用台积电3nm工艺，集成12个计算单元，支持硬件光追与AI加速，FP32性能达40 TFLOPS，显存带宽1.5
-      TB/s，功耗控制300W以内。
+  - desc: 基于Xe2-HPG架构，配备32个Xe2核心与32GB GDDR6显存，支持PCIe 5.0 x16接口与硬件光线追踪，AI算力达367 TOPS，功耗300W。
     tags:
-    - Intel GPU
-    - Xe3架构
-    - 3nm工艺
-    - 光追加速
-    title: Intel Celestial GPU
+    - Intel Arc
+    - Workstation GPU
+    - AI Acceleration
+    - Xe2
+    title: Intel Arc Pro B70 工作站显卡
   Lang:
-  - desc: Python 3.13.13 于2026年4月发布，引入即时编译器（JIT）预览版，性能提升最高达50%，同时优化异步IO、类型系统与内存管理，为科学计算与AI开发提供更强支撑。
+  - desc: 引入Green Tea GC垃圾回收器作为默认选项，显著降低暂停时间；放宽泛型类型参数限制，支持更多复合类型；优化并发原语性能，增强网络库与标准库稳定性。
     tags:
-    - Python
-    - JIT
-    - 性能优化
-    - 异步IO
-    title: Python 3.13.13 发布
+    - Go
+    - Programming Language
+    - Garbage Collection
+    - Concurrency
+    title: Go 1.26 正式发布
   NLP:
-  - desc: Gemma 4 于2026年4月发布，包含31B参数，采用混合专家（MoE）架构，在MMLU基准上获得85.3%准确率，支持128K上下文长度，并集成强化学习对齐技术，提升安全性与指令跟随能力。
+  - desc: 基于MoE架构，参数量达720B，支持128K上下文长度，在数学推理、代码生成和多轮对话任务中表现优异，集成工具调用与多模态扩展能力。
     tags:
-    - 开源LLM
     - MoE
-    - 多模态
-    - 强化学习
-    title: 'Gemma 4: 谷歌开源大语言模型'
+    - Large Language Model
+    - Qwen
+    - AI
+    title: 'Qwen3.6-Plus: 阿里720B参数MoE大模型'
   Net:
-  - desc: 华为于2026年3月发布下一代全光网创新方案，基于F5G技术，支持单波800Gbps传输速率，端到端时延低于1ms，具备AI驱动的智能运维与切片能力，为AI时代提供高可靠网络底座。
+  - desc: 全球首款支持3GPP Release 19（5G Advanced）的调制解调器，采用4nm工艺，下行峰值速率达14.8Gbps，上行峰值速率达3.5Gbps，集成AI引擎实现智能功耗管理，能效提升30%。
     tags:
-    - 全光网
-    - F5G
-    - 低时延
-    - AI运维
-    title: 华为下一代全光网解决方案
+    - 5G Advanced
+    - Modem
+    - Qualcomm
+    - Wireless
+    title: 高通X105 5G Advanced调制解调器
   News:
-  - desc: 2026年4月5日，国星宇航宣布成功实现全球首次太空算力操控地面机器人技术验证，通过低轨卫星网络完成毫秒级指令传输，操控精度达厘米级，为太空-地面协同作业开辟新路径。
+  - desc: 新一代Robotaxi搭载多模态融合感知系统，采用NVIDIA Drive Thor芯片与自研规划算法，支持L4级自动驾驶，已在上海、深圳等城市扩大测试规模，计划2026年内实现商业化运营。
     tags:
-    - 太空算力
-    - 机器人操控
-    - 卫星通信
-    - 技术验证
-    title: 国星宇航完成全球首次太空算力操控地面机器人验证
+    - Autonomous Driving
+    - Robotaxi
+    - Didi
+    - L4
+    title: 滴滴自动驾驶新一代Robotaxi升级
