@@ -1,4 +1,19 @@
 {
+  "2026-04-13": [
+    "HTTP/3 大规模部署与性能优化",
+    "Mamba-3: Improved Sequence Modeling using State Space Principles",
+    "Intel Core Ultra 200S Plus 系列桌面处理器",
+    "Intel Arc Battlemage BMG-G31 GPU",
+    "Rust 1.94.1: 内存安全与并发性能增强",
+    "DeepSeek V4: 1T Parameter MoE Multimodal Model",
+    "DCDM: Divide-and-Conquer Diffusion Models for Consistency-Preserving Video Generation",
+    "deer-flow: 字节跳动开源长周期超级智能体框架",
+    "CXL 3.0 内存共享技术落地进展",
+    "SpaceX 星舰计划 2026 年底首次无人火星任务",
+    "随机森林 (Random Forest)",
+    "佐仓绫音",
+    "BSCodec: A Band-Split Neural Codec for High-Quality Universal Audio Reconstruction"
+  ],
   "2026-04-12": [
     "Intel Core Ultra 400HX 移动处理器",
     "高通X105 5G Advanced调制解调器",
@@ -137,20 +152,5 @@
     "Mistral Small 4",
     "Google Gemma 4开源大模型",
     "Segment Anything 2 (SAM2)"
-  ],
-  "2026-04-03": [
-    "NVIDIA GeForce RTX 5080",
-    "Apple M5 Pro 芯片",
-    "华为发布新一代算力芯片",
-    "Mojo 2.0 编程语言",
-    "Microsoft Phi-4-Reasoning-Vision-15B",
-    "支持向量机 (Support Vector Machines)",
-    "Unified Audio Language Model (UALM)",
-    "mlc-ai/mlc-llm",
-    "AMD EPYC 8005 系列服务器处理器",
-    "鬼头明里",
-    "DualToken: Towards Unifying Visual Understanding and Generation with Dual Visual Vocabularies",
-    "BiRefNet: 开源高分辨率二值化图像分割框架",
-    "智能体互联网开放网络协议AONP框架"
   ]
 }

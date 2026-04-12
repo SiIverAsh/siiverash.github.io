@@ -1,126 +1,129 @@
 algorithm:
-- desc: 传统机器学习或常见算法
+- desc: 集成学习算法，通过构建多棵决策树进行投票，适用于分类和回归任务，具有高准确性和抗过拟合能力，支持特征重要性评估。
   tags:
-  - Clustering
-  - Density-Based
-  - Unsupervised Learning
-  - Machine Learning
-  title: DBSCAN 密度聚类算法
+  - 机器学习
+  - 集成学习
+  - 决策树
+  - 分类算法
+  title: 随机森林 (Random Forest)
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 日本北海道
-  intro: 松冈祯丞以其独特的少年音色和细腻的情感表达在声优界备受认可。他的嗓音清澈而富有穿透力，能够驾驭从青涩到成熟的多种角色类型。在配音工作中，他注重角色内心世界的刻画，通过语气微调展现人物成长轨迹。其专业素养体现在对台本的深入研究和现场即兴发挥能力，近年来在广播节目主持方面也展现出多样才华。
-  name: 松冈祯丞
-date: '2026-04-12'
+  agency: 青二プロダクション
+  hometown: 日本东京都
+  intro: 佐仓绫音以其多变的声线和扎实的演技在声优界享有盛誉。她能够驾驭从少女到成熟女性的多种角色，声音具有很高的辨识度。作为青二事务所的代表声优之一，她积极参与广播节目和活动，展现了出色的综合素养。她的配音作品涵盖广泛，但在此不具体列举，其专业态度和持续进步的表现使其成为业内备受关注的声音艺术家。
+  name: 佐仓绫音
+date: '2026-04-13'
 history:
-- event: 美国内战开始（萨姆特堡战役）
-  year: '1861'
-- event: 美国总统富兰克林·罗斯福逝世
-  year: '1945'
-- event: 苏联宇航员尤里·加加林成为首个进入太空的人类
-  year: '1961'
-- event: 美国航天飞机哥伦比亚号首次发射
-  year: '1981'
-- event: 乔纳斯·索尔克宣布脊髓灰质炎疫苗试验成功
-  year: '1955'
-- event: 蒋介石发动四一二反革命政变
-  year: '1927'
+- event: 托马斯·杰斐逊出生，美国第三任总统。
+  year: '1743'
+- event: 阿姆利则惨案，英国军队向印度示威者开枪。
+  year: '1919'
+- event: 阿波罗13号氧气罐爆炸，宇航员安全返回。
+  year: '1970'
+- event: 老虎伍兹赢得美国大师赛，成为最年轻冠军。
+  year: '1997'
+- event: 冰岛埃亚菲亚德拉冰盖火山爆发，影响欧洲航空。
+  year: '2010'
+- event: 事件视界望远镜发布首张黑洞照片。
+  year: '2019'
 llm:
-- desc: 大语言模型相关
+- desc: 开源万亿参数混合专家模型，支持多模态输入，在SWE-bench上得分81%，推理成本$0.30/MTok，采用MoE架构和分组查询注意力。
   tags:
+  - 大语言模型
+  - 开源
+  - 多模态
   - MoE
-  - Large Language Model
-  - Qwen
-  - AI
-  title: 'Qwen3.6-Plus: 阿里720B参数MoE大模型'
+  title: 'DeepSeek V4: 1T Parameter MoE Multimodal Model'
 new_project:
-- desc: GitHub上trend里的最新项目
+- desc: 支持研究、编码和创作的长周期智能体框架，具备沙箱、记忆、工具等模块，可处理分钟到小时级任务，已在GitHub获57k星。
   tags:
-  - AI Agents
-  - Python
-  - Open Source
-  - Automation
-  title: 'CrewAI: 角色化AI智能体编排框架'
-  url: https://github.com/Alteriom/crewAI
+  - AI智能体
+  - 开源
+  - 字节跳动
+  - 长周期任务
+  title: 'deer-flow: 字节跳动开源长周期超级智能体框架'
+  url: https://github.com/bytedance/deer-flow
 paper:
-- desc: 顶会论文推荐
+- desc: ICLR 2026 顶会论文
   tags:
-  - 4D Reconstruction
-  - NeRF
-  - World Model
-  - CVPR 2026
-  title: 'NeoVerse: Enhancing 4D World Model with in-the-wild Monocular Videos'
-  url: https://arxiv.org/abs/2601.00393
+  - 状态空间模型
+  - 序列建模
+  - 推理效率
+  - 机器学习
+  title: 'Mamba-3: Improved Sequence Modeling using State Space Principles'
+  url: https://arxiv.org/abs/2603.15569
 tech:
   Arch:
-  - desc: 由中国RISC-V产业联盟牵头，旨在定义存算一体架构的指令集扩展、内存接口协议与一致性模型，目标是在AI与边缘计算场景下实现计算能效提升10倍以上。
+  - desc: Compute Express Link 3.0标准支持内存池化和设备间直接共享，带宽达64GT/s，延迟降低至100ns级别，已在Intel
+      Sapphire Rapids和AMD EPYC平台实现初步部署。
     tags:
-    - RISC-V
-    - Compute-in-Memory
-    - Standard
-    - Edge AI
-    title: 全球首个RISC-V存算一体标准研制启动
+    - CXL
+    - 内存共享
+    - 互连技术
+    - 计算机体系结构
+    title: CXL 3.0 内存共享技术落地进展
   Audio:
-  - desc: 基于Transformer架构，参数量1.7B，支持52种语言与方言的端到端语音识别，词错误率（WER）在多个基准测试中达到SOTA，提供流式与非流式推理模式。
+  - desc: 采用波段分割编码的神经编解码器，将音频分为子带进行独立建模，支持24kHz采样率，在LibriTTS测试集上MOS得分达4.2，压缩比达1:24，实时延迟低于50ms。
     tags:
-    - Speech Recognition
-    - Multilingual
-    - Transformer
-    - Open Source
-    title: 'Qwen3-ASR: 开源多语言语音识别模型'
+    - 音频编解码器
+    - 神经网络
+    - 高质量重建
+    - 音频处理
+    title: 'BSCodec: A Band-Split Neural Codec for High-Quality Universal Audio Reconstruction'
   CPU:
-  - desc: 基于Nova Lake架构，采用Intel 20A工艺，最高28核心（8个性能核+16个能效核+4个低功耗能效核），集成Arc Xe-LPG显卡，支持LPDDR5X-7500内存，TDP可达55W。
+  - desc: 基于Intel 20A工艺，最多16核（8P+8E），基础频率3.5GHz，最大睿频5.2GHz，集成Arc Xe-LPG显卡，支持PCIe 5.0和DDR5-6400，TDP
+      65W。
     tags:
     - Intel Core Ultra
-    - Nova Lake
-    - Mobile CPU
-    - Hybrid Architecture
-    title: Intel Core Ultra 400HX 移动处理器
+    - 桌面处理器
+    - 20A工艺
+    - CPU
+    title: Intel Core Ultra 200S Plus 系列桌面处理器
   Computer Vision:
-  - desc: CVPR 2026满分论文，提出从单目野外视频学习4D世界模型的框架，通过神经辐射场（NeRF）与动态场景表示结合，实现时空连贯的3D重建与物理规律推理。
+  - desc: 采用分治策略的扩散模型，通过时间分割和空间注意力机制确保视频生成的一致性，在UCF-101数据集上取得SOTA结果，支持高达128帧的长视频生成，推理速度较传统扩散模型提升3倍。
     tags:
-    - 4D Reconstruction
-    - NeRF
-    - World Model
-    - Computer Vision
-    title: 'NeoVerse: Enhancing 4D World Model with in-the-wild Monocular Videos'
+    - 视频生成
+    - 扩散模型
+    - 一致性保持
+    - 计算机视觉
+    title: 'DCDM: Divide-and-Conquer Diffusion Models for Consistency-Preserving Video
+      Generation'
   GPU:
-  - desc: 基于Xe2-HPG架构，配备32个Xe2核心与32GB GDDR6显存，支持PCIe 5.0 x16接口与硬件光线追踪，AI算力达367 TOPS，功耗300W。
+  - desc: 采用Xe²架构，268mm²核心面积集成277亿晶体管，支持硬件光线追踪和AI加速，性能较上代提升50%，显存带宽达512GB/s，功耗控制在150W。
     tags:
     - Intel Arc
-    - Workstation GPU
-    - AI Acceleration
-    - Xe2
-    title: Intel Arc Pro B70 工作站显卡
+    - Battlemage
+    - GPU架构
+    - 图形处理器
+    title: Intel Arc Battlemage BMG-G31 GPU
   Lang:
-  - desc: 引入Green Tea GC垃圾回收器作为默认选项，显著降低暂停时间；放宽泛型类型参数限制，支持更多复合类型；优化并发原语性能，增强网络库与标准库稳定性。
+  - desc: 引入异步迭代器稳定化、改进的借用检查器算法，在并发场景下性能提升20%，编译时间优化15%，支持ARM SVE指令集，内存安全漏洞减少40%。
     tags:
-    - Go
-    - Programming Language
-    - Garbage Collection
-    - Concurrency
-    title: Go 1.26 正式发布
+    - Rust
+    - 内存安全
+    - 并发编程
+    - 系统编程
+    title: 'Rust 1.94.1: 内存安全与并发性能增强'
   NLP:
-  - desc: 基于MoE架构，参数量达720B，支持128K上下文长度，在数学推理、代码生成和多轮对话任务中表现优异，集成工具调用与多模态扩展能力。
+  - desc: 基于状态空间模型（SSM）的下一代语言模型，引入结构化状态更新和硬件感知优化，在Long Range Arena基准上较Mamba-2提升15%推理效率，支持128K上下文长度，参数量达7B。
     tags:
-    - MoE
-    - Large Language Model
-    - Qwen
-    - AI
-    title: 'Qwen3.6-Plus: 阿里720B参数MoE大模型'
+    - 状态空间模型
+    - 序列建模
+    - 推理效率
+    - 自然语言处理
+    title: 'Mamba-3: Improved Sequence Modeling using State Space Principles'
   Net:
-  - desc: 全球首款支持3GPP Release 19（5G Advanced）的调制解调器，采用4nm工艺，下行峰值速率达14.8Gbps，上行峰值速率达3.5Gbps，集成AI引擎实现智能功耗管理，能效提升30%。
+  - desc: 基于QUIC协议的HTTP/3已在全球Top 10万网站中覆盖超40%，支持0-RTT连接复用，较HTTP/2降低50%延迟，多路复用机制提升吞吐量30%，已获主流CDN和浏览器全面支持。
     tags:
-    - 5G Advanced
-    - Modem
-    - Qualcomm
-    - Wireless
-    title: 高通X105 5G Advanced调制解调器
+    - HTTP/3
+    - QUIC协议
+    - 网络性能
+    - Web技术
+    title: HTTP/3 大规模部署与性能优化
   News:
-  - desc: 新一代Robotaxi搭载多模态融合感知系统，采用NVIDIA Drive Thor芯片与自研规划算法，支持L4级自动驾驶，已在上海、深圳等城市扩大测试规模，计划2026年内实现商业化运营。
+  - desc: 马斯克宣布Starship无人测试飞行将于2026年11月至12月发射，旨在验证火星着陆技术，搭载100吨载荷，使用猛禽2发动机，轨道高度达400公里。
     tags:
-    - Autonomous Driving
-    - Robotaxi
-    - Didi
-    - L4
-    title: 滴滴自动驾驶新一代Robotaxi升级
+    - SpaceX
+    - 星舰
+    - 火星任务
+    - 航天新闻
+    title: SpaceX 星舰计划 2026 年底首次无人火星任务
