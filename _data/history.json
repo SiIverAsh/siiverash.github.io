@@ -1,4 +1,20 @@
 {
+  "2026-04-14": [
+    "K-Means聚类算法",
+    "Wi-Fi 8: 下一代无线网络标准",
+    "MAI-Transcribe-1: 微软最精准音频转录模型",
+    "Java 26: Oracle 最新Java版本",
+    "GPT-5.4: OpenAI 首个具备原生计算机操作能力的模型",
+    "LLaMA 4: Meta 开源多模态大语言模型",
+    "UCIe 2.0: 新一代芯片互连规范",
+    "VideoCrafter2: Overcoming Data Limitations for Video Generation",
+    "JoyAI-Image: 京东开源统一多模态图像基础模型",
+    "悠木碧",
+    "DirectFisheye-GS: Enabling Native Fisheye Input in Gaussian Splatting with Cross-View Joint Optimization",
+    "人工智能拟人化互动服务管理暂行办法发布",
+    "AMD RDNA 5: 下一代显卡架构",
+    "AMD Ryzen 10000: Zen 6 架构桌面CPU"
+  ],
   "2026-04-13": [
     "HTTP/3 大规模部署与性能优化",
     "Mamba-3: Improved Sequence Modeling using State Space Principles",
@@ -136,21 +152,5 @@
     "Python 3.14",
     "AMD EPYC Venice Zen 6 CPU",
     "AudioX: A Unified Framework for Anything-to-Audio Generation"
-  ],
-  "2026-04-04": [
-    "水树奈奈",
-    "Swift 6.3",
-    "facebookresearch/sam2",
-    "Segment and Matte Anything in a Unified Model",
-    "NVIDIA Rubin AI加速平台",
-    "商汤发布流式多模态大模型",
-    "高通X105 5G调制解调器及射频",
-    "DBSCAN聚类算法",
-    "AMD Ryzen AI 400系列处理器",
-    "LongCat-AudioDiT音频生成模型",
-    "AMD Zen 5架构",
-    "Mistral Small 4",
-    "Google Gemma 4开源大模型",
-    "Segment Anything 2 (SAM2)"
   ]
 }

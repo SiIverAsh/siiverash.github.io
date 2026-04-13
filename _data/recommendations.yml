@@ -1,129 +1,131 @@
 algorithm:
-- desc: 集成学习算法，通过构建多棵决策树进行投票，适用于分类和回归任务，具有高准确性和抗过拟合能力，支持特征重要性评估。
+- desc: K-Means是一种经典无监督聚类算法，通过迭代将数据点分配到K个簇中，以最小化簇内方差。适用于客户分群、图像压缩和异常检测，时间复杂度O(n*k*t)。
   tags:
   - 机器学习
-  - 集成学习
-  - 决策树
-  - 分类算法
-  title: 随机森林 (Random Forest)
+  - 聚类
+  - 无监督学习
+  - 算法
+  title: K-Means聚类算法
 cv_recommend:
-  agency: 青二プロダクション
-  hometown: 日本东京都
-  intro: 佐仓绫音以其多变的声线和扎实的演技在声优界享有盛誉。她能够驾驭从少女到成熟女性的多种角色，声音具有很高的辨识度。作为青二事务所的代表声优之一，她积极参与广播节目和活动，展现了出色的综合素养。她的配音作品涵盖广泛，但在此不具体列举，其专业态度和持续进步的表现使其成为业内备受关注的声音艺术家。
-  name: 佐仓绫音
-date: '2026-04-13'
+  agency: 青二プロダクション（Aoni Production）
+  hometown: 千叶县
+  intro: 悠木碧是日本知名声优，以宽广的音域和出色的演技著称。她擅长演绎从少女到成年女性的多种角色，声音具有独特的透明感和表现力。在职业生涯中，她获得了多项声优奖项，包括声优奖主演女优奖。她的配音工作涵盖了动画、游戏和外语片配音，以其专业的素养和多样化的表现受到业界高度评价。
+  name: 悠木碧
+date: '2026-04-14'
 history:
-- event: 托马斯·杰斐逊出生，美国第三任总统。
-  year: '1743'
-- event: 阿姆利则惨案，英国军队向印度示威者开枪。
-  year: '1919'
-- event: 阿波罗13号氧气罐爆炸，宇航员安全返回。
-  year: '1970'
-- event: 老虎伍兹赢得美国大师赛，成为最年轻冠军。
-  year: '1997'
-- event: 冰岛埃亚菲亚德拉冰盖火山爆发，影响欧洲航空。
+- event: 美国第16任总统亚伯拉罕·林肯在福特剧院遇刺身亡。
+  year: '1865'
+- event: 泰坦尼克号邮轮在北大西洋撞上冰山后沉没，造成逾1500人遇难。
+  year: '1912'
+- event: 西班牙第二共和国成立，结束了波旁王朝的统治。
+  year: '1931'
+- event: 苏联签署日内瓦协议，同意从阿富汗撤军。
+  year: '1988'
+- event: 国际人类基因组计划宣布完成，成功测序人类全部DNA。
+  year: '2003'
+- event: 冰岛埃亚菲亚德拉冰盖火山爆发，导致欧洲航空交通大规模中断。
   year: '2010'
-- event: 事件视界望远镜发布首张黑洞照片。
-  year: '2019'
 llm:
-- desc: 开源万亿参数混合专家模型，支持多模态输入，在SWE-bench上得分81%，推理成本$0.30/MTok，采用MoE架构和分组查询注意力。
+- desc: LLaMA 4是Meta开源的多模态大语言模型，参数量7200亿，支持图像、音频和文本输入。采用混合专家架构，在常识推理和代码生成任务中媲美GPT-5.4，遵循Apache
+    2.0协议。
   tags:
   - 大语言模型
   - 开源
+  - Meta
   - 多模态
-  - MoE
-  title: 'DeepSeek V4: 1T Parameter MoE Multimodal Model'
+  title: 'LLaMA 4: Meta 开源多模态大语言模型'
 new_project:
-- desc: 支持研究、编码和创作的长周期智能体框架，具备沙箱、记忆、工具等模块，可处理分钟到小时级任务，已在GitHub获57k星。
+- desc: VideoCrafter2是腾讯AI Lab开源的视频生成框架，基于扩散模型和数据增强技术，支持文本到视频和图像到视频生成，在UCF101和Kinetics数据集上取得SOTA。
   tags:
-  - AI智能体
+  - 视频生成
+  - 深度学习
   - 开源
-  - 字节跳动
-  - 长周期任务
-  title: 'deer-flow: 字节跳动开源长周期超级智能体框架'
-  url: https://github.com/bytedance/deer-flow
+  - GitHub
+  title: 'VideoCrafter2: Overcoming Data Limitations for Video Generation'
+  url: https://github.com/ailab-cvc/videocrafter
 paper:
-- desc: ICLR 2026 顶会论文
+- desc: 该论文提出一种将鱼眼相机输入直接集成到高斯溅射中的方法，通过跨视图联合优化实现高质量3D重建，适用于自动驾驶和VR场景。发表于ICLR 2026。
   tags:
-  - 状态空间模型
-  - 序列建模
-  - 推理效率
-  - 机器学习
-  title: 'Mamba-3: Improved Sequence Modeling using State Space Principles'
-  url: https://arxiv.org/abs/2603.15569
+  - 计算机视觉
+  - 3D重建
+  - 高斯溅射
+  - 论文
+  title: 'DirectFisheye-GS: Enabling Native Fisheye Input in Gaussian Splatting with
+    Cross-View Joint Optimization'
+  url: https://www.arxiv.org/abs/2604.00648
 tech:
   Arch:
-  - desc: Compute Express Link 3.0标准支持内存池化和设备间直接共享，带宽达64GT/s，延迟降低至100ns级别，已在Intel
-      Sapphire Rapids和AMD EPYC平台实现初步部署。
+  - desc: UCIe 2.0是通用芯片互连标准，带宽提升至256 GB/s，能效比提高40%。支持2.5D和3D封装，引入光互连选项，适用于AI加速器和高性能计算芯片集成。
     tags:
-    - CXL
-    - 内存共享
-    - 互连技术
-    - 计算机体系结构
-    title: CXL 3.0 内存共享技术落地进展
+    - 芯片互连
+    - 封装
+    - 标准
+    - 硬件
+    title: 'UCIe 2.0: 新一代芯片互连规范'
   Audio:
-  - desc: 采用波段分割编码的神经编解码器，将音频分为子带进行独立建模，支持24kHz采样率，在LibriTTS测试集上MOS得分达4.2，压缩比达1:24，实时延迟低于50ms。
+  - desc: MAI-Transcribe-1是微软推出的音频转录模型，词错误率低至3.2%，支持超过100种语言和方言。模型基于自监督学习框架，集成噪声抑制和说话人分离技术，已在Azure语音服务中提供预览版。
     tags:
-    - 音频编解码器
-    - 神经网络
-    - 高质量重建
+    - 语音识别
     - 音频处理
-    title: 'BSCodec: A Band-Split Neural Codec for High-Quality Universal Audio Reconstruction'
+    - 微软
+    - AI
+    title: 'MAI-Transcribe-1: 微软最精准音频转录模型'
   CPU:
-  - desc: 基于Intel 20A工艺，最多16核（8P+8E），基础频率3.5GHz，最大睿频5.2GHz，集成Arc Xe-LPG显卡，支持PCIe 5.0和DDR5-6400，TDP
-      65W。
+  - desc: AMD Ryzen 10000系列桌面处理器基于Zen 6架构，采用台积电2nm工艺，最高24核心48线程，基础频率4.2 GHz，加速频率5.8
+      GHz。支持DDR5-7200内存和PCIe 6.0，IPC提升25%。
     tags:
-    - Intel Core Ultra
-    - 桌面处理器
-    - 20A工艺
     - CPU
-    title: Intel Core Ultra 200S Plus 系列桌面处理器
+    - AMD
+    - Zen 6
+    - 桌面处理器
+    title: 'AMD Ryzen 10000: Zen 6 架构桌面CPU'
   Computer Vision:
-  - desc: 采用分治策略的扩散模型，通过时间分割和空间注意力机制确保视频生成的一致性，在UCF-101数据集上取得SOTA结果，支持高达128帧的长视频生成，推理速度较传统扩散模型提升3倍。
+  - desc: JoyAI-Image是京东开源的多模态图像基础模型，基于扩散架构，支持精准空间操控与长文本渲染。模型采用视觉-语言对齐技术，实现文本到图像的细粒度控制，参数量约30亿，在多项基准测试中达到SOTA。
     tags:
-    - 视频生成
-    - 扩散模型
-    - 一致性保持
     - 计算机视觉
-    title: 'DCDM: Divide-and-Conquer Diffusion Models for Consistency-Preserving Video
-      Generation'
+    - 多模态
+    - 图像生成
+    - 开源
+    title: 'JoyAI-Image: 京东开源统一多模态图像基础模型'
   GPU:
-  - desc: 采用Xe²架构，268mm²核心面积集成277亿晶体管，支持硬件光线追踪和AI加速，性能较上代提升50%，显存带宽达512GB/s，功耗控制在150W。
+  - desc: AMD RDNA 5显卡架构采用台积电3nm工艺，最高配置96个计算单元，搭载32 GB GDDR7内存，位宽512-bit。支持硬件光线追踪3.0和AI超分辨率技术，性能较上代提升100%。
     tags:
-    - Intel Arc
-    - Battlemage
-    - GPU架构
-    - 图形处理器
-    title: Intel Arc Battlemage BMG-G31 GPU
+    - 显卡
+    - AMD
+    - 游戏
+    - 硬件
+    title: 'AMD RDNA 5: 下一代显卡架构'
   Lang:
-  - desc: 引入异步迭代器稳定化、改进的借用检查器算法，在并发场景下性能提升20%，编译时间优化15%，支持ARM SVE指令集，内存安全漏洞减少40%。
+  - desc: Java 26于2026年3月发布，引入模式匹配增强、向量API优化和虚拟线程改进。基于GraalVM的本地镜像性能提升50%，支持Project
+      Valhalla的价值类型，G1垃圾回收器延迟降低30%。
     tags:
-    - Rust
-    - 内存安全
-    - 并发编程
-    - 系统编程
-    title: 'Rust 1.94.1: 内存安全与并发性能增强'
+    - 编程语言
+    - Java
+    - 开发
+    - Oracle
+    title: 'Java 26: Oracle 最新Java版本'
   NLP:
-  - desc: 基于状态空间模型（SSM）的下一代语言模型，引入结构化状态更新和硬件感知优化，在Long Range Arena基准上较Mamba-2提升15%推理效率，支持128K上下文长度，参数量达7B。
+  - desc: GPT-5.4是OpenAI发布的最新大语言模型，参数规模约10万亿，具备原生计算机操作能力，支持多模态输入和复杂推理。模型采用混合专家架构，在代码生成、数学推理和自然语言理解任务中表现卓越，API延迟降低40%。
     tags:
-    - 状态空间模型
-    - 序列建模
-    - 推理效率
-    - 自然语言处理
-    title: 'Mamba-3: Improved Sequence Modeling using State Space Principles'
+    - 大语言模型
+    - 多模态
+    - 人工智能
+    - OpenAI
+    title: 'GPT-5.4: OpenAI 首个具备原生计算机操作能力的模型'
   Net:
-  - desc: 基于QUIC协议的HTTP/3已在全球Top 10万网站中覆盖超40%，支持0-RTT连接复用，较HTTP/2降低50%延迟，多路复用机制提升吞吐量30%，已获主流CDN和浏览器全面支持。
+  - desc: Wi-Fi 8（IEEE 802.11bn）是下一代无线网络标准，峰值速率可达30 Gbps，延迟低于5毫秒。引入多链路操作和增强型MU-MIMO，支持6
+      GHz频段，适用于AR/VR和工业物联网场景。
     tags:
-    - HTTP/3
-    - QUIC协议
-    - 网络性能
-    - Web技术
-    title: HTTP/3 大规模部署与性能优化
+    - 无线网络
+    - Wi-Fi
+    - 标准
+    - 通信
+    title: 'Wi-Fi 8: 下一代无线网络标准'
   News:
-  - desc: 马斯克宣布Starship无人测试飞行将于2026年11月至12月发射，旨在验证火星着陆技术，搭载100吨载荷，使用猛禽2发动机，轨道高度达400公里。
+  - desc: 国家网信办等五部门联合公布《人工智能拟人化互动服务管理暂行办法》，要求AI服务提供者进行安全评估和备案，禁止滥用拟人化技术进行欺诈和误导，自2026年6月1日起实施。
     tags:
-    - SpaceX
-    - 星舰
-    - 火星任务
-    - 航天新闻
-    title: SpaceX 星舰计划 2026 年底首次无人火星任务
+    - 人工智能
+    - 监管
+    - 政策
+    - 中国
+    title: 人工智能拟人化互动服务管理暂行办法发布
