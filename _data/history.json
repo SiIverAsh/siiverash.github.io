@@ -1,4 +1,20 @@
 {
+  "2026-04-15": [
+    "PCIe 7.0 规范最终版完成",
+    "vLLM: 高性能LLM推理和服务引擎",
+    "Phi-4-Vision: 微软开源轻量级多模态AI模型",
+    "Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio Optimizer",
+    "Arm AGI CPU: 专为AI云时代设计的芯片",
+    "GPT-6: OpenAI下一代大语言模型",
+    "Swift 6.3: 苹果编程语言重大更新",
+    "内田真礼",
+    "IMT-2030: 6G移动通信技术标准",
+    "NVIDIA GeForce RTX 5090 旗舰显卡",
+    "中科曙光建成6万卡AI4S计算集群",
+    "LongCat-AudioDiT: 美团开源高保真音频生成模型",
+    "梯度提升决策树 (Gradient Boosting Decision Trees)",
+    "Claude 3.5 Sonnet: Anthropic 新一代大语言模型"
+  ],
   "2026-04-14": [
     "K-Means聚类算法",
     "Wi-Fi 8: 下一代无线网络标准",
@@ -136,21 +152,5 @@
     "Go 1.26: 递归泛型与性能提升",
     "随机森林 (Random Forest)",
     "DeepSeek V4: 万亿参数MoE语言模型"
-  ],
-  "2026-04-05": [
-    "ITU-T Y.2502 算力网络国际标准",
-    "vLLM",
-    "主成分分析 (Principal Component Analysis)",
-    "上田丽奈",
-    "NVIDIA Blackwell Next 架构",
-    "Qwen3.6-Plus",
-    "NVIDIA GeForce RTX 5090",
-    "SAM 3: Segment Anything with Concepts",
-    "Gemini 3.1 Flash Live",
-    "智元AI发布周即将启幕",
-    "Claude 3.5 Sonnet",
-    "Python 3.14",
-    "AMD EPYC Venice Zen 6 CPU",
-    "AudioX: A Unified Framework for Anything-to-Audio Generation"
   ]
 }

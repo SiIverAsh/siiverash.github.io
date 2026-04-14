@@ -1,131 +1,128 @@
 algorithm:
-- desc: K-Means是一种经典无监督聚类算法，通过迭代将数据点分配到K个簇中，以最小化簇内方差。适用于客户分群、图像压缩和异常检测，时间复杂度O(n*k*t)。
+- desc: 一种集成学习算法，通过迭代训练决策树来最小化损失函数，在分类和回归任务中表现出色，广泛应用于数据科学竞赛。
   tags:
   - 机器学习
-  - 聚类
-  - 无监督学习
-  - 算法
-  title: K-Means聚类算法
+  - 集成学习
+  - 梯度提升
+  - 决策树
+  title: 梯度提升决策树 (Gradient Boosting Decision Trees)
 cv_recommend:
-  agency: 青二プロダクション（Aoni Production）
-  hometown: 千叶县
-  intro: 悠木碧是日本知名声优，以宽广的音域和出色的演技著称。她擅长演绎从少女到成年女性的多种角色，声音具有独特的透明感和表现力。在职业生涯中，她获得了多项声优奖项，包括声优奖主演女优奖。她的配音工作涵盖了动画、游戏和外语片配音，以其专业的素养和多样化的表现受到业界高度评价。
-  name: 悠木碧
-date: '2026-04-14'
+  agency: I'm Enterprise
+  hometown: 东京都
+  intro: 内田真礼是日本女性声优、歌手、演员，出生于东京都，所属事务所为I'm Enterprise。她以其清澈多变的声线而闻名，在配音领域展现出广泛的适应力，同时作为歌手发行了多张单曲和专辑，活跃于多个媒体平台。
+  name: 内田真礼
+date: '2026-04-15'
 history:
-- event: 美国第16任总统亚伯拉罕·林肯在福特剧院遇刺身亡。
-  year: '1865'
-- event: 泰坦尼克号邮轮在北大西洋撞上冰山后沉没，造成逾1500人遇难。
+- event: 列奥纳多·达·芬奇出生
+  year: '1452'
+- event: 泰坦尼克号沉没
   year: '1912'
-- event: 西班牙第二共和国成立，结束了波旁王朝的统治。
-  year: '1931'
-- event: 苏联签署日内瓦协议，同意从阿富汗撤军。
-  year: '1988'
-- event: 国际人类基因组计划宣布完成，成功测序人类全部DNA。
-  year: '2003'
-- event: 冰岛埃亚菲亚德拉冰盖火山爆发，导致欧洲航空交通大规模中断。
-  year: '2010'
+- event: 杰基·罗宾森打破棒球颜色壁垒
+  year: '1947'
+- event: 麦当劳第一家快餐加盟店开业
+  year: '1955'
+- event: YouTube上线
+  year: '2005'
+- event: 波士顿马拉松爆炸案
+  year: '2013'
 llm:
-- desc: LLaMA 4是Meta开源的多模态大语言模型，参数量7200亿，支持图像、音频和文本输入。采用混合专家架构，在常识推理和代码生成任务中媲美GPT-5.4，遵循Apache
-    2.0协议。
+- desc: Anthropic于2026年3月发布的Claude 3.5 Sonnet在推理、编码和创意写作任务上表现卓越，支持200K上下文窗口，具备更强的指令跟随能力。
   tags:
   - 大语言模型
-  - 开源
-  - Meta
-  - 多模态
-  title: 'LLaMA 4: Meta 开源多模态大语言模型'
+  - Anthropic
+  - 推理
+  - 编码
+  title: 'Claude 3.5 Sonnet: Anthropic 新一代大语言模型'
 new_project:
-- desc: VideoCrafter2是腾讯AI Lab开源的视频生成框架，基于扩散模型和数据增强技术，支持文本到视频和图像到视频生成，在UCF101和Kinetics数据集上取得SOTA。
+- desc: 开源项目vLLM提供高效的大语言模型推理服务，支持连续批处理、PagedAttention和动态内存管理，显著提升吞吐量和延迟。
   tags:
-  - 视频生成
-  - 深度学习
+  - LLM推理
+  - 高性能
   - 开源
-  - GitHub
-  title: 'VideoCrafter2: Overcoming Data Limitations for Video Generation'
-  url: https://github.com/ailab-cvc/videocrafter
+  - 服务
+  title: 'vLLM: 高性能LLM推理和服务引擎'
+  url: https://github.com/vllm-project/vllm
 paper:
-- desc: 该论文提出一种将鱼眼相机输入直接集成到高斯溅射中的方法，通过跨视图联合优化实现高质量3D重建，适用于自动驾驶和VR场景。发表于ICLR 2026。
+- desc: ICLR 2026口头报告论文，提出一种用于扩散模型的半阶微调方法，通过递归似然比优化器提升训练效率和样本质量。
   tags:
-  - 计算机视觉
-  - 3D重建
-  - 高斯溅射
-  - 论文
-  title: 'DirectFisheye-GS: Enabling Native Fisheye Input in Gaussian Splatting with
-    Cross-View Joint Optimization'
-  url: https://www.arxiv.org/abs/2604.00648
+  - 扩散模型
+  - 优化
+  - ICLR 2026
+  - 微调
+  title: 'Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio
+    Optimizer'
+  url: https://iclr.cc/virtual/2026/oral/10011023
 tech:
   Arch:
-  - desc: UCIe 2.0是通用芯片互连标准，带宽提升至256 GB/s，能效比提高40%。支持2.5D和3D封装，引入光互连选项，适用于AI加速器和高性能计算芯片集成。
+  - desc: PCI-SIG于2026年3月完成PCIe 7.0规范最终版，提供256 GB/s数据传输速率，支持光学互连和低功耗状态，为AI和高性能计算工作负载设计。
     tags:
-    - 芯片互连
-    - 封装
-    - 标准
+    - PCIe
+    - 高速互连
+    - 规范
     - 硬件
-    title: 'UCIe 2.0: 新一代芯片互连规范'
+    title: PCIe 7.0 规范最终版完成
   Audio:
-  - desc: MAI-Transcribe-1是微软推出的音频转录模型，词错误率低至3.2%，支持超过100种语言和方言。模型基于自监督学习框架，集成噪声抑制和说话人分离技术，已在Azure语音服务中提供预览版。
+  - desc: 美团于2026年4月开源的LongCat-AudioDiT基于扩散Transformer架构，采用波形潜空间建模，说话人相似度指标达0.818，在音色克隆任务上刷新SOTA。
     tags:
-    - 语音识别
-    - 音频处理
-    - 微软
-    - AI
-    title: 'MAI-Transcribe-1: 微软最精准音频转录模型'
-  CPU:
-  - desc: AMD Ryzen 10000系列桌面处理器基于Zen 6架构，采用台积电2nm工艺，最高24核心48线程，基础频率4.2 GHz，加速频率5.8
-      GHz。支持DDR5-7200内存和PCIe 6.0，IPC提升25%。
-    tags:
-    - CPU
-    - AMD
-    - Zen 6
-    - 桌面处理器
-    title: 'AMD Ryzen 10000: Zen 6 架构桌面CPU'
-  Computer Vision:
-  - desc: JoyAI-Image是京东开源的多模态图像基础模型，基于扩散架构，支持精准空间操控与长文本渲染。模型采用视觉-语言对齐技术，实现文本到图像的细粒度控制，参数量约30亿，在多项基准测试中达到SOTA。
-    tags:
-    - 计算机视觉
-    - 多模态
-    - 图像生成
+    - 文本转语音
+    - 扩散模型
+    - 音色克隆
     - 开源
-    title: 'JoyAI-Image: 京东开源统一多模态图像基础模型'
+    title: 'LongCat-AudioDiT: 美团开源高保真音频生成模型'
+  CPU:
+  - desc: Arm于2026年3月发布的AGI CPU基于新一代Neoverse架构，支持千亿参数大模型原生推理，能效比提升50%，专注于代理式AI和云计算场景。
+    tags:
+    - Arm
+    - AI芯片
+    - 云计算
+    - 能效
+    title: 'Arm AGI CPU: 专为AI云时代设计的芯片'
+  Computer Vision:
+  - desc: 微软于2026年3月开源的Phi-4-Vision是一款15B参数的多模态模型，采用混合专家架构，在视觉推理和图像描述任务上实现SOTA性能，支持高分辨率输入和零样本泛化。
+    tags:
+    - 多模态
+    - 视觉推理
+    - 开源
+    - SOTA
+    title: 'Phi-4-Vision: 微软开源轻量级多模态AI模型'
   GPU:
-  - desc: AMD RDNA 5显卡架构采用台积电3nm工艺，最高配置96个计算单元，搭载32 GB GDDR7内存，位宽512-bit。支持硬件光线追踪3.0和AI超分辨率技术，性能较上代提升100%。
+  - desc: NVIDIA于2026年3月发布的RTX 5090采用Blackwell架构，配备32 GB GDDR7显存，CUDA核心数达18,432个，支持DLSS
+      4.0，性能较上代提升60%。
     tags:
     - 显卡
-    - AMD
     - 游戏
-    - 硬件
-    title: 'AMD RDNA 5: 下一代显卡架构'
+    - AI加速
+    - Blackwell
+    title: NVIDIA GeForce RTX 5090 旗舰显卡
   Lang:
-  - desc: Java 26于2026年3月发布，引入模式匹配增强、向量API优化和虚拟线程改进。基于GraalVM的本地镜像性能提升50%，支持Project
-      Valhalla的价值类型，G1垃圾回收器延迟降低30%。
+  - desc: 苹果于2026年3月发布的Swift 6.3新增对编写原生Android应用的支持，增强C语言互操作性，引入并发模型改进，提升编译速度和运行时性能。
     tags:
     - 编程语言
-    - Java
-    - 开发
-    - Oracle
-    title: 'Java 26: Oracle 最新Java版本'
+    - Swift
+    - 移动开发
+    - 并发
+    title: 'Swift 6.3: 苹果编程语言重大更新'
   NLP:
-  - desc: GPT-5.4是OpenAI发布的最新大语言模型，参数规模约10万亿，具备原生计算机操作能力，支持多模态输入和复杂推理。模型采用混合专家架构，在代码生成、数学推理和自然语言理解任务中表现卓越，API延迟降低40%。
+  - desc: 据2026年4月报道，GPT-6支持200万token上下文长度，性能较前代提升40%，采用Symphony架构，专注于AGI发展，具备原生多模态能力。
     tags:
     - 大语言模型
+    - AGI
+    - 长上下文
     - 多模态
-    - 人工智能
-    - OpenAI
-    title: 'GPT-5.4: OpenAI 首个具备原生计算机操作能力的模型'
+    title: 'GPT-6: OpenAI下一代大语言模型'
   Net:
-  - desc: Wi-Fi 8（IEEE 802.11bn）是下一代无线网络标准，峰值速率可达30 Gbps，延迟低于5毫秒。引入多链路操作和增强型MU-MIMO，支持6
-      GHz频段，适用于AR/VR和工业物联网场景。
+  - desc: ITU于2026年3月发布的IMT-2030标准定义6G最小技术性能需求，包括峰值速率1 Tbps、空口延迟低于0.1 ms、连接密度达10^7设备/km²，支持沉浸式通信和AI融合。
     tags:
-    - 无线网络
-    - Wi-Fi
+    - 6G
+    - 移动通信
+    - IMT-2030
     - 标准
-    - 通信
-    title: 'Wi-Fi 8: 下一代无线网络标准'
+    title: 'IMT-2030: 6G移动通信技术标准'
   News:
-  - desc: 国家网信办等五部门联合公布《人工智能拟人化互动服务管理暂行办法》，要求AI服务提供者进行安全评估和备案，禁止滥用拟人化技术进行欺诈和误导，自2026年6月1日起实施。
+  - desc: 2026年4月，中科曙光建成全球最大规模的6万卡AI4S计算集群，采用国产芯片和液冷技术，峰值算力达10 EFLOPS，旨在成为算力运营商。
     tags:
-    - 人工智能
-    - 监管
-    - 政策
-    - 中国
-    title: 人工智能拟人化互动服务管理暂行办法发布
+    - 算力
+    - AI集群
+    - 中科曙光
+    - 高性能计算
+    title: 中科曙光建成6万卡AI4S计算集群
