@@ -1,4 +1,19 @@
 {
+  "2026-04-16": [
+    "全球首个具身智能3C精密制造产线落地",
+    "支持向量机：经典分类算法",
+    "花泽香菜",
+    "OpenClaw：个人AI助手开源项目",
+    "Gemma 4：谷歌开源多模态大语言模型",
+    "TUIC协议：下一代网络传输革新者",
+    "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction",
+    "ISAMORE：基于E-Graph反合一的RISC-V定制指令自动化生成",
+    "SongGeneration 2：腾讯清华联合开源音乐生成模型",
+    "中国首款6nm自研GPU正式发售",
+    "C++26 标准正式完成特性冻结",
+    "Intel Core Ultra系列3：首款采用18A制程的处理器",
+    "华为新架构砍了Transformer大动脉"
+  ],
   "2026-04-15": [
     "PCIe 7.0 规范最终版完成",
     "vLLM: 高性能LLM推理和服务引擎",
@@ -136,21 +151,5 @@
     "YOLO26: 下一代实时目标检测架构",
     "MediaTek Filogic 8000 Wi-Fi 8 芯片组",
     "ARM AGI CPU (Neoverse V3)"
-  ],
-  "2026-04-06": [
-    "AMD RDNA 4m: 新一代核显AI架构",
-    "Intel Lunar Lake: 下一代AI PC架构",
-    "奥尼龙虾工作站全栈产品正式发布",
-    "Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio Optimizer",
-    "Intel Xeon 6+ 288核: 服务器处理器新品",
-    "DeepSpeed",
-    "松冈祯丞",
-    "MAI-Transcribe-1: 微软高精度语音转录模型",
-    "GLM-5V-Turbo: 多模态编程基座模型",
-    "诺基亚2026移动网络技术预判: AI原生6G愿景",
-    "DeepSeek V4",
-    "Go 1.26: 递归泛型与性能提升",
-    "随机森林 (Random Forest)",
-    "DeepSeek V4: 万亿参数MoE语言模型"
   ]
 }

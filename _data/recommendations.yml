@@ -1,128 +1,126 @@
 algorithm:
-- desc: 一种集成学习算法，通过迭代训练决策树来最小化损失函数，在分类和回归任务中表现出色，广泛应用于数据科学竞赛。
+- desc: 基于核技巧的最大间隔分类器，适用于高维数据，具有理论保证和良好泛化能力。
   tags:
   - 机器学习
-  - 集成学习
-  - 梯度提升
-  - 决策树
-  title: 梯度提升决策树 (Gradient Boosting Decision Trees)
+  - 分类
+  - 核方法
+  - 经典算法
+  title: 支持向量机：经典分类算法
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 东京都
-  intro: 内田真礼是日本女性声优、歌手、演员，出生于东京都，所属事务所为I'm Enterprise。她以其清澈多变的声线而闻名，在配音领域展现出广泛的适应力，同时作为歌手发行了多张单曲和专辑，活跃于多个媒体平台。
-  name: 内田真礼
-date: '2026-04-15'
+  agency: 大沢事務所
+  hometown: 東京都
+  intro: 花泽香菜是日本知名声优，以清澈透明的嗓音和广泛的声音表现力著称。她曾获得多项声优奖项，在业界享有很高声誉。她的声音兼具甜美与力量，能够驾驭多种角色类型，深受粉丝喜爱。
+  name: 花泽香菜
+date: '2026-04-16'
 history:
-- event: 列奥纳多·达·芬奇出生
-  year: '1452'
-- event: 泰坦尼克号沉没
+- event: 哈里特·昆比成为首位独自飞越英吉利海峡的女性飞行员。
   year: '1912'
-- event: 杰基·罗宾森打破棒球颜色壁垒
-  year: '1947'
-- event: 麦当劳第一家快餐加盟店开业
-  year: '1955'
-- event: YouTube上线
-  year: '2005'
-- event: 波士顿马拉松爆炸案
-  year: '2013'
+- event: 阿尔伯特·霍夫曼首次发现LSD的致幻效果。
+  year: '1943'
+- event: 马丁·路德·金在伯明翰监狱写下《伯明翰监狱来信》。
+  year: '1963'
+- event: 阿波罗16号发射升空。
+  year: '1972'
+- event: 印度数学家斯里尼瓦瑟·拉马努金逝世。
+  year: '1990'
+- event: 弗吉尼亚理工大学发生枪击案，造成32人死亡。
+  year: '2007'
 llm:
-- desc: Anthropic于2026年3月发布的Claude 3.5 Sonnet在推理、编码和创意写作任务上表现卓越，支持200K上下文窗口，具备更强的指令跟随能力。
+- desc: Gemma 4采用MoE架构，参数量720B，支持多模态，在MMLU基准测试中得分92.5%。
   tags:
   - 大语言模型
-  - Anthropic
-  - 推理
-  - 编码
-  title: 'Claude 3.5 Sonnet: Anthropic 新一代大语言模型'
-new_project:
-- desc: 开源项目vLLM提供高效的大语言模型推理服务，支持连续批处理、PagedAttention和动态内存管理，显著提升吞吐量和延迟。
-  tags:
-  - LLM推理
-  - 高性能
+  - 谷歌
   - 开源
-  - 服务
-  title: 'vLLM: 高性能LLM推理和服务引擎'
-  url: https://github.com/vllm-project/vllm
-paper:
-- desc: ICLR 2026口头报告论文，提出一种用于扩散模型的半阶微调方法，通过递归似然比优化器提升训练效率和样本质量。
+  - 多模态
+  title: Gemma 4：谷歌开源多模态大语言模型
+new_project:
+- desc: OpenClaw是一个基于LLM的AI助手，支持任务自动化、代码生成和对话，在GitHub上获得60k星标。
   tags:
-  - 扩散模型
-  - 优化
-  - ICLR 2026
-  - 微调
-  title: 'Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio
-    Optimizer'
-  url: https://iclr.cc/virtual/2026/oral/10011023
+  - AI助手
+  - 开源
+  - LLM
+  - 自动化
+  title: OpenClaw：个人AI助手开源项目
+  url: https://github.com/openclaw/openclaw
+paper:
+- desc: CVPR 2026论文，提出测试时训练框架，用于大规模3D重建，在ScanNet数据集上实现SOTA。
+  tags:
+  - 3D重建
+  - 测试时训练
+  - CVPR2026
+  - 可扩展
+  title: 'Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction'
+  url: https://arxiv.org/abs/2604.08542v1
 tech:
   Arch:
-  - desc: PCI-SIG于2026年3月完成PCIe 7.0规范最终版，提供256 GB/s数据传输速率，支持光学互连和低功耗状态，为AI和高性能计算工作负载设计。
+  - desc: 采用E-Graph反合一技术，自动生成RISC-V定制指令，提升AI硬件设计效率，使性能提升15%，面积减少10%。
     tags:
-    - PCIe
-    - 高速互连
-    - 规范
-    - 硬件
-    title: PCIe 7.0 规范最终版完成
+    - 计算机架构
+    - RISC-V
+    - 指令集
+    - 自动化
+    title: ISAMORE：基于E-Graph反合一的RISC-V定制指令自动化生成
   Audio:
-  - desc: 美团于2026年4月开源的LongCat-AudioDiT基于扩散Transformer架构，采用波形潜空间建模，说话人相似度指标达0.818，在音色克隆任务上刷新SOTA。
+  - desc: 基于4B参数Transformer架构，支持文本到音乐生成，在音乐相似度评估中达到0.85分，提供Web演示界面。
     tags:
-    - 文本转语音
-    - 扩散模型
-    - 音色克隆
+    - 音频生成
+    - 音乐AI
     - 开源
-    title: 'LongCat-AudioDiT: 美团开源高保真音频生成模型'
+    - Transformer
+    title: SongGeneration 2：腾讯清华联合开源音乐生成模型
   CPU:
-  - desc: Arm于2026年3月发布的AGI CPU基于新一代Neoverse架构，支持千亿参数大模型原生推理，能效比提升50%，专注于代理式AI和云计算场景。
+  - desc: 基于Intel 18A工艺，集成NPU单元，AI算力提升50%，能效比提升30%，支持DDR5-6400内存。
     tags:
-    - Arm
-    - AI芯片
-    - 云计算
-    - 能效
-    title: 'Arm AGI CPU: 专为AI云时代设计的芯片'
-  Computer Vision:
-  - desc: 微软于2026年3月开源的Phi-4-Vision是一款15B参数的多模态模型，采用混合专家架构，在视觉推理和图像描述任务上实现SOTA性能，支持高分辨率输入和零样本泛化。
-    tags:
-    - 多模态
-    - 视觉推理
-    - 开源
-    - SOTA
-    title: 'Phi-4-Vision: 微软开源轻量级多模态AI模型'
-  GPU:
-  - desc: NVIDIA于2026年3月发布的RTX 5090采用Blackwell架构，配备32 GB GDDR7显存，CUDA核心数达18,432个，支持DLSS
-      4.0，性能较上代提升60%。
-    tags:
-    - 显卡
-    - 游戏
+    - CPU
+    - Intel
+    - 18A
     - AI加速
-    - Blackwell
-    title: NVIDIA GeForce RTX 5090 旗舰显卡
+    title: Intel Core Ultra系列3：首款采用18A制程的处理器
+  Computer Vision:
+  - desc: 华为推出全新视觉Transformer架构，通过内外Transformer块结合，实现注意力机制优化，在ImageNet分类任务中准确率提升5%，推理速度提升3倍。
+    tags:
+    - 计算机视觉
+    - Transformer
+    - 华为
+    - 推理加速
+    title: 华为新架构砍了Transformer大动脉
+  GPU:
+  - desc: 采用6nm工艺，集成12GB GDDR6显存，支持光追和AI加速，性能对标RTX 4060，适配100+游戏。
+    tags:
+    - GPU
+    - 国产
+    - 6nm
+    - 游戏
+    title: 中国首款6nm自研GPU正式发售
   Lang:
-  - desc: 苹果于2026年3月发布的Swift 6.3新增对编写原生Android应用的支持，增强C语言互操作性，引入并发模型改进，提升编译速度和运行时性能。
+  - desc: 引入模块化标准库、协程优化、静态反射等特性，性能提升20%，同时增强内存安全。
     tags:
     - 编程语言
-    - Swift
-    - 移动开发
-    - 并发
-    title: 'Swift 6.3: 苹果编程语言重大更新'
-  NLP:
-  - desc: 据2026年4月报道，GPT-6支持200万token上下文长度，性能较前代提升40%，采用Symphony架构，专注于AGI发展，具备原生多模态能力。
-    tags:
-    - 大语言模型
-    - AGI
-    - 长上下文
-    - 多模态
-    title: 'GPT-6: OpenAI下一代大语言模型'
-  Net:
-  - desc: ITU于2026年3月发布的IMT-2030标准定义6G最小技术性能需求，包括峰值速率1 Tbps、空口延迟低于0.1 ms、连接密度达10^7设备/km²，支持沉浸式通信和AI融合。
-    tags:
-    - 6G
-    - 移动通信
-    - IMT-2030
+    - C++
     - 标准
-    title: 'IMT-2030: 6G移动通信技术标准'
-  News:
-  - desc: 2026年4月，中科曙光建成全球最大规模的6万卡AI4S计算集群，采用国产芯片和液冷技术，峰值算力达10 EFLOPS，旨在成为算力运营商。
+    - 性能
+    title: C++26 标准正式完成特性冻结
+  NLP:
+  - desc: Gemma 4采用MoE架构，参数量达720B，支持多模态输入，在MMLU基准测试中得分92.5%，同时提供高效的推理引擎。
     tags:
-    - 算力
-    - AI集群
-    - 中科曙光
-    - 高性能计算
-    title: 中科曙光建成6万卡AI4S计算集群
+    - NLP
+    - 大语言模型
+    - 谷歌
+    - 开源
+    title: Gemma 4：谷歌开源多模态大语言模型
+  Net:
+  - desc: 基于QUIC协议，实现零RTT连接建立，支持多路复用和抗丢包，吞吐量较HTTP/3提升30%，延迟降低50%。
+    tags:
+    - 网络协议
+    - QUIC
+    - 低延迟
+    - 高吞吐
+    title: TUIC协议：下一代网络传输革新者
+  News:
+  - desc: 产线采用具身智能机器人，实现全自动化精密组装，生产效率提升200%，不良率降低至0.01%。
+    tags:
+    - 智能制造
+    - 机器人
+    - 自动化
+    - 创新
+    title: 全球首个具身智能3C精密制造产线落地
