@@ -1,126 +1,136 @@
 algorithm:
-- desc: 基于核技巧的最大间隔分类器，适用于高维数据，具有理论保证和良好泛化能力。
+- desc: 经典的无监督降维算法，通过线性变换将数据投影到方差最大的方向上，广泛应用于数据压缩、特征提取和可视化，计算复杂度为 O(n^3)。
   tags:
-  - 机器学习
-  - 分类
-  - 核方法
+  - 降维
+  - 无监督学习
+  - 特征提取
   - 经典算法
-  title: 支持向量机：经典分类算法
+  title: 主成分分析 (PCA)
 cv_recommend:
-  agency: 大沢事務所
-  hometown: 東京都
-  intro: 花泽香菜是日本知名声优，以清澈透明的嗓音和广泛的声音表现力著称。她曾获得多项声优奖项，在业界享有很高声誉。她的声音兼具甜美与力量，能够驾驭多种角色类型，深受粉丝喜爱。
-  name: 花泽香菜
-date: '2026-04-16'
+  agency: AXL-ONE
+  hometown: 东京都
+  intro: 水濑祈是日本女性声优、歌手、演员，出生于东京都。她的嗓音清澈甜美，擅长演绎多种角色类型，从活泼少女到沉稳女性都能精准把握。作为声优界的中坚力量，她以稳定的发挥和广泛的作品参与度著称，同时活跃于音乐领域，发行多张个人专辑，举办巡回演唱会。她的专业素养和亲和力深受同行与粉丝好评，是当代声优中兼具实力与人气的代表之一。
+  name: 水濑祈
+date: '2026-04-17'
 history:
-- event: 哈里特·昆比成为首位独自飞越英吉利海峡的女性飞行员。
-  year: '1912'
-- event: 阿尔伯特·霍夫曼首次发现LSD的致幻效果。
-  year: '1943'
-- event: 马丁·路德·金在伯明翰监狱写下《伯明翰监狱来信》。
-  year: '1963'
-- event: 阿波罗16号发射升空。
-  year: '1972'
-- event: 印度数学家斯里尼瓦瑟·拉马努金逝世。
-  year: '1990'
-- event: 弗吉尼亚理工大学发生枪击案，造成32人死亡。
-  year: '2007'
+- event: 克里斯托弗·哥伦布与西班牙君主签署协议，准备远航寻找新大陆。
+  year: '1492'
+- event: 美国开国元勋本杰明·富兰克林在费城逝世。
+  year: '1790'
+- event: 美国策划的猪湾入侵事件开始，企图推翻古巴卡斯特罗政权。
+  year: '1961'
+- event: 阿波罗13号航天器在经历氧气罐爆炸后安全返回地球。
+  year: '1970'
+- event: 加拿大通过《加拿大宪法法案》，获得完全立法独立。
+  year: '1982'
+- event: 韩国世越号客轮沉没，导致304人遇难。
+  year: '2014'
 llm:
-- desc: Gemma 4采用MoE架构，参数量720B，支持多模态，在MMLU基准测试中得分92.5%。
+- desc: 谷歌在 2026 年 2 月发布 Gemini 2.0，参数量 10T，多模态能力全面升级，支持 100 种语言，在 AI 智能体基准测试中超越 GPT-6，并集成原生计算机操作能力。
   tags:
   - 大语言模型
-  - 谷歌
-  - 开源
   - 多模态
-  title: Gemma 4：谷歌开源多模态大语言模型
+  - 谷歌
+  - AI智能体
+  title: Google Gemini 2.0 发布
 new_project:
-- desc: OpenClaw是一个基于LLM的AI助手，支持任务自动化、代码生成和对话，在GitHub上获得60k星标。
+- desc: Apple 开源的机器学习框架，专为 Apple Silicon 优化，支持在 Mac、iPhone 和 iPad 上高效运行模型，语法类似 NumPy，提供自动微分和
+    GPU 加速。
   tags:
-  - AI助手
+  - 机器学习框架
+  - Apple
   - 开源
-  - LLM
-  - 自动化
-  title: OpenClaw：个人AI助手开源项目
-  url: https://github.com/openclaw/openclaw
+  - 移动端AI
+  title: 'MLX: Apple 的机器学习框架'
+  url: https://github.com/ml-explore/mlx
 paper:
-- desc: CVPR 2026论文，提出测试时训练框架，用于大规模3D重建，在ScanNet数据集上实现SOTA。
+- desc: ICLR 2026 论文，提出 Longhorn 架构，将状态空间模型应用于在线学习，在长序列建模任务中实现 SOTA，训练效率提升 5 倍，参数量仅为
+    Transformer 的 1/10。
   tags:
-  - 3D重建
-  - 测试时训练
-  - CVPR2026
-  - 可扩展
-  title: 'Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction'
-  url: https://arxiv.org/abs/2604.08542v1
+  - 状态空间模型
+  - 在线学习
+  - 序列建模
+  - ICLR 2026
+  title: 'Longhorn: State Space Models are Amortized Online Learners'
+  url: https://openreview.net/forum?id=8jOqCcLzeO
 tech:
   Arch:
-  - desc: 采用E-Graph反合一技术，自动生成RISC-V定制指令，提升AI硬件设计效率，使性能提升15%，面积减少10%。
+  - desc: 2026 年 3 月发布的 UCIe 3.0 标准，数据传输速率翻倍至 64 GT/s，支持 CXL 3.0 和 PCIe 7.0，功耗降低 15%，为
+      Chiplet 异构集成提供统一接口，推动高性能计算发展。
     tags:
-    - 计算机架构
-    - RISC-V
-    - 指令集
-    - 自动化
-    title: ISAMORE：基于E-Graph反合一的RISC-V定制指令自动化生成
+    - 芯片架构
+    - Chiplet
+    - 互连标准
+    - 高性能计算
+    title: UCIe 3.0 芯片互连标准发布
   Audio:
-  - desc: 基于4B参数Transformer架构，支持文本到音乐生成，在音乐相似度评估中达到0.85分，提供Web演示界面。
+  - desc: 2026 年发布的开源音乐生成基础模型，参数量 3B，基于扩散 Transformer 架构，支持 6 分钟长序列生成，在音乐相似度评估中媲美
+      Suno v4，可一键部署在 8GB 显存显卡上。
     tags:
     - 音频生成
     - 音乐AI
-    - 开源
-    - Transformer
-    title: SongGeneration 2：腾讯清华联合开源音乐生成模型
+    - 开源模型
+    - 扩散模型
+    title: 'HeartMuLa: 开源音乐生成模型'
   CPU:
-  - desc: 基于Intel 18A工艺，集成NPU单元，AI算力提升50%，能效比提升30%，支持DDR5-6400内存。
+  - desc: CES 2026 发布的 Zen 5 架构桌面 CPU，4nm 工艺，16 核 32 线程，基准频率 4.5 GHz，加速频率 5.8 GHz，L3
+      缓存 64MB，支持 DDR5-7200 内存，TDP 170W。
     tags:
-    - CPU
-    - Intel
-    - 18A
-    - AI加速
-    title: Intel Core Ultra系列3：首款采用18A制程的处理器
+    - 处理器
+    - AMD
+    - Zen 5
+    - 高性能计算
+    title: AMD Ryzen 9 9950X 处理器
   Computer Vision:
-  - desc: 华为推出全新视觉Transformer架构，通过内外Transformer块结合，实现注意力机制优化，在ImageNet分类任务中准确率提升5%，推理速度提升3倍。
+  - desc: Meta 在 ICLR 2026 发布的第三代分割模型，采用跨模态表示学习，参数量达 100B，支持零样本实例分割，在 COCO 数据集上达到
+      98.7% 的掩码 mAP，架构基于 Transformer 并引入动态卷积头。
     tags:
     - 计算机视觉
+    - 图像分割
     - Transformer
-    - 华为
-    - 推理加速
-    title: 华为新架构砍了Transformer大动脉
+    - 零样本学习
+    title: 'SAM 3: Segment Anything Model 3'
   GPU:
-  - desc: 采用6nm工艺，集成12GB GDDR6显存，支持光追和AI加速，性能对标RTX 4060，适配100+游戏。
+  - desc: 基于 RDNA 4 架构，采用 4nm 工艺，16GB GDDR7 显存，核心频率 2.8 GHz，光追性能提升 2 倍，功耗 220W，在 4K
+      游戏中平均帧率超过 120 FPS，支持 DP 2.1 接口。
     tags:
-    - GPU
-    - 国产
-    - 6nm
-    - 游戏
-    title: 中国首款6nm自研GPU正式发售
+    - 显卡
+    - AMD
+    - RDNA 4
+    - 游戏性能
+    title: AMD Radeon RX 9060 XT 显卡
   Lang:
-  - desc: 引入模块化标准库、协程优化、静态反射等特性，性能提升20%，同时增强内存安全。
+  - desc: Python 3.13 于 2025 年 10 月发布，引入 JIT 编译器、改进的异步任务组、模式匹配增强，性能提升达 30%，内存占用降低
+      20%，并优化了 AI 开发工具链集成。
     tags:
     - 编程语言
-    - C++
-    - 标准
-    - 性能
-    title: C++26 标准正式完成特性冻结
+    - Python
+    - JIT编译器
+    - 性能优化
+    title: Python 3.13 正式发布
   NLP:
-  - desc: Gemma 4采用MoE架构，参数量达720B，支持多模态输入，在MMLU基准测试中得分92.5%，同时提供高效的推理引擎。
+  - desc: MiniMax 公司在 2026 年 1 月开源的全新架构大语言模型，采用混合专家（MoE）设计，参数量 500B，上下文窗口 32K，在 MMLU
+      基准上得分 92.5%，专为 AI 智能体时代优化，支持多轮对话与工具调用。
     tags:
-    - NLP
-    - 大语言模型
-    - 谷歌
-    - 开源
-    title: Gemma 4：谷歌开源多模态大语言模型
+    - 自然语言处理
+    - 开源模型
+    - 混合专家
+    - 智能体
+    title: 'MiniMax-01: 开源大语言模型'
   Net:
-  - desc: 基于QUIC协议，实现零RTT连接建立，支持多路复用和抗丢包，吞吐量较HTTP/3提升30%，延迟降低50%。
+  - desc: W3C 于 2026 年 2 月发布 WebTransport 工作草案，基于 HTTP/3 提供低延迟双向流和数据报传输，支持 QUIC 协议，旨在替代
+      WebRTC 数据通道，延迟降低至 10ms 以下，提升实时通信性能。
     tags:
     - 网络协议
-    - QUIC
+    - HTTP/3
     - 低延迟
-    - 高吞吐
-    title: TUIC协议：下一代网络传输革新者
+    - Web开发
+    title: W3C WebTransport 工作草案发布
   News:
-  - desc: 产线采用具身智能机器人，实现全自动化精密组装，生产效率提升200%，不良率降低至0.01%。
+  - desc: 2026 年 4 月 16 日，中国科学院团队成功将脑机接口技术应用于临床，帮助瘫痪患者通过意念控制机械手实现抓握动作，准确率达 95%，标志着脑机接口从实验室走向现实医疗。
     tags:
-    - 智能制造
-    - 机器人
-    - 自动化
-    - 创新
-    title: 全球首个具身智能3C精密制造产线落地
+    - 脑机接口
+    - 医疗科技
+    - 神经工程
+    - 突破
+    title: 脑机接口进入临床应用，实现脑控抓握

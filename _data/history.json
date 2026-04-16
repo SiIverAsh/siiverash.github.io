@@ -1,4 +1,20 @@
 {
+  "2026-04-17": [
+    "脑机接口进入临床应用，实现脑控抓握",
+    "MLX: Apple 的机器学习框架",
+    "W3C WebTransport 工作草案发布",
+    "MiniMax-01: 开源大语言模型",
+    "SAM 3: Segment Anything Model 3",
+    "水濑祈",
+    "AMD Radeon RX 9060 XT 显卡",
+    "HeartMuLa: 开源音乐生成模型",
+    "Google Gemini 2.0 发布",
+    "UCIe 3.0 芯片互连标准发布",
+    "主成分分析 (PCA)",
+    "Longhorn: State Space Models are Amortized Online Learners",
+    "Python 3.13 正式发布",
+    "AMD Ryzen 9 9950X 处理器"
+  ],
   "2026-04-16": [
     "全球首个具身智能3C精密制造产线落地",
     "支持向量机：经典分类算法",
@@ -135,21 +151,5 @@
     "阿里通义实验室 Fun-AudioGen",
     "鬼头明里",
     "ViT-5: Vision Transformers for The Mid-2020s"
-  ],
-  "2026-04-07": [
-    "ERNIE 5.0: 统一多模态基础模型",
-    "K-Means 聚类算法",
-    "LlamaIndex: 文档代理与 OCR 平台",
-    "Locality-Attending Vision Transformer",
-    "花泽香菜",
-    "ERNIE 5.0: 2.4 万亿参数原生全模态大模型",
-    "AMD 噪声抑制技术 (Adrenalin 26.3.1)",
-    "AMD CDNA 4 计算架构",
-    "Rust 1.94.0 稳定版发布",
-    "GPT-6 性能曝光：40% 性能提升与 2M 上下文",
-    "Intel Arc Pro B70 Battlemage 专业显卡",
-    "YOLO26: 下一代实时目标检测架构",
-    "MediaTek Filogic 8000 Wi-Fi 8 芯片组",
-    "ARM AGI CPU (Neoverse V3)"
   ]
 }
