@@ -1,4 +1,20 @@
 {
+  "2026-04-18": [
+    "Streaming Visual Geometry Transformer for Real-time Video Understanding",
+    "deer-flow: 分布式工作流引擎",
+    "DeepSeek V4月底发布，首次深度适配华为昇腾芯片",
+    "Qwen3.6-Plus: 阿里通义实验室高性能大语言模型",
+    "DeepSeek V4: 下一代大语言模型",
+    "早见沙织",
+    "Intel Nova Lake-HX: 18A工艺移动端处理器",
+    "NVIDIA GeForce RTX 5080: Blackwell架构消费级显卡",
+    "随机森林：集成学习经典算法",
+    "玄铁C950: 阿里RISC-V架构高性能CPU",
+    "Phi-4-Reasoning-Vision-15B: 微软多模态视觉推理模型",
+    "Go语言1.26版本正式发布：泛型限制放宽",
+    "Ming-Omni-TTS: 统一语音、音乐与声音生成模型",
+    "全球首个单通道400G以太网物理层技术框架发布"
+  ],
   "2026-04-17": [
     "脑机接口进入临床应用，实现脑控抓握",
     "MLX: Apple 的机器学习框架",
@@ -136,20 +152,5 @@
     "TypeScript 6.0 正式发布",
     "Block Recurrent Dynamics in Vision Transformers",
     "联发科携手耕兴取得全球首份 Wi-Fi 8 认证"
-  ],
-  "2026-04-08": [
-    "Java 26 发布",
-    "UCIe 64G IP 在台积电 N3P 上完成设计定案",
-    "微软 Build 2026 开发者大会日期确定",
-    "UMAP (Uniform Manifold Approximation and Projection)",
-    "Obscure but Effective: Classical Chinese Jailbreak Prompt Optimization via Bio-Inspired Search",
-    "AMD Instinct MI400 系列",
-    "Intel 酷睿 Ultra 300 系列",
-    "Meta Llama 4",
-    "LLaMA-Factory",
-    "Broadcom 统一 Wi-Fi 8 平台",
-    "阿里通义实验室 Fun-AudioGen",
-    "鬼头明里",
-    "ViT-5: Vision Transformers for The Mid-2020s"
   ]
 }
