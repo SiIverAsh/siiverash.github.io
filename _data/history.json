@@ -1,4 +1,20 @@
 {
+  "2026-04-19": [
+    "ViT-5: 新一代视觉Transformer骨干网络",
+    "石川由依",
+    "Cilium 1.16: 基于eBPF的云原生网络方案",
+    "AMD Zen 6: 2nm工艺处理器架构",
+    "Intel Arc Pro B70: Big Battlemage架构专业显卡",
+    "NVIDIA/TensorRT-LLM: 高性能LLM推理引擎",
+    "AMD Ryzen Threadripper 9960X: 高性能工作站CPU",
+    "WeatherRemover: All-in-one Adverse Weather Removal with Multi-scale Feature Map Compression",
+    "中国科学家首次实现人工球状闪电",
+    "Rust 1.95.0: 内存安全语言重大更新",
+    "AdaBoost: 自适应提升算法",
+    "Claude 3.7 Sonnet: 混合推理模型",
+    "Stable Audio 2.5: 企业级高保真音频生成",
+    "Meta Llama 4: 开源高性能大语言模型"
+  ],
   "2026-04-18": [
     "Streaming Visual Geometry Transformer for Real-time Video Understanding",
     "deer-flow: 分布式工作流引擎",
@@ -138,19 +154,5 @@
     "Proxy-GS: Unified Occlusion Priors for Training and Rendering 3D Gaussian Splatting",
     "Swift 6.3 发布",
     "800G 以太网标准定案"
-  ],
-  "2026-04-09": [
-    "microsoft/TypeScript",
-    "AMD Ryzen 9000 系列桌面 CPU",
-    "中国首款 6nm 真自研 GPU 正式发售",
-    "PCI Express 7.0 标准正式定案",
-    "美团 LongCat-AudioDiT 音频生成模型",
-    "英特尔入局马斯克“Terafab”项目",
-    "梯度提升决策树 (Gradient Boosting Decision Trees)",
-    "内田真礼",
-    "Mixtral 8x22B Instruct",
-    "TypeScript 6.0 正式发布",
-    "Block Recurrent Dynamics in Vision Transformers",
-    "联发科携手耕兴取得全球首份 Wi-Fi 8 认证"
   ]
 }

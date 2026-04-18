@@ -1,128 +1,127 @@
 algorithm:
-- desc: 通过构建多个决策树并投票或平均进行预测，有效降低过拟合，适用于分类和回归任务，特征重要性评估直观，训练效率高，可并行化处理大规模数据。
+- desc: 经典集成学习算法，通过迭代调整样本权重，组合多个弱分类器形成强分类器，适用于二分类和多分类问题，具有高准确性和抗过拟合能力。
   tags:
   - 机器学习
   - 集成学习
-  - 分类
-  - 回归
-  title: 随机森林：集成学习经典算法
+  - 分类算法
+  - 自适应提升
+  title: 'AdaBoost: 自适应提升算法'
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 东京都
-  intro: 早见沙织是日本知名声优，以其清澈而富有表现力的嗓音著称。她于2007年出道，凭借多部作品中的出色演绎迅速获得关注。她的声音范围广泛，能够驾驭从温柔少女到冷静御姐等多种角色类型，情感传达细腻自然。在职业生涯中，她积极参与广播节目和音乐活动，展现了多才多艺的一面。早见沙织以专业的态度和持续的精进赢得了业界和粉丝的高度评价，被认为是当代声优界的代表性人物之一。
-  name: 早见沙织
-date: '2026-04-18'
+  agency: mitt management
+  hometown: 日本兵库县
+  intro: 石川由依是日本知名声优，以其清澈而富有穿透力的声线著称。她擅长演绎各种角色，从坚强女性到细腻情感表达，均能精准把握。在业内以其专业态度和多样化的演技获得高度评价，曾获得第15届声优大奖主演女优奖。她的声音具有独特的辨识度，能够为角色注入深刻的情感内涵。
+  name: 石川由依
+date: '2026-04-19'
 history:
-- event: 美国独立战争中的保罗·里维尔夜奔，标志着列克星敦和康科德战役的开始。
+- event: 美国独立战争第一枪在列克星敦和康科德打响。
   year: '1775'
-- event: 旧金山大地震，震级7.8级，造成3000多人死亡，城市大部分被毁。
-  year: '1906'
-- event: 杜立特空袭，二战期间美国对日本本土的首次空袭，由詹姆斯·杜立特中校指挥。
-  year: '1942'
-- event: 津巴布韦独立，结束英国殖民统治，罗伯特·穆加贝成为首任总理。
-  year: '1980'
-- event: 美国驻贝鲁特大使馆爆炸案，造成63人死亡，120人受伤，由伊斯兰圣战组织发动。
-  year: '1983'
-- event: 圣彼得大教堂奠基，由教皇儒略二世主持，标志着文艺复兴建筑的重要里程碑。
-  year: '1506'
+- event: 华沙犹太人区起义爆发。
+  year: '1943'
+- event: 苏联发射世界上第一个空间站礼炮1号。
+  year: '1971'
+- event: 美国德克萨斯州韦科围攻事件结束。
+  year: '1993'
+- event: 美国俄克拉荷马城联邦大楼爆炸案。
+  year: '1995'
+- event: 约瑟夫·拉辛格当选教皇本笃十六世。
+  year: '2005'
 llm:
-- desc: 支持1M上下文长度，具备多模态输入能力，在代码生成和数学推理基准测试中领先，首次深度适配国产华为昇腾芯片，预计2026年4月底发布，推理效率提升50%。
+- desc: Anthropic最新大语言模型，结合符号推理和神经网络，在数学推理和代码生成方面显著提升，支持10万上下文窗口，响应速度提高30%。
   tags:
   - 大语言模型
-  - 多模态
-  - 长上下文
-  - 国产芯片
-  title: 'DeepSeek V4: 下一代大语言模型'
+  - 混合推理
+  - 数学推理
+  - 代码生成
+  title: 'Claude 3.7 Sonnet: 混合推理模型'
 new_project:
-- desc: 基于Go语言开发的轻量级工作流引擎，支持DAG任务调度、故障恢复和实时监控，适用于数据处理和MLOps管道，已获GitHub 500+星标，部署简单，扩展性强。
+- desc: 基于TensorRT的优化推理框架，支持多种大语言模型，推理速度提升5倍，内存占用减少60%，提供Python和C++ API，易于部署。
   tags:
-  - 工作流引擎
-  - 分布式
-  - Go语言
-  - 开源
-  title: 'deer-flow: 分布式工作流引擎'
-  url: https://github.com/asong56/deer-flow
+  - 大语言模型
+  - 推理优化
+  - TensorRT
+  - 高性能计算
+  title: 'NVIDIA/TensorRT-LLM: 高性能LLM推理引擎'
+  url: https://github.com/NVIDIA/TensorRT-LLM
 paper:
-- desc: ICLR 2026接收论文，提出流式视觉几何Transformer架构，实现毫秒级延迟的视频对象检测与跟踪，在YouTube-VOS基准上取得SOTA效果，模型参数仅500M，支持动态分辨率输入。
+- desc: CVPR 2026论文，提出统一框架去除雨、雪、雾等恶劣天气影响，采用多尺度特征图压缩技术，在多个数据集上达到SOTA，计算效率提升50%。
   tags:
   - 计算机视觉
-  - Transformer
-  - 视频理解
-  - 实时
-  title: Streaming Visual Geometry Transformer for Real-time Video Understanding
-  url: https://iclr.cc/virtual/2026/poster/10011495
+  - 图像去雨
+  - 恶劣天气去除
+  - 多尺度特征
+  title: 'WeatherRemover: All-in-one Adverse Weather Removal with Multi-scale Feature
+    Map Compression'
+  url: https://arxiv.org/abs/2604.06623
 tech:
   Arch:
-  - desc: 基于RISC-V指令集，12核乱序执行设计，主频3.5GHz，支持双通道DDR5-6400内存，SPECint2017得分45分，能效比提升50%，集成AI加速单元，适用于边缘计算和服务器。
+  - desc: 采用台积电2nm工艺，最高48核心，288MB L3缓存，支持DDR5-8000内存，IPC提升25%，能效比提升40%，集成AI加速单元，面向数据中心和高端工作站。
     tags:
-    - RISC-V
-    - CPU
-    - 阿里
-    - 高性能
-    title: '玄铁C950: 阿里RISC-V架构高性能CPU'
+    - 处理器架构
+    - 2nm工艺
+    - 高性能计算
+    - 能效比
+    title: 'AMD Zen 6: 2nm工艺处理器架构'
   Audio:
-  - desc: INCLUSION AI开源的16.8B参数生成模型，基于扩散Transformer架构，支持文本到语音、音乐生成和音效合成，在MOS评分中达到4.35，延迟低于200毫秒，支持多语言和情感控制。
+  - desc: 基于扩散变压器架构，支持3分钟音乐生成，文本到音频和音频到音频转换，音色克隆相似度达0.95，支持44.1kHz采样率，针对专业音频生产优化。
     tags:
-    - 文本转语音
     - 音频生成
     - 扩散模型
-    - 开源
-    title: 'Ming-Omni-TTS: 统一语音、音乐与声音生成模型'
+    - 文本到音频
+    - 高保真
+    title: 'Stable Audio 2.5: 企业级高保真音频生成'
   CPU:
-  - desc: 2026年4月发布，采用Intel 18A制程，最高28核（8P+16E+4LP E），支持DDR5-7200内存，集成Xe2 GPU，AI性能达50
-      TOPS，TDP范围55-157W，适用于高性能笔记本。
+  - desc: 基于Zen 5架构，24核心48线程，基准频率4.0GHz，加速频率5.5GHz，支持PCIe 5.0和DDR5-6000内存，TDP 280W，针对内容创作和科学计算优化。
     tags:
-    - Intel
-    - Nova Lake
-    - 18A
-    - 移动CPU
-    title: 'Intel Nova Lake-HX: 18A工艺移动端处理器'
+    - 处理器
+    - 工作站
+    - Zen 5
+    - 高性能计算
+    title: 'AMD Ryzen Threadripper 9960X: 高性能工作站CPU'
   Computer Vision:
-  - desc: 微软于2026年3月发布的15B参数多模态模型，采用混合专家架构，支持最高1024x1024分辨率图像输入，专长于GUI理解和数学推理，在VQA基准测试中准确率提升12%，推理延迟低于500毫秒。
+  - desc: 采用RMSNorm和SwiGLU激活函数，分层Transformer架构，在ImageNet上达到86.0% top-1准确率，支持高分辨率输入，参数效率提升30%，适用于大规模视觉任务。
     tags:
-    - 多模态
-    - 视觉推理
-    - 微软
-    - AI
-    title: 'Phi-4-Reasoning-Vision-15B: 微软多模态视觉推理模型'
+    - 计算机视觉
+    - Transformer
+    - 图像分类
+    - 骨干网络
+    title: 'ViT-5: 新一代视觉Transformer骨干网络'
   GPU:
-  - desc: 基于GB202 GPU，采用4nm工艺，拥有80个SM单元、10240个CUDA核心，16GB GDDR7显存，带宽736GB/s，功耗220W，光追性能较RTX
-      4080提升40%，支持DLSS 4。
+  - desc: 基于Xe2-HPG架构，32GB GDDR7显存，支持PCIe 5.0 x16，AI算力达367 TOPS，光线追踪性能提升2倍，针对工作站和AI推理优化，售价949美元。
     tags:
-    - NVIDIA
-    - RTX 5080
-    - Blackwell
     - 显卡
-    title: 'NVIDIA GeForce RTX 5080: Blackwell架构消费级显卡'
+    - Intel Arc
+    - Battlemage
+    - AI算力
+    title: 'Intel Arc Pro B70: Big Battlemage架构专业显卡'
   Lang:
-  - desc: 2026年2月19日发布，主要改进包括泛型类型推断增强、支持嵌套接口、并发模式优化，编译器性能提升15%，垃圾收集暂停时间减少20%，新增标准库包支持异步I/O。
+  - desc: 泛型关联类型(GAT)稳定化，改进的错误信息，性能提升10%，支持ARMv9架构，包管理器Cargo增强，编译速度加快20%。
     tags:
-    - Go语言
-    - 泛型
+    - 编程语言
+    - 内存安全
+    - 系统编程
     - 编译器
-    - 并发
-    title: Go语言1.26版本正式发布：泛型限制放宽
+    title: 'Rust 1.95.0: 内存安全语言重大更新'
   NLP:
-  - desc: 2026年4月发布，参数规模未知，专注于编程与智能体能力，支持128K上下文长度，在HumanEval编码基准测试中得分92.5%，集成工具调用和强化学习优化，推理效率提升30%。
+  - desc: 基于改进的Transformer架构，支持128K上下文长度，参数量达4000亿，采用分组查询注意力(GQA)和滑动窗口注意力(SWA)，在多项基准测试中超越GPT-4，专为长文本理解和生成优化。
     tags:
     - 大语言模型
-    - 编程
-    - 智能体
     - 开源
-    title: 'Qwen3.6-Plus: 阿里通义实验室高性能大语言模型'
+    - Transformer
+    - 长上下文
+    title: 'Meta Llama 4: 开源高性能大语言模型'
   Net:
-  - desc: 2026年4月15日，IEEE工作组批准802.3dj标准，定义单通道400GbE物理层规范，采用PAM4调制和56GBaud波特率，传输距离可达10公里，功耗较200G降低40%，支持数据中心互联。
+  - desc: 利用eBPF技术实现高性能网络策略、负载均衡和可观测性，支持Kubernetes多集群网络，引入AI驱动的网络异常检测，延迟降低40%，增强安全性和可扩展性。
     tags:
-    - 以太网
-    - 400G
-    - 物理层
-    - 网络标准
-    title: 全球首个单通道400G以太网物理层技术框架发布
+    - 云原生
+    - eBPF
+    - Kubernetes
+    - 网络安全
+    title: 'Cilium 1.16: 基于eBPF的云原生网络方案'
   News:
-  - desc: 2026年4月15日，深度求索公司宣布V4模型将于月底推出，支持1M上下文长度，具备多模态能力，并针对华为昇腾910B芯片进行优化，推理成本降低30%，预计在代码和数学基准领先。
+  - desc: 利用微波等离子体技术在实验室中生成稳定球状闪电，持续时间达30秒，直径约10厘米，为可控核聚变和新型能源研究提供新思路，发表于《自然·物理学》。
     tags:
-    - DeepSeek
-    - 大语言模型
-    - 华为昇腾
-    - AI芯片
-    title: DeepSeek V4月底发布，首次深度适配华为昇腾芯片
+    - 物理学
+    - 等离子体
+    - 能源技术
+    - 科学突破
+    title: 中国科学家首次实现人工球状闪电
