@@ -1,4 +1,20 @@
 {
+  "2026-04-20": [
+    "GLM-5.1: 智谱AI开源千亿参数大语言模型",
+    "进迭时空 K3: 全球首款符合RVA23规范的量产RISC-V芯片",
+    "Istio 1.30: 服务网格架构重大更新",
+    "鬼头明里",
+    "Kotlin 2.3.20: JetBrains 发布高效编程语言更新",
+    "Gemini 2.5 Pro: 谷歌新一代多模态大语言模型",
+    "ERGO: Efficient High-Resolution Visual Understanding for Vision-Language Models",
+    "Intel Arc Pro B60: 24GB显存专业显卡",
+    "英伟达发布全球首个开源量子AI模型Ising",
+    "AMD Ryzen 8000系列: 混合架构桌面处理器",
+    "localGPT: 本地文档对话开源项目",
+    "YOLOv12: 新一代实时目标检测框架",
+    "LongCat-AudioDiT: 美团开源高保真零样本语音克隆模型",
+    "K-近邻算法：经典无参数分类与回归方法"
+  ],
   "2026-04-19": [
     "ViT-5: 新一代视觉Transformer骨干网络",
     "石川由依",
@@ -138,21 +154,5 @@
     "Intel Arrow Lake Refresh 处理器",
     "支持向量机 (Support Vector Machine)",
     "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision"
-  ],
-  "2026-04-10": [
-    "Mistral Small 4: 119B 参数 MoE 模型",
-    "千寻智能30天内融资约30亿元",
-    "Segment Anything 2 (SAM2)",
-    "玄铁 C950 RISC-V 处理器",
-    "NVIDIA Rubin GPU 架构发布",
-    "UALM: 统一音频语言模型",
-    "Kimi K2.5 万亿参数多模态模型",
-    "AMD EPYC Venice Zen6 服务器 CPU",
-    "决策树 (Decision Trees)",
-    "水濑祈",
-    "AutoGen: 智能体编程框架",
-    "Proxy-GS: Unified Occlusion Priors for Training and Rendering 3D Gaussian Splatting",
-    "Swift 6.3 发布",
-    "800G 以太网标准定案"
   ]
 }

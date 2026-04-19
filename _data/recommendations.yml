@@ -1,127 +1,130 @@
 algorithm:
-- desc: 经典集成学习算法，通过迭代调整样本权重，组合多个弱分类器形成强分类器，适用于二分类和多分类问题，具有高准确性和抗过拟合能力。
+- desc: 基于实例的学习算法，通过距离度量（如欧氏距离）进行分类或回归，适用于小型数据集与简单模式识别，无需训练阶段。
   tags:
-  - 机器学习
-  - 集成学习
   - 分类算法
-  - 自适应提升
-  title: 'AdaBoost: 自适应提升算法'
+  - 无参数学习
+  - 机器学习基础
+  - 距离度量
+  title: K-近邻算法：经典无参数分类与回归方法
 cv_recommend:
-  agency: mitt management
-  hometown: 日本兵库县
-  intro: 石川由依是日本知名声优，以其清澈而富有穿透力的声线著称。她擅长演绎各种角色，从坚强女性到细腻情感表达，均能精准把握。在业内以其专业态度和多样化的演技获得高度评价，曾获得第15届声优大奖主演女优奖。她的声音具有独特的辨识度，能够为角色注入深刻的情感内涵。
-  name: 石川由依
-date: '2026-04-19'
+  agency: ARTSVISION
+  hometown: 爱知县
+  intro: 鬼头明里以其清澈透明的声线著称，在配音工作中注重情感表达与角色塑造，能够驾驭多种声线变化，从温柔少女到冷静成熟的角色均能出色演绎。她凭借扎实的配音功底与细腻的情感处理，在业界获得广泛认可，作品涵盖动画、游戏及广播剧等领域。
+  name: 鬼头明里
+date: '2026-04-20'
 history:
-- event: 美国独立战争第一枪在列克星敦和康科德打响。
-  year: '1775'
-- event: 华沙犹太人区起义爆发。
-  year: '1943'
-- event: 苏联发射世界上第一个空间站礼炮1号。
-  year: '1971'
-- event: 美国德克萨斯州韦科围攻事件结束。
-  year: '1993'
-- event: 美国俄克拉荷马城联邦大楼爆炸案。
-  year: '1995'
-- event: 约瑟夫·拉辛格当选教皇本笃十六世。
-  year: '2005'
+- event: 阿道夫·希特勒出生
+  year: '1889'
+- event: 哈雷彗星接近地球
+  year: '1910'
+- event: 波音747首飞
+  year: '1968'
+- event: 阿波罗16号登月舱着陆月球
+  year: '1972'
+- event: 科伦拜校园枪击案
+  year: '1999'
+- event: 深水地平线钻井平台爆炸
+  year: '2010'
 llm:
-- desc: Anthropic最新大语言模型，结合符号推理和神经网络，在数学推理和代码生成方面显著提升，支持10万上下文窗口，响应速度提高30%。
+- desc: 支持100万token上下文长度，在推理与生成能力上实现重大突破，MMLU得分达到92.5%，并集成多模态理解与代码生成功能。
   tags:
-  - 大语言模型
-  - 混合推理
-  - 数学推理
-  - 代码生成
-  title: 'Claude 3.7 Sonnet: 混合推理模型'
+  - 多模态
+  - 长上下文
+  - 谷歌AI
+  - 推理模型
+  title: 'Gemini 2.5 Pro: 谷歌新一代多模态大语言模型'
 new_project:
-- desc: 基于TensorRT的优化推理框架，支持多种大语言模型，推理速度提升5倍，内存占用减少60%，提供Python和C++ API，易于部署。
+- desc: 允许用户在本地设备上与文档进行对话，使用GPT模型，无需数据上传，确保100%隐私保护，支持多种文档格式。
   tags:
-  - 大语言模型
-  - 推理优化
-  - TensorRT
-  - 高性能计算
-  title: 'NVIDIA/TensorRT-LLM: 高性能LLM推理引擎'
-  url: https://github.com/NVIDIA/TensorRT-LLM
+  - 本地AI
+  - 文档处理
+  - 隐私保护
+  - 开源
+  title: 'localGPT: 本地文档对话开源项目'
+  url: https://github.com/PromtEngineer/localGPT
 paper:
-- desc: CVPR 2026论文，提出统一框架去除雨、雪、雾等恶劣天气影响，采用多尺度特征图压缩技术，在多个数据集上达到SOTA，计算效率提升50%。
+- desc: ICLR 2026 论文，提出一种高效的高分辨率视觉理解方法，通过动态分辨率采样与稀疏注意力机制，在保持精度的同时降低计算成本。
   tags:
-  - 计算机视觉
-  - 图像去雨
-  - 恶劣天气去除
-  - 多尺度特征
-  title: 'WeatherRemover: All-in-one Adverse Weather Removal with Multi-scale Feature
-    Map Compression'
-  url: https://arxiv.org/abs/2604.06623
+  - 视觉语言模型
+  - 高分辨率
+  - 效率优化
+  - ICLR 2026
+  title: 'ERGO: Efficient High-Resolution Visual Understanding for Vision-Language
+    Models'
+  url: https://iclr.cc/virtual/2026/poster/10008298
 tech:
   Arch:
-  - desc: 采用台积电2nm工艺，最高48核心，288MB L3缓存，支持DDR5-8000内存，IPC提升25%，能效比提升40%，集成AI加速单元，面向数据中心和高端工作站。
+  - desc: 采用12nm工艺，16核乱序执行架构，主频3.2GHz，支持DDR5-6400内存与PCIe 5.0接口，峰值算力达512 GOPS。
     tags:
-    - 处理器架构
-    - 2nm工艺
+    - RISC-V
+    - 芯片设计
+    - 国产芯片
     - 高性能计算
-    - 能效比
-    title: 'AMD Zen 6: 2nm工艺处理器架构'
+    title: '进迭时空 K3: 全球首款符合RVA23规范的量产RISC-V芯片'
   Audio:
-  - desc: 基于扩散变压器架构，支持3分钟音乐生成，文本到音频和音频到音频转换，音色克隆相似度达0.95，支持44.1kHz采样率，针对专业音频生产优化。
+  - desc: 基于扩散Transformer架构，支持646种语言零样本语音克隆，说话人相似度指标提升至0.818，模型参数量为3.5B，并开源了预训练权重。
     tags:
-    - 音频生成
+    - 语音克隆
+    - 文本转语音
+    - 开源
     - 扩散模型
-    - 文本到音频
-    - 高保真
-    title: 'Stable Audio 2.5: 企业级高保真音频生成'
+    title: 'LongCat-AudioDiT: 美团开源高保真零样本语音克隆模型'
   CPU:
-  - desc: 基于Zen 5架构，24核心48线程，基准频率4.0GHz，加速频率5.5GHz，支持PCIe 5.0和DDR5-6000内存，TDP 280W，针对内容创作和科学计算优化。
+  - desc: 采用Zen 5与Zen 4c核心混合架构，最高16核32线程，基准频率4.0GHz，最大加速频率5.8GHz，集成RDNA 3.5显卡与Ryzen
+      AI引擎。
     tags:
-    - 处理器
-    - 工作站
+    - 桌面CPU
+    - 混合架构
+    - AMD
     - Zen 5
-    - 高性能计算
-    title: 'AMD Ryzen Threadripper 9960X: 高性能工作站CPU'
+    title: 'AMD Ryzen 8000系列: 混合架构桌面处理器'
   Computer Vision:
-  - desc: 采用RMSNorm和SwiGLU激活函数，分层Transformer架构，在ImageNet上达到86.0% top-1准确率，支持高分辨率输入，参数效率提升30%，适用于大规模视觉任务。
+  - desc: 采用Transformer-CNN混合架构，支持8K分辨率输入，在COCO数据集上实现65.2% mAP，推理速度达到120 FPS（基于RTX
+      4090），并引入动态稀疏注意力机制以降低计算开销。
     tags:
-    - 计算机视觉
+    - 目标检测
+    - 实时推理
+    - 深度学习
     - Transformer
-    - 图像分类
-    - 骨干网络
-    title: 'ViT-5: 新一代视觉Transformer骨干网络'
+    title: 'YOLOv12: 新一代实时目标检测框架'
   GPU:
-  - desc: 基于Xe2-HPG架构，32GB GDDR7显存，支持PCIe 5.0 x16，AI算力达367 TOPS，光线追踪性能提升2倍，针对工作站和AI推理优化，售价949美元。
+  - desc: 基于Battlemage架构，搭载32个Xe核心，配备24GB GDDR6X显存，支持PCIe 5.0 x16与AV1编码，FP32性能达20
+      TFLOPS。
     tags:
-    - 显卡
+    - 专业显卡
     - Intel Arc
-    - Battlemage
-    - AI算力
-    title: 'Intel Arc Pro B70: Big Battlemage架构专业显卡'
+    - AI加速
+    - GDDR6X
+    title: 'Intel Arc Pro B60: 24GB显存专业显卡'
   Lang:
-  - desc: 泛型关联类型(GAT)稳定化，改进的错误信息，性能提升10%，支持ARMv9架构，包管理器Cargo增强，编译速度加快20%。
+  - desc: 引入新的内联类特性，编译速度提升15%，完全兼容Java 23，并优化了协程性能与DSL语法，适用于Android与后端开发。
     tags:
     - 编程语言
-    - 内存安全
-    - 系统编程
-    - 编译器
-    title: 'Rust 1.95.0: 内存安全语言重大更新'
+    - JVM
+    - 开发工具
+    - Android
+    title: 'Kotlin 2.3.20: JetBrains 发布高效编程语言更新'
   NLP:
-  - desc: 基于改进的Transformer架构，支持128K上下文长度，参数量达4000亿，采用分组查询注意力(GQA)和滑动窗口注意力(SWA)，在多项基准测试中超越GPT-4，专为长文本理解和生成优化。
+  - desc: 基于混合专家架构，支持200K上下文长度，在MMLU基准上达到85.7%准确率，并集成了代码生成与多轮对话优化，模型参数量为1.2万亿。
     tags:
     - 大语言模型
     - 开源
-    - Transformer
-    - 长上下文
-    title: 'Meta Llama 4: 开源高性能大语言模型'
+    - 中文NLP
+    - 混合专家
+    title: 'GLM-5.1: 智谱AI开源千亿参数大语言模型'
   Net:
-  - desc: 利用eBPF技术实现高性能网络策略、负载均衡和可观测性，支持Kubernetes多集群网络，引入AI驱动的网络异常检测，延迟降低40%，增强安全性和可扩展性。
+  - desc: 引入基于eBPF的数据平面，支持零信任安全模型，延迟降低40%，并新增动态流量分割与多集群管理功能，兼容Kubernetes 1.30及以上版本。
     tags:
+    - 服务网格
     - 云原生
-    - eBPF
-    - Kubernetes
     - 网络安全
-    title: 'Cilium 1.16: 基于eBPF的云原生网络方案'
+    - eBPF
+    title: 'Istio 1.30: 服务网格架构重大更新'
   News:
-  - desc: 利用微波等离子体技术在实验室中生成稳定球状闪电，持续时间达30秒，直径约10厘米，为可控核聚变和新型能源研究提供新思路，发表于《自然·物理学》。
+  - desc: 基于量子退火算法，在512量子比特模拟器上实现，可用于组合优化问题求解，并开源了模型代码与训练数据集。
     tags:
-    - 物理学
-    - 等离子体
-    - 能源技术
-    - 科学突破
-    title: 中国科学家首次实现人工球状闪电
+    - 量子计算
+    - 开源
+    - AI模型
+    - 英伟达
+    title: 英伟达发布全球首个开源量子AI模型Ising
