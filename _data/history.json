@@ -1,4 +1,20 @@
 {
+  "2026-04-21": [
+    "Ultralytics YOLO26: 边缘优先视觉AI新标杆",
+    "TypeScript 6.0: 静态类型语言重大更新",
+    "茅野爱衣",
+    "Gemma 4: Google 最强开源模型系列",
+    "OmniVoice: 小米开源多语言TTS模型",
+    "棣山科技 2nm AI GPU: 兼容CUDA的国产芯片",
+    "Apple M4芯片: 新一代苹果自研处理器",
+    "朴素贝叶斯分类器: 基于贝叶斯定理的概率分类算法",
+    "Cortex: 从零构建大模型的完整实践",
+    "Yuan3.0-Ultra: 开源高性能大语言模型",
+    "UALink: 新一代加速器互连规范",
+    "Understanding and Improving Length Generalization in Hierarchical Sparse Attention Models",
+    "华为首款AI眼镜发布: 集成鸿蒙AI助手",
+    "AONP: 中国移动智能体互联网开放网络协议框架"
+  ],
   "2026-04-20": [
     "GLM-5.1: 智谱AI开源千亿参数大语言模型",
     "进迭时空 K3: 全球首款符合RVA23规范的量产RISC-V芯片",
@@ -138,21 +154,5 @@
     "松冈祯丞",
     "Qwen3-ASR: 开源多语言语音识别模型",
     "全球首个RISC-V存算一体标准研制启动"
-  ],
-  "2026-04-11": [
-    "RT-DETR: 实时端到端目标检测Transformer",
-    "AudioSep: 基于自然语言查询的音频分离模型",
-    "Intel Celestial GPU",
-    "AMD Ryzen 8000G 系列APU",
-    "华为下一代全光网解决方案",
-    "国星宇航完成全球首次太空算力操控地面机器人验证",
-    "Python 3.13.13 发布",
-    "种崎敦美",
-    "OpenClaw: AI驱动的代码生成与重构工具",
-    "Gemma 4: 谷歌开源大语言模型",
-    "MiniMax-M1: 开源大规模混合架构推理模型",
-    "Intel Arrow Lake Refresh 处理器",
-    "支持向量机 (Support Vector Machine)",
-    "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision"
   ]
 }
