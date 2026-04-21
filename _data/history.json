@@ -1,4 +1,20 @@
 {
+  "2026-04-22": [
+    "NVIDIA RTX PRO 6000: Blackwell架构专业显卡",
+    "Kimi K2.6: 月之暗面开源大语言模型",
+    "内田真礼",
+    "Monet: 赋予多模态大模型如人类一般的抽象视觉思考能力",
+    "华山A2000家族: 物理AI时代算力底座",
+    "Baichuan 4: 百川智能开源千亿参数大模型",
+    "自变量机器人发布全球首个世界统一模型",
+    "华为下一代全光网: AI时代的光网络创新",
+    "CLAUDE.md: Claude代码最佳实践模板",
+    "支持向量机 (Support Vector Machine)",
+    "Energy-Based Transformers are Scalable Learners and Thinkers",
+    "Python 3.14: 2026年重大版本更新",
+    "Gemini 3.1 Flash TTS: 谷歌超实时可控语音生成",
+    "华为麒麟9030S: 移动端旗舰芯片"
+  ],
   "2026-04-21": [
     "Ultralytics YOLO26: 边缘优先视觉AI新标杆",
     "TypeScript 6.0: 静态类型语言重大更新",
@@ -140,19 +156,5 @@
     "随机森林 (Random Forest)",
     "佐仓绫音",
     "BSCodec: A Band-Split Neural Codec for High-Quality Universal Audio Reconstruction"
-  ],
-  "2026-04-12": [
-    "Intel Core Ultra 400HX 移动处理器",
-    "高通X105 5G Advanced调制解调器",
-    "CrewAI: 角色化AI智能体编排框架",
-    "Intel Arc Pro B70 工作站显卡",
-    "滴滴自动驾驶新一代Robotaxi升级",
-    "DBSCAN 密度聚类算法",
-    "Qwen3.6-Plus: 阿里720B参数MoE大模型",
-    "NeoVerse: Enhancing 4D World Model with in-the-wild Monocular Videos",
-    "Go 1.26 正式发布",
-    "松冈祯丞",
-    "Qwen3-ASR: 开源多语言语音识别模型",
-    "全球首个RISC-V存算一体标准研制启动"
   ]
 }
