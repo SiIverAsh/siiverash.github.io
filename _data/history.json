@@ -1,4 +1,20 @@
 {
+  "2026-04-23": [
+    "Why Attention Patterns Exist: A Unifying Temporal Perspective",
+    "Kitex v0.16.0 微服务框架发布",
+    "Elephant 100B 参数匿名大模型",
+    "MiniMind：2小时训练64M参数GPT",
+    "MiniMax-M1 开源大规模混合注意力推理模型",
+    "Swift 6.3 编程语言重大更新",
+    "华为星河AI网络通量一体解决方案",
+    "科大讯飞深度布局‘AI+量子’",
+    "水濑祈",
+    "摩尔线程庐山游戏GPU发布",
+    "美团 LongCat-Image 6B 开源视觉模型",
+    "VoxCPM 2 开源多语种语音合成模型",
+    "随机森林算法详解",
+    "英特尔至强6+ 288核心处理器发布"
+  ],
   "2026-04-22": [
     "NVIDIA RTX PRO 6000: Blackwell架构专业显卡",
     "Kimi K2.6: 月之暗面开源大语言模型",
@@ -141,20 +157,5 @@
     "人工智能拟人化互动服务管理暂行办法发布",
     "AMD RDNA 5: 下一代显卡架构",
     "AMD Ryzen 10000: Zen 6 架构桌面CPU"
-  ],
-  "2026-04-13": [
-    "HTTP/3 大规模部署与性能优化",
-    "Mamba-3: Improved Sequence Modeling using State Space Principles",
-    "Intel Core Ultra 200S Plus 系列桌面处理器",
-    "Intel Arc Battlemage BMG-G31 GPU",
-    "Rust 1.94.1: 内存安全与并发性能增强",
-    "DeepSeek V4: 1T Parameter MoE Multimodal Model",
-    "DCDM: Divide-and-Conquer Diffusion Models for Consistency-Preserving Video Generation",
-    "deer-flow: 字节跳动开源长周期超级智能体框架",
-    "CXL 3.0 内存共享技术落地进展",
-    "SpaceX 星舰计划 2026 年底首次无人火星任务",
-    "随机森林 (Random Forest)",
-    "佐仓绫音",
-    "BSCodec: A Band-Split Neural Codec for High-Quality Universal Audio Reconstruction"
   ]
 }
