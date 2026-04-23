@@ -1,4 +1,20 @@
 {
+  "2026-04-24": [
+    "NVIDIA GeForce RTX 5060 系列",
+    "Intel Core 300 'Wildcat Lake' 处理器",
+    "腾讯混元 Hy3 preview 发布并开源",
+    "玄铁 C950: 阿里达摩院 RISC-V 处理器",
+    "Locality-Attending Vision Transformer (LAViT)",
+    "国产 CPO 智能网卡 (沐创 & 澜昆微)",
+    "Qwen3-TTS: 阿里云开源多语言语音合成模型",
+    "XGBoost: 极致梯度提升算法",
+    "ollama/ollama",
+    "Qwen3.6-Plus: 阿里云开源大语言模型",
+    "DeepSeek V4: 原生多模态大语言模型",
+    "Rust 1.93.0 编程语言发布",
+    "ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware Semantic Analysis and Sparsity Optimization",
+    "花泽香菜"
+  ],
   "2026-04-23": [
     "Why Attention Patterns Exist: A Unifying Temporal Perspective",
     "Kitex v0.16.0 微服务框架发布",
@@ -141,21 +157,5 @@
     "LongCat-AudioDiT: 美团开源高保真音频生成模型",
     "梯度提升决策树 (Gradient Boosting Decision Trees)",
     "Claude 3.5 Sonnet: Anthropic 新一代大语言模型"
-  ],
-  "2026-04-14": [
-    "K-Means聚类算法",
-    "Wi-Fi 8: 下一代无线网络标准",
-    "MAI-Transcribe-1: 微软最精准音频转录模型",
-    "Java 26: Oracle 最新Java版本",
-    "GPT-5.4: OpenAI 首个具备原生计算机操作能力的模型",
-    "LLaMA 4: Meta 开源多模态大语言模型",
-    "UCIe 2.0: 新一代芯片互连规范",
-    "VideoCrafter2: Overcoming Data Limitations for Video Generation",
-    "JoyAI-Image: 京东开源统一多模态图像基础模型",
-    "悠木碧",
-    "DirectFisheye-GS: Enabling Native Fisheye Input in Gaussian Splatting with Cross-View Joint Optimization",
-    "人工智能拟人化互动服务管理暂行办法发布",
-    "AMD RDNA 5: 下一代显卡架构",
-    "AMD Ryzen 10000: Zen 6 架构桌面CPU"
   ]
 }

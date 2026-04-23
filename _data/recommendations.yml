@@ -1,126 +1,126 @@
 algorithm:
-- desc: 集成学习经典算法，通过构建多棵决策树并投票，提高分类与回归准确性，支持并行训练，抗过拟合能力强，适用于高维数据。
+- desc: 基于梯度提升框架的集成学习算法，通过正则化防止过拟合，支持并行计算，在分类与回归任务中表现优异。
   tags:
-  - 机器学习
+  - 梯度提升
   - 集成学习
-  - 分类算法
-  - 随机森林
-  title: 随机森林算法详解
+  - XGBoost
+  - 分类回归
+  title: 'XGBoost: 极致梯度提升算法'
 cv_recommend:
-  agency: AXL-ONE
+  agency: 大沢事務所
   hometown: 东京都
-  intro: 水濑祈是日本女性声优、歌手，嗓音清澈多变，擅长演绎从活泼到沉静的各种角色。她以出色的歌唱实力和现场表现力闻名，曾获得多项声优奖项。作为90后声优的代表之一，她在业界积累了广泛好评，致力于声优事业的多元化发展。
-  name: 水濑祈
-date: '2026-04-23'
+  intro: 花泽香菜是日本知名女性声优，隶属大泽事务所。出生于东京都。以其清亮柔美的声线闻名，擅长演绎各类少女角色，同时也活跃于音乐和电视节目。自2000年代出道以来，出演多部热门作品，声线辨识度极高，深受粉丝喜爱。在声优业界持续展现多才多艺的一面。
+  name: 花泽香菜
+date: '2026-04-24'
 history:
-- event: 威廉·莎士比亚出生，英国文学巨匠。
-  year: '1564'
-- event: 威廉·莎士比亚逝世，享年52岁。
-  year: '1616'
-- event: 美国总统杜鲁门与苏联外长莫洛托夫对峙，冷战序幕拉开。
-  year: '1945'
-- event: 晶体管扩散工艺发展，推动半导体产业进步。
-  year: '1954'
-- event: 可口可乐公司推出新可乐，成为营销史上著名案例。
-  year: '1985'
-- event: 首个YouTube视频“Me at the zoo”上传，开启视频分享时代。
-  year: '2005'
+- event: 法国作曲家鲁日·德·李尔创作《马赛曲》。
+  year: '1792'
+- event: 美国国会图书馆成立。
+  year: '1800'
+- event: 奥斯曼帝国大规模逮捕亚美尼亚知识分子，亚美尼亚种族灭绝开始。
+  year: '1915'
+- event: 苏联联盟1号返回时降落伞故障，宇航员科马罗夫遇难。
+  year: '1967'
+- event: 哈勃太空望远镜由发现号航天飞机发射升空。
+  year: '1990'
+- event: 中国首次火星探测任务命名为“天问一号”。
+  year: '2020'
 llm:
-- desc: 100B参数匿名模型，在OpenRouter趋势榜排名第一，主打token效率与即时响应，代码生成与轻代理任务性能超越同等规模模型20%。
+- desc: 2026 年 4 月下旬开源发布，支持超长上下文，编程与多模态能力大幅提升，性能超越此前版本。
   tags:
-  - 大语言模型
-  - 匿名模型
-  - 代码生成
-  - 高效推理
-  title: Elephant 100B 参数匿名大模型
+  - DeepSeek
+  - V4
+  - 多模态
+  - 开源
+  title: 'DeepSeek V4: 原生多模态大语言模型'
 new_project:
-- desc: 开源项目，实现从零训练64M参数GPT仅需2小时，代码简洁，适用于教育与大模型研究，支持自定义数据集与架构。
+- desc: 跨平台本地 LLM 运行工具，支持 LLaMA、Mistral 等主流模型，提供简洁 API 与命令行界面。
   tags:
-  - 开源项目
-  - GPT训练
-  - 教育工具
-  - 小参数模型
-  title: MiniMind：2小时训练64M参数GPT
-  url: https://github.com/jingyaogong/minimind
+  - LLM
+  - 本地部署
+  - 开源
+  - 跨平台
+  title: ollama/ollama
+  url: https://github.com/ollama/ollama
 paper:
-- desc: ICLR 2026 顶会论文，从时序视角统一解释大模型注意力模式，提出TAPPA框架，为注意力机制提供理论基础。
+- desc: ICLR 2026 论文，通过三维熵感知语义分析与稀疏优化实现高效视觉自回归建模，降低计算成本。
   tags:
-  - 注意力机制
+  - 视觉自回归
   - ICLR 2026
-  - 理论框架
-  - Transformer
-  title: 'Why Attention Patterns Exist: A Unifying Temporal Perspective'
-  url: https://arxiv.org/abs/2601.21709
+  - 高效模型
+  title: 'ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware
+    Semantic Analysis and Sparsity Optimization'
+  url: https://arxiv.org/abs/2602.22948
 tech:
   Arch:
-  - desc: CloudWeGo 开源高性能微服务框架，支持多协议、服务网格集成，吞吐量提升40%，延迟降低25%，新增流量染色与故障注入功能。
+  - desc: 全球首款原生支持千亿参数大模型的 RISC-V CPU，性能创该架构新纪录，采用先进工艺。
     tags:
-    - 微服务
-    - 开源框架
-    - 高性能
-    - 服务网格
-    title: Kitex v0.16.0 微服务框架发布
+    - RISC-V
+    - 玄铁C950
+    - 大模型
+    - 阿里达摩院
+    title: '玄铁 C950: 阿里达摩院 RISC-V 处理器'
   Audio:
-  - desc: 支持30种语言零样本音色克隆，48kHz高保真语音生成，基于扩散Transformer架构，在MOS评分上达到4.5分，实时推理延迟低于200ms。
+  - desc: 基于 Qwen3 语言模型，支持超低延迟流式合成、多语言及零样本语音克隆，音质自然。
     tags:
+    - TTS
     - 语音合成
-    - 开源模型
-    - 多语种
-    - 零样本克隆
-    title: VoxCPM 2 开源多语种语音合成模型
+    - 开源
+    - 多语言
+    title: 'Qwen3-TTS: 阿里云开源多语言语音合成模型'
   CPU:
-  - desc: 采用18A工艺，288核心864MB缓存，支持DDR5-8000内存，AI推理性能提升3倍，功耗优化30%，专为智适应AI网络设计。
+  - desc: 2P+4LP-E 混合架构，集成 2 个 Xe 核显，AI 算力 17 TOPS，面向入门级笔记本与边缘 AI。
     tags:
-    - CPU
-    - 服务器处理器
-    - AI推理
-    - 18A工艺
-    title: 英特尔至强6+ 288核心处理器发布
+    - Wildcat Lake
+    - 混合架构
+    - 边缘AI
+    - 低功耗
+    title: Intel Core 300 'Wildcat Lake' 处理器
   Computer Vision:
-  - desc: 基于6B参数的双语视觉模型，在多项基准测试中击败80B大模型，采用分层稀疏注意力机制，支持图像生成与理解，推理效率提升3倍。
+  - desc: ICLR 2026 论文，引入显式局部性归纳偏置，通过局部注意力机制降低计算复杂度，在 ImageNet 等基准上达到 SOTA 性能。
     tags:
-    - 计算机视觉
-    - 开源模型
-    - 图像生成
-    - 注意力机制
-    title: 美团 LongCat-Image 6B 开源视觉模型
+    - Vision Transformer
+    - ICLR 2026
+    - 局部注意力
+    - 图像分类
+    title: Locality-Attending Vision Transformer (LAViT)
   GPU:
-  - desc: 基于花港架构，游戏性能提升15倍，光线追踪性能提升50倍，支持DX12 Ultimate，搭载24GB GDDR7显存，采用5nm制程。
+  - desc: 基于 Blackwell 架构，配备 GDDR7 显存，支持 DLSS 4 多帧生成与神经网络渲染，起售价 ¥2499。
     tags:
-    - GPU
-    - 游戏显卡
-    - 光线追踪
-    - 国产芯片
-    title: 摩尔线程庐山游戏GPU发布
+    - RTX 5060
+    - Blackwell
+    - DLSS 4
+    - GDDR7
+    title: NVIDIA GeForce RTX 5060 系列
   Lang:
-  - desc: 引入 Ownership 模型、改进并发编程，支持静态内存安全，编译速度提升20%，与C++互操作性增强，适用于高性能应用开发。
+  - desc: 2026 年 1 月发布，稳定 never 类型、高级模式匹配改进、cargo 工作区发布支持，提升可靠性与开发效率。
     tags:
-    - 编程语言
-    - Swift
-    - 并发编程
-    - 内存安全
-    title: Swift 6.3 编程语言重大更新
+    - Rust
+    - 1.93.0
+    - 模式匹配
+    - never类型
+    title: Rust 1.93.0 编程语言发布
   NLP:
-  - desc: 全球首个开源大规模混合注意力推理模型，结合局部与全局注意力，支持长序列推理，在数学与代码任务上超越同等规模模型30%。
+  - desc: 采用 MoE 架构，激活参数 35B，支持超长上下文，在编程与视觉任务上显著提升，兼容 OpenClaw 生态。
     tags:
-    - 自然语言处理
-    - 开源模型
-    - 推理模型
-    - 混合注意力
-    title: MiniMax-M1 开源大规模混合注意力推理模型
+    - 大语言模型
+    - MoE
+    - 开源
+    - 阿里云
+    title: 'Qwen3.6-Plus: 阿里云开源大语言模型'
   Net:
-  - desc: 集成AI流量调度与量子加密，支持广域网智能流量加密，通量提升50%，延迟降低30%，基于鸿蒙内核实现端到端安全。
+  - desc: 基于共封装光学 (CPO) 技术，实现 400Gbps 高速互联，显著降低功耗与延迟，面向智算中心场景。
     tags:
-    - 网络技术
-    - AI网络
-    - 量子安全
-    - 鸿蒙
-    title: 华为星河AI网络通量一体解决方案
+    - CPO
+    - 智能网卡
+    - 高速互联
+    - 国产芯片
+    title: 国产 CPO 智能网卡 (沐创 & 澜昆微)
   News:
-  - desc: 发布量智开物平台，实现量子机器学习算法突破，在化学模拟与优化问题上效率提升100倍，推动AI与量子计算融合。
+  - desc: 腾讯混元大模型最新版本，采用 MoE 架构，总参数量超 1 万亿，在多项评测中达到领先水平。
     tags:
-    - AI
-    - 量子计算
-    - 科大讯飞
-    - 机器学习
-    title: 科大讯飞深度布局‘AI+量子’
+    - 腾讯混元
+    - Hy3
+    - MoE
+    - 开源
+    title: 腾讯混元 Hy3 preview 发布并开源
