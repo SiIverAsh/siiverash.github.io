@@ -1,126 +1,126 @@
 algorithm:
-- desc: 基于梯度提升框架的集成学习算法，通过正则化防止过拟合，支持并行计算，在分类与回归任务中表现优异。
+- desc: 用于二分类的线性模型，通过Sigmoid函数输出概率，广泛应用于CTR预估、信用评分等领域。
   tags:
-  - 梯度提升
-  - 集成学习
-  - XGBoost
-  - 分类回归
-  title: 'XGBoost: 极致梯度提升算法'
+  - 分类
+  - 线性模型
+  - 机器学习
+  - 基础算法
+  title: 逻辑回归 (Logistic Regression)
 cv_recommend:
-  agency: 大沢事務所
-  hometown: 东京都
-  intro: 花泽香菜是日本知名女性声优，隶属大泽事务所。出生于东京都。以其清亮柔美的声线闻名，擅长演绎各类少女角色，同时也活跃于音乐和电视节目。自2000年代出道以来，出演多部热门作品，声线辨识度极高，深受粉丝喜爱。在声优业界持续展现多才多艺的一面。
-  name: 花泽香菜
-date: '2026-04-24'
+  agency: 81 Produce
+  hometown: 神奈川县
+  intro: 田中美海以其清澈明亮的嗓音和自然的表演风格受到广泛认可。她在众多作品中展现了从活泼少女到沉稳角色的多样声线，凭借扎实的演技持续活跃在声优界。其敬业态度和对角色的深刻理解，使她在观众中拥有良好口碑。(基于声優名鑑2026数据)
+  name: 田中美海
+date: '2026-04-25'
 history:
-- event: 法国作曲家鲁日·德·李尔创作《马赛曲》。
+- event: 法国首次使用断头台执行死刑。
   year: '1792'
-- event: 美国国会图书馆成立。
-  year: '1800'
-- event: 奥斯曼帝国大规模逮捕亚美尼亚知识分子，亚美尼亚种族灭绝开始。
+- event: 加拿大议会大厦发生火灾。
+  year: '1849'
+- event: 加里波利战役开始，澳新军团在土耳其登陆。
   year: '1915'
-- event: 苏联联盟1号返回时降落伞故障，宇航员科马罗夫遇难。
-  year: '1967'
-- event: 哈勃太空望远镜由发现号航天飞机发射升空。
-  year: '1990'
-- event: 中国首次火星探测任务命名为“天问一号”。
-  year: '2020'
+- event: 联合国国际组织会议在旧金山开幕。
+  year: '1945'
+- event: 沃森和克里克在《自然》杂志发表DNA双螺旋结构论文。
+  year: '1953'
+- event: 葡萄牙发生康乃馨革命，推翻独裁政权。
+  year: '1974'
 llm:
-- desc: 2026 年 4 月下旬开源发布，支持超长上下文，编程与多模态能力大幅提升，性能超越此前版本。
+- desc: 9B参数多模态模型，支持全双工语音交互，端侧可运行，在多项基准上媲美大参数模型。
   tags:
-  - DeepSeek
-  - V4
   - 多模态
+  - 端侧
   - 开源
-  title: 'DeepSeek V4: 原生多模态大语言模型'
+  - '2026'
+  title: 'MiniCPM-o 4.5: 端侧多模态全双工模型'
 new_project:
-- desc: 跨平台本地 LLM 运行工具，支持 LLaMA、Mistral 等主流模型，提供简洁 API 与命令行界面。
+- desc: 支持Gemma 4等最新模型，引入gRPC集成和多项性能优化，广泛用于大模型部署。
   tags:
+  - 推理
   - LLM
-  - 本地部署
   - 开源
-  - 跨平台
-  title: ollama/ollama
-  url: https://github.com/ollama/ollama
+  - '2026'
+  title: 'vllm v0.18.0: 高性能LLM推理引擎'
+  url: https://github.com/vllm-project/vllm
 paper:
-- desc: ICLR 2026 论文，通过三维熵感知语义分析与稀疏优化实现高效视觉自回归建模，降低计算成本。
+- desc: 顶会论文推荐：提出多视图语义锚定基础模型，融合图像与文本进行地理定位，在CVPR 2026上发布，超越现有方法。
   tags:
-  - 视觉自回归
-  - ICLR 2026
-  - 高效模型
-  title: 'ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware
-    Semantic Analysis and Sparsity Optimization'
-  url: https://arxiv.org/abs/2602.22948
+  - CVPR 2026
+  - 多视图
+  - 地理定位
+  - 基础模型
+  title: 'GeoBridge: A Semantic-Anchored Multi-View Foundation Model for Geo-Localization'
+  url: https://arxiv.org/abs/2512.02697
 tech:
   Arch:
-  - desc: 全球首款原生支持千亿参数大模型的 RISC-V CPU，性能创该架构新纪录，采用先进工艺。
+  - desc: 基于台积电2nm工艺，全新Zen 6核心，IPC提升显著，支持256核EPYC，预计2026年下半年上市。
     tags:
-    - RISC-V
-    - 玄铁C950
-    - 大模型
-    - 阿里达摩院
-    title: '玄铁 C950: 阿里达摩院 RISC-V 处理器'
+    - AMD
+    - Zen 6
+    - 2nm
+    - 架构
+    title: AMD Zen 6 架构公布：首款2nm计算内核
   Audio:
-  - desc: 基于 Qwen3 语言模型，支持超低延迟流式合成、多语言及零样本语音克隆，音质自然。
+  - desc: 港科大、腾讯微信、北大联合发布，首个支持语音、音乐、音效统一编辑和生成的框架，实现全模态音频理解。
     tags:
-    - TTS
-    - 语音合成
+    - 音频生成
+    - 多模态
+    - 港科大
     - 开源
-    - 多语言
-    title: 'Qwen3-TTS: 阿里云开源多语言语音合成模型'
+    title: 'Audio-Omni: 统一多模态音频理解与生成框架'
   CPU:
-  - desc: 2P+4LP-E 混合架构，集成 2 个 Xe 核显，AI 算力 17 TOPS，面向入门级笔记本与边缘 AI。
+  - desc: 16核32线程，双3D V-Cache缓存，频率5.7GHz，专为开发者和创作者打造。
     tags:
-    - Wildcat Lake
-    - 混合架构
-    - 边缘AI
-    - 低功耗
-    title: Intel Core 300 'Wildcat Lake' 处理器
+    - AMD
+    - Ryzen
+    - 3D V-Cache
+    - '2026'
+    title: AMD Ryzen 9 9950X3D2 Dual Edition：首款双3D V-Cache处理器
   Computer Vision:
-  - desc: ICLR 2026 论文，引入显式局部性归纳偏置，通过局部注意力机制降低计算复杂度，在 ImageNet 等基准上达到 SOTA 性能。
+  - desc: CVPR 2026论文，仅2.05 GFLOPs，融合CNN、Transformer与Mamba隐式注意力，刷新四大裂缝分割基准。
     tags:
-    - Vision Transformer
-    - ICLR 2026
-    - 局部注意力
-    - 图像分类
-    title: Locality-Attending Vision Transformer (LAViT)
+    - CVPR 2026
+    - 语义分割
+    - 轻量化
+    - Mamba
+    title: 'MixerCSeg: 轻量级裂缝分割方法'
   GPU:
-  - desc: 基于 Blackwell 架构，配备 GDDR7 显存，支持 DLSS 4 多帧生成与神经网络渲染，起售价 ¥2499。
+  - desc: 56个CU，16GB GDDR6，光追性能较上代提升45%，支持FSR 4，1440p游戏利器。
     tags:
-    - RTX 5060
-    - Blackwell
-    - DLSS 4
-    - GDDR7
-    title: NVIDIA GeForce RTX 5060 系列
+    - AMD
+    - RDNA 4
+    - RX 9070 XT
+    - 显卡
+    title: AMD Radeon RX 9070 XT：RDNA 4 架构显卡
   Lang:
-  - desc: 2026 年 1 月发布，稳定 never 类型、高级模式匹配改进、cargo 工作区发布支持，提升可靠性与开发效率。
+  - desc: 新增match守卫语法改进，稳定API添加，提升编译器性能，强化内存安全特性。
     tags:
+    - 编程语言
     - Rust
-    - 1.93.0
-    - 模式匹配
-    - never类型
-    title: Rust 1.93.0 编程语言发布
+    - '2026'
+    - 系统编程
+    title: Rust 1.95.0 发布
   NLP:
-  - desc: 采用 MoE 架构，激活参数 35B，支持超长上下文，在编程与视觉任务上显著提升，兼容 OpenClaw 生态。
+  - desc: 基于Qwen3架构，专为编码智能体设计，支持256K上下文，推理成本降低50%，在代码生成任务中达到先进水平。
     tags:
-    - 大语言模型
-    - MoE
-    - 开源
+    - 代码生成
+    - 智能体
     - 阿里云
-    title: 'Qwen3.6-Plus: 阿里云开源大语言模型'
-  Net:
-  - desc: 基于共封装光学 (CPO) 技术，实现 400Gbps 高速互联，显著降低功耗与延迟，面向智算中心场景。
-    tags:
-    - CPO
-    - 智能网卡
-    - 高速互联
-    - 国产芯片
-    title: 国产 CPO 智能网卡 (沐创 & 澜昆微)
-  News:
-  - desc: 腾讯混元大模型最新版本，采用 MoE 架构，总参数量超 1 万亿，在多项评测中达到领先水平。
-    tags:
-    - 腾讯混元
-    - Hy3
-    - MoE
     - 开源
-    title: 腾讯混元 Hy3 preview 发布并开源
+    title: 'Qwen3-Coder: 阿里开源智能体编程模型'
+  Net:
+  - desc: 发布智能体互联网平台及协议框架，支持多智能体协作、动态寻址，旨在实现连接智能。
+    tags:
+    - 网络协议
+    - 智能体
+    - 中国联通
+    - '2026'
+    title: 中国联通CubeMAP智能体互联网协议框架
+  News:
+  - desc: 云知声在自然语言处理顶会ACL 2026上录用4篇论文，覆盖多模态语音识别、文档认知等方向。
+    tags:
+    - ACL 2026
+    - 云知声
+    - NLP
+    - 多模态
+    title: 云知声4篇论文入选ACL 2026
