@@ -1,4 +1,21 @@
 {
+  "2026-04-26": [
+    "WhisperV3-Large-v4: 多语言语音识别增强",
+    "QUIC v2 正式成为RFC 9366标准",
+    "LightGBM 5.0: 梯度提升决策树高效实现",
+    "AMD Ryzen 9 10980X (Zen 6) 首款3nm桌面处理器",
+    "Zig 0.15.0 发布：内存安全零成本抽象",
+    "Intel Lunar Lake 架构详解：能效核与高性能核融合",
+    "Diffusion Transformer for Video Generation (DiT-V) 开源",
+    "Claude 5 Opus: Anthropic 新一代推理模型",
+    "Scalable Video Diffusion with Transformer for 4K Generation",
+    "OpenAI 发布 GPT-5：多模态推理与Agent能力",
+    "vllm 0.20.0: 高性能LLM推理引擎",
+    "Mamba 2.5: 状态空间模型与注意力机制融合",
+    "羊宮妃那",
+    "NVIDIA RTX 6090 (Blackwell Ultra) 规格曝光",
+    "Long-Context Transformer with Shared Memory Attention"
+  ],
   "2026-04-25": [
     "AMD Radeon RX 9070 XT：RDNA 4 架构显卡",
     "云知声4篇论文入选ACL 2026",
@@ -142,20 +159,5 @@
     "Longhorn: State Space Models are Amortized Online Learners",
     "Python 3.13 正式发布",
     "AMD Ryzen 9 9950X 处理器"
-  ],
-  "2026-04-16": [
-    "全球首个具身智能3C精密制造产线落地",
-    "支持向量机：经典分类算法",
-    "花泽香菜",
-    "OpenClaw：个人AI助手开源项目",
-    "Gemma 4：谷歌开源多模态大语言模型",
-    "TUIC协议：下一代网络传输革新者",
-    "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction",
-    "ISAMORE：基于E-Graph反合一的RISC-V定制指令自动化生成",
-    "SongGeneration 2：腾讯清华联合开源音乐生成模型",
-    "中国首款6nm自研GPU正式发售",
-    "C++26 标准正式完成特性冻结",
-    "Intel Core Ultra系列3：首款采用18A制程的处理器",
-    "华为新架构砍了Transformer大动脉"
   ]
 }

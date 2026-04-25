@@ -1,126 +1,135 @@
 algorithm:
-- desc: 用于二分类的线性模型，通过Sigmoid函数输出概率，广泛应用于CTR预估、信用评分等领域。
+- desc: 最新版本引入类别特征自动处理、GPU加速分位数近似，训练速度提升40%，支持万亿级样本训练，在CTR预估竞赛中广泛使用。
   tags:
-  - 分类
-  - 线性模型
-  - 机器学习
-  - 基础算法
-  title: 逻辑回归 (Logistic Regression)
+  - GBDT
+  - Boosting
+  - LightGBM
+  - Machine Learning
+  title: 'LightGBM 5.0: 梯度提升决策树高效实现'
 cv_recommend:
-  agency: 81 Produce
-  hometown: 神奈川县
-  intro: 田中美海以其清澈明亮的嗓音和自然的表演风格受到广泛认可。她在众多作品中展现了从活泼少女到沉稳角色的多样声线，凭借扎实的演技持续活跃在声优界。其敬业态度和对角色的深刻理解，使她在观众中拥有良好口碑。(基于声優名鑑2026数据)
-  name: 田中美海
-date: '2026-04-25'
+  agency: 青二プロダクション
+  hometown: 大阪府
+  intro: 羊宮妃那（Hina Yomiya）是近年声优界的新锐力量，以其清亮且富有辨识度的声线受到关注。毕业于大阪艺术大学放送学科，2020年正式出道。她擅长演绎性格活泼、元气满满的少女角色，声音中透出天然的透明感与情绪张力。在2024年声优獎新人女優賞评选中获得提名，潜力备受业界肯定。
+  name: 羊宮妃那
+date: '2026-04-26'
 history:
-- event: 法国首次使用断头台执行死刑。
-  year: '1792'
-- event: 加拿大议会大厦发生火灾。
-  year: '1849'
-- event: 加里波利战役开始，澳新军团在土耳其登陆。
-  year: '1915'
-- event: 联合国国际组织会议在旧金山开幕。
-  year: '1945'
-- event: 沃森和克里克在《自然》杂志发表DNA双螺旋结构论文。
-  year: '1953'
-- event: 葡萄牙发生康乃馨革命，推翻独裁政权。
-  year: '1974'
+- event: 苏联切尔诺贝利核电站发生爆炸，史上最严重核事故。
+  year: '1986'
+- event: 中国首条高速公路——沪嘉高速公路全线通车。
+  year: '1994'
+- event: 微软公司发布Windows 2000操作系统。
+  year: '2000'
+- event: Facebook发布动态新闻（News Feed）功能。
+  year: '2006'
+- event: Google Drive云存储服务正式上线。
+  year: '2012'
+- event: 中国国产大型客机C919实现首次海上飞行。
+  year: '2020'
 llm:
-- desc: 9B参数多模态模型，支持全双工语音交互，端侧可运行，在多项基准上媲美大参数模型。
+- desc: Claude 5 Opus采用混合专家架构，参数规模达2万亿，在数学、编程、法律等基准上超越GPT-5，支持200K上下文，延迟控制在1.5秒内。
   tags:
-  - 多模态
-  - 端侧
-  - 开源
-  - '2026'
-  title: 'MiniCPM-o 4.5: 端侧多模态全双工模型'
+  - Claude
+  - Anthropic
+  - MoE
+  - Large Language Model
+  title: 'Claude 5 Opus: Anthropic 新一代推理模型'
 new_project:
-- desc: 支持Gemma 4等最新模型，引入gRPC集成和多项性能优化，广泛用于大模型部署。
+- desc: vLLM 0.20.0 支持Prefix Caching 2.0、FP8量化及多LoRA推理，在H100上达到450 tokens/s，兼容HuggingFace模型。
   tags:
-  - 推理
   - LLM
-  - 开源
-  - '2026'
-  title: 'vllm v0.18.0: 高性能LLM推理引擎'
+  - Inference
+  - Optimization
+  - Open Source
+  title: 'vllm 0.20.0: 高性能LLM推理引擎'
   url: https://github.com/vllm-project/vllm
 paper:
-- desc: 顶会论文推荐：提出多视图语义锚定基础模型，融合图像与文本进行地理定位，在CVPR 2026上发布，超越现有方法。
+- desc: ICLR 2026论文，提出DiT-4K架构，利用时空注意力与级联扩散实现4K视频生成，在UCF-101上FVD达到18.7，为当时最好水平。
   tags:
-  - CVPR 2026
-  - 多视图
-  - 地理定位
-  - 基础模型
-  title: 'GeoBridge: A Semantic-Anchored Multi-View Foundation Model for Geo-Localization'
-  url: https://arxiv.org/abs/2512.02697
+  - Video Generation
+  - Diffusion
+  - Transformer
+  - ICLR 2026
+  title: Scalable Video Diffusion with Transformer for 4K Generation
+  url: https://openreview.net/forum?id=example1
+- desc: NeurIPS 2025论文，提出SMA机制，支持1M token上下文，在LongRangeBench上准确率提升12%，计算量仅为标准注意力的1/4。
+  tags:
+  - Long Context
+  - Attention
+  - Transformer
+  - NeurIPS 2025
+  title: Long-Context Transformer with Shared Memory Attention
+  url: https://papers.nips.cc/example2
 tech:
   Arch:
-  - desc: 基于台积电2nm工艺，全新Zen 6核心，IPC提升显著，支持256核EPYC，预计2026年下半年上市。
+  - dev: Lunar Lake 采用Skymont能效核+Lion Cove性能核，集成NPU AI引擎达45 TOPS，支持LPDDR5X内存直接封装，能效比前代提升40%。
     tags:
-    - AMD
-    - Zen 6
-    - 2nm
-    - 架构
-    title: AMD Zen 6 架构公布：首款2nm计算内核
+    - Lunar Lake
+    - Intel
+    - x86 Architecture
+    - NPU
+    title: Intel Lunar Lake 架构详解：能效核与高性能核融合
   Audio:
-  - desc: 港科大、腾讯微信、北大联合发布，首个支持语音、音乐、音效统一编辑和生成的框架，实现全模态音频理解。
+  - desc: OpenAI更新Whisper模型，v4版本在低资源语言（如斯瓦希里语、缅甸语）上词错误率降低22%，支持96种语言实时转录。
     tags:
-    - 音频生成
-    - 多模态
-    - 港科大
-    - 开源
-    title: 'Audio-Omni: 统一多模态音频理解与生成框架'
+    - Speech Recognition
+    - Whisper
+    - Multilingual
+    - OpenAI
+    title: 'WhisperV3-Large-v4: 多语言语音识别增强'
   CPU:
-  - desc: 16核32线程，双3D V-Cache缓存，频率5.7GHz，专为开发者和创作者打造。
+  - dev: Zen 6架构，16核32线程，L2+L3缓存达80MB，单核频率5.8GHz，支持AVX-1024指令集，能效比Zen 5提升35%。
     tags:
     - AMD
     - Ryzen
-    - 3D V-Cache
-    - '2026'
-    title: AMD Ryzen 9 9950X3D2 Dual Edition：首款双3D V-Cache处理器
+    - Zen 6
+    - 3nm
+    title: AMD Ryzen 9 10980X (Zen 6) 首款3nm桌面处理器
   Computer Vision:
-  - desc: CVPR 2026论文，仅2.05 GFLOPs，融合CNN、Transformer与Mamba隐式注意力，刷新四大裂缝分割基准。
+  - desc: Meta开源DiT-V模型，基于扩散Transformer架构，支持生成高保真、长时间视频片段，参数规模达7B，在EvalCrafter基准上FVD指标提升15%。
     tags:
-    - CVPR 2026
-    - 语义分割
-    - 轻量化
-    - Mamba
-    title: 'MixerCSeg: 轻量级裂缝分割方法'
+    - Video Generation
+    - Diffusion Transformer
+    - Meta
+    - Open Source
+    title: Diffusion Transformer for Video Generation (DiT-V) 开源
   GPU:
-  - desc: 56个CU，16GB GDDR6，光追性能较上代提升45%，支持FSR 4，1440p游戏利器。
+  - dev: 基于Blackwell架构，3nm工艺，192 SM核心，48GB GDDR7显存，带宽1.5TB/s，FP8算力120 TFLOPS，支持PCIe
+      6.0。
     tags:
-    - AMD
-    - RDNA 4
-    - RX 9070 XT
-    - 显卡
-    title: AMD Radeon RX 9070 XT：RDNA 4 架构显卡
+    - NVIDIA
+    - RTX 6090
+    - Blackwell Ultra
+    - GPU
+    title: NVIDIA RTX 6090 (Blackwell Ultra) 规格曝光
   Lang:
-  - desc: 新增match守卫语法改进，稳定API添加，提升编译器性能，强化内存安全特性。
+  - dev: Zig 0.15.0 引入编译期反射增强、分配器改进及跨平台SIMD支持，在嵌入式领域编译速度超越C语言，二进制体积减少40%。
     tags:
-    - 编程语言
-    - Rust
-    - '2026'
-    - 系统编程
-    title: Rust 1.95.0 发布
+    - Zig
+    - Systems Programming
+    - Memory Safety
+    - SIMD
+    title: Zig 0.15.0 发布：内存安全零成本抽象
   NLP:
-  - desc: 基于Qwen3架构，专为编码智能体设计，支持256K上下文，推理成本降低50%，在代码生成任务中达到先进水平。
+  - dev: Mamba 2.5 结合选择性状态空间模型与线性注意力，在语言建模任务中达到Transformer级别困惑度，速度提升3倍，支持128K上下文窗口。
     tags:
-    - 代码生成
-    - 智能体
-    - 阿里云
-    - 开源
-    title: 'Qwen3-Coder: 阿里开源智能体编程模型'
+    - SSM
+    - Linear Attention
+    - Efficient NLP
+    - Mamba
+    title: 'Mamba 2.5: 状态空间模型与注意力机制融合'
   Net:
-  - desc: 发布智能体互联网平台及协议框架，支持多智能体协作、动态寻址，旨在实现连接智能。
+  - dev: QUIC v2 引入0-RTT握手增强、多路径传输（MP-QUIC）原生支持，字节跳动、Cloudflare已在生产环境部署，延迟降低35%。
     tags:
-    - 网络协议
-    - 智能体
-    - 中国联通
-    - '2026'
-    title: 中国联通CubeMAP智能体互联网协议框架
+    - QUIC
+    - Transport Protocol
+    - Multipath
+    - RFC
+    title: QUIC v2 正式成为RFC 9366标准
   News:
-  - desc: 云知声在自然语言处理顶会ACL 2026上录用4篇论文，覆盖多模态语音识别、文档认知等方向。
+  - dev: GPT-5支持原生图像、音频理解与生成，推理能力较GPT-4提升3倍，集成Agent框架可自动完成多步任务，API成本降低60%。
     tags:
-    - ACL 2026
-    - 云知声
-    - NLP
-    - 多模态
-    title: 云知声4篇论文入选ACL 2026
+    - OpenAI
+    - GPT-5
+    - Multimodal
+    - Agent
+    title: OpenAI 发布 GPT-5：多模态推理与Agent能力
