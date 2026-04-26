@@ -1,135 +1,127 @@
 algorithm:
-- desc: 最新版本引入类别特征自动处理、GPU加速分位数近似，训练速度提升40%，支持万亿级样本训练，在CTR预估竞赛中广泛使用。
+- desc: 经典监督学习算法，通过寻找最大间隔超平面进行分类，核技巧可处理非线性问题，广泛应用于文本分类、图像识别。
   tags:
-  - GBDT
-  - Boosting
-  - LightGBM
-  - Machine Learning
-  title: 'LightGBM 5.0: 梯度提升决策树高效实现'
+  - 机器学习
+  - 分类算法
+  - 核方法
+  - 监督学习
+  title: 支持向量机 (SVM)
 cv_recommend:
-  agency: 青二プロダクション
-  hometown: 大阪府
-  intro: 羊宮妃那（Hina Yomiya）是近年声优界的新锐力量，以其清亮且富有辨识度的声线受到关注。毕业于大阪艺术大学放送学科，2020年正式出道。她擅长演绎性格活泼、元气满满的少女角色，声音中透出天然的透明感与情绪张力。在2024年声优獎新人女優賞评选中获得提名，潜力备受业界肯定。
-  name: 羊宮妃那
-date: '2026-04-26'
+  agency: 81 Produce
+  hometown: 日本埼玉县
+  intro: 高桥李依是日本新生代实力派声优，1994年出生于埼玉县，所属事务所为81 Produce。她以充满活力的元气声线和精湛的演技著称，能够驾驭从开朗少女到冷酷角色的广泛类型。在舞台上，她以丰富的表情和即兴发挥的颜艺表演深受观众喜爱，被粉丝称为‘颜艺大师’。尽管出道时间较晚，但她迅速积累了大量人气，并多次在声优奖项中获得提名。她的声音清澈富有感染力，为众多角色注入了独特的生命力，是当代日本声优界备受瞩目的存在。
+  name: 高桥李依
+date: '2026-04-27'
 history:
-- event: 苏联切尔诺贝利核电站发生爆炸，史上最严重核事故。
-  year: '1986'
-- event: 中国首条高速公路——沪嘉高速公路全线通车。
+- event: 探险家斐迪南·麦哲伦在菲律宾麦克坦岛被当地土著杀死。
+  year: '1521'
+- event: 荷兰画家伦勃朗因债务问题宣布破产。
+  year: '1656'
+- event: 上海掀起拒俄运动，抗议俄国侵占东北。
+  year: '1903'
+- event: 同盟会在广州发动黄花岗起义，七十二烈士牺牲。
+  year: '1911'
+- event: 希腊在二战中向轴心国投降。
+  year: '1941'
+- event: 中国国际救援队正式成立。
   year: '1994'
-- event: 微软公司发布Windows 2000操作系统。
-  year: '2000'
-- event: Facebook发布动态新闻（News Feed）功能。
-  year: '2006'
-- event: Google Drive云存储服务正式上线。
-  year: '2012'
-- event: 中国国产大型客机C919实现首次海上飞行。
-  year: '2020'
 llm:
-- desc: Claude 5 Opus采用混合专家架构，参数规模达2万亿，在数学、编程、法律等基准上超越GPT-5，支持200K上下文，延迟控制在1.5秒内。
+- desc: 谷歌DeepMind发布Gemma 4，310亿参数开源模型，在多项基准上媲美更大模型，支持多种部署场景。
   tags:
-  - Claude
-  - Anthropic
-  - MoE
-  - Large Language Model
-  title: 'Claude 5 Opus: Anthropic 新一代推理模型'
+  - 谷歌
+  - Gemma 4
+  - 开源LLM
+  - 高效推理
+  title: 'Gemma 4: 谷歌开源310亿参数高效模型'
 new_project:
-- desc: vLLM 0.20.0 支持Prefix Caching 2.0、FP8量化及多LoRA推理，在H100上达到450 tokens/s，兼容HuggingFace模型。
+- desc: OpenClaw是一个开源的个人AI助手，支持任务自动化、代码执行、文件操作等，近期GitHub趋势榜首。
   tags:
-  - LLM
-  - Inference
-  - Optimization
-  - Open Source
-  title: 'vllm 0.20.0: 高性能LLM推理引擎'
-  url: https://github.com/vllm-project/vllm
+  - AI助手
+  - 开源
+  - 自动化
+  - GitHub
+  title: 'OpenClaw: 个人AI助手开源项目'
+  url: https://github.com/openclaw/openclaw
 paper:
-- desc: ICLR 2026论文，提出DiT-4K架构，利用时空注意力与级联扩散实现4K视频生成，在UCF-101上FVD达到18.7，为当时最好水平。
+- desc: ICLR 2026，提出双视觉词汇表统一视觉理解与生成，实现图像分类、分割、生成等多任务单模型框架。
   tags:
-  - Video Generation
-  - Diffusion
-  - Transformer
+  - 视觉理解
+  - 视觉生成
+  - 统一模型
   - ICLR 2026
-  title: Scalable Video Diffusion with Transformer for 4K Generation
-  url: https://openreview.net/forum?id=example1
-- desc: NeurIPS 2025论文，提出SMA机制，支持1M token上下文，在LongRangeBench上准确率提升12%，计算量仅为标准注意力的1/4。
-  tags:
-  - Long Context
-  - Attention
-  - Transformer
-  - NeurIPS 2025
-  title: Long-Context Transformer with Shared Memory Attention
-  url: https://papers.nips.cc/example2
+  title: 'DualToken: Towards Unifying Visual Understanding and Generation with Dual
+    Visual Vocabularies'
+  url: https://arxiv.org/abs/2503.14324
 tech:
   Arch:
-  - dev: Lunar Lake 采用Skymont能效核+Lion Cove性能核，集成NPU AI引擎达45 TOPS，支持LPDDR5X内存直接封装，能效比前代提升40%。
+  - desc: 龙芯LoongArch架构的CPU漏洞处理、原子指令扩展等改进正式合入Linux 7.1内核主线，提升国产CPU生态兼容性。
     tags:
-    - Lunar Lake
-    - Intel
-    - x86 Architecture
-    - NPU
-    title: Intel Lunar Lake 架构详解：能效核与高性能核融合
+    - 龙芯
+    - LoongArch
+    - Linux内核
+    - 国产CPU
+    title: 龙芯LoongArch多项改进合入Linux 7.1内核
   Audio:
-  - desc: OpenAI更新Whisper模型，v4版本在低资源语言（如斯瓦希里语、缅甸语）上词错误率降低22%，支持96种语言实时转录。
+  - desc: 阶跃星辰发布StepAudio 2.5 ASR，500 TPS极速推理，30分钟语音秒级处理，多语言支持，端到端架构。
     tags:
-    - Speech Recognition
-    - Whisper
-    - Multilingual
-    - OpenAI
-    title: 'WhisperV3-Large-v4: 多语言语音识别增强'
+    - 语音识别
+    - ASR
+    - 阶跃星辰
+    - 高性能
+    title: 'StepAudio 2.5 ASR: 阶跃星辰自动语音识别模型'
   CPU:
-  - dev: Zen 6架构，16核32线程，L2+L3缓存达80MB，单核频率5.8GHz，支持AVX-1024指令集，能效比Zen 5提升35%。
+  - desc: 龙芯中科推出基于自主LoongArch架构的新一代处理器，面向服务器和AI场景，性能显著提升。
     tags:
-    - AMD
-    - Ryzen
-    - Zen 6
-    - 3nm
-    title: AMD Ryzen 9 10980X (Zen 6) 首款3nm桌面处理器
+    - 龙芯
+    - 服务器CPU
+    - AI计算
+    - 国产芯片
+    title: 龙芯中科发布多款新一代处理器：剑指服务器与AI计算
   Computer Vision:
-  - desc: Meta开源DiT-V模型，基于扩散Transformer架构，支持生成高保真、长时间视频片段，参数规模达7B，在EvalCrafter基准上FVD指标提升15%。
+  - desc: ICLR 2026 Oral，由南洋理工&字节跳动提出，将法线估计重构为阴影序列预测，解决3D几何估计中的错位问题。
     tags:
-    - Video Generation
-    - Diffusion Transformer
-    - Meta
-    - Open Source
-    title: Diffusion Transformer for Video Generation (DiT-V) 开源
+    - 3D视觉
+    - 法线估计
+    - 阴影序列
+    - ICLR 2026
+    title: 'RoSE: Reconstructing Normal Estimation as Shadow Sequence Prediction'
   GPU:
-  - dev: 基于Blackwell架构，3nm工艺，192 SM核心，48GB GDDR7显存，带宽1.5TB/s，FP8算力120 TFLOPS，支持PCIe
-      6.0。
+  - desc: 泄露信息显示RTX 5090 Ti采用Blackwell架构，配备增强CUDA核心和更快显存，4K光追性能较RTX 5090翻倍，功耗明显增加。
     tags:
     - NVIDIA
-    - RTX 6090
-    - Blackwell Ultra
-    - GPU
-    title: NVIDIA RTX 6090 (Blackwell Ultra) 规格曝光
+    - RTX 5090 Ti
+    - Blackwell
+    - 旗舰显卡
+    title: NVIDIA RTX 5090 Ti：Blackwell架构终极旗舰曝光
   Lang:
-  - dev: Zig 0.15.0 引入编译期反射增强、分配器改进及跨平台SIMD支持，在嵌入式领域编译速度超越C语言，二进制体积减少40%。
+  - desc: Ruby 4.0.3 于4月21日发布，包含多项安全修复和性能改进，提升Web开发稳定性。
     tags:
-    - Zig
-    - Systems Programming
-    - Memory Safety
-    - SIMD
-    title: Zig 0.15.0 发布：内存安全零成本抽象
+    - Ruby
+    - 编程语言
+    - 安全更新
+    - 开源
+    title: Ruby 4.0.3 发布：安全修复与性能改进
   NLP:
-  - dev: Mamba 2.5 结合选择性状态空间模型与线性注意力，在语言建模任务中达到Transformer级别困惑度，速度提升3倍，支持128K上下文窗口。
+  - desc: 智谱AI开源GLM-5.1，支持超长上下文（接近8小时连续工作），在SWE-Bench Pro等基准上登顶，代码能力突出。
     tags:
-    - SSM
-    - Linear Attention
-    - Efficient NLP
-    - Mamba
-    title: 'Mamba 2.5: 状态空间模型与注意力机制融合'
+    - 大语言模型
+    - 开源
+    - 智谱AI
+    - 代码生成
+    title: 'GLM-5.1: 智谱AI开源8小时级自治工程大模型'
   Net:
-  - dev: QUIC v2 引入0-RTT握手增强、多路径传输（MP-QUIC）原生支持，字节跳动、Cloudflare已在生产环境部署，延迟降低35%。
+  - desc: IETF提交IPv8协议草案，提供1,844亿个IP地址，完全向下兼容IPv4，解决地址耗尽问题。
     tags:
-    - QUIC
-    - Transport Protocol
-    - Multipath
-    - RFC
-    title: QUIC v2 正式成为RFC 9366标准
+    - 网络协议
+    - IPv8
+    - IETF
+    - 地址空间
+    title: IPv8草案：IETF提交新一代互联网协议
   News:
-  - dev: GPT-5支持原生图像、音频理解与生成，推理能力较GPT-4提升3倍，集成Agent框架可自动完成多步任务，API成本降低60%。
+  - desc: 追觅科技4月27日至30日在美国硅谷举办发布会，展示AI具身智能最新成果，涵盖机器人、视觉感知等。
     tags:
-    - OpenAI
-    - GPT-5
-    - Multimodal
-    - Agent
-    title: OpenAI 发布 GPT-5：多模态推理与Agent能力
+    - 具身智能
+    - AI机器人
+    - 追觅科技
+    - 硅谷
+    title: 追觅科技在硅谷举行AI具身智能发布会

@@ -1,4 +1,20 @@
 {
+  "2026-04-27": [
+    "RoSE: Reconstructing Normal Estimation as Shadow Sequence Prediction",
+    "支持向量机 (SVM)",
+    "NVIDIA RTX 5090 Ti：Blackwell架构终极旗舰曝光",
+    "Ruby 4.0.3 发布：安全修复与性能改进",
+    "DualToken: Towards Unifying Visual Understanding and Generation with Dual Visual Vocabularies",
+    "Gemma 4: 谷歌开源310亿参数高效模型",
+    "OpenClaw: 个人AI助手开源项目",
+    "高桥李依",
+    "追觅科技在硅谷举行AI具身智能发布会",
+    "GLM-5.1: 智谱AI开源8小时级自治工程大模型",
+    "龙芯LoongArch多项改进合入Linux 7.1内核",
+    "龙芯中科发布多款新一代处理器：剑指服务器与AI计算",
+    "StepAudio 2.5 ASR: 阶跃星辰自动语音识别模型",
+    "IPv8草案：IETF提交新一代互联网协议"
+  ],
   "2026-04-26": [
     "WhisperV3-Large-v4: 多语言语音识别增强",
     "QUIC v2 正式成为RFC 9366标准",
@@ -143,21 +159,5 @@
     "Go语言1.26版本正式发布：泛型限制放宽",
     "Ming-Omni-TTS: 统一语音、音乐与声音生成模型",
     "全球首个单通道400G以太网物理层技术框架发布"
-  ],
-  "2026-04-17": [
-    "脑机接口进入临床应用，实现脑控抓握",
-    "MLX: Apple 的机器学习框架",
-    "W3C WebTransport 工作草案发布",
-    "MiniMax-01: 开源大语言模型",
-    "SAM 3: Segment Anything Model 3",
-    "水濑祈",
-    "AMD Radeon RX 9060 XT 显卡",
-    "HeartMuLa: 开源音乐生成模型",
-    "Google Gemini 2.0 发布",
-    "UCIe 3.0 芯片互连标准发布",
-    "主成分分析 (PCA)",
-    "Longhorn: State Space Models are Amortized Online Learners",
-    "Python 3.13 正式发布",
-    "AMD Ryzen 9 9950X 处理器"
   ]
 }
