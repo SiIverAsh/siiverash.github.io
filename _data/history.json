@@ -1,4 +1,18 @@
 {
+  "2026-04-28": [
+    "WebTransport 工作草案 (W3C)",
+    "文心大模型4.5开源",
+    "小米开源机器人技术",
+    "随机森林 (Random Forest)",
+    "Intel Core Ultra Series 3 (18A)",
+    "上坂堇",
+    "Fun-ASR1.5 语音识别大模型",
+    "LaVR: Latent Space Conditioned Video Re-rendering using Large 4D Reconstruction Models",
+    "Go 1.26 发布",
+    "deer-flow",
+    "进迭时空 RISC-V AI CPU K3",
+    "NVIDIA RTX PRO 5000 Blackwell GPU"
+  ],
   "2026-04-27": [
     "RoSE: Reconstructing Normal Estimation as Shadow Sequence Prediction",
     "支持向量机 (SVM)",
@@ -143,21 +157,5 @@
     "Claude 3.7 Sonnet: 混合推理模型",
     "Stable Audio 2.5: 企业级高保真音频生成",
     "Meta Llama 4: 开源高性能大语言模型"
-  ],
-  "2026-04-18": [
-    "Streaming Visual Geometry Transformer for Real-time Video Understanding",
-    "deer-flow: 分布式工作流引擎",
-    "DeepSeek V4月底发布，首次深度适配华为昇腾芯片",
-    "Qwen3.6-Plus: 阿里通义实验室高性能大语言模型",
-    "DeepSeek V4: 下一代大语言模型",
-    "早见沙织",
-    "Intel Nova Lake-HX: 18A工艺移动端处理器",
-    "NVIDIA GeForce RTX 5080: Blackwell架构消费级显卡",
-    "随机森林：集成学习经典算法",
-    "玄铁C950: 阿里RISC-V架构高性能CPU",
-    "Phi-4-Reasoning-Vision-15B: 微软多模态视觉推理模型",
-    "Go语言1.26版本正式发布：泛型限制放宽",
-    "Ming-Omni-TTS: 统一语音、音乐与声音生成模型",
-    "全球首个单通道400G以太网物理层技术框架发布"
   ]
 }

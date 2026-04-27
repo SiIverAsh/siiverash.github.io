@@ -1,127 +1,115 @@
 algorithm:
-- desc: 经典监督学习算法，通过寻找最大间隔超平面进行分类，核技巧可处理非线性问题，广泛应用于文本分类、图像识别。
+- desc: 传统机器学习或常见算法：基于Bagging策略的集成学习方法，通过构建多棵决策树并投票输出结果，具有抗过拟合、处理高维数据等特性，广泛用于分类与回归任务。
   tags:
-  - 机器学习
-  - 分类算法
-  - 核方法
-  - 监督学习
-  title: 支持向量机 (SVM)
+  - Ensemble Learning
+  - Decision Tree
+  - Bagging
+  title: 随机森林 (Random Forest)
 cv_recommend:
-  agency: 81 Produce
-  hometown: 日本埼玉县
-  intro: 高桥李依是日本新生代实力派声优，1994年出生于埼玉县，所属事务所为81 Produce。她以充满活力的元气声线和精湛的演技著称，能够驾驭从开朗少女到冷酷角色的广泛类型。在舞台上，她以丰富的表情和即兴发挥的颜艺表演深受观众喜爱，被粉丝称为‘颜艺大师’。尽管出道时间较晚，但她迅速积累了大量人气，并多次在声优奖项中获得提名。她的声音清澈富有感染力，为众多角色注入了独特的生命力，是当代日本声优界备受瞩目的存在。
-  name: 高桥李依
-date: '2026-04-27'
+  agency: Voice Kit
+  hometown: 神奈川县
+  intro: 上坂堇以其独特的声音表现力和对多元文化的深入研究而备受关注。她擅长演绎从活泼少女到冷静御姐的多样化角色，在广播节目和现场活动中展现出极强的互动能力。近年来，她积极尝试音乐创作与舞台剧演出，不断拓宽演艺边界，其专业态度与亲和力赢得了广泛好评。
+  name: 上坂堇
+date: '2026-04-28'
 history:
-- event: 探险家斐迪南·麦哲伦在菲律宾麦克坦岛被当地土著杀死。
-  year: '1521'
-- event: 荷兰画家伦勃朗因债务问题宣布破产。
-  year: '1656'
-- event: 上海掀起拒俄运动，抗议俄国侵占东北。
-  year: '1903'
-- event: 同盟会在广州发动黄花岗起义，七十二烈士牺牲。
-  year: '1911'
-- event: 希腊在二战中向轴心国投降。
-  year: '1941'
-- event: 中国国际救援队正式成立。
-  year: '1994'
+- event: 蒙特费拉的康拉德在提尔被阿萨辛派刺杀身亡。
+  year: '1192'
+- event: 伊拉克国王加齐一世正式登基。
+  year: '1937'
+- event: 意大利法西斯领袖贝尼托·墨索里尼被游击队处决。
+  year: '1945'
+- event: 美国以保护侨民为由入侵多米尼加共和国。
+  year: '1965'
+- event: 美国商人丹尼斯·蒂托搭乘俄罗斯联盟号飞船，成为首位太空游客。
+  year: '2001'
+- event: 缅甸总统吴登盛对中国进行国事访问，推动双边关系发展。
+  year: '2012'
 llm:
-- desc: 谷歌DeepMind发布Gemma 4，310亿参数开源模型，在多项基准上媲美更大模型，支持多种部署场景。
+- desc: 大语言模型相关：百度开源文心4.5系列，采用混合专家架构与注意力机制优化，支持长上下文处理，在中文NLU基准测试中表现优异。
   tags:
-  - 谷歌
-  - Gemma 4
-  - 开源LLM
-  - 高效推理
-  title: 'Gemma 4: 谷歌开源310亿参数高效模型'
+  - Baidu
+  - ERNIE 4.5
+  - Open Source
+  title: 文心大模型4.5开源
 new_project:
-- desc: OpenClaw是一个开源的个人AI助手，支持任务自动化、代码执行、文件操作等，近期GitHub趋势榜首。
+- desc: GitHub上trend里的最新项目：字节跳动开源的工作流编排引擎，支持可视化DAG任务调度与多语言插件扩展，适合微服务和数据管道场景。
   tags:
-  - AI助手
-  - 开源
-  - 自动化
-  - GitHub
-  title: 'OpenClaw: 个人AI助手开源项目'
-  url: https://github.com/openclaw/openclaw
+  - Workflow
+  - Orchestration
+  - ByteDance
+  title: deer-flow
+  url: https://github.com/bytedance/deer-flow
 paper:
-- desc: ICLR 2026，提出双视觉词汇表统一视觉理解与生成，实现图像分类、分割、生成等多任务单模型框架。
+- desc: 顶会论文推荐：CVPR 2026接收论文，通过潜空间条件控制实现单张图像到4D动态视频的高质量生成，在物理规律模拟方面取得突破。
   tags:
-  - 视觉理解
-  - 视觉生成
-  - 统一模型
-  - ICLR 2026
-  title: 'DualToken: Towards Unifying Visual Understanding and Generation with Dual
-    Visual Vocabularies'
-  url: https://arxiv.org/abs/2503.14324
+  - CVPR 2026
+  - 4D Generation
+  - Video Re-rendering
+  title: 'LaVR: Latent Space Conditioned Video Re-rendering using Large 4D Reconstruction
+    Models'
+  url: https://cvpr.thecvf.com/virtual/2026/poster/38108
 tech:
   Arch:
-  - desc: 龙芯LoongArch架构的CPU漏洞处理、原子指令扩展等改进正式合入Linux 7.1内核主线，提升国产CPU生态兼容性。
+  - desc: 全球首款适配OpenHarmony 6.1的RISC-V AI CPU K3，采用最新指令集扩展，集成AI加速单元，面向边缘计算与物联网场景。
     tags:
-    - 龙芯
-    - LoongArch
-    - Linux内核
-    - 国产CPU
-    title: 龙芯LoongArch多项改进合入Linux 7.1内核
+    - RISC-V
+    - AI Chip
+    - OpenHarmony
+    title: 进迭时空 RISC-V AI CPU K3
   Audio:
-  - desc: 阶跃星辰发布StepAudio 2.5 ASR，500 TPS极速推理，30分钟语音秒级处理，多语言支持，端到端架构。
+  - desc: 阿里通义实验室发布Fun-ASR1.5，精通30国语言及中文七大方言，基于Conformer架构优化，实现低延迟高精度语音识别。
     tags:
-    - 语音识别
     - ASR
-    - 阶跃星辰
-    - 高性能
-    title: 'StepAudio 2.5 ASR: 阶跃星辰自动语音识别模型'
+    - Alibaba
+    - Multilingual
+    title: Fun-ASR1.5 语音识别大模型
   CPU:
-  - desc: 龙芯中科推出基于自主LoongArch架构的新一代处理器，面向服务器和AI场景，性能显著提升。
+  - desc: 英特尔首款基于18A工艺的处理器，采用全新能效核与高性能核混合架构，集成AI加速引擎NPU，面向AI PC市场，2026年初发布。
     tags:
-    - 龙芯
-    - 服务器CPU
-    - AI计算
-    - 国产芯片
-    title: 龙芯中科发布多款新一代处理器：剑指服务器与AI计算
+    - Intel
+    - 18A
+    - AI PC
+    title: Intel Core Ultra Series 3 (18A)
   Computer Vision:
-  - desc: ICLR 2026 Oral，由南洋理工&字节跳动提出，将法线估计重构为阴影序列预测，解决3D几何估计中的错位问题。
+  - desc: CVPR 2026论文，提出潜空间条件视频重渲染方法，基于大型4D重建模型实现单图到4D视频的生成，支持物理规律感知的动态场景合成。
     tags:
-    - 3D视觉
-    - 法线估计
-    - 阴影序列
-    - ICLR 2026
-    title: 'RoSE: Reconstructing Normal Estimation as Shadow Sequence Prediction'
+    - CVPR 2026
+    - 4D Reconstruction
+    - Video Rendering
+    title: 'LaVR: Latent Space Conditioned Video Re-rendering using Large 4D Reconstruction
+      Models'
   GPU:
-  - desc: 泄露信息显示RTX 5090 Ti采用Blackwell架构，配备增强CUDA核心和更快显存，4K光追性能较RTX 5090翻倍，功耗明显增加。
+  - desc: 基于Blackwell架构的桌面级AI加速卡，配备72GB GDDR7显存，支持第四代Tensor Core和FP4精度，专为智能代理与工作站AI设计。
     tags:
     - NVIDIA
-    - RTX 5090 Ti
     - Blackwell
-    - 旗舰显卡
-    title: NVIDIA RTX 5090 Ti：Blackwell架构终极旗舰曝光
+    - Workstation AI
+    title: NVIDIA RTX PRO 5000 Blackwell GPU
   Lang:
-  - desc: Ruby 4.0.3 于4月21日发布，包含多项安全修复和性能改进，提升Web开发稳定性。
+  - desc: Go 1.26引入迭代器支持、改进的泛型性能、增强的内存安全，以及新的标准库功能，进一步提升并发编程效率，2026年4月正式发布。
     tags:
-    - Ruby
-    - 编程语言
-    - 安全更新
-    - 开源
-    title: Ruby 4.0.3 发布：安全修复与性能改进
+    - Go
+    - Programming Language
+    - Concurrency
+    title: Go 1.26 发布
   NLP:
-  - desc: 智谱AI开源GLM-5.1，支持超长上下文（接近8小时连续工作），在SWE-Bench Pro等基准上登顶，代码能力突出。
+  - desc: 百度开源文心4.5系列模型，包含ERNIE 4.5基础版和Turbo版，支持消费级GPU部署，在中文理解与生成任务上达到领先水平，参数规模达数百亿。
     tags:
-    - 大语言模型
-    - 开源
-    - 智谱AI
-    - 代码生成
-    title: 'GLM-5.1: 智谱AI开源8小时级自治工程大模型'
+    - Baidu
+    - ERNIE
+    - Open Source
+    title: 文心大模型4.5开源
   Net:
-  - desc: IETF提交IPv8协议草案，提供1,844亿个IP地址，完全向下兼容IPv4，解决地址耗尽问题。
+  - desc: W3C发布WebTransport工作草案，原生支持HTTP/3流和数据报，为Web应用提供低延迟、高吞吐的实时通信能力，替代WebSocket的下一代协议。
     tags:
-    - 网络协议
-    - IPv8
-    - IETF
-    - 地址空间
-    title: IPv8草案：IETF提交新一代互联网协议
+    - W3C
+    - HTTP/3
+    - Real-time Communication
+    title: WebTransport 工作草案 (W3C)
   News:
-  - desc: 追觅科技4月27日至30日在美国硅谷举办发布会，展示AI具身智能最新成果，涵盖机器人、视觉感知等。
+  - desc: 小米于2026年4月27日开源其最新机器人核心技术，包括运动控制与感知算法，推动具身智能社区发展，降低机器人研发门槛。
     tags:
-    - 具身智能
-    - AI机器人
-    - 追觅科技
-    - 硅谷
-    title: 追觅科技在硅谷举行AI具身智能发布会
+    - Xiaomi
+    - Open Source
+    - Robotics
+    title: 小米开源机器人技术
