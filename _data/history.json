@@ -1,4 +1,20 @@
 {
+  "2026-04-29": [
+    "DeepSeek-V4 Preview: 百万上下文开源模型",
+    "发改委叫停Meta收购Manus：AI技术主权争议",
+    "Intel Xeon 600系列工作站处理器发布",
+    "mruby 4.0.0 发布：轻量级Ruby实现",
+    "K-means聚类算法",
+    "Wi-Fi 7 (802.11be) 正式标准发布",
+    "Vision Banana: 指令微调图像生成器",
+    "everything-claude-code: Claude代码增强框架",
+    "AMD Radeon RX 9060 XT: RDNA 4中端显卡",
+    "MathForge: 用难题驱动强化学习提升大模型数学推理",
+    "VibeVoice ASR: 长语音结构化识别",
+    "芯擎科技5nm车规级AI芯片龍鹰二号",
+    "通义千问 Qwen3.6-27B 开源",
+    "水濑祈"
+  ],
   "2026-04-28": [
     "WebTransport 工作草案 (W3C)",
     "文心大模型4.5开源",
@@ -141,21 +157,5 @@
     "YOLOv12: 新一代实时目标检测框架",
     "LongCat-AudioDiT: 美团开源高保真零样本语音克隆模型",
     "K-近邻算法：经典无参数分类与回归方法"
-  ],
-  "2026-04-19": [
-    "ViT-5: 新一代视觉Transformer骨干网络",
-    "石川由依",
-    "Cilium 1.16: 基于eBPF的云原生网络方案",
-    "AMD Zen 6: 2nm工艺处理器架构",
-    "Intel Arc Pro B70: Big Battlemage架构专业显卡",
-    "NVIDIA/TensorRT-LLM: 高性能LLM推理引擎",
-    "AMD Ryzen Threadripper 9960X: 高性能工作站CPU",
-    "WeatherRemover: All-in-one Adverse Weather Removal with Multi-scale Feature Map Compression",
-    "中国科学家首次实现人工球状闪电",
-    "Rust 1.95.0: 内存安全语言重大更新",
-    "AdaBoost: 自适应提升算法",
-    "Claude 3.7 Sonnet: 混合推理模型",
-    "Stable Audio 2.5: 企业级高保真音频生成",
-    "Meta Llama 4: 开源高性能大语言模型"
   ]
 }

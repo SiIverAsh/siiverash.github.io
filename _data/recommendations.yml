@@ -1,115 +1,126 @@
 algorithm:
-- desc: 传统机器学习或常见算法：基于Bagging策略的集成学习方法，通过构建多棵决策树并投票输出结果，具有抗过拟合、处理高维数据等特性，广泛用于分类与回归任务。
+- desc: 无监督学习算法，将数据划分为K个簇，通过迭代最小化簇内距离平方和，是经典聚类方法。
   tags:
-  - Ensemble Learning
-  - Decision Tree
-  - Bagging
-  title: 随机森林 (Random Forest)
+  - 无监督
+  - 聚类
+  - 迭代
+  - 距离度量
+  title: K-means聚类算法
 cv_recommend:
-  agency: Voice Kit
-  hometown: 神奈川县
-  intro: 上坂堇以其独特的声音表现力和对多元文化的深入研究而备受关注。她擅长演绎从活泼少女到冷静御姐的多样化角色，在广播节目和现场活动中展现出极强的互动能力。近年来，她积极尝试音乐创作与舞台剧演出，不断拓宽演艺边界，其专业态度与亲和力赢得了广泛好评。
-  name: 上坂堇
-date: '2026-04-28'
+  agency: AXL-ON (アクセルワン)
+  hometown: 东京都
+  intro: 水濑祈是日本当代最具影响力的女性声优之一，2010年代出道后迅速崛起。她以清澈透明且富有情感张力的声线著称，能够精准驾驭从天真少女到成熟女性跨度极大的角色。在配音工作之外，她还作为歌手活跃，多次举办个人演唱会并参与音乐企划。凭借稳定的演技和广泛的可塑性，水濑祈多次获得声优奖项，是业内公认的一线实力派。她的存在不仅推动了角色形象的丰富，也展现了声优行业多元化发展的可能性。
+  name: 水濑祈
+date: '2026-04-29'
 history:
-- event: 蒙特费拉的康拉德在提尔被阿萨辛派刺杀身亡。
-  year: '1192'
-- event: 伊拉克国王加齐一世正式登基。
-  year: '1937'
-- event: 意大利法西斯领袖贝尼托·墨索里尼被游击队处决。
-  year: '1945'
-- event: 美国以保护侨民为由入侵多米尼加共和国。
-  year: '1965'
-- event: 美国商人丹尼斯·蒂托搭乘俄罗斯联盟号飞船，成为首位太空游客。
-  year: '2001'
-- event: 缅甸总统吴登盛对中国进行国事访问，推动双边关系发展。
-  year: '2012'
+- event: 吉迪恩·森贝克获得拉链专利，现代拉链诞生。
+  year: '1913'
+- event: 蒂姆·伯纳斯-李在alt.hypertext新闻组发布万维网项目摘要。
+  year: '1991'
+- event: 苹果发布Mac OS X Tiger 10.4，引入Spotlight和Dashboard。
+  year: '2005'
+- event: Google宣布允许开发者root Google Glass，开放平台。
+  year: '2013'
+- event: 苹果和谷歌发布COVID-19接触追踪API测试版。
+  year: '2020'
+- event: NIST推出评估生成式AI安全性的新平台。
+  year: '2024'
 llm:
-- desc: 大语言模型相关：百度开源文心4.5系列，采用混合专家架构与注意力机制优化，支持长上下文处理，在中文NLU基准测试中表现优异。
+- desc: 270亿参数稠密开源模型，编程能力超越15倍规模MoE模型，支持Agentic Coding，可本地部署。
   tags:
-  - Baidu
-  - ERNIE 4.5
-  - Open Source
-  title: 文心大模型4.5开源
+  - 开源
+  - 稠密模型
+  - 编程
+  - Agent
+  title: 通义千问 Qwen3.6-27B 开源
 new_project:
-- desc: GitHub上trend里的最新项目：字节跳动开源的工作流编排引擎，支持可视化DAG任务调度与多语言插件扩展，适合微服务和数据管道场景。
+- desc: Systematic Claude Code配置与插件集合，提供模板、提示和工具，提升编码效率，GitHub爆星。
   tags:
-  - Workflow
-  - Orchestration
-  - ByteDance
-  title: deer-flow
-  url: https://github.com/bytedance/deer-flow
+  - Claude
+  - 代码助手
+  - 插件
+  - 增强
+  title: 'everything-claude-code: Claude代码增强框架'
+  url: https://github.com/pcoulbourne/everything-claude-code
 paper:
-- desc: 顶会论文推荐：CVPR 2026接收论文，通过潜空间条件控制实现单张图像到4D动态视频的高质量生成，在物理规律模拟方面取得突破。
+- desc: ICLR 2026 Outstanding Paper，通过自动生成高难度数学题目并进行强化学习训练，显著提升LLM数学推理能力。
   tags:
-  - CVPR 2026
-  - 4D Generation
-  - Video Re-rendering
-  title: 'LaVR: Latent Space Conditioned Video Re-rendering using Large 4D Reconstruction
-    Models'
-  url: https://cvpr.thecvf.com/virtual/2026/poster/38108
+  - 强化学习
+  - 数学推理
+  - LLM
+  - 难题生成
+  title: 'MathForge: 用难题驱动强化学习提升大模型数学推理'
+  url: https://arxiv.org/pdf/2601.20614
 tech:
   Arch:
-  - desc: 全球首款适配OpenHarmony 6.1的RISC-V AI CPU K3，采用最新指令集扩展，集成AI加速单元，面向边缘计算与物联网场景。
+  - desc: 5nm工艺，200 TOPS AI算力，舱驾融合架构，支持L4级自动驾驶，集成CPU、GPU、NPU。
     tags:
-    - RISC-V
-    - AI Chip
-    - OpenHarmony
-    title: 进迭时空 RISC-V AI CPU K3
+    - 5nm
+    - 车规级
+    - AI芯片
+    - 舱驾融合
+    title: 芯擎科技5nm车规级AI芯片龍鹰二号
   Audio:
-  - desc: 阿里通义实验室发布Fun-ASR1.5，精通30国语言及中文七大方言，基于Conformer架构优化，实现低延迟高精度语音识别。
+  - desc: 微软发布，支持60分钟音频一次性转写，多说话人感知，集成实时TTS和语音到语音管道，推理速度快。
     tags:
     - ASR
-    - Alibaba
-    - Multilingual
-    title: Fun-ASR1.5 语音识别大模型
+    - 长音频
+    - 多说话人
+    - 实时
+    title: 'VibeVoice ASR: 长语音结构化识别'
   CPU:
-  - desc: 英特尔首款基于18A工艺的处理器，采用全新能效核与高性能核混合架构，集成AI加速引擎NPU，面向AI PC市场，2026年初发布。
+  - desc: 最多86核心，支持128条PCIe 5.0通道，4TB DDR5内存，集成AI加速引擎，面向专业工作站。
     tags:
-    - Intel
-    - 18A
-    - AI PC
-    title: Intel Core Ultra Series 3 (18A)
+    - Xeon
+    - 工作站
+    - 多核
+    - PCIe 5.0
+    title: Intel Xeon 600系列工作站处理器发布
   Computer Vision:
-  - desc: CVPR 2026论文，提出潜空间条件视频重渲染方法，基于大型4D重建模型实现单图到4D视频的生成，支持物理规律感知的动态场景合成。
+  - desc: Google DeepMind提出，将图像生成器作为通用视觉学习者，在分割和深度估计上超越SAM 3和Depth Anything V3，实现生成即理解。
     tags:
-    - CVPR 2026
-    - 4D Reconstruction
-    - Video Rendering
-    title: 'LaVR: Latent Space Conditioned Video Re-rendering using Large 4D Reconstruction
-      Models'
+    - 图像生成
+    - 分割
+    - 深度估计
+    - 通用视觉
+    title: 'Vision Banana: 指令微调图像生成器'
   GPU:
-  - desc: 基于Blackwell架构的桌面级AI加速卡，配备72GB GDDR7显存，支持第四代Tensor Core和FP4精度，专为智能代理与工作站AI设计。
+  - desc: 16GB GDDR7显存，RDNA 4架构，150W功耗，面向1080p高画质游戏，支持FSR 4。
     tags:
-    - NVIDIA
-    - Blackwell
-    - Workstation AI
-    title: NVIDIA RTX PRO 5000 Blackwell GPU
+    - RDNA 4
+    - 16GB
+    - GDDR7
+    - 中端
+    title: 'AMD Radeon RX 9060 XT: RDNA 4中端显卡'
   Lang:
-  - desc: Go 1.26引入迭代器支持、改进的泛型性能、增强的内存安全，以及新的标准库功能，进一步提升并发编程效率，2026年4月正式发布。
+  - desc: 新增JIT编译支持，性能提升显著，内存占用更小，适合嵌入式系统。
     tags:
-    - Go
-    - Programming Language
-    - Concurrency
-    title: Go 1.26 发布
+    - mruby
+    - Ruby
+    - JIT
+    - 嵌入式
+    title: mruby 4.0.0 发布：轻量级Ruby实现
   NLP:
-  - desc: 百度开源文心4.5系列模型，包含ERNIE 4.5基础版和Turbo版，支持消费级GPU部署，在中文理解与生成任务上达到领先水平，参数规模达数百亿。
+  - desc: 1.6万亿参数MoE架构，支持1M上下文窗口，Agent与代码能力比肩顶尖闭源模型，价格依然亲民。
     tags:
-    - Baidu
-    - ERNIE
-    - Open Source
-    title: 文心大模型4.5开源
+    - MoE
+    - 长上下文
+    - 开源
+    - Agent
+    title: 'DeepSeek-V4 Preview: 百万上下文开源模型'
   Net:
-  - desc: W3C发布WebTransport工作草案，原生支持HTTP/3流和数据报，为Web应用提供低延迟、高吞吐的实时通信能力，替代WebSocket的下一代协议。
+  - desc: IEEE正式发布Wi-Fi 7标准，支持320MHz信道、MLO多链路操作，峰值速率达46Gbps，时延低于1ms。
     tags:
-    - W3C
-    - HTTP/3
-    - Real-time Communication
-    title: WebTransport 工作草案 (W3C)
+    - Wi-Fi 7
+    - 802.11be
+    - MLO
+    - 高吞吐
+    title: Wi-Fi 7 (802.11be) 正式标准发布
   News:
-  - desc: 小米于2026年4月27日开源其最新机器人核心技术，包括运动控制与感知算法，推动具身智能社区发展，降低机器人研发门槛。
+  - desc: Meta拟收购AI助手Manus，中国发改委以国家安全为由否决，引发全球AI技术主权讨论。
     tags:
-    - Xiaomi
-    - Open Source
-    - Robotics
-    title: 小米开源机器人技术
+    - AI监管
+    - 并购
+    - 技术主权
+    - Meta
+    title: 发改委叫停Meta收购Manus：AI技术主权争议
