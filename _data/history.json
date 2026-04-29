@@ -1,4 +1,20 @@
 {
+  "2026-04-30": [
+    "Arm AGI CPU: 首款代理式AI专用处理器",
+    "XGBoost",
+    "Python 3.15.0a8 发布",
+    "HYDRA: 统一多模态生成与理解的表示协调分词器",
+    "Intel Core Ultra 7 270K Plus (Arrow Lake Refresh)",
+    "NVIDIA GeForce RTX 5070",
+    "Modeling Cross-vision Synergy for Unified Large Vision Model",
+    "OpenR: 开源推理框架",
+    "Kimi K2.6: 月之暗面新一代智能体编码模型",
+    "6G标准化工作正式启动",
+    "伊藤美来",
+    "Kimi K2.6",
+    "中科曙光超智融合集群接入全国一体化算力网",
+    "Bridging the Gap: Speech-LLM与端到端架构的多语言对话ASR比较"
+  ],
   "2026-04-29": [
     "DeepSeek-V4 Preview: 百万上下文开源模型",
     "发改委叫停Meta收购Manus：AI技术主权争议",
@@ -141,21 +157,5 @@
     "Understanding and Improving Length Generalization in Hierarchical Sparse Attention Models",
     "华为首款AI眼镜发布: 集成鸿蒙AI助手",
     "AONP: 中国移动智能体互联网开放网络协议框架"
-  ],
-  "2026-04-20": [
-    "GLM-5.1: 智谱AI开源千亿参数大语言模型",
-    "进迭时空 K3: 全球首款符合RVA23规范的量产RISC-V芯片",
-    "Istio 1.30: 服务网格架构重大更新",
-    "鬼头明里",
-    "Kotlin 2.3.20: JetBrains 发布高效编程语言更新",
-    "Gemini 2.5 Pro: 谷歌新一代多模态大语言模型",
-    "ERGO: Efficient High-Resolution Visual Understanding for Vision-Language Models",
-    "Intel Arc Pro B60: 24GB显存专业显卡",
-    "英伟达发布全球首个开源量子AI模型Ising",
-    "AMD Ryzen 8000系列: 混合架构桌面处理器",
-    "localGPT: 本地文档对话开源项目",
-    "YOLOv12: 新一代实时目标检测框架",
-    "LongCat-AudioDiT: 美团开源高保真零样本语音克隆模型",
-    "K-近邻算法：经典无参数分类与回归方法"
   ]
 }
