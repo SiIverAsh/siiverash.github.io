@@ -1,4 +1,20 @@
 {
+  "2026-05-01": [
+    "我国主导研制的汇智同步网络（WiTSnet）工业通信系列国际标准成功立项",
+    "Wan-Weaver: Interleaved Multi-modal Generation via Decoupled Training",
+    "OpenAI发布GPT-5.5：新一代语言模型",
+    "Qwen3-ASR: 通义千问语音识别模型",
+    "主成分分析 (PCA)",
+    "小原好美",
+    "Rust 1.95.0 发布",
+    "AMD推出锐龙9 9950X3D2：首款双路3D V-Cache桌面处理器",
+    "文心5.0 (ERNIE 5.0): 2.4万亿参数原生全模态大模型",
+    "LongCat-Next: 原生多模态AI，视觉和语音成为AI的母语",
+    "Qwen3-Omni: 全模态开源大模型",
+    "NVIDIA GeForce RTX 5060 发布：搭载DLSS 4与Blackwell架构",
+    "TIPSv2: Advancing Vision-Language Pretraining with Enhanced Patch-Text Alignment",
+    "ArchAgent: AI仅用两天设计出性能提升5.3%的缓存策略"
+  ],
   "2026-04-30": [
     "Arm AGI CPU: 首款代理式AI专用处理器",
     "XGBoost",
@@ -141,21 +157,5 @@
     "Python 3.14: 2026年重大版本更新",
     "Gemini 3.1 Flash TTS: 谷歌超实时可控语音生成",
     "华为麒麟9030S: 移动端旗舰芯片"
-  ],
-  "2026-04-21": [
-    "Ultralytics YOLO26: 边缘优先视觉AI新标杆",
-    "TypeScript 6.0: 静态类型语言重大更新",
-    "茅野爱衣",
-    "Gemma 4: Google 最强开源模型系列",
-    "OmniVoice: 小米开源多语言TTS模型",
-    "棣山科技 2nm AI GPU: 兼容CUDA的国产芯片",
-    "Apple M4芯片: 新一代苹果自研处理器",
-    "朴素贝叶斯分类器: 基于贝叶斯定理的概率分类算法",
-    "Cortex: 从零构建大模型的完整实践",
-    "Yuan3.0-Ultra: 开源高性能大语言模型",
-    "UALink: 新一代加速器互连规范",
-    "Understanding and Improving Length Generalization in Hierarchical Sparse Attention Models",
-    "华为首款AI眼镜发布: 集成鸿蒙AI助手",
-    "AONP: 中国移动智能体互联网开放网络协议框架"
   ]
 }

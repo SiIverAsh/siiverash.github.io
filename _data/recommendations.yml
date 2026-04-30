@@ -1,126 +1,127 @@
 algorithm:
-- desc: 梯度提升决策树的高效实现，支持并行训练、正则化、缺失值处理，在分类、回归、排序等任务中广泛使用，是Kaggle竞赛的经典算法。
+- desc: 经典无监督降维算法，通过正交变换将数据投影到方差最大的主成分方向，广泛用于数据预处理、可视化与去噪。
   tags:
-  - Boosting
-  - 梯度提升
-  - 分类
-  - 回归
-  title: XGBoost
+  - 降维
+  - 无监督学习
+  - 特征提取
+  - PCA
+  title: 主成分分析 (PCA)
 cv_recommend:
-  agency: Voice Kit
-  hometown: 东京都
-  intro: 伊藤美来是日本女性声优，1996年10月12日出生，隶属于Voice Kit。她拥有清澈明亮且富有穿透力的声线，2019年获第13回声优奖新人女声优奖。在动画、游戏、音乐等多领域活跃，以其亲切自然、情感细腻的演绎风格受到广泛喜爱，是新生代声优中的佼佼者。
-  name: 伊藤美来
-date: '2026-04-30'
+  agency: 大沢事務所
+  hometown: 神奈川县
+  intro: 拥有清澈且富有透明感的嗓音，擅长演绎从天真烂漫的少女到成熟稳重的角色。演技自然细腻，能够灵活驾驭多种性格的人物。在广播节目和活动中展现出独特的亲和力与幽默感，深受听众喜爱。近年来持续活跃于多领域，凭借扎实的演技功底和甜美的形象获得了广泛支持。作为新生代声优，她不断挑战自我，在各类媒体中展现多面魅力。
+  name: 小原好美
+date: '2026-05-01'
 history:
-- event: 德国数学家、物理学家卡尔·弗里德里希·高斯出生。
-  year: '1777'
-- event: 苏联红军攻占柏林，阿道夫·希特勒自杀。
+- event: 第一届伦敦世界博览会（万国工业博览会）在伦敦海德公园开幕。
+  year: '1851'
+- event: 芝加哥干草市场暴动，随后成为五一国际劳动节的起源。
+  year: '1886'
+- event: 苏联红军完全占领柏林，二战欧洲战场即将结束。
   year: '1945'
-- event: 越南战争结束，西贡（今胡志明市）被越南人民军占领。
-  year: '1975'
-- event: 世界排名第一的网球选手莫妮卡·塞莱斯在德国汉堡比赛时被刺伤。
-  year: '1993'
-- event: 北京奥运会进入倒计时100天。
-  year: '2008'
-- event: 日本明仁天皇退位，平成时代结束。
-  year: '2019'
+- event: 巴西F1车神艾尔顿·塞纳在圣马力诺大奖赛中不幸身亡。
+  year: '1994'
+- event: 欧盟实现史上最大规模东扩，十个新成员国正式加入。
+  year: '2004'
+- event: 美军在巴基斯坦击毙基地组织首领本·拉登。
+  year: '2011'
 llm:
-- desc: 月之暗面于2026年4月发布并开源，代码能力达到GPT-5.4水平，支持Agent集群自主编程，在HumanEval和SWE-bench上刷新纪录。
+- desc: 百度发布的2.4万亿参数全模态大模型，融合文本、图像、语音、视频理解与生成，采用MoE架构，多项任务超越GPT-4。
   tags:
-  - 智能体
-  - 代码
-  - 开源
-  - 月之暗面
-  title: Kimi K2.6
+  - 百度
+  - 文心大模型
+  - 全模态
+  - 2.4万亿
+  title: '文心5.0 (ERNIE 5.0): 2.4万亿参数原生全模态大模型'
 new_project:
-- desc: 基于强化学习的LLM推理增强框架，支持树搜索、反思等策略，可无缝集成主流模型，提升数学、代码等推理任务的准确率。
+- desc: 阿里Qwen团队开源原生端到端全模态模型，理解文本、音频、图像、视频并实时生成语音，支持多种输入输出组合。
   tags:
-  - 推理
-  - 强化学习
-  - LLM
+  - 全模态
   - 开源
-  title: 'OpenR: 开源推理框架'
-  url: https://github.com/openreasoner/openr
+  - Qwen
+  - 阿里
+  title: 'Qwen3-Omni: 全模态开源大模型'
+  url: https://github.com/QwenLM/Qwen3-Omni
 paper:
-- desc: CVPR 2026论文，提出跨视觉协同建模方法，统一多种视觉任务（分类、检测、分割）到单一大规模视觉模型，在12个基准上达到SOTA。
+- desc: CVPR 2026论文，提出解耦训练框架实现文本与图像的交替生成，在交错多模态生成任务上达到新SOTA。
   tags:
-  - CVPR
-  - 视觉
-  - 统一模型
-  - 协同
-  title: Modeling Cross-vision Synergy for Unified Large Vision Model
-  url: https://arxiv.org/abs/2603.03564
+  - 多模态生成
+  - CVPR 2026
+  - 解耦训练
+  - Wan-Weaver
+  title: 'Wan-Weaver: Interleaved Multi-modal Generation via Decoupled Training'
+  url: https://arxiv.org/abs/2603.25706v2
 tech:
   Arch:
-  - desc: 2026年3月发布，采用全新微架构，集成AI加速单元，单机架可扩展至4.5万核心，功耗效率较前代提升3倍，专为云端Agent推理设计。
+  - desc: AI自动设计缓存策略，采用强化学习探索设计空间，在模拟中超越人工设计的LRU策略，体现AI在体系结构创新潜力。
     tags:
-    - Arm
-    - AGI
-    - AI处理器
-    - 数据中心
-    title: 'Arm AGI CPU: 首款代理式AI专用处理器'
+    - AI硬件
+    - 缓存策略
+    - 自动化设计
+    - 体系结构
+    title: 'ArchAgent: AI仅用两天设计出性能提升5.3%的缓存策略'
   Audio:
-  - desc: arxiv 2601.01461，系统对比Speech-LLM与端到端模型在多语言对话语音识别中的表现，发现Speech-LLM在低资源语言上优势显著。
+  - desc: 阿里巴巴开源，支持52种语种与方言，1.7B版本在LibriSpeech等基准上达到SOTA，采用Conformer-CTC架构。
     tags:
     - 语音识别
     - 多语言
-    - Speech-LLM
-    - 端到端
-    title: 'Bridging the Gap: Speech-LLM与端到端架构的多语言对话ASR比较'
+    - 开源
+    - Qwen
+    title: 'Qwen3-ASR: 通义千问语音识别模型'
   CPU:
-  - desc: 8个Lion Cove性能核+16个Skymont能效核，24线程，最高5.5GHz，36MB缓存，支持DDR5-7200，LGA1851接口，游戏性能提升15%。
+  - desc: 搭载双路AMD 3D V-Cache技术，总缓存达256MB，专为开发者、创作者与游戏玩家打造，2026年4月发布。
     tags:
-    - Arrow Lake
-    - Intel
-    - Core Ultra 7
-    - LGA1851
-    title: Intel Core Ultra 7 270K Plus (Arrow Lake Refresh)
+    - AMD
+    - Ryzen
+    - 3D V-Cache
+    - 桌面处理器
+    title: AMD推出锐龙9 9950X3D2：首款双路3D V-Cache桌面处理器
   Computer Vision:
-  - desc: CVPR 2026论文，提出表示协调分词器（Representation-Harmonized Tokenization），将多模态生成与理解统一在同一框架下，在图像生成、视频理解等任务上达到SOTA。
+  - desc: 谷歌DeepMind开源，实现patch-text对齐最优表现，CVPR 2026论文，基于多模态对比学习框架，在零样本分类和检索任务上达到SOTA。
     tags:
     - 多模态
-    - 生成
-    - 理解
-    - Tokenization
-    title: 'HYDRA: 统一多模态生成与理解的表示协调分词器'
-  GPU:
-  - desc: 基于Blackwell架构，6400个CUDA核心，12GB GDDR7显存（192-bit），250W TGP，支持DLSS 4与全景光线追踪，2K游戏性能飞跃。
-    tags:
-    - RTX 5070
-    - Blackwell
-    - GDDR7
-    - NVIDIA
-    title: NVIDIA GeForce RTX 5070
-  Lang:
-  - desc: 2026年4月30日发布Alpha版本，引入模式匹配增强、改进的异常组、PEP 736（关键字参数简写）等新特性，性能进一步优化。
-    tags:
-    - Python
-    - '3.15'
-    - Alpha
-    - 新语法
-    title: Python 3.15.0a8 发布
-  NLP:
-  - desc: 2026年4月开源，代码能力对标GPT-5.4，采用Agent集群架构，支持复杂编程任务自主拆解与执行，推理效率提升3倍。
-    tags:
-    - 智能体
-    - 代码
+    - 视觉语言预训练
+    - CVPR 2026
     - 开源
-    - 月之暗面
-    title: 'Kimi K2.6: 月之暗面新一代智能体编码模型'
+    title: 'TIPSv2: Advancing Vision-Language Pretraining with Enhanced Patch-Text
+      Alignment'
+  GPU:
+  - desc: 基于Blackwell架构，支持DLSS 4多帧生成与神经网络渲染，配备GDDR7显存，起售价2499元，2026年4月上市。
+    tags:
+    - NVIDIA
+    - RTX 5060
+    - Blackwell
+    - DLSS 4
+    title: NVIDIA GeForce RTX 5060 发布：搭载DLSS 4与Blackwell架构
+  Lang:
+  - desc: 带来增量编译改进、新的const泛型特性，以及更强大的类型推断，进一步提升编译速度和安全性。
+    tags:
+    - Rust
+    - 编程语言
+    - 编译优化
+    - 内存安全
+    title: Rust 1.95.0 发布
+  NLP:
+  - desc: 美团技术团队发布，将视觉和语音作为原生输入令牌，与文本统一建模，实现多模态理解与生成，在多项基准上超越前人。
+    tags:
+    - 多模态
+    - 美团
+    - 原生多模态
+    - AI
+    title: 'LongCat-Next: 原生多模态AI，视觉和语音成为AI的母语'
   Net:
-  - desc: 2026年3月，3GPP正式启动6G标准化项目，首个完整标准版本（Release 21）预计2029年3月冻结，聚焦AI原生网络与太赫兹通信。
+  - desc: 中国主导的工业互联网通信国际标准，实现纳秒级时间同步，支持确定性低延迟通信，已在IETF成功立项。
     tags:
-    - 6G
-    - 3GPP
-    - 标准化
-    - 太赫兹
-    title: 6G标准化工作正式启动
+    - 工业互联网
+    - 国际标准
+    - 同步网络
+    - WiTSnet
+    title: 我国主导研制的汇智同步网络（WiTSnet）工业通信系列国际标准成功立项
   News:
-  - desc: 2026年4月，中科曙光6万卡AI4S计算集群正式接入国家算力网，提供普惠AI算力，支持大型科学计算与AI训练，标志AI4S进入快车道。
+  - desc: GPT-5.5在推理、编码和多模态能力上显著提升，支持更长上下文，定位AI超级应用，2026年4月发布。
     tags:
-    - 算力网
-    - 中科曙光
-    - AI4S
-    - 超智融合
-    title: 中科曙光超智融合集群接入全国一体化算力网
+    - OpenAI
+    - GPT-5.5
+    - 语言模型
+    - 多模态
+    title: OpenAI发布GPT-5.5：新一代语言模型
