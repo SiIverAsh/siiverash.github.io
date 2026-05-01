@@ -1,127 +1,127 @@
 algorithm:
-- desc: 经典无监督降维算法，通过正交变换将数据投影到方差最大的主成分方向，广泛用于数据预处理、可视化与去噪。
+- desc: 基于贝叶斯定理与特征条件独立假设的简单高效分类算法，常用于文本分类、垃圾邮件过滤等场景，是机器学习入门经典算法之一。
   tags:
-  - 降维
-  - 无监督学习
-  - 特征提取
-  - PCA
-  title: 主成分分析 (PCA)
+  - 贝叶斯
+  - 分类
+  - 文本分类
+  - 基础算法
+  title: 朴素贝叶斯分类器
 cv_recommend:
-  agency: 大沢事務所
-  hometown: 神奈川县
-  intro: 拥有清澈且富有透明感的嗓音，擅长演绎从天真烂漫的少女到成熟稳重的角色。演技自然细腻，能够灵活驾驭多种性格的人物。在广播节目和活动中展现出独特的亲和力与幽默感，深受听众喜爱。近年来持续活跃于多领域，凭借扎实的演技功底和甜美的形象获得了广泛支持。作为新生代声优，她不断挑战自我，在各类媒体中展现多面魅力。
-  name: 小原好美
-date: '2026-05-01'
+  agency: 青二Production
+  hometown: 兵库县
+  intro: 羊宫妃那是日本新生代女性声优，以温柔清透且富有穿透力的声线著称。她于2020年正式出道，凭借在多部作品中对角色情感的细腻刻画迅速获得关注。她的声音既能演绎天真烂漫的少女，也能驾驭冷静沉稳的角色，展现出宽广的音域和扎实的演技。在广播节目和线下活动中，她展现出活泼开朗、亲和力十足的一面，积累了良好口碑。作为青二Production旗下备受瞩目的新人，她被业界视为未来一线声优的有力竞争者。
+  name: 羊宫妃那
+date: '2026-05-02'
 history:
-- event: 第一届伦敦世界博览会（万国工业博览会）在伦敦海德公园开幕。
-  year: '1851'
-- event: 芝加哥干草市场暴动，随后成为五一国际劳动节的起源。
-  year: '1886'
-- event: 苏联红军完全占领柏林，二战欧洲战场即将结束。
-  year: '1945'
-- event: 巴西F1车神艾尔顿·塞纳在圣马力诺大奖赛中不幸身亡。
-  year: '1994'
-- event: 欧盟实现史上最大规模东扩，十个新成员国正式加入。
-  year: '2004'
-- event: 美军在巴基斯坦击毙基地组织首领本·拉登。
+- event: MySQL 3.11.1 首个公开版本发布
+  year: '1995'
+- event: 联想完成收购IBM个人电脑业务，成为全球第三大PC制造商
+  year: '2005'
+- event: 北京2008年奥运会圣火在香港传递
+  year: '2008'
+- event: 美国总统奥巴马宣布本·拉登被击毙
   year: '2011'
+- event: 谷歌发布Android 4.0 Jelly Bean版本份额数据报告
+  year: '2013'
+- event: 谷歌Chrome浏览器市场份额首次突破25%
+  year: '2015'
 llm:
-- desc: 百度发布的2.4万亿参数全模态大模型，融合文本、图像、语音、视频理解与生成，采用MoE架构，多项任务超越GPT-4。
+- desc: 2026年5月1日公布技术报告，采用混合专家架构与百万级上下文，在视觉-语言理解任务上全面超越GPT-5.4，展示了国产大模型在多模态领域的突破。
   tags:
-  - 百度
-  - 文心大模型
-  - 全模态
-  - 2.4万亿
-  title: '文心5.0 (ERNIE 5.0): 2.4万亿参数原生全模态大模型'
+  - DeepSeek
+  - 多模态
+  - 超越GPT-5.4
+  - 混合专家
+  title: DeepSeek多模态模型技术报告：超越GPT-5.4
 new_project:
-- desc: 阿里Qwen团队开源原生端到端全模态模型，理解文本、音频、图像、视频并实时生成语音，支持多种输入输出组合。
+- desc: GitHub开源项目，提供从数据准备到模型训练、推理的完整教程与代码，帮助开发者理解LLM训练流程，适合入门与实验。
   tags:
-  - 全模态
+  - LLM
+  - 训练
+  - 教程
   - 开源
-  - Qwen
-  - 阿里
-  title: 'Qwen3-Omni: 全模态开源大模型'
-  url: https://github.com/QwenLM/Qwen3-Omni
+  title: 'minimind: 从零开始训练小型语言模型'
+  url: https://github.com/jingyaogong/minimind
 paper:
-- desc: CVPR 2026论文，提出解耦训练框架实现文本与图像的交替生成，在交错多模态生成任务上达到新SOTA。
+- desc: ICLR 2026杰出论文，从理论角度证明Transformer模型天然具有简洁表示能力，可在保持性能的同时大幅减少参数，为高效部署提供全新理论依据。
   tags:
-  - 多模态生成
-  - CVPR 2026
-  - 解耦训练
-  - Wan-Weaver
-  title: 'Wan-Weaver: Interleaved Multi-modal Generation via Decoupled Training'
-  url: https://arxiv.org/abs/2603.25706v2
+  - ICLR 2026
+  - Transformer
+  - 表示学习
+  - 模型压缩
+  title: Transformers are Inherently Succinct
+  url: https://arxiv.org/abs/2510.19315
 tech:
   Arch:
-  - desc: AI自动设计缓存策略，采用强化学习探索设计空间，在模拟中超越人工设计的LRU策略，体现AI在体系结构创新潜力。
+  - desc: 阿里达摩院发布的旗舰级RISC-V处理器，采用16nm工艺，主频3.5GHz，SPECint2006性能超越同频ARM Cortex-A78，面向AIoT与边缘计算场景，提供高能效比计算。
     tags:
-    - AI硬件
-    - 缓存策略
-    - 自动化设计
-    - 体系结构
-    title: 'ArchAgent: AI仅用两天设计出性能提升5.3%的缓存策略'
+    - RISC-V
+    - 玄铁950
+    - 达摩院
+    - 高性能
+    title: '玄铁950: 全球RISC-V处理器性能新标杆'
   Audio:
-  - desc: 阿里巴巴开源，支持52种语种与方言，1.7B版本在LibriSpeech等基准上达到SOTA，采用Conformer-CTC架构。
+  - desc: OpenMOSS团队开源的音频基础模型，基于Transformer架构，统一支持语音识别、声音事件检测、音乐理解及时间感知推理，为音频AI提供通用解决方案。
     tags:
-    - 语音识别
-    - 多语言
+    - OpenMOSS
+    - 音频基础模型
     - 开源
-    - Qwen
-    title: 'Qwen3-ASR: 通义千问语音识别模型'
+    - 语音推理
+    title: 'MOSS-Audio: 语音·声音·音乐·时间感知音频推理基础模型'
   CPU:
-  - desc: 搭载双路AMD 3D V-Cache技术，总缓存达256MB，专为开发者、创作者与游戏玩家打造，2026年4月发布。
+  - desc: 2026年3月发布，基于Zen 6架构与4nm工艺，集成XDNA 2 NPU，AI算力达50 TOPS，最高16核32线程，专为AI PC打造的旗舰移动处理器。
     tags:
     - AMD
-    - Ryzen
-    - 3D V-Cache
-    - 桌面处理器
-    title: AMD推出锐龙9 9950X3D2：首款双路3D V-Cache桌面处理器
+    - Ryzen AI 400
+    - Zen 6
+    - AI PC
+    title: AMD Ryzen AI 400系列：新一代AI PC处理器
   Computer Vision:
-  - desc: 谷歌DeepMind开源，实现patch-text对齐最优表现，CVPR 2026论文，基于多模态对比学习框架，在零样本分类和检索任务上达到SOTA。
+  - desc: CVPR 2026 Highlight论文，提出双路径多模态语言模型用于无人机推理分割，构建首个万级基准数据集，显著提升航拍场景理解性能。
     tags:
-    - 多模态
-    - 视觉语言预训练
     - CVPR 2026
-    - 开源
-    title: 'TIPSv2: Advancing Vision-Language Pretraining with Enhanced Patch-Text
-      Alignment'
+    - 多模态
+    - 无人机
+    - 推理分割
+    title: 'PixDLM: A Dual-Path Multimodal Language Model for UAV Reasoning Segmentation'
   GPU:
-  - desc: 基于Blackwell架构，支持DLSS 4多帧生成与神经网络渲染，配备GDDR7显存，起售价2499元，2026年4月上市。
+  - desc: 基于Blackwell架构，配备16GB GDDR7显存，支持DLSS 4多帧生成与神经渲染，单精度浮点性能达80 TFLOPS，近期GeForce
+      NOW云端版解锁5K 120帧体验。
     tags:
     - NVIDIA
-    - RTX 5060
+    - RTX 5080
     - Blackwell
     - DLSS 4
-    title: NVIDIA GeForce RTX 5060 发布：搭载DLSS 4与Blackwell架构
+    title: NVIDIA GeForce RTX 5080 显卡
   Lang:
-  - desc: 带来增量编译改进、新的const泛型特性，以及更强大的类型推断，进一步提升编译速度和安全性。
+  - desc: 2026年4月22日发布，新增多集群服务网格原生支持、Pod安全性策略增强、Windows节点稳定性提升，以及全新的API优先级与公平调度机制。
     tags:
-    - Rust
-    - 编程语言
-    - 编译优化
-    - 内存安全
-    title: Rust 1.95.0 发布
+    - Kubernetes
+    - 容器编排
+    - 开源
+    - v1.36
+    title: Kubernetes v1.36 发布（代号：Haru）
   NLP:
-  - desc: 美团技术团队发布，将视觉和语音作为原生输入令牌，与文本统一建模，实现多模态理解与生成，在多项基准上超越前人。
+  - desc: 商汤科技2026年4月28日发布并开源的原生理解与生成统一模型，支持文本、图像、视频等多模态处理，在多个基准测试中超越主流模型，实现理解与生成的深度融合。
     tags:
+    - 商汤
     - 多模态
-    - 美团
-    - 原生多模态
-    - AI
-    title: 'LongCat-Next: 原生多模态AI，视觉和语音成为AI的母语'
+    - 开源
+    - 理解生成统一
+    title: 'SenseNova U1: 原生理解生成统一模型'
   Net:
-  - desc: 中国主导的工业互联网通信国际标准，实现纳秒级时间同步，支持确定性低延迟通信，已在IETF成功立项。
+  - desc: 2026年5月1日正式实施的6项公共安全行业标准，涵盖身份认证、数据安全、互联互通等关键环节，标志着我国网络身份认证体系迈入标准化新阶段。
     tags:
-    - 工业互联网
-    - 国际标准
-    - 同步网络
-    - WiTSnet
-    title: 我国主导研制的汇智同步网络（WiTSnet）工业通信系列国际标准成功立项
+    - 国家标准
+    - 网络身份认证
+    - 网络安全
+    - 2026年5月
+    title: 国家网络身份认证公共服务6项行业标准发布
   News:
-  - desc: GPT-5.5在推理、编码和多模态能力上显著提升，支持更长上下文，定位AI超级应用，2026年4月发布。
+  - desc: 2026年4月30日发布的企业级AI智能体操作系统，支持多模型调度、业务流程可视化编排与安全沙箱，已在金融、政务等场景落地，推动AI深度融入核心业务。
     tags:
-    - OpenAI
-    - GPT-5.5
-    - 语言模型
-    - 多模态
-    title: OpenAI发布GPT-5.5：新一代语言模型
+    - 科大讯飞
+    - Agent OS
+    - 企业AI
+    - 智能体
+    title: 科大讯飞发布玲珑Agent OS
