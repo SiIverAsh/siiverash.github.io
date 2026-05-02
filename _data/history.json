@@ -1,4 +1,21 @@
 {
+  "2026-05-03": [
+    "CHERI-RISC-V v2.0: 硬件强制内存安全",
+    "NVIDIA RTX 5090 Ti: 3nm Blackwell Ultra",
+    "VoiceCraft 3: Zero-Shot Voice Cloning with 3-Second Enrollment",
+    "中国量子计算机“神威·本源超越”实现1000量子比特",
+    "Diffusion Policy with Language-Conditioned Variational Inference",
+    "Rust 2.0.0-alpha: Async Traits & Effects System",
+    "田中美海",
+    "Efficient Transformers via Sparse Mixture of Memory Experts",
+    "VideoLaVid: Long Video Understanding with Adaptive Token Compression",
+    "DBSCAN++: 基于核密度估计的快速聚类",
+    "HTTP/4.0 Draft: Multipath Transport & Server Push 2.0",
+    "AMD Ryzen Threadripper 9000: 96核 Zen 6",
+    "Mistral Large 3: 1.3T参数开源模型",
+    "llama.cpp v3000: 极致量化解码",
+    "MegaByte: Byte-Level Language Models with Sublinear Scaling"
+  ],
   "2026-05-02": [
     "朴素贝叶斯分类器",
     "羊宫妃那",
@@ -141,21 +158,5 @@
     "Rust 1.93.0 编程语言发布",
     "ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware Semantic Analysis and Sparsity Optimization",
     "花泽香菜"
-  ],
-  "2026-04-23": [
-    "Why Attention Patterns Exist: A Unifying Temporal Perspective",
-    "Kitex v0.16.0 微服务框架发布",
-    "Elephant 100B 参数匿名大模型",
-    "MiniMind：2小时训练64M参数GPT",
-    "MiniMax-M1 开源大规模混合注意力推理模型",
-    "Swift 6.3 编程语言重大更新",
-    "华为星河AI网络通量一体解决方案",
-    "科大讯飞深度布局‘AI+量子’",
-    "水濑祈",
-    "摩尔线程庐山游戏GPU发布",
-    "美团 LongCat-Image 6B 开源视觉模型",
-    "VoxCPM 2 开源多语种语音合成模型",
-    "随机森林算法详解",
-    "英特尔至强6+ 288核心处理器发布"
   ]
 }

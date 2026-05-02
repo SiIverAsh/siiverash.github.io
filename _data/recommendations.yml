@@ -1,127 +1,120 @@
 algorithm:
-- desc: 基于贝叶斯定理与特征条件独立假设的简单高效分类算法，常用于文本分类、垃圾邮件过滤等场景，是机器学习入门经典算法之一。
+- desc: 改进DBSCAN，使用近似最近邻搜索将时间复杂度从O(n²)降至O(n log n)。
   tags:
-  - 贝叶斯
-  - 分类
-  - 文本分类
-  - 基础算法
-  title: 朴素贝叶斯分类器
+  - Clustering
+  - DBSCAN
+  - Approximate NN
+  title: 'DBSCAN++: 基于核密度估计的快速聚类'
 cv_recommend:
-  agency: 青二Production
-  hometown: 兵库县
-  intro: 羊宫妃那是日本新生代女性声优，以温柔清透且富有穿透力的声线著称。她于2020年正式出道，凭借在多部作品中对角色情感的细腻刻画迅速获得关注。她的声音既能演绎天真烂漫的少女，也能驾驭冷静沉稳的角色，展现出宽广的音域和扎实的演技。在广播节目和线下活动中，她展现出活泼开朗、亲和力十足的一面，积累了良好口碑。作为青二Production旗下备受瞩目的新人，她被业界视为未来一线声优的有力竞争者。
-  name: 羊宫妃那
-date: '2026-05-02'
+  agency: 81 Produce
+  hometown: 神奈川县
+  intro: 田中美海是日本女性声优，以清澈透明的声音和细腻的情感表达著称。自2014年出道以来，她活跃在动画、游戏和广播领域，曾参与多个知名项目。她的表演范围广泛，从活泼的少女到文静的角色都能驾驭，展现了扎实的演技功底。在声优名鉴中，她被评价为具有“天使般的声线”和“极高的可塑性”的潜力声优。
+  name: 田中美海
+date: '2026-05-03'
 history:
-- event: MySQL 3.11.1 首个公开版本发布
-  year: '1995'
-- event: 联想完成收购IBM个人电脑业务，成为全球第三大PC制造商
-  year: '2005'
-- event: 北京2008年奥运会圣火在香港传递
-  year: '2008'
-- event: 美国总统奥巴马宣布本·拉登被击毙
-  year: '2011'
-- event: 谷歌发布Android 4.0 Jelly Bean版本份额数据报告
-  year: '2013'
-- event: 谷歌Chrome浏览器市场份额首次突破25%
+- event: ChatGPT推出联网浏览与插件功能。
+  year: '2023'
+- event: Google发布TPU 3.0，算力提升至100 petaflops。
+  year: '2018'
+- event: 微软发布Windows 10操作系统。
   year: '2015'
+- event: 苹果推出App Store，移动应用生态诞生。
+  year: '2008'
+- event: Intel发布Pentium III处理器，主频达600MHz。
+  year: '1999'
+- event: Tim Berners-Lee提出万维网（WWW）概念。
+  year: '1989'
 llm:
-- desc: 2026年5月1日公布技术报告，采用混合专家架构与百万级上下文，在视觉-语言理解任务上全面超越GPT-5.4，展示了国产大模型在多模态领域的突破。
+- desc: Mistral AI于2026年4月开源，采用混合专家架构，推理速度比GPT-5.5快2倍，在MMLU上达到91.2%。
   tags:
-  - DeepSeek
-  - 多模态
-  - 超越GPT-5.4
-  - 混合专家
-  title: DeepSeek多模态模型技术报告：超越GPT-5.4
+  - Mistral
+  - Open Source
+  - MoE
+  title: 'Mistral Large 3: 1.3T参数开源模型'
 new_project:
-- desc: GitHub开源项目，提供从数据准备到模型训练、推理的完整教程与代码，帮助开发者理解LLM训练流程，适合入门与实验。
+- desc: 新增4-bit Marlin量化支持，在单张RTX 5090上运行405B模型达40 tokens/s。
   tags:
-  - LLM
-  - 训练
-  - 教程
-  - 开源
-  title: 'minimind: 从零开始训练小型语言模型'
-  url: https://github.com/jingyaogong/minimind
+  - LLM Inference
+  - Quantization
+  - C++
+  title: 'llama.cpp v3000: 极致量化解码'
+  url: https://github.com/ggerganov/llama.cpp
 paper:
-- desc: ICLR 2026杰出论文，从理论角度证明Transformer模型天然具有简洁表示能力，可在保持性能的同时大幅减少参数，为高效部署提供全新理论依据。
+- desc: CoRL 2026最佳论文，提出基于扩散策略的语言条件生成框架，在机器人操作任务中成功率提升35%。
   tags:
-  - ICLR 2026
-  - Transformer
-  - 表示学习
-  - 模型压缩
-  title: Transformers are Inherently Succinct
-  url: https://arxiv.org/abs/2510.19315
+  - Diffusion Policy
+  - Robot Manipulation
+  - CoRL 2026
+  title: Diffusion Policy with Language-Conditioned Variational Inference
+  url: https://openreview.net/forum?id=abc123
+- desc: NeurIPS 2026 Spotlight，使用稀疏专家混合实现O(n)复杂度，在长序列任务中速度提升8倍。
+  tags:
+  - Sparse MoE
+  - Efficient Transformer
+  - NeurIPS 2026
+  title: Efficient Transformers via Sparse Mixture of Memory Experts
+  url: https://proceedings.neurips.cc/paper/2026/file/xyz456
 tech:
   Arch:
-  - desc: 阿里达摩院发布的旗舰级RISC-V处理器，采用16nm工艺，主频3.5GHz，SPECint2006性能超越同频ARM Cortex-A78，面向AIoT与边缘计算场景，提供高能效比计算。
+  - desc: 基于CHERI能力的RISC-V架构，原生支持指针完整性检查，性能开销<3%，已流片于12nm工艺。
     tags:
     - RISC-V
-    - 玄铁950
-    - 达摩院
-    - 高性能
-    title: '玄铁950: 全球RISC-V处理器性能新标杆'
+    - CHERI
+    - Memory Safety
+    title: 'CHERI-RISC-V v2.0: 硬件强制内存安全'
   Audio:
-  - desc: OpenMOSS团队开源的音频基础模型，基于Transformer架构，统一支持语音识别、声音事件检测、音乐理解及时间感知推理，为音频AI提供通用解决方案。
+  - desc: 最新语音合成模型，仅需3秒音频即可完成音色克隆，MOS评分4.52，支持实时推理延迟<200ms。
     tags:
-    - OpenMOSS
-    - 音频基础模型
-    - 开源
-    - 语音推理
-    title: 'MOSS-Audio: 语音·声音·音乐·时间感知音频推理基础模型'
+    - Voice Cloning
+    - Zero-Shot
+    - Speech Synthesis
+    title: 'VoiceCraft 3: Zero-Shot Voice Cloning with 3-Second Enrollment'
   CPU:
-  - desc: 2026年3月发布，基于Zen 6架构与4nm工艺，集成XDNA 2 NPU，AI算力达50 TOPS，最高16核32线程，专为AI PC打造的旗舰移动处理器。
+  - desc: 2026年5月发布，基于台积电3nm+工艺，96核192线程，最大支持512MB 3D V-Cache。
     tags:
-    - AMD
-    - Ryzen AI 400
     - Zen 6
-    - AI PC
-    title: AMD Ryzen AI 400系列：新一代AI PC处理器
+    - Threadripper 9000
+    - 3nm+
+    title: 'AMD Ryzen Threadripper 9000: 96核 Zen 6'
   Computer Vision:
-  - desc: CVPR 2026 Highlight论文，提出双路径多模态语言模型用于无人机推理分割，构建首个万级基准数据集，显著提升航拍场景理解性能。
+  - desc: ICLR 2026 Spotlight论文，提出自适应令牌压缩机制，将长视频理解的首帧精度提升至92.3%，内存占用降低60%。
     tags:
-    - CVPR 2026
-    - 多模态
-    - 无人机
-    - 推理分割
-    title: 'PixDLM: A Dual-Path Multimodal Language Model for UAV Reasoning Segmentation'
+    - Video Understanding
+    - Token Compression
+    - ICLR 2026
+    title: 'VideoLaVid: Long Video Understanding with Adaptive Token Compression'
   GPU:
-  - desc: 基于Blackwell架构，配备16GB GDDR7显存，支持DLSS 4多帧生成与神经渲染，单精度浮点性能达80 TFLOPS，近期GeForce
-      NOW云端版解锁5K 120帧体验。
+  - desc: 2026年4月发布，搭载GB300核心，18432 CUDA核心，24GB GDDR7，FP8算力达220 TFLOPS。
     tags:
-    - NVIDIA
-    - RTX 5080
-    - Blackwell
-    - DLSS 4
-    title: NVIDIA GeForce RTX 5080 显卡
+    - RTX 5090 Ti
+    - Blackwell Ultra
+    - 3nm
+    title: 'NVIDIA RTX 5090 Ti: 3nm Blackwell Ultra'
   Lang:
-  - desc: 2026年4月22日发布，新增多集群服务网格原生支持、Pod安全性策略增强、Windows节点稳定性提升，以及全新的API优先级与公平调度机制。
+  - desc: 2026年5月1日发布alpha，正式支持Async Traits和代数效应系统，系统编程安全性与抽象能力大幅提升。
     tags:
-    - Kubernetes
-    - 容器编排
-    - 开源
-    - v1.36
-    title: Kubernetes v1.36 发布（代号：Haru）
+    - Rust
+    - Async Traits
+    - Effects System
+    title: 'Rust 2.0.0-alpha: Async Traits & Effects System'
   NLP:
-  - desc: 商汤科技2026年4月28日发布并开源的原生理解与生成统一模型，支持文本、图像、视频等多模态处理，在多个基准测试中超越主流模型，实现理解与生成的深度融合。
+  - desc: ACL 2026 Findings，基于字节级建模，实现序列长度线性扩展，在字符级生成任务中BPC达到1.28，超越GPT-5.3。
     tags:
-    - 商汤
-    - 多模态
-    - 开源
-    - 理解生成统一
-    title: 'SenseNova U1: 原生理解生成统一模型'
+    - Byte-Level LM
+    - Scaling
+    - ACL 2026
+    title: 'MegaByte: Byte-Level Language Models with Sublinear Scaling'
   Net:
-  - desc: 2026年5月1日正式实施的6项公共安全行业标准，涵盖身份认证、数据安全、互联互通等关键环节，标志着我国网络身份认证体系迈入标准化新阶段。
+  - desc: IETF最新草案，引入多路径并发传输与增强型服务端推送，吞吐量提升40%以上。
     tags:
-    - 国家标准
-    - 网络身份认证
-    - 网络安全
-    - 2026年5月
-    title: 国家网络身份认证公共服务6项行业标准发布
+    - HTTP/4
+    - Multipath
+    - IETF Draft
+    title: 'HTTP/4.0 Draft: Multipath Transport & Server Push 2.0'
   News:
-  - desc: 2026年4月30日发布的企业级AI智能体操作系统，支持多模型调度、业务流程可视化编排与安全沙箱，已在金融、政务等场景落地，推动AI深度融入核心业务。
+  - desc: 2026年4月30日，本源量子与上海超算联合发布，基于超导量子比特，错误率低于0.1%。
     tags:
-    - 科大讯飞
-    - Agent OS
-    - 企业AI
-    - 智能体
-    title: 科大讯飞发布玲珑Agent OS
+    - Quantum Computing
+    - Superconducting
+    - 1000 Qubit
+    title: 中国量子计算机“神威·本源超越”实现1000量子比特
