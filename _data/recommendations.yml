@@ -1,120 +1,127 @@
 algorithm:
-- desc: 改进DBSCAN，使用近似最近邻搜索将时间复杂度从O(n²)降至O(n log n)。
+- desc: 微软开源梯度提升决策树算法，引入GOSS和EFB技术，训练速度比XGBoost快数倍，内存消耗低，适用于分类、回归等任务。
   tags:
-  - Clustering
-  - DBSCAN
-  - Approximate NN
-  title: 'DBSCAN++: 基于核密度估计的快速聚类'
+  - GBDT
+  - 梯度提升
+  - LightGBM
+  - 高效
+  title: 'LightGBM: 高效梯度提升框架'
 cv_recommend:
-  agency: 81 Produce
-  hometown: 神奈川县
-  intro: 田中美海是日本女性声优，以清澈透明的声音和细腻的情感表达著称。自2014年出道以来，她活跃在动画、游戏和广播领域，曾参与多个知名项目。她的表演范围广泛，从活泼的少女到文静的角色都能驾驭，展现了扎实的演技功底。在声优名鉴中，她被评价为具有“天使般的声线”和“极高的可塑性”的潜力声优。
-  name: 田中美海
-date: '2026-05-03'
+  agency: I'm Enterprise
+  hometown: 东京都
+  intro: 日本女性声优，出生于东京都，所属I'm Enterprise。自幼以童星身份活跃，转型声优后凭借清澈嗓音与细腻演技获得广泛认可，声音辨识度极高，在多领域作品中展现出色表现力，深受粉丝喜爱。
+  name: 内田真礼
+date: '2026-05-04'
 history:
-- event: ChatGPT推出联网浏览与插件功能。
-  year: '2023'
-- event: Google发布TPU 3.0，算力提升至100 petaflops。
-  year: '2018'
-- event: 微软发布Windows 10操作系统。
-  year: '2015'
-- event: 苹果推出App Store，移动应用生态诞生。
-  year: '2008'
-- event: Intel发布Pentium III处理器，主频达600MHz。
-  year: '1999'
-- event: Tim Berners-Lee提出万维网（WWW）概念。
-  year: '1989'
+- event: 美国芝加哥干草市场暴动，工人集会演变为暴力冲突。
+  year: '1886'
+- event: 五四运动爆发，中国学生发起反帝反封建爱国运动。
+  year: '1919'
+- event: 珊瑚海海战爆发，美日航母首次正面交锋。
+  year: '1942'
+- event: 美国肯特州立大学枪击事件，4名学生被杀。
+  year: '1970'
+- event: 玛格丽特·撒切尔成为英国首位女首相。
+  year: '1979'
+- event: 以色列总理拉宾与巴勒斯坦领袖阿拉法特签署奥斯陆协议。
+  year: '1994'
 llm:
-- desc: Mistral AI于2026年4月开源，采用混合专家架构，推理速度比GPT-5.5快2倍，在MMLU上达到91.2%。
+- desc: Anthropic发布的最新大语言模型，在编程、推理和多模态任务上实现重大突破，支持更可靠智能体交互。
   tags:
-  - Mistral
-  - Open Source
-  - MoE
-  title: 'Mistral Large 3: 1.3T参数开源模型'
+  - LLM
+  - Anthropic
+  - Claude
+  - 智能体
+  title: Claude Opus 4.7
 new_project:
-- desc: 新增4-bit Marlin量化支持，在单张RTX 5090上运行405B模型达40 tokens/s。
+- desc: Python编写的异步优先AI Agent框架，支持多LLM后端、工具调用与记忆机制，设计简洁，易于扩展。
   tags:
-  - LLM Inference
-  - Quantization
-  - C++
-  title: 'llama.cpp v3000: 极致量化解码'
-  url: https://github.com/ggerganov/llama.cpp
+  - Agent
+  - 框架
+  - Python
+  - 异步
+  title: 'Agentica: 轻量级AI Agent框架'
+  url: https://github.com/shibing624/agentica
 paper:
-- desc: CoRL 2026最佳论文，提出基于扩散策略的语言条件生成框架，在机器人操作任务中成功率提升35%。
+- desc: CVPR 2026论文，统一处理连续流中的感知、重建与行动，实现多模态实时交互。
   tags:
-  - Diffusion Policy
-  - Robot Manipulation
-  - CoRL 2026
-  title: Diffusion Policy with Language-Conditioned Variational Inference
-  url: https://openreview.net/forum?id=abc123
-- desc: NeurIPS 2026 Spotlight，使用稀疏专家混合实现O(n)复杂度，在长序列任务中速度提升8倍。
-  tags:
-  - Sparse MoE
-  - Efficient Transformer
-  - NeurIPS 2026
-  title: Efficient Transformers via Sparse Mixture of Memory Experts
-  url: https://proceedings.neurips.cc/paper/2026/file/xyz456
+  - CVPR
+  - 多模态
+  - 连续流
+  - 实时
+  title: 'OmniStream: Mastering Perception, Reconstruction and Action in Continuous
+    Streams'
+  url: https://arxiv.org/abs/2603.12265
 tech:
   Arch:
-  - desc: 基于CHERI能力的RISC-V架构，原生支持指针完整性检查，性能开销<3%，已流片于12nm工艺。
+  - desc: AMD发布Helios机架，集成18个2nm Zen 6 CPU和72个MI455 GPU，FP4算力达2.9 EFLOPS，面向大规模AI训练与推理。
     tags:
-    - RISC-V
-    - CHERI
-    - Memory Safety
-    title: 'CHERI-RISC-V v2.0: 硬件强制内存安全'
+    - AMD
+    - Helios
+    - 机架
+    - 2nm
+    title: AMD Helios机架级AI解决方案
   Audio:
-  - desc: 最新语音合成模型，仅需3秒音频即可完成音色克隆，MOS评分4.52，支持实时推理延迟<200ms。
+  - desc: 美团开源零样本语音克隆模型，基于Diffusion Transformer，3秒音频即可克隆音色，支持多语言与情感控制。
     tags:
-    - Voice Cloning
-    - Zero-Shot
-    - Speech Synthesis
-    title: 'VoiceCraft 3: Zero-Shot Voice Cloning with 3-Second Enrollment'
+    - TTS
+    - 语音克隆
+    - DiT
+    - 零样本
+    title: LongCat-AudioDiT
   CPU:
-  - desc: 2026年5月发布，基于台积电3nm+工艺，96核192线程，最大支持512MB 3D V-Cache。
+  - desc: 首款基于Intel 18A制程的处理器，性能大幅提升，集成全新NPU达45 TOPS，笔记本续航突破以天计算。
     tags:
-    - Zen 6
-    - Threadripper 9000
-    - 3nm+
-    title: 'AMD Ryzen Threadripper 9000: 96核 Zen 6'
+    - Intel
+    - 18A
+    - Core Ultra
+    - NPU
+    title: Intel Core Ultra系列3 (18A)
   Computer Vision:
-  - desc: ICLR 2026 Spotlight论文，提出自适应令牌压缩机制，将长视频理解的首帧精度提升至92.3%，内存占用降低60%。
+  - desc: CVPR 2026论文，提出统一多模态框架同时处理视频流中的感知、重建和行动任务，实现实时推理与交互。
     tags:
-    - Video Understanding
-    - Token Compression
-    - ICLR 2026
-    title: 'VideoLaVid: Long Video Understanding with Adaptive Token Compression'
+    - 多模态
+    - 实时推理
+    - CVPR
+    - 连续流
+    title: 'OmniStream: 连续流感知、重建与行动统一框架'
   GPU:
-  - desc: 2026年4月发布，搭载GB300核心，18432 CUDA核心，24GB GDDR7，FP8算力达220 TFLOPS。
+  - desc: NVIDIA发布Rubin AI平台，整合六颗新芯片（Vera CPU+Rubin GPU等），推理Token成本降低10倍，采用3nm工艺。
     tags:
-    - RTX 5090 Ti
-    - Blackwell Ultra
+    - NVIDIA
+    - Rubin
+    - AI芯片
     - 3nm
-    title: 'NVIDIA RTX 5090 Ti: 3nm Blackwell Ultra'
+    title: NVIDIA Rubin平台
   Lang:
-  - desc: 2026年5月1日发布alpha，正式支持Async Traits和代数效应系统，系统编程安全性与抽象能力大幅提升。
+  - desc: Go语言1.26版本正式发布，引入new(expr)表达式、改进错误处理、性能优化及智能工具链增强。
     tags:
-    - Rust
-    - Async Traits
-    - Effects System
-    title: 'Rust 2.0.0-alpha: Async Traits & Effects System'
+    - Go
+    - 编程语言
+    - '1.26'
+    - 工具链
+    title: Go 1.26 发布
   NLP:
-  - desc: ACL 2026 Findings，基于字节级建模，实现序列长度线性扩展，在字符级生成任务中BPC达到1.28，超越GPT-5.3。
+  - desc: Anthropic最新旗舰大模型，编程能力提升11%，推理与多模态理解显著增强，支持更长上下文与可靠智能体行为。
     tags:
-    - Byte-Level LM
-    - Scaling
-    - ACL 2026
-    title: 'MegaByte: Byte-Level Language Models with Sublinear Scaling'
+    - LLM
+    - Anthropic
+    - Claude
+    - 推理
+    title: Claude Opus 4.7
   Net:
-  - desc: IETF最新草案，引入多路径并发传输与增强型服务端推送，吞吐量提升40%以上。
+  - desc: W3C发布WebTransport正式工作草案，基于HTTP/3和QUIC，提供原生双向流和数据报，为Web应用带来低延迟通信。
     tags:
-    - HTTP/4
-    - Multipath
-    - IETF Draft
-    title: 'HTTP/4.0 Draft: Multipath Transport & Server Push 2.0'
+    - WebTransport
+    - HTTP/3
+    - QUIC
+    - W3C
+    title: WebTransport W3C工作草案
   News:
-  - desc: 2026年4月30日，本源量子与上海超算联合发布，基于超导量子比特，错误率低于0.1%。
+  - desc: 两部委联合发布智能体工厂建设方案，推动AI智能体在制造、服务等行业大规模落地，加速产业智能化。
     tags:
-    - Quantum Computing
-    - Superconducting
-    - 1000 Qubit
-    title: 中国量子计算机“神威·本源超越”实现1000量子比特
+    - 政策
+    - 智能体
+    - AI落地
+    - 工信部
+    title: 工信部与国家数据局打造智能体工厂

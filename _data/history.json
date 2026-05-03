@@ -1,4 +1,19 @@
 {
+  "2026-05-04": [
+    "OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams",
+    "OmniStream: 连续流感知、重建与行动统一框架",
+    "Claude Opus 4.7",
+    "LightGBM: 高效梯度提升框架",
+    "Go 1.26 发布",
+    "Agentica: 轻量级AI Agent框架",
+    "AMD Helios机架级AI解决方案",
+    "WebTransport W3C工作草案",
+    "Intel Core Ultra系列3 (18A)",
+    "工信部与国家数据局打造智能体工厂",
+    "NVIDIA Rubin平台",
+    "内田真礼",
+    "LongCat-AudioDiT"
+  ],
   "2026-05-03": [
     "CHERI-RISC-V v2.0: 硬件强制内存安全",
     "NVIDIA RTX 5090 Ti: 3nm Blackwell Ultra",
@@ -142,21 +157,5 @@
     "MiniCPM-o 4.5: 端侧多模态全双工模型",
     "Rust 1.95.0 发布",
     "Qwen3-Coder: 阿里开源智能体编程模型"
-  ],
-  "2026-04-24": [
-    "NVIDIA GeForce RTX 5060 系列",
-    "Intel Core 300 'Wildcat Lake' 处理器",
-    "腾讯混元 Hy3 preview 发布并开源",
-    "玄铁 C950: 阿里达摩院 RISC-V 处理器",
-    "Locality-Attending Vision Transformer (LAViT)",
-    "国产 CPO 智能网卡 (沐创 & 澜昆微)",
-    "Qwen3-TTS: 阿里云开源多语言语音合成模型",
-    "XGBoost: 极致梯度提升算法",
-    "ollama/ollama",
-    "Qwen3.6-Plus: 阿里云开源大语言模型",
-    "DeepSeek V4: 原生多模态大语言模型",
-    "Rust 1.93.0 编程语言发布",
-    "ToProVAR: Efficient Visual Autoregressive Modeling via Tri-Dimensional Entropy-Aware Semantic Analysis and Sparsity Optimization",
-    "花泽香菜"
   ]
 }
