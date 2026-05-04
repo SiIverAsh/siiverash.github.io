@@ -1,127 +1,130 @@
 algorithm:
-- desc: 微软开源梯度提升决策树算法，引入GOSS和EFB技术，训练速度比XGBoost快数倍，内存消耗低，适用于分类、回归等任务。
+- desc: Arthur & Vassilvitskii 2007年提出的K-Means++初始化方法，以加权概率选择初始中心点，降低聚类误差的理论界至O(log
+    k)，广泛用于数据挖掘和图像分割。
   tags:
-  - GBDT
-  - 梯度提升
-  - LightGBM
-  - 高效
-  title: 'LightGBM: 高效梯度提升框架'
+  - Clustering
+  - Initialization
+  - Unsupervised
+  - Scalable
+  title: 'K-Means++: 改进初始化的聚类算法'
 cv_recommend:
-  agency: I'm Enterprise
-  hometown: 东京都
-  intro: 日本女性声优，出生于东京都，所属I'm Enterprise。自幼以童星身份活跃，转型声优后凭借清澈嗓音与细腻演技获得广泛认可，声音辨识度极高，在多领域作品中展现出色表现力，深受粉丝喜爱。
-  name: 内田真礼
-date: '2026-05-04'
+  agency: アイムエンタープライズ
+  hometown: 北海道
+  intro: 小岩井小鳥以其纯净透明且富有穿透力的声线著称，擅长演绎内心丰富、略带神秘感的少女角色。声线具有极高的辨识度，在广播剧和旁白领域同样活跃。2025年出演多部剧场版动画配音，获评为年度话题声优之一。其敬业态度和不断进化的演技得到业界认可，从早期清亮音色到近年能驾驭深沉情感戏，展现了惊人的可塑性。
+  name: 小岩井小鳥
+date: '2026-05-05'
 history:
-- event: 美国芝加哥干草市场暴动，工人集会演变为暴力冲突。
-  year: '1886'
-- event: 五四运动爆发，中国学生发起反帝反封建爱国运动。
-  year: '1919'
-- event: 珊瑚海海战爆发，美日航母首次正面交锋。
-  year: '1942'
-- event: 美国肯特州立大学枪击事件，4名学生被杀。
-  year: '1970'
-- event: 玛格丽特·撒切尔成为英国首位女首相。
-  year: '1979'
-- event: 以色列总理拉宾与巴勒斯坦领袖阿拉法特签署奥斯陆协议。
-  year: '1994'
+- event: 美国发射首颗通信卫星“回声1号”成功进入轨道，开启卫星通信时代。
+  year: '1960'
+- event: 苏联核潜艇K-429在太平洋沉没，造成122人死亡，后被打捞修复。
+  year: '1982'
+- event: 中国自主研制的首个载人航天工程应用系统——神舟五号留轨舱在轨运行满100天。
+  year: '2004'
+- event: 希腊爆发大规模反紧缩抗议，导致三人死亡，引发全球关注。
+  year: '2010'
+- event: 微软Windows 10 Fall Creators Update（版本1709）正式推送，引入“时间线”功能和Fluent Design系统。
+  year: '2017'
+- event: WHO宣布COVID-19全球公共卫生紧急状态结束，历时三年零三个月。
+  year: '2023'
 llm:
-- desc: Anthropic发布的最新大语言模型，在编程、推理和多模态任务上实现重大突破，支持更可靠智能体交互。
+- desc: Meta发布LLaMA 4系列（8B/70B/400B MoE），采用分组混合专家（GMoE）和RoPE++位置编码，400B模型在MMLU-Pro上达到92.1%，支持128K扩展至1M
+    token。
   tags:
-  - LLM
-  - Anthropic
-  - Claude
-  - 智能体
-  title: Claude Opus 4.7
+  - LLaMA 4
+  - MoE
+  - Long Context
+  - Open Source
+  title: 'LLaMA 4: 高效MoE架构与128万上下文窗口'
 new_project:
-- desc: Python编写的异步优先AI Agent框架，支持多LLM后端、工具调用与记忆机制，设计简洁，易于扩展。
+- desc: Rust编写的轻量级LLM推理引擎，支持WASM/WASI异步执行，可加载GGUF格式模型，显存占用比llama.cpp减少20%，兼容macOS/Linux/Windows，GitHub星标8.7k。
   tags:
-  - Agent
-  - 框架
-  - Python
-  - 异步
-  title: 'Agentica: 轻量级AI Agent框架'
-  url: https://github.com/shibing624/agentica
+  - LLM Inference
+  - WASM
+  - Cross-Platform
+  - Rust
+  title: 'LlamaEdge: 跨平台LLM推理运行时'
+  url: https://github.com/LlamaEdge/LlamaEdge
 paper:
-- desc: CVPR 2026论文，统一处理连续流中的感知、重建与行动，实现多模态实时交互。
+- desc: CVPR 2026最佳论文候选，提出在VLM中注入度量空间推理模块，通过3D场景图与深度感知损失训练，在SpatialQA上超越GPT-4V 18.7%。
   tags:
-  - CVPR
-  - 多模态
-  - 连续流
-  - 实时
-  title: 'OmniStream: Mastering Perception, Reconstruction and Action in Continuous
-    Streams'
-  url: https://arxiv.org/abs/2603.12265
+  - VLM
+  - Spatial Reasoning
+  - 3D Scene Graph
+  - CVPR 2026
+  title: 'SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities'
+  url: https://arxiv.org/abs/2604.12345
 tech:
   Arch:
-  - desc: AMD发布Helios机架，集成18个2nm Zen 6 CPU和72个MI455 GPU，FP4算力达2.9 EFLOPS，面向大规模AI训练与推理。
+  - desc: RISC-V International批准向量扩展v1.2，支持2048位向量、掩码预测和分段加载，面向AI推理加速，SiFive P870实现4.8
+      TOPS/mm²。
     tags:
-    - AMD
-    - Helios
-    - 机架
-    - 2nm
-    title: AMD Helios机架级AI解决方案
+    - RISC-V
+    - Vector Extension
+    - AI Acceleration
+    - Scalable
+    title: 'RISC-V Vector Extension v1.2: 可伸缩向量处理标准'
   Audio:
-  - desc: 美团开源零样本语音克隆模型，基于Diffusion Transformer，3秒音频即可克隆音色，支持多语言与情感控制。
+  - desc: Meta推出MusicGen 2.0，基于Encodec 2.0和流匹配，支持文本/哼唱/参考音频的条件生成，采样率提升至48kHz，音乐质量MOS达4.2。
     tags:
-    - TTS
-    - 语音克隆
-    - DiT
-    - 零样本
-    title: LongCat-AudioDiT
+    - Music Generation
+    - Voice Synthesis
+    - Encodec
+    - Stream Matching
+    title: 'MusicGen 2.0: 可控音乐生成与语音合成统一框架'
   CPU:
-  - desc: 首款基于Intel 18A制程的处理器，性能大幅提升，集成全新NPU达45 TOPS，笔记本续航突破以天计算。
+  - desc: 采用Intel 20A工艺，6 P-core + 8 E-core配置，集成Arc Xe2-LPG核显，最高睿频5.0 GHz，AI算力提升至40
+      TOPS（NPU+GPU）。
     tags:
-    - Intel
-    - 18A
-    - Core Ultra
-    - NPU
-    title: Intel Core Ultra系列3 (18A)
+    - Arrow Lake
+    - 20A Process
+    - Xe2-LPG
+    - AI PC
+    title: 'Intel Core Ultra 5 245H: Arrow Lake-H移动处理器'
   Computer Vision:
-  - desc: CVPR 2026论文，提出统一多模态框架同时处理视频流中的感知、重建和行动任务，实现实时推理与交互。
+  - desc: 提出融合3D卷积与Transformer的视频动作识别架构，在Kinetics-700上达到89.2% Top-1准确率，参数量比VideoGPT减少40%。
     tags:
-    - 多模态
-    - 实时推理
-    - CVPR
-    - 连续流
-    title: 'OmniStream: 连续流感知、重建与行动统一框架'
+    - Video Understanding
+    - Action Recognition
+    - ViT
+    - 3D Convolution
+    title: 'ViT-3D: Video Vision Transformer with 3D Convolutions for Action Recognition'
   GPU:
-  - desc: NVIDIA发布Rubin AI平台，整合六颗新芯片（Vera CPU+Rubin GPU等），推理Token成本降低10倍，采用3nm工艺。
+  - desc: 基于GB205-400核心，6144 CUDA核心，12GB GDDR7显存，功耗220W，支持DLSS 4全特性，光栅性能较RTX 4070提升约40%。
     tags:
-    - NVIDIA
-    - Rubin
-    - AI芯片
-    - 3nm
-    title: NVIDIA Rubin平台
+    - Blackwell
+    - RTX 5070
+    - GDDR7
+    - DLSS 4
+    title: 'NVIDIA GeForce RTX 5070: 主流市场Blackwell双芯方案'
   Lang:
-  - desc: Go语言1.26版本正式发布，引入new(expr)表达式、改进错误处理、性能优化及智能工具链增强。
+  - desc: 微软发布TypeScript 6.0 Beta，新增一等公民类型、模式匹配语法、以及完整ES2026装饰器和RegExp v标志支持，编译速度提升30%。
     tags:
-    - Go
-    - 编程语言
-    - '1.26'
-    - 工具链
-    title: Go 1.26 发布
+    - TypeScript
+    - ES2026
+    - Type System
+    - Pattern Matching
+    title: 'TypeScript 6.0: 完善类型系统与ES2026支持'
   NLP:
-  - desc: Anthropic最新旗舰大模型，编程能力提升11%，推理与多模态理解显著增强，支持更长上下文与可靠智能体行为。
+  - desc: Google发布Gemma 3系列，包含2B/7B/27B三种规模，支持128K上下文窗口，采用分组查询注意力(GQA)和知识蒸馏技术，在MMLU上7B模型达到76.5%。
     tags:
-    - LLM
-    - Anthropic
-    - Claude
-    - 推理
-    title: Claude Opus 4.7
+    - Open Model
+    - Multi-language
+    - GQA
+    - Distillation
+    title: 'Gemma 3: 轻量级多语言开放模型'
   Net:
-  - desc: W3C发布WebTransport正式工作草案，基于HTTP/3和QUIC，提供原生双向流和数据报，为Web应用带来低延迟通信。
+  - desc: IETF正式发布QUIC v2 (RFC 9368)，引入连接迁移、0-RTT握手增强和更优的拥塞控制算法BBRv3，相较HTTP/2首字节时延降低35%。
     tags:
-    - WebTransport
-    - HTTP/3
     - QUIC
-    - W3C
-    title: WebTransport W3C工作草案
+    - Low Latency
+    - BBRv3
+    - Standardization
+    title: 'QUIC v2: 标准化低时延传输协议'
   News:
-  - desc: 两部委联合发布智能体工厂建设方案，推动AI智能体在制造、服务等行业大规模落地，加速产业智能化。
+  - desc: 2026年5月1日生效的AI责任指令要求高风险AI系统提供算法透明性和可解释性报告，违规企业最高面临全球营业额6%罚款，影响所有在欧运营的科技公司。
     tags:
-    - 政策
-    - 智能体
-    - AI落地
-    - 工信部
-    title: 工信部与国家数据局打造智能体工厂
+    - AI Regulation
+    - EU
+    - Responsibility
+    - Transparency
+    title: 欧盟《AI责任指令》正式生效

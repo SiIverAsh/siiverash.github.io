@@ -1,4 +1,20 @@
 {
+  "2026-05-05": [
+    "NVIDIA GeForce RTX 5070: 主流市场Blackwell双芯方案",
+    "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities",
+    "LLaMA 4: 高效MoE架构与128万上下文窗口",
+    "小岩井小鳥",
+    "LlamaEdge: 跨平台LLM推理运行时",
+    "TypeScript 6.0: 完善类型系统与ES2026支持",
+    "Gemma 3: 轻量级多语言开放模型",
+    "K-Means++: 改进初始化的聚类算法",
+    "MusicGen 2.0: 可控音乐生成与语音合成统一框架",
+    "Intel Core Ultra 5 245H: Arrow Lake-H移动处理器",
+    "RISC-V Vector Extension v1.2: 可伸缩向量处理标准",
+    "欧盟《AI责任指令》正式生效",
+    "ViT-3D: Video Vision Transformer with 3D Convolutions for Action Recognition",
+    "QUIC v2: 标准化低时延传输协议"
+  ],
   "2026-05-04": [
     "OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams",
     "OmniStream: 连续流感知、重建与行动统一框架",
@@ -141,21 +157,5 @@
     "羊宮妃那",
     "NVIDIA RTX 6090 (Blackwell Ultra) 规格曝光",
     "Long-Context Transformer with Shared Memory Attention"
-  ],
-  "2026-04-25": [
-    "AMD Radeon RX 9070 XT：RDNA 4 架构显卡",
-    "云知声4篇论文入选ACL 2026",
-    "AMD Ryzen 9 9950X3D2 Dual Edition：首款双3D V-Cache处理器",
-    "Audio-Omni: 统一多模态音频理解与生成框架",
-    "逻辑回归 (Logistic Regression)",
-    "AMD Zen 6 架构公布：首款2nm计算内核",
-    "田中美海",
-    "vllm v0.18.0: 高性能LLM推理引擎",
-    "中国联通CubeMAP智能体互联网协议框架",
-    "GeoBridge: A Semantic-Anchored Multi-View Foundation Model for Geo-Localization",
-    "MixerCSeg: 轻量级裂缝分割方法",
-    "MiniCPM-o 4.5: 端侧多模态全双工模型",
-    "Rust 1.95.0 发布",
-    "Qwen3-Coder: 阿里开源智能体编程模型"
   ]
 }
