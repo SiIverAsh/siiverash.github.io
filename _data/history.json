@@ -1,4 +1,20 @@
 {
+  "2026-05-06": [
+    "RISC-V Vector 1.3: 可扩展向量扩展标准更新",
+    "上坂すみれ",
+    "HTTP/3.1: 基于QUIC的标准化多路复用改进",
+    "随机森林 (Random Forest)",
+    "Swift 7.0: 并发编程与所有权模型增强",
+    "AMD Ryzen 7 9800X3D: 全新Zen 5 3D V-Cache处理器",
+    "Gemma 3.1: Google轻量级多语言模型升级",
+    "AudioLDM 3: Latent Diffusion for Text-to-Audio Generation",
+    "LLaDA: Large Language Diffusion Model with Auto-regressive Decoding",
+    "Qwen 3.5: 阿里通义千问系列升级",
+    "OpenHands (formerly OpenDevin) v0.30",
+    "YOLOv12: Attention-Driven Real-Time Object Detection",
+    "中国发布《人工智能法》草案征求意见",
+    "NVIDIA RTX 5060 Ti: 基于Blackwell架构的主流显卡"
+  ],
   "2026-05-05": [
     "NVIDIA GeForce RTX 5070: 主流市场Blackwell双芯方案",
     "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities",
@@ -140,22 +156,5 @@
     "龙芯中科发布多款新一代处理器：剑指服务器与AI计算",
     "StepAudio 2.5 ASR: 阶跃星辰自动语音识别模型",
     "IPv8草案：IETF提交新一代互联网协议"
-  ],
-  "2026-04-26": [
-    "WhisperV3-Large-v4: 多语言语音识别增强",
-    "QUIC v2 正式成为RFC 9366标准",
-    "LightGBM 5.0: 梯度提升决策树高效实现",
-    "AMD Ryzen 9 10980X (Zen 6) 首款3nm桌面处理器",
-    "Zig 0.15.0 发布：内存安全零成本抽象",
-    "Intel Lunar Lake 架构详解：能效核与高性能核融合",
-    "Diffusion Transformer for Video Generation (DiT-V) 开源",
-    "Claude 5 Opus: Anthropic 新一代推理模型",
-    "Scalable Video Diffusion with Transformer for 4K Generation",
-    "OpenAI 发布 GPT-5：多模态推理与Agent能力",
-    "vllm 0.20.0: 高性能LLM推理引擎",
-    "Mamba 2.5: 状态空间模型与注意力机制融合",
-    "羊宮妃那",
-    "NVIDIA RTX 6090 (Blackwell Ultra) 规格曝光",
-    "Long-Context Transformer with Shared Memory Attention"
   ]
 }

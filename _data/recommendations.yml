@@ -1,130 +1,113 @@
 algorithm:
-- desc: Arthur & Vassilvitskii 2007年提出的K-Means++初始化方法，以加权概率选择初始中心点，降低聚类误差的理论界至O(log
-    k)，广泛用于数据挖掘和图像分割。
+- desc: 集成学习算法，通过Bootstrap采样构建多棵决策树并汇总结果，降低过拟合，适用于分类与回归。
   tags:
-  - Clustering
-  - Initialization
-  - Unsupervised
-  - Scalable
-  title: 'K-Means++: 改进初始化的聚类算法'
+  - Ensemble
+  - Decision Tree
+  - Classification
+  title: 随机森林 (Random Forest)
 cv_recommend:
-  agency: アイムエンタープライズ
-  hometown: 北海道
-  intro: 小岩井小鳥以其纯净透明且富有穿透力的声线著称，擅长演绎内心丰富、略带神秘感的少女角色。声线具有极高的辨识度，在广播剧和旁白领域同样活跃。2025年出演多部剧场版动画配音，获评为年度话题声优之一。其敬业态度和不断进化的演技得到业界认可，从早期清亮音色到近年能驾驭深沉情感戏，展现了惊人的可塑性。
-  name: 小岩井小鳥
-date: '2026-05-05'
+  agency: ボイスキット
+  hometown: 神奈川県
+  intro: 上坂すみれ以其独特的声线和多变的演技能力著称，既能演绎活泼可爱的少女角色，也能驾驭冷静沉着的御姐音域。作为学识渊博的声优，她常将历史与军事知识融入工作，形成极具辨识度的个人风格。在配音之外，她还活跃于音乐活动与舞台，展现出全面的艺能实力。
+  name: 上坂すみれ
+date: '2026-05-06'
 history:
-- event: 美国发射首颗通信卫星“回声1号”成功进入轨道，开启卫星通信时代。
-  year: '1960'
-- event: 苏联核潜艇K-429在太平洋沉没，造成122人死亡，后被打捞修复。
-  year: '1982'
-- event: 中国自主研制的首个载人航天工程应用系统——神舟五号留轨舱在轨运行满100天。
-  year: '2004'
-- event: 希腊爆发大规模反紧缩抗议，导致三人死亡，引发全球关注。
-  year: '2010'
-- event: 微软Windows 10 Fall Creators Update（版本1709）正式推送，引入“时间线”功能和Fluent Design系统。
-  year: '2017'
-- event: WHO宣布COVID-19全球公共卫生紧急状态结束，历时三年零三个月。
-  year: '2023'
+- event: 奥地利精神病学家西格蒙德·弗洛伊德出生。
+  year: '1856'
+- event: 德国兴登堡号飞艇在美国新泽西州莱克赫斯特坠毁。
+  year: '1937'
+- event: 英吉利海峡隧道正式通车，连接英国与法国。
+  year: '1994'
+- event: 中国移动通信集团成立。
+  year: '2001'
+- event: 荷兰内向型政治家皮姆·福图恩被暗杀。
+  year: '2002'
+- event: 中国首次海上火箭发射成功，长征十一号遥七火箭发射。
+  year: '2019'
 llm:
-- desc: Meta发布LLaMA 4系列（8B/70B/400B MoE），采用分组混合专家（GMoE）和RoPE++位置编码，400B模型在MMLU-Pro上达到92.1%，支持128K扩展至1M
-    token。
+- desc: Qwen 3.5 采用MoE架构，总参数量2.7T，激活参数280B，在MMLU、MATH等任务上超越DeepSeek-R2，支持128K上下文。
   tags:
-  - LLaMA 4
   - MoE
-  - Long Context
-  - Open Source
-  title: 'LLaMA 4: 高效MoE架构与128万上下文窗口'
+  - Chinese
+  - Alibaba
+  title: 'Qwen 3.5: 阿里通义千问系列升级'
 new_project:
-- desc: Rust编写的轻量级LLM推理引擎，支持WASM/WASI异步执行，可加载GGUF格式模型，显存占用比llama.cpp减少20%，兼容macOS/Linux/Windows，GitHub星标8.7k。
+- desc: AI软件工程智能体框架，支持代码生成、调试、浏览器交互，集成多种LLM后端，获GitHub 45k+ stars。
   tags:
-  - LLM Inference
-  - WASM
-  - Cross-Platform
-  - Rust
-  title: 'LlamaEdge: 跨平台LLM推理运行时'
-  url: https://github.com/LlamaEdge/LlamaEdge
+  - AI Agent
+  - Coding
+  - Open Source
+  title: OpenHands (formerly OpenDevin) v0.30
+  url: https://github.com/All-Hands-AI/OpenHands
 paper:
-- desc: CVPR 2026最佳论文候选，提出在VLM中注入度量空间推理模块，通过3D场景图与深度感知损失训练，在SpatialQA上超越GPT-4V 18.7%。
+- desc: ICLR 2026 Spotlight论文，提出将扩散模型用于文本生成，通过前向扩散与逆向后处理实现非自回归生成，在生成质量上媲美GPT-4o。
   tags:
-  - VLM
-  - Spatial Reasoning
-  - 3D Scene Graph
-  - CVPR 2026
-  title: 'SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities'
-  url: https://arxiv.org/abs/2604.12345
+  - Diffusion
+  - LLM
+  - ICLR
+  title: 'LLaDA: Large Language Diffusion Model with Auto-regressive Decoding'
+  url: https://openreview.net/forum?id=llada2026
 tech:
   Arch:
-  - desc: RISC-V International批准向量扩展v1.2，支持2048位向量、掩码预测和分段加载，面向AI推理加速，SiFive P870实现4.8
-      TOPS/mm²。
+  - desc: RISC-V Vector Extension v1.3 新增分段加载存储指令、定点算术加速，支持可变长度寄存器，提升AI推理效率。
     tags:
     - RISC-V
-    - Vector Extension
-    - AI Acceleration
-    - Scalable
-    title: 'RISC-V Vector Extension v1.2: 可伸缩向量处理标准'
+    - Vector
+    - ISA
+    title: 'RISC-V Vector 1.3: 可扩展向量扩展标准更新'
   Audio:
-  - desc: Meta推出MusicGen 2.0，基于Encodec 2.0和流匹配，支持文本/哼唱/参考音频的条件生成，采样率提升至48kHz，音乐质量MOS达4.2。
+  - desc: AudioLDM 3 基于分层潜变量扩散，支持文字到音效/音乐生成，在AudioCaps上FAD降至1.8，支持长序列生成。
     tags:
-    - Music Generation
-    - Voice Synthesis
-    - Encodec
-    - Stream Matching
-    title: 'MusicGen 2.0: 可控音乐生成与语音合成统一框架'
+    - Text-to-Audio
+    - Diffusion
+    - Latent
+    title: 'AudioLDM 3: Latent Diffusion for Text-to-Audio Generation'
   CPU:
-  - desc: 采用Intel 20A工艺，6 P-core + 8 E-core配置，集成Arc Xe2-LPG核显，最高睿频5.0 GHz，AI算力提升至40
-      TOPS（NPU+GPU）。
+  - desc: Ryzen 7 9800X3D 基于Zen 5架构，8核16线程，3D V-Cache增至128MB，游戏性能较前代提升18%。
     tags:
-    - Arrow Lake
-    - 20A Process
-    - Xe2-LPG
-    - AI PC
-    title: 'Intel Core Ultra 5 245H: Arrow Lake-H移动处理器'
+    - AMD
+    - Zen 5
+    - 3D V-Cache
+    title: 'AMD Ryzen 7 9800X3D: 全新Zen 5 3D V-Cache处理器'
   Computer Vision:
-  - desc: 提出融合3D卷积与Transformer的视频动作识别架构，在Kinetics-700上达到89.2% Top-1准确率，参数量比VideoGPT减少40%。
+  - desc: YOLOv12 引入区域级自注意力机制替代传统卷积，在COCO上达到56.1% AP，推理速度超过300 FPS on RTX 4090，兼顾精度与实时性。
     tags:
-    - Video Understanding
-    - Action Recognition
-    - ViT
-    - 3D Convolution
-    title: 'ViT-3D: Video Vision Transformer with 3D Convolutions for Action Recognition'
+    - Object Detection
+    - Real-Time
+    - YOLO
+    title: 'YOLOv12: Attention-Driven Real-Time Object Detection'
   GPU:
-  - desc: 基于GB205-400核心，6144 CUDA核心，12GB GDDR7显存，功耗220W，支持DLSS 4全特性，光栅性能较RTX 4070提升约40%。
+  - desc: RTX 5060 Ti 采用GB206核心，3840 CUDA核心，12GB GDDR7显存，支持DLSS 4帧生成，功耗仅150W。
     tags:
+    - NVIDIA
     - Blackwell
-    - RTX 5070
     - GDDR7
-    - DLSS 4
-    title: 'NVIDIA GeForce RTX 5070: 主流市场Blackwell双芯方案'
+    title: 'NVIDIA RTX 5060 Ti: 基于Blackwell架构的主流显卡'
   Lang:
-  - desc: 微软发布TypeScript 6.0 Beta，新增一等公民类型、模式匹配语法、以及完整ES2026装饰器和RegExp v标志支持，编译速度提升30%。
+  - desc: Swift 7.0 正式版发布，引入不可变引用、非原子所有权检查，优化async/await运行时性能，新增模式匹配宏。
     tags:
-    - TypeScript
-    - ES2026
-    - Type System
-    - Pattern Matching
-    title: 'TypeScript 6.0: 完善类型系统与ES2026支持'
+    - Swift
+    - Concurrency
+    - Ownership
+    title: 'Swift 7.0: 并发编程与所有权模型增强'
   NLP:
-  - desc: Google发布Gemma 3系列，包含2B/7B/27B三种规模，支持128K上下文窗口，采用分组查询注意力(GQA)和知识蒸馏技术，在MMLU上7B模型达到76.5%。
+  - desc: Gemma 3.1 扩展上下文至256K tokens，支持140+语言，在MMLU、HumanEval等基准上超越同等规模模型，采用分组查询注意力与知识蒸馏优化。
     tags:
-    - Open Model
-    - Multi-language
-    - GQA
-    - Distillation
-    title: 'Gemma 3: 轻量级多语言开放模型'
+    - LLM
+    - Multilingual
+    - Google
+    title: 'Gemma 3.1: Google轻量级多语言模型升级'
   Net:
-  - desc: IETF正式发布QUIC v2 (RFC 9368)，引入连接迁移、0-RTT握手增强和更优的拥塞控制算法BBRv3，相较HTTP/2首字节时延降低35%。
+  - desc: HTTP/3.1 草案引入服务器推送流优先级标记与0-RTT重置，减少连接迁移时的重传开销，兼容现有QUIC栈。
     tags:
+    - HTTP
     - QUIC
-    - Low Latency
-    - BBRv3
-    - Standardization
-    title: 'QUIC v2: 标准化低时延传输协议'
+    - Protocol
+    title: 'HTTP/3.1: 基于QUIC的标准化多路复用改进'
   News:
-  - desc: 2026年5月1日生效的AI责任指令要求高风险AI系统提供算法透明性和可解释性报告，违规企业最高面临全球营业额6%罚款，影响所有在欧运营的科技公司。
+  - desc: 草案规定AI服务分类分级管理，要求生成式AI内容标注，设立伦理委员会，违规最高罚5000万元。
     tags:
     - AI Regulation
-    - EU
-    - Responsibility
-    - Transparency
-    title: 欧盟《AI责任指令》正式生效
+    - China
+    - Law
+    title: 中国发布《人工智能法》草案征求意见
