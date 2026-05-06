@@ -1,113 +1,127 @@
 algorithm:
-- desc: 集成学习算法，通过Bootstrap采样构建多棵决策树并汇总结果，降低过拟合，适用于分类与回归。
+- desc: 基于梯度提升决策树的并行化实现，包含正则化目标函数、列抽样和缩减技术，支持分布式计算，在分类、回归和排序任务中表现优异。
   tags:
-  - Ensemble
-  - Decision Tree
-  - Classification
-  title: 随机森林 (Random Forest)
+  - XGBoost
+  - 梯度提升
+  - 集成学习
+  - 并行计算
+  title: 'XGBoost: 可扩展的梯度提升系统'
 cv_recommend:
-  agency: ボイスキット
-  hometown: 神奈川県
-  intro: 上坂すみれ以其独特的声线和多变的演技能力著称，既能演绎活泼可爱的少女角色，也能驾驭冷静沉着的御姐音域。作为学识渊博的声优，她常将历史与军事知识融入工作，形成极具辨识度的个人风格。在配音之外，她还活跃于音乐活动与舞台，展现出全面的艺能实力。
-  name: 上坂すみれ
-date: '2026-05-06'
+  agency: 青二プロダクション (Aoni Production)
+  hometown: 爱知县
+  intro: 她拥有透明感且细腻的演技，能够驾驭从少女到成熟女性的广泛角色。2023年荣获第17届声优奖主演女声优奖与助演女声优奖，成为史上首位同时获得两项大奖的声优，展现了极高的实力与认可度。她在业界以扎实的台词功底和情感表现力著称，持续活跃于动画、游戏及外语影视配音领域，是当代日本声优界的中坚力量。
+  name: 种崎敦美 (Tanezaki Atsumi)
+date: '2026-05-07'
 history:
-- event: 奥地利精神病学家西格蒙德·弗洛伊德出生。
-  year: '1856'
-- event: 德国兴登堡号飞艇在美国新泽西州莱克赫斯特坠毁。
-  year: '1937'
-- event: 英吉利海峡隧道正式通车，连接英国与法国。
-  year: '1994'
-- event: 中国移动通信集团成立。
-  year: '2001'
-- event: 荷兰内向型政治家皮姆·福图恩被暗杀。
-  year: '2002'
-- event: 中国首次海上火箭发射成功，长征十一号遥七火箭发射。
-  year: '2019'
+- event: 贝多芬《第九交响曲》在维也纳首演。
+  year: '1824'
+- event: 英国客轮卢西塔尼亚号被德国潜艇击沉，造成1198人死亡。
+  year: '1915'
+- event: 德国无条件投降，二战欧洲战场结束。
+  year: '1945'
+- event: 越南奠边府战役胜利，标志第一次印度支那战争结束。
+  year: '1954'
+- event: 美国奋进号航天飞机首次飞行。
+  year: '1992'
+- event: 中国驻南联盟大使馆遭北约轰炸，造成3人死亡。
+  year: '1999'
 llm:
-- desc: Qwen 3.5 采用MoE架构，总参数量2.7T，激活参数280B，在MMLU、MATH等任务上超越DeepSeek-R2，支持128K上下文。
+- desc: 全开源多模态大模型，采用U-Net架构创新，支持图像、视频、音频联合理解与生成，在MMBench和LVLM-eHub上超越GPT-4V。
   tags:
-  - MoE
-  - Chinese
-  - Alibaba
-  title: 'Qwen 3.5: 阿里通义千问系列升级'
+  - 商汤
+  - SenseNova U1
+  - 多模态
+  - 开源
+  title: '商汤日日新SenseNova U1: 统一理解与生成的开源多模态大模型'
 new_project:
-- desc: AI软件工程智能体框架，支持代码生成、调试、浏览器交互，集成多种LLM后端，获GitHub 45k+ stars。
+- desc: 高性能AI工作流编排框架，支持DAG pipeline，内置模型版本管理、缓存优化，兼容LangChain接口，适用于复杂AI应用构建。
   tags:
-  - AI Agent
-  - Coding
-  - Open Source
-  title: OpenHands (formerly OpenDevin) v0.30
-  url: https://github.com/All-Hands-AI/OpenHands
+  - 工作流编排
+  - AI pipeline
+  - 字节跳动
+  - 开源
+  title: 'DeerFlow: 字节跳动开源AI工作流编排框架'
+  url: https://github.com/bytedance/deer-flow
 paper:
-- desc: ICLR 2026 Spotlight论文，提出将扩散模型用于文本生成，通过前向扩散与逆向后处理实现非自回归生成，在生成质量上媲美GPT-4o。
+- desc: CVPR 2026 Oral论文，提出线性上下文学习方法，从无标签视频中学习高分辨率、时间一致的特征表示，显著提升下游任务效果。
   tags:
-  - Diffusion
-  - LLM
-  - ICLR
-  title: 'LLaDA: Large Language Diffusion Model with Auto-regressive Decoding'
-  url: https://openreview.net/forum?id=llada2026
+  - CVPR 2026
+  - 无监督学习
+  - 视频表示
+  - 时空一致性
+  title: 'LILA: Learning Pixel-level Spatio-temporal Consistent Representations from
+    Unlabeled Videos'
+  url: https://arxiv.org/abs/2604.26488
 tech:
   Arch:
-  - desc: RISC-V Vector Extension v1.3 新增分段加载存储指令、定点算术加速，支持可变长度寄存器，提升AI推理效率。
+  - desc: 引入新的AI指令集（矩阵乘法、非线性激活），增强指针认证与分支目标标识，优化内存标记扩展(MTE)性能，为移动和边缘AI提供硬件加速。
     tags:
-    - RISC-V
-    - Vector
-    - ISA
-    title: 'RISC-V Vector 1.3: 可扩展向量扩展标准更新'
+    - Armv9.5
+    - AI指令集
+    - MTE
+    - 指针认证
+    title: 'Armv9.5 架构扩展: 强化AI与安全特性'
   Audio:
-  - desc: AudioLDM 3 基于分层潜变量扩散，支持文字到音效/音乐生成，在AudioCaps上FAD降至1.8，支持长序列生成。
+  - desc: 支持30分钟长音频输入，基于Florence架构适配音频，实现语音、音乐、环境音的统一理解与推理，零样本TTS克隆。
     tags:
-    - Text-to-Audio
-    - Diffusion
-    - Latent
-    title: 'AudioLDM 3: Latent Diffusion for Text-to-Audio Generation'
-  CPU:
-  - desc: Ryzen 7 9800X3D 基于Zen 5架构，8核16线程，3D V-Cache增至128MB，游戏性能较前代提升18%。
-    tags:
-    - AMD
-    - Zen 5
-    - 3D V-Cache
-    title: 'AMD Ryzen 7 9800X3D: 全新Zen 5 3D V-Cache处理器'
-  Computer Vision:
-  - desc: YOLOv12 引入区域级自注意力机制替代传统卷积，在COCO上达到56.1% AP，推理速度超过300 FPS on RTX 4090，兼顾精度与实时性。
-    tags:
-    - Object Detection
-    - Real-Time
-    - YOLO
-    title: 'YOLOv12: Attention-Driven Real-Time Object Detection'
-  GPU:
-  - desc: RTX 5060 Ti 采用GB206核心，3840 CUDA核心，12GB GDDR7显存，支持DLSS 4帧生成，功耗仅150W。
-    tags:
+    - 长音频理解
     - NVIDIA
-    - Blackwell
-    - GDDR7
-    title: 'NVIDIA RTX 5060 Ti: 基于Blackwell架构的主流显卡'
+    - 零样本TTS
+    - 开源
+    title: 'Audio Flamingo Next: NVIDIA开源长音频理解大模型'
+  CPU:
+  - desc: 基于Zen 6架构，16核32线程，双堆叠3D V-Cache总容量256MB，频率5.8GHz，游戏性能较上代提升25%。
+    tags:
+    - Zen 6
+    - 双路3D V-Cache
+    - 9950X3D2
+    - 台式机
+    title: 'AMD Ryzen 9 9950X3D2: 首款双路3D V-Cache处理器'
+  Computer Vision:
+  - desc: 提出一种简单高效的多模态跟踪器，通过自适应特征融合和轻量级Transformer架构，在多个基准上达到SOTA，参数量减少40%。
+    tags:
+    - 多模态跟踪
+    - CVPR 2026
+    - 高效Transformer
+    - 自适应融合
+    title: 'SEATrack: Simple, Efficient, and Adaptive Multimodal Tracker'
+  GPU:
+  - desc: 采用2nm工艺，集成192GB HBM3e显存，支持FP8稀疏计算，FP8算力达2.3PFLOPS，专为Helios机架AI系统设计。
+    tags:
+    - AMD Instinct
+    - MI455X
+    - 2nm
+    - HBM3e
+    title: 'AMD Instinct MI455X: 旗舰AI GPU'
   Lang:
-  - desc: Swift 7.0 正式版发布，引入不可变引用、非原子所有权检查，优化async/await运行时性能，新增模式匹配宏。
+  - desc: 新一代LTS版本，内置TypeScript类型检查（实验性），新增AsyncLocalStorage改进，V8引擎升级至14.0，性能提升15%。
     tags:
-    - Swift
-    - Concurrency
-    - Ownership
-    title: 'Swift 7.0: 并发编程与所有权模型增强'
+    - Node.js 26
+    - TypeScript
+    - V8 14.0
+    - LTS
+    title: Node.js 26.0.0 正式发布
   NLP:
-  - desc: Gemma 3.1 扩展上下文至256K tokens，支持140+语言，在MMLU、HumanEval等基准上超越同等规模模型，采用分组查询注意力与知识蒸馏优化。
+  - desc: 百度发布，采用MoE架构，支持文本、图像、视频、音频全模态输入输出，在多项基准超越GPT-5，具备原生多模态推理能力。
     tags:
-    - LLM
-    - Multilingual
-    - Google
-    title: 'Gemma 3.1: Google轻量级多语言模型升级'
+    - ERNIE 5.0
+    - 全模态
+    - 2.4万亿参数
+    - MoE
+    title: 'ERNIE 5.0: 2.4万亿参数原生全模态大模型'
   Net:
-  - desc: HTTP/3.1 草案引入服务器推送流优先级标记与0-RTT重置，减少连接迁移时的重传开销，兼容现有QUIC栈。
+  - desc: Go官方团队提出x/net/http3包，基于QUIC实现HTTP/3服务端和客户端，支持0-RTT、多路复用，性能较HTTP/2提升30%。
     tags:
-    - HTTP
+    - Go
+    - HTTP/3
     - QUIC
-    - Protocol
-    title: 'HTTP/3.1: 基于QUIC的标准化多路复用改进'
+    - 0-RTT
+    title: Go x/net/http3 提案启动：原生HTTP/3支持
   News:
-  - desc: 草案规定AI服务分类分级管理，要求生成式AI内容标注，设立伦理委员会，违规最高罚5000万元。
+  - desc: OpenAI推出ChatGPT广告平台，允许品牌在对话中插入上下文相关广告，采用收入分成模式，用户可控制隐私设置，标志AI商业化新里程碑。
     tags:
-    - AI Regulation
-    - China
-    - Law
-    title: 中国发布《人工智能法》草案征求意见
+    - ChatGPT
+    - 广告平台
+    - AI商业化
+    - OpenAI
+    title: ChatGPT广告主平台正式上线
