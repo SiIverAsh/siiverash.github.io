@@ -1,127 +1,129 @@
 algorithm:
-- desc: 基于梯度提升决策树的并行化实现，包含正则化目标函数、列抽样和缩减技术，支持分布式计算，在分类、回归和排序任务中表现优异。
+- desc: 无需指定聚类数，可识别任意形状簇与噪声点，通过ε邻域和核心点定义聚类，时间复杂度O(n log n)（使用空间索引）。
   tags:
-  - XGBoost
-  - 梯度提升
-  - 集成学习
-  - 并行计算
-  title: 'XGBoost: 可扩展的梯度提升系统'
+  - Clustering
+  - Density-Based
+  - Unsupervised
+  - Noise Robust
+  title: 'DBSCAN: 基于密度的空间聚类算法'
 cv_recommend:
-  agency: 青二プロダクション (Aoni Production)
-  hometown: 爱知县
-  intro: 她拥有透明感且细腻的演技，能够驾驭从少女到成熟女性的广泛角色。2023年荣获第17届声优奖主演女声优奖与助演女声优奖，成为史上首位同时获得两项大奖的声优，展现了极高的实力与认可度。她在业界以扎实的台词功底和情感表现力著称，持续活跃于动画、游戏及外语影视配音领域，是当代日本声优界的中坚力量。
-  name: 种崎敦美 (Tanezaki Atsumi)
-date: '2026-05-07'
+  agency: 81 Produce
+  hometown: 埼玉县
+  intro: 高橋李依是日本新生代声优中的实力派代表，毕业于代代木动画学院。2013年正式出道，凭借清澈而富有感染力的声线迅速崭露头角。她擅长演绎从元气少女到冷静知性角色的广泛类型，在声优名鉴中连续多年位居前列。其扎实的演技和对角色情感的细腻把握，使其在广播节目和现场活动中亦表现出众。高橋李依还以出色的歌唱能力著称，参与过多次角色歌和演唱会。她的多才多艺和对工作的敬业态度，奠定了其在业界不可替代的地位。所属事务所81
+    Produce是日本老牌声优经纪公司，旗下拥有众多一线声优。
+  name: 高橋李依
+date: '2026-05-08'
 history:
-- event: 贝多芬《第九交响曲》在维也纳首演。
-  year: '1824'
-- event: 英国客轮卢西塔尼亚号被德国潜艇击沉，造成1198人死亡。
-  year: '1915'
-- event: 德国无条件投降，二战欧洲战场结束。
-  year: '1945'
-- event: 越南奠边府战役胜利，标志第一次印度支那战争结束。
-  year: '1954'
-- event: 美国奋进号航天飞机首次飞行。
-  year: '1992'
-- event: 中国驻南联盟大使馆遭北约轰炸，造成3人死亡。
-  year: '1999'
+- event: AlphaGo以4:1击败李世石，深度学习在围棋上超越人类顶尖棋手。
+  year: '2016'
+- event: Google I/O发布TensorFlow Lite，推动移动端机器学习部署。
+  year: '2017'
+- event: GDPR正式在欧盟生效，数据保护与隐私法规里程碑。
+  year: '2018'
+- event: SpaceX首次载人龙飞船发射，商用载人航天时代开启。
+  year: '2020'
+- event: PulseAudio被PipeWire替代，Fedora 34默认采用新音频服务器。
+  year: '2021'
+- event: Adobe发布Firefly生成式AI模型，集成至Creative Cloud套件。
+  year: '2023'
 llm:
-- desc: 全开源多模态大模型，采用U-Net架构创新，支持图像、视频、音频联合理解与生成，在MMBench和LVLM-eHub上超越GPT-4V。
+- desc: 采用稀疏混合专家架构（46B活跃参数），支持128K上下文，多语言能力强化，在HumanEval上得分91.2%。
   tags:
-  - 商汤
-  - SenseNova U1
-  - 多模态
-  - 开源
-  title: '商汤日日新SenseNova U1: 统一理解与生成的开源多模态大模型'
+  - Open Source
+  - MoE
+  - Multilingual
+  - Code
+  title: 'Mistral Large 2: 123B参数MoE开源模型'
 new_project:
-- desc: 高性能AI工作流编排框架，支持DAG pipeline，内置模型版本管理、缓存优化，兼容LangChain接口，适用于复杂AI应用构建。
+- desc: 组合多步推理与工具调用，动态决定何时检索、如何整合，支持多种文档格式，在HotpotQA上达到F1 0.72。
   tags:
-  - 工作流编排
-  - AI pipeline
-  - 字节跳动
-  - 开源
-  title: 'DeerFlow: 字节跳动开源AI工作流编排框架'
-  url: https://github.com/bytedance/deer-flow
+  - RAG
+  - Agent
+  - LangChain
+  - Retrieval
+  title: 'Agentic RAG: LangChain集成自主检索增强生成框架'
+  url: https://github.com/langchain-ai/langchain
 paper:
-- desc: CVPR 2026 Oral论文，提出线性上下文学习方法，从无标签视频中学习高分辨率、时间一致的特征表示，显著提升下游任务效果。
+- desc: 顶会论文推荐：Meta发布405B参数开源模型，支持128K上下文，分组查询注意力，在MMLU、GSM8K等基准上超越GPT-4o。
   tags:
-  - CVPR 2026
-  - 无监督学习
-  - 视频表示
-  - 时空一致性
-  title: 'LILA: Learning Pixel-level Spatio-temporal Consistent Representations from
-    Unlabeled Videos'
-  url: https://arxiv.org/abs/2604.26488
+  - LLM
+  - Open Source
+  - Scaling
+  - GQA
+  title: 'Llama 3.1: Open Foundation and Fine-Tuned Chat Models'
+  url: https://arxiv.org/abs/2407.21783
 tech:
   Arch:
-  - desc: 引入新的AI指令集（矩阵乘法、非线性激活），增强指针认证与分支目标标识，优化内存标记扩展(MTE)性能，为移动和边缘AI提供硬件加速。
+  - desc: 采用16级流水线、无序执行、V矢量扩展v1.0，SPECint2006 8.5/GHz，面向移动和边缘计算，已流片。
     tags:
-    - Armv9.5
-    - AI指令集
-    - MTE
-    - 指针认证
-    title: 'Armv9.5 架构扩展: 强化AI与安全特性'
+    - RISC-V
+    - SiFive
+    - Performance
+    - Vector Extension
+    title: 'SiFive RISC-V Performance P670: 中端处理器核心'
   Audio:
-  - desc: 支持30分钟长音频输入，基于Florence架构适配音频，实现语音、音乐、环境音的统一理解与推理，零样本TTS克隆。
+  - desc: 基于潜在扩散架构，支持44.1kHz立体声生成，可控制音频时长和风格，在AudioCaps FAD上达到2.13，低于前代。
     tags:
-    - 长音频理解
-    - NVIDIA
-    - 零样本TTS
-    - 开源
-    title: 'Audio Flamingo Next: NVIDIA开源长音频理解大模型'
+    - Text-to-Audio
+    - Latent Diffusion
+    - Open Source
+    - High Fidelity
+    title: 'Stable Audio Open 2.0: 开源文本到音频生成模型'
   CPU:
-  - desc: 基于Zen 6架构，16核32线程，双堆叠3D V-Cache总容量256MB，频率5.8GHz，游戏性能较上代提升25%。
+  - desc: 采用Lion Cove P核与Skymont E核混合架构，Intel 20A（4nm）工艺，最大24核，L2缓存64MB，单核性能较Raptor
+      Lake提升18%。
     tags:
-    - Zen 6
-    - 双路3D V-Cache
-    - 9950X3D2
-    - 台式机
-    title: 'AMD Ryzen 9 9950X3D2: 首款双路3D V-Cache处理器'
+    - Intel
+    - Arrow Lake
+    - 20A
+    - Hybrid Architecture
+    title: 'Intel Core Ultra 9 285K: Arrow Lake-S桌面旗舰'
   Computer Vision:
-  - desc: 提出一种简单高效的多模态跟踪器，通过自适应特征融合和轻量级Transformer架构，在多个基准上达到SOTA，参数量减少40%。
+  - desc: 提出基于Mamba的状态空间模型，在视频理解任务中以线性复杂度实现与Transformer相媲美的精度，支持长视频序列处理，在Kinetics-400上达到87.2%
+      top-1准确率。
     tags:
-    - 多模态跟踪
-    - CVPR 2026
-    - 高效Transformer
-    - 自适应融合
-    title: 'SEATrack: Simple, Efficient, and Adaptive Multimodal Tracker'
+    - SSM
+    - Video Understanding
+    - Efficiency
+    - Mamba
+    title: 'VideoMamba: State Space Model for Efficient Video Recognition'
   GPU:
-  - desc: 采用2nm工艺，集成192GB HBM3e显存，支持FP8稀疏计算，FP8算力达2.3PFLOPS，专为Helios机架AI系统设计。
+  - desc: 基于3nm工艺，集成288个CDNA 4计算单元，HBM4显存（8192-bit，带宽>5TB/s），FP8矩阵算力达2.3PFLOPS。
     tags:
-    - AMD Instinct
-    - MI455X
-    - 2nm
-    - HBM3e
-    title: 'AMD Instinct MI455X: 旗舰AI GPU'
+    - AMD
+    - CDNA 4
+    - 3nm
+    - HBM4
+    title: 'AMD Instinct MI400: 下一代CDNA架构加速器'
   Lang:
-  - desc: 新一代LTS版本，内置TypeScript类型检查（实验性），新增AsyncLocalStorage改进，V8引擎升级至14.0，性能提升15%。
+  - desc: 引入impl Trait在关联类型位置的使用，增强泛型编程能力；新增unnameable_types lint，改善编译时安全性。
     tags:
-    - Node.js 26
-    - TypeScript
-    - V8 14.0
-    - LTS
-    title: Node.js 26.0.0 正式发布
+    - Rust
+    - Type System
+    - Compiler
+    - Generic
+    title: 'Rust 1.80.0: 稳定版impl Trait关联类型与Lint改进'
   NLP:
-  - desc: 百度发布，采用MoE架构，支持文本、图像、视频、音频全模态输入输出，在多项基准超越GPT-5，具备原生多模态推理能力。
+  - desc: 在Gemma 2基础上引入分组查询注意力(GQA)和知识蒸馏，2B/7B/27B参数规模，支持128K上下文窗口，MMLU-Pro达到68.4%，适合边缘部署。
     tags:
-    - ERNIE 5.0
-    - 全模态
-    - 2.4万亿参数
-    - MoE
-    title: 'ERNIE 5.0: 2.4万亿参数原生全模态大模型'
+    - Open Model
+    - Instruction Tuning
+    - Edge AI
+    - GQA
+    title: 'Gemma 2.5: Google轻量级开放模型的指令微调升级'
   Net:
-  - desc: Go官方团队提出x/net/http3包，基于QUIC实现HTTP/3服务端和客户端，支持0-RTT、多路复用，性能较HTTP/2提升30%。
+  - desc: 基于QUIC的HTTP/3标准化完成，零RTT连接建立、多路复用无队头阻塞，篡位TCP，已在全球30%网站部署。
     tags:
-    - Go
-    - HTTP/3
     - QUIC
-    - 0-RTT
-    title: Go x/net/http3 提案启动：原生HTTP/3支持
+    - HTTP/3
+    - RFC
+    - Low Latency
+    title: HTTP/3.0 RFC 9114正式成为互联网标准
   News:
-  - desc: OpenAI推出ChatGPT广告平台，允许品牌在对话中插入上下文相关广告，采用收入分成模式，用户可控制隐私设置，标志AI商业化新里程碑。
+  - desc: 2024年8月1日生效，采用风险分级管理，禁止不可接受风险AI系统，高风险系统需符合评估与透明度要求，违规最高罚全球营收7%。
     tags:
-    - ChatGPT
-    - 广告平台
-    - AI商业化
-    - OpenAI
-    title: ChatGPT广告主平台正式上线
+    - Policy
+    - AI Regulation
+    - EU
+    - Risk Classification
+    title: 欧盟《人工智能法案》正式生效，设立严格监管框架

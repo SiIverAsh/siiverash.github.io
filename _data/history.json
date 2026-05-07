@@ -1,4 +1,20 @@
 {
+  "2026-05-08": [
+    "SiFive RISC-V Performance P670: 中端处理器核心",
+    "Mistral Large 2: 123B参数MoE开源模型",
+    "HTTP/3.0 RFC 9114正式成为互联网标准",
+    "欧盟《人工智能法案》正式生效，设立严格监管框架",
+    "Intel Core Ultra 9 285K: Arrow Lake-S桌面旗舰",
+    "Llama 3.1: Open Foundation and Fine-Tuned Chat Models",
+    "AMD Instinct MI400: 下一代CDNA架构加速器",
+    "Agentic RAG: LangChain集成自主检索增强生成框架",
+    "DBSCAN: 基于密度的空间聚类算法",
+    "Rust 1.80.0: 稳定版impl Trait关联类型与Lint改进",
+    "Stable Audio Open 2.0: 开源文本到音频生成模型",
+    "高橋李依",
+    "Gemma 2.5: Google轻量级开放模型的指令微调升级",
+    "VideoMamba: State Space Model for Efficient Video Recognition"
+  ],
   "2026-05-07": [
     "AMD Instinct MI455X: 旗舰AI GPU",
     "Go x/net/http3 提案启动：原生HTTP/3支持",
@@ -142,19 +158,5 @@
     "芯擎科技5nm车规级AI芯片龍鹰二号",
     "通义千问 Qwen3.6-27B 开源",
     "水濑祈"
-  ],
-  "2026-04-28": [
-    "WebTransport 工作草案 (W3C)",
-    "文心大模型4.5开源",
-    "小米开源机器人技术",
-    "随机森林 (Random Forest)",
-    "Intel Core Ultra Series 3 (18A)",
-    "上坂堇",
-    "Fun-ASR1.5 语音识别大模型",
-    "LaVR: Latent Space Conditioned Video Re-rendering using Large 4D Reconstruction Models",
-    "Go 1.26 发布",
-    "deer-flow",
-    "进迭时空 RISC-V AI CPU K3",
-    "NVIDIA RTX PRO 5000 Blackwell GPU"
   ]
 }
