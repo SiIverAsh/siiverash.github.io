@@ -1,4 +1,20 @@
 {
+  "2026-05-09": [
+    "Intel Core Ultra 9 295K: Arrow Lake-S Refresh",
+    "伊藤静",
+    "Python 4.0 Alpha 1: 重大语法与性能改进",
+    "t-SNE: t-Distributed Stochastic Neighbor Embedding",
+    "InternVideo2.5: Scaling Video Foundation Models with Multi-Modal Understanding",
+    "RISC-V Vector Extension v1.4: 可伸缩向量处理标准",
+    "DreamBench++: A Unified Benchmark for Generative Models with Human Evaluation",
+    "vllm: 高效LLM推理与部署引擎",
+    "Stable Audio Open 2.5: 开源文本到音频与音乐生成",
+    "AMD Radeon RX 8070 XT: RDNA 5架构旗舰显卡",
+    "QUIC v3: 低时延传输协议的进一步标准化",
+    "Qwen 4.0: 阿里通义千问系列升级，原生多模态MoE架构",
+    "日本发布《AI利用与治理基本法》",
+    "Gemma 3.2: Google轻量级开放模型的持续优化"
+  ],
   "2026-05-08": [
     "SiFive RISC-V Performance P670: 中端处理器核心",
     "Mistral Large 2: 123B参数MoE开源模型",
@@ -142,21 +158,5 @@
     "Kimi K2.6",
     "中科曙光超智融合集群接入全国一体化算力网",
     "Bridging the Gap: Speech-LLM与端到端架构的多语言对话ASR比较"
-  ],
-  "2026-04-29": [
-    "DeepSeek-V4 Preview: 百万上下文开源模型",
-    "发改委叫停Meta收购Manus：AI技术主权争议",
-    "Intel Xeon 600系列工作站处理器发布",
-    "mruby 4.0.0 发布：轻量级Ruby实现",
-    "K-means聚类算法",
-    "Wi-Fi 7 (802.11be) 正式标准发布",
-    "Vision Banana: 指令微调图像生成器",
-    "everything-claude-code: Claude代码增强框架",
-    "AMD Radeon RX 9060 XT: RDNA 4中端显卡",
-    "MathForge: 用难题驱动强化学习提升大模型数学推理",
-    "VibeVoice ASR: 长语音结构化识别",
-    "芯擎科技5nm车规级AI芯片龍鹰二号",
-    "通义千问 Qwen3.6-27B 开源",
-    "水濑祈"
   ]
 }

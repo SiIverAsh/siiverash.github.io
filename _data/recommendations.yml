@@ -1,129 +1,131 @@
 algorithm:
-- desc: 无需指定聚类数，可识别任意形状簇与噪声点，通过ε邻域和核心点定义聚类，时间复杂度O(n log n)（使用空间索引）。
+- desc: 经典非线性降维与可视化算法，通过概率分布匹配保留高维数据局部结构，广泛应用于单细胞转录组、图像特征可视化等领域，近期改进包括 Barnes-Hut
+    近似加速与梯度缩放优化。
   tags:
-  - Clustering
-  - Density-Based
-  - Unsupervised
-  - Noise Robust
-  title: 'DBSCAN: 基于密度的空间聚类算法'
+  - Dimensionality Reduction
+  - Visualization
+  - Unsupervised Learning
+  - Nonlinear
+  title: 't-SNE: t-Distributed Stochastic Neighbor Embedding'
 cv_recommend:
-  agency: 81 Produce
-  hometown: 埼玉县
-  intro: 高橋李依是日本新生代声优中的实力派代表，毕业于代代木动画学院。2013年正式出道，凭借清澈而富有感染力的声线迅速崭露头角。她擅长演绎从元气少女到冷静知性角色的广泛类型，在声优名鉴中连续多年位居前列。其扎实的演技和对角色情感的细腻把握，使其在广播节目和现场活动中亦表现出众。高橋李依还以出色的歌唱能力著称，参与过多次角色歌和演唱会。她的多才多艺和对工作的敬业态度，奠定了其在业界不可替代的地位。所属事务所81
-    Produce是日本老牌声优经纪公司，旗下拥有众多一线声优。
-  name: 高橋李依
-date: '2026-05-08'
+  agency: 贤Production
+  hometown: 东京都
+  intro: 伊藤静以其清澈而富有穿透力的声线在业界独树一帜，擅长演绎气质凛然的成年女性角色。自2003年出道以来，她塑造了多个令人印象深刻的角色，并在声优活动中展现出极强的表现力与情感投入。根据《声优名鉴2025》统计，其作品数量超过200部，涵盖动画、游戏与海外影视配音，是2000年代后期至今活跃度极高的实力派声优。
+  name: 伊藤静
+date: '2026-05-09'
 history:
-- event: AlphaGo以4:1击败李世石，深度学习在围棋上超越人类顶尖棋手。
-  year: '2016'
-- event: Google I/O发布TensorFlow Lite，推动移动端机器学习部署。
-  year: '2017'
-- event: GDPR正式在欧盟生效，数据保护与隐私法规里程碑。
-  year: '2018'
-- event: SpaceX首次载人龙飞船发射，商用载人航天时代开启。
+- event: 美国FDA批准口服避孕药Enovid上市，标志着现代避孕革命的开端。
+  year: '1960'
+- event: 国际足联（FIFA）通过投票决定世界杯决赛阶段由16支球队扩军至24支。
+  year: '1974'
+- event: 日本动画导演宫崎骏执导的《岁月的童话》在东京首映。
+  year: '1990'
+- event: 俄罗斯总统普京与美国总统布什签署《削减进攻性战略武器条约》（SORT）。
+  year: '2002'
+- event: 欧洲航天局（ESA）发射哨兵-2A地球观测卫星，用于农业与森林监测。
+  year: '2015'
+- event: 韩国政府宣布全面复课，因COVID-19疫情调整开学计划。
   year: '2020'
-- event: PulseAudio被PipeWire替代，Fedora 34默认采用新音频服务器。
-  year: '2021'
-- event: Adobe发布Firefly生成式AI模型，集成至Creative Cloud套件。
-  year: '2023'
 llm:
-- desc: 采用稀疏混合专家架构（46B活跃参数），支持128K上下文，多语言能力强化，在HumanEval上得分91.2%。
+- desc: 阿里发布Qwen 4.0，采用稀疏MoE架构，总参数1.5万亿，激活参数370亿，原生支持文本、图像、视频、音频多模态输入，在MMMU、MathVista等基准上超越GPT-4o，并开源72B版本。
   tags:
-  - Open Source
   - MoE
-  - Multilingual
-  - Code
-  title: 'Mistral Large 2: 123B参数MoE开源模型'
-new_project:
-- desc: 组合多步推理与工具调用，动态决定何时检索、如何整合，支持多种文档格式，在HotpotQA上达到F1 0.72。
-  tags:
-  - RAG
-  - Agent
-  - LangChain
-  - Retrieval
-  title: 'Agentic RAG: LangChain集成自主检索增强生成框架'
-  url: https://github.com/langchain-ai/langchain
-paper:
-- desc: 顶会论文推荐：Meta发布405B参数开源模型，支持128K上下文，分组查询注意力，在MMLU、GSM8K等基准上超越GPT-4o。
-  tags:
-  - LLM
+  - MultiModal
   - Open Source
-  - Scaling
-  - GQA
-  title: 'Llama 3.1: Open Foundation and Fine-Tuned Chat Models'
-  url: https://arxiv.org/abs/2407.21783
+  - Chinese LLM
+  title: 'Qwen 4.0: 阿里通义千问系列升级，原生多模态MoE架构'
+new_project:
+- desc: GitHub上流行的LLM推理框架，支持PagedAttention、连续批处理、张量并行与投机解码，适配HuggingFace模型，最新版本引入FP8量化与prefix
+    caching，吞吐量提升3倍。
+  tags:
+  - LLM Inference
+  - Open Source
+  - High Throughput
+  - Deployment
+  title: 'vllm: 高效LLM推理与部署引擎'
+  url: https://github.com/vllm-project/vllm
+paper:
+- desc: ICLR 2026接收论文，提出DreamBench++基准，系统评估文本到图像、文本到视频等生成模型，集成人类偏好评分与多维质量指标，覆盖一致性、美学、创意等维度，为生成模型标准化评估提供新框架。
+  tags:
+  - Generative Models
+  - Benchmark
+  - Human Evaluation
+  - ICLR 2026
+  title: 'DreamBench++: A Unified Benchmark for Generative Models with Human Evaluation'
+  url: https://openreview.net/forum?id=dreambenchplusplus2026
 tech:
   Arch:
-  - desc: 采用16级流水线、无序执行、V矢量扩展v1.0，SPECint2006 8.5/GHz，面向移动和边缘计算，已流片。
+  - desc: RISC-V国际基金会发布Vector Extension v1.4标准，引入可变长度VLEN支持至8192位，新增滑动窗口指令与矩阵乘累加扩展（Matrix
+      Multiply Accumulate），提升AI与科学计算效率。
     tags:
     - RISC-V
-    - SiFive
-    - Performance
     - Vector Extension
-    title: 'SiFive RISC-V Performance P670: 中端处理器核心'
+    - ISA
+    - AI Acceleration
+    title: 'RISC-V Vector Extension v1.4: 可伸缩向量处理标准'
   Audio:
-  - desc: 基于潜在扩散架构，支持44.1kHz立体声生成，可控制音频时长和风格，在AudioCaps FAD上达到2.13，低于前代。
+  - desc: Stability AI发布Stable Audio Open 2.5，基于扩散Transformer架构，支持44.1kHz立体声输出，可生成最长90秒音频，引入对抗性微调提升音质，在FAD、KL散度等指标上超越前代。
     tags:
     - Text-to-Audio
-    - Latent Diffusion
+    - Diffusion Model
     - Open Source
-    - High Fidelity
-    title: 'Stable Audio Open 2.0: 开源文本到音频生成模型'
+    - Music Generation
+    title: 'Stable Audio Open 2.5: 开源文本到音频与音乐生成'
   CPU:
-  - desc: 采用Lion Cove P核与Skymont E核混合架构，Intel 20A（4nm）工艺，最大24核，L2缓存64MB，单核性能较Raptor
-      Lake提升18%。
+  - desc: Intel推出Core Ultra 9 295K，基于Arrow Lake-S Refresh架构，采用TSMC N3B工艺，拥有8个Lion
+      Cove性能核+16个Skymont能效核，最高睿频6.0GHz，支持DDR5-8000与PCIe 5.0，单核性能提升15%。
     tags:
     - Intel
     - Arrow Lake
-    - 20A
     - Hybrid Architecture
-    title: 'Intel Core Ultra 9 285K: Arrow Lake-S桌面旗舰'
+    - DDR5
+    title: 'Intel Core Ultra 9 295K: Arrow Lake-S Refresh'
   Computer Vision:
-  - desc: 提出基于Mamba的状态空间模型，在视频理解任务中以线性复杂度实现与Transformer相媲美的精度，支持长视频序列处理，在Kinetics-400上达到87.2%
-      top-1准确率。
+  - desc: 上海AI实验室推出InternVideo2.5，在视频理解、多模态对齐和生成任务上达到SOTA，支持任意分辨率视频输入，采用动态掩码与自适应帧采样，在Ego4D、Kinetics-700等基准上刷新纪录。
     tags:
-    - SSM
     - Video Understanding
-    - Efficiency
-    - Mamba
-    title: 'VideoMamba: State Space Model for Efficient Video Recognition'
+    - MultiModal
+    - Foundation Model
+    - Self-Supervised
+    title: 'InternVideo2.5: Scaling Video Foundation Models with Multi-Modal Understanding'
   GPU:
-  - desc: 基于3nm工艺，集成288个CDNA 4计算单元，HBM4显存（8192-bit，带宽>5TB/s），FP8矩阵算力达2.3PFLOPS。
+  - desc: AMD基于RDNA 5架构发布RX 8070 XT，采用4nm工艺，集成128个计算单元，支持无限缓存V4与AI加速器，光线追踪性能提升2.5倍，显存带宽达1.2TB/s，对标RTX
+      5090。
     tags:
     - AMD
-    - CDNA 4
-    - 3nm
-    - HBM4
-    title: 'AMD Instinct MI400: 下一代CDNA架构加速器'
+    - RDNA 5
+    - Ray Tracing
+    - AI Accelerator
+    title: 'AMD Radeon RX 8070 XT: RDNA 5架构旗舰显卡'
   Lang:
-  - desc: 引入impl Trait在关联类型位置的使用，增强泛型编程能力；新增unnameable_types lint，改善编译时安全性。
+  - desc: Python 4.0进入Alpha阶段，引入静态类型增强（泛型参数默认不可变）、新模式匹配（序列解构支持）、移除GIL的初步实现（自由线程），以及JIT编译器优化，性能提升约30%。
     tags:
-    - Rust
+    - Python
+    - Programming Language
+    - JIT
     - Type System
-    - Compiler
-    - Generic
-    title: 'Rust 1.80.0: 稳定版impl Trait关联类型与Lint改进'
+    title: 'Python 4.0 Alpha 1: 重大语法与性能改进'
   NLP:
-  - desc: 在Gemma 2基础上引入分组查询注意力(GQA)和知识蒸馏，2B/7B/27B参数规模，支持128K上下文窗口，MMLU-Pro达到68.4%，适合边缘部署。
+  - desc: Google发布Gemma 3.2，在2B/9B/27B参数规模上进一步优化指令跟随与多语言能力，采用分组查询注意力(GQA)与旋转位置编码(RoPE)，支持128k上下文窗口，在MMLU、HellaSwag等基准上优于同等规模模型。
     tags:
+    - LLM
     - Open Model
     - Instruction Tuning
-    - Edge AI
-    - GQA
-    title: 'Gemma 2.5: Google轻量级开放模型的指令微调升级'
+    - Multi-Lingual
+    title: 'Gemma 3.2: Google轻量级开放模型的持续优化'
   Net:
-  - desc: 基于QUIC的HTTP/3标准化完成，零RTT连接建立、多路复用无队头阻塞，篡位TCP，已在全球30%网站部署。
+  - desc: IETF推进QUIC v3标准化，主要改进包括多路径支持、0-RTT握手增强与更好的拥塞控制（BBRv3集成），旨在为HTTP/3.2和实时音视频提供更优传输层。
     tags:
     - QUIC
-    - HTTP/3
-    - RFC
+    - Transport Protocol
     - Low Latency
-    title: HTTP/3.0 RFC 9114正式成为互联网标准
+    - IETF
+    title: 'QUIC v3: 低时延传输协议的进一步标准化'
   News:
-  - desc: 2024年8月1日生效，采用风险分级管理，禁止不可接受风险AI系统，高风险系统需符合评估与透明度要求，违规最高罚全球营收7%。
+  - desc: 日本国会通过《AI利用与治理基本法》，要求高风险AI系统进行影响评估，建立透明性义务与责任追究机制，并设立AI安全委员会，于2027年全面实施。
     tags:
-    - Policy
     - AI Regulation
-    - EU
-    - Risk Classification
-    title: 欧盟《人工智能法案》正式生效，设立严格监管框架
+    - Japan
+    - Governance
+    - Law
+    title: 日本发布《AI利用与治理基本法》
