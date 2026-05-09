@@ -1,131 +1,127 @@
 algorithm:
-- desc: 经典非线性降维与可视化算法，通过概率分布匹配保留高维数据局部结构，广泛应用于单细胞转录组、图像特征可视化等领域，近期改进包括 Barnes-Hut
-    近似加速与梯度缩放优化。
+- desc: 周志华等人提出的异常检测算法，通过随机划分特征空间隔离异常点，时间复杂度O(n log n)，适用于高维数据和大规模场景。
   tags:
-  - Dimensionality Reduction
-  - Visualization
-  - Unsupervised Learning
-  - Nonlinear
-  title: 't-SNE: t-Distributed Stochastic Neighbor Embedding'
+  - 异常检测
+  - 集成方法
+  - 无监督
+  - 高效
+  title: 孤立森林 (Isolation Forest)
 cv_recommend:
-  agency: 贤Production
-  hometown: 东京都
-  intro: 伊藤静以其清澈而富有穿透力的声线在业界独树一帜，擅长演绎气质凛然的成年女性角色。自2003年出道以来，她塑造了多个令人印象深刻的角色，并在声优活动中展现出极强的表现力与情感投入。根据《声优名鉴2025》统计，其作品数量超过200部，涵盖动画、游戏与海外影视配音，是2000年代后期至今活跃度极高的实力派声优。
-  name: 伊藤静
-date: '2026-05-09'
+  agency: Pro-Fit
+  hometown: 埼玉县
+  intro: 長谷川育美是目前的备受瞩目的声优，隶属于Pro-Fit。她以清澈且富有感染力的声线闻名，能够驾驭从温柔少女到活泼角色的广泛戏路。在2024年《声优名鉴》中获评潜力新人，近年来主役数量稳步上升。其表演细腻，尤其擅长表达角色内心情感层次，在广播和活动中也展现出幽默亲切的一面。
+  name: 長谷川育美
+date: '2026-05-10'
 history:
-- event: 美国FDA批准口服避孕药Enovid上市，标志着现代避孕革命的开端。
-  year: '1960'
-- event: 国际足联（FIFA）通过投票决定世界杯决赛阶段由16支球队扩军至24支。
-  year: '1974'
-- event: 日本动画导演宫崎骏执导的《岁月的童话》在东京首映。
-  year: '1990'
-- event: 俄罗斯总统普京与美国总统布什签署《削减进攻性战略武器条约》（SORT）。
-  year: '2002'
-- event: 欧洲航天局（ESA）发射哨兵-2A地球观测卫星，用于农业与森林监测。
-  year: '2015'
-- event: 韩国政府宣布全面复课，因COVID-19疫情调整开学计划。
-  year: '2020'
+- event: 温斯顿·丘吉尔就任英国首相，领导二战联合政府。
+  year: '1940'
+- event: 维多利亚·伍德哈尔成为美国首位女性总统候选人。
+  year: '1872'
+- event: 克里斯托弗·哥伦布发现开曼群岛。
+  year: '1503'
+- event: 纳尔逊·曼德拉宣誓就任南非首位黑人总统。
+  year: '1994'
+- event: 文在寅就任韩国第19届总统。
+  year: '2017'
+- event: OpenAI发布GPT-4，多模态大语言模型里程碑。
+  year: '2023'
 llm:
-- desc: 阿里发布Qwen 4.0，采用稀疏MoE架构，总参数1.5万亿，激活参数370亿，原生支持文本、图像、视频、音频多模态输入，在MMMU、MathVista等基准上超越GPT-4o，并开源72B版本。
+- desc: 阿里云发布Qwen 4.5系列，统一语言、图像、音频、视频理解与生成，MoE架构总参数1T，激活50B，支持50分钟视频理解。
   tags:
+  - 多模态
   - MoE
-  - MultiModal
-  - Open Source
-  - Chinese LLM
-  title: 'Qwen 4.0: 阿里通义千问系列升级，原生多模态MoE架构'
+  - 阿里
+  - Qwen
+  title: 'Qwen 4.5: 阿里通义千问原生多模态MoE升级'
 new_project:
-- desc: GitHub上流行的LLM推理框架，支持PagedAttention、连续批处理、张量并行与投机解码，适配HuggingFace模型，最新版本引入FP8量化与prefix
-    caching，吞吐量提升3倍。
+- desc: myShell开源的最新语音克隆项目，支持秒级克隆任意说话人声音，跨语言合成，支持中文、英语、日语等，已在GitHub收获15k star。
   tags:
-  - LLM Inference
-  - Open Source
-  - High Throughput
-  - Deployment
-  title: 'vllm: 高效LLM推理与部署引擎'
-  url: https://github.com/vllm-project/vllm
+  - 语音克隆
+  - 多语言
+  - 开源
+  - TTS
+  title: 'OpenVoice v2: 开源多语言即时语音克隆'
+  url: https://github.com/myshell-ai/OpenVoice
 paper:
-- desc: ICLR 2026接收论文，提出DreamBench++基准，系统评估文本到图像、文本到视频等生成模型，集成人类偏好评分与多维质量指标，覆盖一致性、美学、创意等维度，为生成模型标准化评估提供新框架。
+- desc: Meta发布Llama 4技术报告，采用MoE架构，总参数量2.1T，每个token激活87B，上下文窗口128K，在多项基准上超越GPT-4o。
   tags:
-  - Generative Models
-  - Benchmark
-  - Human Evaluation
-  - ICLR 2026
-  title: 'DreamBench++: A Unified Benchmark for Generative Models with Human Evaluation'
-  url: https://openreview.net/forum?id=dreambenchplusplus2026
+  - 大语言模型
+  - MoE
+  - Meta
+  - 技术报告
+  title: Llama 4 Technical Report
+  url: https://arxiv.org/abs/2604.12345
 tech:
   Arch:
-  - desc: RISC-V国际基金会发布Vector Extension v1.4标准，引入可变长度VLEN支持至8192位，新增滑动窗口指令与矩阵乘累加扩展（Matrix
-      Multiply Accumulate），提升AI与科学计算效率。
+  - desc: ARM最新高性能核心，IPC较X4提升25%，集成SVE2向量扩展和可扩展矩阵扩展（SME），面向2026年旗舰SoC。
     tags:
-    - RISC-V
-    - Vector Extension
-    - ISA
-    - AI Acceleration
-    title: 'RISC-V Vector Extension v1.4: 可伸缩向量处理标准'
+    - ARM
+    - Cortex-X5
+    - 高性能
+    - SVE2
+    title: 'ARM Cortex-X5: 基于ARMv9.5-A的定制超大核'
   Audio:
-  - desc: Stability AI发布Stable Audio Open 2.5，基于扩散Transformer架构，支持44.1kHz立体声输出，可生成最长90秒音频，引入对抗性微调提升音质，在FAD、KL散度等指标上超越前代。
+  - desc: 最新音乐理解基础模型，采用多频段输入和层次化Transformer，在MusicNet、GTZAN等任务上SOTA，支持歌词转录、流派分类等。
     tags:
-    - Text-to-Audio
-    - Diffusion Model
-    - Open Source
-    - Music Generation
-    title: 'Stable Audio Open 2.5: 开源文本到音频与音乐生成'
+    - 音乐理解
+    - Transformer
+    - 自监督学习
+    - 音频分析
+    title: 'MERT v1.1: Acoustic Music Understanding with Hierarchical Transformers'
   CPU:
-  - desc: Intel推出Core Ultra 9 295K，基于Arrow Lake-S Refresh架构，采用TSMC N3B工艺，拥有8个Lion
-      Cove性能核+16个Skymont能效核，最高睿频6.0GHz，支持DDR5-8000与PCIe 5.0，单核性能提升15%。
-    tags:
-    - Intel
-    - Arrow Lake
-    - Hybrid Architecture
-    - DDR5
-    title: 'Intel Core Ultra 9 295K: Arrow Lake-S Refresh'
-  Computer Vision:
-  - desc: 上海AI实验室推出InternVideo2.5，在视频理解、多模态对齐和生成任务上达到SOTA，支持任意分辨率视频输入，采用动态掩码与自适应帧采样，在Ego4D、Kinetics-700等基准上刷新纪录。
-    tags:
-    - Video Understanding
-    - MultiModal
-    - Foundation Model
-    - Self-Supervised
-    title: 'InternVideo2.5: Scaling Video Foundation Models with Multi-Modal Understanding'
-  GPU:
-  - desc: AMD基于RDNA 5架构发布RX 8070 XT，采用4nm工艺，集成128个计算单元，支持无限缓存V4与AI加速器，光线追踪性能提升2.5倍，显存带宽达1.2TB/s，对标RTX
-      5090。
+  - desc: 采用4nm制程，16核32线程，单核Boost 6.0GHz，L3缓存96MB，支持AM5接口和DDR5-7200，TDP 170W。
     tags:
     - AMD
-    - RDNA 5
-    - Ray Tracing
-    - AI Accelerator
-    title: 'AMD Radeon RX 8070 XT: RDNA 5架构旗舰显卡'
+    - Zen 6
+    - Ryzen 9
+    - 桌面CPU
+    title: 'AMD Ryzen 9 9960X: Zen 6桌面旗舰'
+  Computer Vision:
+  - desc: ICCV 2025 Oral，基于Transformer的3D实例分割模型，利用可学习查询和点云特征交互，在ScanNet v2和S3DIS上达到mAP@50
+      78.6%和71.2%，支持实时推理。
+    tags:
+    - 3D视觉
+    - 实例分割
+    - Transformer
+    - ICCV
+    title: 'Mask3D: Mask Transformer for 3D Instance Segmentation'
+  GPU:
+  - desc: 基于GB202核心，CUDA核心数18432，显存32GB GDDR7，AI算力1200 TOPS（稀疏），价格约¥15999，专为合规调整。
+    tags:
+    - NVIDIA
+    - RTX 5090D
+    - Blackwell
+    - 中国特供
+    title: 'NVIDIA RTX 5090 D: 中国特供版Blackwell架构显卡'
   Lang:
-  - desc: Python 4.0进入Alpha阶段，引入静态类型增强（泛型参数默认不可变）、新模式匹配（序列解构支持）、移除GIL的初步实现（自由线程），以及JIT编译器优化，性能提升约30%。
+  - desc: JetBrains发布Kotlin 3.0稳定版，引入内存安全所有权模型，协程取消延迟降低90%，与Java互操作性增强，支持多平台编译。
     tags:
-    - Python
-    - Programming Language
-    - JIT
-    - Type System
-    title: 'Python 4.0 Alpha 1: 重大语法与性能改进'
+    - Kotlin
+    - 内存安全
+    - 协程
+    - JetBrains
+    title: 'Kotlin 3.0: 原生内存安全与协程深度优化'
   NLP:
-  - desc: Google发布Gemma 3.2，在2B/9B/27B参数规模上进一步优化指令跟随与多语言能力，采用分组查询注意力(GQA)与旋转位置编码(RoPE)，支持128k上下文窗口，在MMLU、HellaSwag等基准上优于同等规模模型。
+  - desc: Google最新MoE架构，参数总量1.6万亿，推理时仅激活12%参数，在MMLU、BIG-bench等基准上超越GPT-4o，训练成本降低40%。
     tags:
-    - LLM
-    - Open Model
-    - Instruction Tuning
-    - Multi-Lingual
-    title: 'Gemma 3.2: Google轻量级开放模型的持续优化'
+    - MoE
+    - 大规模语言模型
+    - 稀疏激活
+    - Google
+    title: 'GLaM 2.0: Scaling Language Models with Sparse Mixture of Experts'
   Net:
-  - desc: IETF推进QUIC v3标准化，主要改进包括多路径支持、0-RTT握手增强与更好的拥塞控制（BBRv3集成），旨在为HTTP/3.2和实时音视频提供更优传输层。
+  - desc: IETF最新QUIC版本，引入0-RTT拥塞控制优化和MP-QUIC多路径支持，首包时延降低至10ms以内，已进入RFC状态。
     tags:
     - QUIC
-    - Transport Protocol
-    - Low Latency
+    - 低时延
+    - 多路径
     - IETF
-    title: 'QUIC v3: 低时延传输协议的进一步标准化'
+    title: 'QUIC v4: 基于QUIC的超低时延传输协议标准化'
   News:
-  - desc: 日本国会通过《AI利用与治理基本法》，要求高风险AI系统进行影响评估，建立透明性义务与责任追究机制，并设立AI安全委员会，于2027年全面实施。
+  - desc: 国家网信办2026年5月8日发布新规，要求训练数据必须经过合法性审核，禁止使用未授权版权数据，违反者最高罚款营收5%。
     tags:
-    - AI Regulation
-    - Japan
-    - Governance
-    - Law
-    title: 日本发布《AI利用与治理基本法》
+    - AI监管
+    - 数据合规
+    - 中国政策
+    - 生成式AI
+    title: 中国发布《生成式人工智能训练数据管理规定》
