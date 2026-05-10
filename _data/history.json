@@ -1,4 +1,20 @@
 {
+  "2026-05-11": [
+    "Qwen3-TTS: 阿里开源文本转语音模型",
+    "TLS 1.4草案发布: 强化后量子安全与零往返握手",
+    "OpenAI发布GPT-5.5",
+    "腾讯混元3.0 MoE 295B",
+    "DeepEyes: Incentivizing 'Thinking with Images' via Reinforcement Learning",
+    "AMD Zen 6 Venice 2nm CPU曝光",
+    "Light Cones for Vision: Simple Causal Priors for Visual Hierarchy",
+    "Qwen3.6-27B: 270亿参数稠密开源模型",
+    "Tencent/Hy3-preview",
+    "阿里达摩院发布玄铁C950 RISC-V CPU",
+    "花澤香菜",
+    "主成分分析 (PCA)",
+    "英伟达取消2026全年消费级显卡发布",
+    "Go 1.26 正式发布"
+  ],
   "2026-05-10": [
     "GLaM 2.0: Scaling Language Models with Sparse Mixture of Experts",
     "Qwen 4.5: 阿里通义千问原生多模态MoE升级",
@@ -142,21 +158,5 @@
     "MOSS-Audio: 语音·声音·音乐·时间感知音频推理基础模型",
     "AMD Ryzen AI 400系列：新一代AI PC处理器",
     "minimind: 从零开始训练小型语言模型"
-  ],
-  "2026-05-01": [
-    "我国主导研制的汇智同步网络（WiTSnet）工业通信系列国际标准成功立项",
-    "Wan-Weaver: Interleaved Multi-modal Generation via Decoupled Training",
-    "OpenAI发布GPT-5.5：新一代语言模型",
-    "Qwen3-ASR: 通义千问语音识别模型",
-    "主成分分析 (PCA)",
-    "小原好美",
-    "Rust 1.95.0 发布",
-    "AMD推出锐龙9 9950X3D2：首款双路3D V-Cache桌面处理器",
-    "文心5.0 (ERNIE 5.0): 2.4万亿参数原生全模态大模型",
-    "LongCat-Next: 原生多模态AI，视觉和语音成为AI的母语",
-    "Qwen3-Omni: 全模态开源大模型",
-    "NVIDIA GeForce RTX 5060 发布：搭载DLSS 4与Blackwell架构",
-    "TIPSv2: Advancing Vision-Language Pretraining with Enhanced Patch-Text Alignment",
-    "ArchAgent: AI仅用两天设计出性能提升5.3%的缓存策略"
   ]
 }
