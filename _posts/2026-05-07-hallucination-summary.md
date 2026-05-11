@@ -1,14 +1,14 @@
 ---
 categories:
 - paper
-date: 2026-05-07 12:55:27 +0800
+date: 2026-05-11 21:46:43 +0800
 layout: post
 tags:
 - 幻觉
 title: 关于模型幻觉问题、检测、缓解方法整理
 subject: ''
-last_modified_at: 2026-05-07 13:00:59 +0800
 ---
+
 
 
 
