@@ -1,4 +1,20 @@
 {
+  "2026-05-12": [
+    "Vocalsynth 3: Real-time Neural Voice Conversion",
+    "AMD Radeon RX 9070 XT: Navi 48旗舰",
+    "Cairo 3.0: Formal Verification for Smart Contracts",
+    "欧盟正式实施《AI责任指令》",
+    "羊宮妃那",
+    "Intel Core Ultra 9 295K: Arrow Lake-S Refresh",
+    "Scaling Vision-Language Models with Sparse Mixture of Experts",
+    "Phoenix 2.0: Efficient Long-Context LLM",
+    "RISC-V Vector Extension v2.0 Finalized",
+    "Isolation Forest",
+    "Homa 2.0: Datacenter Transport Protocol",
+    "OmniSight: Unified Video Understanding via Multi-Task Learning",
+    "aider-chat/aider",
+    "Mistral Large 3: 200B参数MoE模型"
+  ],
   "2026-05-11": [
     "Qwen3-TTS: 阿里开源文本转语音模型",
     "TLS 1.4草案发布: 强化后量子安全与零往返握手",
@@ -142,21 +158,5 @@
     "Mistral Large 3: 1.3T参数开源模型",
     "llama.cpp v3000: 极致量化解码",
     "MegaByte: Byte-Level Language Models with Sublinear Scaling"
-  ],
-  "2026-05-02": [
-    "朴素贝叶斯分类器",
-    "羊宫妃那",
-    "科大讯飞发布玲珑Agent OS",
-    "DeepSeek多模态模型技术报告：超越GPT-5.4",
-    "PixDLM: A Dual-Path Multimodal Language Model for UAV Reasoning Segmentation",
-    "SenseNova U1: 原生理解生成统一模型",
-    "玄铁950: 全球RISC-V处理器性能新标杆",
-    "国家网络身份认证公共服务6项行业标准发布",
-    "NVIDIA GeForce RTX 5080 显卡",
-    "Kubernetes v1.36 发布（代号：Haru）",
-    "Transformers are Inherently Succinct",
-    "MOSS-Audio: 语音·声音·音乐·时间感知音频推理基础模型",
-    "AMD Ryzen AI 400系列：新一代AI PC处理器",
-    "minimind: 从零开始训练小型语言模型"
   ]
 }
