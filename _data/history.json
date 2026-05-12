@@ -1,4 +1,20 @@
 {
+  "2026-05-13": [
+    "NVIDIA RTX 6090 曝光",
+    "QUIC v4 草案发布",
+    "SiFive P800 RISC-V 核心",
+    "VidTok: A Versatile and Open-Source Video Tokenizer",
+    "Rust 2026 Edition 预览",
+    "AMD Zen 6 桌面CPU 曝光",
+    "小倉唯",
+    "Gemma 3.3 开源模型",
+    "Segment Anything 3 (SAM 3)",
+    "MusicGen 2026: 实时音乐生成",
+    "随机森林 (Random Forest)",
+    "Qwen 5.0 开源模型",
+    "美国发布《AI问责法案》",
+    "llama.cpp 2026 升级版"
+  ],
   "2026-05-12": [
     "Vocalsynth 3: Real-time Neural Voice Conversion",
     "AMD Radeon RX 9070 XT: Navi 48旗舰",
@@ -141,22 +157,5 @@
     "NVIDIA Rubin平台",
     "内田真礼",
     "LongCat-AudioDiT"
-  ],
-  "2026-05-03": [
-    "CHERI-RISC-V v2.0: 硬件强制内存安全",
-    "NVIDIA RTX 5090 Ti: 3nm Blackwell Ultra",
-    "VoiceCraft 3: Zero-Shot Voice Cloning with 3-Second Enrollment",
-    "中国量子计算机“神威·本源超越”实现1000量子比特",
-    "Diffusion Policy with Language-Conditioned Variational Inference",
-    "Rust 2.0.0-alpha: Async Traits & Effects System",
-    "田中美海",
-    "Efficient Transformers via Sparse Mixture of Memory Experts",
-    "VideoLaVid: Long Video Understanding with Adaptive Token Compression",
-    "DBSCAN++: 基于核密度估计的快速聚类",
-    "HTTP/4.0 Draft: Multipath Transport & Server Push 2.0",
-    "AMD Ryzen Threadripper 9000: 96核 Zen 6",
-    "Mistral Large 3: 1.3T参数开源模型",
-    "llama.cpp v3000: 极致量化解码",
-    "MegaByte: Byte-Level Language Models with Sublinear Scaling"
   ]
 }

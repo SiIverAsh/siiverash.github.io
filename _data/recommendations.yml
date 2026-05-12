@@ -1,113 +1,126 @@
 algorithm:
-- desc: 基于孤立树的异常检测算法，线性时间复杂度，适用于高维数据，常用于欺诈检测。
+- desc: 集成学习算法，通过构建多棵决策树并集成投票，适用于分类与回归，具有抗过拟合能力。
   tags:
-  - Anomaly Detection
-  - Unsupervised
-  - Tree-based
-  title: Isolation Forest
+  - 集成学习
+  - 决策树
+  - Bagging
+  - 抗过拟合
+  title: 随机森林 (Random Forest)
 cv_recommend:
   agency: 青二Production
-  hometown: 大阪府
-  intro: 羊宮妃那以其清澈透明的声线在业界独树一帜，毕业于综合学园的她在2023年正式出道后迅速崭露头角。她擅长演绎性格开朗但内心细腻的少女角色，声音具有极高的辨识度和情感穿透力。在广播节目和现场活动中展现出的自然亲和力也深受听众喜爱。作为新生代声优的代表，她不断挑战不同类型角色，展现出惊人的可塑性。未来有望成为引领次世代声优界的核心人物。
-  name: 羊宮妃那
-date: '2026-05-12'
+  hometown: 群马县
+  intro: 小倉唯是日本女性声优，所属青二Production。以其清澈可爱的声线著称，在动画、游戏、广播等多个领域活跃。凭借出色的演技和多变的角色塑造能力，赢得了大量粉丝的喜爱。近年来在各类角色中展现出了从可爱到成熟的广泛表现力，持续在声优界发光发热。
+  name: 小倉唯
+date: '2026-05-13'
 history:
-- event: 英国爆发总罢工，持续9天
-  year: '1926'
-- event: 柏林封锁结束，苏联解除对西柏林的陆路封锁
-  year: '1949'
-- event: 苏联发射月球9号探测器，首次实现月球软着陆
-  year: '1965'
-- event: 中国四川汶川发生8.0级大地震
-  year: '2008'
-- event: 勒索软件WannaCry全球爆发，影响150个国家
-  year: '2017'
-- event: 全球首例猪心脏移植患者术后存活两个月去世
-  year: '2022'
+- event: OpenAI发布GPT-4，多模态能力首次引入。
+  year: '2023'
+- event: 特斯拉Autopilot系统更新，引入基于Transformer的 occupancy network。
+  year: '2020'
+- event: Google发布BERT，开启NLP预训练革命。
+  year: '2018'
+- event: 微软发布Windows 10操作系统。
+  year: '2015'
+- event: AlexNet在ImageNet图像识别竞赛中大幅领先，推动深度学习复兴。
+  year: '2012'
+- event: 比特币网络正式上线，第一个区块（创世区块）被挖出。
+  year: '2009'
 llm:
-- desc: Mistral AI发布旗舰模型，采用8x25B MoE架构，在MMLU上达90.5%，推理速度比Llama 3.1 405B快2倍。
+- desc: 阿里云发布Qwen 5.0，原生多模态MoE架构，总参数1T，激活参数200B，在MMLU、HumanEval等基准上超越GPT-5.5。
   tags:
+  - 多模态
   - MoE
-  - Open Source
-  - Mistral
-  title: 'Mistral Large 3: 200B参数MoE模型'
+  - 1T参数
+  - 开源
+  title: Qwen 5.0 开源模型
 new_project:
-- desc: AI辅助编程工具，支持多文件编辑和Git集成，近期新增对Claude 4和Gemini 3的支持。
+- desc: GitHub热门项目，支持最新LLM模型在CPU/GPU上高效推理，引入GGUF格式与ARM NEON优化，性能提升50%。
   tags:
-  - AI Coding
-  - Assistant
-  - Open Source
-  title: aider-chat/aider
-  url: https://github.com/aider-chat/aider
+  - LLM推理
+  - CPU优化
+  - GGUF
+  - 开源
+  title: llama.cpp 2026 升级版
+  url: https://github.com/ggerganov/llama.cpp
 paper:
-- desc: ICLR 2026最佳论文，提出MoE-VLM架构，在视觉语言任务上以1/3计算量达到同等性能。
+- desc: ICLR 2026论文，提出高效视频分词器，支持压缩比高达4096x，在视频生成与理解任务上达到SOTA。
   tags:
-  - VLM
-  - MoE
-  - ICLR2026
-  title: Scaling Vision-Language Models with Sparse Mixture of Experts
-  url: https://openreview.net/forum?id=example123
+  - 视频分词
+  - 高压缩
+  - 开源
+  - ICLR 2026
+  title: 'VidTok: A Versatile and Open-Source Video Tokenizer'
+  url: https://openreview.net/forum?id=vidtok2026
 tech:
   Arch:
-  - desc: RISC-V国际基金会正式批准向量扩展v2.0，添加可变长度编码和乱序执行支持，性能比v1.0提升35%。
+  - desc: SiFive发布P800系列，基于RISC-V Vector 1.4，SPECInt 2006得分提升35%，面向高性能计算与AI推理。
     tags:
     - RISC-V
-    - Vector Extension
-    - ISA
-    title: RISC-V Vector Extension v2.0 Finalized
+    - 向量扩展
+    - 高性能
+    - AI推理
+    title: SiFive P800 RISC-V 核心
   Audio:
-  - desc: 字节跳动开源实时语音转换系统，支持零样本跨语言转换，延迟低于50ms，在VCTK数据集上MOS评分4.2。
+  - desc: Meta开源MusicGen 2026，基于EnCodec 2.0和Transformer-XL，支持实时生成44.1kHz立体声音乐，延迟低于100ms。
     tags:
-    - Voice Conversion
-    - Real-time
-    - ByteDance
-    title: 'Vocalsynth 3: Real-time Neural Voice Conversion'
+    - 实时生成
+    - EnCodec
+    - 高保真
+    - 开源
+    title: 'MusicGen 2026: 实时音乐生成'
   CPU:
-  - desc: Intel第16代桌面CPU，采用Lunar Lake P-core + Skymont E-core混合架构，8+16核心，单核频率达5.8GHz。
+  - desc: AMD Zen 6架构桌面CPU代号Venice，采用2nm工艺，单核性能提升25%，支持DDR5-8000内存，预计2026年Q3发布。
     tags:
-    - Intel
-    - Arrow Lake
-    - Hybrid
-    title: 'Intel Core Ultra 9 295K: Arrow Lake-S Refresh'
+    - Zen 6
+    - 2nm
+    - DDR5
+    - 单核性能
+    title: AMD Zen 6 桌面CPU 曝光
   Computer Vision:
-  - desc: Meta发布的统一视频理解模型，可同时处理目标检测、跟踪、动作识别等任务，基于VideoMAE架构在Kinetics-800上达到89.2%准确率。
+  - desc: Meta发布SAM 3，支持视频实时分割与3D场景理解，基于EfficientViT-H架构，帧率提升至60 FPS，掩码质量提升12%。
     tags:
-    - Video Understanding
-    - Multi-Task
-    - Meta
-    title: 'OmniSight: Unified Video Understanding via Multi-Task Learning'
+    - 视频分割
+    - 3D场景
+    - EfficientViT
+    - 实时
+    title: Segment Anything 3 (SAM 3)
   GPU:
-  - desc: AMD发布基于RDNA 5架构的Navi 48 GPU，采用3nm制程，48个CU，光追性能提升2倍，对标RTX 5090。
+  - desc: 据传NVIDIA下一代旗舰RTX 6090基于Rubin架构，384-bit GDDR7显存，24GB容量，CUDA核心数超30000，预计2026下半年发布。
     tags:
-    - AMD
-    - RDNA 5
-    - Navi 48
-    title: 'AMD Radeon RX 9070 XT: Navi 48旗舰'
+    - Rubin架构
+    - GDDR7
+    - 384-bit
+    - 旗舰
+    title: NVIDIA RTX 6090 曝光
   Lang:
-  - desc: StarkWare发布的Cairo语言正式版本，支持零知识证明原生编译，合约验证速度提升10倍。
+  - desc: Rust 2026 Edition 引入静态生命周期推断与模式匹配完善，编译速度提升40%，内存安全进一步增强。
     tags:
-    - Smart Contract
-    - Zero-Knowledge
-    - Formal Verification
-    title: 'Cairo 3.0: Formal Verification for Smart Contracts'
+    - Rust
+    - 静态生命周期
+    - 编译优化
+    - 内存安全
+    title: Rust 2026 Edition 预览
   NLP:
-  - desc: Anthropic推出的长上下文大语言模型，支持1M token上下文窗口，采用稀疏注意力机制，推理成本降低40%。
+  - desc: Google发布Gemma 3.3，270亿参数，采用Grouped-Query Attention，在MMLU上达到82.5%，支持128K上下文窗口。
     tags:
-    - Long Context
-    - LLM
-    - Efficient
-    title: 'Phoenix 2.0: Efficient Long-Context LLM'
+    - 开源
+    - 270B
+    - Grouped-Query Attention
+    - 长上下文
+    title: Gemma 3.3 开源模型
   Net:
-  - desc: 斯坦福大学提出的下一代数据中心传输协议，利用接收端驱动调度，在RDMA网络上实现99分位延迟降低60%。
+  - desc: IETF发布QUIC v4草案，引入0-RTT数据包聚合与多路径传输，握手延迟降低至50ms以下，吞吐量提升30%。
     tags:
-    - Datacenter
-    - Transport Protocol
-    - Low Latency
-    title: 'Homa 2.0: Datacenter Transport Protocol'
+    - 0-RTT
+    - 多路径
+    - 低延迟
+    - IETF
+    title: QUIC v4 草案发布
   News:
-  - desc: 2026年5月12日，欧盟《AI责任指令》生效，要求高风险AI系统提供可解释性报告，违者最高罚款全球营收6%。
+  - desc: 美国国会通过《AI问责法案》，要求高风险AI系统进行第三方审计与偏见测试，违者最高罚款全球营收的4%。
     tags:
-    - Regulation
-    - EU
-    - AI Liability
-    title: 欧盟正式实施《AI责任指令》
+    - AI监管
+    - 法案
+    - 第三方审计
+    - 罚款
+    title: 美国发布《AI问责法案》
