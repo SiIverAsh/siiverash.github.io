@@ -1,4 +1,20 @@
 {
+  "2026-05-14": [
+    "MERLIN: Multi-Stage Curriculum Alignment for Multilingual Encoder-LLM Integration in Cross-Lingual Reasoning",
+    "Ruby 4.0.4 — ZJIT 即时编译器与 Ruby Box 隔离机制持续优化",
+    "K-Means 聚类算法",
+    "UALM: Unified Audio Language Model for Understanding, Generation and Reasoning",
+    "GLM-5：智谱745B MoE开源模型，从Vibe Coding到Agentic Engineering",
+    "AMD Ryzen 9 9950X3D2 Dual Edition：双3D V-Cache旗舰",
+    "FUSER: Feed-Forward Multiview 3D Registration Transformer with SE(3)^N Diffusion Refinement",
+    "Gen3R: 3D Scene Generation Meets Feed-Forward Reconstruction",
+    "ARM AGI CPU：136核Agentic AI数据中心芯片",
+    "Net-P4ct: Enhanced WAN Bandwidth Fair Sharing Using P4 Programmable Switches",
+    "石川由依",
+    "Intel Arc Pro B70：Battlemage BMG-G31 32GB专业卡",
+    "欧盟通过AI法案简化修正案：高风险分类门槛放宽，nudification应用禁令写入",
+    "Warp: Agentic Development Terminal（已开源）"
+  ],
   "2026-05-13": [
     "NVIDIA RTX 6090 曝光",
     "QUIC v4 草案发布",
@@ -142,20 +158,5 @@
     "欧盟《AI责任指令》正式生效",
     "ViT-3D: Video Vision Transformer with 3D Convolutions for Action Recognition",
     "QUIC v2: 标准化低时延传输协议"
-  ],
-  "2026-05-04": [
-    "OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams",
-    "OmniStream: 连续流感知、重建与行动统一框架",
-    "Claude Opus 4.7",
-    "LightGBM: 高效梯度提升框架",
-    "Go 1.26 发布",
-    "Agentica: 轻量级AI Agent框架",
-    "AMD Helios机架级AI解决方案",
-    "WebTransport W3C工作草案",
-    "Intel Core Ultra系列3 (18A)",
-    "工信部与国家数据局打造智能体工厂",
-    "NVIDIA Rubin平台",
-    "内田真礼",
-    "LongCat-AudioDiT"
   ]
 }

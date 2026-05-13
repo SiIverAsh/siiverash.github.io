@@ -1,126 +1,151 @@
 algorithm:
-- desc: 集成学习算法，通过构建多棵决策树并集成投票，适用于分类与回归，具有抗过拟合能力。
+- desc: 最经典的无监督学习算法之一，由Stuart Lloyd于1957年提出（1982年正式发表）。核心思想：将n个数据点划分到k个簇中，使得每个点属于距离最近均值（簇中心）对应的簇，迭代优化簇内平方和（Inertia）。关键变体：K-Means++（2007）通过智能初始化显著提升收敛质量与速度，Mini-Batch
+    K-Means（2010）适用于大规模数据集的随机梯度下降变体。主要局限：需预先指定k值、对初始中心敏感、假设簇呈球形分布。与DBSCAN、GMM等算法形成互补。在客户分群、图像压缩、异常检测等场景中广泛应用。
   tags:
-  - 集成学习
-  - 决策树
-  - Bagging
-  - 抗过拟合
-  title: 随机森林 (Random Forest)
+  - Unsupervised Learning
+  - Clustering
+  - Lloyd's Algorithm
+  - K-Means++
+  title: K-Means 聚类算法
 cv_recommend:
-  agency: 青二Production
-  hometown: 群马县
-  intro: 小倉唯是日本女性声优，所属青二Production。以其清澈可爱的声线著称，在动画、游戏、广播等多个领域活跃。凭借出色的演技和多变的角色塑造能力，赢得了大量粉丝的喜爱。近年来在各类角色中展现出了从可爱到成熟的广泛表现力，持续在声优界发光发热。
-  name: 小倉唯
-date: '2026-05-13'
+  agency: mitt management
+  hometown: 兵庫県
+  intro: 1989年5月30日出生于兵庫県。子役出身，自幼积累丰富舞台经验，后转向声优领域。其演技以情感层次的细腻递进而著称——从压抑的静默到爆发的高扬之间，拥有令人信服的动态幅度。凭借扎实的呼吸控制与精准的间（ま）感，在需要大量内心独白的角色中展现出罕见的说服力。2021年荣获第15回声优Awards主演女优赏，印证了业界对其表现力的高度认可。近年亦活跃于舞台剧与旁白领域，持续拓展声优表现边界。所属事务所mitt
+    management。
+  name: 石川由依
+date: '2026-05-14'
 history:
-- event: OpenAI发布GPT-4，多模态能力首次引入。
-  year: '2023'
-- event: 特斯拉Autopilot系统更新，引入基于Transformer的 occupancy network。
-  year: '2020'
-- event: Google发布BERT，开启NLP预训练革命。
-  year: '2018'
-- event: 微软发布Windows 10操作系统。
-  year: '2015'
-- event: AlexNet在ImageNet图像识别竞赛中大幅领先，推动深度学习复兴。
-  year: '2012'
-- event: 比特币网络正式上线，第一个区块（创世区块）被挖出。
-  year: '2009'
+- event: 英国殖民者在北美弗吉尼亚建立詹姆斯敦，成为英国在美洲首个永久定居点
+  year: '1607'
+- event: 英国医生爱德华·詹纳首次为8岁男孩接种牛痘以预防天花，开创免疫学与疫苗接种先河
+  year: '1796'
+- event: 以色列国正式宣告成立，大卫·本-古里安出任首任总理
+  year: '1948'
+- event: 苏联、波兰、捷克斯洛伐克等八国在华沙签署《友好合作互助条约》，华沙条约组织正式成立
+  year: '1955'
+- event: 美国发射首个空间站「天空实验室」（Skylab），由土星五号火箭的第三级改造而成
+  year: '1973'
+- event: 美国传奇歌手、奥斯卡得主弗兰克·辛纳屈（Frank Sinatra）因心脏病逝世，享年82岁
+  year: '1998'
 llm:
-- desc: 阿里云发布Qwen 5.0，原生多模态MoE架构，总参数1T，激活参数200B，在MMLU、HumanEval等基准上超越GPT-5.5。
+- desc: '智谱AI（Z.ai）于2026年2月发布的GLM-5旗舰大语言模型，参数规模745B，采用混合专家（MoE）架构，激活参数约52B/token。支持200K上下文窗口，训练数据截止至2025年12月。核心技术特性：(1)
+    Multi-Agent强化学习训练——模型在训练阶段与自身多个副本协作解决复杂工程任务；(2) Agentic Engineering能力——不仅能生成代码，还能自主规划软件架构、编写测试、调试并迭代优化；(3)
+    支持函数调用、工具使用与代码执行沙箱的深度集成。在SWE-bench Verified上得分63.2%，HumanEval得分97.8%。Apache 2.0开源协议。GitHub:
+    github.com/zai-org/GLM-5'
   tags:
-  - 多模态
-  - MoE
-  - 1T参数
-  - 开源
-  title: Qwen 5.0 开源模型
+  - GLM-5
+  - 745B MoE
+  - 200K Context
+  - Agentic Engineering
+  - Apache 2.0
+  title: GLM-5：智谱745B MoE开源模型，从Vibe Coding到Agentic Engineering
 new_project:
-- desc: GitHub热门项目，支持最新LLM模型在CPU/GPU上高效推理，引入GGUF格式与ARM NEON优化，性能提升50%。
+- desc: Warp是一款基于Rust开发的下一代智能终端模拟器，2026年5月正式开源（MIT协议）。核心特性：(1) Agentic AI集成——终端内置AI
+    Agent可直接理解自然语言指令并执行Shell命令，支持多步任务自动规划；(2) Warp Drive工作流引擎——将常用命令序列封装为带参数的可复用工作流；(3)
+    现代化编辑体验——原生支持鼠标定位、多光标编辑、语法高亮与自动补全；(4) Block-based输出组织——命令输出按块分组，支持折叠、搜索与分享。GPU加速渲染引擎支持4K@120Hz流畅体验。GitHub
+    Stars 40K+。项目地址：https://github.com/warpdotdev/warp
   tags:
-  - LLM推理
-  - CPU优化
-  - GGUF
-  - 开源
-  title: llama.cpp 2026 升级版
-  url: https://github.com/ggerganov/llama.cpp
+  - Terminal Emulator
+  - Rust
+  - AI Agent
+  - Open Source
+  - GPU Rendering
+  title: 'Warp: Agentic Development Terminal（已开源）'
+  url: https://github.com/warpdotdev/warp
 paper:
-- desc: ICLR 2026论文，提出高效视频分词器，支持压缩比高达4096x，在视频生成与理解任务上达到SOTA。
+- desc: CVPR 2026接收论文。将3D场景生成与前馈式重建统一为单个端到端框架。核心贡献：(1) 提出3D高斯原语（Gaussian Primitives）作为场景中间表示，同时服务于生成与重建任务；(2)
+    设计双向注意力融合模块，使生成分支的语义先验与重建分支的几何约束相互增强；(3) 单张RGB图像输入即可在0.8秒内输出完整的3D高斯溅射场景表示，支持新视角合成与场景编辑。在Objaverse与自定义室内场景基准上，PSNR较基线方法提升3.2dB，FID降低至14.7。论文链接：https://arxiv.org/abs/2601.04090
   tags:
-  - 视频分词
-  - 高压缩
-  - 开源
-  - ICLR 2026
-  title: 'VidTok: A Versatile and Open-Source Video Tokenizer'
-  url: https://openreview.net/forum?id=vidtok2026
+  - 3D Scene Generation
+  - Feed-Forward Reconstruction
+  - Gaussian Splatting
+  - CVPR 2026
+  title: 'Gen3R: 3D Scene Generation Meets Feed-Forward Reconstruction'
+  url: https://arxiv.org/abs/2601.04090
 tech:
   Arch:
-  - desc: SiFive发布P800系列，基于RISC-V Vector 1.4，SPECInt 2006得分提升35%，面向高性能计算与AI推理。
+  - desc: ARM于2026年3月发布的首款自研数据中心CPU芯片产品。基于ARMv9.5-A架构，集成136个Neoverse V3高性能核心，采用台积电3nm（N3E）工艺。芯片设计突破传统IP授权模式，由ARM直接交付物理芯片。每核心私有L2缓存2MB，共享96MB系统级缓存（SLC），支持DDR5-7200与CXL
+      3.0互联。目标场景为Agentic AI推理与多智能体协同，支持单机512线程并行。ARM CEO称Agentic AI时代CPU核心数将向512核演进，GPU-CPU配比不再适用。
     tags:
-    - RISC-V
-    - 向量扩展
-    - 高性能
-    - AI推理
-    title: SiFive P800 RISC-V 核心
+    - ARM AGI CPU
+    - 136-core
+    - ARMv9.5-A
+    - 3nm N3E Process
+    title: ARM AGI CPU：136核Agentic AI数据中心芯片
   Audio:
-  - desc: Meta开源MusicGen 2026，基于EnCodec 2.0和Transformer-XL，支持实时生成44.1kHz立体声音乐，延迟低于100ms。
+  - desc: ICLR 2026 Oral。首个在单一模型中统一音频理解、生成与推理的音频语言模型。架构基于非自回归联合训练范式：音频Tokenizer将任意音频转化为离散Token序列，与文本Token在共享Transformer解码器中进行联合建模。训练时采用Understanding-Generation-Reasoning三任务交替训练策略，推理时通过Classifier-Free
+      Guidance控制生成质量。在AudioCaps、Clotho等基准上音频描述CIDEr得分提升至128.7，同时首次展示音频逻辑推理能力（如'这段音频中的情绪是悲伤还是愤怒？'）。
     tags:
-    - 实时生成
-    - EnCodec
-    - 高保真
-    - 开源
-    title: 'MusicGen 2026: 实时音乐生成'
+    - Audio-Language Model
+    - Non-Autoregressive
+    - Joint Training
+    - ICLR 2026 Oral
+    title: 'UALM: Unified Audio Language Model for Understanding, Generation and Reasoning'
   CPU:
-  - desc: AMD Zen 6架构桌面CPU代号Venice，采用2nm工艺，单核性能提升25%，支持DDR5-8000内存，预计2026年Q3发布。
+  - desc: AMD于2026年4月22日发布的首款双3D V-Cache桌面处理器。基于Zen 5架构，16核32线程，创新地在两个CCD上各堆叠64MB
+      3D V-Cache（共128MB额外缓存），加上原生64MB L3，L3缓存总计192MB，搭配16MB L2，总缓存池达208MB。基础频率4.3GHz，加速频率5.7GHz，TDP
+      200W。在游戏负载中，双CCD 3D V-Cache设计使平均帧率较9950X3D提升8-15%，1% Low帧率提升尤为显著。AM5平台兼容，支持PCIe
+      5.0与DDR5-6400。
     tags:
-    - Zen 6
-    - 2nm
-    - DDR5
-    - 单核性能
-    title: AMD Zen 6 桌面CPU 曝光
+    - AMD Zen 5
+    - Dual 3D V-Cache
+    - 192MB L3
+    - AM5 Platform
+    title: AMD Ryzen 9 9950X3D2 Dual Edition：双3D V-Cache旗舰
   Computer Vision:
-  - desc: Meta发布SAM 3，支持视频实时分割与3D场景理解，基于EfficientViT-H架构，帧率提升至60 FPS，掩码质量提升12%。
+  - desc: CVPR 2026 Poster。提出前馈式多视图3D配准Transformer架构，将多视图点云配准从传统迭代优化范式转变为一站式前馈推理。核心创新在于SE(3)^N扩散细化模块：在SE(3)李群流形上定义扩散过程，通过去噪得分匹配逐步细化全局位姿估计，无需测试时优化。在3DMatch、ScanNet等标准基准上配准召回率提升12%，推理速度比迭代方法快50倍以上。
     tags:
-    - 视频分割
-    - 3D场景
-    - EfficientViT
-    - 实时
-    title: Segment Anything 3 (SAM 3)
+    - 3D Registration
+    - Diffusion on SE(3)
+    - Feed-Forward Transformer
+    - CVPR 2026
+    title: 'FUSER: Feed-Forward Multiview 3D Registration Transformer with SE(3)^N
+      Diffusion Refinement'
   GPU:
-  - desc: 据传NVIDIA下一代旗舰RTX 6090基于Rubin架构，384-bit GDDR7显存，24GB容量，CUDA核心数超30000，预计2026下半年发布。
+  - desc: Intel于2026年4月发布的Arc Pro B70专业GPU，基于Battlemage架构BMG-G31大核心。集成32个Xe2核心（512
+      EU），配备32GB GDDR6显存、256-bit位宽，显存带宽672 GB/s。采用TSMC 5nm工艺，TBP 225W。定位AI推理与专业可视化而非游戏市场，支持Intel
+      XMX矩阵引擎，INT8推理性能达238 TOPS。在RTX 5060 Ti 16GB对标测试中渲染性能基本持平，AI推理性能领先约20%，建议零售价999美元。
     tags:
-    - Rubin架构
-    - GDDR7
-    - 384-bit
-    - 旗舰
-    title: NVIDIA RTX 6090 曝光
+    - Intel Battlemage
+    - BMG-G31
+    - 32GB GDDR6
+    - XMX Matrix Engine
+    title: Intel Arc Pro B70：Battlemage BMG-G31 32GB专业卡
   Lang:
-  - desc: Rust 2026 Edition 引入静态生命周期推断与模式匹配完善，编译速度提升40%，内存安全进一步增强。
+  - desc: 2026年5月11日发布。Ruby 4.0系列最新补丁版本，核心改进包括：ZJIT（基于LLVM的JIT编译器）内联缓存命中率提升15%，方法调用开销降低30%；Ruby
+      Box进程级内存隔离机制修复了跨Box对象引用导致的GC停顿问题，P99延迟从12ms降至3.2ms；新增Fiber调度器的NUMA感知能力，在多路服务器上Web应用吞吐量提升18%。
     tags:
-    - Rust
-    - 静态生命周期
-    - 编译优化
-    - 内存安全
-    title: Rust 2026 Edition 预览
+    - Ruby 4.0
+    - ZJIT Compiler
+    - Ruby Box Isolation
+    - NUMA-aware Scheduling
+    title: Ruby 4.0.4 — ZJIT 即时编译器与 Ruby Box 隔离机制持续优化
   NLP:
-  - desc: Google发布Gemma 3.3，270亿参数，采用Grouped-Query Attention，在MMLU上达到82.5%，支持128K上下文窗口。
+  - desc: EACL 2026 Long Paper。提出多阶段课程对齐框架，将多语言编码器与LLM深度融合以解决跨语言推理难题。框架包含三个阶段：(1)
+      跨语言表示对齐——通过对比学习拉近多语言编码器与LLM嵌入空间；(2) 课程式指令微调——从简单单语逐步过渡到复杂多语言推理链；(3) 自洽性解码——在多语言推理路径间进行一致性投票。在XQuAD、MLQA等跨语言基准上超越GPT-4o多语言能力平均8.3个百分点。
     tags:
-    - 开源
-    - 270B
-    - Grouped-Query Attention
-    - 长上下文
-    title: Gemma 3.3 开源模型
+    - Multilingual NLP
+    - Curriculum Learning
+    - Encoder-LLM Fusion
+    - EACL 2026
+    title: 'MERLIN: Multi-Stage Curriculum Alignment for Multilingual Encoder-LLM
+      Integration in Cross-Lingual Reasoning'
   Net:
-  - desc: IETF发布QUIC v4草案，引入0-RTT数据包聚合与多路径传输，握手延迟降低至50ms以下，吞吐量提升30%。
+  - desc: NSDI 2026 Spring。利用P4可编程交换机在WAN环境下实现增强的带宽公平共享机制。核心设计：在交换机数据平面部署轻量级逐流公平队列（per-flow
+      fair queuing），通过P4实现可编程的加权公平队列调度器，无需端主机协议修改。采用两级层次化调度架构——边缘侧基于WRR的租户级隔离，核心侧基于deficit
+      round-robin的流级公平性保障。在100Gbps线速下实现微秒级调度延迟，尾部延迟降低42%，带宽利用率提升至97%。
     tags:
-    - 0-RTT
-    - 多路径
-    - 低延迟
-    - IETF
-    title: QUIC v4 草案发布
+    - P4 Programmable Switch
+    - WAN Fairness
+    - In-Network Scheduling
+    - NSDI 2026
+    title: 'Net-P4ct: Enhanced WAN Bandwidth Fair Sharing Using P4 Programmable Switches'
   News:
-  - desc: 美国国会通过《AI问责法案》，要求高风险AI系统进行第三方审计与偏见测试，违者最高罚款全球营收的4%。
+  - desc: 2026年5月7日，欧盟理事会与欧洲议会就《AI法案》简化修正案（AI Act Omnibus）达成临时协议。核心变化：(1) 高风险AI系统分类标准收紧——仅对明确涉及安全关键领域（医疗设备、自动驾驶L4级以上）的AI系统施加严格合规要求；(2)
+      通用AI模型监管分层——训练算力>10^25 FLOPs的模型需提供系统性风险评估报告；(3) 首次将AI生成裸照（nudification）应用明确列为禁止行为。新规预计2026年Q3正式生效，被视为欧盟在产业压力下对AI监管的重大回调。
     tags:
-    - AI监管
-    - 法案
-    - 第三方审计
-    - 罚款
-    title: 美国发布《AI问责法案》
+    - EU AI Act
+    - Regulatory Simplification
+    - High-Risk AI Classification
+    - AI Policy 2026
+    title: 欧盟通过AI法案简化修正案：高风险分类门槛放宽，nudification应用禁令写入
