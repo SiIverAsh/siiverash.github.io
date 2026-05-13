@@ -12,21 +12,14 @@ from openai.types.chat import ChatCompletionToolParam, ChatCompletionMessagePara
 
 api_key = os.getenv("DEEPSEEK_API_KEY")
 base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
-
-# Exa API 配置 (原 Metaphor)
 EXA_API_KEY = os.getenv("EXA_API_KEY")
 
 client = OpenAI(api_key=api_key, base_url=base_url)
 
 def get_beijing_time():
-    """获取北京时间 (UTC+8)"""
     return datetime.now(timezone(timedelta(hours=8)))
 
 def web_search(query: str):
-    """
-    使用 Exa AI (原 Metaphor) 进行语义搜索。
-    Exa 会自动解析网页最相关的片段 (highlights)，并过滤垃圾信息。
-    """
     print(f"🔍 正在执行 Exa 语义搜索: {query}...")
     if not EXA_API_KEY:
         return "错误：未配置 EXA_API_KEY 环境变量。请在 GitHub Secrets 中添加该密钥。"
@@ -39,10 +32,10 @@ def web_search(query: str):
         }
         data = {
             "query": query,
-            "useAutoprompt": True, # 自动优化用户的搜索提问
-            "numResults": 3,       # 返回前 3 条最相关的结果
-            "highlights": {        # 获取网页中与搜索词最匹配的文字片段
-                "numSentences": 5  # 每个片段包含 5 句话，确保上下文丰富
+            "useAutoprompt": True, 
+            "numResults": 3,       
+            "highlights": {        
+                "numSentences": 5  
             }
         }
         
@@ -52,13 +45,10 @@ def web_search(query: str):
 
         if not results:
             return f"Exa 未能找到关于 '{query}' 的深度信息。"
-        
-        # 格式化搜索结果
         search_context = []
         for i, r in enumerate(results, 1):
             title = r.get("title", "无标题")
             url_link = r.get("url", "无链接")
-            # 提取高亮片段 
             highlights = r.get("highlights", [])
             snippet = "\n".join(highlights) if highlights else "无法提取文字片段，请直接访问链接。"
             
@@ -68,8 +58,6 @@ def web_search(query: str):
     except Exception as e:
         print(f"Exa 搜索发生错误: {e}")
         return f"Exa 搜索失败: {e}。请基于你已有的知识库回答。"
-
-# 定义工具元数据
 tools: list[ChatCompletionToolParam] = [
     {
         "type": "function",
@@ -93,12 +81,10 @@ HISTORY_FILE = "_data/history.json"
 MAX_HISTORY_DAYS = 10
 
 def load_history():
-    """从文件加载历史推荐记录"""
     if os.path.exists(HISTORY_FILE):
         try:
             with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
                 history = json.load(f)
-                # 获取所有历史标题的平铺列表
                 all_titles = []
                 for date in history:
                     all_titles.extend(history[date])
@@ -109,34 +95,21 @@ def load_history():
     return [], {}
 
 def save_history(new_data, history_dict):
-    """保存当前推荐到历史记录，并只保留最近 N 天"""
     today = str(get_beijing_time().date())
-    
-    # 提取所有标题/名称
     titles = []
-    
-    # Tech 分类
     tech = new_data.get('tech', {})
     for cat in tech:
         for item in tech[cat]:
             if isinstance(item, dict) and item.get('title'):
                 titles.append(item.get('title'))
-
-    # 其他分类
     for cat in ['paper', 'llm', 'algorithm', 'new_project']:
         for item in new_data.get(cat, []):
             if isinstance(item, dict) and item.get('title'):
                 titles.append(item.get('title'))
-
-    # CV
     cv = new_data.get('cv_recommend', {})
     if cv and isinstance(cv, dict) and cv.get('name'):
         titles.append(cv.get('name'))
-    
-    # 过滤空值并更新历史
     history_dict[today] = list(set([t for t in titles if t]))
-    
-    # 只保留最近 MAX_HISTORY_DAYS 天
     sorted_dates = sorted(history_dict.keys(), reverse=True)
     new_history = {date: history_dict[date] for date in sorted_dates[:MAX_HISTORY_DAYS]}
     
@@ -233,8 +206,6 @@ def get_ai_recommendation(context, history_titles):
     prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context) \
                            .replace("{CURRENT_DATE}", str(get_beijing_time().date())) \
                            .replace("{HISTORY_BLOCK}", history_block)
-
-    # prompt = prompt_template.replace("{CONTEXT_PLACEHOLDER}", context).replace("{CURRENT_DATE}", str(get_beijing_time().date())).replace("{DAILY_FOCUS}", daily_focus)
     messages: List[ChatCompletionMessageParam] = [
         {"role": "system", "content": "你是一个全能的数字生活与技术博主，精通硬件、AI、动漫及二次元文化。你拒绝平庸，在面临不确定的技术细节（如未发布的显卡）或声优作品时，必须使用 web_search 工具进行核实，以确保 100% 的准确性。"},
         {"role": "user", "content": prompt}
@@ -243,9 +214,8 @@ def get_ai_recommendation(context, history_titles):
     sub_turn = 1
     while True:
         try:
-            # 包含完整的 reasoning_content
             response = client.chat.completions.create(
-                model='deepseek-chat', 
+                model='deepseek-v4-pro', 
                 messages=messages,
                 tools=tools,
                 response_format={"type": "json_object"},
@@ -253,7 +223,6 @@ def get_ai_recommendation(context, history_titles):
             )
             
             message = response.choices[0].message
-            # 补全 reasoning_content 并存入历史消息
             msg_dict = message.model_dump()
             reasoning = getattr(message, 'reasoning_content', None)
             if reasoning:
@@ -267,15 +236,11 @@ def get_ai_recommendation(context, history_titles):
             tool_calls = message.tool_calls
             if not tool_calls:
                 return message.content
-
-            # 处理工具调用
             for tool in tool_calls:
                 if tool.type == 'function':
                     tool_name = tool.function.name
                     tool_args = json.loads(tool.function.arguments)
                     tool_func = TOOL_MAP[tool_name]
-                    
-                    # 执行真实搜索
                     tool_result = tool_func(**tool_args)
                     
                     messages.append({
@@ -311,8 +276,6 @@ def update_yaml():
             with open('_data/recommendations.yml', 'w', encoding='utf-8') as f:
                 yaml.dump(data, f, allow_unicode=True)
             print("Successfully updated _data/recommendations.yml")
-            
-            # 保存历史记录
             save_history(ai_content, history_dict)
             print("Successfully updated _data/history.json")
         except json.JSONDecodeError as e:

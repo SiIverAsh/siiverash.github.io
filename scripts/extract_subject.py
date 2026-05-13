@@ -31,7 +31,7 @@ def get_subject_from_ai(title: str, content: str, category: str):
     """
 
     payload = {
-        "model": "deepseek-chat",
+        "model": "deepseek-v4-pro",
         "messages": [
             {"role": "system", "content": "You are a precise entity extractor. Output JSON only."},
             {"role": "user", "content": prompt}
@@ -68,8 +68,6 @@ def process_posts():
             front_matter = yaml.safe_load(parts[1])
             post_body = parts[2]
         except: continue
-
-        # 仅针对 anime 
         categories = front_matter.get("categories", [])
         if not isinstance(categories, list): categories = [categories]
         
@@ -81,7 +79,6 @@ def process_posts():
 
         if is_target and not front_matter.get("subject"):
             title = front_matter.get("title", "")
-            # 取出匹配的第一个分类作为字符串传入
             category_str = next((c for c in categories if isinstance(c, str) and c.lower() in target_categories), "anime")
             print(f"Extracting anime subject for: {title}...")
             

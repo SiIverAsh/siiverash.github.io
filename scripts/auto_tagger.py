@@ -94,7 +94,7 @@ def get_tags_from_ai(title, content, category, existing_tags):
         内容摘要：{content[:3000]}"""
 
     payload = {
-        "model": "deepseek-chat",
+        "model": "deepseek-v4-flash",
         "messages": [
             {
                 "role": "system",
