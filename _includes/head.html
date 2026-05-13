@@ -5,10 +5,13 @@
 <link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | relative_url }}" type="image/x-icon">
 <link rel="icon" href="{{ "/assets/images/favicon.ico" | relative_url }}" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 
 <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 <link rel="stylesheet" href="{{ "/assets/css/responsive.css" | relative_url }}">
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 
 <script id="data-raw" type="application/json">{{ site.data.recommendations | jsonify }}</script>
 <script>
@@ -17,4 +20,19 @@
         const raw = document.getElementById('data-raw').textContent;
         window.siteData = JSON.parse(raw);
     } catch (e) { console.error("Data Parse Error:", e); }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        if (typeof renderMathInElement !== 'function') return;
+
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true }
+            ],
+            throwOnError: false,
+            ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        });
+    });
 </script>
