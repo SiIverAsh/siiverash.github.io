@@ -1,4 +1,20 @@
 {
+  "2026-05-15": [
+    "SiFive Performance P570 Gen3: 第三代高性能RISC-V CPU IP",
+    "XGBoost（eXtreme Gradient Boosting）",
+    "Through the Lens of Contrast: Self-Improving Visual Reasoning in VLMs (VC-STaR)",
+    "NVIDIA GeForce RTX 5060: Blackwell入门级GDDR7显卡正式上市",
+    "Intel Nova Lake: 52核Intel 18A旗舰桌面CPU曝光",
+    "大西沙織",
+    "中央网信办启动「清朗·整治AI应用乱象」专项行动",
+    "MRC: OpenAI联合OCP发布AI超算多路径可靠连接协议",
+    "Rust 1.95.0 发布：Async Closures稳定化与LLVM 21后端",
+    "KV Cache压缩2026：TurboQuant与KVTC推动长上下文推理实用化",
+    "LongCat-AudioDiT: 基于DiT的零样本高保真语音克隆TTS",
+    "MiniCPM-V 4.6: 面壁智能1.3B端侧多模态模型开源",
+    "Learning to See Before Seeing: LLM纯文本预训练涌现视觉先验",
+    "github/spec-kit: GitHub官方Spec-Driven开发工具套件"
+  ],
   "2026-05-14": [
     "MERLIN: Multi-Stage Curriculum Alignment for Multilingual Encoder-LLM Integration in Cross-Lingual Reasoning",
     "Ruby 4.0.4 — ZJIT 即时编译器与 Ruby Box 隔离机制持续优化",
@@ -142,21 +158,5 @@
     "YOLOv12: Attention-Driven Real-Time Object Detection",
     "中国发布《人工智能法》草案征求意见",
     "NVIDIA RTX 5060 Ti: 基于Blackwell架构的主流显卡"
-  ],
-  "2026-05-05": [
-    "NVIDIA GeForce RTX 5070: 主流市场Blackwell双芯方案",
-    "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities",
-    "LLaMA 4: 高效MoE架构与128万上下文窗口",
-    "小岩井小鳥",
-    "LlamaEdge: 跨平台LLM推理运行时",
-    "TypeScript 6.0: 完善类型系统与ES2026支持",
-    "Gemma 3: 轻量级多语言开放模型",
-    "K-Means++: 改进初始化的聚类算法",
-    "MusicGen 2.0: 可控音乐生成与语音合成统一框架",
-    "Intel Core Ultra 5 245H: Arrow Lake-H移动处理器",
-    "RISC-V Vector Extension v1.2: 可伸缩向量处理标准",
-    "欧盟《AI责任指令》正式生效",
-    "ViT-3D: Video Vision Transformer with 3D Convolutions for Action Recognition",
-    "QUIC v2: 标准化低时延传输协议"
   ]
 }
