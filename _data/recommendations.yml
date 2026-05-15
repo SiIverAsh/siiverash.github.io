@@ -1,159 +1,134 @@
 algorithm:
-- desc: XGBoost是由陈天奇于2014年提出的梯度提升决策树算法的高性能实现，至今仍是结构化/表格数据建模的工业标准。核心特性：(1) 二阶泰勒展开近似目标函数，相比传统GBDT收敛更快且精度更高；(2)
-    引入正则化项（L1/L2）防止过拟合；(3) 基于Block存储结构的并行化树构建，支持列采样与特征重要性评估；(4) 内置缺失值自动处理与交叉验证。2026年v3.2版本新增GPU加速的直方图算法与联邦学习支持。广泛应用于Kaggle竞赛（累计冠军方案使用率超60%）、金融风控、推荐排序等领域。
+- desc: 经典监督学习算法，通过寻找最大间隔超平面实现二分类，利用核技巧隐式映射到高维空间解决非线性可分问题，是统计学习理论的基石之一。
   tags:
-  - Gradient Boosting
-  - Ensemble Learning
-  - Structured Data
-  - XGBoost
-  - Tree-based
-  title: XGBoost（eXtreme Gradient Boosting）
+  - SVM
+  - 监督学习
+  - 核方法
+  - 分类器
+  title: 支持向量机 (Support Vector Machine, SVM)
 cv_recommend:
-  agency: アイムエンタープライズ（I'm Enterprise）
-  hometown: 千葉県
-  intro: 1992年8月6日出生于千叶县，I'm Enterprise所属声优。日本播音演技研究所出身，2012年声优出道。以透明感与柔和兼具的独特声线著称，擅长在细腻情感戏与激烈动作戏之间自如切换，演技幅度极为宽广。第12回声优奖荣获最佳主持奖（与佐仓绫音共同获奖），展现语言表达能力与即兴应变力。歌唱功底扎实，多次参与角色歌及个人音乐活动。业界公认为平成后期最具代表性的实力派女性声优之一，以专业态度与持续精进的演技赢得同行与观众高度信赖。
-  name: 大西沙織
-date: '2026-05-15'
+  agency: アクセルワン (Axl-One)
+  hometown: 東京都
+  intro: 日本女性声优、歌手。2010年声优出道，2015年以歌手身份正式发行单曲出道。她拥有清澈通透的声线，演技自然细腻，能驾驭从少女到成熟女性的多种声线。作为歌手，她多次成功举办个人演唱会，登上日本武道馆舞台。曾获得第10回声优奖主演女优赏，是当下最具人气的声优之一。
+  name: 水瀬いのり
+date: '2026-05-16'
 history:
-- event: 约翰内斯·开普勒确认行星运动第三定律（调和定律），完成《世界的和谐》著作，为牛顿万有引力定律奠定数学基础
-  year: '1618'
-- event: 拉斯维加斯正式建市，通过110英亩土地拍卖奠定城市雏形，后发展为全球博彩娱乐之都
-  year: '1905'
-- event: 米老鼠（Mickey Mouse）首次在动画短片《Plane Crazy》中亮相，虽为默片但标志华特·迪士尼动画帝国开端
-  year: '1928'
-- event: 理查德与莫里斯·麦当劳兄弟在加利福尼亚州圣贝纳迪诺开设全球首家麦当劳餐厅，开创快餐标准化模式
-  year: '1940'
-- event: 苏联成功发射史普尼克3号（Sputnik 3）人造卫星，携带12台科学仪器对近地空间环境进行综合探测
-  year: '1958'
-- event: 索尼开始恢复因大规模黑客攻击而瘫痪长达23天的PlayStation Network全球服务，影响7700万用户，为史上最大规模数据泄露事件之一
+- event: 计算机图形学先驱 Ivan Sutherland 出生，其开发的 Sketchpad 程序奠定了交互式计算机图形学基础。
+  year: '1938'
+- event: Theodore Maiman 在休斯研究实验室成功运行世界上第一台激光器，开启光子学时代。
+  year: '1960'
+- event: 苏联金星 5 号探测器进入金星大气层，传回 53 分钟宝贵数据，成为首个在金星大气中工作的探测器。
+  year: '1969'
+- event: 圣女贞德被天主教会封圣，成为法国民族精神的象征。
+  year: '1920'
+- event: 英国女王伊丽莎白二世在美国国会发表演说，成为首位对美国国会发表演讲的英国君主。
+  year: '1991'
+- event: 美国奋进号航天飞机执行 STS-134 任务升空，开启其最后一次太空飞行。
   year: '2011'
 llm:
-- desc: 面壁智能联合清华大学于2026年5月13日开源MiniCPM-V 4.6，以1.3B参数规模实现多项超越10B+模型的端侧多模态性能。核心技术：采用SigLIP-2视觉编码器与Qwen2.6-1.5B语言
-    backbone，通过三阶段渐进式训练（分辨率递增预训练→多任务监督微调→RLHF对齐）实现高效视觉语言对齐。支持最大1344×1344分辨率输入与128K上下文窗口，在MMBench、MMMU等基准上以1.3B参数量超越Qwen2.5-VL-7B和Gemma-3-12B。仅需6GB内存即可在移动设备流畅推理，推理速度达18
-    tokens/s（iPhone 17 Pro）。
+- desc: 蚂蚁集团发布并开源万亿参数 MoE 大模型 Ling-2.6-1T，采用快思考架构，性能对标 GPT-5.4 非推理版，支持 128K 上下文，在数学、代码与知识问答等评测中表现突出。
   tags:
-  - Edge AI
-  - Multimodal
-  - Open Source
-  - 1.3B
-  - On-Device
-  title: 'MiniCPM-V 4.6: 面壁智能1.3B端侧多模态模型开源'
+  - MoE
+  - 万亿参数
+  - 开源
+  - 蚂蚁集团
+  title: 蚂蚁百灵 Ling-2.6-1T：万亿参数 MoE 开源模型
 new_project:
-- desc: GitHub于2026年5月正式开源spec-kit，一套面向AI辅助编程的规格驱动开发（Spec-Driven Development）工具链。核心组件包括：(1)
-    Spec Parser——将自然语言需求规格自动转换为结构化任务分解；(2) AI Agent Orchestrator——协调多个AI编码代理按规格并行执行实现、测试与文档生成；(3)
-    Spec Validator——通过形式化验证确保代码实现与原始规格的一致性。深度集成GitHub Copilot与Actions，支持Python/TypeScript/Go/Rust等多语言。发布两周即获97K+
-    GitHub Stars，被业界视为从Vibe Coding向Agentic Engineering过渡的关键基础设施。
+- desc: 仅 4000 行 Python 代码的 AI Agent 框架，支持多种 LLM 后端、工具调用、记忆管理与插件扩展，适合快速构建本地智能代理应用。
   tags:
-  - Spec-Driven Development
-  - AI Coding
-  - GitHub
-  - Agentic Engineering
-  - Toolkit
-  title: 'github/spec-kit: GitHub官方Spec-Driven开发工具套件'
-  url: https://github.com/github/spec-kit
+  - AI Agent
+  - Lightweight
+  - Python
+  - Open Source
+  title: 'nanobot: 超轻量级个人 AI 助手框架'
+  url: https://github.com/HKUDS/nanobot
 paper:
-- desc: ICLR 2026 Oral论文。提出VC-STaR框架，通过对比学习范式实现视觉语言模型的自我改进推理。核心方法：(1) 构建Contrastive
-    Visual Reasoning Chain数据集，迫使模型在正确与错误推理链之间进行对比甄别；(2) 设计Visual Contrastive Preference
-    Optimization (VCPO)训练目标，在无需人工标注的情况下利用模型自身生成的正负样本进行偏好优化；(3) 在ScienceQA、MMMU等7个视觉推理基准上平均提升8.3%，且展现出与RLHF互补的
-    scaling 特性。代码与数据已开源。
+- desc: 顶会论文推荐：ICLR 2026 收录，首次将强化学习用于激励 VLM 的视觉推理先验，在多个多模态基准上显著提升零样本推理能力。
   tags:
-  - ICLR 2026 Oral
-  - Visual Reasoning
-  - VLM
-  - Self-Improvement
-  - Contrastive Learning
-  title: 'Through the Lens of Contrast: Self-Improving Visual Reasoning in VLMs (VC-STaR)'
-  url: https://arxiv.org/abs/2603.02556
+  - Vision-Language
+  - Reinforcement Learning
+  - ICLR 2026
+  - Multimodal
+  title: 'DeepEyes: Incentivizing ''Thinking with Images'' via Reinforcement Learning'
+  url: https://iclr.cc/virtual/2026/poster/10006639
 tech:
   Arch:
-  - desc: SiFive于2026年5月12日发布第三代Performance系列RISC-V CPU IP。P570 Gen3采用13级流水线、4-wide超标量乱序执行微架构，支持2核至16核集群配置。较Gen2实现40%的SPECint2006性能提升，达到7.2
-      SPECint2006/GHz。全面兼容RVA23 Profile，原生支持矢量加密扩展（Zvkb/Zvkg）与Pointer Masking安全特性。采用7nm工艺可实现3.5GHz主频，目标市场覆盖消费电子、汽车ADAS与数据中心边缘推理。
+  - desc: PADE 是面向 Transformer 稀疏注意力的硬件加速器，去除动态稀疏预测器，采用统一执行与阶段融合技术降低延迟与能耗，较先前设计实现
+      2.3 倍加速。
     tags:
-    - RISC-V
-    - SiFive P570
-    - RVA23
-    - CPU IP
-    - High-Performance
-    title: 'SiFive Performance P570 Gen3: 第三代高性能RISC-V CPU IP'
+    - Sparse Attention
+    - Transformer Accelerator
+    - HPCA 2026
+    - Hardware Architecture
+    title: 'PADE: A Predictor-Free Sparse Attention Accelerator via Unified Execution
+      and Stage Fusion'
   Audio:
-  - desc: 美团技术团队2026年4月开源，首次将Diffusion Transformer (DiT)架构引入波形潜空间的语音合成。核心创新包括：(1)
-      在Mel-Spectrogram潜空间中进行扩散建模，相比原始波形扩散效率提升20倍；(2) 提出Conditional Audio DiT Block，通过交叉注意力机制融合音色参考编码与文本语义特征；(3)
-      仅需3秒参考音频即可零样本克隆任意说话人音色，MOS评分4.52超越ElevenLabs等商业方案。支持中英双语，RTF低至0.08。
+  - desc: 针对语音识别任务提出粗粒度投机解码接受准则，利用声学特征连续性在保持精度的同时大幅降低计算开销。
     tags:
-    - TTS
-    - Voice Cloning
-    - Diffusion Transformer
-    - Zero-Shot
-    - Open Source
-    title: 'LongCat-AudioDiT: 基于DiT的零样本高保真语音克隆TTS'
+    - Speculative Decoding
+    - Speech Recognition
+    - ICASSP 2026
+    - Efficiency
+    title: Principled Coarse-Grained Acceptance for Speculative Decoding in Speech
   CPU:
-  - desc: Intel Nova Lake-S桌面CPU工程样品信息于2026年5月泄露。采用Intel 18A（1.8nm级）工艺与Foveros Advanced封装，混合架构包含Coyote
-      Cove性能核（P-core）与Arctic Wolf能效核（E-core），最高52核配置（8P+44E）。全新LGA 1954插槽，配套900系列芯片组，支持DDR5-8000原生内存与48条PCIe
-      5.0通道。首次在桌面平台集成NPU 5.0 AI引擎，INT8算力达48 TOPS。ES样品基础频率3.2GHz，加速频率4.8GHz，预计2026年Q4正式发布。
+  - desc: Intel 首款基于 Intel 18A 工艺的移动 CPU 家族，采用 Lion Cove P 核与 Skymont E 核，集成 Xe3 (Celestial)
+      GPU 与第 4 代 NPU，AI 算力达 48 TOPS，专为 AI PC 打造。
     tags:
-    - Intel 18A
-    - Nova Lake
-    - 52 Cores
-    - LGA 1954
-    - NPU 5.0
-    title: 'Intel Nova Lake: 52核Intel 18A旗舰桌面CPU曝光'
+    - Intel
+    - Panther Lake
+    - 18A
+    - Core Ultra
+    - Mobile
+    title: Intel Panther Lake：Core Ultra Series 3 移动处理器登陆
   Computer Vision:
-  - desc: ICLR 2026 Oral论文，首次系统证明大语言模型在无视觉编码器、仅通过纯文本预训练的条件下，可隐式习得颜色、形状、空间关系等视觉概念先验知识。研究通过大规模对照实验与探针分类器，量化了不同规模LLM中视觉先验的涌现阈值（约7B参数），并揭示这些先验可在下游视觉推理任务中零样本迁移，挑战了「视觉能力必依赖视觉编码器」的传统认知。
+  - desc: 提出基于强化学习的训练策略，激励视觉语言模型在生成答案前进行更深入的视觉推理，无需显式监督即可提升多模态思维链能力。
     tags:
+    - Vision-Language
+    - Reinforcement Learning
     - ICLR 2026
-    - Visual Priors
-    - LLM
-    - Multimodal Cognition
-    title: 'Learning to See Before Seeing: LLM纯文本预训练涌现视觉先验'
+    - Multimodal Reasoning
+    title: 'DeepEyes: Incentivizing ''Thinking with Images'' via Reinforcement Learning'
   GPU:
-  - desc: NVIDIA于2026年5月正式发售GeForce RTX 5060。搭载Blackwell GB206-300核心，TSMC 4N定制工艺，集成30组SM（4608
-      CUDA Core）、144个第5代Tensor Core与36个第4代RT Core。配备8GB三星GDDR7显存（128-bit位宽，28Gbps速率），总带宽448GB/s。支持DLSS
-      4多帧生成（MFG）与神经网络渲染，TGP仅145W，采用单8-pin供电。起售价$299/¥2499，定位1080P高刷光追游戏与入门级AI推理。
+  - desc: 基于 Navi 44 GPU，拥有 2048 个流处理器，加速频率超 3.1 GHz，配备 8GB/16GB GDDR6 显存（128-bit
+      位宽），定价 $299/$349，正面迎战 NVIDIA RTX 5060。
     tags:
-    - Blackwell
-    - GDDR7
-    - DLSS 4
-    - RTX 5060
-    - Neural Rendering
-    title: 'NVIDIA GeForce RTX 5060: Blackwell入门级GDDR7显卡正式上市'
+    - AMD
+    - Radeon
+    - Navi 44
+    - GDDR6
+    - Mid-Range
+    title: AMD Radeon RX 9060 XT：Navi 44 中端显卡正式公布
   Lang:
-  - desc: Rust 1.95.0于2026年4月16日正式发布。核心稳定化特性包括：async closures（异步闭包）正式进入稳定通道，支持`async
-      || {}`语法；`impl Trait`在异步函数返回位置全面稳定化；const泛型表达式能力扩展，支持`const { N + 1 }`等编译期运算。编译器后端升级至LLVM
-      21，引入Polymorphic Inline Cache优化，整体编译速度提升15%。标准库新增`LazyLock`、`OnceLock`稳定化及`Duration::abs`等API。
+  - desc: Go 1.26 解除泛型类型参数的循环约束（递归泛型），稳定 range-over-func 迭代器，并新增结构化日志与 HTTP/3 标准库支持。
     tags:
-    - Rust 1.95
-    - Async Closures
-    - LLVM 21
-    - Systems Programming
-    title: Rust 1.95.0 发布：Async Closures稳定化与LLVM 21后端
+    - Go
+    - Programming Language
+    - Generics
+    - Release
+    title: Go 1.26 正式发布：递归泛型与迭代器稳定化
   NLP:
-  - desc: 2026年KV Cache压缩技术进入工程落地阶段。TurboQuant采用混合精度量化策略（Key保留4-bit/Value压缩至2-bit），在保持95%+精度前提下将KV缓存体积缩减至原始的1/8；KVTC（KV
-      Token Compression）则通过基于注意力分数的动态令牌合并算法，实现自适应上下文窗口管理。二者联合部署可将Llama-4等长文本模型在128K上下文长度下的推理显存占用从48GB降至14GB，端侧部署成为可能。
+  - desc: 系统研究检索增强大语言模型中的过度搜索现象，揭示过多检索会损害生成质量，并提出自适应检索策略以缓解该问题。
     tags:
-    - KV Cache Compression
-    - LLM Inference
-    - Quantization
-    - Long Context
-    title: KV Cache压缩2026：TurboQuant与KVTC推动长上下文推理实用化
+    - RAG
+    - LLM
+    - EACL 2026
+    - Information Retrieval
+    title: Over-Searching in Search-Augmented Large Language Models
   Net:
-  - desc: 2026年5月12日，OpenAI联合OCP（开放计算项目）正式发布MRC v1.0规范。该协议基于SRv6实现多路径并行传输与亚毫秒级链路故障切换，专为10万卡以上AI训练集群设计。核心机制包括：(1)
-      包级多路径负载均衡，避免ECMP哈希冲突；(2) 基于INT（In-band Network Telemetry）的实时拥塞感知；(3) 零丢包快速重传。在OpenAI
-      Stargate集群实测中将All-Reduce通信效率从87%提升至96%。
+  - desc: W3C 发布 WebTransport 首个公开工作草案，该 API 基于 HTTP/3 和 QUIC 实现低延迟客户端-服务器通信，同时支持数据报和流传输，适用于游戏、直播等实时场景。
     tags:
-    - AI Supercomputer
-    - SRv6
-    - Multipath
-    - OCP
-    - Open Protocol
-    title: 'MRC: OpenAI联合OCP发布AI超算多路径可靠连接协议'
+    - WebTransport
+    - HTTP/3
+    - QUIC
+    - W3C
+    - Real-Time
+    title: WebTransport W3C Working Draft 发布
   News:
-  - desc: 2026年4月30日，中央网信办正式部署为期3个月的「清朗·整治AI应用乱象」专项行动。重点打击7类AI违法行为：(1) AI生成「数字泔水」——批量制造低质、虚假、拼凑信息污染网络生态；(2)
-      深度伪造侵犯肖像权与名誉权；(3) AI炮制虚假新闻与谣言；(4) AI驱动的网络水军及流量造假；(5) AI换脸/拟声电信诈骗；(6) AI生成侵权文字、图片、音视频内容；(7)
-      AI模型系统性偏见与歧视性内容输出。要求平台2026年6月底前完成自查整改并建立AI内容标识机制。
+  - desc: 阿里平头哥自研 GPU 芯片进入规模化量产，累计交付超 47 万片；AI 收入三位数增长，千问模型月活超 3 亿，阿里云收入增速加速至 40%。
     tags:
-    - AI Regulation
-    - Deepfake
-    - Content Governance
-    - Digital Slop
-    - China
-    title: 中央网信办启动「清朗·整治AI应用乱象」专项行动
+    - Alibaba
+    - PingTouGe
+    - GPU
+    - AI
+    - Earnings
+    title: 阿里巴巴 2026 财年 Q3 财报：平头哥自研 GPU 规模化量产
