@@ -1,134 +1,156 @@
 algorithm:
-- desc: 经典监督学习算法，通过寻找最大间隔超平面实现二分类，利用核技巧隐式映射到高维空间解决非线性可分问题，是统计学习理论的基石之一。
+- desc: PCA是机器学习中最经典的线性降维算法，通过正交变换将原始高维数据投影到方差最大的主成分方向上，在保留数据主要变异性的同时实现降维。数学上通过协方差矩阵的特征值分解（EVD）或数据矩阵的奇异值分解（SVD）求解。PCA广泛应用于数据可视化（降至2D/3D）、噪声过滤、特征提取、以及作为其他算法的预处理步骤。虽然线性假设限制其在复杂非线性数据上的表现，但计算高效、可解释性强，至今仍是数据科学入门与实践中不可或缺的基础工具。
   tags:
-  - SVM
-  - 监督学习
-  - 核方法
-  - 分类器
-  title: 支持向量机 (Support Vector Machine, SVM)
+  - Dimensionality Reduction
+  - Eigenvalue Decomposition
+  - Unsupervised Learning
+  - Feature Extraction
+  - Linear Algebra
+  title: 主成分分析 (Principal Component Analysis, PCA)
 cv_recommend:
-  agency: アクセルワン (Axl-One)
+  agency: アイムエンタープライズ (I'm Enterprise)
   hometown: 東京都
-  intro: 日本女性声优、歌手。2010年声优出道，2015年以歌手身份正式发行单曲出道。她拥有清澈通透的声线，演技自然细腻，能驾驭从少女到成熟女性的多种声线。作为歌手，她多次成功举办个人演唱会，登上日本武道馆舞台。曾获得第10回声优奖主演女优赏，是当下最具人气的声优之一。
-  name: 水瀬いのり
-date: '2026-05-16'
+  intro: 早見沙織是日本平成后期最具代表性的实力派女性声优之一，以其透明感与张力并存的独特声线著称。她于2007年以声优身份正式出道，此后逐步确立了自己在行业中的顶尖地位。早見的演技特点在于对角色内心情感的极度精细的把握，从温柔细腻的低语到情绪爆发的高音切换流畅自然，被业界评价为「情感光谱最为完整」的声优之一。除配音外，她同时以歌手身份活跃，拥有出色的音乐素养与表现力，多次举办个人演唱会。2016年获得第10回声优奖助演女优赏，2020年获第14回声优奖主演女优赏，是少数实现声优赏两项大奖制霸的实力派。她沉稳谦逊的性格与持续精进的专业态度，赢得了业界同行与粉丝群体的广泛尊重。
+  name: 早見沙織
+date: '2026-05-17'
 history:
-- event: 计算机图形学先驱 Ivan Sutherland 出生，其开发的 Sketchpad 程序奠定了交互式计算机图形学基础。
-  year: '1938'
-- event: Theodore Maiman 在休斯研究实验室成功运行世界上第一台激光器，开启光子学时代。
-  year: '1960'
-- event: 苏联金星 5 号探测器进入金星大气层，传回 53 分钟宝贵数据，成为首个在金星大气中工作的探测器。
-  year: '1969'
-- event: 圣女贞德被天主教会封圣，成为法国民族精神的象征。
-  year: '1920'
-- event: 英国女王伊丽莎白二世在美国国会发表演说，成为首位对美国国会发表演讲的英国君主。
-  year: '1991'
-- event: 美国奋进号航天飞机执行 STS-134 任务升空，开启其最后一次太空飞行。
-  year: '2011'
+- event: 国际电信联盟(ITU)在巴黎正式成立，成为全球历史最悠久的国际组织之一，奠定全球电信标准化的基础。
+  year: 1865年
+- event: 艾伦·凯(Alan Kay)出生，面向对象编程之父、Smalltalk语言发明者、图形用户界面(GUI)先驱，2003年获图灵奖。
+  year: 1940年
+- event: 美国陆军与宾夕法尼亚大学签署合同开发ENIAC——世界上第一台通用电子数字计算机，1946年正式投入使用。
+  year: 1943年
+- event: 国际电信联盟确立每年5月17日为「世界电信日」，后扩展为「世界电信和信息社会日」。
+  year: 1969年
+- event: 蒂姆·伯纳斯-李(Tim Berners-Lee)在NeXTcube工作站上完成HTML、HTTP协议与首个Web服务器的搭建，万维网核心技术正式诞生。
+  year: 1991年
+- event: 马萨诸塞州成为美国首个合法化同性婚姻的州，标志着全球LGBTQ+权利运动的历史性突破。
+  year: 2004年
 llm:
-- desc: 蚂蚁集团发布并开源万亿参数 MoE 大模型 Ling-2.6-1T，采用快思考架构，性能对标 GPT-5.4 非推理版，支持 128K 上下文，在数学、代码与知识问答等评测中表现突出。
+- desc: 百度于2026年5月9日正式发布文心大模型5.1（ERNIE 5.1），在LMArena搜索榜等多榜单登顶国内第一。核心突破包括：通过端到端训练效率优化将预训练成本降至业界平均水平的6%；引入增强推理架构实现多步逻辑推理与搜索增强生成一体化；升级多模态理解能力覆盖图文混合输入。同步在百度智能云千帆平台上线，提供API调用与企业私有化部署方案。该模型标志着国产大模型在成本效率与推理能力上达到新高度。
   tags:
-  - MoE
-  - 万亿参数
-  - 开源
-  - 蚂蚁集团
-  title: 蚂蚁百灵 Ling-2.6-1T：万亿参数 MoE 开源模型
+  - ERNIE 5.1
+  - Baidu
+  - LLM
+  - Cost Efficiency
+  - Reasoning
+  - Chinese LLM
+  title: 百度文心大模型 ERNIE 5.1：预训练成本仅为业界6%的旗舰模型
 new_project:
-- desc: 仅 4000 行 Python 代码的 AI Agent 框架，支持多种 LLM 后端、工具调用、记忆管理与插件扩展，适合快速构建本地智能代理应用。
+- desc: Nous Research发布的开源AI Agent框架Hermes Agent，2026年5月成为全球使用量最大的开源AI Agent项目。核心特性包括：跨会话持久记忆（Persistent
+    Session Memory）结合自动压缩与语义检索、基于MCP协议的多工具编排引擎、支持300+种MCP服务器无缝集成。采用本地优先架构，支持完全离线运行。内置Cross-Session
+    Auto-Compression机制使长期记忆存储效率提升10倍，在SWE-bench Verified等基准上刷新开源Agent性能纪录。
   tags:
   - AI Agent
-  - Lightweight
-  - Python
   - Open Source
-  title: 'nanobot: 超轻量级个人 AI 助手框架'
-  url: https://github.com/HKUDS/nanobot
+  - Persistent Memory
+  - MCP Protocol
+  - Nous Research
+  title: 'Hermes Agent: 带持久记忆的开源AI Agent框架'
+  url: https://github.com/NousResearch/hermes-agent
 paper:
-- desc: 顶会论文推荐：ICLR 2026 收录，首次将强化学习用于激励 VLM 的视觉推理先验，在多个多模态基准上显著提升零样本推理能力。
+- desc: 该论文系统研究了语言模型推理能力涌现与训练动态之间的深层关联，发现推理能力并非简单地随模型规模线性增长，而是呈现阶段性跃迁。作者通过理论分析与大规模实验，揭示了影响推理能力的关键训练动力学因素——包括数据课程策略、损失地形几何结构、以及梯度的多尺度交互。基于此提出EvoLM训练框架，通过动态课程调整与梯度协调机制，使3B参数模型在数学推理任务上达到传统7B模型的性能水平。
   tags:
-  - Vision-Language
-  - Reinforcement Learning
-  - ICLR 2026
-  - Multimodal
-  title: 'DeepEyes: Incentivizing ''Thinking with Images'' via Reinforcement Learning'
-  url: https://iclr.cc/virtual/2026/poster/10006639
+  - NeurIPS 2025
+  - Best Paper
+  - Training Dynamics
+  - Reasoning
+  - Language Model
+  title: 'EvoLM: In Search of Lost Training Dynamics for Language Model Reasoning
+    (NeurIPS 2025 Best Paper)'
+  url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/778cc31583604ebf246726055e9f737f-Abstract-Conference.html
 tech:
   Arch:
-  - desc: PADE 是面向 Transformer 稀疏注意力的硬件加速器，去除动态稀疏预测器，采用统一执行与阶段融合技术降低延迟与能耗，较先前设计实现
-      2.3 倍加速。
+  - desc: 进迭时空（SpacemiT）发布全球首款符合RVA23规范的量产RISC-V AI CPU——Key Stone K3系列。芯片采用8核RISC-V同构融合计算架构，主频最高2.5GHz，集成自研NPU提供6TOPS
+      AI算力，支持INT8/FP16混合精度推理。K3是业界首颗将RISC-V通用计算与AI加速在单Die上实现「通推一体」的商用芯片，已适配Ubuntu、OpenHarmony
+      6.1等操作系统，面向端侧AI推理与智能物联网场景规模化商用。
     tags:
-    - Sparse Attention
-    - Transformer Accelerator
-    - HPCA 2026
-    - Hardware Architecture
-    title: 'PADE: A Predictor-Free Sparse Attention Accelerator via Unified Execution
-      and Stage Fusion'
+    - RISC-V
+    - RVA23
+    - AI CPU
+    - NPU
+    - OpenHarmony
+    title: 进迭时空 K3：全球首款RVA23规范量产RISC-V AI CPU
   Audio:
-  - desc: 针对语音识别任务提出粗粒度投机解码接受准则，利用声学特征连续性在保持精度的同时大幅降低计算开销。
+  - desc: 阶跃星辰发布新一代实时语音大模型StepAudio 2.5 Realtime，支持端到端300ms级超低延迟实时对话。核心技术包括：Emotion-Aware流式编码器实现说话人情绪实时感知与响应、Persona
+      Consistency Module支持千万级人设自定义与持久化、以及多语种混合生成能力。模型可自定义语调、语速、情感色彩，支持随时打断与话题无缝切换，MOS评分达4.6+。已通过阶跃星辰开放平台上线。
     tags:
-    - Speculative Decoding
-    - Speech Recognition
-    - ICASSP 2026
-    - Efficiency
-    title: Principled Coarse-Grained Acceptance for Speculative Decoding in Speech
+    - Real-time TTS
+    - Emotion Recognition
+    - Voice Cloning
+    - StepAudio
+    - Streaming
+    title: 阶跃星辰 StepAudio 2.5 Realtime：情绪感知实时语音大模型
   CPU:
-  - desc: Intel 首款基于 Intel 18A 工艺的移动 CPU 家族，采用 Lion Cove P 核与 Skymont E 核，集成 Xe3 (Celestial)
-      GPU 与第 4 代 NPU，AI 算力达 48 TOPS，专为 AI PC 打造。
+  - desc: Intel正式发布Core Ultra 200S Plus系列桌面处理器（Arrow Lake Refresh），官方称其为「史上最快桌面游戏处理器」。旗舰型号Core
+      Ultra 7 270K Plus拥有20核心20线程（8P+12E），P核最高频率5.50GHz，36MB L3缓存。相比前代Arrow Lake-S，Die-to-Die互联频率提升近1GHz至4.0GHz，显著降低内存延迟。搭配LGA1851接口与DDR5-6400原生支持，游戏性能提升15-20%。定价$199-$299区间，面向高端游戏与内容创作市场。
     tags:
     - Intel
-    - Panther Lake
-    - 18A
-    - Core Ultra
-    - Mobile
-    title: Intel Panther Lake：Core Ultra Series 3 移动处理器登陆
+    - Arrow Lake Refresh
+    - LGA1851
+    - Desktop CPU
+    - Gaming
+    title: Intel Core Ultra 200S Plus：Arrow Lake Refresh桌面处理器登场
   Computer Vision:
-  - desc: 提出基于强化学习的训练策略，激励视觉语言模型在生成答案前进行更深入的视觉推理，无需显式监督即可提升多模态思维链能力。
+  - desc: 提出LucidFlux，首个无需Caption输入的照片级通用图像复原框架。基于大规模Diffusion Transformer架构，通过自监督学习在百万级图像数据上训练，单模型统一处理去噪、去模糊、超分辨率、JPEG去伪影等20+任务。核心创新包括：Degradation-Adaptive
+      Conditioning模块实现盲复原、Multi-Scale Flow Matching加速采样至4步推理。在PSNR/SSIM指标上全面超越任务专用模型，推理速度比扩散模型基线提升8倍。
     tags:
-    - Vision-Language
-    - Reinforcement Learning
+    - Diffusion Transformer
+    - Image Restoration
     - ICLR 2026
-    - Multimodal Reasoning
-    title: 'DeepEyes: Incentivizing ''Thinking with Images'' via Reinforcement Learning'
+    - Blind Restoration
+    - Flow Matching
+    title: 'LucidFlux: 基于大规模扩散Transformer的无文本描述通用图像复原 (ICLR 2026 Outstanding Paper)'
   GPU:
-  - desc: 基于 Navi 44 GPU，拥有 2048 个流处理器，加速频率超 3.1 GHz，配备 8GB/16GB GDDR6 显存（128-bit
-      位宽），定价 $299/$349，正面迎战 NVIDIA RTX 5060。
+  - desc: AMD发布四年来首款PCIe形态Instinct加速卡MI350P，基于CDNA4架构。配备144GB HBM3E显存，带宽高达5.3TB/s，FP16理论算力4.6
+      PFLOPs，FP8算力9.2 PFLOPs。采用600W TBP设计并首次在数据中心GPU引入12V-2x6电源接口。相比NVIDIA H200 NVL，FP16理论算力领先约40%。支持PCIe
+      Gen5 x16接口，可直接部署于标准AI服务器无需SXM改造，大幅降低企业AI推理部署门槛。
     tags:
     - AMD
-    - Radeon
-    - Navi 44
-    - GDDR6
-    - Mid-Range
-    title: AMD Radeon RX 9060 XT：Navi 44 中端显卡正式公布
+    - CDNA4
+    - HBM3E
+    - Instinct
+    - AI Accelerator
+    - PCIe Gen5
+    title: AMD Instinct MI350P：首款PCIe形态CDNA4加速卡，144GB HBM3E
   Lang:
-  - desc: Go 1.26 解除泛型类型参数的循环约束（递归泛型），稳定 range-over-func 迭代器，并新增结构化日志与 HTTP/3 标准库支持。
+  - desc: Python 3.14系列最新维护版本3.14.5正式发布。该版本基于3.14.0引入的Copy-and-Patch JIT编译器（PEP 744），实现运行时热点代码即时编译，在科学计算场景中实现1.5-2.5倍性能提升。同时稳定化PEP
+      703无GIL自由线程（Free-Threading）模式，允许CPython在禁用GIL后实现真正多核并行。新增PEP 736关键字参数压缩语法、改进的异常组处理（except*）等语法糖。Python
+      3.14标志着CPython从解释型向JIT编译型演进的关键里程碑。
     tags:
-    - Go
-    - Programming Language
-    - Generics
-    - Release
-    title: Go 1.26 正式发布：递归泛型与迭代器稳定化
+    - Python 3.14
+    - JIT Compiler
+    - Free-Threading
+    - PEP 744
+    - PEP 703
+    title: Python 3.14.5 正式发布：JIT编译器与无GIL自由线程稳定化
   NLP:
-  - desc: 系统研究检索增强大语言模型中的过度搜索现象，揭示过多检索会损害生成质量，并提出自适应检索策略以缓解该问题。
+  - desc: 提出CoALM，首个统一多轮对话与工具调用能力的对话式Agent语言模型。通过Multi-Task Instruction Tuning策略，将对话历史建模、API调用生成、工具执行反馈整合进单一Transformer架构。在MT-Bench和ToolBench基准上，以7B参数规模超越GPT-4在工具编排任务上的表现。引入Conversation-Tool
+      Interleaving预训练目标，使模型在真实应用场景中零样本泛化能力提升显著。
     tags:
-    - RAG
-    - LLM
-    - EACL 2026
-    - Information Retrieval
-    title: Over-Searching in Search-Augmented Large Language Models
+    - ACL 2025
+    - Conversational AI
+    - Tool Use
+    - Agentic LM
+    - Instruction Tuning
+    title: 'CoALM: 统一对话与工具使用的对话式Agent语言模型 (ACL 2025)'
   Net:
-  - desc: W3C 发布 WebTransport 首个公开工作草案，该 API 基于 HTTP/3 和 QUIC 实现低延迟客户端-服务器通信，同时支持数据报和流传输，适用于游戏、直播等实时场景。
+  - desc: Linux内核社区提交QUIC协议原生支持的net-next v11补丁系列（15个补丁），由Red Hat工程师Xin Long主导。核心实现包括：定义IPPROTO_QUIC与SOL_QUIC常量、构建内核级QUIC
+      Socket基础设施、实现路径管理与连接迁移（Path Management & Connection Migration）、以及Stream多路复用框架。相比用户态QUIC实现，内核原生方案可减少上下文切换开销40%以上，吞吐量提升至用户态的1.8倍。目标合入Linux
+      6.12+主线。
     tags:
-    - WebTransport
-    - HTTP/3
     - QUIC
-    - W3C
-    - Real-Time
-    title: WebTransport W3C Working Draft 发布
+    - Linux Kernel
+    - net-next
+    - Transport Protocol
+    - Socket
+    title: Linux Kernel 原生 QUIC 协议栈：net-next v11 补丁系列
   News:
-  - desc: 阿里平头哥自研 GPU 芯片进入规模化量产，累计交付超 47 万片；AI 收入三位数增长，千问模型月活超 3 亿，阿里云收入增速加速至 40%。
+  - desc: 2026年5月12日，国家市场监督管理总局与国家标准化管理委员会正式发布《人工智能终端智能化分级》系列国家标准（GB/Z 177系列）。该标准将AI终端从L1至L5分为五个智能等级，涵盖感知智能、认知智能、决策智能与自主智能等维度。适用于智能手机、PC、智能家居、车载终端等产品品类的AI能力评估与认证。这是全球首个面向AI终端智能分级的国家级标准体系，为AI终端产业规范化和消费者选购提供权威依据。
     tags:
-    - Alibaba
-    - PingTouGe
-    - GPU
-    - AI
-    - Earnings
-    title: 阿里巴巴 2026 财年 Q3 财报：平头哥自研 GPU 规模化量产
+    - AI Standard
+    - National Standard
+    - Terminal Intelligence
+    - GB/Z 177
+    - Policy
+    title: 中国《人工智能终端智能化分级》系列国家标准正式发布

@@ -1,4 +1,20 @@
 {
+  "2026-05-17": [
+    "进迭时空 K3：全球首款RVA23规范量产RISC-V AI CPU",
+    "AMD Instinct MI350P：首款PCIe形态CDNA4加速卡，144GB HBM3E",
+    "LucidFlux: 基于大规模扩散Transformer的无文本描述通用图像复原 (ICLR 2026 Outstanding Paper)",
+    "Intel Core Ultra 200S Plus：Arrow Lake Refresh桌面处理器登场",
+    "Linux Kernel 原生 QUIC 协议栈：net-next v11 补丁系列",
+    "阶跃星辰 StepAudio 2.5 Realtime：情绪感知实时语音大模型",
+    "CoALM: 统一对话与工具使用的对话式Agent语言模型 (ACL 2025)",
+    "Hermes Agent: 带持久记忆的开源AI Agent框架",
+    "早見沙織",
+    "Python 3.14.5 正式发布：JIT编译器与无GIL自由线程稳定化",
+    "中国《人工智能终端智能化分级》系列国家标准正式发布",
+    "主成分分析 (Principal Component Analysis, PCA)",
+    "百度文心大模型 ERNIE 5.1：预训练成本仅为业界6%的旗舰模型",
+    "EvoLM: In Search of Lost Training Dynamics for Language Model Reasoning (NeurIPS 2025 Best Paper)"
+  ],
   "2026-05-16": [
     "蚂蚁百灵 Ling-2.6-1T：万亿参数 MoE 开源模型",
     "支持向量机 (Support Vector Machine, SVM)",
@@ -141,21 +157,5 @@
     "高橋李依",
     "Gemma 2.5: Google轻量级开放模型的指令微调升级",
     "VideoMamba: State Space Model for Efficient Video Recognition"
-  ],
-  "2026-05-07": [
-    "AMD Instinct MI455X: 旗舰AI GPU",
-    "Go x/net/http3 提案启动：原生HTTP/3支持",
-    "LILA: Learning Pixel-level Spatio-temporal Consistent Representations from Unlabeled Videos",
-    "DeerFlow: 字节跳动开源AI工作流编排框架",
-    "Armv9.5 架构扩展: 强化AI与安全特性",
-    "SEATrack: Simple, Efficient, and Adaptive Multimodal Tracker",
-    "Node.js 26.0.0 正式发布",
-    "ChatGPT广告主平台正式上线",
-    "种崎敦美 (Tanezaki Atsumi)",
-    "商汤日日新SenseNova U1: 统一理解与生成的开源多模态大模型",
-    "XGBoost: 可扩展的梯度提升系统",
-    "AMD Ryzen 9 9950X3D2: 首款双路3D V-Cache处理器",
-    "Audio Flamingo Next: NVIDIA开源长音频理解大模型",
-    "ERNIE 5.0: 2.4万亿参数原生全模态大模型"
   ]
 }
