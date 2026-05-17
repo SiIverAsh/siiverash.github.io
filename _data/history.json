@@ -1,4 +1,20 @@
 {
+  "2026-05-18": [
+    "AMD EPYC Venice (Zen 6)：业界首款2nm服务器CPU，256核巨兽",
+    "Qwen3-TTS：阿里云开源流式语音合成系列模型",
+    "Qwen3.6-27B：270亿参数稠密开源旗舰编码模型",
+    "JDK 25 正式发布：结构化并发与作用域值持续演进",
+    "VGGT: Visual Geometry Grounded Transformer (CVPR 2025 Best Paper)",
+    "上坂すみれ (Uesaka Sumire)",
+    "国家网信办发布《智能体规范应用与创新发展实施意见》",
+    "Intel Diamond Rapids Xeon 7：192核服务器CPU架构曝光",
+    "随机森林 (Random Forest)",
+    "NVIDIA GeForce RTX 5060 Ti：Blackwell中端主力正式登场",
+    "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free (NeurIPS 2025 Best Paper)",
+    "OpenAI GPT-5.5：2026年4月最强Agentic旗舰模型发布",
+    "中国移动5G-A超级上行商用网络速率突破1Gbps",
+    "deer-flow：字节跳动开源超长程SuperAgent框架"
+  ],
   "2026-05-17": [
     "进迭时空 K3：全球首款RVA23规范量产RISC-V AI CPU",
     "AMD Instinct MI350P：首款PCIe形态CDNA4加速卡，144GB HBM3E",
@@ -141,21 +157,5 @@
     "Qwen 4.0: 阿里通义千问系列升级，原生多模态MoE架构",
     "日本发布《AI利用与治理基本法》",
     "Gemma 3.2: Google轻量级开放模型的持续优化"
-  ],
-  "2026-05-08": [
-    "SiFive RISC-V Performance P670: 中端处理器核心",
-    "Mistral Large 2: 123B参数MoE开源模型",
-    "HTTP/3.0 RFC 9114正式成为互联网标准",
-    "欧盟《人工智能法案》正式生效，设立严格监管框架",
-    "Intel Core Ultra 9 285K: Arrow Lake-S桌面旗舰",
-    "Llama 3.1: Open Foundation and Fine-Tuned Chat Models",
-    "AMD Instinct MI400: 下一代CDNA架构加速器",
-    "Agentic RAG: LangChain集成自主检索增强生成框架",
-    "DBSCAN: 基于密度的空间聚类算法",
-    "Rust 1.80.0: 稳定版impl Trait关联类型与Lint改进",
-    "Stable Audio Open 2.0: 开源文本到音频生成模型",
-    "高橋李依",
-    "Gemma 2.5: Google轻量级开放模型的指令微调升级",
-    "VideoMamba: State Space Model for Efficient Video Recognition"
   ]
 }
