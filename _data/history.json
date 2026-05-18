@@ -1,4 +1,20 @@
 {
+  "2026-05-19": [
+    "Mojo 1.0 Beta：所有権システムと借用チェッカーを搭載",
+    "HRM-Text：Sapient Intelligenceの脳模倣型基盤モデル",
+    "Latent Speech-Text Transformer：ICLR 2026 Oral採択",
+    "中国、AIエージェントのガバナンス加速：新たな安全リスクに対応",
+    "browser-use/browser-use",
+    "vCXLGen：CXLブリッジ自動合成・検証フレームワーク（ASPLOS 2026 Best Paper）",
+    "Sapiens2：Meta 1K解像度ビジョン基盤モデル",
+    "LLMs Get Lost In Multi-Turn Conversation",
+    "DBSCAN（Density-Based Spatial Clustering of Applications with Noise）",
+    "Wi-Fi 8 (IEEE 802.11bn)：超高信頼性無線LAN規格",
+    "Intel Clearwater Forest「Xeon 6+」：288コア・Intel 18Aプロセス",
+    "花澤香菜（はなざわ かな）",
+    "Google Gemma 4：バイト単位で「最も高性能」なオープンモデル",
+    "AMD Instinct MI430X：CDNA5アーキテクチャのFP64特化型HPCアクセラレータ"
+  ],
   "2026-05-18": [
     "AMD EPYC Venice (Zen 6)：业界首款2nm服务器CPU，256核巨兽",
     "Qwen3-TTS：阿里云开源流式语音合成系列模型",
@@ -141,21 +157,5 @@
     "孤立森林 (Isolation Forest)",
     "AMD Ryzen 9 9960X: Zen 6桌面旗舰",
     "MERT v1.1: Acoustic Music Understanding with Hierarchical Transformers"
-  ],
-  "2026-05-09": [
-    "Intel Core Ultra 9 295K: Arrow Lake-S Refresh",
-    "伊藤静",
-    "Python 4.0 Alpha 1: 重大语法与性能改进",
-    "t-SNE: t-Distributed Stochastic Neighbor Embedding",
-    "InternVideo2.5: Scaling Video Foundation Models with Multi-Modal Understanding",
-    "RISC-V Vector Extension v1.4: 可伸缩向量处理标准",
-    "DreamBench++: A Unified Benchmark for Generative Models with Human Evaluation",
-    "vllm: 高效LLM推理与部署引擎",
-    "Stable Audio Open 2.5: 开源文本到音频与音乐生成",
-    "AMD Radeon RX 8070 XT: RDNA 5架构旗舰显卡",
-    "QUIC v3: 低时延传输协议的进一步标准化",
-    "Qwen 4.0: 阿里通义千问系列升级，原生多模态MoE架构",
-    "日本发布《AI利用与治理基本法》",
-    "Gemma 3.2: Google轻量级开放模型的持续优化"
   ]
 }
