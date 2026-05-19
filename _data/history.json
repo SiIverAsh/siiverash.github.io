@@ -1,4 +1,20 @@
 {
+  "2026-05-20": [
+    "mem0：AI Agent通用记忆层",
+    "Quantifying Fairness in LLMs Beyond Tokens: A Semantic and Statistical Perspective",
+    "GCC 16.1 正式发布",
+    "紫弦3.5D：新紫光三维近存计算架构",
+    "AMD EPYC 8005 'Sorano'：Zen 5c边缘服务器CPU",
+    "IMT-2030：ITU正式敲定6G最低技术性能需求",
+    "AnyRecon: Arbitrary-View 3D Reconstruction with Video Diffusion Model",
+    "智谱GLM-5.1：突破8小时自治工程任务的旗舰Agent模型",
+    "Intel Arc Pro B70：Big Battlemage专业GPU",
+    "摩尔线程发布'云边端'全栈智算矩阵",
+    "K-Means聚类 (K-Means Clustering)",
+    "石見舞菜香",
+    "OmniVoice：小米开源全语种零样本语音克隆TTS",
+    "Calibrating Beyond English: Language Diversity for Better Quantized Multilingual LLMs"
+  ],
   "2026-05-19": [
     "Mojo 1.0 Beta：所有権システムと借用チェッカーを搭載",
     "HRM-Text：Sapient Intelligenceの脳模倣型基盤モデル",
@@ -141,21 +157,5 @@
     "主成分分析 (PCA)",
     "英伟达取消2026全年消费级显卡发布",
     "Go 1.26 正式发布"
-  ],
-  "2026-05-10": [
-    "GLaM 2.0: Scaling Language Models with Sparse Mixture of Experts",
-    "Qwen 4.5: 阿里通义千问原生多模态MoE升级",
-    "中国发布《生成式人工智能训练数据管理规定》",
-    "OpenVoice v2: 开源多语言即时语音克隆",
-    "ARM Cortex-X5: 基于ARMv9.5-A的定制超大核",
-    "Mask3D: Mask Transformer for 3D Instance Segmentation",
-    "長谷川育美",
-    "NVIDIA RTX 5090 D: 中国特供版Blackwell架构显卡",
-    "Kotlin 3.0: 原生内存安全与协程深度优化",
-    "QUIC v4: 基于QUIC的超低时延传输协议标准化",
-    "Llama 4 Technical Report",
-    "孤立森林 (Isolation Forest)",
-    "AMD Ryzen 9 9960X: Zen 6桌面旗舰",
-    "MERT v1.1: Acoustic Music Understanding with Hierarchical Transformers"
   ]
 }
