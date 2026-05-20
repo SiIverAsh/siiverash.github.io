@@ -1,4 +1,20 @@
 {
+  "2026-05-21": [
+    "内省适配器：Anthropic让语言模型学会主动'自我坦白'",
+    "K-近邻算法 (k-Nearest Neighbors, KNN)",
+    "VoxCPM2：OpenBMB开源免分词器多语言流式TTS",
+    "NVIDIA Vera CPU：88核Arm Neoverse数据中心CPU",
+    "OpenManus：开源通用AI Agent框架",
+    "Rust 1.95.0发布：async闭包、Cargo包级目标稳定",
+    "中科院发布'香山'+'如意'RISC-V高性能开源芯片平台",
+    "R²Seg: Training-Free OOD Medical Tumor Segmentation via Anatomical Reasoning and Statistical Rejection",
+    "华为凌霄760：端到端Wi-Fi 7+芯片套片",
+    "NVIDIA GeForce RTX 5070：Blackwell中端主力GPU",
+    "马斯克诉OpenAI案败诉：法院裁定诉讼时效过期",
+    "MiniCPM-V 4.6：1.3B参数端侧多模态大模型",
+    "佐仓绫音",
+    "ViT³: 测试时训练解锁视觉Transformer线性复杂度 (CVPR 2026 Oral)"
+  ],
   "2026-05-20": [
     "mem0：AI Agent通用记忆层",
     "Quantifying Fairness in LLMs Beyond Tokens: A Semantic and Statistical Perspective",
@@ -141,21 +157,5 @@
     "OmniSight: Unified Video Understanding via Multi-Task Learning",
     "aider-chat/aider",
     "Mistral Large 3: 200B参数MoE模型"
-  ],
-  "2026-05-11": [
-    "Qwen3-TTS: 阿里开源文本转语音模型",
-    "TLS 1.4草案发布: 强化后量子安全与零往返握手",
-    "OpenAI发布GPT-5.5",
-    "腾讯混元3.0 MoE 295B",
-    "DeepEyes: Incentivizing 'Thinking with Images' via Reinforcement Learning",
-    "AMD Zen 6 Venice 2nm CPU曝光",
-    "Light Cones for Vision: Simple Causal Priors for Visual Hierarchy",
-    "Qwen3.6-27B: 270亿参数稠密开源模型",
-    "Tencent/Hy3-preview",
-    "阿里达摩院发布玄铁C950 RISC-V CPU",
-    "花澤香菜",
-    "主成分分析 (PCA)",
-    "英伟达取消2026全年消费级显卡发布",
-    "Go 1.26 正式发布"
   ]
 }
