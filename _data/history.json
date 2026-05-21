@@ -1,4 +1,20 @@
 {
+  "2026-05-22": [
+    "阿里平头哥真武M890 AI芯片发布：训推一体，性能3倍提升",
+    "Swift 6.2 正式发布：完全数据竞赛安全并发模型",
+    "Intel Nova Lake工程样品出货：传闻多核性能翻倍",
+    "Warp: 现代终端现代化者",
+    "水瀬いのり",
+    "Beyond Math: Stories as a Testbed for Memorization-Constrained Reasoning in LLMs",
+    "Spark3R: Asymmetric Token Reduction Makes Fast Feed-Forward 3D Reconstruction",
+    "Nokia与KDDI成功测试高能效6G基站技术",
+    "Intel Crescent Island：Xe3P架构160GB AI推理GPU",
+    "Google Gemini 3.5 系列发布：面向智能体的前沿智能与行动能力",
+    "Transformers are Inherently Succinct",
+    "支持向量机 (Support Vector Machine)",
+    "Stability AI Stable Audio 3.0",
+    "Arm AGI CPU：首款自研数据中心CPU，136核Armv9.7"
+  ],
   "2026-05-21": [
     "内省适配器：Anthropic让语言模型学会主动'自我坦白'",
     "K-近邻算法 (k-Nearest Neighbors, KNN)",
@@ -141,21 +157,5 @@
     "Qwen 5.0 开源模型",
     "美国发布《AI问责法案》",
     "llama.cpp 2026 升级版"
-  ],
-  "2026-05-12": [
-    "Vocalsynth 3: Real-time Neural Voice Conversion",
-    "AMD Radeon RX 9070 XT: Navi 48旗舰",
-    "Cairo 3.0: Formal Verification for Smart Contracts",
-    "欧盟正式实施《AI责任指令》",
-    "羊宮妃那",
-    "Intel Core Ultra 9 295K: Arrow Lake-S Refresh",
-    "Scaling Vision-Language Models with Sparse Mixture of Experts",
-    "Phoenix 2.0: Efficient Long-Context LLM",
-    "RISC-V Vector Extension v2.0 Finalized",
-    "Isolation Forest",
-    "Homa 2.0: Datacenter Transport Protocol",
-    "OmniSight: Unified Video Understanding via Multi-Task Learning",
-    "aider-chat/aider",
-    "Mistral Large 3: 200B参数MoE模型"
   ]
 }

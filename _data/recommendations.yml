@@ -1,141 +1,133 @@
 algorithm:
-- desc: KNN是一种基于实例的非参数分类与回归算法，通过计算待测样本与训练集中距离最近的k个样本的类别众数进行预测，核心依赖距离度量（如欧氏距离），模型简单易解释，广泛应用于推荐系统与模式识别。
+- desc: 经典监督学习模型，通过最大化间隔寻找最优决策边界，核技巧使其能处理非线性分类问题，广泛应用于文本分类、图像识别等。理论基础坚实，泛化能力强。
   tags:
-  - KNN
+  - SVM
+  - Machine Learning
   - Classification
-  - Lazy Learning
-  - Distance Metrics
-  title: K-近邻算法 (k-Nearest Neighbors, KNN)
+  - Kernel
+  title: 支持向量机 (Support Vector Machine)
 cv_recommend:
-  agency: 青二プロダクション（青二制作）
-  hometown: 北海道
-  intro: 佐仓绫音于1994年1月29日出生在日本北海道，目前隶属于青二制作。她拥有清亮透明的音色与极强的声音可塑性，既能呈现温柔细腻的少女质感，也能塑造坚强果敢的角色形象，同时具备扎实的歌唱力。除动画外，她广泛活跃于综艺旁白、电台主持及广告领域，表现出众的表现力与稳定的现场反应能力令其在业界获得高度评价，被视为新生代中最具综合实力的声优之一。其不断提升的演技深度与多元发展路线持续拓宽着声优职业的边界。
-  name: 佐仓绫音
-date: '2026-05-21'
+  agency: アクセルワン（Axel One）
+  hometown: 东京都
+  intro: 水瀬いのり是2010年代后期迅速崛起的女性声优。其声线清澈通透，兼具少女的甜美与成年的柔韧，能精准驾驭从活泼俏皮到深沉内敛的多种声域。在歌唱领域同样展现卓越才能，多次举办个人巡回演唱会，以稳健的现场唱功赢得广泛赞誉。作为声优歌手，她不仅通过声音塑造角色灵魂，更以全面表现持续拓展声优业界边界，被誉为同世代最受瞩目的全能型声优之一。
+  name: 水瀬いのり
+date: '2026-05-22'
 history:
-- event: 查尔斯·林德伯格完成首次单人不着陆飞越大西洋，抵达巴黎。
-  year: '1927'
-- event: 阿梅莉亚·埃尔哈特成为首位女性独自飞越大西洋。
-  year: '1932'
-- event: 米开朗基罗的雕塑《圣殇》在罗马被攻击者用锤子破坏。
-  year: '1972'
-- event: 印度前总理拉吉夫·甘地在泰米尔纳德邦遇刺身亡。
-  year: '1991'
-- event: 印度尼西亚总统苏哈托在抗议声中宣布辞职，结束32年统治。
-  year: '1998'
-- event: 黑山共和国举行独立公投，通过后脱离塞尔维亚与黑山国家联盟。
-  year: '2006'
+- event: 阿瑟·柯南·道尔出生，英国作家，夏洛克·福尔摩斯的创造者。
+  year: 1859年
+- event: 德国与意大利签署《钢铁条约》，形成轴心国军事同盟。
+  year: 1939年
+- event: 智利瓦尔迪维亚发生里氏9.5级大地震，为有记录以来最强地震。
+  year: 1960年
+- event: 锡兰改国名为斯里兰卡共和国，废除君主制。
+  year: 1972年
+- event: 阿拉伯也门共和国与也门民主人民共和国统一为也门共和国。
+  year: 1990年
+- event: 英国曼彻斯特竞技场发生自杀式爆炸袭击，造成22人死亡。
+  year: 2017年
 llm:
-- desc: 面壁智能于2026年5月开源MiniCPM-V 4.6，仅1.3B参数却支持视觉-语言多模态推理，运行仅需6GB显存，在OCR、图表理解等任务上接近数十倍参数量模型性能，专为移动端与边缘设备优化。
+- desc: 包括Gemini 3.5 Flash和Omni，支持原生工具调用、多步骤行动执行，上下文窗口达2M token，多模态能力全面领先。2026年5月Google
+    I/O发布。
   tags:
+  - LLM
+  - Gemini
+  - Google
+  - Agentic AI
   - Multimodal
-  - On-Device AI
-  - Open Source
-  - MiniCPM
-  - 1.3B
-  title: MiniCPM-V 4.6：1.3B参数端侧多模态大模型
+  title: Google Gemini 3.5 系列发布：面向智能体的前沿智能与行动能力
 new_project:
-- desc: OpenManus是一个模块化多智能体框架，支持任务规划、工具调用与记忆管理，旨在成为Manus的开放替代品，已获超20,000 GitHub Stars，活跃社区持续构建跨平台AI助手应用。
+- desc: 基于Rust的现代终端，集成AI辅助命令生成，现以MIT许可证开源。支持GPU加速渲染，块编辑、工作区等特性重新定义命令行体验。
   tags:
-  - AI Agent
+  - Terminal
+  - Rust
   - Open Source
-  - Multi-Agent
-  - Python
-  title: OpenManus：开源通用AI Agent框架
-  url: https://github.com/FoundationAgents/OpenManus
+  - AI
+  title: 'Warp: 现代终端现代化者'
+  url: https://github.com/warpdotdev/Warp
 paper:
-- desc: CVPR 2026 Oral论文，提出无需训练即可实现跨域医学肿瘤分割的方法，结合解剖学推理与统计拒绝机制，在多个OOD数据集上超越现有监督方法，显著提升模型对未知病灶的泛化能力。
+- desc: 从理论角度证明Transformer架构本身具有简洁性，为理解其表达能力提供新视角。ICLR 2026 Oral论文。
   tags:
-  - Medical Image Segmentation
-  - OOD Generalization
-  - Anatomical Reasoning
-  - CVPR 2026
-  title: 'R²Seg: Training-Free OOD Medical Tumor Segmentation via Anatomical Reasoning
-    and Statistical Rejection'
-  url: https://arxiv.org/abs/2511.12691
+  - Theory
+  - Transformer
+  - Expressivity
+  - ICLR 2026
+  title: Transformers are Inherently Succinct
+  url: https://arxiv.org/abs/2510.19315
 tech:
   Arch:
-  - desc: 中国科学院于2026年3月发布'香山'高性能RISC-V开源处理器，采用6发射乱序执行架构，支持RV64GC及向量扩展，搭配'如意'开源板卡，形成从处理器设计到硬件验证的完整国产自主芯片生态。
+  - desc: Arm首款自行设计的服务器CPU，136核，支持PCIe 6.0、CXL 3.1、DDR5-7200，专为AI智能体云工作负载优化。2026年3月发布。
     tags:
-    - RISC-V
-    - 开源芯片
-    - 香山
-    - 矢量指令
-    - 中国芯片
-    title: 中科院发布'香山'+'如意'RISC-V高性能开源芯片平台
+    - Arm
+    - CPU
+    - Data Center
+    - AI Agent
+    - PCIe 6.0
+    title: Arm AGI CPU：首款自研数据中心CPU，136核Armv9.7
   Audio:
-  - desc: OpenBMB发布VoxCPM2，绕过传统文本分词器，直接以音素+声学特征联合建模，支持中英日等多语种流式语音合成、音色设计与跨语言声音克隆，参数量约0.3B，采用流匹配解码实现低延迟实时推理，模型已完全开源。
+  - desc: 基于DiT架构的音频生成模型，开放权重，支持生成长达6分钟的高质量音乐，涵盖多种风格与乐器编排。2026年5月发布。
     tags:
-    - TTS
-    - Multilingual
-    - Tokenizer-Free
-    - Open Source
-    - Voice Cloning
-    title: VoxCPM2：OpenBMB开源免分词器多语言流式TTS
+    - Audio Generation
+    - DiT
+    - Open Model
+    - Stability AI
+    title: Stability AI Stable Audio 3.0
   CPU:
-  - desc: NVIDIA于2026年5月发布Vera CPU，集成88个Arm Neoverse V3核心，通过NVLink-C2C提供1.8 TB/s内存带宽，专为Agentic
-      AI工作负载设计，在推荐推理和大规模数据处理任务中能效比超越当前x86旗舰。
+  - desc: Nova Lake是英特尔下一代客户端CPU架构，工程样品已交付合作伙伴，据称多核性能可达当前代两倍，预计采用Intel 18A工艺。2026年5月报道。
     tags:
-    - NVIDIA Vera
-    - ARM Neoverse
-    - 88核
-    - NVLink-C2C
-    - Agentic AI
-    title: NVIDIA Vera CPU：88核Arm Neoverse数据中心CPU
+    - CPU
+    - Intel
+    - Nova Lake
+    - 18A
+    - Performance
+    title: Intel Nova Lake工程样品出货：传闻多核性能翻倍
   Computer Vision:
-  - desc: 清华大学与阿里巴巴联合提出ViT³，将测试时训练（Test-Time Training）引入视觉Transformer，通过每个patch独立的TTT通道将计算复杂度从O(N²)降至O(N)，在ImageNet-1K达到87.2%
-      top-1准确率，同时保持全局感受野，为视觉基础模型提供新的高效范式。
+  - desc: 提出非对称token缩减策略，大幅加速前馈式3D重建，在单张图像到3D任务中实现实时推理。CVPR 2026录用。
     tags:
-    - Vision Transformer
-    - Test-Time Training
-    - Linear Complexity
+    - 3D Reconstruction
+    - Token Reduction
     - CVPR 2026
-    title: 'ViT³: 测试时训练解锁视觉Transformer线性复杂度 (CVPR 2026 Oral)'
+    - Fast Inference
+    title: 'Spark3R: Asymmetric Token Reduction Makes Fast Feed-Forward 3D Reconstruction'
   GPU:
-  - desc: RTX 5070基于Blackwell架构，搭载6144 CUDA核心、12GB GDDR7显存（600 GB/s带宽），核心频率2.51 GHz，支持DLSS
-      4多帧生成与光线重建，TDP 250W，针对2K高帧率游戏与本地AI推理提供显著加速。
+  - desc: 专为AI推理设计，基于Xe3P架构，支持LPDDR5X-9600，带宽1.5TB/s，最大160GB内存，OAM形态。2025年10月公布，2026年上市。
     tags:
-    - Blackwell
-    - RTX 5070
-    - GDDR7
-    - DLSS 4
     - GPU
-    title: NVIDIA GeForce RTX 5070：Blackwell中端主力GPU
+    - Intel
+    - Xe3P
+    - AI Inference
+    - LPDDR5X
+    title: Intel Crescent Island：Xe3P架构160GB AI推理GPU
   Lang:
-  - desc: Rust 1.95.0于2026年4月16日发布，稳定化async闭包生命周期绑定、#[diagnostic]属性优化编译错误消息，Cargo支持per-package-target特性，并进一步提升Trait
-      Solver性能与增量编译速度。
+  - desc: Swift 6.2引入编译时所有权与借用检查，实现无数据竞争并发，同时改进C++互操作与Foundation重写。2026年4月发布。
     tags:
-    - Rust
-    - Programming Language
-    - Async
-    - Compiler
-    - Cargo
-    title: Rust 1.95.0发布：async闭包、Cargo包级目标稳定
+    - Swift
+    - Concurrency
+    - Memory Safety
+    - Language
+    title: Swift 6.2 正式发布：完全数据竞赛安全并发模型
   NLP:
-  - desc: Anthropic于2026年5月推出Introspection Adapters，通过在LLM中间层插入轻量级探测适配器，引导模型在生成过程中主动报告内部状态、置信度及潜在偏见，无需外部监督即可降低幻觉与有害输出，在医疗对话和代码生成任务中已验证有效性。
+  - desc: 将故事作为测试平台，评估大语言模型在记忆约束下的推理能力，揭示LLM在复杂叙事中的记忆与推理权衡。EACL 2026长文。
     tags:
-    - AI Safety
-    - Interpretability
-    - Language Models
-    - Anthropic
-    - Adapters
-    title: 内省适配器：Anthropic让语言模型学会主动'自我坦白'
+    - LLM
+    - Memorization
+    - Reasoning
+    - EACL 2026
+    title: 'Beyond Math: Stories as a Testbed for Memorization-Constrained Reasoning
+      in LLMs'
   Net:
-  - desc: 华为海思推出凌霄760系列Wi-Fi 7+芯片，支持MLO多链路聚合、4096-QAM调制及Multi-RU调度，峰值速率12.6 Gbps，时延低至2
-      ms，配合OMU智能天线调度算法，实现全屋超千兆无缝覆盖。
+  - desc: 采用新型射频前端与智能功率管理，在6G候选频段实现基站能耗降低50%，为6G绿色部署奠定基础。2026年5月公布测试结果。
     tags:
-    - Wi-Fi 7+
-    - MLO
-    - 4096-QAM
-    - HiSilicon
-    - Networking
-    title: 华为凌霄760：端到端Wi-Fi 7+芯片套片
+    - 6G
+    - Energy Efficiency
+    - Nokia
+    - KDDI
+    title: Nokia与KDDI成功测试高能效6G基站技术
   News:
-  - desc: 2026年5月19日，美国联邦法院驳回马斯克对OpenAI的诉讼，认定其指控已超过法定诉讼时效。该案核心争议为OpenAI从非营利转向营利性公司是否违反初始使命，判决为AI行业治理与开源伦理划下重要判例。
+  - desc: 真武M890是阿里自研训推一体AI芯片，支持128卡超节点互联，推理性能较上代提升3倍，已部署超56万片。2026年5月发布。
     tags:
-    - Elon Musk
-    - OpenAI
-    - Lawsuit
-    - AI Governance
-    - Legal
-    title: 马斯克诉OpenAI案败诉：法院裁定诉讼时效过期
+    - AI Chip
+    - Alibaba
+    - T-Head
+    - M890
+    - Inference
+    title: 阿里平头哥真武M890 AI芯片发布：训推一体，性能3倍提升
