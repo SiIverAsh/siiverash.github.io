@@ -1,133 +1,151 @@
 algorithm:
-- desc: 经典监督学习模型，通过最大化间隔寻找最优决策边界，核技巧使其能处理非线性分类问题，广泛应用于文本分类、图像识别等。理论基础坚实，泛化能力强。
+- desc: 随机森林是Breiman于2001年提出的集成学习算法，通过构建多棵决策树并汇总投票结果进行预测。核心机制包含两个随机性来源：Bootstrap自助采样（有放回地从训练集中抽取子集）与随机特征子空间选择（每棵树节点分裂时仅考虑随机选取的特征子集）。这种双重随机化使得随机森林具有出色的抗过拟合能力与高维数据适应性，可同时处理分类与回归任务。算法天然提供特征重要性评估，且对缺失值与异常值鲁棒。在大模型时代，随机森林仍广泛用于表格数据基线建模、特征工程与可解释性分析，是每位数据科学从业者的必备工具。
   tags:
-  - SVM
-  - Machine Learning
-  - Classification
-  - Kernel
-  title: 支持向量机 (Support Vector Machine)
+  - Ensemble Learning
+  - Decision Tree
+  - Bagging
+  - Feature Importance
+  - Classic ML
+  title: 随机森林 (Random Forest)
 cv_recommend:
-  agency: アクセルワン（Axel One）
-  hometown: 东京都
-  intro: 水瀬いのり是2010年代后期迅速崛起的女性声优。其声线清澈通透，兼具少女的甜美与成年的柔韧，能精准驾驭从活泼俏皮到深沉内敛的多种声域。在歌唱领域同样展现卓越才能，多次举办个人巡回演唱会，以稳健的现场唱功赢得广泛赞誉。作为声优歌手，她不仅通过声音塑造角色灵魂，更以全面表现持续拓展声优业界边界，被誉为同世代最受瞩目的全能型声优之一。
-  name: 水瀬いのり
-date: '2026-05-22'
+  agency: アイムエンタープライズ (I'm Enterprise)
+  hometown: 東京都
+  intro: 早見沙織是日本平成至令和时代最具代表性的女性声优之一。自幼接受古典音乐训练，拥有罕见的绝对音感与细腻的声线控制能力，音域宽广且兼具透明感与力量感。2007年出道后迅速崭露头角，凭借清澈而富有情感表现力的嗓音在业内赢得极高评价。2026年《声優名鑑》收录女性声优达1135名，早見沙織蝉联中高生最喜爱女性声优排行榜榜首，足见其跨越世代的影响力。她还以歌手身份活跃，亲自担任大量作品词曲创作，展现了作为全能艺术家的深厚素养。
+  name: 早見沙織
+date: '2026-05-23'
 history:
-- event: 阿瑟·柯南·道尔出生，英国作家，夏洛克·福尔摩斯的创造者。
-  year: 1859年
-- event: 德国与意大利签署《钢铁条约》，形成轴心国军事同盟。
-  year: 1939年
-- event: 智利瓦尔迪维亚发生里氏9.5级大地震，为有记录以来最强地震。
-  year: 1960年
-- event: 锡兰改国名为斯里兰卡共和国，废除君主制。
-  year: 1972年
-- event: 阿拉伯也门共和国与也门民主人民共和国统一为也门共和国。
-  year: 1990年
-- event: 英国曼彻斯特竞技场发生自杀式爆炸袭击，造成22人死亡。
-  year: 2017年
+- event: 圣女贞德在法国贡比涅被勃艮第军队俘获，后被移交英军，最终以异端罪名被处以火刑
+  year: 1430年
+- event: 布拉格抛窗事件：波希米亚新教徒将神圣罗马帝国官员抛出窗外，成为三十年战争导火索
+  year: 1618年
+- event: 意大利向奥匈帝国宣战，正式加入协约国一方参与第一次世界大战
+  year: 1915年
+- event: 美国传奇银行劫匪邦尼与克莱德在路易斯安那州遭警方伏击，身中百余弹身亡
+  year: 1934年
+- event: 德意志联邦共和国基本法（波恩宪法）正式颁布，西德从此成为一个主权国家
+  year: 1949年
+- event: Sun Microsystems在SunWorld大会上正式发布Java编程语言，提出'一次编写，到处运行'理念
+  year: 1995年
 llm:
-- desc: 包括Gemini 3.5 Flash和Omni，支持原生工具调用、多步骤行动执行，上下文窗口达2M token，多模态能力全面领先。2026年5月Google
-    I/O发布。
+- desc: 2026年5月，Cohere开源其最强模型Command A+，采用218B参数混合专家(MoE)架构，激活参数约25B，可在2张H100 GPU上运行。该模型以完整Apache
+    2.0许可证发布，首创无损FP8量化技术（量化前后基准测试零退化），并内置原生引用生成能力——模型输出可自动附带来源句子级引用。上下文窗口128K，支持多语言，在MMLU、HumanEval等基准上对标GPT-4o级别性能，是目前参数效率最高的全开源旗舰模型之一。
   tags:
-  - LLM
-  - Gemini
-  - Google
-  - Agentic AI
-  - Multimodal
-  title: Google Gemini 3.5 系列发布：面向智能体的前沿智能与行动能力
+  - Cohere
+  - Command A+
+  - MoE
+  - Apache 2.0
+  - Open Source LLM
+  title: Cohere Command A+：218B MoE全开源Apache 2.0旗舰模型，支持无损量化与原生引用
 new_project:
-- desc: 基于Rust的现代终端，集成AI辅助命令生成，现以MIT许可证开源。支持GPU加速渲染，块编辑、工作区等特性重新定义命令行体验。
+- desc: Nanobot 是香港大学数据科学实验室(HKUDS)于2026年5月发布的开源个人AI Agent框架，核心代码仅约4000行，却实现了完整的Agent能力——包括工具调用、上下文记忆管理、多轮对话规划与浏览器自动化。框架采用极简模块化设计，支持接入任意LLM后端（OpenAI/Anthropic/本地模型），通过YAML配置文件即可定义自定义工具与工作流。上线一周内GitHub
+    Star突破8000，成为轻量Agent框架的标杆项目，特别适合学习Agent原理与快速原型开发。
   tags:
-  - Terminal
-  - Rust
+  - AI Agent
   - Open Source
-  - AI
-  title: 'Warp: 现代终端现代化者'
-  url: https://github.com/warpdotdev/Warp
+  - Lightweight
+  - LLM
+  - Automation
+  title: Nanobot：HKUDS开源的超轻量个人AI Agent框架（~4K行代码）
+  url: https://github.com/HKUDS/Nanobot
 paper:
-- desc: 从理论角度证明Transformer架构本身具有简洁性，为理解其表达能力提供新视角。ICLR 2026 Oral论文。
+- desc: 顶会论文推荐：该工作提出了一种无需外部监督的视觉推理自改进框架。通过在视觉语言模型(VLM)内部构建对比样本对（正确推理链 vs. 扰动推理链），利用对比学习信号迭代优化模型的视觉推理能力。在ScienceQA、MMMU等7个视觉推理基准上，方法使基线VLM平均提升8.3个百分点，且仅需模型自身生成数据进行训练。ICLR
+    2026 Oral论文，发表于2026年5月。
   tags:
-  - Theory
-  - Transformer
-  - Expressivity
-  - ICLR 2026
-  title: Transformers are Inherently Succinct
-  url: https://arxiv.org/abs/2510.19315
+  - ICLR 2026 Oral
+  - Visual Reasoning
+  - VLM
+  - Self-Improving
+  - Contrastive Learning
+  title: 'Through the Lens of Contrast: Self-Improving Visual Reasoning in VLMs (ICLR
+    2026 Oral)'
+  url: https://openreview.net/forum?id=ZymCPON45y
 tech:
   Arch:
-  - desc: Arm首款自行设计的服务器CPU，136核，支持PCIe 6.0、CXL 3.1、DDR5-7200，专为AI智能体云工作负载优化。2026年3月发布。
+  - desc: 2026年3月，阿里达摩院正式发布玄铁C950，基于RISC-V RV64GCB架构，采用15级超标量乱序流水线设计，最高支持16核配置，主频达2.5GHz。芯片采用7nm工艺制造，SPECint2006得分突破9.5/GHz，刷新RISC-V性能世界纪录。C950集成DDR5/LPDDR5内存控制器与PCIe
+      5.0接口，支持服务器级RAS特性与可信执行环境，目标市场为云原生数据中心与AI推理加速，标志着RISC-V正式进入高性能服务器赛道。
     tags:
-    - Arm
-    - CPU
-    - Data Center
-    - AI Agent
-    - PCIe 6.0
-    title: Arm AGI CPU：首款自研数据中心CPU，136核Armv9.7
+    - RISC-V
+    - Server CPU
+    - Alibaba DAMO
+    - XuanTie
+    - 7nm
+    title: 玄铁C950：阿里达摩院发布全球性能最高RISC-V服务器CPU
   Audio:
-  - desc: 基于DiT架构的音频生成模型，开放权重，支持生成长达6分钟的高质量音乐，涵盖多种风格与乐器编排。2026年5月发布。
+  - desc: LongCat-AudioDiT 是美团 LongCat 团队于2026年4月开源的高保真文本到语音模型，基于 AudioDiT（音频扩散Transformer）架构，直接在波形潜空间建模，参数规模达3.5B。零样本条件下仅需3秒参考音频即可实现高自然度音色克隆，支持中英双语。相较传统梅尔频谱方案，端到端波形生成避免了声码器级联失真，MOS评分在中文测试集上达到4.52，逼近真人录音水平。
     tags:
-    - Audio Generation
-    - DiT
-    - Open Model
-    - Stability AI
-    title: Stability AI Stable Audio 3.0
+    - Zero-Shot TTS
+    - Diffusion Transformer
+    - Voice Cloning
+    - Open Source
+    - Meituan
+    title: LongCat-AudioDiT：美团开源波形潜空间扩散TTS，突破零样本音色克隆上限
   CPU:
-  - desc: Nova Lake是英特尔下一代客户端CPU架构，工程样品已交付合作伙伴，据称多核性能可达当前代两倍，预计采用Intel 18A工艺。2026年5月报道。
+  - desc: 2026年4月22日，AMD发布Ryzen 9 9950X3D2 Dual Edition，基于Zen 5架构，16核32线程，在两个CCD上各搭载一枚64MB
+      3D V-Cache，L3缓存总量高达192MB（32MB片上+160MB堆叠）。最高Boost频率维持5.7GHz，TDP 170W，兼容AM5平台。双3D
+      V-Cache设计使得缓存敏感型工作负载（编译、仿真、大型游戏）性能较9950X3D提升15%-25%，在SPEC CPU 2017整数吞吐量测试中刷新桌面处理器纪录，成为开发者与创作者的最强生产力平台。
     tags:
-    - CPU
-    - Intel
-    - Nova Lake
-    - 18A
-    - Performance
-    title: Intel Nova Lake工程样品出货：传闻多核性能翻倍
+    - AMD
+    - Zen 5
+    - 3D V-Cache
+    - Desktop CPU
+    - AM5
+    title: AMD Ryzen 9 9950X3D2 Dual Edition：业界首款双3D V-Cache桌面处理器
   Computer Vision:
-  - desc: 提出非对称token缩减策略，大幅加速前馈式3D重建，在单张图像到3D任务中实现实时推理。CVPR 2026录用。
+  - desc: VGGT-Ω 在原始 VGGT 基础上引入全向三维重建能力，通过单一前馈网络直接从多视角图像预测相机参数、深度图与三维点云，无需迭代优化。模型基于大规模合成数据训练，支持任意数量输入视图，推理速度达到毫秒级。架构核心为视觉几何基座Transformer，将几何先验嵌入自注意力机制，在多个三维重建基准上刷新SOTA，标志着前馈式3D视觉的重要里程碑。
     tags:
+    - CVPR 2026 Oral
     - 3D Reconstruction
-    - Token Reduction
-    - CVPR 2026
-    - Fast Inference
-    title: 'Spark3R: Asymmetric Token Reduction Makes Fast Feed-Forward 3D Reconstruction'
+    - Visual Geometry
+    - Transformer
+    - Facebook Research
+    title: VGGT-Ω：Facebook Research 视觉几何基座Transformer (CVPR 2026 Oral)
   GPU:
-  - desc: 专为AI推理设计，基于Xe3P架构，支持LPDDR5X-9600，带宽1.5TB/s，最大160GB内存，OAM形态。2025年10月公布，2026年上市。
+  - desc: RTX 5060 Ti 基于NVIDIA Blackwell架构GB206核心，集成4608个CUDA核心，配备16GB GDDR7显存（128-bit位宽，带宽448GB/s），Boost频率达2.57GHz。支持DLSS
+      4多帧生成与神经网络渲染，整卡TGP为180W。相比前代RTX 4060 Ti，光栅化性能提升约35%，光追性能提升50%以上，起售价$399，于2026年4月正式发售。作为Blackwell家族最具性价比的型号，成为1080p/1440p游戏与入门级AI工作负载的新标杆。
     tags:
-    - GPU
-    - Intel
-    - Xe3P
-    - AI Inference
-    - LPDDR5X
-    title: Intel Crescent Island：Xe3P架构160GB AI推理GPU
+    - NVIDIA
+    - Blackwell
+    - RTX 5060 Ti
+    - GDDR7
+    - DLSS 4
+    title: NVIDIA GeForce RTX 5060 Ti：Blackwell中端主力，GDDR7加持16GB显存
   Lang:
-  - desc: Swift 6.2引入编译时所有权与借用检查，实现无数据竞争并发，同时改进C++互操作与Foundation重写。2026年4月发布。
+  - desc: TypeScript 5.9 于2026年5月正式发布，核心引入延迟导入（Deferred Imports）机制——通过新的 import defer
+      语法实现模块的按需延迟加载，编译为静态 import 但在运行时推迟执行，大幅优化大型项目的冷启动性能。同时增强了控制流类型收窄能力，支持对 switch
+      语句中 discriminated union 的穷举检查，并在模板字面量类型推断中引入启发式算法，编译速度较5.8版本提升约15%。
     tags:
-    - Swift
-    - Concurrency
-    - Memory Safety
-    - Language
-    title: Swift 6.2 正式发布：完全数据竞赛安全并发模型
+    - TypeScript
+    - Deferred Imports
+    - Type Inference
+    - JavaScript
+    - Programming Language
+    title: TypeScript 5.9 正式发布：延迟导入机制与增强类型推断
   NLP:
-  - desc: 将故事作为测试平台，评估大语言模型在记忆约束下的推理能力，揭示LLM在复杂叙事中的记忆与推理权衡。EACL 2026长文。
+  - desc: 该工作系统研究了稀疏自编码器(SAE)激活引导技术在大语言模型跨语言三段论推理中的可迁移性。实验覆盖英语、中文、阿拉伯语等12种语言，发现激活引导在多语言场景下存在显著的性能不对称性：高资源语言的引导向量可部分迁移至低资源语言，但反向迁移效果骤降。论文揭示了LLM内部推理表征的语言特异性，为多语言模型安全对齐提供了重要方法论。
     tags:
-    - LLM
-    - Memorization
-    - Reasoning
     - EACL 2026
-    title: 'Beyond Math: Stories as a Testbed for Memorization-Constrained Reasoning
-      in LLMs'
+    - Activation Steering
+    - Multilingual NLP
+    - Syllogistic Reasoning
+    - LLM Safety
+    title: 跨语言激活引导：探究LLM三段论推理的语言泛化能力 (EACL 2026)
   Net:
-  - desc: 采用新型射频前端与智能功率管理，在6G候选频段实现基站能耗降低50%，为6G绿色部署奠定基础。2026年5月公布测试结果。
+  - desc: 2026年5月，OpenAI 联合 AMD 与 Microsoft 提出 MRC（Multi-Rail Communication）超算网络架构，基于
+      SRv6 源路由与多轨以太网融合，在保持标准以太网兼容性的前提下实现GPU间流量的冗余容错与动态负载均衡。实测在4096 GPU集群上将训练通信尾延迟降低72%，网络有效带宽利用率从传统RoCE的68%提升至94%。MRC已被IEEE采纳为超算互联网标准草案，标志着AI基础设施网络从专用互连走向开放以太网生态的关键转折。
     tags:
-    - 6G
-    - Energy Efficiency
-    - Nokia
-    - KDDI
-    title: Nokia与KDDI成功测试高能效6G基站技术
+    - AI Supercomputing
+    - Ethernet
+    - SRv6
+    - OpenAI
+    - GPU Clustering
+    title: OpenAI 联合 AMD/Microsoft 发布 MRC：面向万卡级AI超算的弹性以太网架构
   News:
-  - desc: 真武M890是阿里自研训推一体AI芯片，支持128卡超节点互联，推理性能较上代提升3倍，已部署超56万片。2026年5月发布。
+  - desc: 2026年5月20日Google I/O大会核心发布Gemini Spark——一个全天候运行的主动式AI个人助理，能够理解用户在手机上的实时上下文（屏幕内容、位置、日历），无需持续手动唤醒即可主动提供建议与执行任务。技术后台为Gemini
+      3.5 Flash模型，延迟降至200ms以内，支持本地端侧推理与云增强协同。同时Google宣布Project Antigravity 2.0多模态交互框架，使AI可同时处理视觉、语音与触控输入。此举标志着Google从被动助手全面转向主动智能体战略，直接对标OpenAI与Apple的Agent生态布局。
     tags:
-    - AI Chip
-    - Alibaba
-    - T-Head
-    - M890
-    - Inference
-    title: 阿里平头哥真武M890 AI芯片发布：训推一体，性能3倍提升
+    - Google I/O 2026
+    - Gemini Spark
+    - AI Agent
+    - Multimodal
+    - On-Device AI
+    title: Google I/O 2026：Gemini Spark 发布，全天候AI智能体时代开启
