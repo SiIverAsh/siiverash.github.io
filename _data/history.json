@@ -1,4 +1,20 @@
 {
+  "2026-05-24": [
+    "SEATrack：高效自适应多模态目标跟踪器（CVPR 2026 Oral）",
+    "NVIDIA Rubin CPX：面向超长上下文推理的专用AI芯片",
+    "Python 3.14.5 发布：解释器性能持续优化",
+    "硅谷深陷AI算力荒：H200一夜涨价30%，H100全面缺货",
+    "台积电SoIC 3D封装路线图：2029年迈向4.5μm互连间距",
+    "石川由依",
+    "OpenJarvis：斯坦福HazyResearch开源的本地AI智能体框架",
+    "ProPhy: Progressive Physical Alignment for Dynamic World Simulation (CVPR 2026 Oral)",
+    "KnowRL：通过最小充分知识引导的强化学习增强LLM推理（EACL 2026）",
+    "AMD EPYC Venice：台积电2nm工艺，256核Zen 6确认量产",
+    "Orpheus-TTS：开源情感语音合成，单卡可跑流式推理",
+    "百度文心ERNIE 5.1正式发布：预训练成本仅为业界6%",
+    "梯度提升决策树（GBDT）",
+    "中国工信部批复6G技术试验频率：率先开放6GHz频段"
+  ],
   "2026-05-23": [
     "TypeScript 5.9 正式发布：延迟导入机制与增强类型推断",
     "Google I/O 2026：Gemini Spark 发布，全天候AI智能体时代开启",
@@ -141,21 +157,5 @@
     "MiniCPM-V 4.6: 面壁智能1.3B端侧多模态模型开源",
     "Learning to See Before Seeing: LLM纯文本预训练涌现视觉先验",
     "github/spec-kit: GitHub官方Spec-Driven开发工具套件"
-  ],
-  "2026-05-14": [
-    "MERLIN: Multi-Stage Curriculum Alignment for Multilingual Encoder-LLM Integration in Cross-Lingual Reasoning",
-    "Ruby 4.0.4 — ZJIT 即时编译器与 Ruby Box 隔离机制持续优化",
-    "K-Means 聚类算法",
-    "UALM: Unified Audio Language Model for Understanding, Generation and Reasoning",
-    "GLM-5：智谱745B MoE开源模型，从Vibe Coding到Agentic Engineering",
-    "AMD Ryzen 9 9950X3D2 Dual Edition：双3D V-Cache旗舰",
-    "FUSER: Feed-Forward Multiview 3D Registration Transformer with SE(3)^N Diffusion Refinement",
-    "Gen3R: 3D Scene Generation Meets Feed-Forward Reconstruction",
-    "ARM AGI CPU：136核Agentic AI数据中心芯片",
-    "Net-P4ct: Enhanced WAN Bandwidth Fair Sharing Using P4 Programmable Switches",
-    "石川由依",
-    "Intel Arc Pro B70：Battlemage BMG-G31 32GB专业卡",
-    "欧盟通过AI法案简化修正案：高风险分类门槛放宽，nudification应用禁令写入",
-    "Warp: Agentic Development Terminal（已开源）"
   ]
 }

@@ -1,151 +1,133 @@
 algorithm:
-- desc: 随机森林是Breiman于2001年提出的集成学习算法，通过构建多棵决策树并汇总投票结果进行预测。核心机制包含两个随机性来源：Bootstrap自助采样（有放回地从训练集中抽取子集）与随机特征子空间选择（每棵树节点分裂时仅考虑随机选取的特征子集）。这种双重随机化使得随机森林具有出色的抗过拟合能力与高维数据适应性，可同时处理分类与回归任务。算法天然提供特征重要性评估，且对缺失值与异常值鲁棒。在大模型时代，随机森林仍广泛用于表格数据基线建模、特征工程与可解释性分析，是每位数据科学从业者的必备工具。
+- desc: 梯度提升决策树（Gradient Boosting Decision Tree）是一种基于Boosting思想的集成学习算法，由Friedman于2001年正式提出。其核心原理是通过迭代地训练决策树来拟合前一轮的残差（负梯度方向），将多个弱学习器加权组合为强学习器。GBDT使用损失函数的负梯度作为残差的近似，支持回归、分类和排序等多种任务。该算法在Kaggle竞赛与工业界广泛应用，是XGBoost、LightGBM、CatBoost等现代梯度提升框架的理论基础。
   tags:
-  - Ensemble Learning
-  - Decision Tree
-  - Bagging
-  - Feature Importance
-  - Classic ML
-  title: 随机森林 (Random Forest)
+  - 集成学习
+  - Boosting
+  - 决策树
+  - 梯度下降
+  title: 梯度提升决策树（GBDT）
 cv_recommend:
-  agency: アイムエンタープライズ (I'm Enterprise)
-  hometown: 東京都
-  intro: 早見沙織是日本平成至令和时代最具代表性的女性声优之一。自幼接受古典音乐训练，拥有罕见的绝对音感与细腻的声线控制能力，音域宽广且兼具透明感与力量感。2007年出道后迅速崭露头角，凭借清澈而富有情感表现力的嗓音在业内赢得极高评价。2026年《声優名鑑》收录女性声优达1135名，早見沙織蝉联中高生最喜爱女性声优排行榜榜首，足见其跨越世代的影响力。她还以歌手身份活跃，亲自担任大量作品词曲创作，展现了作为全能艺术家的深厚素养。
-  name: 早見沙織
-date: '2026-05-23'
+  agency: mitt management
+  hometown: 日本兵庫縣
+  intro: 石川由依拥有清澈透明且极富穿透力的嗓音特质，尤其擅长演绎内心情感丰富的角色，其细腻的呼吸控制与精准的情感层次递进在同代声优中独树一帜。早期以舞台剧演员出道，积累了深厚的表演功底，转型声优后将舞台经验融入声音表演，能够在不依赖夸张语调变化的前提下传达角色的深层情感波动。近年来其在叙事驱动型作品中的低语与独白表现屡获好评，被誉为「用声音描绘内心风景」的实力派声优。其职业态度严谨，始终以对角色的深入理解作为表演出发点。
+  name: 石川由依
+date: '2026-05-24'
 history:
-- event: 圣女贞德在法国贡比涅被勃艮第军队俘获，后被移交英军，最终以异端罪名被处以火刑
-  year: 1430年
-- event: 布拉格抛窗事件：波希米亚新教徒将神圣罗马帝国官员抛出窗外，成为三十年战争导火索
-  year: 1618年
-- event: 意大利向奥匈帝国宣战，正式加入协约国一方参与第一次世界大战
-  year: 1915年
-- event: 美国传奇银行劫匪邦尼与克莱德在路易斯安那州遭警方伏击，身中百余弹身亡
-  year: 1934年
-- event: 德意志联邦共和国基本法（波恩宪法）正式颁布，西德从此成为一个主权国家
-  year: 1949年
-- event: Sun Microsystems在SunWorld大会上正式发布Java编程语言，提出'一次编写，到处运行'理念
-  year: 1995年
+- event: 萨缪尔·莫尔斯从华盛顿国会大厦向巴尔的摩发出人类历史上首封电报，内容为「What hath God wrought」（上帝创造了何等奇迹），标志着电信时代的开端。
+  year: '1844'
+- event: 布鲁克林大桥在历时14年建造后正式通车，成为当时世界上最长的悬索桥，连接曼哈顿与布鲁克林，是19世纪工程学的巅峰之作。
+  year: '1883'
+- event: 英国女飞行员艾米·约翰逊完成从英格兰至澳大利亚的独自飞行，历时19天，成为首位实现此壮举的女性，获得大英帝国勋章。
+  year: '1930'
+- event: MIT的Wesley Clark开始研制LINC（Laboratory INstrument Computer）计算机，该机器被广泛认为是世界上第一台个人计算机的先驱。
+  year: '1961'
+- event: 美国宇航员斯科特·卡彭特乘坐「极光7号」（Mercury-Atlas 7）飞船完成地球轨道飞行，成为第二位完成轨道飞行的美国宇航员。
+  year: '1962'
+- event: 以色列国防军完成从南黎巴嫩安全区的全面撤军，结束了长达22年的军事占领，联合国随后确认了以色列的完全撤离。
+  year: '2000'
 llm:
-- desc: 2026年5月，Cohere开源其最强模型Command A+，采用218B参数混合专家(MoE)架构，激活参数约25B，可在2张H100 GPU上运行。该模型以完整Apache
-    2.0许可证发布，首创无损FP8量化技术（量化前后基准测试零退化），并内置原生引用生成能力——模型输出可自动附带来源句子级引用。上下文窗口128K，支持多语言，在MMLU、HumanEval等基准上对标GPT-4o级别性能，是目前参数效率最高的全开源旗舰模型之一。
+- desc: 百度于2026年5月8日发布文心大模型5.1版本，在推理能力、搜索增强与指令遵循等多个维度实现突破。ERNIE 5.1登顶LMArena搜索能力榜国内第一，其突出亮点在于预训练成本仅为业界同规模模型的6%，受益于百度自研的飞桨框架4.0与昆仑芯集群的高效协同。模型在Agent任务执行、长文档理解与多轮对话方面展现出色能力，支持128K上下文窗口。
   tags:
-  - Cohere
-  - Command A+
-  - MoE
-  - Apache 2.0
-  - Open Source LLM
-  title: Cohere Command A+：218B MoE全开源Apache 2.0旗舰模型，支持无损量化与原生引用
+  - ERNIE 5.1
+  - 百度文心
+  - 大语言模型
+  - 高效训练
+  title: 百度文心ERNIE 5.1正式发布：预训练成本仅为业界6%
 new_project:
-- desc: Nanobot 是香港大学数据科学实验室(HKUDS)于2026年5月发布的开源个人AI Agent框架，核心代码仅约4000行，却实现了完整的Agent能力——包括工具调用、上下文记忆管理、多轮对话规划与浏览器自动化。框架采用极简模块化设计，支持接入任意LLM后端（OpenAI/Anthropic/本地模型），通过YAML配置文件即可定义自定义工具与工作流。上线一周内GitHub
-    Star突破8000，成为轻量Agent框架的标杆项目，特别适合学习Agent原理与快速原型开发。
+- desc: OpenJarvis是斯坦福大学HazyResearch实验室于2026年5月发布的个人AI智能体框架，主打在个人设备上本地运行AI助手。框架支持多种开源LLM后端（包括Llama、Qwen等），提供文件管理、日程安排、网页搜索、代码执行等工具链。其特色在于采用模块化Agent架构，用户可通过YAML配置文件自定义智能体行为，所有数据处理均在本地完成，保障隐私安全。
   tags:
   - AI Agent
-  - Open Source
-  - Lightweight
-  - LLM
-  - Automation
-  title: Nanobot：HKUDS开源的超轻量个人AI Agent框架（~4K行代码）
-  url: https://github.com/HKUDS/Nanobot
+  - 开源框架
+  - 本地AI
+  - 隐私计算
+  title: OpenJarvis：斯坦福HazyResearch开源的本地AI智能体框架
+  url: https://github.com/HazyResearch/OpenJarvis
 paper:
-- desc: 顶会论文推荐：该工作提出了一种无需外部监督的视觉推理自改进框架。通过在视觉语言模型(VLM)内部构建对比样本对（正确推理链 vs. 扰动推理链），利用对比学习信号迭代优化模型的视觉推理能力。在ScienceQA、MMMU等7个视觉推理基准上，方法使基线VLM平均提升8.3个百分点，且仅需模型自身生成数据进行训练。ICLR
-    2026 Oral论文，发表于2026年5月。
+- desc: 该工作提出了渐进式物理对齐（Progressive Physical Alignment）框架，用于动态世界模拟。核心思想是通过逐步优化物理参数（质量、摩擦、弹性等），使模拟环境中的物体运动与真实物理观测对齐。方法采用可微分物理模拟器与神经网络联合优化，在多个动态场景基准上取得最佳物理一致性。该工作为从视频中学习物理世界模型提供了新的范式。
   tags:
-  - ICLR 2026 Oral
-  - Visual Reasoning
-  - VLM
-  - Self-Improving
-  - Contrastive Learning
-  title: 'Through the Lens of Contrast: Self-Improving Visual Reasoning in VLMs (ICLR
+  - CVPR 2026 Oral
+  - 物理模拟
+  - 世界模型
+  - 可微分模拟
+  title: 'ProPhy: Progressive Physical Alignment for Dynamic World Simulation (CVPR
     2026 Oral)'
-  url: https://openreview.net/forum?id=ZymCPON45y
+  url: https://arxiv.org/abs/2512.05564
 tech:
   Arch:
-  - desc: 2026年3月，阿里达摩院正式发布玄铁C950，基于RISC-V RV64GCB架构，采用15级超标量乱序流水线设计，最高支持16核配置，主频达2.5GHz。芯片采用7nm工艺制造，SPECint2006得分突破9.5/GHz，刷新RISC-V性能世界纪录。C950集成DDR5/LPDDR5内存控制器与PCIe
-      5.0接口，支持服务器级RAS特性与可信执行环境，目标市场为云原生数据中心与AI推理加速，标志着RISC-V正式进入高性能服务器赛道。
+  - desc: 台积电于2026年4月底更新其SoIC（System on Integrated Chips）3D堆叠封装技术路线图。当前量产SoIC技术已实现6μm凸块间距，路线图显示2027年将推进至5μm，2029年配合A14制程达到4.5μm。该技术通过晶圆对晶圆（WoW）和芯片对晶圆（CoW）的面对面堆叠，将互连密度提升至传统先进封装的数个数量级，富士通Monaka
+      CPU将成为该技术的重要受益者。
     tags:
-    - RISC-V
-    - Server CPU
-    - Alibaba DAMO
-    - XuanTie
-    - 7nm
-    title: 玄铁C950：阿里达摩院发布全球性能最高RISC-V服务器CPU
+    - 先进封装
+    - 3D堆叠
+    - SoIC
+    - 台积电
+    title: 台积电SoIC 3D封装路线图：2029年迈向4.5μm互连间距
   Audio:
-  - desc: LongCat-AudioDiT 是美团 LongCat 团队于2026年4月开源的高保真文本到语音模型，基于 AudioDiT（音频扩散Transformer）架构，直接在波形潜空间建模，参数规模达3.5B。零样本条件下仅需3秒参考音频即可实现高自然度音色克隆，支持中英双语。相较传统梅尔频谱方案，端到端波形生成避免了声码器级联失真，MOS评分在中文测试集上达到4.52，逼近真人录音水平。
+  - desc: Canopy AI开源的Orpheus-TTS以希腊乐之神命名，基于Llama架构改造的语音语言模型，支持零样本语音克隆与情感表达控制。模型采用离散语音令牌与文本令牌联合自回归生成方案，在单张消费级GPU上即可实现流式语音推理，延迟低至200ms。其最大特色是能够生成带有自然情感韵律的语音，突破传统TTS机械感的瓶颈。
     tags:
-    - Zero-Shot TTS
-    - Diffusion Transformer
-    - Voice Cloning
-    - Open Source
-    - Meituan
-    title: LongCat-AudioDiT：美团开源波形潜空间扩散TTS，突破零样本音色克隆上限
+    - 语音合成
+    - 开源TTS
+    - 情感语音
+    - 零样本克隆
+    title: Orpheus-TTS：开源情感语音合成，单卡可跑流式推理
   CPU:
-  - desc: 2026年4月22日，AMD发布Ryzen 9 9950X3D2 Dual Edition，基于Zen 5架构，16核32线程，在两个CCD上各搭载一枚64MB
-      3D V-Cache，L3缓存总量高达192MB（32MB片上+160MB堆叠）。最高Boost频率维持5.7GHz，TDP 170W，兼容AM5平台。双3D
-      V-Cache设计使得缓存敏感型工作负载（编译、仿真、大型游戏）性能较9950X3D提升15%-25%，在SPEC CPU 2017整数吞吐量测试中刷新桌面处理器纪录，成为开发者与创作者的最强生产力平台。
+  - desc: AMD于2026年5月20日宣布下一代EPYC处理器Venice在台积电2nm（N2）工艺节点进入量产阶段。Venice基于Zen 6架构，最高配置达256颗物理核心（Zen
+      6C密核版本），CCD密度较上代翻倍，L3缓存总量达到1GB。据AMD官方数据，Venice相较上代Turin在整数性能上提升高达70%，能效比提升超过50%，预计2026年下半年向云服务商首批交付。
     tags:
-    - AMD
-    - Zen 5
-    - 3D V-Cache
-    - Desktop CPU
-    - AM5
-    title: AMD Ryzen 9 9950X3D2 Dual Edition：业界首款双3D V-Cache桌面处理器
+    - AMD EPYC
+    - Zen 6
+    - 2nm工艺
+    - 服务器CPU
+    title: AMD EPYC Venice：台积电2nm工艺，256核Zen 6确认量产
   Computer Vision:
-  - desc: VGGT-Ω 在原始 VGGT 基础上引入全向三维重建能力，通过单一前馈网络直接从多视角图像预测相机参数、深度图与三维点云，无需迭代优化。模型基于大规模合成数据训练，支持任意数量输入视图，推理速度达到毫秒级。架构核心为视觉几何基座Transformer，将几何先验嵌入自注意力机制，在多个三维重建基准上刷新SOTA，标志着前馈式3D视觉的重要里程碑。
+  - desc: 上海交通大学AutoLab团队提出SEATrack，一种简单、高效且自适应的多模态跟踪框架。该工作采用统一的编码器-解码器架构，通过自适应模态融合策略动态调整RGB与红外/深度特征的权重，在多个基准上以更少的参数实现SOTA性能。其核心创新在于摒弃复杂的多分支设计，以单一简洁架构实现鲁棒的跨模态跟踪。
     tags:
     - CVPR 2026 Oral
-    - 3D Reconstruction
-    - Visual Geometry
-    - Transformer
-    - Facebook Research
-    title: VGGT-Ω：Facebook Research 视觉几何基座Transformer (CVPR 2026 Oral)
+    - 多模态跟踪
+    - 自适应融合
+    - 目标跟踪
+    title: SEATrack：高效自适应多模态目标跟踪器（CVPR 2026 Oral）
   GPU:
-  - desc: RTX 5060 Ti 基于NVIDIA Blackwell架构GB206核心，集成4608个CUDA核心，配备16GB GDDR7显存（128-bit位宽，带宽448GB/s），Boost频率达2.57GHz。支持DLSS
-      4多帧生成与神经网络渲染，整卡TGP为180W。相比前代RTX 4060 Ti，光栅化性能提升约35%，光追性能提升50%以上，起售价$399，于2026年4月正式发售。作为Blackwell家族最具性价比的型号，成为1080p/1440p游戏与入门级AI工作负载的新标杆。
+  - desc: NVIDIA于GTC 2026发布Rubin CPX推理专用GPU，专为百万级以上Token超长上下文场景设计。该芯片配备128GB HBM4显存，采用全新推理架构，在Llama-4等大模型推理任务中算力效率达到当前旗舰B200的2-3倍。Rubin
+      CPX引入专用上下文缓存引擎（Context Cache Engine），支持跨请求KV-Cache持久化，彻底改变了长上下文推理的硬件效率公式。
     tags:
     - NVIDIA
-    - Blackwell
-    - RTX 5060 Ti
-    - GDDR7
-    - DLSS 4
-    title: NVIDIA GeForce RTX 5060 Ti：Blackwell中端主力，GDDR7加持16GB显存
+    - AI推理
+    - Rubin CPX
+    - HBM4
+    title: NVIDIA Rubin CPX：面向超长上下文推理的专用AI芯片
   Lang:
-  - desc: TypeScript 5.9 于2026年5月正式发布，核心引入延迟导入（Deferred Imports）机制——通过新的 import defer
-      语法实现模块的按需延迟加载，编译为静态 import 但在运行时推迟执行，大幅优化大型项目的冷启动性能。同时增强了控制流类型收窄能力，支持对 switch
-      语句中 discriminated union 的穷举检查，并在模板字面量类型推断中引入启发式算法，编译速度较5.8版本提升约15%。
+  - desc: Python 3.14.5于2026年5月14日发布，作为Python 3.14系列的维护版本，该版本包含多项关键性能修复与稳定性改进。Python
+      3.14系列的核心特性包括PEP 649延迟求值注解（Deferred Evaluation of Annotations）、PEP 750模板字符串（Template
+      Strings）以及解释器JIT编译器的进一步优化。此版本修复了此前版本中asyncio事件循环和类型系统的若干Bug，推荐所有3.14用户升级。
     tags:
-    - TypeScript
-    - Deferred Imports
-    - Type Inference
-    - JavaScript
-    - Programming Language
-    title: TypeScript 5.9 正式发布：延迟导入机制与增强类型推断
+    - Python 3.14
+    - 编程语言
+    - 解释器优化
+    - JIT编译器
+    title: Python 3.14.5 发布：解释器性能持续优化
   NLP:
-  - desc: 该工作系统研究了稀疏自编码器(SAE)激活引导技术在大语言模型跨语言三段论推理中的可迁移性。实验覆盖英语、中文、阿拉伯语等12种语言，发现激活引导在多语言场景下存在显著的性能不对称性：高资源语言的引导向量可部分迁移至低资源语言，但反向迁移效果骤降。论文揭示了LLM内部推理表征的语言特异性，为多语言模型安全对齐提供了重要方法论。
+  - desc: KnowRL提出一种新颖的强化学习框架，通过在推理过程中注入最小充分知识（Minimal-Sufficient Knowledge）来引导LLM进行多步逻辑推理。不同于传统Chain-of-Thought，该方法让模型学会在关键推理节点主动检索并利用外部知识，在数学推理与常识问答任务上显著优于纯Prompting方法，同时避免知识过载导致的推理偏离。
     tags:
     - EACL 2026
-    - Activation Steering
-    - Multilingual NLP
-    - Syllogistic Reasoning
-    - LLM Safety
-    title: 跨语言激活引导：探究LLM三段论推理的语言泛化能力 (EACL 2026)
+    - LLM推理
+    - 强化学习
+    - 知识引导
+    title: KnowRL：通过最小充分知识引导的强化学习增强LLM推理（EACL 2026）
   Net:
-  - desc: 2026年5月，OpenAI 联合 AMD 与 Microsoft 提出 MRC（Multi-Rail Communication）超算网络架构，基于
-      SRv6 源路由与多轨以太网融合，在保持标准以太网兼容性的前提下实现GPU间流量的冗余容错与动态负载均衡。实测在4096 GPU集群上将训练通信尾延迟降低72%，网络有效带宽利用率从传统RoCE的68%提升至94%。MRC已被IEEE采纳为超算互联网标准草案，标志着AI基础设施网络从专用互连走向开放以太网生态的关键转折。
+  - desc: 2026年5月8日，工业和信息化部正式批复第六代移动通信系统（6G）技术试验频率，中国成为全球首个为6G研究开放6GHz频段的国家。此次批复涵盖6.425-7.125GHz频段，用于6G关键技术验证与外场试验，标志着中国6G研发从理论仿真正式进入真实场景测试阶段。此举将加速太赫兹通信、通感一体化、AI原生空口等6G核心技术的成熟。
     tags:
-    - AI Supercomputing
-    - Ethernet
-    - SRv6
-    - OpenAI
-    - GPU Clustering
-    title: OpenAI 联合 AMD/Microsoft 发布 MRC：面向万卡级AI超算的弹性以太网架构
+    - 6G
+    - 频谱批复
+    - 6GHz频段
+    - 移动通信
+    title: 中国工信部批复6G技术试验频率：率先开放6GHz频段
   News:
-  - desc: 2026年5月20日Google I/O大会核心发布Gemini Spark——一个全天候运行的主动式AI个人助理，能够理解用户在手机上的实时上下文（屏幕内容、位置、日历），无需持续手动唤醒即可主动提供建议与执行任务。技术后台为Gemini
-      3.5 Flash模型，延迟降至200ms以内，支持本地端侧推理与云增强协同。同时Google宣布Project Antigravity 2.0多模态交互框架，使AI可同时处理视觉、语音与触控输入。此举标志着Google从被动助手全面转向主动智能体战略，直接对标OpenAI与Apple的Agent生态布局。
+  - desc: 2026年5月，硅谷AI产业遭遇罕见的算力供给危机。NVIDIA H200 GPU云租赁价格单日飙升30%，H100在主流云平台全面断货，等待队列长达数周。包括Andrej
+      Karpathy在内的多位AI领袖在社交平台公开抱怨算力短缺。市场分析指出，Agentic AI应用爆发导致推理算力需求远超预期，叠加Rubin系列量产爬坡尚需时间，供需失衡短期内难以缓解。
     tags:
-    - Google I/O 2026
-    - Gemini Spark
-    - AI Agent
-    - Multimodal
-    - On-Device AI
-    title: Google I/O 2026：Gemini Spark 发布，全天候AI智能体时代开启
+    - AI算力
+    - GPU短缺
+    - H200
+    - 硅谷
+    title: 硅谷深陷AI算力荒：H200一夜涨价30%，H100全面缺货
