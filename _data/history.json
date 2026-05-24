@@ -1,4 +1,20 @@
 {
+  "2026-05-25": [
+    "Wi-Fi 8 (802.11bn) 进入Draft 1.4阶段：超高可靠性与AI原生",
+    "NVIDIA Nemotron-Labs-Diffusion：三模态语言模型，单次前向生成6倍令牌",
+    "AMD Radeon RX 9060 XT：RDNA 4中端主力，$299起",
+    "AMD EPYC 8005系列发布：Zen 5单路服务器，最高84核225W",
+    "Mirage: AI Agent的统一虚拟文件系统",
+    "Supertone Supertonic v3：端侧31语言TTS模型",
+    "Apple M5 Ultra：UltraFusion双Die互联，32核CPU+80核GPU",
+    "種崎敦美",
+    "TRACE: Your Diffusion Model is Secretly an Instance Edge Detector (ICLR 2026 Oral)",
+    "AI高带宽内存(HBM)供应告急：AMD CEO Lisa Su预警下一瓶颈",
+    "主成分分析 (Principal Component Analysis, PCA)",
+    "Language Lives in Sparse Dimensions (EACL 2026)",
+    "Zig 0.16.0 正式发布：原生异步迭代器与增量编译",
+    "Cambrian-P: Pose-Grounded Video Understanding (CVPR 2026)"
+  ],
   "2026-05-24": [
     "SEATrack：高效自适应多模态目标跟踪器（CVPR 2026 Oral）",
     "NVIDIA Rubin CPX：面向超长上下文推理的专用AI芯片",
@@ -141,21 +157,5 @@
     "Over-Searching in Search-Augmented Large Language Models",
     "Go 1.26 正式发布：递归泛型与迭代器稳定化",
     "AMD Radeon RX 9060 XT：Navi 44 中端显卡正式公布"
-  ],
-  "2026-05-15": [
-    "SiFive Performance P570 Gen3: 第三代高性能RISC-V CPU IP",
-    "XGBoost（eXtreme Gradient Boosting）",
-    "Through the Lens of Contrast: Self-Improving Visual Reasoning in VLMs (VC-STaR)",
-    "NVIDIA GeForce RTX 5060: Blackwell入门级GDDR7显卡正式上市",
-    "Intel Nova Lake: 52核Intel 18A旗舰桌面CPU曝光",
-    "大西沙織",
-    "中央网信办启动「清朗·整治AI应用乱象」专项行动",
-    "MRC: OpenAI联合OCP发布AI超算多路径可靠连接协议",
-    "Rust 1.95.0 发布：Async Closures稳定化与LLVM 21后端",
-    "KV Cache压缩2026：TurboQuant与KVTC推动长上下文推理实用化",
-    "LongCat-AudioDiT: 基于DiT的零样本高保真语音克隆TTS",
-    "MiniCPM-V 4.6: 面壁智能1.3B端侧多模态模型开源",
-    "Learning to See Before Seeing: LLM纯文本预训练涌现视觉先验",
-    "github/spec-kit: GitHub官方Spec-Driven开发工具套件"
   ]
 }

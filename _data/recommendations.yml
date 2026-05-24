@@ -1,133 +1,157 @@
 algorithm:
-- desc: 梯度提升决策树（Gradient Boosting Decision Tree）是一种基于Boosting思想的集成学习算法，由Friedman于2001年正式提出。其核心原理是通过迭代地训练决策树来拟合前一轮的残差（负梯度方向），将多个弱学习器加权组合为强学习器。GBDT使用损失函数的负梯度作为残差的近似，支持回归、分类和排序等多种任务。该算法在Kaggle竞赛与工业界广泛应用，是XGBoost、LightGBM、CatBoost等现代梯度提升框架的理论基础。
+- desc: PCA是最经典的线性降维算法，通过正交变换将高维数据投影到方差最大化的低维主成分子空间。核心步骤为：数据中心化→计算协方差矩阵→特征值分解→选取前k个最大特征值对应的特征向量。广泛应用于数据可视化、噪声过滤、特征提取与LLM潜空间分析（如稀疏自编码器的初始化），是现代机器学习不可或缺的基础算法。
   tags:
-  - 集成学习
-  - Boosting
-  - 决策树
-  - 梯度下降
-  title: 梯度提升决策树（GBDT）
+  - 降维
+  - 特征提取
+  - 线性代数
+  - 无监督学习
+  - PCA
+  - 经典算法
+  title: 主成分分析 (Principal Component Analysis, PCA)
 cv_recommend:
-  agency: mitt management
-  hometown: 日本兵庫縣
-  intro: 石川由依拥有清澈透明且极富穿透力的嗓音特质，尤其擅长演绎内心情感丰富的角色，其细腻的呼吸控制与精准的情感层次递进在同代声优中独树一帜。早期以舞台剧演员出道，积累了深厚的表演功底，转型声优后将舞台经验融入声音表演，能够在不依赖夸张语调变化的前提下传达角色的深层情感波动。近年来其在叙事驱动型作品中的低语与独白表现屡获好评，被誉为「用声音描绘内心风景」的实力派声优。其职业态度严谨，始终以对角色的深入理解作为表演出发点。
-  name: 石川由依
-date: '2026-05-24'
+  agency: 俳協 (Haikyo)
+  hometown: 大分県
+  intro: 2000年代后期以成人向作品为中心积累经验，2012年后逐渐转向一般向作品并迅速崭露头角。声线跨度极广，既能演绎沉稳知性的成熟女性，也能自然切换至天真烂漫的少女与少年角色，被誉为「七色之声」的实力派。2019年获第13回声优奖助演女优赏，2023年再获第17回声优奖主演女优赏，展现出扎实的演技功底与持续进化的表现力。舞台朗读剧与旁白领域同样活跃，是当今业界最具信頼感的中坚声优之一。
+  name: 種崎敦美
+date: '2026-05-25'
 history:
-- event: 萨缪尔·莫尔斯从华盛顿国会大厦向巴尔的摩发出人类历史上首封电报，内容为「What hath God wrought」（上帝创造了何等奇迹），标志着电信时代的开端。
-  year: '1844'
-- event: 布鲁克林大桥在历时14年建造后正式通车，成为当时世界上最长的悬索桥，连接曼哈顿与布鲁克林，是19世纪工程学的巅峰之作。
-  year: '1883'
-- event: 英国女飞行员艾米·约翰逊完成从英格兰至澳大利亚的独自飞行，历时19天，成为首位实现此壮举的女性，获得大英帝国勋章。
-  year: '1930'
-- event: MIT的Wesley Clark开始研制LINC（Laboratory INstrument Computer）计算机，该机器被广泛认为是世界上第一台个人计算机的先驱。
+- event: 肯尼迪总统在国会联席会议上宣布「十年内将人类送上月球并安全返回」的阿波罗计划目标，开启人类航天史上最宏大的科技工程。
   year: '1961'
-- event: 美国宇航员斯科特·卡彭特乘坐「极光7号」（Mercury-Atlas 7）飞船完成地球轨道飞行，成为第二位完成轨道飞行的美国宇航员。
-  year: '1962'
-- event: 以色列国防军完成从南黎巴嫩安全区的全面撤军，结束了长达22年的军事占领，联合国随后确认了以色列的完全撤离。
-  year: '2000'
+- event: '《星球大战：新希望》(Star Wars: Episode IV - A New Hope) 在北美32家影院首映，以工业光魔(ILM)开创的计算机控制摄影技术彻底改变了电影特效产业。'
+  year: '1977'
+- event: 第一届国际万维网大会(WWW94)在CERN召开，Tim Berners-Lee主持，380名与会者共同定义Web开放标准，奠定了互联网商业化的基础。
+  year: '1994'
+- event: ICANN与VeriSign签署.com顶级域注册管理机构协议，确立互联网域名系统的商业化治理框架，为全球DNS稳定性提供制度保障。
+  year: '2001'
+- event: 欧盟《通用数据保护条例》(GDPR)正式生效，确立「被遗忘权」「数据可携权」等数字隐私基石权利，全球科技企业被迫重构数据治理架构，首日即有多起诉讼发起。
+  year: '2018'
+- event: OpenAI发布ChatGPT iOS应用，上线6天内安装量突破50万次，标志大语言模型正式从Web端进入移动原生时代，开启AI应用生态新纪元。
+  year: '2023'
 llm:
-- desc: 百度于2026年5月8日发布文心大模型5.1版本，在推理能力、搜索增强与指令遵循等多个维度实现突破。ERNIE 5.1登顶LMArena搜索能力榜国内第一，其突出亮点在于预训练成本仅为业界同规模模型的6%，受益于百度自研的飞桨框架4.0与昆仑芯集群的高效协同。模型在Agent任务执行、长文档理解与多轮对话方面展现出色能力，支持128K上下文窗口。
+- desc: NVIDIA发布Nemotron-Labs-Diffusion 3B，业界首个统一自回归、扩散与自推测解码的三模态语言模型。在单次前向传播中生成高达6倍于同规模自回归模型(Qwen3-8B)的令牌数，推理吞吐量提升4.8倍。通过迭代扩散去噪并行生成文本块，结合自推测验证保证输出质量，开源Apache
+    2.0协议。
   tags:
-  - ERNIE 5.1
-  - 百度文心
-  - 大语言模型
-  - 高效训练
-  title: 百度文心ERNIE 5.1正式发布：预训练成本仅为业界6%
+  - NVIDIA
+  - 扩散语言模型
+  - Nemotron
+  - 高效推理
+  - 开源
+  - 三模态
+  title: NVIDIA Nemotron-Labs-Diffusion：三模态语言模型，单次前向生成6倍令牌
 new_project:
-- desc: OpenJarvis是斯坦福大学HazyResearch实验室于2026年5月发布的个人AI智能体框架，主打在个人设备上本地运行AI助手。框架支持多种开源LLM后端（包括Llama、Qwen等），提供文件管理、日程安排、网页搜索、代码执行等工具链。其特色在于采用模块化Agent架构，用户可通过YAML配置文件自定义智能体行为，所有数据处理均在本地完成，保障隐私安全。
+- desc: strukto-ai开源的Mirage为AI智能体提供统一的虚拟文件系统抽象层，支持本地、S3、GCS、HuggingFace等多种存储后端的透明访问。核心特性包括：基于内容寻址的去重存储、版本化文件快照、流式读写、跨Agent共享缓存及POSIX兼容接口。使用Rust构建核心引擎，Python
+    SDK提供高层API，适合构建多Agent协作系统。
   tags:
   - AI Agent
-  - 开源框架
-  - 本地AI
-  - 隐私计算
-  title: OpenJarvis：斯坦福HazyResearch开源的本地AI智能体框架
-  url: https://github.com/HazyResearch/OpenJarvis
+  - 虚拟文件系统
+  - Rust
+  - 开源
+  - 多Agent
+  - Mirage
+  title: 'Mirage: AI Agent的统一虚拟文件系统'
+  url: https://github.com/strukto-ai/mirage
 paper:
-- desc: 该工作提出了渐进式物理对齐（Progressive Physical Alignment）框架，用于动态世界模拟。核心思想是通过逐步优化物理参数（质量、摩擦、弹性等），使模拟环境中的物体运动与真实物理观测对齐。方法采用可微分物理模拟器与神经网络联合优化，在多个动态场景基准上取得最佳物理一致性。该工作为从视频中学习物理世界模型提供了新的范式。
+- desc: 发现预训练扩散模型的特征空间中隐式编码了高质量的实例边缘检测能力。无需任何额外训练，仅通过聚合扩散U-Net的多层注意力特征即可实现SOTA级别的零样本实例边缘检测，在BSDS500与NYUDv2上超越专门训练的边缘检测器。ICLR
+    2026 Oral论文，为扩散模型的可解释性与特征复用开辟新范式。
   tags:
-  - CVPR 2026 Oral
-  - 物理模拟
-  - 世界模型
-  - 可微分模拟
-  title: 'ProPhy: Progressive Physical Alignment for Dynamic World Simulation (CVPR
+  - ICLR 2026
+  - Oral
+  - 扩散模型
+  - 边缘检测
+  - 零样本
+  - 可解释性
+  title: 'TRACE: Your Diffusion Model is Secretly an Instance Edge Detector (ICLR
     2026 Oral)'
-  url: https://arxiv.org/abs/2512.05564
+  url: https://openreview.net/forum?id=BjElYlJKMj
 tech:
   Arch:
-  - desc: 台积电于2026年4月底更新其SoIC（System on Integrated Chips）3D堆叠封装技术路线图。当前量产SoIC技术已实现6μm凸块间距，路线图显示2027年将推进至5μm，2029年配合A14制程达到4.5μm。该技术通过晶圆对晶圆（WoW）和芯片对晶圆（CoW）的面对面堆叠，将互连密度提升至传统先进封装的数个数量级，富士通Monaka
-      CPU将成为该技术的重要受益者。
+  - desc: Apple发布M5 Ultra芯片，用于2026款Mac Studio。基于TSMC N3E工艺，通过UltraFusion硅中介层互联两颗M5
+      Max裸片，集成32核CPU(24P+8E)、80核GPU与32核Neural Engine。统一内存带宽达1.2TB/s，最大支持512GB LPDDR5X，AI推理性能较M3
+      Ultra提升2.1倍。
     tags:
-    - 先进封装
-    - 3D堆叠
-    - SoIC
-    - 台积电
-    title: 台积电SoIC 3D封装路线图：2029年迈向4.5μm互连间距
+    - Apple Silicon
+    - M5 Ultra
+    - UltraFusion
+    - TSMC N3E
+    - Mac Studio
+    title: Apple M5 Ultra：UltraFusion双Die互联，32核CPU+80核GPU
   Audio:
-  - desc: Canopy AI开源的Orpheus-TTS以希腊乐之神命名，基于Llama架构改造的语音语言模型，支持零样本语音克隆与情感表达控制。模型采用离散语音令牌与文本令牌联合自回归生成方案，在单张消费级GPU上即可实现流式语音推理，延迟低至200ms。其最大特色是能够生成带有自然情感韵律的语音，突破传统TTS机械感的瓶颈。
+  - desc: Supertone发布Supertonic v3，支持31种语言的完全端侧文语转换。核心突破在于引入Expression Tags情绪标注机制与改进的韵律建模，朗读失败率较v2降低72%。模型量化后可运行于移动端CPU，延迟<50ms，支持流式输出。
     tags:
-    - 语音合成
-    - 开源TTS
-    - 情感语音
-    - 零样本克隆
-    title: Orpheus-TTS：开源情感语音合成，单卡可跑流式推理
+    - TTS
+    - 端侧推理
+    - 多语言
+    - 情绪语音合成
+    - Supertone
+    title: Supertone Supertonic v3：端侧31语言TTS模型
   CPU:
-  - desc: AMD于2026年5月20日宣布下一代EPYC处理器Venice在台积电2nm（N2）工艺节点进入量产阶段。Venice基于Zen 6架构，最高配置达256颗物理核心（Zen
-      6C密核版本），CCD密度较上代翻倍，L3缓存总量达到1GB。据AMD官方数据，Venice相较上代Turin在整数性能上提升高达70%，能效比提升超过50%，预计2026年下半年向云服务商首批交付。
+  - desc: AMD于2026年5月正式推出EPYC 8005系列单路服务器CPU，面向边缘计算、电信与高密度存储场景。旗舰型号EPYC 8585X搭载84个Zen
+      5核心，TDP仅225W，支持6通道DDR5-6000与96条PCIe 5.0通道。相比前代EPYC 8004，SPECrate2017_int_base性能提升37%，每瓦性能改善52%。
     tags:
-    - AMD EPYC
-    - Zen 6
-    - 2nm工艺
+    - AMD
+    - EPYC 8005
+    - Zen 5
+    - 边缘计算
     - 服务器CPU
-    title: AMD EPYC Venice：台积电2nm工艺，256核Zen 6确认量产
+    - 单路
+    title: AMD EPYC 8005系列发布：Zen 5单路服务器，最高84核225W
   Computer Vision:
-  - desc: 上海交通大学AutoLab团队提出SEATrack，一种简单、高效且自适应的多模态跟踪框架。该工作采用统一的编码器-解码器架构，通过自适应模态融合策略动态调整RGB与红外/深度特征的权重，在多个基准上以更少的参数实现SOTA性能。其核心创新在于摒弃复杂的多分支设计，以单一简洁架构实现鲁棒的跨模态跟踪。
+  - desc: 提出基于姿态锚定的视频理解框架，利用3D人体姿态作为时空锚点，无需额外标注即可实现开放词汇视频问答、动作定位与时序分割。在Ego4D、Charades-Ego等基准上刷新SOTA，参数量仅7B，推理效率较传统Video-LLM提升3.2倍。
     tags:
-    - CVPR 2026 Oral
-    - 多模态跟踪
-    - 自适应融合
-    - 目标跟踪
-    title: SEATrack：高效自适应多模态目标跟踪器（CVPR 2026 Oral）
+    - CVPR 2026
+    - 视频理解
+    - 姿态锚定
+    - Vision-Language
+    - 开放词汇
+    title: 'Cambrian-P: Pose-Grounded Video Understanding (CVPR 2026)'
   GPU:
-  - desc: NVIDIA于GTC 2026发布Rubin CPX推理专用GPU，专为百万级以上Token超长上下文场景设计。该芯片配备128GB HBM4显存，采用全新推理架构，在Llama-4等大模型推理任务中算力效率达到当前旗舰B200的2-3倍。Rubin
-      CPX引入专用上下文缓存引擎（Context Cache Engine），支持跨请求KV-Cache持久化，彻底改变了长上下文推理的硬件效率公式。
+  - desc: AMD于2026年6月5日发售Radeon RX 9060 XT，基于RDNA 4架构Navi 44 GPU，集成32个计算单元(2048流处理器)。提供8GB($299)与16GB($349)两版本，搭载GDDR6显存，128-bit位宽，PCIe
+      5.0×16接口。游戏频率2.8GHz，TBP仅150W，对标RTX 5060系列，主打1080p高刷与1440p入门光追。
     tags:
-    - NVIDIA
-    - AI推理
-    - Rubin CPX
-    - HBM4
-    title: NVIDIA Rubin CPX：面向超长上下文推理的专用AI芯片
+    - RDNA 4
+    - Navi 44
+    - GDDR6
+    - AMD
+    - RX 9060 XT
+    - 中端GPU
+    title: AMD Radeon RX 9060 XT：RDNA 4中端主力，$299起
   Lang:
-  - desc: Python 3.14.5于2026年5月14日发布，作为Python 3.14系列的维护版本，该版本包含多项关键性能修复与稳定性改进。Python
-      3.14系列的核心特性包括PEP 649延迟求值注解（Deferred Evaluation of Annotations）、PEP 750模板字符串（Template
-      Strings）以及解释器JIT编译器的进一步优化。此版本修复了此前版本中asyncio事件循环和类型系统的若干Bug，推荐所有3.14用户升级。
+  - desc: Zig语言0.16.0版本于2026年5月发布，核心特性包括原生异步迭代器(async iterator)支持、增量编译引擎重写（编译速度提升40%）、增强的comptime泛型推导及改进的C
+      ABI互操作层。标准库新增SIMD向量化原语，持续逼近「无隐式分配」的系统编程愿景。
     tags:
-    - Python 3.14
+    - Zig
     - 编程语言
-    - 解释器优化
-    - JIT编译器
-    title: Python 3.14.5 发布：解释器性能持续优化
+    - 系统编程
+    - 异步迭代器
+    - 增量编译
+    title: Zig 0.16.0 正式发布：原生异步迭代器与增量编译
   NLP:
-  - desc: KnowRL提出一种新颖的强化学习框架，通过在推理过程中注入最小充分知识（Minimal-Sufficient Knowledge）来引导LLM进行多步逻辑推理。不同于传统Chain-of-Thought，该方法让模型学会在关键推理节点主动检索并利用外部知识，在数学推理与常识问答任务上显著优于纯Prompting方法，同时避免知识过载导致的推理偏离。
+  - desc: 揭示大语言模型的多语言知识天然存在于高度稀疏的低维子空间中。通过稀疏自编码器提取「语言向量」，可在不修改模型参数的前提下实现可解释的多语言行为控制，激活稀疏度达98.7%，跨语言迁移零样本性能提升15.3%。
     tags:
     - EACL 2026
-    - LLM推理
-    - 强化学习
-    - 知识引导
-    title: KnowRL：通过最小充分知识引导的强化学习增强LLM推理（EACL 2026）
+    - 多语言NLP
+    - 稀疏自编码器
+    - 可解释性
+    - LLM控制
+    title: Language Lives in Sparse Dimensions (EACL 2026)
   Net:
-  - desc: 2026年5月8日，工业和信息化部正式批复第六代移动通信系统（6G）技术试验频率，中国成为全球首个为6G研究开放6GHz频段的国家。此次批复涵盖6.425-7.125GHz频段，用于6G关键技术验证与外场试验，标志着中国6G研发从理论仿真正式进入真实场景测试阶段。此举将加速太赫兹通信、通感一体化、AI原生空口等6G核心技术的成熟。
+  - desc: IEEE 802.11bn (Wi-Fi 8) 工作组于2026年5月发布Draft D1.4规范，核心目标为超高可靠性(Ultra High
+      Reliability)。引入AI原生信道估计、分布式MIMO协调与毫秒级链路切换，目标URLLC场景丢包率<10⁻⁶，时延<100μs，预计2028年正式商用。
     tags:
-    - 6G
-    - 频谱批复
-    - 6GHz频段
-    - 移动通信
-    title: 中国工信部批复6G技术试验频率：率先开放6GHz频段
+    - Wi-Fi 8
+    - 802.11bn
+    - 超高可靠性
+    - AI原生
+    - IEEE
+    title: Wi-Fi 8 (802.11bn) 进入Draft 1.4阶段：超高可靠性与AI原生
   News:
-  - desc: 2026年5月，硅谷AI产业遭遇罕见的算力供给危机。NVIDIA H200 GPU云租赁价格单日飙升30%，H100在主流云平台全面断货，等待队列长达数周。包括Andrej
-      Karpathy在内的多位AI领袖在社交平台公开抱怨算力短缺。市场分析指出，Agentic AI应用爆发导致推理算力需求远超预期，叠加Rubin系列量产爬坡尚需时间，供需失衡短期内难以缓解。
+  - desc: 2026年5月24日，AMD CEO Lisa Su在公开场合指出，随着AI训练与推理芯片需求持续暴涨，HBM（高带宽内存）已成为AI芯片供应链的下一个关键瓶颈。SK海力士、三星、美光三大HBM供应商2026年产能已被预订一空，HBM4认证进度延迟或将影响2027年下一代AI
+      GPU量产节奏，业界正寻求HBM替代方案如LP-DRAM近存计算。
     tags:
-    - AI算力
-    - GPU短缺
-    - H200
-    - 硅谷
-    title: 硅谷深陷AI算力荒：H200一夜涨价30%，H100全面缺货
+    - AI芯片
+    - HBM
+    - 供应链
+    - Lisa Su
+    - AMD
+    - 高带宽内存
+    title: AI高带宽内存(HBM)供应告急：AMD CEO Lisa Su预警下一瓶颈
