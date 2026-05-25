@@ -1,157 +1,146 @@
 algorithm:
-- desc: PCA是最经典的线性降维算法，通过正交变换将高维数据投影到方差最大化的低维主成分子空间。核心步骤为：数据中心化→计算协方差矩阵→特征值分解→选取前k个最大特征值对应的特征向量。广泛应用于数据可视化、噪声过滤、特征提取与LLM潜空间分析（如稀疏自编码器的初始化），是现代机器学习不可或缺的基础算法。
+- desc: 基于贝叶斯定理与特征条件独立假设的概率分类算法，通过先验概率和似然估计后验概率，实现高效分类。尽管假设简单，但在文本分类、垃圾邮件过滤等任务中表现优异，具有计算复杂度低、可解释性强、适用于大规模数据的优点。
   tags:
-  - 降维
-  - 特征提取
-  - 线性代数
-  - 无监督学习
-  - PCA
-  - 经典算法
-  title: 主成分分析 (Principal Component Analysis, PCA)
+  - 算法
+  - 机器学习
+  - 分类
+  - 概率
+  - 贝叶斯
+  title: 朴素贝叶斯分类器 (Naive Bayes Classifier)
 cv_recommend:
-  agency: 俳協 (Haikyo)
-  hometown: 大分県
-  intro: 2000年代后期以成人向作品为中心积累经验，2012年后逐渐转向一般向作品并迅速崭露头角。声线跨度极广，既能演绎沉稳知性的成熟女性，也能自然切换至天真烂漫的少女与少年角色，被誉为「七色之声」的实力派。2019年获第13回声优奖助演女优赏，2023年再获第17回声优奖主演女优赏，展现出扎实的演技功底与持续进化的表现力。舞台朗读剧与旁白领域同样活跃，是当今业界最具信頼感的中坚声优之一。
-  name: 種崎敦美
-date: '2026-05-25'
+  agency: 青二プロダクション
+  hometown: 日本千叶县
+  intro: 悠木碧是日本知名女性声优，以其宽广的音域和丰富的角色塑造能力著称。她能够驾驭从幼女到成熟女性、从少年到反派的多元声线，演技细腻且富有爆发力，在业界享有极高评价。其扎实的声音控制与情感投入使每个角色都独具灵魂，被誉为“变色龙声优”。同时她在歌手领域也颇有建树，舞台魅力十足。作为一线声优，悠木碧持续活跃于广播、旁白等多个领域，是声优界标志性人物之一。
+  name: 悠木碧
+date: '2026-05-26'
 history:
-- event: 肯尼迪总统在国会联席会议上宣布「十年内将人类送上月球并安全返回」的阿波罗计划目标，开启人类航天史上最宏大的科技工程。
-  year: '1961'
-- event: '《星球大战：新希望》(Star Wars: Episode IV - A New Hope) 在北美32家影院首映，以工业光魔(ILM)开创的计算机控制摄影技术彻底改变了电影特效产业。'
-  year: '1977'
-- event: 第一届国际万维网大会(WWW94)在CERN召开，Tim Berners-Lee主持，380名与会者共同定义Web开放标准，奠定了互联网商业化的基础。
-  year: '1994'
-- event: ICANN与VeriSign签署.com顶级域注册管理机构协议，确立互联网域名系统的商业化治理框架，为全球DNS稳定性提供制度保障。
-  year: '2001'
-- event: 欧盟《通用数据保护条例》(GDPR)正式生效，确立「被遗忘权」「数据可携权」等数字隐私基石权利，全球科技企业被迫重构数据治理架构，首日即有多起诉讼发起。
-  year: '2018'
-- event: OpenAI发布ChatGPT iOS应用，上线6天内安装量突破50万次，标志大语言模型正式从Web端进入移动原生时代，开启AI应用生态新纪元。
-  year: '2023'
+- event: 道琼斯工业平均指数首次发布，初始包含 12 只成分股。
+  year: '1896'
+- event: 在中东（伊朗马斯杰德苏莱曼）首次发现石油，开创了该地区石油工业。
+  year: '1908'
+- event: 福特公司第 1500 万辆 T 型车下线，同时宣告该经典车型停产。
+  year: '1927'
+- event: 阿波罗 10 号安全返回地球，完成登月前最后一次全面彩排。
+  year: '1969'
+- event: Netscape 宣布在其浏览器中集成 Java 技术，推动互联网应用兴起。
+  year: '1995'
+- event: Google AlphaGo 以团队形式击败五名世界顶尖围棋棋手，标志 AI 在围棋领域全面超越人类。
+  year: '2017'
 llm:
-- desc: NVIDIA发布Nemotron-Labs-Diffusion 3B，业界首个统一自回归、扩散与自推测解码的三模态语言模型。在单次前向传播中生成高达6倍于同规模自回归模型(Qwen3-8B)的令牌数，推理吞吐量提升4.8倍。通过迭代扩散去噪并行生成文本块，结合自推测验证保证输出质量，开源Apache
-    2.0协议。
+- desc: Meta 发布 Llama 4 系列模型，采用原生多模态架构，能够直接处理图像与文本交织输入，在数学推理、多语言理解和视觉问答等基准上达到领先水平，模型权重完全开源并允许商业使用，促进多模态
+    Agent 生态发展。
   tags:
-  - NVIDIA
-  - 扩散语言模型
-  - Nemotron
-  - 高效推理
+  - LLM
+  - Meta
+  - Llama 4
+  - 多模态
   - 开源
-  - 三模态
-  title: NVIDIA Nemotron-Labs-Diffusion：三模态语言模型，单次前向生成6倍令牌
+  title: Meta Llama 4：原生多模态开源大模型
 new_project:
-- desc: strukto-ai开源的Mirage为AI智能体提供统一的虚拟文件系统抽象层，支持本地、S3、GCS、HuggingFace等多种存储后端的透明访问。核心特性包括：基于内容寻址的去重存储、版本化文件快照、流式读写、跨Agent共享缓存及POSIX兼容接口。使用Rust构建核心引擎，Python
-    SDK提供高层API，适合构建多Agent协作系统。
+- desc: 一个开源的个人 AI 助手平台，支持多种 LLM 后端与工具集成，可自动化日常任务、代码生成与工作流编排，GitHub 星标数超 374k，活跃社区持续贡献插件，被认为是
+    AI Agent 时代的“个人操作系统”。
   tags:
-  - AI Agent
-  - 虚拟文件系统
-  - Rust
   - 开源
-  - 多Agent
-  - Mirage
-  title: 'Mirage: AI Agent的统一虚拟文件系统'
-  url: https://github.com/strukto-ai/mirage
+  - AI Agent
+  - GitHub
+  - 自动化
+  - 个人助手
+  title: OpenClaw：个人 AI 助手框架
+  url: https://github.com/openclaw/openclaw
 paper:
-- desc: 发现预训练扩散模型的特征空间中隐式编码了高质量的实例边缘检测能力。无需任何额外训练，仅通过聚合扩散U-Net的多层注意力特征即可实现SOTA级别的零样本实例边缘检测，在BSDS500与NYUDv2上超越专门训练的边缘检测器。ICLR
-    2026 Oral论文，为扩散模型的可解释性与特征复用开辟新范式。
+- desc: 顶会论文推荐
   tags:
   - ICLR 2026
   - Oral
-  - 扩散模型
-  - 边缘检测
-  - 零样本
-  - 可解释性
-  title: 'TRACE: Your Diffusion Model is Secretly an Instance Edge Detector (ICLR
-    2026 Oral)'
-  url: https://openreview.net/forum?id=BjElYlJKMj
+  - 强化学习
+  - 长上下文推理
+  - NLP
+  title: 'LoongRL: Reinforcement Learning for Advanced Reasoning over Long Contexts'
+  url: https://iclr.cc/virtual/2026/oral/10007440
 tech:
   Arch:
-  - desc: Apple发布M5 Ultra芯片，用于2026款Mac Studio。基于TSMC N3E工艺，通过UltraFusion硅中介层互联两颗M5
-      Max裸片，集成32核CPU(24P+8E)、80核GPU与32核Neural Engine。统一内存带宽达1.2TB/s，最大支持512GB LPDDR5X，AI推理性能较M3
-      Ultra提升2.1倍。
+  - desc: SiFive 发布第 3 代 Performance P570 RISC-V 处理器 IP，完全兼容 RVA23 规范，采用 6 宽乱序执行架构，SPECINT
+      性能相比上代提升 40%，能效比优化显著，面向消费电子、AIoT 及嵌入式应用，进一步推动 RISC-V 在高性能领域的渗透。
     tags:
-    - Apple Silicon
-    - M5 Ultra
-    - UltraFusion
-    - TSMC N3E
-    - Mac Studio
-    title: Apple M5 Ultra：UltraFusion双Die互联，32核CPU+80核GPU
+    - RISC-V
+    - SiFive
+    - CPU IP
+    - 半导体
+    - RVA23
+    title: SiFive Performance P570 Gen3：RVA23 兼容 RISC-V 核心
   Audio:
-  - desc: Supertone发布Supertonic v3，支持31种语言的完全端侧文语转换。核心突破在于引入Expression Tags情绪标注机制与改进的韵律建模，朗读失败率较v2降低72%。模型量化后可运行于移动端CPU，延迟<50ms，支持流式输出。
+  - desc: Rime 发布 Coda TTS，采用全新端到端架构，实现超低延迟流式推理与录音室级别音质，支持多种语言和情感表达，单卡即可实时合成，声称在自然度和响应速度上达到业界最优，面向实时对话系统和内容创作场景。
     tags:
     - TTS
-    - 端侧推理
-    - 多语言
-    - 情绪语音合成
-    - Supertone
-    title: Supertone Supertonic v3：端侧31语言TTS模型
+    - 语音合成
+    - Rime
+    - 音频AI
+    - 低延迟
+    title: Rime Coda TTS：号称终极文本转语音模型
   CPU:
-  - desc: AMD于2026年5月正式推出EPYC 8005系列单路服务器CPU，面向边缘计算、电信与高密度存储场景。旗舰型号EPYC 8585X搭载84个Zen
-      5核心，TDP仅225W，支持6通道DDR5-6000与96条PCIe 5.0通道。相比前代EPYC 8004，SPECrate2017_int_base性能提升37%，每瓦性能改善52%。
+  - desc: Intel 正式推出 Core Ultra Series 3 移动处理器，首发采用 Intel 18A 工艺与 Panther Lake 架构，集成第
+      4 代 NPU 提供高达 48 TOPS 的 AI 算力，支持 LPDDR6 内存，能效比大幅提升，标志着 x86 平台全面进入 AI PC 时代。
     tags:
-    - AMD
-    - EPYC 8005
-    - Zen 5
-    - 边缘计算
-    - 服务器CPU
-    - 单路
-    title: AMD EPYC 8005系列发布：Zen 5单路服务器，最高84核225W
+    - CPU
+    - Intel
+    - Panther Lake
+    - 18A
+    - AI PC
+    title: Intel Core Ultra Series 3 (Panther Lake) 发布：18A 工艺首秀
   Computer Vision:
-  - desc: 提出基于姿态锚定的视频理解框架，利用3D人体姿态作为时空锚点，无需额外标注即可实现开放词汇视频问答、动作定位与时序分割。在Ego4D、Charades-Ego等基准上刷新SOTA，参数量仅7B，推理效率较传统Video-LLM提升3.2倍。
+  - desc: Meta 推出 Segment Anything Model 3.1，引入多路复用与全局推理机制，大幅提升实时视频检测和跟踪速度，支持同时处理多路视频流，在复杂场景下保持高精度分割，进一步降低计算开销，适用于监控、自动驾驶等时序视觉任务。
     tags:
-    - CVPR 2026
-    - 视频理解
-    - 姿态锚定
-    - Vision-Language
-    - 开放词汇
-    title: 'Cambrian-P: Pose-Grounded Video Understanding (CVPR 2026)'
+    - 计算机视觉
+    - Meta
+    - SAM 3.1
+    - 视频分割
+    - 实时跟踪
+    title: SAM 3.1：Meta 发布实时视频分割与跟踪升级版
   GPU:
-  - desc: AMD于2026年6月5日发售Radeon RX 9060 XT，基于RDNA 4架构Navi 44 GPU，集成32个计算单元(2048流处理器)。提供8GB($299)与16GB($349)两版本，搭载GDDR6显存，128-bit位宽，PCIe
-      5.0×16接口。游戏频率2.8GHz，TBP仅150W，对标RTX 5060系列，主打1080p高刷与1440p入门光追。
+  - desc: NVIDIA 于 2026 年 5 月 19 日解禁 GeForce RTX 5060，基于 Blackwell 架构，配备 3840 个 CUDA
+      核心与 12GB GDDR7 显存，支持 DLSS 4 与 Reflex 2，起售价 $299，性能较上代提升约 25%，成为 1080P 高刷游戏新标杆。
     tags:
-    - RDNA 4
-    - Navi 44
-    - GDDR6
-    - AMD
-    - RX 9060 XT
-    - 中端GPU
-    title: AMD Radeon RX 9060 XT：RDNA 4中端主力，$299起
+    - GPU
+    - NVIDIA
+    - RTX 5060
+    - Blackwell
+    - GDDR7
+    title: NVIDIA GeForce RTX 5060 正式上市：Blackwell 主流卡
   Lang:
-  - desc: Zig语言0.16.0版本于2026年5月发布，核心特性包括原生异步迭代器(async iterator)支持、增量编译引擎重写（编译速度提升40%）、增强的comptime泛型推导及改进的C
-      ABI互操作层。标准库新增SIMD向量化原语，持续逼近「无隐式分配」的系统编程愿景。
+  - desc: Ruby 4.0.5 正式版于 2026 年 5 月 20 日发布，主要包含 YJIT 即时编译器的寄存器分配优化、ZJIT 编译器的稳定性修复以及核心库性能提升，进一步降低内存占用，改善多线程并发性能，巩固了
+      Ruby 在高负载 Web 应用中的地位。
     tags:
-    - Zig
+    - Ruby
     - 编程语言
-    - 系统编程
-    - 异步迭代器
-    - 增量编译
-    title: Zig 0.16.0 正式发布：原生异步迭代器与增量编译
+    - YJIT
+    - 性能优化
+    - ZJIT
+    title: Ruby 4.0.5 发布：YJIT 与性能改进
   NLP:
-  - desc: 揭示大语言模型的多语言知识天然存在于高度稀疏的低维子空间中。通过稀疏自编码器提取「语言向量」，可在不修改模型参数的前提下实现可解释的多语言行为控制，激活稀疏度达98.7%，跨语言迁移零样本性能提升15.3%。
+  - desc: 阿里巴巴发布的 Qwen3.7-Max 语言模型在无人类干预下自主运行 35 小时，成功为其定制 AI 芯片优化底层代码，展示了 LLM 在硬件协同设计中的潜力，模型通过自我迭代生成并验证优化方案，大幅缩短芯片开发周期。
     tags:
-    - EACL 2026
-    - 多语言NLP
-    - 稀疏自编码器
-    - 可解释性
-    - LLM控制
-    title: Language Lives in Sparse Dimensions (EACL 2026)
-  Net:
-  - desc: IEEE 802.11bn (Wi-Fi 8) 工作组于2026年5月发布Draft D1.4规范，核心目标为超高可靠性(Ultra High
-      Reliability)。引入AI原生信道估计、分布式MIMO协调与毫秒级链路切换，目标URLLC场景丢包率<10⁻⁶，时延<100μs，预计2028年正式商用。
-    tags:
-    - Wi-Fi 8
-    - 802.11bn
-    - 超高可靠性
-    - AI原生
-    - IEEE
-    title: Wi-Fi 8 (802.11bn) 进入Draft 1.4阶段：超高可靠性与AI原生
-  News:
-  - desc: 2026年5月24日，AMD CEO Lisa Su在公开场合指出，随着AI训练与推理芯片需求持续暴涨，HBM（高带宽内存）已成为AI芯片供应链的下一个关键瓶颈。SK海力士、三星、美光三大HBM供应商2026年产能已被预订一空，HBM4认证进度延迟或将影响2027年下一代AI
-      GPU量产节奏，业界正寻求HBM替代方案如LP-DRAM近存计算。
-    tags:
+    - NLP
+    - Alibaba
+    - Qwen
     - AI芯片
-    - HBM
-    - 供应链
-    - Lisa Su
-    - AMD
-    - 高带宽内存
-    title: AI高带宽内存(HBM)供应告急：AMD CEO Lisa Su预警下一瓶颈
+    - 代码优化
+    title: 阿里 Qwen3.7-Max 自主运行 35 小时优化芯片代码
+  Net:
+  - desc: 3GPP 宣布 Release 19 标准功能冻结，重点引入 AI/ML 增强、扩展现实 (XR) 优化、卫星接入集成以及更高精度的定位服务，标志着
+      5G-Advanced 最后阶段的完成，并为 6G 研究提供关键基线，预计 2026 年商用部署启动。
+    tags:
+    - 5G
+    - 6G
+    - 3GPP
+    - 通信标准
+    - AI原生
+    title: 3GPP Release 19 功能冻结：迈向 6G 的 AI 原生网络
+  News:
+  - desc: OpenAI 宣布其 AI 模型成功证明了离散几何领域长达 80 年的 Erdős 猜想，该证明已被顶级数学期刊接收，这是首次由 AI 完成的足以登上顶级期刊的数学证明，被数学界视为自动推理领域的里程碑突破。
+    tags:
+    - AI
+    - 数学
+    - OpenAI
+    - 突破
+    - 自动推理
+    title: OpenAI 模型解决 80 年离散几何猜想

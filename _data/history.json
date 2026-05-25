@@ -1,4 +1,20 @@
 {
+  "2026-05-26": [
+    "LoongRL: Reinforcement Learning for Advanced Reasoning over Long Contexts",
+    "NVIDIA GeForce RTX 5060 正式上市：Blackwell 主流卡",
+    "Ruby 4.0.5 发布：YJIT 与性能改进",
+    "OpenClaw：个人 AI 助手框架",
+    "3GPP Release 19 功能冻结：迈向 6G 的 AI 原生网络",
+    "SAM 3.1：Meta 发布实时视频分割与跟踪升级版",
+    "朴素贝叶斯分类器 (Naive Bayes Classifier)",
+    "Meta Llama 4：原生多模态开源大模型",
+    "悠木碧",
+    "Intel Core Ultra Series 3 (Panther Lake) 发布：18A 工艺首秀",
+    "OpenAI 模型解决 80 年离散几何猜想",
+    "阿里 Qwen3.7-Max 自主运行 35 小时优化芯片代码",
+    "SiFive Performance P570 Gen3：RVA23 兼容 RISC-V 核心",
+    "Rime Coda TTS：号称终极文本转语音模型"
+  ],
   "2026-05-25": [
     "Wi-Fi 8 (802.11bn) 进入Draft 1.4阶段：超高可靠性与AI原生",
     "NVIDIA Nemotron-Labs-Diffusion：三模态语言模型，单次前向生成6倍令牌",
@@ -142,20 +158,5 @@
     "主成分分析 (Principal Component Analysis, PCA)",
     "百度文心大模型 ERNIE 5.1：预训练成本仅为业界6%的旗舰模型",
     "EvoLM: In Search of Lost Training Dynamics for Language Model Reasoning (NeurIPS 2025 Best Paper)"
-  ],
-  "2026-05-16": [
-    "蚂蚁百灵 Ling-2.6-1T：万亿参数 MoE 开源模型",
-    "支持向量机 (Support Vector Machine, SVM)",
-    "水瀬いのり",
-    "Intel Panther Lake：Core Ultra Series 3 移动处理器登陆",
-    "Principled Coarse-Grained Acceptance for Speculative Decoding in Speech",
-    "nanobot: 超轻量级个人 AI 助手框架",
-    "DeepEyes: Incentivizing 'Thinking with Images' via Reinforcement Learning",
-    "PADE: A Predictor-Free Sparse Attention Accelerator via Unified Execution and Stage Fusion",
-    "WebTransport W3C Working Draft 发布",
-    "阿里巴巴 2026 财年 Q3 财报：平头哥自研 GPU 规模化量产",
-    "Over-Searching in Search-Augmented Large Language Models",
-    "Go 1.26 正式发布：递归泛型与迭代器稳定化",
-    "AMD Radeon RX 9060 XT：Navi 44 中端显卡正式公布"
   ]
 }
