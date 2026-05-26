@@ -1,146 +1,127 @@
 algorithm:
-- desc: 基于贝叶斯定理与特征条件独立假设的概率分类算法，通过先验概率和似然估计后验概率，实现高效分类。尽管假设简单，但在文本分类、垃圾邮件过滤等任务中表现优异，具有计算复杂度低、可解释性强、适用于大规模数据的优点。
+- desc: 一种经典监督学习模型，通过寻找最大间隔超平面实现分类，借助核函数处理非线性问题，理论基础扎实，在高维数据与小样本场景中表现突出。
   tags:
-  - 算法
+  - SVM
   - 机器学习
   - 分类
-  - 概率
-  - 贝叶斯
-  title: 朴素贝叶斯分类器 (Naive Bayes Classifier)
+  - 核方法
+  title: 支持向量机 (Support Vector Machine)
 cv_recommend:
-  agency: 青二プロダクション
-  hometown: 日本千叶县
-  intro: 悠木碧是日本知名女性声优，以其宽广的音域和丰富的角色塑造能力著称。她能够驾驭从幼女到成熟女性、从少年到反派的多元声线，演技细腻且富有爆发力，在业界享有极高评价。其扎实的声音控制与情感投入使每个角色都独具灵魂，被誉为“变色龙声优”。同时她在歌手领域也颇有建树，舞台魅力十足。作为一线声优，悠木碧持续活跃于广播、旁白等多个领域，是声优界标志性人物之一。
-  name: 悠木碧
-date: '2026-05-26'
+  agency: 青二Production
+  hometown: 东京都
+  intro: 佐仓绫音以其清澈多变的声线和细腻的演技广受赞誉。她既能演绎少女的纯真活泼，也能展现成熟女性的沉稳深邃，嗓音辨识度高，爆发力强，情感表达极具张力。在广播、音乐等领域同样活跃，多才多艺的表现为她积累了极高人气，是当今业界最具影响力的声优之一。其扎实的演技功底与不断挑战新类型的姿态，持续拓展着声优工作的可能边界。
+  name: 佐仓绫音
+date: '2026-05-27'
 history:
-- event: 道琼斯工业平均指数首次发布，初始包含 12 只成分股。
-  year: '1896'
-- event: 在中东（伊朗马斯杰德苏莱曼）首次发现石油，开创了该地区石油工业。
-  year: '1908'
-- event: 福特公司第 1500 万辆 T 型车下线，同时宣告该经典车型停产。
-  year: '1927'
-- event: 阿波罗 10 号安全返回地球，完成登月前最后一次全面彩排。
-  year: '1969'
-- event: Netscape 宣布在其浏览器中集成 Java 技术，推动互联网应用兴起。
-  year: '1995'
-- event: Google AlphaGo 以团队形式击败五名世界顶尖围棋棋手，标志 AI 在围棋领域全面超越人类。
-  year: '2017'
+- event: 金门大桥正式通车，成为旧金山地标。
+  year: '1937'
+- event: 德国战列舰俾斯麦号在北大西洋被击沉。
+  year: '1941'
+- event: 义和团运动在北京爆发，围攻外国使馆。
+  year: '1900'
+- event: 中国登山家潘多成为首位从北坡登顶珠峰的女性。
+  year: '1975'
+- event: MIT的Whirlwind计算机正式关闭，标志早期计算时代的结束。
+  year: '1959'
+- event: 克莱斯勒大厦在纽约落成，成为当时世界最高建筑。
+  year: '1930'
 llm:
-- desc: Meta 发布 Llama 4 系列模型，采用原生多模态架构，能够直接处理图像与文本交织输入，在数学推理、多语言理解和视觉问答等基准上达到领先水平，模型权重完全开源并允许商业使用，促进多模态
-    Agent 生态发展。
+- desc: 蚂蚁集团发布万亿级参数开源模型，专为真实复杂任务设计，支持超长上下文推理，在数学、编程等推理基准上表现优异，采用MoE架构，高效训练与部署。
   tags:
   - LLM
-  - Meta
-  - Llama 4
-  - 多模态
   - 开源
-  title: Meta Llama 4：原生多模态开源大模型
+  - 蚂蚁集团
+  - Ring
+  title: 蚂蚁百灵Ring-2.6-1T开源万亿思考模型
 new_project:
-- desc: 一个开源的个人 AI 助手平台，支持多种 LLM 后端与工具集成，可自动化日常任务、代码生成与工作流编排，GitHub 星标数超 374k，活跃社区持续贡献插件，被认为是
-    AI Agent 时代的“个人操作系统”。
+- desc: 开源桌面AI助手框架，集成长期记忆、任务代理、工具调用等功能，支持本地运行，GitHub已获23k+星，是五月以来最受关注的个人AI Agent项目之一。
   tags:
-  - 开源
   - AI Agent
-  - GitHub
-  - 自动化
-  - 个人助手
-  title: OpenClaw：个人 AI 助手框架
-  url: https://github.com/openclaw/openclaw
+  - 开源
+  - 桌面助手
+  - GitHub Trending
+  title: OpenHuman
+  url: https://github.com/tinyhumansai/OpenHuman
 paper:
-- desc: 顶会论文推荐
+- desc: CVPR 2026接收论文，开源视觉语言模型家族，具备视频理解、目标指向与跟踪能力，提供完整模型权重及训练数据，推动可复现的多模态研究。
   tags:
-  - ICLR 2026
-  - Oral
-  - 强化学习
-  - 长上下文推理
-  - NLP
-  title: 'LoongRL: Reinforcement Learning for Advanced Reasoning over Long Contexts'
-  url: https://iclr.cc/virtual/2026/oral/10007440
+  - VLM
+  - 开源
+  - CVPR 2026
+  - 视频理解
+  title: 'Molmo2: Open Weights and Data for Vision-Language Models'
+  url: https://arxiv.org/abs/2601.10611
 tech:
   Arch:
-  - desc: SiFive 发布第 3 代 Performance P570 RISC-V 处理器 IP，完全兼容 RVA23 规范，采用 6 宽乱序执行架构，SPECINT
-      性能相比上代提升 40%，能效比优化显著，面向消费电子、AIoT 及嵌入式应用，进一步推动 RISC-V 在高性能领域的渗透。
+  - desc: 第三代高性能RISC-V核心，基于香山昆明湖架构，性能较上一代翻倍，专为云计算与大芯片场景设计，标志着国产RISC-V在高端计算领域的进一步突破。
     tags:
     - RISC-V
-    - SiFive
-    - CPU IP
-    - 半导体
-    - RVA23
-    title: SiFive Performance P570 Gen3：RVA23 兼容 RISC-V 核心
+    - 处理器
+    - 香山
+    - 国产
+    title: 进迭时空X200 RISC-V处理器核
   Audio:
-  - desc: Rime 发布 Coda TTS，采用全新端到端架构，实现超低延迟流式推理与录音室级别音质，支持多种语言和情感表达，单卡即可实时合成，声称在自然度和响应速度上达到业界最优，面向实时对话系统和内容创作场景。
+  - desc: 阿里通义千问团队开源家族语音合成模型，包含0.6B至1.8B多个参数规模，支持零样本音色克隆与声音设计，提供中文、英文等多语言合成，推理效率高，单卡可流式输出。
     tags:
     - TTS
+    - 开源
     - 语音合成
-    - Rime
-    - 音频AI
-    - 低延迟
-    title: Rime Coda TTS：号称终极文本转语音模型
-  CPU:
-  - desc: Intel 正式推出 Core Ultra Series 3 移动处理器，首发采用 Intel 18A 工艺与 Panther Lake 架构，集成第
-      4 代 NPU 提供高达 48 TOPS 的 AI 算力，支持 LPDDR6 内存，能效比大幅提升，标志着 x86 平台全面进入 AI PC 时代。
-    tags:
-    - CPU
-    - Intel
-    - Panther Lake
-    - 18A
-    - AI PC
-    title: Intel Core Ultra Series 3 (Panther Lake) 发布：18A 工艺首秀
-  Computer Vision:
-  - desc: Meta 推出 Segment Anything Model 3.1，引入多路复用与全局推理机制，大幅提升实时视频检测和跟踪速度，支持同时处理多路视频流，在复杂场景下保持高精度分割，进一步降低计算开销，适用于监控、自动驾驶等时序视觉任务。
-    tags:
-    - 计算机视觉
-    - Meta
-    - SAM 3.1
-    - 视频分割
-    - 实时跟踪
-    title: SAM 3.1：Meta 发布实时视频分割与跟踪升级版
-  GPU:
-  - desc: NVIDIA 于 2026 年 5 月 19 日解禁 GeForce RTX 5060，基于 Blackwell 架构，配备 3840 个 CUDA
-      核心与 12GB GDDR7 显存，支持 DLSS 4 与 Reflex 2，起售价 $299，性能较上代提升约 25%，成为 1080P 高刷游戏新标杆。
-    tags:
-    - GPU
-    - NVIDIA
-    - RTX 5060
-    - Blackwell
-    - GDDR7
-    title: NVIDIA GeForce RTX 5060 正式上市：Blackwell 主流卡
-  Lang:
-  - desc: Ruby 4.0.5 正式版于 2026 年 5 月 20 日发布，主要包含 YJIT 即时编译器的寄存器分配优化、ZJIT 编译器的稳定性修复以及核心库性能提升，进一步降低内存占用，改善多线程并发性能，巩固了
-      Ruby 在高负载 Web 应用中的地位。
-    tags:
-    - Ruby
-    - 编程语言
-    - YJIT
-    - 性能优化
-    - ZJIT
-    title: Ruby 4.0.5 发布：YJIT 与性能改进
-  NLP:
-  - desc: 阿里巴巴发布的 Qwen3.7-Max 语言模型在无人类干预下自主运行 35 小时，成功为其定制 AI 芯片优化底层代码，展示了 LLM 在硬件协同设计中的潜力，模型通过自我迭代生成并验证优化方案，大幅缩短芯片开发周期。
-    tags:
-    - NLP
-    - Alibaba
     - Qwen
-    - AI芯片
-    - 代码优化
-    title: 阿里 Qwen3.7-Max 自主运行 35 小时优化芯片代码
+    title: Qwen3-TTS 开源语音合成模型
+  CPU:
+  - desc: AMD面向AI PC的移动处理器系列，集成XDNA 2 NPU，AI算力高达55 TOPS，支持LPDDR5X内存，最高8核16线程，为Windows
+      11 AI+ PC提供强大支持。
+    tags:
+    - AMD
+    - Ryzen AI
+    - NPU
+    - 移动处理器
+    title: AMD锐龙AI Max 400系列发布
+  Computer Vision:
+  - desc: CVPR 2026 Oral论文，提出视觉测试时训练（TTT）新架构，通过在测试阶段动态更新部分参数，突破传统Transformer的复杂度瓶颈，在多项视觉任务上实现显著性能提升，并大幅降低计算开销。
+    tags:
+    - ViT
+    - Test-Time Training
+    - CVPR 2026
+    - Vision Transformer
+    title: 'ViT³: Unlocking Test-Time Training in Vision'
+  GPU:
+  - desc: 中国首款通过微软WHQL认证的纯国产游戏显卡，支持DirectX 12 Ultimate，配备12GB显存，定位主流游戏市场，首发价3299元，限量1000块。
+    tags:
+    - 国产GPU
+    - 砺算
+    - 显卡
+    - WHQL
+    title: 砺算LX 7G100纯国产游戏显卡
+  Lang:
+  - desc: Go语言最新版本，核心亮点包括new(expr)语法糖落地、工具链智能优化、运行时性能提升，以及标准库的增强，进一步提高了开发效率与编译速度。
+    tags:
+    - Go
+    - 编程语言
+    - 版本发布
+    - 性能优化
+    title: Go 1.26 正式发布
+  NLP:
+  - desc: ACL 2026论文，针对强化学习微调推理中的同质化问题，提出基于迭代信息瓶颈的潜策略优化方法，在数学推理任务中准确率提升5.3%，显著增强探索效率。
+    tags:
+    - RLVR
+    - Information Bottleneck
+    - ACL 2026
+    - Reasoning
+    title: 'IIB-LPO: Latent Policy Optimization via Iterative Information Bottleneck'
   Net:
-  - desc: 3GPP 宣布 Release 19 标准功能冻结，重点引入 AI/ML 增强、扩展现实 (XR) 优化、卫星接入集成以及更高精度的定位服务，标志着
-      5G-Advanced 最后阶段的完成，并为 6G 研究提供关键基线，预计 2026 年商用部署启动。
+  - desc: 智谱推出面向大模型推理的Spine-Leaf简化网络架构，通过端口虚拟化与拓扑优化，将同等硬件投入下的有效算力提升15%，有效破解推理阶段的网络瓶颈。
     tags:
-    - 5G
-    - 6G
-    - 3GPP
-    - 通信标准
-    - AI原生
-    title: 3GPP Release 19 功能冻结：迈向 6G 的 AI 原生网络
+    - 网络架构
+    - 大模型推理
+    - 智谱
+    - 数据中心
+    title: 智谱ZCube：大模型推理网络架构
   News:
-  - desc: OpenAI 宣布其 AI 模型成功证明了离散几何领域长达 80 年的 Erdős 猜想，该证明已被顶级数学期刊接收，这是首次由 AI 完成的足以登上顶级期刊的数学证明，被数学界视为自动推理领域的里程碑突破。
+  - desc: 谷歌内部75%的新代码已由AI生成，工程师角色转向审核；同时公布第八代TPU，训练与推理分离设计，性能大幅提升，直接挑战英伟达在AI芯片的统治地位。
     tags:
-    - AI
-    - 数学
-    - OpenAI
-    - 突破
-    - 自动推理
-    title: OpenAI 模型解决 80 年离散几何猜想
+    - Google
+    - TPU
+    - AI代码
+    - 芯片
+    title: 谷歌披露75%新代码由AI生成，第八代TPU亮相

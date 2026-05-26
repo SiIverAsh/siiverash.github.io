@@ -1,4 +1,20 @@
 {
+  "2026-05-27": [
+    "智谱ZCube：大模型推理网络架构",
+    "蚂蚁百灵Ring-2.6-1T开源万亿思考模型",
+    "ViT³: Unlocking Test-Time Training in Vision",
+    "Molmo2: Open Weights and Data for Vision-Language Models",
+    "谷歌披露75%新代码由AI生成，第八代TPU亮相",
+    "OpenHuman",
+    "佐仓绫音",
+    "Go 1.26 正式发布",
+    "进迭时空X200 RISC-V处理器核",
+    "Qwen3-TTS 开源语音合成模型",
+    "砺算LX 7G100纯国产游戏显卡",
+    "支持向量机 (Support Vector Machine)",
+    "IIB-LPO: Latent Policy Optimization via Iterative Information Bottleneck",
+    "AMD锐龙AI Max 400系列发布"
+  ],
   "2026-05-26": [
     "LoongRL: Reinforcement Learning for Advanced Reasoning over Long Contexts",
     "NVIDIA GeForce RTX 5060 正式上市：Blackwell 主流卡",
@@ -142,21 +158,5 @@
     "OpenAI GPT-5.5：2026年4月最强Agentic旗舰模型发布",
     "中国移动5G-A超级上行商用网络速率突破1Gbps",
     "deer-flow：字节跳动开源超长程SuperAgent框架"
-  ],
-  "2026-05-17": [
-    "进迭时空 K3：全球首款RVA23规范量产RISC-V AI CPU",
-    "AMD Instinct MI350P：首款PCIe形态CDNA4加速卡，144GB HBM3E",
-    "LucidFlux: 基于大规模扩散Transformer的无文本描述通用图像复原 (ICLR 2026 Outstanding Paper)",
-    "Intel Core Ultra 200S Plus：Arrow Lake Refresh桌面处理器登场",
-    "Linux Kernel 原生 QUIC 协议栈：net-next v11 补丁系列",
-    "阶跃星辰 StepAudio 2.5 Realtime：情绪感知实时语音大模型",
-    "CoALM: 统一对话与工具使用的对话式Agent语言模型 (ACL 2025)",
-    "Hermes Agent: 带持久记忆的开源AI Agent框架",
-    "早見沙織",
-    "Python 3.14.5 正式发布：JIT编译器与无GIL自由线程稳定化",
-    "中国《人工智能终端智能化分级》系列国家标准正式发布",
-    "主成分分析 (Principal Component Analysis, PCA)",
-    "百度文心大模型 ERNIE 5.1：预训练成本仅为业界6%的旗舰模型",
-    "EvoLM: In Search of Lost Training Dynamics for Language Model Reasoning (NeurIPS 2025 Best Paper)"
   ]
 }
