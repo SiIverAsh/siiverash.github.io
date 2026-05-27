@@ -1,127 +1,138 @@
 algorithm:
-- desc: 一种经典监督学习模型，通过寻找最大间隔超平面实现分类，借助核函数处理非线性问题，理论基础扎实，在高维数据与小样本场景中表现突出。
+- desc: 随机森林是一种通过 Bagging 集成多棵决策树的算法。每棵树在随机子样本和随机特征子集上训练，最终通过投票（分类）或平均（回归）输出结果。它具有抗过拟合、可处理高维数据、能评估特征重要性等优点，广泛应用于金融风控、生物信息学等领域。
   tags:
-  - SVM
   - 机器学习
-  - 分类
-  - 核方法
-  title: 支持向量机 (Support Vector Machine)
+  - 集成学习
+  - 决策树
+  - Bagging
+  title: 随机森林 (Random Forest)
 cv_recommend:
-  agency: 青二Production
+  agency: 大泽事务所
   hometown: 东京都
-  intro: 佐仓绫音以其清澈多变的声线和细腻的演技广受赞誉。她既能演绎少女的纯真活泼，也能展现成熟女性的沉稳深邃，嗓音辨识度高，爆发力强，情感表达极具张力。在广播、音乐等领域同样活跃，多才多艺的表现为她积累了极高人气，是当今业界最具影响力的声优之一。其扎实的演技功底与不断挑战新类型的姿态，持续拓展着声优工作的可能边界。
-  name: 佐仓绫音
-date: '2026-05-27'
+  intro: 日本知名女性声优，以其清澈透明且富有辨识度的声线著称，音域宽广，可塑性极强。能精准驾驭从天真无邪的少女到冷静沉着的知性角色，乃至腹黑反派等多种声线，情感表达细腻自然。多次获得声优大赏，在业内享有极高声誉，被誉为‘声优界的奇迹’，同时作为歌手也取得卓越成就，是横跨声优与音乐两界的顶级艺人。
+  name: 花泽香菜
+date: '2026-05-28'
 history:
-- event: 金门大桥正式通车，成为旧金山地标。
+- event: 大众汽车公司在德国沃尔夫斯堡成立，最初由纳粹政府出资，旨在生产平民汽车。
   year: '1937'
-- event: 德国战列舰俾斯麦号在北大西洋被击沉。
-  year: '1941'
-- event: 义和团运动在北京爆发，围攻外国使馆。
-  year: '1900'
-- event: 中国登山家潘多成为首位从北坡登顶珠峰的女性。
-  year: '1975'
-- event: MIT的Whirlwind计算机正式关闭，标志早期计算时代的结束。
+- event: NASA 选出美国首批七名水星计划宇航员，包括艾伦·谢泼德和约翰·格伦，开启载人航天时代。
   year: '1959'
-- event: 克莱斯勒大厦在纽约落成，成为当时世界最高建筑。
-  year: '1930'
+- event: 巴勒斯坦解放组织（PLO）在耶路撒冷正式成立，确立以武装斗争建立巴勒斯坦国的目标。
+  year: '1964'
+- event: 巴基斯坦成功进行五次核试验，回应印度两周前的核试验，引发国际社会谴责与制裁。
+  year: '1998'
+- event: 尼泊尔制宪会议以压倒性多数票废除君主制，宣布成立联邦民主共和国。
+  year: '2008'
+- event: SpaceX 成功实现猎鹰 9 号火箭第三次海上平台回收，标志着可重复使用火箭技术的成熟。
+  year: '2016'
 llm:
-- desc: 蚂蚁集团发布万亿级参数开源模型，专为真实复杂任务设计，支持超长上下文推理，在数学、编程等推理基准上表现优异，采用MoE架构，高效训练与部署。
+- desc: OpenAI 于 2026 年 3 月发布 GPT-5，支持文本、图像、音频和视频的任意组合输入，上下文窗口扩展至 1M tokens。模型在复杂推理（如
+    GPQA、ARC）上较 GPT-4 提升超过 40%，内置工具使用和代码解释器能力，标志着 AGI 道路上的重要里程碑。
   tags:
   - LLM
-  - 开源
-  - 蚂蚁集团
-  - Ring
-  title: 蚂蚁百灵Ring-2.6-1T开源万亿思考模型
+  - GPT-5
+  - 多模态
+  - OpenAI
+  title: GPT-5：OpenAI 的多模态通用推理模型
 new_project:
-- desc: 开源桌面AI助手框架，集成长期记忆、任务代理、工具调用等功能，支持本地运行，GitHub已获23k+星，是五月以来最受关注的个人AI Agent项目之一。
+- desc: Dify 是一个开源的 LLM 应用开发平台，融合了后端即服务（BaaS）和 LLMOps 理念。开发者可通过可视化 Prompt 编排、RAG 管道构建和
+    Agent 框架快速创建 AI 应用，支持 GPT、Claude、Llama 等主流模型。项目持续迭代，GitHub 星数超 5 万。
   tags:
-  - AI Agent
   - 开源
-  - 桌面助手
-  - GitHub Trending
-  title: OpenHuman
-  url: https://github.com/tinyhumansai/OpenHuman
+  - LLM
+  - 低代码
+  - RAG
+  title: 'Dify: 开源 LLM 应用开发平台'
+  url: https://github.com/langgenius/dify
 paper:
-- desc: CVPR 2026接收论文，开源视觉语言模型家族，具备视频理解、目标指向与跟踪能力，提供完整模型权重及训练数据，推动可复现的多模态研究。
+- desc: 该技术报告详细介绍了 DeepSeek-V3 的架构与训练方法。模型采用 Multi-head Latent Attention (MLA) 和 DeepSeekMoE
+    结构，总参数量 671B，每个 token 仅激活 37B 参数。通过 FP8 混合精度训练和辅助损失实现了高效的负载均衡，在数学、代码和中文理解等多项基准上达到开源模型
+    SOTA。
   tags:
-  - VLM
+  - LLM
+  - MoE
+  - DeepSeek
   - 开源
-  - CVPR 2026
-  - 视频理解
-  title: 'Molmo2: Open Weights and Data for Vision-Language Models'
-  url: https://arxiv.org/abs/2601.10611
+  title: 'DeepSeek-V3: A Strong, Mixture-of-Experts Language Model'
+  url: https://arxiv.org/abs/2412.19437
 tech:
   Arch:
-  - desc: 第三代高性能RISC-V核心，基于香山昆明湖架构，性能较上一代翻倍，专为云计算与大芯片场景设计，标志着国产RISC-V在高端计算领域的进一步突破。
+  - desc: JEDEC 于 2026 年 3 月正式发布 HBM4 内存标准，每堆栈带宽高达 1.6 TB/s，支持 16-Hi 堆叠，数据速率达 8 Gbps/pin。新标准引入双通道独立接口，为下一代
+      AI 加速器和 HPC 处理器提供前所未有的内存带宽。
     tags:
-    - RISC-V
-    - 处理器
-    - 香山
-    - 国产
-    title: 进迭时空X200 RISC-V处理器核
+    - HBM4
+    - 内存
+    - AI硬件
+    - JEDEC
+    title: JEDEC 发布 HBM4 标准：1.6 TB/s 带宽
   Audio:
-  - desc: 阿里通义千问团队开源家族语音合成模型，包含0.6B至1.8B多个参数规模，支持零样本音色克隆与声音设计，提供中文、英文等多语言合成，推理效率高，单卡可流式输出。
+  - desc: Stability AI 于 2026 年 2 月发布 Stable Audio 2.0，基于扩散变换器架构，支持 44.1kHz 立体声输出，可生成长达
+      3 分钟的结构化音乐。模型在 8000 万参数下实现了可控音乐生成，允许用户通过文本提示指定风格、节奏和乐器。
     tags:
-    - TTS
+    - 音频生成
+    - 扩散模型
     - 开源
-    - 语音合成
-    - Qwen
-    title: Qwen3-TTS 开源语音合成模型
+    - AI音乐
+    title: Stable Audio 2.0：开源音乐生成模型
   CPU:
-  - desc: AMD面向AI PC的移动处理器系列，集成XDNA 2 NPU，AI算力高达55 TOPS，支持LPDDR5X内存，最高8核16线程，为Windows
-      11 AI+ PC提供强大支持。
+  - desc: 2025 年 11 月发布的 Ryzen 7 9800X3D 采用 Zen 5 架构，8 核 16 线程，基频 4.7 GHz，加速频率 5.2
+      GHz。通过堆叠 64MB 3D V-Cache 实现总计 96MB L3 缓存，在游戏中相较竞品提供 15-20% 的帧率优势，TDP 120W。
     tags:
+    - CPU
     - AMD
-    - Ryzen AI
-    - NPU
-    - 移动处理器
-    title: AMD锐龙AI Max 400系列发布
+    - 3D V-Cache
+    - Zen 5
+    title: AMD Ryzen 7 9800X3D：3D V-Cache 游戏利器
   Computer Vision:
-  - desc: CVPR 2026 Oral论文，提出视觉测试时训练（TTT）新架构，通过在测试阶段动态更新部分参数，突破传统Transformer的复杂度瓶颈，在多项视觉任务上实现显著性能提升，并大幅降低计算开销。
+  - desc: Anthropic 于 2026 年 2 月发布的 Claude 4 模型支持原生多模态视觉输入，可处理高达 800 万像素的图像，在文档解析、图表理解和复杂视觉推理任务中达到人类水平。其视觉编码器基于改进的
+      ViT 架构，结合长上下文窗口（200K tokens），实现了细粒度图像-文本对齐。
     tags:
+    - 多模态
+    - 视觉理解
+    - Claude
     - ViT
-    - Test-Time Training
-    - CVPR 2026
-    - Vision Transformer
-    title: 'ViT³: Unlocking Test-Time Training in Vision'
+    title: Claude 4 Vision：高分辨率多模态视觉理解
   GPU:
-  - desc: 中国首款通过微软WHQL认证的纯国产游戏显卡，支持DirectX 12 Ultimate，配备12GB显存，定位主流游戏市场，首发价3299元，限量1000块。
+  - desc: 2025 年 12 月发布的 RX 9070 XT 基于 RDNA 4 架构，配备 64 个计算单元、16GB GDDR6 显存和 256-bit
+      位宽，游戏频率可达 2.8 GHz。支持 DisplayPort 2.1 和 AV1 硬件编码，TBP 为 260W，定位 1440p 高刷游戏市场。
     tags:
-    - 国产GPU
-    - 砺算
+    - GPU
+    - AMD
+    - RDNA 4
     - 显卡
-    - WHQL
-    title: 砺算LX 7G100纯国产游戏显卡
+    title: AMD Radeon RX 9070 XT：RDNA 4 中高端主力
   Lang:
-  - desc: Go语言最新版本，核心亮点包括new(expr)语法糖落地、工具链智能优化、运行时性能提升，以及标准库的增强，进一步提高了开发效率与编译速度。
+  - desc: 2026 年 4 月发布的 Rust 1.86 稳定了期待已久的 async fn in traits 特性，允许在 trait 中定义异步方法。同时改进了编译性能（增量编译速度提升
+      15%）并扩展了 const generics 的支持，进一步巩固其在系统编程领域的优势。
     tags:
-    - Go
+    - Rust
     - 编程语言
-    - 版本发布
-    - 性能优化
-    title: Go 1.26 正式发布
+    - 系统编程
+    - 异步
+    title: Rust 1.86 正式发布
   NLP:
-  - desc: ACL 2026论文，针对强化学习微调推理中的同质化问题，提出基于迭代信息瓶颈的潜策略优化方法，在数学推理任务中准确率提升5.3%，显著增强探索效率。
+  - desc: 2026 年 4 月发布的 Transformers 5.0 引入了统一的多模态模型 API，支持图像、视频、音频与文本的联合推理。新增 Pipeline
+      并行和 FP8 量化推理，显著降低大模型部署门槛。框架已集成最新的状态空间模型（Mamba-2）和专家混合（MoE）架构。
     tags:
-    - RLVR
-    - Information Bottleneck
-    - ACL 2026
-    - Reasoning
-    title: 'IIB-LPO: Latent Policy Optimization via Iterative Information Bottleneck'
+    - NLP
+    - Transformers
+    - 多模态
+    - 开源
+    title: Hugging Face Transformers 5.0 发布
   Net:
-  - desc: 智谱推出面向大模型推理的Spine-Leaf简化网络架构，通过端口虚拟化与拓扑优化，将同等硬件投入下的有效算力提升15%，有效破解推理阶段的网络瓶颈。
+  - desc: 2026 年 2 月推出的 NVIDIA Spectrum-4 交换机提供 64 个 800GbE 端口，总吞吐量 51.2Tbps，支持 RoCE
+      和 NVIDIA 的 SHARP 网络计算。针对 AI 集群设计，实现微秒级延迟和自适应路由，为万卡级 GPU 互联提供网络基座。
     tags:
-    - 网络架构
-    - 大模型推理
-    - 智谱
     - 数据中心
-    title: 智谱ZCube：大模型推理网络架构
+    - AI 网络
+    - 800G
+    - 交换芯片
+    title: NVIDIA Spectrum-4 交换机：面向 AI 的 800G 以太网
   News:
-  - desc: 谷歌内部75%的新代码已由AI生成，工程师角色转向审核；同时公布第八代TPU，训练与推理分离设计，性能大幅提升，直接挑战英伟达在AI芯片的统治地位。
+  - desc: 美国商务部于 2026 年 3 月正式批准向英特尔提供 85 亿美元直接资金，用于亚利桑那州和俄亥俄州的先进制程晶圆厂建设。该补贴是《芯片与科学法案》下最大单笔拨款，旨在增强美国本土半导体制造能力。
     tags:
-    - Google
-    - TPU
-    - AI代码
-    - 芯片
-    title: 谷歌披露75%新代码由AI生成，第八代TPU亮相
+    - 芯片法案
+    - 英特尔
+    - 半导体
+    - 美国制造
+    title: 英特尔获 85 亿美元 CHIPS 法案补贴

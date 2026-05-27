@@ -1,4 +1,20 @@
 {
+  "2026-05-28": [
+    "GPT-5：OpenAI 的多模态通用推理模型",
+    "随机森林 (Random Forest)",
+    "DeepSeek-V3: A Strong, Mixture-of-Experts Language Model",
+    "Rust 1.86 正式发布",
+    "AMD Radeon RX 9070 XT：RDNA 4 中高端主力",
+    "英特尔获 85 亿美元 CHIPS 法案补贴",
+    "花泽香菜",
+    "JEDEC 发布 HBM4 标准：1.6 TB/s 带宽",
+    "Claude 4 Vision：高分辨率多模态视觉理解",
+    "AMD Ryzen 7 9800X3D：3D V-Cache 游戏利器",
+    "NVIDIA Spectrum-4 交换机：面向 AI 的 800G 以太网",
+    "Stable Audio 2.0：开源音乐生成模型",
+    "Dify: 开源 LLM 应用开发平台",
+    "Hugging Face Transformers 5.0 发布"
+  ],
   "2026-05-27": [
     "智谱ZCube：大模型推理网络架构",
     "蚂蚁百灵Ring-2.6-1T开源万亿思考模型",
@@ -142,21 +158,5 @@
     "花澤香菜（はなざわ かな）",
     "Google Gemma 4：バイト単位で「最も高性能」なオープンモデル",
     "AMD Instinct MI430X：CDNA5アーキテクチャのFP64特化型HPCアクセラレータ"
-  ],
-  "2026-05-18": [
-    "AMD EPYC Venice (Zen 6)：业界首款2nm服务器CPU，256核巨兽",
-    "Qwen3-TTS：阿里云开源流式语音合成系列模型",
-    "Qwen3.6-27B：270亿参数稠密开源旗舰编码模型",
-    "JDK 25 正式发布：结构化并发与作用域值持续演进",
-    "VGGT: Visual Geometry Grounded Transformer (CVPR 2025 Best Paper)",
-    "上坂すみれ (Uesaka Sumire)",
-    "国家网信办发布《智能体规范应用与创新发展实施意见》",
-    "Intel Diamond Rapids Xeon 7：192核服务器CPU架构曝光",
-    "随机森林 (Random Forest)",
-    "NVIDIA GeForce RTX 5060 Ti：Blackwell中端主力正式登场",
-    "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free (NeurIPS 2025 Best Paper)",
-    "OpenAI GPT-5.5：2026年4月最强Agentic旗舰模型发布",
-    "中国移动5G-A超级上行商用网络速率突破1Gbps",
-    "deer-flow：字节跳动开源超长程SuperAgent框架"
   ]
 }
