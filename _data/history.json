@@ -1,4 +1,20 @@
 {
+  "2026-05-29": [
+    "NVIDIA GeForce RTX 5070 Ti",
+    "Qwen2.5-72B-Instruct",
+    "Qwen2.5-VL",
+    "水瀬いのり",
+    "Gemma 3 27B",
+    "AMD Ryzen 9 9950X3D",
+    "AMD Zen 5 微架构",
+    "逻辑回归 (Logistic Regression)",
+    "欧盟AI法案正式生效",
+    "3GPP Release 18 (5G-Advanced)",
+    "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "TypeScript 5.7",
+    "LLaMA-Factory",
+    "Moshi"
+  ],
   "2026-05-28": [
     "GPT-5：OpenAI 的多模态通用推理模型",
     "随机森林 (Random Forest)",
@@ -142,21 +158,5 @@
     "石見舞菜香",
     "OmniVoice：小米开源全语种零样本语音克隆TTS",
     "Calibrating Beyond English: Language Diversity for Better Quantized Multilingual LLMs"
-  ],
-  "2026-05-19": [
-    "Mojo 1.0 Beta：所有権システムと借用チェッカーを搭載",
-    "HRM-Text：Sapient Intelligenceの脳模倣型基盤モデル",
-    "Latent Speech-Text Transformer：ICLR 2026 Oral採択",
-    "中国、AIエージェントのガバナンス加速：新たな安全リスクに対応",
-    "browser-use/browser-use",
-    "vCXLGen：CXLブリッジ自動合成・検証フレームワーク（ASPLOS 2026 Best Paper）",
-    "Sapiens2：Meta 1K解像度ビジョン基盤モデル",
-    "LLMs Get Lost In Multi-Turn Conversation",
-    "DBSCAN（Density-Based Spatial Clustering of Applications with Noise）",
-    "Wi-Fi 8 (IEEE 802.11bn)：超高信頼性無線LAN規格",
-    "Intel Clearwater Forest「Xeon 6+」：288コア・Intel 18Aプロセス",
-    "花澤香菜（はなざわ かな）",
-    "Google Gemma 4：バイト単位で「最も高性能」なオープンモデル",
-    "AMD Instinct MI430X：CDNA5アーキテクチャのFP64特化型HPCアクセラレータ"
   ]
 }

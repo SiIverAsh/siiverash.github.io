@@ -1,138 +1,132 @@
 algorithm:
-- desc: 随机森林是一种通过 Bagging 集成多棵决策树的算法。每棵树在随机子样本和随机特征子集上训练，最终通过投票（分类）或平均（回归）输出结果。它具有抗过拟合、可处理高维数据、能评估特征重要性等优点，广泛应用于金融风控、生物信息学等领域。
+- desc: 经典二分类算法，通过sigmoid函数将线性输出映射为概率，利用对数损失进行最大似然估计，具有高可解释性与低计算开销，是很多现代分类器的基础。
   tags:
-  - 机器学习
-  - 集成学习
-  - 决策树
-  - Bagging
-  title: 随机森林 (Random Forest)
+  - 分类
+  - 监督学习
+  - 统计学习
+  - 可解释性
+  title: 逻辑回归 (Logistic Regression)
 cv_recommend:
-  agency: 大泽事务所
+  agency: ソニー・ミュージックアーティスツ
   hometown: 东京都
-  intro: 日本知名女性声优，以其清澈透明且富有辨识度的声线著称，音域宽广，可塑性极强。能精准驾驭从天真无邪的少女到冷静沉着的知性角色，乃至腹黑反派等多种声线，情感表达细腻自然。多次获得声优大赏，在业内享有极高声誉，被誉为‘声优界的奇迹’，同时作为歌手也取得卓越成就，是横跨声优与音乐两界的顶级艺人。
-  name: 花泽香菜
-date: '2026-05-28'
+  intro: 水濑祈以清亮甜美的声线著称，音质通透且辨识度极高。她善于通过细腻的呼吸与抑扬捕捉角色内心变化，既能诠释活泼元气的少女，也能驾驭温柔内向的复杂人物，情绪转换自然且极具感染力。作为声优歌手，她的歌唱能力同样出色，多次举办个人演唱会，音乐作品销量斐然。近年在演技上持续突破，挑战更多元的角色类型，展现出强烈的成长意愿，成为平成后期最具代表性的女性声优之一。
+  name: 水瀬いのり
+date: '2026-05-29'
 history:
-- event: 大众汽车公司在德国沃尔夫斯堡成立，最初由纳粹政府出资，旨在生产平民汽车。
-  year: '1937'
-- event: NASA 选出美国首批七名水星计划宇航员，包括艾伦·谢泼德和约翰·格伦，开启载人航天时代。
-  year: '1959'
-- event: 巴勒斯坦解放组织（PLO）在耶路撒冷正式成立，确立以武装斗争建立巴勒斯坦国的目标。
-  year: '1964'
-- event: 巴基斯坦成功进行五次核试验，回应印度两周前的核试验，引发国际社会谴责与制裁。
-  year: '1998'
-- event: 尼泊尔制宪会议以压倒性多数票废除君主制，宣布成立联邦民主共和国。
-  year: '2008'
-- event: SpaceX 成功实现猎鹰 9 号火箭第三次海上平台回收，标志着可重复使用火箭技术的成熟。
-  year: '2016'
+- event: 英国天文学家爱丁顿通过日全食观测，首次验证爱因斯坦广义相对论中的光线弯曲预言。
+  year: '1919'
+- event: 新西兰人埃德蒙·希拉里与夏尔巴人丹增·诺尔盖首次成功登顶珠穆朗玛峰。
+  year: '1953'
+- event: 微软发布Windows 2.1，增加对Intel 80286处理器的支持，分为286和386版本。
+  year: '1988'
+- event: 法国全民公投以54.87%的反对票否决《欧盟宪法条约》，引发欧洲一体化进程严重危机。
+  year: '2005'
+- event: Facebook IPO后第二个交易日股价暴跌11%，触发市场对科技股高估值的担忧。
+  year: '2012'
+- event: 国际足联多名高级官员在苏黎世因腐败指控被捕，FIFA面临史上最大丑闻。
+  year: '2015'
 llm:
-- desc: OpenAI 于 2026 年 3 月发布 GPT-5，支持文本、图像、音频和视频的任意组合输入，上下文窗口扩展至 1M tokens。模型在复杂推理（如
-    GPQA、ARC）上较 GPT-4 提升超过 40%，内置工具使用和代码解释器能力，标志着 AGI 道路上的重要里程碑。
+- desc: 阿里云2024年9月发布的72B开源指令模型，支持29种语言与128K上下文，在数学、代码和通用推理上大幅提升，提供丰富的量化版本以便部署。
   tags:
+  - 阿里云
+  - 开源
   - LLM
-  - GPT-5
-  - 多模态
-  - OpenAI
-  title: GPT-5：OpenAI 的多模态通用推理模型
+  - 多语言
+  title: Qwen2.5-72B-Instruct
 new_project:
-- desc: Dify 是一个开源的 LLM 应用开发平台，融合了后端即服务（BaaS）和 LLMOps 理念。开发者可通过可视化 Prompt 编排、RAG 管道构建和
-    Agent 框架快速创建 AI 应用，支持 GPT、Claude、Llama 等主流模型。项目持续迭代，GitHub 星数超 5 万。
+- desc: 低代码大模型微调框架，支持LLaMA、Qwen、ChatGLM等百种模型，集成LoRA、QLoRA、全量微调等方法，提供Web UI，大幅降低微调门槛。
   tags:
+  - LLaMA
+  - Fine-tuning
+  - LoRA
   - 开源
-  - LLM
-  - 低代码
-  - RAG
-  title: 'Dify: 开源 LLM 应用开发平台'
-  url: https://github.com/langgenius/dify
+  title: LLaMA-Factory
+  url: https://github.com/hiyouga/LLaMA-Factory
 paper:
-- desc: 该技术报告详细介绍了 DeepSeek-V3 的架构与训练方法。模型采用 Multi-head Latent Attention (MLA) 和 DeepSeekMoE
-    结构，总参数量 671B，每个 token 仅激活 37B 参数。通过 FP8 混合精度训练和辅助损失实现了高效的负载均衡，在数学、代码和中文理解等多项基准上达到开源模型
-    SOTA。
+- desc: 顶会论文推荐：NeurIPS 2023接收论文，提出无需显式奖励模型的RLHF替代方法，直接通过偏好对优化语言模型，简化对齐流程并提升稳定性。
   tags:
-  - LLM
-  - MoE
-  - DeepSeek
-  - 开源
-  title: 'DeepSeek-V3: A Strong, Mixture-of-Experts Language Model'
-  url: https://arxiv.org/abs/2412.19437
+  - RLHF
+  - Preference Optimization
+  - LLM Alignment
+  - NeurIPS 2023
+  title: 'Direct Preference Optimization: Your Language Model is Secretly a Reward
+    Model'
+  url: https://arxiv.org/abs/2305.18290
 tech:
   Arch:
-  - desc: JEDEC 于 2026 年 3 月正式发布 HBM4 内存标准，每堆栈带宽高达 1.6 TB/s，支持 16-Hi 堆叠，数据速率达 8 Gbps/pin。新标准引入双通道独立接口，为下一代
-      AI 加速器和 HPC 处理器提供前所未有的内存带宽。
+  - desc: 2024年6月随Ryzen 9000系列揭晓，采用TSMC 4nm工艺，双流水线前端大幅提升分支预测与取指带宽，支持完整AVX-512数据路径，IPC相比Zen
+      4提升约16%。
     tags:
-    - HBM4
-    - 内存
-    - AI硬件
-    - JEDEC
-    title: JEDEC 发布 HBM4 标准：1.6 TB/s 带宽
-  Audio:
-  - desc: Stability AI 于 2026 年 2 月发布 Stable Audio 2.0，基于扩散变换器架构，支持 44.1kHz 立体声输出，可生成长达
-      3 分钟的结构化音乐。模型在 8000 万参数下实现了可控音乐生成，允许用户通过文本提示指定风格、节奏和乐器。
-    tags:
-    - 音频生成
-    - 扩散模型
-    - 开源
-    - AI音乐
-    title: Stable Audio 2.0：开源音乐生成模型
-  CPU:
-  - desc: 2025 年 11 月发布的 Ryzen 7 9800X3D 采用 Zen 5 架构，8 核 16 线程，基频 4.7 GHz，加速频率 5.2
-      GHz。通过堆叠 64MB 3D V-Cache 实现总计 96MB L3 缓存，在游戏中相较竞品提供 15-20% 的帧率优势，TDP 120W。
-    tags:
-    - CPU
     - AMD
-    - 3D V-Cache
     - Zen 5
-    title: AMD Ryzen 7 9800X3D：3D V-Cache 游戏利器
-  Computer Vision:
-  - desc: Anthropic 于 2026 年 2 月发布的 Claude 4 模型支持原生多模态视觉输入，可处理高达 800 万像素的图像，在文档解析、图表理解和复杂视觉推理任务中达到人类水平。其视觉编码器基于改进的
-      ViT 架构，结合长上下文窗口（200K tokens），实现了细粒度图像-文本对齐。
+    - 4nm
+    - AVX-512
+    title: AMD Zen 5 微架构
+  Audio:
+  - desc: 法国Kyutai实验室2024年7月开源的全双工语音对话模型，支持实时语音输入与输出，延迟低至200ms，具备情感表达与多轮对话能力，采用Helium
+      7B作为核心语言模型。
     tags:
-    - 多模态
-    - 视觉理解
-    - Claude
-    - ViT
-    title: Claude 4 Vision：高分辨率多模态视觉理解
-  GPU:
-  - desc: 2025 年 12 月发布的 RX 9070 XT 基于 RDNA 4 架构，配备 64 个计算单元、16GB GDDR6 显存和 256-bit
-      位宽，游戏频率可达 2.8 GHz。支持 DisplayPort 2.1 和 AV1 硬件编码，TBP 为 260W，定位 1440p 高刷游戏市场。
-    tags:
-    - GPU
-    - AMD
-    - RDNA 4
-    - 显卡
-    title: AMD Radeon RX 9070 XT：RDNA 4 中高端主力
-  Lang:
-  - desc: 2026 年 4 月发布的 Rust 1.86 稳定了期待已久的 async fn in traits 特性，允许在 trait 中定义异步方法。同时改进了编译性能（增量编译速度提升
-      15%）并扩展了 const generics 的支持，进一步巩固其在系统编程领域的优势。
-    tags:
-    - Rust
-    - 编程语言
-    - 系统编程
-    - 异步
-    title: Rust 1.86 正式发布
-  NLP:
-  - desc: 2026 年 4 月发布的 Transformers 5.0 引入了统一的多模态模型 API，支持图像、视频、音频与文本的联合推理。新增 Pipeline
-      并行和 FP8 量化推理，显著降低大模型部署门槛。框架已集成最新的状态空间模型（Mamba-2）和专家混合（MoE）架构。
-    tags:
-    - NLP
-    - Transformers
-    - 多模态
+    - Kyutai
+    - 语音对话
     - 开源
-    title: Hugging Face Transformers 5.0 发布
+    - 低延迟
+    title: Moshi
+  CPU:
+  - desc: 2025年3月发布，基于Zen 5架构，16核32线程，搭载第二代3D V-Cache，总L3缓存高达128MB，AM5平台，TDP 170W，专为高帧率游戏与内容创作优化。
+    tags:
+    - AMD
+    - Zen 5
+    - 3D V-Cache
+    - AM5
+    title: AMD Ryzen 9 9950X3D
+  Computer Vision:
+  - desc: 阿里云于2025年1月发布的多模态视觉语言模型，支持动态分辨率（最高支持百万像素图像）、视频理解、多图交错推理与定位。采用ViT-G与Qwen2.5
+      LLM结合，擅长OCR、文档解析与复杂视觉问答。
+    tags:
+    - Qwen
+    - Vision-Language Model
+    - 多模态
+    - 文档理解
+    title: Qwen2.5-VL
+  GPU:
+  - desc: 2025年2月上市，Blackwell架构GB203核心，拥有8960个CUDA核心，配备16GB GDDR7显存（256-bit位宽），总板功耗300W，支持DLSS
+      4与Reflex 2技术。
+    tags:
+    - NVIDIA
+    - Blackwell
+    - GDDR7
+    - RTX 50
+    title: NVIDIA GeForce RTX 5070 Ti
+  Lang:
+  - desc: Microsoft于2024年11月发布的TypeScript新版本，引入Checked Indexed Access（--noUncheckedIndexedAccess
+      增强）、支持Node.js Loader Hooks，以及类型系统在模板字符串上的细化。
+    tags:
+    - Microsoft
+    - TypeScript
+    - 类型系统
+    - JavaScript
+    title: TypeScript 5.7
+  NLP:
+  - desc: Google于2025年3月发布的开源语言模型，拥有270亿参数，支持多语言，上下文长度达128K。基于与Gemini系列相同的技术栈，在推理、代码和数学任务上表现优异，同时提供高效的量化版本。
+    tags:
+    - Google
+    - 开源
+    - 语言模型
+    - 多语言
+    title: Gemma 3 27B
   Net:
-  - desc: 2026 年 2 月推出的 NVIDIA Spectrum-4 交换机提供 64 个 800GbE 端口，总吞吐量 51.2Tbps，支持 RoCE
-      和 NVIDIA 的 SHARP 网络计算。针对 AI 集群设计，实现微秒级延迟和自适应路由，为万卡级 GPU 互联提供网络基座。
+  - desc: 2024年6月正式冻结的5G-Advanced首个标准，引入AI/ML增强网络优化、扩展现实（XR）传输优化、低延迟高可靠通信增强，以及面向6G演进的网络架构基础。
     tags:
-    - 数据中心
-    - AI 网络
-    - 800G
-    - 交换芯片
-    title: NVIDIA Spectrum-4 交换机：面向 AI 的 800G 以太网
+    - 5G-Advanced
+    - 3GPP
+    - NR
+    - AI/ML
+    title: 3GPP Release 18 (5G-Advanced)
   News:
-  - desc: 美国商务部于 2026 年 3 月正式批准向英特尔提供 85 亿美元直接资金，用于亚利桑那州和俄亥俄州的先进制程晶圆厂建设。该补贴是《芯片与科学法案》下最大单笔拨款，旨在增强美国本土半导体制造能力。
+  - desc: 2024年8月1日，全球首部全面人工智能法规《AI Act》在欧盟生效，按风险等级对AI系统进行分类监管，禁止高风险应用，并要求通用AI模型提供透明度报告。
     tags:
-    - 芯片法案
-    - 英特尔
-    - 半导体
-    - 美国制造
-    title: 英特尔获 85 亿美元 CHIPS 法案补贴
+    - AI法规
+    - 欧盟
+    - 风险管理
+    - 透明度
+    title: 欧盟AI法案正式生效
