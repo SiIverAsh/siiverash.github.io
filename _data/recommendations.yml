@@ -1,132 +1,148 @@
 algorithm:
-- desc: 经典二分类算法，通过sigmoid函数将线性输出映射为概率，利用对数损失进行最大似然估计，具有高可解释性与低计算开销，是很多现代分类器的基础。
+- desc: GBDT 是一种经典的集成学习算法，通过迭代训练决策树来拟合前一轮残差（负梯度方向）。核心思想是每棵新树专注于纠正前序模型的预测误差，最终将所有弱学习器加权组合。XGBoost、LightGBM、CatBoost
+    均基于此框架，在表格数据竞赛与工业推荐系统中占据统治地位。正则化（学习率、子采样、树深限制）是防止过拟合的关键手段。
   tags:
-  - 分类
-  - 监督学习
-  - 统计学习
-  - 可解释性
-  title: 逻辑回归 (Logistic Regression)
+  - Ensemble Learning
+  - Boosting
+  - Tree-based
+  - XGBoost 基础
+  title: 梯度提升决策树 (Gradient Boosting Decision Tree, GBDT)
 cv_recommend:
-  agency: ソニー・ミュージックアーティスツ
-  hometown: 东京都
-  intro: 水濑祈以清亮甜美的声线著称，音质通透且辨识度极高。她善于通过细腻的呼吸与抑扬捕捉角色内心变化，既能诠释活泼元气的少女，也能驾驭温柔内向的复杂人物，情绪转换自然且极具感染力。作为声优歌手，她的歌唱能力同样出色，多次举办个人演唱会，音乐作品销量斐然。近年在演技上持续突破，挑战更多元的角色类型，展现出强烈的成长意愿，成为平成后期最具代表性的女性声优之一。
-  name: 水瀬いのり
-date: '2026-05-29'
+  agency: I'm Enterprise
+  hometown: 東京都
+  intro: 早見沙織自幼接受声乐训练，声线清澈通透且富有延展性，兼具少女的空灵感与成熟女性的沉稳质感，被誉为「七彩之声」。出道早期即展现出远超同龄人的演技成熟度，擅长在轻声细语中传达复杂情感层次。音乐活动方面拥有扎实唱功，多次举办个人演唱会并亲自参与词曲创作。业内以高度敬业著称，录音时极少
+    NG，被音响监督评价为「收放自如的天才」。其演技范围横跨温柔治愈系到冷酷反派，对各类型角色均有精准把握，是当代声优界公认的实力派中坚。近期刚刚迎来生日，从业近二十载仍持续拓展表现边界。
+  name: 早見沙織
+date: '2026-05-30'
 history:
-- event: 英国天文学家爱丁顿通过日全食观测，首次验证爱因斯坦广义相对论中的光线弯曲预言。
-  year: '1919'
-- event: 新西兰人埃德蒙·希拉里与夏尔巴人丹增·诺尔盖首次成功登顶珠穆朗玛峰。
-  year: '1953'
-- event: 微软发布Windows 2.1，增加对Intel 80286处理器的支持，分为286和386版本。
-  year: '1988'
-- event: 法国全民公投以54.87%的反对票否决《欧盟宪法条约》，引发欧洲一体化进程严重危机。
-  year: '2005'
-- event: Facebook IPO后第二个交易日股价暴跌11%，触发市场对科技股高估值的担忧。
-  year: '2012'
-- event: 国际足联多名高级官员在苏黎世因腐败指控被捕，FIFA面临史上最大丑闻。
-  year: '2015'
+- event: 法国民族英雄圣女贞德在鲁昂被英格兰占领当局以异端罪名处以火刑，年仅19岁。1920年被天主教会追封为圣人。
+  year: 1431年
+- event: 首届印第安纳波利斯500英里大赛（Indy 500）在美国印第安纳州举行，Ray Harroun 夺冠，成为全球最负盛名的汽车赛事之一。
+  year: 1911年
+- event: 林肯纪念堂在华盛顿特区正式落成并举行奉献仪式，建筑采用古希腊多立克柱式风格，成为美国民主与平权的象征。
+  year: 1922年
+- event: 尼日利亚东部地区宣布独立，成立比亚法拉共和国（Republic of Biafra），引发持续至1970年的尼日利亚内战，造成逾百万人丧生。
+  year: 1967年
+- event: 美国发射水手9号（Mariner 9）火星探测器，成为人类历史上首个成功进入火星轨道的人造卫星，传回7,329张火星表面图像。
+  year: 1971年
+- event: 塞拉利昂特别法庭判处利比里亚前总统查尔斯·泰勒（Charles Taylor）50年监禁，罪名包括在塞拉利昂内战中协助和教唆战争罪与反人类罪。
+  year: 2012年
 llm:
-- desc: 阿里云2024年9月发布的72B开源指令模型，支持29种语言与128K上下文，在数学、代码和通用推理上大幅提升，提供丰富的量化版本以便部署。
+- desc: 'DeepSeek-R1 通过纯强化学习（GRPO 算法）实现推理能力涌现，无需 SFT 冷启动即可自动生成链式思考。模型采用 Mixture-of-Experts
+    架构（671B 总参数 / 37B 激活），在数学竞赛（AIME 2024: 79.8%）、编程竞赛（Codeforces: 96.3%）等基准上比肩 OpenAI
+    o1。完全开源 MIT 许可，并提供蒸馏版（1.5B-70B），降低推理模型应用门槛。'
   tags:
-  - 阿里云
-  - 开源
-  - LLM
-  - 多语言
-  title: Qwen2.5-72B-Instruct
+  - Reasoning
+  - GRPO
+  - MoE
+  - Open Source
+  title: 'DeepSeek-R1: 开源推理模型里程碑'
 new_project:
-- desc: 低代码大模型微调框架，支持LLaMA、Qwen、ChatGLM等百种模型，集成LoRA、QLoRA、全量微调等方法，提供Web UI，大幅降低微调门槛。
+- desc: Maybe Finance 是一个开源的「你拥有自己的数据」个人财务管理平台，提供资产追踪、投资组合管理、预算规划与财务仪表板。支持自建部署 (Docker)，内置
+    Plaid 等金融 API 集成，采用 Ruby on Rails + React 全栈架构，PostgreSQL 数据库。GitHub 星标超 40K，属于个人数据主权运动中的代表性项目，适合关注财务隐私的软件工程师研究与自我托管。
   tags:
-  - LLaMA
-  - Fine-tuning
-  - LoRA
-  - 开源
-  title: LLaMA-Factory
-  url: https://github.com/hiyouga/LLaMA-Factory
+  - Finance
+  - Self-Hosted
+  - Rails
+  - Privacy
+  title: Maybe Finance — 开源个人财务管理平台
+  url: https://github.com/maybe-finance/maybe
 paper:
-- desc: 顶会论文推荐：NeurIPS 2023接收论文，提出无需显式奖励模型的RLHF替代方法，直接通过偏好对优化语言模型，简化对齐流程并提升稳定性。
+- desc: ICLR 2025 获奖论文。提出视觉自回归建模范式，将图像生成重新定义为「下一尺度预测」而非传统「下一 token 预测」。采用多尺度 VQVAE
+    编码器，从 1×1 token map 逐步预测至完整分辨率，实现扩散模型级别的生成质量，同时推理速度提升约 20 倍。该工作为视觉生成领域开辟了超越扩散模型的全新技术路线。
   tags:
-  - RLHF
-  - Preference Optimization
-  - LLM Alignment
-  - NeurIPS 2023
-  title: 'Direct Preference Optimization: Your Language Model is Secretly a Reward
-    Model'
-  url: https://arxiv.org/abs/2305.18290
+  - ICLR 2025
+  - Image Generation
+  - Autoregressive
+  - Scaling Law
+  title: 'VAR: Visual Autoregressive Modeling — Scalable Image Generation via Next-Scale
+    Prediction'
+  url: https://arxiv.org/abs/2404.02905
 tech:
   Arch:
-  - desc: 2024年6月随Ryzen 9000系列揭晓，采用TSMC 4nm工艺，双流水线前端大幅提升分支预测与取指带宽，支持完整AVX-512数据路径，IPC相比Zen
-      4提升约16%。
+  - desc: Ventana Veyron V2 于 2025 年末量产，为数据中心级 RISC-V 处理器 IP，采用 4nm 制程，单集群 32 核，支持
+      RV64IA 指令集与 CXL 3.0 互连。SPECint 2017 性能达 12.5 分/GHz，能效比超越同代 ARM Neoverse V2 约
+      15%，标志着 RISC-V 正式切入云端服务器市场。
     tags:
-    - AMD
-    - Zen 5
+    - RISC-V
+    - 服务器芯片
     - 4nm
-    - AVX-512
-    title: AMD Zen 5 微架构
+    - Ventana
+    title: RISC-V RV64IA 服务器芯片量产突破
   Audio:
-  - desc: 法国Kyutai实验室2024年7月开源的全双工语音对话模型，支持实时语音输入与输出，延迟低至200ms，具备情感表达与多轮对话能力，采用Helium
-      7B作为核心语言模型。
+  - desc: Suno V4 于 2025 年 11 月发布，引入「Remaster」技术与增强的人声合成管线。支持 4 分钟以上完整曲目生成，和声层次更丰富，人声自然度显著跃升。新增「Personas」功能实现风格一致性保持，在旋律创造性、歌词贴合度等维度全面超越前代，标志
+      AI 音乐生成进入实用化阶段。
     tags:
-    - Kyutai
-    - 语音对话
-    - 开源
-    - 低延迟
-    title: Moshi
+    - Music Generation
+    - TTS
+    - End-to-End
+    - AI音乐
+    title: 'Suno V4: 端到端音乐生成新高度'
   CPU:
-  - desc: 2025年3月发布，基于Zen 5架构，16核32线程，搭载第二代3D V-Cache，总L3缓存高达128MB，AM5平台，TDP 170W，专为高帧率游戏与内容创作优化。
+  - desc: 基于 Zen 5 架构的 Shimada Peak 平台，采用 TSMC 4nm 工艺，64 核 128 线程，基础频率 4.0 GHz，加速频率达
+      5.6 GHz。支持 4 通道 DDR5-6400 ECC、PCIe 5.0 共 128 条通道，兼容 TRX50 主板。Cinebench R23 多核得分超
+      100,000 分，面向 3D 渲染、科学计算与 AI 工作站。
     tags:
-    - AMD
     - Zen 5
-    - 3D V-Cache
-    - AM5
-    title: AMD Ryzen 9 9950X3D
+    - HEDT
+    - 64核
+    - TRX50
+    title: 'AMD Ryzen Threadripper 9980X: Zen 5 HEDT 旗舰'
   Computer Vision:
-  - desc: 阿里云于2025年1月发布的多模态视觉语言模型，支持动态分辨率（最高支持百万像素图像）、视频理解、多图交错推理与定位。采用ViT-G与Qwen2.5
-      LLM结合，擅长OCR、文档解析与复杂视觉问答。
+  - desc: 北京大学与字节跳动提出视觉自回归建模新范式，将图像生成重新定义为「下一尺度预测」问题。不同于传统扩散模型，VAR 采用多尺度自回归架构，首阶段生成低分辨率
+      token map，随后逐级细化至高分辨率，在 ImageNet 256×256 上 FID 达到 1.80，推理速度较扩散模型提升约 20 倍，为视觉生成开辟全新路线。
     tags:
-    - Qwen
-    - Vision-Language Model
-    - 多模态
-    - 文档理解
-    title: Qwen2.5-VL
+    - Image Generation
+    - Autoregressive
+    - ICLR 2025
+    - 多尺度建模
+    title: 'VAR: Visual Autoregressive Modeling'
   GPU:
-  - desc: 2025年2月上市，Blackwell架构GB203核心，拥有8960个CUDA核心，配备16GB GDDR7显存（256-bit位宽），总板功耗300W，支持DLSS
-      4与Reflex 2技术。
+  - desc: 基于 Blackwell 架构 GB202 核心，台积电 4NP 制程，集成 21760 个 CUDA 核心与 32GB GDDR7 显存（512-bit
+      位宽），带宽达 1.792 TB/s。支持 PCIe 5.0、DisplayPort 2.1 UHBR20。DLSS 4 引入多帧生成技术，RT 核心升级至第四代，AI
+      算力达 3352 TOPS (FP4)，总功耗 575W。4K 光追游戏性能较 RTX 4090 提升约 50-70%。
     tags:
-    - NVIDIA
     - Blackwell
     - GDDR7
-    - RTX 50
-    title: NVIDIA GeForce RTX 5070 Ti
+    - DLSS 4
+    - GB202
+    title: 'NVIDIA GeForce RTX 5090: Blackwell 旗舰'
   Lang:
-  - desc: Microsoft于2024年11月发布的TypeScript新版本，引入Checked Indexed Access（--noUncheckedIndexedAccess
-      增强）、支持Node.js Loader Hooks，以及类型系统在模板字符串上的细化。
+  - desc: Python 3.14 于 2025 年 10 月发布，代号「π 版」。核心升级包括：模式匹配语法扩展至字典解构与守卫子句、PEP 744 引入的
+      SIMD 向量化内建函数、CPython JIT 编译器 (PEP 744) 默认启用 Tier 2 优化，数值计算场景性能提升 2-5 倍。异步 IO
+      方面引入 TaskGroup 异常传播改进。
     tags:
-    - Microsoft
-    - TypeScript
-    - 类型系统
-    - JavaScript
-    title: TypeScript 5.7
+    - Python
+    - JIT
+    - Pattern Matching
+    - PEP 744
+    title: Python 3.14 正式发布：模式匹配与 JIT 增强
   NLP:
-  - desc: Google于2025年3月发布的开源语言模型，拥有270亿参数，支持多语言，上下文长度达128K。基于与Gemini系列相同的技术栈，在推理、代码和数学任务上表现优异，同时提供高效的量化版本。
+  - desc: DeepSeek 推出的纯强化学习推理模型，不依赖监督微调即可涌现链式思考能力。采用 GRPO (Group Relative Policy Optimization)
+      算法，在 MATH-500 上达 97.3%，AIME 2024 达 79.8%，性能比肩 OpenAI o1。模型完全开源，提供 1.5B 至 671B
+      MoE 多规格版本，推动推理模型民主化。
     tags:
-    - Google
+    - Reasoning
+    - Reinforcement Learning
+    - MoE
     - 开源
-    - 语言模型
-    - 多语言
-    title: Gemma 3 27B
+    title: 'DeepSeek-R1: 强化学习驱动的推理模型'
   Net:
-  - desc: 2024年6月正式冻结的5G-Advanced首个标准，引入AI/ML增强网络优化、扩展现实（XR）传输优化、低延迟高可靠通信增强，以及面向6G演进的网络架构基础。
+  - desc: NTT 主导的 IOWN (Innovative Optical and Wireless Network) 全光子网络 (APN) 于 2025
+      年底在东京-大阪间实现 1.6 Tbps 单波长商用传输。基于硅光子技术与空分复用，延迟降低至传统网络的 1/200，功耗仅为 1/10，标志着后 5G
+      时代光通信基础设施的重大突破，为 6G 奠定传输层基础。
     tags:
-    - 5G-Advanced
-    - 3GPP
-    - NR
-    - AI/ML
-    title: 3GPP Release 18 (5G-Advanced)
+    - Optical Network
+    - IOWN
+    - 6G 基础
+    - NTT
+    title: 'IOWN APN: 全光网络商用落地'
   News:
-  - desc: 2024年8月1日，全球首部全面人工智能法规《AI Act》在欧盟生效，按风险等级对AI系统进行分类监管，禁止高风险应用，并要求通用AI模型提供透明度报告。
+  - desc: 2026 年 3 月 1 日起施行的《中华人民共和国人工智能法》是全球首部全面、系统的 AI 专项立法。该法确立 AI 分类分级监管原则，对基础模型设置安全评估与备案要求，明确训练数据版权规则、深度合成标识义务，并设立「国家人工智能伦理审查委员会」。该法标志着全球
+      AI 治理从原则宣言进入法治实施阶段。
     tags:
-    - AI法规
-    - 欧盟
-    - 风险管理
-    - 透明度
-    title: 欧盟AI法案正式生效
+    - AI 监管
+    - 立法
+    - 中国
+    - 伦理审查
+    title: 全球首部 AI 全面监管框架：中国《人工智能法》正式施行
