@@ -1,4 +1,20 @@
 {
+  "2026-05-31": [
+    "Llama 4: Meta 开源多模态大模型",
+    "Wi-Fi 8 (802.11bn): 超高可靠性无线接入",
+    "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis",
+    "高橋李依",
+    "SAM 2: Segment Anything in Images and Videos",
+    "Intel Core Ultra 9 285K: Arrow Lake 旗舰",
+    "Mojo: Python 兼容的系统编程语言",
+    "Llama 4 Maverick: 402B MoE 开源多模态模型",
+    "K-Means 聚类: 无监督学习基石",
+    "uv: 极速 Python 包与项目管理器",
+    "NVIDIA GeForce RTX 5060 Ti: Blackwell 中端主力",
+    "台积电 2nm (N2) 工艺进入风险量产",
+    "Meta Voicebox: 多任务语音生成基础模型",
+    "UCIe 2.0: 通用芯粒互连标准"
+  ],
   "2026-05-30": [
     "Python 3.14 正式发布：模式匹配与 JIT 增强",
     "IOWN APN: 全光网络商用落地",
@@ -142,21 +158,5 @@
     "支持向量机 (Support Vector Machine)",
     "Stability AI Stable Audio 3.0",
     "Arm AGI CPU：首款自研数据中心CPU，136核Armv9.7"
-  ],
-  "2026-05-21": [
-    "内省适配器：Anthropic让语言模型学会主动'自我坦白'",
-    "K-近邻算法 (k-Nearest Neighbors, KNN)",
-    "VoxCPM2：OpenBMB开源免分词器多语言流式TTS",
-    "NVIDIA Vera CPU：88核Arm Neoverse数据中心CPU",
-    "OpenManus：开源通用AI Agent框架",
-    "Rust 1.95.0发布：async闭包、Cargo包级目标稳定",
-    "中科院发布'香山'+'如意'RISC-V高性能开源芯片平台",
-    "R²Seg: Training-Free OOD Medical Tumor Segmentation via Anatomical Reasoning and Statistical Rejection",
-    "华为凌霄760：端到端Wi-Fi 7+芯片套片",
-    "NVIDIA GeForce RTX 5070：Blackwell中端主力GPU",
-    "马斯克诉OpenAI案败诉：法院裁定诉讼时效过期",
-    "MiniCPM-V 4.6：1.3B参数端侧多模态大模型",
-    "佐仓绫音",
-    "ViT³: 测试时训练解锁视觉Transformer线性复杂度 (CVPR 2026 Oral)"
   ]
 }
