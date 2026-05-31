@@ -1,144 +1,135 @@
 algorithm:
-- desc: K-Means 是一种基于划分的聚类算法，通过迭代优化将 n 个样本划分到 K 个簇中，最小化簇内平方误差 (Inertia)。核心步骤包括初始化质心、分配样本到最近质心、更新质心位置。Lloyd
-    算法保证局部收敛，时间复杂度 O(n·K·d·i)。广泛用于客户分群、图像压缩与异常检测等场景。K-Means++ 初始化策略显著改善收敛质量。
+- desc: 支持向量机通过寻找最大化类别间隔的超平面实现分类，借助核技巧（RBF、多项式）映射至高维空间处理非线性问题，软间隔与正则化平衡泛化能力。其凸优化目标保证全局最优解，在小样本、高维模式识别（如文本分类、生物特征识别）中依然保持竞争力，是理解统计学习理论与结构风险最小化的基石算法。
   tags:
-  - Clustering
-  - Unsupervised-Learning
-  - K-Means
-  - ML-Basics
-  title: 'K-Means 聚类: 无监督学习基石'
+  - SVM
+  - Kernel Method
+  - Classification
+  - Convex Optimization
+  title: 支持向量机 (SVM)
 cv_recommend:
-  agency: 81プロデュース
-  hometown: 埼玉県
-  intro: 高橋李依是日本当下最具代表性的实力派女性声优之一。她自幼对表演艺术抱有浓厚兴趣，高中毕业后通过选拔进入 81 プロデュース 附属养成所接受系统训练，由此正式踏入声优行业。她的声线清亮通透，具有极高的辨识度与感染力，能够精准驾驭从活力少女到沉稳成年女性的宽幅角色类型，尤其擅长在情感爆发场景中呈现细腻的层次变化。2018
-    年，她凭借多年的扎实积累荣获第 12 回声优奖「主演女优赏」，这一荣誉充分肯定了她在行业内的卓越表现。除配音工作外，高橋李依亦以歌手身份活跃，发行的多张个人单曲与专辑均获得好评，展现出不俗的音乐素养。她始终保持谦逊敬业的工作态度，录音现场常以严谨的准备与灵活的即兴反应赢得制作团队的信任，被视为同世代声优中的标杆人物。
-  name: 高橋李依
-date: '2026-05-31'
+  agency: ミュージックレイン
+  hometown: 东京都
+  intro: 雨宮天以清澄透明且富有穿透力的声线著称，音域宽广，能够精准捕捉角色内心波动的细微层阶。她的演技基础扎实，情感流露自然不造作，在沉稳与活泼之间切换自如。其发声位置靠前，赋予声音一种独特的空灵感，同时在中低音域也保有温润厚度，使得角色塑造层次丰富。雨宮天善于通过气息控制和语速变化传达微妙情绪，无论是静谧独白还是情感宣泄场景，均能保持极强的控制力。她经由试镜选拔进入声优业界，在事务所体系下持续拓展表现边界，并积极开展音乐活动，以单人名义发行多部作品，展现出演唱与表现的双重才能，成为新一代声优艺术家的代表性存在。
+  name: 雨宮天
+date: '2026-06-01'
 history:
-- event: RMS 泰坦尼克号在贝尔法斯特哈兰德与沃尔夫造船厂下水，为当时世界上最大的远洋客轮。
-  year: '1911'
-- event: 最后一辆福特 T 型车驶下生产线，结束了这款「让美国装上轮子」的传奇车型长达 19 年的量产历史。
-  year: '1927'
-- event: 南非共和国正式成立并退出英联邦，标志着该国脱离英国殖民统治后的新政治体制确立。
-  year: '1961'
-- event: 秘鲁安卡什地区发生里氏 7.9 级大地震，引发大规模山体滑坡，导致约 7 万人遇难，为南美洲史上最严重的地震灾害之一。
-  year: '1970'
-- event: 美国联邦调查局前副局长 W·马克·费尔特公开承认自己就是「深喉」——水门事件中向《华盛顿邮报》记者提供关键线报的匿名线人。
-  year: '2005'
-- event: 小行星 1998 QE2 以约 580 万公里的距离安全掠过地球，其直径约 2.7 公里并带有卫星，引发天文学界广泛关注。
-  year: '2013'
+- event: 玛丽莲·梦露出生于洛杉矶。
+  year: '1926'
+- event: 披头士专辑《Sgt. Pepper's Lonely Hearts Club Band》发行，被视为概念专辑里程碑。
+  year: '1967'
+- event: 美国有线电视新闻网（CNN）开播，成为全球首个24小时新闻频道。
+  year: '1980'
+- event: Napster 文件共享服务上线，颠覆音乐产业分发模式。
+  year: '1999'
+- event: 尼泊尔王室血案：王储迪彭德拉枪杀国王比兰德拉及多名王室成员后自杀。
+  year: '2001'
+- event: 通用汽车公司根据美国破产法第11章申请破产保护，进行史上最大规模汽车业重组。
+  year: '2009'
 llm:
-- desc: Meta 开源 Llama 4 系列中的 Maverick 模型 (402B 总参数，17B 活跃参数)，采用 Mixture-of-Experts
-    架构，支持文本与图像的多模态理解。在 MMLU-Pro 与 HumanEval+ 等基准上逼近 GPT-5，为开源社区提供可商用级的多模态推理能力。
+- desc: Google推出Gemini 1.5 Pro，采用混合专家路由与高效注意力机制，支持原生多模态（文本、图像、音频、视频）并实现100万token上下文窗口，在‘大海捞针’测试中达到99.7%召回率。模型通过JAX框架的SCALE技术高效训练，在MMMU、MathVista等跨模态推理任务上刷新SOTA，同时提供基于TPU
+    v5的本地部署方案。
   tags:
-  - Llama4
+  - Gemini
+  - Long Context
   - MoE
   - Multimodal
-  - Open-Source
-  title: 'Llama 4 Maverick: 402B MoE 开源多模态模型'
+  title: 'Gemini 1.5 Pro: 超长上下文多模态模型'
 new_project:
-- desc: Astral 团队用 Rust 重写的 Python 包管理器，替代 pip、pip-tools 与 virtualenv。采用全局缓存与增量解析策略，依赖解析速度较
-    pip 快 10-100 倍，内置虚拟环境管理、锁文件支持与 PEP 723 内联脚本元数据，2025 年 GitHub Star 增长最快的 Python
-    工具之一。
+- desc: 面向自托管LLM的浏览器端用户界面，支持Ollama和OpenAI兼容API。提供多轮对话、Markdown渲染、RAG增强检索、文档上传分析及语音输入输出，具备多用户管理与模型实时切换能力。采用SvelteKit构建，可一键Docker部署，已成为本地大模型交互的事实标准前端。
   tags:
-  - uv
-  - Python
-  - Rust
-  - Package-Manager
-  title: 'uv: 极速 Python 包与项目管理器'
-  url: https://github.com/astral-sh/uv
+  - Open-Source
+  - AI
+  - UI
+  - Self-Hosted
+  title: Open WebUI
+  url: https://github.com/open-webui/open-webui
 paper:
-- desc: 顶会论文推荐：Stability AI 提出的基于校正流 (Rectified Flow) 的扩散 Transformer 架构，通过改进的噪声调度和
-    Transformer 骨干网络，在文生图任务上实现高分辨率 (1024×1024) 直接生成，无需级联或超分网络。引入 T5-XXL 文本编码器与 dual-stream
-    注意力机制，在视觉质量与文本对齐上显著优于此前方法。
+- desc: 阿里巴巴通义千问团队发布Qwen2技术报告，涵盖0.5B-72B密集模型与MoE版本。所有变体均基于Grouped Query Attention、SwiGLU激活，预训练于3T
+    tokens多语言语料。72B模型在MMLU、HumanEval等基准上超越LLaMA 3 70B，而7B模型在同等规模中性能最优。其开源权重与全面训练细节推动了可复现大模型研究。
   tags:
-  - Rectified-Flow
-  - DiT
-  - Text-to-Image
-  - ICML2024
-  title: Scaling Rectified Flow Transformers for High-Resolution Image Synthesis
-  url: https://arxiv.org/abs/2403.03206
+  - Qwen2
+  - LLM
+  - Open-Source
+  - Mixture-of-Experts
+  title: 'Qwen2: Advanced Open-Source Large Language Models'
+  url: https://arxiv.org/abs/2407.10671
 tech:
   Arch:
-  - desc: Universal Chiplet Interconnect Express 2.0 规范于 2025 年 Q2 发布，新增 3D 堆叠互连支持，每引脚速率提升至
-      64 GT/s，支持标准化测试与可管理性协议。为异构集成芯片 (Intel Arrow Lake、AMD Strix Halo 等) 提供跨厂商兼容的
-      Die-to-Die 互连基础。
+  - desc: 英特尔在其20A工艺节点上实现PowerVia背面供电技术，将电源网络完全移至晶圆背面，正面专用于信号布线。此举消除电源/信号间串扰，使EUV工艺下晶体管密度提升10%，IR压降降低30%，并简化M0层设计。PowerVia已与RibbonFET栅极环环绕配合，用于Arrow
+      Lake处理器量产准备。
     tags:
-    - UCIe2.0
-    - Chiplet
-    - 3D-Stacking
-    - Interconnect
-    title: 'UCIe 2.0: 通用芯粒互连标准'
+    - Backside Power Delivery
+    - Intel
+    - 20A
+    - Semiconductor
+    title: '英特尔PowerVia: 背面供电技术进入量产准备'
   Audio:
-  - desc: 基于 Flow Matching 的非自回归语音生成模型，支持 TTS、语音降噪、风格迁移、跨语言语音转换等六大任务，无需针对特定任务微调。在
-      LibriSpeech 上词错率 (WER) 低至 1.9%，跨语言风格迁移自然度 MOS 达 4.3。
+  - desc: OpenVoice V2 实现了极低成本下的零样本语音克隆与风格迁移。通过解耦音色、风格和语言表征，仅需一段短音频即可复刻目标声音，并支持灵活的情感、口音和节奏控制。其流水线采用流匹配与对抗训练，在LibriSpeech上仅用1.5M参数便达到4.2%词错误率，且推理延迟低于50ms，适用于实时语音助手。
     tags:
-    - Voicebox
-    - Flow Matching
+    - Voice Cloning
+    - Zero-shot
     - TTS
-    - Meta
-    title: 'Meta Voicebox: 多任务语音生成基础模型'
+    - Style Transfer
+    title: 'OpenVoice V2: 低成本零样本语音克隆'
   CPU:
-  - desc: 采用 Lion Cove P-core + Skymont E-core 混合架构，台积电 N3B 工艺。8P+16E 共 24 核心 24 线程，P-core
-      最大睿频 5.7 GHz，配备 36MB L3 Cache，内置 NPU 4 提供 13 TOPS AI 算力，支持 LGA 1851 平台与 DDR5-6400。
+  - desc: Core Ultra 5 245K 基于Intel 20A工艺与Arrow Lake架构，拥有14核心（6 Lion Cove P核 + 8 Skymont
+      E核），P核加速至5.0GHz，E核4.5GHz，24MB L3缓存，内置NPU 4引擎提供13 TOPS AI算力，支持PCIe 5.0与LGA 1851接口，基础功耗125W，专为Lunar
+      Lake后的主流桌面与AI PC设计。
     tags:
-    - ArrowLake
-    - LionCove
-    - TSMC-N3B
+    - Arrow Lake
+    - Intel
     - NPU
-    title: 'Intel Core Ultra 9 285K: Arrow Lake 旗舰'
+    - LGA 1851
+    title: Intel Core Ultra 5 245K (Arrow Lake)
   Computer Vision:
-  - desc: Meta 推出的第二代分割一切模型，将提示式分割从静态图像扩展到视频领域。基于流式记忆架构 (Streaming Memory)，在单帧交互延迟小于
-      50ms 的前提下实现对任意长度视频的目标追踪与分割，支持点、框、掩码三种提示方式，零样本泛化能力较 SAM 1 提升 40%+。
+  - desc: 百度提出首个实时检测Transformer（RT-DETR），通过混合编码器与IoU感知查询选择机制，在保持DETR高精度的同时将推理延迟降至同类CNN实时检测器水平。在COCO
+      val2017上，RT-DETR-R50达到53.0% AP，推理速度达108 FPS（TensorRT FP16），其去噪训练与查询优化设计为端到端检测提供了高效工业级方案。
     tags:
-    - SAM2
-    - Video Segmentation
-    - Zero-Shot
-    - Meta
-    title: 'SAM 2: Segment Anything in Images and Videos'
+    - Object Detection
+    - DETR
+    - Real-Time
+    - Transformer
+    title: 'RT-DETR: 基于Transformer的实时目标检测'
   GPU:
-  - desc: 基于 GB206-300 GPU，Blackwell 架构，台积电 4NP 制程。配备 4,608 个 CUDA 核心，16GB GDDR7 显存，128-bit
-      位宽，带宽 448 GB/s。支持 DLSS 4 多帧生成与 Reflex 2，TGP 180W，PCIe 5.0 x8 接口。
+  - desc: RTX 5070 采用台积电4NP工艺Blackwell架构，搭载6144 CUDA核心、192张量核心及40 RT核心，集成12GB GDDR7显存于192-bit位宽，带宽达672
+      GB/s。基础频率2.1GHz，加速2.5GHz，TGP 220W。支持DLSS 4多帧生成与光线重构，FP8 AI算力达388 TOPS，面向1440p高刷光追与本地AI推理。
     tags:
-    - RTX5060Ti
     - Blackwell
     - GDDR7
-    - DLSS4
-    title: 'NVIDIA GeForce RTX 5060 Ti: Blackwell 中端主力'
+    - Ray Tracing
+    - DLSS 4
+    title: NVIDIA GeForce RTX 5070 (Blackwell)
   Lang:
-  - desc: Modular 公司推出的 Mojo 语言融合 Python 语法与底层系统性能，支持 SIMD 向量化、自动调优 (autotune) 和零成本抽象。通过
-      MLIR 编译器框架实现与 Python 生态的无缝互操作，在矩阵乘法等核心计算上性能可达纯 Python 的 35,000 倍。
+  - desc: Go 1.23 正式引入 range-over-func 语法，允许开发者通过泛型迭代器定义自定义集合遍历逻辑，并与标准库 iter 包协同。此特性基于类型参数与
+      yield 机制，使串流数据处理、惰性求值等场景编码更优雅，同时编译器优化使迭代器函数内联开销可忽略，运行时性能不受泛型影响。
     tags:
-    - Mojo
-    - MLIR
-    - Systems-Programming
-    - Python
-    title: 'Mojo: Python 兼容的系统编程语言'
+    - Go
+    - Programming Language
+    - Iterators
+    - Generics
+    title: 'Go 1.23: 泛型迭代器与标准库增强'
   NLP:
-  - desc: Meta 于 2025 年 4 月发布 Llama 4 系列，包含 Scout (109B)、Maverick (402B) 和 Behemoth
-      (2T) 三个规模。首次在 Llama 系列中引入原生多模态能力，支持图文交错理解与生成。采用 Mixture-of-Experts 架构，推理时仅激活部分参数，Scout
-      模型可在单张 H100 上高效运行。
+  - desc: BAAI发布BGE-M3，支持超过100种语言，实现密集、稀疏（词汇）与多向量（ColBERT）三种检索范式统一。模型采用XLM-RoBERTa架构，训练阶段引入自蒸馏与对比学习，在BEIR、MTEB等多语言基准上刷新记录，单次前向即可生成适用于不同检索策略的1024维向量，大幅简化多语言RAG流水线。
     tags:
-    - Llama4
-    - MoE
-    - Multimodal
-    - Open-Source
-    title: 'Llama 4: Meta 开源多模态大模型'
+    - Embedding
+    - Multilingual
+    - Dense Retrieval
+    - Sparse Retrieval
+    title: 'BGE-M3: 多语言多粒度嵌入模型'
   Net:
-  - desc: IEEE 802.11bn 标准草案推进中，聚焦超高可靠性而非单纯峰值速率提升。引入多接入点协调波束成形 (Co-BF)、多链路操作增强 (MLO+)
-      和分布式 MU-MIMO，目标将 99.999% 可靠性下的时延控制在 1ms 以内，面向工业自动化和 XR 实时交互场景。
+  - desc: 欧盟Hexa-X-II项目联合爱立信、诺基亚等厂商完成首次140GHz频段RIS辅助通信外场测试。该系统利用含1024单元的超表面实现智能反射，结合AI信道预测，在100米距离实现20Gbps峰值速率，频谱效率达8
+      bps/Hz，为2030年商用6G的1Tbps体验奠定物理层基础。
     tags:
-    - WiFi8
-    - 802.11bn
-    - Ultra-Reliability
-    - MLO
-    title: 'Wi-Fi 8 (802.11bn): 超高可靠性无线接入'
+    - 6G
+    - THz
+    - RIS
+    - AI-Native
+    title: 6G太赫兹通信与智能超表面原型系统
   News:
-  - desc: 台积电于 2026 年 Q2 宣布 N2 节点进入风险量产阶段，采用全环绕栅极 (GAA) 纳米片晶体管结构，相较 N3 节点在同等功耗下性能提升
-      15%，同等性能下功耗降低 30%，逻辑密度提升 1.15 倍。苹果 A20 与 Intel Nova Lake 预计首批采用。
+  - desc: 2026年2月，微软发布Majorana 1芯片，采用拓扑超导体纳米线实现8个拓扑量子比特，量子态受栅极保护，单比特门保真度达99.9%。该芯片集成于稀释制冷平台，通过数字脉冲控制，标志着从含噪声中等规模量子（NISQ）向容错量子计算的重大转折。
     tags:
-    - TSMC
-    - N2
-    - GAA
-    - Nanosheet
-    title: 台积电 2nm (N2) 工艺进入风险量产
+    - Quantum Computing
+    - Microsoft
+    - Topological Qubit
+    - Majorana
+    title: 微软发布首个拓扑量子比特芯片Majorana 1

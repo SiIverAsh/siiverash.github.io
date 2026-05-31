@@ -1,4 +1,20 @@
 {
+  "2026-06-01": [
+    "NVIDIA GeForce RTX 5070 (Blackwell)",
+    "Open WebUI",
+    "6G太赫兹通信与智能超表面原型系统",
+    "Intel Core Ultra 5 245K (Arrow Lake)",
+    "Go 1.23: 泛型迭代器与标准库增强",
+    "Gemini 1.5 Pro: 超长上下文多模态模型",
+    "微软发布首个拓扑量子比特芯片Majorana 1",
+    "支持向量机 (SVM)",
+    "雨宮天",
+    "英特尔PowerVia: 背面供电技术进入量产准备",
+    "BGE-M3: 多语言多粒度嵌入模型",
+    "RT-DETR: 基于Transformer的实时目标检测",
+    "Qwen2: Advanced Open-Source Large Language Models",
+    "OpenVoice V2: 低成本零样本语音克隆"
+  ],
   "2026-05-31": [
     "Llama 4: Meta 开源多模态大模型",
     "Wi-Fi 8 (802.11bn): 超高可靠性无线接入",
@@ -142,21 +158,5 @@
     "Cohere Command A+：218B MoE全开源Apache 2.0旗舰模型，支持无损量化与原生引用",
     "NVIDIA GeForce RTX 5060 Ti：Blackwell中端主力，GDDR7加持16GB显存",
     "AMD Ryzen 9 9950X3D2 Dual Edition：业界首款双3D V-Cache桌面处理器"
-  ],
-  "2026-05-22": [
-    "阿里平头哥真武M890 AI芯片发布：训推一体，性能3倍提升",
-    "Swift 6.2 正式发布：完全数据竞赛安全并发模型",
-    "Intel Nova Lake工程样品出货：传闻多核性能翻倍",
-    "Warp: 现代终端现代化者",
-    "水瀬いのり",
-    "Beyond Math: Stories as a Testbed for Memorization-Constrained Reasoning in LLMs",
-    "Spark3R: Asymmetric Token Reduction Makes Fast Feed-Forward 3D Reconstruction",
-    "Nokia与KDDI成功测试高能效6G基站技术",
-    "Intel Crescent Island：Xe3P架构160GB AI推理GPU",
-    "Google Gemini 3.5 系列发布：面向智能体的前沿智能与行动能力",
-    "Transformers are Inherently Succinct",
-    "支持向量机 (Support Vector Machine)",
-    "Stability AI Stable Audio 3.0",
-    "Arm AGI CPU：首款自研数据中心CPU，136核Armv9.7"
   ]
 }
