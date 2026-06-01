@@ -1,4 +1,20 @@
 {
+  "2026-06-02": [
+    "NVIDIA GeForce RTX 5060: Blackwell主流甜点卡",
+    "Phi-4: 微软14B参数高效推理模型",
+    "XGBoost: 极限梯度提升算法",
+    "Computex 2026台北开幕：AI PC生态全面爆发",
+    "佐倉綾音",
+    "CosyVoice 2: 零样本多语种语音合成",
+    "AMD Ryzen 7 9800X3D: Zen 5 3D V-Cache游戏旗舰",
+    "CXL 3.1: 计算快速链路互联规范发布",
+    "Florence-2: 轻量级视觉基础模型",
+    "Ollama: 本地大语言模型推理引擎",
+    "Swift 6: 全面数据竞争安全并发模型",
+    "TSMC N3P: 3nm增强工艺节点量产",
+    "ReFT: Representation Finetuning for Language Models",
+    "OLMo 2: 完全开放的语言模型家族"
+  ],
   "2026-06-01": [
     "NVIDIA GeForce RTX 5070 (Blackwell)",
     "Open WebUI",
@@ -142,21 +158,5 @@
     "百度文心ERNIE 5.1正式发布：预训练成本仅为业界6%",
     "梯度提升决策树（GBDT）",
     "中国工信部批复6G技术试验频率：率先开放6GHz频段"
-  ],
-  "2026-05-23": [
-    "TypeScript 5.9 正式发布：延迟导入机制与增强类型推断",
-    "Google I/O 2026：Gemini Spark 发布，全天候AI智能体时代开启",
-    "Through the Lens of Contrast: Self-Improving Visual Reasoning in VLMs (ICLR 2026 Oral)",
-    "VGGT-Ω：Facebook Research 视觉几何基座Transformer (CVPR 2026 Oral)",
-    "Nanobot：HKUDS开源的超轻量个人AI Agent框架（~4K行代码）",
-    "早見沙織",
-    "跨语言激活引导：探究LLM三段论推理的语言泛化能力 (EACL 2026)",
-    "OpenAI 联合 AMD/Microsoft 发布 MRC：面向万卡级AI超算的弹性以太网架构",
-    "玄铁C950：阿里达摩院发布全球性能最高RISC-V服务器CPU",
-    "随机森林 (Random Forest)",
-    "LongCat-AudioDiT：美团开源波形潜空间扩散TTS，突破零样本音色克隆上限",
-    "Cohere Command A+：218B MoE全开源Apache 2.0旗舰模型，支持无损量化与原生引用",
-    "NVIDIA GeForce RTX 5060 Ti：Blackwell中端主力，GDDR7加持16GB显存",
-    "AMD Ryzen 9 9950X3D2 Dual Edition：业界首款双3D V-Cache桌面处理器"
   ]
 }

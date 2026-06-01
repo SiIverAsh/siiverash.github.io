@@ -1,135 +1,136 @@
 algorithm:
-- desc: 支持向量机通过寻找最大化类别间隔的超平面实现分类，借助核技巧（RBF、多项式）映射至高维空间处理非线性问题，软间隔与正则化平衡泛化能力。其凸优化目标保证全局最优解，在小样本、高维模式识别（如文本分类、生物特征识别）中依然保持竞争力，是理解统计学习理论与结构风险最小化的基石算法。
+- desc: XGBoost (eXtreme Gradient Boosting) 是GBDT的高效工程实现，通过二阶泰勒展开近似损失函数、加权分位数草图近似分裂点搜索、以及列块存储与缓存感知预取实现极致训练速度。引入L1/L2正则化防止过拟合，内置缺失值自动处理与交叉验证。在Kaggle竞赛中统治结构化数据任务近十年，至今仍是表格数据建模的首选算法。
   tags:
-  - SVM
-  - Kernel Method
-  - Classification
-  - Convex Optimization
-  title: 支持向量机 (SVM)
+  - Gradient Boosting
+  - Ensemble Learning
+  - Structured Data
+  - Kaggle
+  title: 'XGBoost: 极限梯度提升算法'
 cv_recommend:
-  agency: ミュージックレイン
-  hometown: 东京都
-  intro: 雨宮天以清澄透明且富有穿透力的声线著称，音域宽广，能够精准捕捉角色内心波动的细微层阶。她的演技基础扎实，情感流露自然不造作，在沉稳与活泼之间切换自如。其发声位置靠前，赋予声音一种独特的空灵感，同时在中低音域也保有温润厚度，使得角色塑造层次丰富。雨宮天善于通过气息控制和语速变化传达微妙情绪，无论是静谧独白还是情感宣泄场景，均能保持极强的控制力。她经由试镜选拔进入声优业界，在事务所体系下持续拓展表现边界，并积极开展音乐活动，以单人名义发行多部作品，展现出演唱与表现的双重才能，成为新一代声优艺术家的代表性存在。
-  name: 雨宮天
-date: '2026-06-01'
+  agency: 青二プロダクション
+  hometown: 東京都
+  intro: 佐倉綾音以其清澈而富有穿透力的声线在声优界独树一帜，音域广阔能够自如切换于元气少女与冷峻成熟的声线之间。她不仅拥有出色的配音技艺，更活跃于广播节目与活动主持领域，凭借自然不做作的谈吐与敏锐的临场反应赢得广泛人气。作为青二プロダクション旗下实力派声优，她多次获得声优奖项认可，在业内以严谨的职业态度与不断突破自我的表演风格著称。
+  name: 佐倉綾音
+date: '2026-06-02'
 history:
-- event: 玛丽莲·梦露出生于洛杉矶。
-  year: '1926'
-- event: 披头士专辑《Sgt. Pepper's Lonely Hearts Club Band》发行，被视为概念专辑里程碑。
-  year: '1967'
-- event: 美国有线电视新闻网（CNN）开播，成为全球首个24小时新闻频道。
-  year: '1980'
-- event: Napster 文件共享服务上线，颠覆音乐产业分发模式。
-  year: '1999'
-- event: 尼泊尔王室血案：王储迪彭德拉枪杀国王比兰德拉及多名王室成员后自杀。
-  year: '2001'
-- event: 通用汽车公司根据美国破产法第11章申请破产保护，进行史上最大规模汽车业重组。
-  year: '2009'
+- event: 马可尼在英国为其无线电电报技术申请专利，奠定无线通信基础
+  year: 1896年
+- event: 伊丽莎白二世在西敏寺举行加冕典礼，成为英国历史上在位时间最长的君主
+  year: 1953年
+- event: 美国勘测者1号在月球风暴洋成功软着陆，系美国首次实现月球软着陆
+  year: 1966年
+- event: 蒂莫西·麦克维因1995年俄克拉荷马城爆炸案被判处死刑
+  year: 1997年
+- event: 欧洲空间局发射火星快车号探测器，携带小猎犬2号着陆器前往火星
+  year: 2003年
+- event: 西班牙国王胡安·卡洛斯一世正式宣布退位，其子费利佩六世继位
+  year: 2014年
 llm:
-- desc: Google推出Gemini 1.5 Pro，采用混合专家路由与高效注意力机制，支持原生多模态（文本、图像、音频、视频）并实现100万token上下文窗口，在‘大海捞针’测试中达到99.7%召回率。模型通过JAX框架的SCALE技术高效训练，在MMMU、MathVista等跨模态推理任务上刷新SOTA，同时提供基于TPU
-    v5的本地部署方案。
+- desc: 微软发布Phi-4，仅14B参数却在数学与科学推理任务上超越多数70B模型。核心创新包括合成数据驱动的渐进式训练策略、基于质量的课程学习以及Dolma-CC高质量预训练语料。在GPQA、MATH-500与AMC基准上取得突破性分数，证明小模型通过数据质量优化可逼近大模型能力。
   tags:
-  - Gemini
-  - Long Context
-  - MoE
-  - Multimodal
-  title: 'Gemini 1.5 Pro: 超长上下文多模态模型'
+  - Small Language Model
+  - Synthetic Data
+  - Microsoft
+  - Reasoning
+  title: 'Phi-4: 微软14B参数高效推理模型'
 new_project:
-- desc: 面向自托管LLM的浏览器端用户界面，支持Ollama和OpenAI兼容API。提供多轮对话、Markdown渲染、RAG增强检索、文档上传分析及语音输入输出，具备多用户管理与模型实时切换能力。采用SvelteKit构建，可一键Docker部署，已成为本地大模型交互的事实标准前端。
+- desc: Ollama是一个跨平台(Windows/Linux/macOS)的本地LLM部署工具，支持一行命令运行Llama 3.1、Qwen2.5、Gemma
+    2、Phi-4等主流开源模型。内置量化(GGUF)、GPU加速(CUDA/Metal)、REST API与OpenAI兼容接口。Modelfile机制允许自定义系统提示与参数，是目前GitHub上最活跃的LLM本地化工具之一。
   tags:
-  - Open-Source
-  - AI
-  - UI
-  - Self-Hosted
-  title: Open WebUI
-  url: https://github.com/open-webui/open-webui
+  - LLM Deployment
+  - Local Inference
+  - GGUF
+  - Go
+  title: 'Ollama: 本地大语言模型推理引擎'
+  url: https://github.com/ollama/ollama
 paper:
-- desc: 阿里巴巴通义千问团队发布Qwen2技术报告，涵盖0.5B-72B密集模型与MoE版本。所有变体均基于Grouped Query Attention、SwiGLU激活，预训练于3T
-    tokens多语言语料。72B模型在MMLU、HumanEval等基准上超越LLaMA 3 70B，而7B模型在同等规模中性能最优。其开源权重与全面训练细节推动了可复现大模型研究。
+- desc: NeurIPS 2024 Oral论文，提出ReFT方法族：在冻结的基础模型上训练低秩线性干预模块，以远低于LoRA的参数量(仅0.01%-0.1%)实现同等甚至更优的微调效果。核心创新在于对隐空间表示而非权重进行干预，在指令微调、推理等任务上展现出卓越的参数效率。
   tags:
-  - Qwen2
-  - LLM
-  - Open-Source
-  - Mixture-of-Experts
-  title: 'Qwen2: Advanced Open-Source Large Language Models'
-  url: https://arxiv.org/abs/2407.10671
+  - NeurIPS 2024
+  - Parameter-Efficient FT
+  - LoRA Alternative
+  - Representation Intervention
+  title: 'ReFT: Representation Finetuning for Language Models'
+  url: https://arxiv.org/abs/2404.03592
 tech:
   Arch:
-  - desc: 英特尔在其20A工艺节点上实现PowerVia背面供电技术，将电源网络完全移至晶圆背面，正面专用于信号布线。此举消除电源/信号间串扰，使EUV工艺下晶体管密度提升10%，IR压降降低30%，并简化M0层设计。PowerVia已与RibbonFET栅极环环绕配合，用于Arrow
-      Lake处理器量产准备。
+  - desc: 台积电N3P工艺在N3E基础上实现5%频率提升或10%功耗降低，光学收缩达1.04x。采用第三代FinFlex技术，允许在同一die上混合使用不同阈值电压的标准单元库。面向HPC与移动SoC双轨优化，苹果A19
+      Pro与高通骁龙8 Elite Gen 2已确认采用此节点。
     tags:
-    - Backside Power Delivery
-    - Intel
-    - 20A
-    - Semiconductor
-    title: '英特尔PowerVia: 背面供电技术进入量产准备'
+    - TSMC
+    - 3nm
+    - FinFlex
+    - N3P
+    title: 'TSMC N3P: 3nm增强工艺节点量产'
   Audio:
-  - desc: OpenVoice V2 实现了极低成本下的零样本语音克隆与风格迁移。通过解耦音色、风格和语言表征，仅需一段短音频即可复刻目标声音，并支持灵活的情感、口音和节奏控制。其流水线采用流匹配与对抗训练，在LibriSpeech上仅用1.5M参数便达到4.2%词错误率，且推理延迟低于50ms，适用于实时语音助手。
+  - desc: 阿里巴巴通义实验室推出的语音合成模型，仅需3秒参考音频即可实现高保真零样本语音克隆。基于Flow Matching与优化的声码器架构，支持中英日韩等多语种，在情感表达与韵律自然度方面显著超越XTTS-v2与Fish
+      Speech，MOS分达4.5+。
     tags:
+    - Zero-Shot TTS
+    - Flow Matching
     - Voice Cloning
-    - Zero-shot
-    - TTS
-    - Style Transfer
-    title: 'OpenVoice V2: 低成本零样本语音克隆'
+    - Multilingual
+    title: 'CosyVoice 2: 零样本多语种语音合成'
   CPU:
-  - desc: Core Ultra 5 245K 基于Intel 20A工艺与Arrow Lake架构，拥有14核心（6 Lion Cove P核 + 8 Skymont
-      E核），P核加速至5.0GHz，E核4.5GHz，24MB L3缓存，内置NPU 4引擎提供13 TOPS AI算力，支持PCIe 5.0与LGA 1851接口，基础功耗125W，专为Lunar
-      Lake后的主流桌面与AI PC设计。
+  - desc: 基于Zen 5架构，8核16线程，采用第二代3D V-Cache技术(64MB堆叠缓存+L3共96MB)。基础频率4.7GHz，Boost至5.2GHz，TDP
+      120W。相较于上代7800X3D，IPC提升16%，游戏帧率平均提升11%，同时解除了前代频率锁定限制，支持全核心PBO超频。
     tags:
-    - Arrow Lake
-    - Intel
-    - NPU
-    - LGA 1851
-    title: Intel Core Ultra 5 245K (Arrow Lake)
+    - Zen 5
+    - 3D V-Cache
+    - AM5
+    - Gaming
+    title: 'AMD Ryzen 7 9800X3D: Zen 5 3D V-Cache游戏旗舰'
   Computer Vision:
-  - desc: 百度提出首个实时检测Transformer（RT-DETR），通过混合编码器与IoU感知查询选择机制，在保持DETR高精度的同时将推理延迟降至同类CNN实时检测器水平。在COCO
-      val2017上，RT-DETR-R50达到53.0% AP，推理速度达108 FPS（TensorRT FP16），其去噪训练与查询优化设计为端到端检测提供了高效工业级方案。
+  - desc: 微软推出的轻量级视觉基础模型，仅0.23B/0.77B参数即实现多任务SOTA。采用序列到序列架构，统一处理图像描述、目标检测、分割、视觉定位等任务。通过FLD-5B大规模标注数据集训练，在zero-shot场景下超越多数专用模型，推理速度极快，适合边缘部署。
     tags:
-    - Object Detection
-    - DETR
-    - Real-Time
-    - Transformer
-    title: 'RT-DETR: 基于Transformer的实时目标检测'
+    - Vision Foundation Model
+    - Sequence-to-Sequence
+    - Zero-Shot
+    - Microsoft
+    title: 'Florence-2: 轻量级视觉基础模型'
   GPU:
-  - desc: RTX 5070 采用台积电4NP工艺Blackwell架构，搭载6144 CUDA核心、192张量核心及40 RT核心，集成12GB GDDR7显存于192-bit位宽，带宽达672
-      GB/s。基础频率2.1GHz，加速2.5GHz，TGP 220W。支持DLSS 4多帧生成与光线重构，FP8 AI算力达388 TOPS，面向1440p高刷光追与本地AI推理。
+  - desc: 基于Blackwell GB206-300 GPU核心，搭载4608 CUDA核心，配备8GB/16GB GDDR7显存(128-bit位宽，28Gbps)。支持DLSS
+      4多帧生成与Reflex 2低延迟技术，FP4张量算力达988 TOPS。TGP仅150W，单8pin供电，1080p光追游戏性能接近前代RTX 4070。
     tags:
     - Blackwell
+    - GB206
     - GDDR7
-    - Ray Tracing
     - DLSS 4
-    title: NVIDIA GeForce RTX 5070 (Blackwell)
+    title: 'NVIDIA GeForce RTX 5060: Blackwell主流甜点卡'
   Lang:
-  - desc: Go 1.23 正式引入 range-over-func 语法，允许开发者通过泛型迭代器定义自定义集合遍历逻辑，并与标准库 iter 包协同。此特性基于类型参数与
-      yield 机制，使串流数据处理、惰性求值等场景编码更优雅，同时编译器优化使迭代器函数内联开销可忽略，运行时性能不受泛型影响。
+  - desc: Swift 6正式引入完整的数据竞争安全(Data Race Safety)保证，编译器通过Sendable协议与region-based isolation在编译期消除数据竞争。引入Typed
+      Throws、Noncopyable泛型与嵌入式Swift子集，支持裸机与MCU开发。Swift 6模式下的严格并发检查使多线程崩溃率降低80%以上。
     tags:
-    - Go
-    - Programming Language
-    - Iterators
-    - Generics
-    title: 'Go 1.23: 泛型迭代器与标准库增强'
+    - Swift
+    - Concurrency
+    - Data Race Safety
+    - Sendable
+    title: 'Swift 6: 全面数据竞争安全并发模型'
   NLP:
-  - desc: BAAI发布BGE-M3，支持超过100种语言，实现密集、稀疏（词汇）与多向量（ColBERT）三种检索范式统一。模型采用XLM-RoBERTa架构，训练阶段引入自蒸馏与对比学习，在BEIR、MTEB等多语言基准上刷新记录，单次前向即可生成适用于不同检索策略的1024维向量，大幅简化多语言RAG流水线。
+  - desc: AI2发布的全开放大语言模型系列，提供7B与13B参数版本。完全公开训练数据(Dolma)、代码、权重、日志与中间检查点。采用分组查询注意力(GQA)与SwiGLU激活，在MMLU、ARC等基准上超越同规模Llama
+      2与Mistral，主打学术可复现性。
     tags:
-    - Embedding
-    - Multilingual
-    - Dense Retrieval
-    - Sparse Retrieval
-    title: 'BGE-M3: 多语言多粒度嵌入模型'
+    - Open Source LLM
+    - AI2
+    - GQA
+    - Reproducible Research
+    title: 'OLMo 2: 完全开放的语言模型家族'
   Net:
-  - desc: 欧盟Hexa-X-II项目联合爱立信、诺基亚等厂商完成首次140GHz频段RIS辅助通信外场测试。该系统利用含1024单元的超表面实现智能反射，结合AI信道预测，在100米距离实现20Gbps峰值速率，频谱效率达8
-      bps/Hz，为2030年商用6G的1Tbps体验奠定物理层基础。
+  - desc: CXL联盟发布3.1规范，在CXL 3.0基础上增强结构性与安全性。支持PBR(Peer-to-Peer Backbone Routing)、可信安全协议(TSP)与改进的全局结构内存。基于PCIe
+      6.0物理层(64 GT/s)，实现跨机架内存池化与多主机共享，是数据中心可组合架构的核心使能技术。
     tags:
-    - 6G
-    - THz
-    - RIS
-    - AI-Native
-    title: 6G太赫兹通信与智能超表面原型系统
+    - CXL
+    - PCIe 6.0
+    - Memory Pooling
+    - Data Center Fabric
+    title: 'CXL 3.1: 计算快速链路互联规范发布'
   News:
-  - desc: 2026年2月，微软发布Majorana 1芯片，采用拓扑超导体纳米线实现8个拓扑量子比特，量子态受栅极保护，单比特门保真度达99.9%。该芯片集成于稀释制冷平台，通过数字脉冲控制，标志着从含噪声中等规模量子（NISQ）向容错量子计算的重大转折。
+  - desc: Computex 2026于6月2日在台北南港展览馆开幕，聚焦AI PC规模化落地。AMD预计发布Zen 6架构预览，NVIDIA展出Vera
+      Rubin GPU平台，Intel推进Nova Lake处理器。联发科与高通展示面向Copilot+ PC的ARM SoC新品，AI算力门槛提升至50+
+      TOPS。
     tags:
-    - Quantum Computing
-    - Microsoft
-    - Topological Qubit
-    - Majorana
-    title: 微软发布首个拓扑量子比特芯片Majorana 1
+    - Computex
+    - AI PC
+    - Zen 6
+    - Vera Rubin
+    title: Computex 2026台北开幕：AI PC生态全面爆发
