@@ -1,4 +1,18 @@
 {
+  "2026-06-03": [
+    "5G-Advanced (3GPP Release 18) 正式冻结",
+    "随机森林 (Random Forest)",
+    "DBRX: 高效开源 MoE 大语言模型",
+    "内田真礼",
+    "Apple M4 芯片：第二代 3nm 工艺",
+    "AMD Ryzen 9 9950X: Zen 5 旗舰 16 核",
+    "Devika: 开源 AI 软件工程师",
+    "AMD Radeon RX 8800 XT: RDNA 4 中端主力",
+    "NaturalSpeech 3: 零样本语音合成新范式",
+    "Rust 2024 Edition 路线图确定",
+    "NVIDIA GTC 2026: Blackwell Ultra 与 Vera CPU 亮相",
+    "LLaVA: Large Language and Vision Assistant"
+  ],
   "2026-06-02": [
     "NVIDIA GeForce RTX 5060: Blackwell主流甜点卡",
     "Phi-4: 微软14B参数高效推理模型",
@@ -142,21 +156,5 @@
     "Language Lives in Sparse Dimensions (EACL 2026)",
     "Zig 0.16.0 正式发布：原生异步迭代器与增量编译",
     "Cambrian-P: Pose-Grounded Video Understanding (CVPR 2026)"
-  ],
-  "2026-05-24": [
-    "SEATrack：高效自适应多模态目标跟踪器（CVPR 2026 Oral）",
-    "NVIDIA Rubin CPX：面向超长上下文推理的专用AI芯片",
-    "Python 3.14.5 发布：解释器性能持续优化",
-    "硅谷深陷AI算力荒：H200一夜涨价30%，H100全面缺货",
-    "台积电SoIC 3D封装路线图：2029年迈向4.5μm互连间距",
-    "石川由依",
-    "OpenJarvis：斯坦福HazyResearch开源的本地AI智能体框架",
-    "ProPhy: Progressive Physical Alignment for Dynamic World Simulation (CVPR 2026 Oral)",
-    "KnowRL：通过最小充分知识引导的强化学习增强LLM推理（EACL 2026）",
-    "AMD EPYC Venice：台积电2nm工艺，256核Zen 6确认量产",
-    "Orpheus-TTS：开源情感语音合成，单卡可跑流式推理",
-    "百度文心ERNIE 5.1正式发布：预训练成本仅为业界6%",
-    "梯度提升决策树（GBDT）",
-    "中国工信部批复6G技术试验频率：率先开放6GHz频段"
   ]
 }
