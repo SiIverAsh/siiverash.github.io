@@ -1,4 +1,20 @@
 {
+  "2026-06-04": [
+    "主成分分析 (PCA): 经典线性降维算法",
+    "AMD Zen 6 微架构首曝: 3nm工艺，Chiplet设计革新",
+    "花澤香菜",
+    "AMD Radeon RX 9070 XT: RDNA 4旗舰，台积电N4P工艺",
+    "AMD Ryzen 9 9950X3D: 192MB 3D V-Cache，游戏与创作双料旗舰",
+    "t r a c k e r (GitHub 趋势榜第二，30K星)",
+    "Rust 2025 Edition: 稳定泛型关联类型与异步闭包",
+    "Gemma 3: Google 轻量级多模态开源模型家族",
+    "3GPP Release 19: 面向6G的AI原生网络架构标准启动",
+    "VideoGigaGAN: 实时8K视频超分辨率生成对抗网络",
+    "WWDC 2026: Apple发布自研服务器芯片与全新Siri架构",
+    "Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion",
+    "Llama 4 Scout: 109B参数开源MoE模型，支持10M上下文窗口",
+    "VoiceCraft 2: 零样本语音克隆与跨语种风格迁移"
+  ],
   "2026-06-03": [
     "5G-Advanced (3GPP Release 18) 正式冻结",
     "随机森林 (Random Forest)",
@@ -140,21 +156,5 @@
     "阿里 Qwen3.7-Max 自主运行 35 小时优化芯片代码",
     "SiFive Performance P570 Gen3：RVA23 兼容 RISC-V 核心",
     "Rime Coda TTS：号称终极文本转语音模型"
-  ],
-  "2026-05-25": [
-    "Wi-Fi 8 (802.11bn) 进入Draft 1.4阶段：超高可靠性与AI原生",
-    "NVIDIA Nemotron-Labs-Diffusion：三模态语言模型，单次前向生成6倍令牌",
-    "AMD Radeon RX 9060 XT：RDNA 4中端主力，$299起",
-    "AMD EPYC 8005系列发布：Zen 5单路服务器，最高84核225W",
-    "Mirage: AI Agent的统一虚拟文件系统",
-    "Supertone Supertonic v3：端侧31语言TTS模型",
-    "Apple M5 Ultra：UltraFusion双Die互联，32核CPU+80核GPU",
-    "種崎敦美",
-    "TRACE: Your Diffusion Model is Secretly an Instance Edge Detector (ICLR 2026 Oral)",
-    "AI高带宽内存(HBM)供应告急：AMD CEO Lisa Su预警下一瓶颈",
-    "主成分分析 (Principal Component Analysis, PCA)",
-    "Language Lives in Sparse Dimensions (EACL 2026)",
-    "Zig 0.16.0 正式发布：原生异步迭代器与增量编译",
-    "Cambrian-P: Pose-Grounded Video Understanding (CVPR 2026)"
   ]
 }

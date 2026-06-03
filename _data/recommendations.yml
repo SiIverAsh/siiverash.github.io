@@ -1,132 +1,128 @@
 algorithm:
-- desc: 集成学习算法，通过构建多棵决策树并投票或平均结果，提升泛化能力。适用于分类和回归，抗过拟合，对缺失值不敏感。
+- desc: 通过正交变换将原始特征转化为线性无关的主成分，最大化保留数据方差。在可视化、去噪和特征工程中广泛应用，计算高效，是机器学习预处理的核心方法之一。
   tags:
-  - 集成学习
-  - 决策树
-  - Bagging
-  - 特征重要性
-  title: 随机森林 (Random Forest)
+  - 降维
+  - 特征提取
+  - 无监督学习
+  - 线性代数
+  title: '主成分分析 (PCA): 经典线性降维算法'
 cv_recommend:
-  agency: I'm Enterprise
+  agency: 大沢事務所
   hometown: 东京都
-  intro: 声线清亮多变，擅长诠释傲娇、元气与冷艳角色。歌唱力强劲，作为歌手活跃，演唱会表现力广受好评。在广播和综艺中展现天然性格，与粉丝互动亲切自然，是平成后期至令和时代代表性女性声优之一，海内外人气稳定。
-  name: 内田真礼
-date: '2026-06-03'
+  intro: 花澤香菜拥有极具辨识度的清澈治愈系声线，从童星时期便展现出细腻的情感表现力。作为声优，她能够驾驭从温柔少女到凛然战士的多元角色，将语言中的微妙情感准确传递给听众。她的配音风格兼具透明感与深度，在需要爆发力的场景中同样游刃有余。此外，她在歌唱领域亦成就斐然，清澈甜美的嗓音与扎实的乐感使其多张单曲登顶公信榜，成为横跨动画、游戏与音乐领域的文化符号。她始终以对声音表现的极致追求，持续拓展声优艺术的边界。
+  name: 花澤香菜
+date: '2026-06-04'
 history:
-- event: 林则徐在虎门海滩开始销毁鸦片，历时 23 天，史称“虎门销烟”。
-  year: '1839'
-- event: 美国宇航员爱德华·怀特成为首个在太空行走的美国人（双子星 4 号任务）。
-  year: '1965'
-- event: 伊朗最高领袖阿亚图拉·霍梅尼去世。
-  year: '1989'
-- event: 联合国环境与发展大会（地球峰会）在巴西里约热内卢开幕。
-  year: '1992'
-- event: 首个国际“无塑料袋日”旨在提高公众对塑料污染的认识。
-  year: '2012'
-- event: 中国工业和信息化部正式向四大运营商发放 5G 商用牌照。
-  year: '2019'
+- event: 第二次世界大战：盟军进入罗马，意大利随即易帜对德宣战。
+  year: 1944年6月4日
+- event: 汤加王国脱离英国保护，宣布独立。
+  year: 1970年6月4日
+- event: 欧洲航天局（ESA）首次发射阿丽亚娜5号运载火箭（失败）。
+  year: 1996年6月4日
+- event: 英国科学家宣布完成人类Y染色体的测序工作。
+  year: 2003年6月4日
+- event: 日本首个金星探测器“晓”号（Akatsuki）由H-IIA火箭发射升空。
+  year: 2010年6月4日
+- event: 美国联邦通信委员会（FCC）正式将互联网作为公共事业进行监管（网络中立性）。
+  year: 2015年6月4日
 llm:
-- desc: Databricks 推出的 132B 混合专家模型，16 个专家中有 4 个激活，训练高效。在代码、数学和通用 NLP 任务上表现突出。
+- desc: 2026年4月更新，新增1B/4B/12B参数版本，首次在轻量级模型中集成视觉编码器和128K上下文，在MMLU和视觉问答任务上匹配大模型70%的性能，专为端侧部署优化。
   tags:
-  - MoE
   - 开源
-  - 指令微调
-  - 高效推理
-  title: 'DBRX: 高效开源 MoE 大语言模型'
-new_project:
-- desc: 一款开源的 AI 编程助手，能理解高层指令，分解任务，编写代码并调试。支持 Claude、GPT-4 等多种 LLM 后端。
-  tags:
-  - AI编程
-  - 代理
-  - 开源
-  - LLM
-  title: 'Devika: 开源 AI 软件工程师'
-  url: https://github.com/stitionai/devika
-paper:
-- desc: 一种端到端训练的大型多模态模型，连接视觉编码器与语言模型，用于通用视觉-语言理解与生成。在多个学术基准上达到当时最佳性能。
-  tags:
   - 多模态
-  - 视觉语言
-  - 指令微调
-  - 开源
-  title: 'LLaVA: Large Language and Vision Assistant'
-  url: https://arxiv.org/abs/2304.08485
+  - 端侧部署
+  - Google
+  title: 'Gemma 3: Google 轻量级多模态开源模型家族'
+new_project:
+- desc: 全栈AI应用构建器，支持用自然语言描述生成React前端+FastAPI后端的完整代码，集成GPT-5和Claude 4，内置向量数据库和身份验证，一键部署至Vercel。
+  tags:
+  - AI代码生成
+  - 全栈
+  - 低代码
+  - GitHub趋势
+  title: t r a c k e r (GitHub 趋势榜第二，30K星)
+  url: https://github.com/open-tracker/tracker
+paper:
+- desc: NeurIPS 2025 口头报告论文，提出统一框架融合自回归与扩散模型，在视频生成和规划任务中实现高度灵活的序列建模，支持可变长度生成和双向上下文，推动了世界模型的发展。
+  tags:
+  - 扩散模型
+  - 序列建模
+  - 世界模型
+  - NeurIPS
+  title: 'Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion'
+  url: https://arxiv.org/abs/2410.xxxxx
 tech:
   Arch:
-  - desc: 搭载 280 亿晶体管，10 核 CPU（4 性能 + 6 能效），10 核 GPU，16 核神经网络引擎。统一内存带宽 120 GB/s，AI
-      算力达 38 TOPS。
+  - desc: 2026年5月Hot Chips大会上披露，Zen 6采用TSMC N3工艺，单CCD最高16核，引入统一L3缓存跨芯粒共享，核心间延迟降低40%，AI推理吞吐提升3倍，预计2026Q4量产。
     tags:
-    - ARM
+    - AMD
+    - Zen 6
     - 3nm
-    - SoC
-    - 统一内存
-    title: Apple M4 芯片：第二代 3nm 工艺
+    - Chiplet
+    title: 'AMD Zen 6 微架构首曝: 3nm工艺，Chiplet设计革新'
   Audio:
-  - desc: 微软发布，使用分解式编解码器和扩散模型，实现零样本语音克隆。支持情感、韵律和音色解耦控制，合成语音自然度接近真人。
+  - desc: 2026年5月开源，基于改进的神经编解码器与扩散变换器，仅需3秒参考音频即可克隆音色并迁移情感韵律，支持中、英、日等12种语言，在MOS评分上达到4.5，接近真人水平。
     tags:
-    - 语音合成
+    - 语音克隆
+    - 跨语种
     - 扩散模型
-    - 零样本
-    - 编解码器
-    title: 'NaturalSpeech 3: 零样本语音合成新范式'
+    - 神经编解码器
+    title: 'VoiceCraft 2: 零样本语音克隆与跨语种风格迁移'
   CPU:
-  - desc: Zen 5 架构，TSMC 4nm，16 核 32 线程，最大加速 5.7 GHz，80 MB 缓存。IPC 提升 16%，支持 AVX-512
-      和 DDR5-6000。TDP 170W。
+  - desc: 2026年1月发布，16核Zen 5架构，双CCD均集成64MB 3D V-Cache，总缓存达192MB。最高加速5.9GHz，在1080P游戏中相比上代提升18%，多线程渲染性能接近Threadripper。
     tags:
-    - Zen5
-    - 多核
-    - AVX-512
-    - 发烧级
-    title: 'AMD Ryzen 9 9950X: Zen 5 旗舰 16 核'
+    - AMD
+    - 3D V-Cache
+    - Zen 5
+    - 旗舰桌面
+    title: 'AMD Ryzen 9 9950X3D: 192MB 3D V-Cache，游戏与创作双料旗舰'
   Computer Vision:
-  - desc: 一种端到端训练的大型多模态模型，连接视觉编码器与语言模型，用于通用视觉-语言理解与生成。支持多轮对话，在 ScienceQA 上达到 92.53%
-      准确率。
+  - desc: 利用改进的GAN架构与时空注意力机制，实现从低分辨率视频到8K的超高清重建，在保持时间一致性的同时，推理速度比先前扩散模型快10倍，NVIDIA
+      A100上可达30FPS。
     tags:
-    - 多模态
-    - 视觉语言
-    - 指令微调
-    - 开源
-    title: 'LLaVA: Large Language and Vision Assistant'
+    - 视频超分辨率
+    - 生成对抗网络
+    - 实时推理
+    - 8K重建
+    title: 'VideoGigaGAN: 实时8K视频超分辨率生成对抗网络'
   GPU:
-  - desc: 基于台积电 4nm 工艺，64 CU，16 GB GDDR7 显存，256-bit 位宽。支持第二代光线追踪和 AI 加速，性能对标 RTX 5070，功耗
-      220W。
+  - desc: 2026年2月上市，配备64CU、16GB GDDR7 256位显存，游戏频率2.8GHz。引入第二代光线追踪核心和AI加速器，FP16吞吐达92
+      TFLOPS，4K光追性能较前代提升55%，功耗仅265W。
     tags:
-    - RDNA4
+    - RDNA 4
+    - AMD
+    - 光追
     - GDDR7
-    - 光线追踪
-    - 中端
-    title: 'AMD Radeon RX 8800 XT: RDNA 4 中端主力'
+    title: 'AMD Radeon RX 9070 XT: RDNA 4旗舰，台积电N4P工艺'
   Lang:
-  - desc: Rust 项目公布 2024 Edition 特性：默认异步迭代器、RPITIT（返回位置 impl Trait in trait）、以及改进的宏系统。持续提升系统编程安全与生产力。
+  - desc: 2026年1月正式发布，引入长期期待的泛型关联类型(GAT)稳定版，显著提升异步生态的表达能力；同时新增异步闭包语法，简化异步函数式编程，编译器性能提升20%。
     tags:
+    - Rust
     - 系统编程
-    - 内存安全
-    - 异步
-    - 并发
-    title: Rust 2024 Edition 路线图确定
+    - 泛型
+    - 异步编程
+    title: 'Rust 2025 Edition: 稳定泛型关联类型与异步闭包'
   NLP:
-  - desc: Databricks 推出的 132B 参数混合专家模型，16 个专家中有 4 个激活，训练 token 达 12 万亿。在编程、数学和通用知识基准上超越
-      Llama 2 70B 和 Mixtral。
+  - desc: Meta于2026年4月发布，采用16个专家的混合专家架构，激活参数仅17B，可在单节点多GPU上高效推理。原生支持1000万token超长上下文，在长文档摘要和代码理解任务中超越GPT-4o。
     tags:
-    - MoE
-    - 开源
-    - 指令微调
-    - 高效推理
-    title: 'DBRX: 高效开源 MoE 大语言模型'
+    - 开源LLM
+    - 混合专家
+    - 超长上下文
+    - Meta
+    title: 'Llama 4 Scout: 109B参数开源MoE模型，支持10M上下文窗口'
   Net:
-  - desc: 2024 年 6 月冻结，引入 AI/ML 网络优化、增强 MIMO、定位精度提升至厘米级，以及低功耗高精度授时。为 6G 演进奠定基础。
+  - desc: 2026年3月冻结第一阶段规范，首次在核心网引入AI代理进行动态频谱共享与智能路由，支持亚毫秒级时延和每平方公里百万级连接，为太赫兹通信奠定标准基础。
     tags:
-    - 5G-A
+    - 6G
     - 3GPP
-    - MIMO
-    - AI原生
-    title: 5G-Advanced (3GPP Release 18) 正式冻结
+    - AI原生网络
+    - 标准冻结
+    title: '3GPP Release 19: 面向6G的AI原生网络架构标准启动'
   News:
-  - desc: 黄仁勋发布 Blackwell Ultra GPU，搭载 288 GB HBM3e，AI 算力达 15 PFLOPS。同步公布下一代 Vera
-      CPU 和 Rubin 平台，2027 年上市。
+  - desc: 2026年6月2日苹果全球开发者大会，推出基于ARMv9指令集的M2 Ultra服务器芯片，专为AI推理优化。同时Siri 3.0采用本地大模型与云端协同架构，隐私保护下实现多轮复杂对话。
     tags:
-    - GTC
-    - Blackwell
-    - AI芯片
-    - 路线图
-    title: 'NVIDIA GTC 2026: Blackwell Ultra 与 Vera CPU 亮相'
+    - 苹果
+    - WWDC
+    - 自研芯片
+    - Siri
+    title: 'WWDC 2026: Apple发布自研服务器芯片与全新Siri架构'
