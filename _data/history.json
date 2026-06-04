@@ -1,4 +1,20 @@
 {
+  "2026-06-05": [
+    "Zig 0.16.0: 增量编译与异步语法稳定化",
+    "StepAudio 2.5 Realtime: 端到端角色扮演语音模型",
+    "SiFive Performance P570 Gen3: RVA23高性能RISC-V核心",
+    "K-近邻算法 (K-Nearest Neighbors)",
+    "鬼頭明里",
+    "3GPP Release 20: 6G标准化正式启动",
+    "Intel Nova Lake: Core Ultra 400系列52核旗舰泄露",
+    "MiniMax M3: 1M上下文原生多模态编程旗舰",
+    "GLASS Flows: Efficient Inference for Reward Alignment of Flow and Diffusion Models",
+    "Tracking the Limits of Knowledge Propagation: How LLMs Fail at Multi-Step Reasoning with Conflicting Knowledge",
+    "CodeGraph: 预索引代码知识图谱",
+    "Computex 2026: NVIDIA RTX Spark Superchip重塑AI PC",
+    "AMD Radeon RX 9060 XT: RDNA 4中端主力",
+    "TRACE: Your Diffusion Model is Secretly an Instance Edge Detector"
+  ],
   "2026-06-04": [
     "主成分分析 (PCA): 经典线性降维算法",
     "AMD Zen 6 微架构首曝: 3nm工艺，Chiplet设计革新",
@@ -140,21 +156,5 @@
     "支持向量机 (Support Vector Machine)",
     "IIB-LPO: Latent Policy Optimization via Iterative Information Bottleneck",
     "AMD锐龙AI Max 400系列发布"
-  ],
-  "2026-05-26": [
-    "LoongRL: Reinforcement Learning for Advanced Reasoning over Long Contexts",
-    "NVIDIA GeForce RTX 5060 正式上市：Blackwell 主流卡",
-    "Ruby 4.0.5 发布：YJIT 与性能改进",
-    "OpenClaw：个人 AI 助手框架",
-    "3GPP Release 19 功能冻结：迈向 6G 的 AI 原生网络",
-    "SAM 3.1：Meta 发布实时视频分割与跟踪升级版",
-    "朴素贝叶斯分类器 (Naive Bayes Classifier)",
-    "Meta Llama 4：原生多模态开源大模型",
-    "悠木碧",
-    "Intel Core Ultra Series 3 (Panther Lake) 发布：18A 工艺首秀",
-    "OpenAI 模型解决 80 年离散几何猜想",
-    "阿里 Qwen3.7-Max 自主运行 35 小时优化芯片代码",
-    "SiFive Performance P570 Gen3：RVA23 兼容 RISC-V 核心",
-    "Rime Coda TTS：号称终极文本转语音模型"
   ]
 }
