@@ -1,4 +1,19 @@
 {
+  "2026-06-06": [
+    "ControlFoley: 可控视频音效生成模型",
+    "nanobot",
+    "新华三全球首发企业级Wi-Fi 8 接入点 WA8648",
+    "DeepSeek-V4 预览版",
+    "早見沙織",
+    "ViT^3: Unlocking Test-Time Training in Vision",
+    "ChatGPT与Codex正式合并，打造超级Agent",
+    "MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End RL",
+    "Intel Xeon 6+ 平台：288核全E核设计",
+    "Rust 1.96.0 稳定版发布",
+    "AMD Ryzen 7 5800X3D 十周年纪念版",
+    "决策树 (Decision Tree)",
+    "AMD Instinct MI430X GPU"
+  ],
   "2026-06-05": [
     "Zig 0.16.0: 增量编译与异步语法稳定化",
     "StepAudio 2.5 Realtime: 端到端角色扮演语音模型",
@@ -140,21 +155,5 @@
     "Stable Audio 2.0：开源音乐生成模型",
     "Dify: 开源 LLM 应用开发平台",
     "Hugging Face Transformers 5.0 发布"
-  ],
-  "2026-05-27": [
-    "智谱ZCube：大模型推理网络架构",
-    "蚂蚁百灵Ring-2.6-1T开源万亿思考模型",
-    "ViT³: Unlocking Test-Time Training in Vision",
-    "Molmo2: Open Weights and Data for Vision-Language Models",
-    "谷歌披露75%新代码由AI生成，第八代TPU亮相",
-    "OpenHuman",
-    "佐仓绫音",
-    "Go 1.26 正式发布",
-    "进迭时空X200 RISC-V处理器核",
-    "Qwen3-TTS 开源语音合成模型",
-    "砺算LX 7G100纯国产游戏显卡",
-    "支持向量机 (Support Vector Machine)",
-    "IIB-LPO: Latent Policy Optimization via Iterative Information Bottleneck",
-    "AMD锐龙AI Max 400系列发布"
   ]
 }

@@ -1,151 +1,136 @@
 algorithm:
-- desc: KNN是最经典的实例基学习算法之一，核心思想为「近朱者赤」——对未知样本，在特征空间中寻找与其距离最近的K个训练样本，通过多数投票（分类）或均值（回归）进行预测。其数学基础为Cover与Hart于1967年证明的渐近误差率上界：当样本量趋于无穷时，KNN误差率不超过贝叶斯最优分类器的两倍。KNN无需显式训练过程（惰性学习），但对高维数据面临维度灾难，常用距离度量包括欧氏距离、曼哈顿距离与余弦相似度。作为非参数方法，KNN在推荐系统、异常检测与模式识别领域仍有广泛应用。
+- desc: 一种基础且直观的机器学习算法，通过树状结构对特征进行递归划分实现分类或回归。常用算法包括ID3、C4.5和CART。其可解释性强，是众多集成方法（如随机森林、梯度提升树）的基学习器，广泛用于金融风控、医疗诊断等领域。
   tags:
-  - Instance-Based Learning
-  - Non-Parametric
-  - Lazy Learning
-  - Distance Metric
-  - Pattern Recognition
-  title: K-近邻算法 (K-Nearest Neighbors)
+  - 机器学习
+  - 分类
+  - 回归
+  - 树模型
+  title: 决策树 (Decision Tree)
 cv_recommend:
-  agency: 株式会社ラクーンドッグ (Raccoon Dog)
-  hometown: 愛知県名古屋市
-  intro: 1994年10月16日出生于爱知县名古屋市。2014年以Pro-Fit事务所所属身份声优出道，2022年随事务所重组移籍至ラクーンドッグ。声线具备罕见的可塑性，从清澈少女音到低沉冷静声线均能驾驭自如，尤以情感层次丰富的演技见长。2019年获得第13回声优奖新人女优奖。同时作为歌手活跃，2019年以单曲「Swinging
-    Heart」歌手出道，拥有稳定的音乐活动。公认的演技派声优，在业界以敬业态度与持续进步的技艺获得高度评价。
-  name: 鬼頭明里
-date: '2026-06-05'
+  agency: アイムエンタープライズ（I'm Enterprise）
+  hometown: 東京都
+  intro: 拥有透明感与柔和音色的实力派声优，声音辨识度极高，既能演绎温柔细腻的少女声线，也能驾驭沉稳冷静的角色。歌唱能力同样出众，多次举办个人演唱会及参与音乐活动。以自然的演技风格著称，台词表现力曾获“即使演绎语速极快的长台词也能清晰传达情感”的业界评价。为人谦逊，工作态度严谨，接受采访时曾直言“只有不断地练习才能维持并提升自己的表演水平”，在业界始终保持高人气与良好口碑。
+  name: 早見沙織
+date: '2026-06-06'
 history:
-- event: Ada Lovelace在伦敦首次会见Charles Babbage，后者向她展示了差分机原型。此次会面开启了两人在分析机上的合作，Lovelace后来撰写了被认为是世界上第一个计算机程序的算法笔记。
-  year: '1833'
-- event: 美国国务卿乔治·马歇尔在哈佛大学毕业典礼上发表演说，提出马歇尔计划（欧洲复兴计划），为二战后欧洲经济重建奠定基础，该计划后来获得1953年诺贝尔和平奖。
-  year: '1947'
-- event: Apple II个人电脑正式上市销售，搭载MOS 6502处理器、4KB RAM（可扩展至48KB），首次引入彩色图形显示与内置BASIC解释器，定价1298美元，被誉为个人计算革命的起点。
-  year: '1977'
-- event: 美国疾病控制与预防中心（CDC）在《发病率与死亡率周报》中首次报告5例罕见的肺孢子菌肺炎病例，这成为全球首次对艾滋病（AIDS）的正式医学记录。
-  year: '1981'
-- event: 苹果公司CEO史蒂夫·乔布斯在WWDC上宣布Mac电脑将从PowerPC架构全面转向Intel x86处理器，结束了与IBM长达十余年的芯片合作，首款Intel
-    Mac于2006年1月发布。
-  year: '2005'
-- event: 21世纪最后一次金星凌日天象上演，全球大部分地区可见。金星从太阳圆面前经过，持续约6小时40分钟。下一次金星凌日将发生在2117年12月。
+- event: 盟军在法国诺曼底海滩登陆（D-Day），开辟欧洲第二战场，加速纳粹德国的覆灭。
+  year: '1944'
+- event: 苏联发射联盟11号载人飞船，成功与礼炮1号空间站对接，航天员在轨驻留23天。
+  year: '1971'
+- event: 以色列大规模入侵黎巴嫩，第五次中东战争爆发，持续至同年8月。
+  year: '1982'
+- event: 微软发布Windows NT 3.1操作系统，为后续Windows NT内核奠定基础，面向企业级市场。
+  year: '1993'
+- event: 美国正式退出《反弹道导弹条约》，为部署国家导弹防御系统扫除障碍。
+  year: '2002'
+- event: 金星凌日天文现象发生，本世纪最后一次，全球大部分地区可见。
   year: '2012'
 llm:
-- desc: MiniMax于2026年5月发布M3系列模型，搭载1M token超长上下文窗口与原生多模态理解能力。基于MoE架构，在SWE-bench Verified编程基准上达到76.3%准确率，超越GPT-5.5与Gemini
-    3.1 Pro。独特之处在于将视觉、语音与文本编码统一到单一Transformer骨干，实现真正的端到端多模态推理。API成本仅为同级模型的5-10%，同时开源了轻量版M3-8B供社区研究。
+- desc: 开源的百万上下文大语言模型，支持Agent调用与工具使用，推理性能在多个基准上领跑开源社区。采用MIT许可证，首次将超长上下文与实用Agent能力普惠化，为开发者提供了媲美闭源模型的轻量级替代方案。
   tags:
-  - MiniMax
-  - MoE
-  - 1M Context
-  - Multimodal
-  - SWE-bench
-  title: 'MiniMax M3: 1M上下文原生多模态编程旗舰'
+  - DeepSeek
+  - 开源
+  - LLM
+  - Agent
+  - 百万上下文
+  title: DeepSeek-V4 预览版
 new_project:
-- desc: CodeGraph为AI编程助手（Claude Code、Codex、Gemini、Cursor、OpenCode等）提供预构建的代码库知识图谱，将代码结构、依赖关系与符号引用索引为图数据库。与直接读取源码相比，可减少60-80%的token消耗与工具调用次数，完全本地运行无需外部服务。支持Python、TypeScript、Rust、Go等12种语言，通过语义级代码压缩实现百万行代码库的秒级查询。GitHub
-    5月热门项目，目前已获超12K星。
+- desc: HKUDS团队开发的轻量级开源AI代理框架，专注于任务自动化与工具编排。支持自然语言指令分解、外部API调用与状态记忆，旨在以最小资源消耗实现复杂的多步骤工作流，适合嵌入式或边缘AI场景。
   tags:
-  - Code Knowledge Graph
-  - AI Coding Assistant
-  - Token Optimization
-  - Local-First
-  - Developer Tools
-  title: 'CodeGraph: 预索引代码知识图谱'
-  url: https://github.com/colbymchenry/codegraph
+  - AI Agent
+  - 开源
+  - 自动化
+  - 轻量级
+  title: nanobot
+  url: https://github.com/HKUDS/nanobot
 paper:
-- desc: ICLR 2026 Oral杰出论文。该工作提出GLASS Flows框架，通过在推理阶段引入过渡采样策略，无需重新训练即可将奖励信号对齐到预训练Flow
-    Matching与扩散模型中。核心创新在于推导出score函数与奖励梯度之间的闭式桥接，使单个模型在推理时动态适配多样化奖励函数（美学、安全性、文本对齐等），推理开销仅增加约15%。在Stable
-    Diffusion 3与Flux等主流模型上验证了其通用性。
+- desc: 顶会论文推荐：本文提出MemSearcher框架，首次将记忆读写与检索决策统一到端到端强化学习范式中。LLM学习何时更新内部记忆、何时查询外部知识库，在复杂多跳推理任务中显著优于传统RAG，为构建具有持续学习能力的智能体提供了新思路。
   tags:
-  - Flow Matching
-  - Reward Alignment
-  - ICLR 2026 Outstanding Paper
-  - Diffusion Models
-  - Inference-Time Optimization
-  title: 'GLASS Flows: Efficient Inference for Reward Alignment of Flow and Diffusion
-    Models'
-  url: https://openreview.net/forum?id=vH7OAPZ2dR
+  - ACL 2026
+  - Memory
+  - RL
+  - LLM Agent
+  title: 'MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End
+    RL'
+  url: https://arxiv.org/abs/2511.02805
 tech:
   Arch:
-  - desc: SiFive于2026年5月发布第三代Performance P570 RISC-V核心。P570 Gen3完全兼容RVA23应用处理器规范，采用12级超标量乱序流水线、4-wide解码，SPECint2006性能较Gen2提升超40%。目标市场涵盖消费级笔记本电脑、边缘AI推理及汽车座舱SoC，标志RISC-V正式进军主流高性能计算。
-    tags:
-    - RISC-V
-    - RVA23
-    - SiFive P570
-    - Out-of-Order
-    - Consumer SoC
-    title: 'SiFive Performance P570 Gen3: RVA23高性能RISC-V核心'
-  Audio:
-  - desc: 阶跃星辰于2026年5月发布StepAudio 2.5 Realtime。该模型采用端到端架构，融合角色扮演专用RLHF微调与副语言理解（情感、语气、停顿），支持中英日韩等10+语种实时流式语音合成。独特的情感-韵律解耦编码器使其在角色一致性对话场景中显著超越传统级联方案。
-    tags:
-    - End-to-End TTS
-    - Roleplay RLHF
-    - Paralinguistic
-    - Multilingual
-    - Real-time Streaming
-    title: 'StepAudio 2.5 Realtime: 端到端角色扮演语音模型'
-  CPU:
-  - desc: Intel在Computex 2026确认Nova Lake (Core Ultra Series 4) 将于2026年底发布。泄露SKU列表显示桌面版最高52核（Panther
-      Cove P核 + Darkmont E核混合架构），LGA 1954封装，支持DDR5-8000与PCIe 6.0。首次引入bLLC（底层末级缓存）与Chiplet互连升级，TDP覆盖35W至175W。
+  - desc: 在Computex 2026上，英特尔发布了基于全新能效核（E-core）架构的Xeon 6+处理器，单芯片集成288个核心，专为高密度云计算和原生AI推理负载优化。该平台摒弃传统大小核设计，通过统一E核阵列实现2倍于前代的能效比，支持DDR5和PCIe
+      6.0。
     tags:
     - Intel
-    - Nova Lake
-    - Panther Cove
-    - LGA 1954
-    - Chiplet
-    title: 'Intel Nova Lake: Core Ultra 400系列52核旗舰泄露'
+    - Xeon
+    - E-core
+    - 288核
+    - 数据中心
+    title: Intel Xeon 6+ 平台：288核全E核设计
+  Audio:
+  - desc: 小米开源的视频到音频生成模型，支持用户通过文本或时间线指定音效类型和时机。采用扩散模型处理跨模态冲突，在音画同步性和听觉真实感上达到商业级水平，旨在简化影视后期音效制作流程。
+    tags:
+    - 音频生成
+    - 视频音效
+    - 扩散模型
+    - 开源
+    title: 'ControlFoley: 可控视频音效生成模型'
+  CPU:
+  - desc: 为纪念AM4平台诞生十周年，AMD推出基于Zen 3架构的7nm处理器，搭载3D V-Cache技术，拥有96MB超大L3缓存。兼容AM4及AM5主板，游戏性能仍可匹敌最新i9-14900K。同时发布的Ryzen
+      7 7700X3D则将3D V-Cache引入中端AM5平台。
+    tags:
+    - AMD
+    - Ryzen
+    - 3D V-Cache
+    - 游戏
+    - 十周年
+    title: AMD Ryzen 7 5800X3D 十周年纪念版
   Computer Vision:
-  - desc: ICLR 2026 Oral论文。研究者发现预训练扩散模型内部特征天然具备零样本实例边缘检测能力，无需任何微调即可从注意力层与特征图中提取精确的对象边界。该方法在COCO、LVIS等基准上以零样本设定超越多数监督方法，揭示了扩散模型作为通用视觉感知骨干的巨大潜力。
+  - desc: 提出一种针对视觉Transformer的测试时训练方法，利用自监督任务在推理阶段动态调整模型参数，无需额外标注即可显著提升分布外泛化能力。该方法在多个OOD基准上实现SOTA，为视觉模型在实际部署中的鲁棒性提供了新范式。
     tags:
-    - Diffusion Models
-    - Zero-Shot Edge Detection
-    - ICLR 2026 Oral
-    - Instance Segmentation
-    - Feature Interpretation
-    title: 'TRACE: Your Diffusion Model is Secretly an Instance Edge Detector'
+    - CVPR 2026
+    - Test-Time Training
+    - Vision Transformer
+    - 分布外泛化
+    title: 'ViT^3: Unlocking Test-Time Training in Vision'
   GPU:
-  - desc: AMD于2026年Q2推出Radeon RX 9060 XT，基于RDNA 4架构与Navi 44核心，采用台积电N4P工艺。提供8GB与16GB
-      GDDR6两种显存配置，128-bit位宽，PCIe 5.0 x8接口。支持DisplayPort 2.1 UHBR13.5与AV1硬件编解码，定位1440p高刷新率游戏市场，TBP约180W。
+  - desc: 专为HPC和科学计算打造，配备全新设计的双精度（FP64）计算单元，FP64性能达英伟达Rubin的6倍以上。采用台积电3nm工艺与HBM3E内存子系统，支持12V-2x6供电接口，功耗600W，已获得全球两大超算集群采用。
     tags:
-    - RDNA 4
-    - Navi 44
-    - GDDR6
-    - TSMC N4P
-    - 1440p Gaming
-    title: 'AMD Radeon RX 9060 XT: RDNA 4中端主力'
+    - AMD
+    - Instinct
+    - HPC
+    - FP64
+    - HBM3E
+    title: AMD Instinct MI430X GPU
   Lang:
-  - desc: Zig 0.16.0于2026年4月正式发布。此版本核心更新包括：增量编译引擎重写实现50-80%的增量构建加速；comptime元编程支持任意类型反射与代码生成；异步函数(async/await)语法冻结为稳定特性；全新原生x86_64后端通过自举测试；链接器支持LTO与增量链接，目标文件体积平均缩减15%。
+  - desc: 引入新型范围类型（Range types）增强集合操作安全性，新增assert_matches!宏简化测试断言，Cargo集成两个关键安全更新以防范供应链攻击。同时优化异步运行时性能，巩固系统编程语言的安全与效率标杆地位。
     tags:
-    - Zig
-    - Incremental Compilation
-    - Comptime
-    - Async/Await
-    - Systems Programming
-    title: 'Zig 0.16.0: 增量编译与异步语法稳定化'
+    - Rust
+    - 编程语言
+    - 系统编程
+    - 安全
+    title: Rust 1.96.0 稳定版发布
   NLP:
-  - desc: EACL 2026长文。该研究系统性地揭示了大语言模型在多步推理链中面对冲突知识时的脆弱性——当中间步骤引入与模型内置知识矛盾的上下文信息时，推理链会逐渐偏离正确轨道，且错误随步数累积呈指数级放大。论文提出了知识传播衰减的量化框架，为提升LLM事实一致性提供了理论基础。
+  - desc: 通过端到端强化学习训练大语言模型进行推理、搜索与记忆管理。模型自主决策何时检索外部知识、读写记忆模块，在开放域问答和多跳推理任务中显著优于传统检索增强生成（RAG）方法，展现了更类人的认知行为。
     tags:
-    - LLM Reasoning
-    - Knowledge Conflict
-    - EACL 2026
-    - Factual Consistency
-    - Chain-of-Thought
-    title: 'Tracking the Limits of Knowledge Propagation: How LLMs Fail at Multi-Step
-      Reasoning with Conflicting Knowledge'
+    - ACL 2026
+    - Memory
+    - RL
+    - LLM Agent
+    title: 'MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End
+      RL'
   Net:
-  - desc: 3GPP于2026年Q1在福冈全会上正式启动Release 20规范制定，标志着6G从愿景进入工程标准化阶段。Rel-20将聚焦AI原生空口设计、太赫兹通信、通感一体化(ISAC)及超大规模MIMO四大技术支柱，目标2030年商用。SA1已完成6G场景需求定义，RAN工作组已启动信道建模与波形评估。
+  - desc: 支持IEEE 802.11bk (Wi-Fi 8) 标准，引入智能频谱调度与确定性低延迟机制，为AI应用和工业物联网提供微秒级时延保障。旗舰级三频设计，整机速率超30
+      Gbps，是构建AI就绪型园区网络的关键组件。
     tags:
-    - 6G
-    - 3GPP Release 20
-    - AI-Native Air Interface
-    - ISAC
-    - THz Communication
-    title: '3GPP Release 20: 6G标准化正式启动'
+    - Wi-Fi 8
+    - 企业网络
+    - 低延迟
+    - AI就绪
+    title: 新华三全球首发企业级Wi-Fi 8 接入点 WA8648
   News:
-  - desc: Computex 2026最大新闻：NVIDIA联合微软发布RTX Spark Superchip平台，集成Arm架构CPU与Blackwell
-      GPU、128GB统一内存（LPDDR6），目标将Windows PC转变为Agentic AI原生设备。该平台支持本地运行200B参数模型，DLSS
-      4.5引入神经渲染管线全面升级，首批OEM设备预计2026年Q4出货。
+  - desc: OpenAI宣布将ChatGPT与Codex能力深度整合，推出统一的“超级Agent”产品，可直接在对话中完成代码编辑、调试与部署，并调用外部工具。该功能面向全球10亿用户推出，标志着通用AI智能体从实验室走向大众化应用。
     tags:
-    - Computex 2026
-    - NVIDIA RTX Spark
-    - Agentic AI PC
-    - Blackwell
-    - Unified Memory
-    title: 'Computex 2026: NVIDIA RTX Spark Superchip重塑AI PC'
+    - OpenAI
+    - ChatGPT
+    - Codex
+    - Agent
+    - AI
+    title: ChatGPT与Codex正式合并，打造超级Agent
