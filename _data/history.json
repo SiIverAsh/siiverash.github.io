@@ -1,4 +1,20 @@
 {
+  "2026-06-07": [
+    "GPG: A Simple and Strong Reinforcement Learning Baseline for Model Reasoning",
+    "Python 3.14.5 正式发布",
+    "SenseSearch: Empowering Vision-Language Models with High-Resolution Agentic Search-Reasoning via Reinforcement Learning",
+    "Step-3.7-Flash: 阶跃星辰开源原生多模态高速Agent大模型",
+    "AMD Radeon RX 9070 GRE: RDNA 4 全球中端新主力",
+    "Qwen3.7: 阿里通义千问新一代编程与工具调用旗舰模型",
+    "Qwen3-ASR: 阿里开源语音识别大模型",
+    "AMD CDNA 4 架构：面向数据中心AI加速的全新GPU架构",
+    "香港发布首个生产力级超级智能体 'Agent Workshop'",
+    "OpenClaw: 自主AI代理框架",
+    "水瀬いのり",
+    "支持向量机 (Support Vector Machine)",
+    "AMD Ryzen 9 PRO 9965X3D: 16核Zen 5 3D V-Cache工作站处理器",
+    "我国批复7-15GHz '黄金频谱' 用于6G试验"
+  ],
   "2026-06-06": [
     "ControlFoley: 可控视频音效生成模型",
     "nanobot",
@@ -139,21 +155,5 @@
     "TypeScript 5.7",
     "LLaMA-Factory",
     "Moshi"
-  ],
-  "2026-05-28": [
-    "GPT-5：OpenAI 的多模态通用推理模型",
-    "随机森林 (Random Forest)",
-    "DeepSeek-V3: A Strong, Mixture-of-Experts Language Model",
-    "Rust 1.86 正式发布",
-    "AMD Radeon RX 9070 XT：RDNA 4 中高端主力",
-    "英特尔获 85 亿美元 CHIPS 法案补贴",
-    "花泽香菜",
-    "JEDEC 发布 HBM4 标准：1.6 TB/s 带宽",
-    "Claude 4 Vision：高分辨率多模态视觉理解",
-    "AMD Ryzen 7 9800X3D：3D V-Cache 游戏利器",
-    "NVIDIA Spectrum-4 交换机：面向 AI 的 800G 以太网",
-    "Stable Audio 2.0：开源音乐生成模型",
-    "Dify: 开源 LLM 应用开发平台",
-    "Hugging Face Transformers 5.0 发布"
   ]
 }

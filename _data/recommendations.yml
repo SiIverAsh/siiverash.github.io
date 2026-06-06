@@ -1,136 +1,127 @@
 algorithm:
-- desc: 一种基础且直观的机器学习算法，通过树状结构对特征进行递归划分实现分类或回归。常用算法包括ID3、C4.5和CART。其可解释性强，是众多集成方法（如随机森林、梯度提升树）的基学习器，广泛用于金融风控、医疗诊断等领域。
+- desc: 一种经典的监督学习模型，通过寻找最大间隔超平面来进行分类与回归，利用核技巧处理非线性数据，广泛应用于文本分类、图像识别等领域。
   tags:
   - 机器学习
   - 分类
-  - 回归
-  - 树模型
-  title: 决策树 (Decision Tree)
+  - 核方法
+  - 监督学习
+  title: 支持向量机 (Support Vector Machine)
 cv_recommend:
-  agency: アイムエンタープライズ（I'm Enterprise）
-  hometown: 東京都
-  intro: 拥有透明感与柔和音色的实力派声优，声音辨识度极高，既能演绎温柔细腻的少女声线，也能驾驭沉稳冷静的角色。歌唱能力同样出众，多次举办个人演唱会及参与音乐活动。以自然的演技风格著称，台词表现力曾获“即使演绎语速极快的长台词也能清晰传达情感”的业界评价。为人谦逊，工作态度严谨，接受采访时曾直言“只有不断地练习才能维持并提升自己的表演水平”，在业界始终保持高人气与良好口碑。
-  name: 早見沙織
-date: '2026-06-06'
+  agency: アクセルワン
+  hometown: 东京都
+  intro: 拥有清澈透明且富有感染力的声线，演技自然细腻，能精准演绎从活泼少女到沉静角色的广泛类型。2016年荣获第10届声优奖主演女声优奖，成为年轻一代声优中的佼佼者。歌唱方面亦展现非凡才华，发行多张单曲与专辑，连续登上红白歌合战，实现声优与歌手的双重活跃。其不懈的努力与对表演的热忱，使她深受业界与粉丝的喜爱。
+  name: 水瀬いのり
+date: '2026-06-07'
 history:
-- event: 盟军在法国诺曼底海滩登陆（D-Day），开辟欧洲第二战场，加速纳粹德国的覆灭。
-  year: '1944'
-- event: 苏联发射联盟11号载人飞船，成功与礼炮1号空间站对接，航天员在轨驻留23天。
-  year: '1971'
-- event: 以色列大规模入侵黎巴嫩，第五次中东战争爆发，持续至同年8月。
-  year: '1982'
-- event: 微软发布Windows NT 3.1操作系统，为后续Windows NT内核奠定基础，面向企业级市场。
-  year: '1993'
-- event: 美国正式退出《反弹道导弹条约》，为部署国家导弹防御系统扫除障碍。
-  year: '2002'
-- event: 金星凌日天文现象发生，本世纪最后一次，全球大部分地区可见。
-  year: '2012'
+- event: 分组交换网络发明者唐纳德·戴维斯出生。
+  year: '1924'
+- event: 艾伦·图灵逝世。
+  year: '1954'
+- event: 《魔兽世界》在中国大陆正式运营。
+  year: '2005'
+- event: Kubernetes 首个版本发布。
+  year: '2014'
+- event: 苹果 WWDC21 开幕，发布 iOS 15。
+  year: '2021'
+- event: 苹果 WWDC22 开幕，发布 iOS 16 和 M2 芯片。
+  year: '2022'
 llm:
-- desc: 开源的百万上下文大语言模型，支持Agent调用与工具使用，推理性能在多个基准上领跑开源社区。采用MIT许可证，首次将超长上下文与实用Agent能力普惠化，为开发者提供了媲美闭源模型的轻量级替代方案。
+- desc: 阶跃星辰发布Step-3.7-Flash，支持原生多模态理解与生成、工具调用与代码执行，专为高速Agent场景优化，推理延迟降低50%，已开源模型权重。
   tags:
-  - DeepSeek
+  - 多模态
+  - Agent
   - 开源
   - LLM
-  - Agent
-  - 百万上下文
-  title: DeepSeek-V4 预览版
+  title: 'Step-3.7-Flash: 阶跃星辰开源原生多模态高速Agent大模型'
 new_project:
-- desc: HKUDS团队开发的轻量级开源AI代理框架，专注于任务自动化与工具编排。支持自然语言指令分解、外部API调用与状态记忆，旨在以最小资源消耗实现复杂的多步骤工作流，适合嵌入式或边缘AI场景。
+- desc: OpenClaw 是一个开源的通用AI代理框架，支持多模型后端、工具集成和复杂任务编排，近期在GitHub上迅速获得超过25万颗星，成为最热项目之一。
   tags:
   - AI Agent
   - 开源
-  - 自动化
-  - 轻量级
-  title: nanobot
-  url: https://github.com/HKUDS/nanobot
+  - GitHub Trending
+  - 多模型
+  title: 'OpenClaw: 自主AI代理框架'
+  url: https://github.com/openclaw/openclaw
 paper:
-- desc: 顶会论文推荐：本文提出MemSearcher框架，首次将记忆读写与检索决策统一到端到端强化学习范式中。LLM学习何时更新内部记忆、何时查询外部知识库，在复杂多跳推理任务中显著优于传统RAG，为构建具有持续学习能力的智能体提供了新思路。
+- desc: ICLR 2026杰出论文，提出一种简单而强大的强化学习基线方法GPG，通过过程级引导显著提升大语言模型的推理能力，在多项推理基准上取得SOTA。
   tags:
-  - ACL 2026
-  - Memory
-  - RL
-  - LLM Agent
-  title: 'MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End
-    RL'
-  url: https://arxiv.org/abs/2511.02805
+  - ICLR 2026
+  - 强化学习
+  - 推理
+  - LLM
+  title: 'GPG: A Simple and Strong Reinforcement Learning Baseline for Model Reasoning'
+  url: https://iclr.cc/virtual/2026/poster/10007935
 tech:
   Arch:
-  - desc: 在Computex 2026上，英特尔发布了基于全新能效核（E-core）架构的Xeon 6+处理器，单芯片集成288个核心，专为高密度云计算和原生AI推理负载优化。该平台摒弃传统大小核设计，通过统一E核阵列实现2倍于前代的能效比，支持DDR5和PCIe
-      6.0。
-    tags:
-    - Intel
-    - Xeon
-    - E-core
-    - 288核
-    - 数据中心
-    title: Intel Xeon 6+ 平台：288核全E核设计
-  Audio:
-  - desc: 小米开源的视频到音频生成模型，支持用户通过文本或时间线指定音效类型和时机。采用扩散模型处理跨模态冲突，在音画同步性和听觉真实感上达到商业级水平，旨在简化影视后期音效制作流程。
-    tags:
-    - 音频生成
-    - 视频音效
-    - 扩散模型
-    - 开源
-    title: 'ControlFoley: 可控视频音效生成模型'
-  CPU:
-  - desc: 为纪念AM4平台诞生十周年，AMD推出基于Zen 3架构的7nm处理器，搭载3D V-Cache技术，拥有96MB超大L3缓存。兼容AM4及AM5主板，游戏性能仍可匹敌最新i9-14900K。同时发布的Ryzen
-      7 7700X3D则将3D V-Cache引入中端AM5平台。
+  - desc: AMD在Computex 2026公布CDNA 4架构细节，采用3nm工艺，支持FP4/FP6低精度计算，计算单元与缓存系统大幅改进，MI350系列将首发搭载。
     tags:
     - AMD
-    - Ryzen
+    - CDNA 4
+    - GPU架构
+    - AI加速
+    title: AMD CDNA 4 架构：面向数据中心AI加速的全新GPU架构
+  Audio:
+  - desc: 基于Qwen3架构的端到端语音识别模型，支持多语种，推理速度达170倍实时，在多个测试集上全面超越Whisper，完全开源。
+    tags:
+    - 语音识别
+    - 开源
+    - Transformer
+    - 多语种
+    title: 'Qwen3-ASR: 阿里开源语音识别大模型'
+  CPU:
+  - desc: AMD发布商用旗舰Ryzen 9 PRO 9965X3D，16核Zen 5架构，集成128MB 3D V-Cache，AM5平台，面向专业工作站与内容创作。
+    tags:
+    - AMD
+    - Zen 5
     - 3D V-Cache
-    - 游戏
-    - 十周年
-    title: AMD Ryzen 7 5800X3D 十周年纪念版
+    - 工作站
+    title: 'AMD Ryzen 9 PRO 9965X3D: 16核Zen 5 3D V-Cache工作站处理器'
   Computer Vision:
-  - desc: 提出一种针对视觉Transformer的测试时训练方法，利用自监督任务在推理阶段动态调整模型参数，无需额外标注即可显著提升分布外泛化能力。该方法在多个OOD基准上实现SOTA，为视觉模型在实际部署中的鲁棒性提供了新范式。
+  - desc: CVPR 2026论文，提出通过强化学习实现高分辨率代理搜索推理，增强视觉语言模型的细粒度理解与定位能力，在多个基准上显著提升性能。
     tags:
     - CVPR 2026
-    - Test-Time Training
-    - Vision Transformer
-    - 分布外泛化
-    title: 'ViT^3: Unlocking Test-Time Training in Vision'
+    - 视觉语言模型
+    - 强化学习
+    - 代理搜索
+    title: 'SenseSearch: Empowering Vision-Language Models with High-Resolution Agentic
+      Search-Reasoning via Reinforcement Learning'
   GPU:
-  - desc: 专为HPC和科学计算打造，配备全新设计的双精度（FP64）计算单元，FP64性能达英伟达Rubin的6倍以上。采用台积电3nm工艺与HBM3E内存子系统，支持12V-2x6供电接口，功耗600W，已获得全球两大超算集群采用。
+  - desc: AMD于6月1日全球发布RX 9070 GRE，搭载RDNA 4架构，16GB GDDR6显存，性能对标RTX 5070，售价549美元，面向2K高帧率游戏。
     tags:
     - AMD
-    - Instinct
-    - HPC
-    - FP64
-    - HBM3E
-    title: AMD Instinct MI430X GPU
+    - RDNA 4
+    - 显卡
+    - 中端
+    title: 'AMD Radeon RX 9070 GRE: RDNA 4 全球中端新主力'
   Lang:
-  - desc: 引入新型范围类型（Range types）增强集合操作安全性，新增assert_matches!宏简化测试断言，Cargo集成两个关键安全更新以防范供应链攻击。同时优化异步运行时性能，巩固系统编程语言的安全与效率标杆地位。
+  - desc: Python 3.14系列维护版本，包含性能优化、CPython解释器改进及多项标准库更新，提升解释器稳定性与兼容性。
     tags:
-    - Rust
+    - Python
     - 编程语言
-    - 系统编程
-    - 安全
-    title: Rust 1.96.0 稳定版发布
+    - 发布
+    - CPython
+    title: Python 3.14.5 正式发布
   NLP:
-  - desc: 通过端到端强化学习训练大语言模型进行推理、搜索与记忆管理。模型自主决策何时检索外部知识、读写记忆模块，在开放域问答和多跳推理任务中显著优于传统检索增强生成（RAG）方法，展现了更类人的认知行为。
+  - desc: 阿里发布Qwen3.7，在代码生成、工具调用和复杂推理方面大幅提升，支持128K上下文，开源模型权重，MMLU-Pro等基准刷新纪录。
     tags:
-    - ACL 2026
-    - Memory
-    - RL
-    - LLM Agent
-    title: 'MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End
-      RL'
+    - Qwen
+    - 大语言模型
+    - 开源
+    - 工具调用
+    title: 'Qwen3.7: 阿里通义千问新一代编程与工具调用旗舰模型'
   Net:
-  - desc: 支持IEEE 802.11bk (Wi-Fi 8) 标准，引入智能频谱调度与确定性低延迟机制，为AI应用和工业物联网提供微秒级时延保障。旗舰级三频设计，整机速率超30
-      Gbps，是构建AI就绪型园区网络的关键组件。
+  - desc: 工信部正式批复7-15GHz频段用于6G技术试验，该频段兼顾覆盖与容量，加速6G标准化与商用进程，预计2030年启动商用。
     tags:
-    - Wi-Fi 8
-    - 企业网络
-    - 低延迟
-    - AI就绪
-    title: 新华三全球首发企业级Wi-Fi 8 接入点 WA8648
+    - 6G
+    - 频谱
+    - 通信
+    - 标准化
+    title: 我国批复7-15GHz '黄金频谱' 用于6G试验
   News:
-  - desc: OpenAI宣布将ChatGPT与Codex能力深度整合，推出统一的“超级Agent”产品，可直接在对话中完成代码编辑、调试与部署，并调用外部工具。该功能面向全球10亿用户推出，标志着通用AI智能体从实验室走向大众化应用。
+  - desc: HKGAI推出香港首个生产力级超级智能体，可自主拆解复杂任务、调用工具并跨系统协同，标志着AI从对话式助手迈向自主生产力。
     tags:
-    - OpenAI
-    - ChatGPT
-    - Codex
-    - Agent
-    - AI
-    title: ChatGPT与Codex正式合并，打造超级Agent
+    - AI Agent
+    - 香港
+    - 生产力
+    - 自主智能
+    title: 香港发布首个生产力级超级智能体 'Agent Workshop'
