@@ -1,127 +1,126 @@
 algorithm:
-- desc: 一种经典的监督学习模型，通过寻找最大间隔超平面来进行分类与回归，利用核技巧处理非线性数据，广泛应用于文本分类、图像识别等领域。
+- desc: 梯度提升树是一种集成学习算法，通过迭代训练弱学习器来优化损失函数，广泛应用于回归和分类任务，代表性实现有XGBoost、LightGBM等。
   tags:
+  - 集成学习
+  - Boosting
   - 机器学习
-  - 分类
-  - 核方法
-  - 监督学习
-  title: 支持向量机 (Support Vector Machine)
+  - 梯度提升
+  title: 梯度提升树 (Gradient Boosting)
 cv_recommend:
-  agency: アクセルワン
-  hometown: 东京都
-  intro: 拥有清澈透明且富有感染力的声线，演技自然细腻，能精准演绎从活泼少女到沉静角色的广泛类型。2016年荣获第10届声优奖主演女声优奖，成为年轻一代声优中的佼佼者。歌唱方面亦展现非凡才华，发行多张单曲与专辑，连续登上红白歌合战，实现声优与歌手的双重活跃。其不懈的努力与对表演的热忱，使她深受业界与粉丝的喜爱。
-  name: 水瀬いのり
-date: '2026-06-07'
+  agency: 81 Produce
+  hometown: 埼玉县
+  intro: 高桥李依是日本著名女性声优，隶属于81 Produce。她以多变的声线和出色的演技闻名，曾荣获声优奖新人女优奖和助演女优奖。在歌唱领域也活跃，发行过多张单曲和专辑。她与粉丝互动频繁，以其开朗性格和努力态度深受喜爱。作为中生代声优的佼佼者，她在多个作品中展现了扎实的台词功底和情感表现力，持续在声优与歌手双重道路上精进。
+  name: 高橋李依
+date: '2026-06-08'
 history:
-- event: 分组交换网络发明者唐纳德·戴维斯出生。
-  year: '1924'
-- event: 艾伦·图灵逝世。
-  year: '1954'
-- event: 《魔兽世界》在中国大陆正式运营。
-  year: '2005'
-- event: Kubernetes 首个版本发布。
-  year: '2014'
-- event: 苹果 WWDC21 开幕，发布 iOS 15。
-  year: '2021'
-- event: 苹果 WWDC22 开幕，发布 iOS 16 和 M2 芯片。
-  year: '2022'
+- event: 先知穆罕默德在麦地那去世。
+  year: 632年
+- event: 冰岛拉基火山开始喷发，持续8个月，导致欧洲数年饥荒。
+  year: 1783年
+- event: 美国总统西奥多·罗斯福签署《古物法》，授权保护历史遗迹。
+  year: 1906年
+- event: 乔治·奥威尔的《1984》出版。
+  year: 1949年
+- event: 詹姆斯·厄尔·雷因涉嫌谋杀马丁·路德·金在伦敦希思罗机场被捕。
+  year: 1968年
+- event: 金星凌日天文现象发生，全球可见。
+  year: 2004年
 llm:
-- desc: 阶跃星辰发布Step-3.7-Flash，支持原生多模态理解与生成、工具调用与代码执行，专为高速Agent场景优化，推理延迟降低50%，已开源模型权重。
+- desc: 微软发布首款推理模型MAI-Thinking-1，采用hill-climbing机制增强复杂推理能力，在数学和代码任务上表现出色。
   tags:
-  - 多模态
-  - Agent
-  - 开源
-  - LLM
-  title: 'Step-3.7-Flash: 阶跃星辰开源原生多模态高速Agent大模型'
+  - 微软
+  - 推理模型
+  - MAI-Thinking-1
+  - 大语言模型
+  title: 微软 MAI-Thinking-1 推理模型
 new_project:
-- desc: OpenClaw 是一个开源的通用AI代理框架，支持多模型后端、工具集成和复杂任务编排，近期在GitHub上迅速获得超过25万颗星，成为最热项目之一。
+- desc: Anthropic官方维护的Claude技能集合，提供可复用的提示模板与工具链，帮助用户快速扩展Claude的能力边界。
   tags:
-  - AI Agent
+  - Claude
+  - Skills
+  - Anthropic
   - 开源
-  - GitHub Trending
-  - 多模型
-  title: 'OpenClaw: 自主AI代理框架'
-  url: https://github.com/openclaw/openclaw
+  title: Claude Skills (anthropics/skills)
+  url: https://github.com/anthropics/skills
 paper:
-- desc: ICLR 2026杰出论文，提出一种简单而强大的强化学习基线方法GPG，通过过程级引导显著提升大语言模型的推理能力，在多项推理基准上取得SOTA。
+- desc: 顶会论文推荐：该论文提出学习解掩码策略，优化扩散语言模型的文本生成过程，显著提升生成质量与效率，被ICML 2026接收。
   tags:
-  - ICLR 2026
-  - 强化学习
-  - 推理
-  - LLM
-  title: 'GPG: A Simple and Strong Reinforcement Learning Baseline for Model Reasoning'
-  url: https://iclr.cc/virtual/2026/poster/10007935
+  - 扩散模型
+  - 语言模型
+  - ICML2026
+  - 生成式AI
+  title: Learning Unmasking Policies for Diffusion Language Models
+  url: https://arxiv.org/abs/2512.09106
 tech:
   Arch:
-  - desc: AMD在Computex 2026公布CDNA 4架构细节，采用3nm工艺，支持FP4/FP6低精度计算，计算单元与缓存系统大幅改进，MI350系列将首发搭载。
+  - desc: NVIDIA发布Vera CPU，基于ARM Olympus核心，专为AI工厂设计，配备高带宽内存接口，提供卓越的数据中心推理性能。
     tags:
-    - AMD
-    - CDNA 4
-    - GPU架构
-    - AI加速
-    title: AMD CDNA 4 架构：面向数据中心AI加速的全新GPU架构
+    - NVIDIA
+    - ARM
+    - 数据中心
+    - CPU架构
+    title: NVIDIA Vera CPU
   Audio:
-  - desc: 基于Qwen3架构的端到端语音识别模型，支持多语种，推理速度达170倍实时，在多个测试集上全面超越Whisper，完全开源。
+  - desc: 提出UniVoice统一模型，单一框架同时处理语音合成与歌声生成，消除传统多模型管道的不一致性，arXiv:2606.05852。
     tags:
-    - 语音识别
-    - 开源
-    - Transformer
-    - 多语种
-    title: 'Qwen3-ASR: 阿里开源语音识别大模型'
+    - 语音合成
+    - 歌声合成
+    - 多任务
+    - 统一模型
+    title: 'UniVoice: A Unified Model for Speech and Singing Voice Generation'
   CPU:
-  - desc: AMD发布商用旗舰Ryzen 9 PRO 9965X3D，16核Zen 5架构，集成128MB 3D V-Cache，AM5平台，面向专业工作站与内容创作。
+  - desc: CES 2026发布，基于Intel 18A工艺，游戏性能提升77%，集成AI加速引擎，标志着Intel桌面平台工艺制程的重大突破。
     tags:
-    - AMD
-    - Zen 5
-    - 3D V-Cache
-    - 工作站
-    title: 'AMD Ryzen 9 PRO 9965X3D: 16核Zen 5 3D V-Cache工作站处理器'
+    - Intel
+    - 18A
+    - Core Ultra 300
+    - Arrow Lake
+    title: Intel Core Ultra 300系列 (Arrow Lake)
   Computer Vision:
-  - desc: CVPR 2026论文，提出通过强化学习实现高分辨率代理搜索推理，增强视觉语言模型的细粒度理解与定位能力，在多个基准上显著提升性能。
+  - desc: 提出D4RT框架，利用4D辐射场高效重建动态场景，实现单目视频的高质量动态三维重建，荣获CVPR 2026最佳论文奖。
     tags:
-    - CVPR 2026
-    - 视觉语言模型
-    - 强化学习
-    - 代理搜索
-    title: 'SenseSearch: Empowering Vision-Language Models with High-Resolution Agentic
-      Search-Reasoning via Reinforcement Learning'
+    - CVPR2026
+    - 动态场景重建
+    - 4D辐射场
+    - 计算机视觉
+    title: 'D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time'
   GPU:
-  - desc: AMD于6月1日全球发布RX 9070 GRE，搭载RDNA 4架构，16GB GDDR6显存，性能对标RTX 5070，售价549美元，面向2K高帧率游戏。
+  - desc: Blackwell架构，8GB GDDR7显存，支持DLSS 4多帧生成与神经网络渲染，起售价2499元，2026年5月上市。
     tags:
-    - AMD
-    - RDNA 4
-    - 显卡
-    - 中端
-    title: 'AMD Radeon RX 9070 GRE: RDNA 4 全球中端新主力'
+    - NVIDIA
+    - Blackwell
+    - RTX 5060
+    - DLSS 4
+    title: NVIDIA GeForce RTX 5060
   Lang:
-  - desc: Python 3.14系列维护版本，包含性能优化、CPython解释器改进及多项标准库更新，提升解释器稳定性与兼容性。
+  - desc: Kotlin 2.4.0正式发布，K2编译器带来更快的编译速度与性能优化，同时引入多项新语言特性，增强开发者体验。
     tags:
-    - Python
+    - Kotlin
+    - JVM
     - 编程语言
-    - 发布
-    - CPython
-    title: Python 3.14.5 正式发布
+    - 静态类型
+    title: Kotlin 2.4.0 发布
   NLP:
-  - desc: 阿里发布Qwen3.7，在代码生成、工具调用和复杂推理方面大幅提升，支持128K上下文，开源模型权重，MMLU-Pro等基准刷新纪录。
+  - desc: 揭示Transformer中负责知识检索的注意力头本质上是动态变化的，挑战了静态定位假设，为模型可解释性提供了新视角，ACL 2026。
     tags:
-    - Qwen
-    - 大语言模型
-    - 开源
-    - 工具调用
-    title: 'Qwen3.7: 阿里通义千问新一代编程与工具调用旗舰模型'
+    - ACL2026
+    - 可解释性
+    - Transformer
+    - 知识定位
+    title: Retrieval Heads are Dynamic
   Net:
-  - desc: 工信部正式批复7-15GHz频段用于6G技术试验，该频段兼顾覆盖与容量，加速6G标准化与商用进程，预计2030年启动商用。
+  - desc: 中国移动研究院发布AONP框架及智能体网关，为分布式智能体间通信设计，旨在构建智能体互联网底层网络标准。
     tags:
-    - 6G
-    - 频谱
-    - 通信
-    - 标准化
-    title: 我国批复7-15GHz '黄金频谱' 用于6G试验
+    - 智能体
+    - 网络协议
+    - AONP
+    - 中国移动
+    title: 中国移动发布智能体互联网开放网络协议 (AONP)
   News:
-  - desc: HKGAI推出香港首个生产力级超级智能体，可自主拆解复杂任务、调用工具并跨系统协同，标志着AI从对话式助手迈向自主生产力。
+  - desc: 深圳使用华为昇腾910C AI集群完成1.6万亿参数大模型训练，验证了国产算力在超大规模模型上的可行性，标志着自主AI基础设施的重要进展。
     tags:
-    - AI Agent
-    - 香港
-    - 生产力
-    - 自主智能
-    title: 香港发布首个生产力级超级智能体 'Agent Workshop'
+    - 昇腾910C
+    - 国产AI
+    - 大模型
+    - 华为
+    title: 国产昇腾910C集群成功训练1.6万亿参数大模型

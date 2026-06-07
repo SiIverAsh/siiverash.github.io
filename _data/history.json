@@ -1,4 +1,20 @@
 {
+  "2026-06-08": [
+    "Retrieval Heads are Dynamic",
+    "UniVoice: A Unified Model for Speech and Singing Voice Generation",
+    "Intel Core Ultra 300系列 (Arrow Lake)",
+    "国产昇腾910C集群成功训练1.6万亿参数大模型",
+    "高橋李依",
+    "Claude Skills (anthropics/skills)",
+    "D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time",
+    "NVIDIA Vera CPU",
+    "微软 MAI-Thinking-1 推理模型",
+    "Kotlin 2.4.0 发布",
+    "中国移动发布智能体互联网开放网络协议 (AONP)",
+    "NVIDIA GeForce RTX 5060",
+    "Learning Unmasking Policies for Diffusion Language Models",
+    "梯度提升树 (Gradient Boosting)"
+  ],
   "2026-06-07": [
     "GPG: A Simple and Strong Reinforcement Learning Baseline for Model Reasoning",
     "Python 3.14.5 正式发布",
@@ -139,21 +155,5 @@
     "全球首部 AI 全面监管框架：中国《人工智能法》正式施行",
     "DeepSeek-R1: 开源推理模型里程碑",
     "NVIDIA GeForce RTX 5090: Blackwell 旗舰"
-  ],
-  "2026-05-29": [
-    "NVIDIA GeForce RTX 5070 Ti",
-    "Qwen2.5-72B-Instruct",
-    "Qwen2.5-VL",
-    "水瀬いのり",
-    "Gemma 3 27B",
-    "AMD Ryzen 9 9950X3D",
-    "AMD Zen 5 微架构",
-    "逻辑回归 (Logistic Regression)",
-    "欧盟AI法案正式生效",
-    "3GPP Release 18 (5G-Advanced)",
-    "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
-    "TypeScript 5.7",
-    "LLaMA-Factory",
-    "Moshi"
   ]
 }
