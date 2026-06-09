@@ -1,139 +1,161 @@
 algorithm:
-- desc: 经典集成学习算法，通过Bootstrap采样构建多棵决策树并投票输出结果。核心优势：天然抗过拟合、可处理高维特征、提供特征重要性排序。适用场景涵盖分类、回归与异常检测，是Kaggle竞赛中长期霸榜的基线模型，也是工业级表格数据建模的首选算法之一。
+- desc: 基于贝叶斯定理与特征条件独立假设的经典概率分类算法。其'朴素'之处在于假设所有特征相互独立，尽管该假设在现实中鲜有成立，却使模型参数数量从指数级降至线性级，训练与推理速度极快。在高维稀疏数据（如文本分类、垃圾邮件过滤）中表现尤为出色，常作为复杂深度学习模型的强Baseline。核心推论为通过先验概率与似然计算后验概率，取最大后验类别为预测结果。
   tags:
-  - Ensemble Learning
-  - Bagging
-  - Classification
-  - Feature Importance
-  title: 随机森林 (Random Forest)
+  - 贝叶斯定理
+  - 分类算法
+  - 监督学习
+  - 概率模型
+  - 文本分类
+  - 生成式模型
+  title: 朴素贝叶斯 (Naive Bayes)
 cv_recommend:
-  agency: 81プロデュース
-  hometown: 富山県
-  intro: 1994年1月17日出生于富山县，2012年通过第6届81Audition特别赏进入声优界，现隶属81 Produce。声线清澈透明且辨识度极高，擅长在温柔与冷峻之间自如切换，从治愈系少女到复杂内敛角色皆能精准驾驭。2019年获第13届声优奖新人女优赏，2021年再获第15届声优奖助演女优赏，实力备受业界认可。歌唱事业签约Lantis，唱功扎实，现场表现稳定。
-  name: 上田麗奈
-date: '2026-06-09'
+  agency: 大沢事務所
+  hometown: 东京都
+  intro: 以清澈透明且富有穿透力的声线特质著称，音域宽广，从少女的纤细到成熟女性的深沉皆能自如驾驭。2012年正式声优出道后迅速展现出色表现力，凭借细腻入微的情感层次与扎实的台词功底获得业界广泛认可。职业生涯中曾因伤病经历休业低谷期，复出后以更加沉稳圆熟的演技回归一线，展现出令人钦佩的职业韧性。其声质兼具柔和与力量，在需要情绪爆发与内心独白交替的场景中表现尤为突出，是当代兼具人气与实力的中生代声优代表之一。
+  name: 種田梨沙
+date: '2026-06-10'
 history:
-- event: 中英签署《展拓香港界址专条》，清政府将香港新界及235个岛屿租借给英国，租期99年。
-  year: '1898'
-- event: 美国国务卿威廉·詹宁斯·布莱恩因反对威尔逊总统对德强硬政策而辞职。
-  year: '1915'
-- event: 唐老鸭(Donald Duck)在迪士尼动画短片《聪明的小母鸡》中首次亮相。
-  year: '1934'
-- event: 普密蓬·阿杜德登基成为泰国国王(拉玛九世)，在位70年至2016年。
-  year: '1946'
-- event: 美国海军首艘弹道导弹核潜艇「乔治·华盛顿号」(SSBN-598)下水。
-  year: '1959'
-- event: 传奇赛马「秘书处」(Secretariat)以31个马位优势赢得贝尔蒙特大奖赛，完成三冠王壮举。
-  year: '1973'
+- event: Apple II个人电脑首次发货，搭载MOS 6502处理器与4KB RAM，成为历史上首款大规模成功的量产微型计算机，定义了个人电脑的产品形态。
+  year: '1977'
+- event: SOS莫尔斯求救信号（···---···）首次在海上正式使用，英国冠达邮轮SS Slavonia号在亚速尔群岛附近遇险时发出，此后成为国际通用遇难信号标准。
+  year: '1909'
+- event: 匈牙利发明家比罗·拉斯洛（László Bíró）获得圆珠笔专利。其油墨粘度与滚珠输送系统的工程设计至今仍是书写工具的基础。
+  year: '1943'
+- event: NASA勇气号（Spirit）火星探测器由Delta II火箭成功发射，踏上为期七个月的火星之旅，开启了人类火星表面地质探索的黄金时代。
+  year: '2003'
+- event: 匿名戒酒会（Alcoholics Anonymous）在美国俄亥俄州阿克伦成立，开创了基于同伴互助的行为矫正模式，影响了后续全球范围内的互助组织运动。
+  year: '1935'
+- event: 杜邦公司正式注册Mylar（聚酯薄膜）商标。该材料以卓越的电绝缘性、机械强度和热稳定性广泛应用于电子电容器、航天隔热层及数据存储磁带。
+  year: '1952'
 llm:
-- desc: NVIDIA发布Nemotron 3 Ultra，采用Hybrid Mamba-Transformer架构的混合专家模型(MoE)，总参数5500亿，激活参数550亿。支持NVFP4原生精度推理，在BFCL、SWE-bench等Agent基准上超越GPT-5，单卡H200即可运行。开源权重已发布于Hugging
-    Face。
+- desc: Meta于2026年4月发布Llama 4系列，采用原生多模态MoE（混合专家）架构，包含三个版本：Scout（轻量高效端侧部署）、Maverick（主力模型，109B总参/17B活跃参数）及Behemoth（288B总参/30B活跃参数，旗舰性能）。创新之处在于Early
+    Fusion多模态编码器，使模型在预训练阶段即联合学习图文音视频表征，而非事后拼接，在MMLU-Pro、MathVista等多模态推理基准上全面超越GPT-5。全部权重开源。
   tags:
-  - NVIDIA
-  - Nemotron
+  - Meta
+  - Llama 4
   - MoE
-  - Mamba-Transformer
-  title: 'NVIDIA Nemotron 3 Ultra: 550B MoE混合Mamba-Transformer'
+  - Multimodal
+  - Open Source
+  - Early Fusion
+  title: 'Llama 4: Meta原生多模态MoE大模型系列'
 new_project:
-- desc: TypeScript原生多智能体编排框架。输入自然语言目标即可自动生成任务DAG并协调多个Agent执行。原生支持MCP协议，内置实时可视化追踪面板。仅三个运行时依赖(OpenAI
-    SDK、Zod、D3.js)，零配置启动，适合快速搭建复杂Agent工作流。
+- desc: Git原生的AI Agent开放标准与参考实现框架。通过标准化的YAML/JSON Agent技能描述文件（存放于.gitagent/目录），开发者可在任意Git仓库中定义、版本管理及共享AI
+    Agent能力。核心特性包括：多Agent间通过Git协议进行技能发现与协作、内置沙箱化工具执行引擎、与Claude Code/GitHub Copilot等主流AI编码助手深度集成。2026年6月GitHub
+    Trending连续上榜，正在成为Agent互操作性的社区事实标准。
   tags:
-  - Multi-Agent
-  - MCP
-  - TypeScript
-  - Task Orchestration
-  title: open-multi-agent
-  url: https://github.com/open-multi-agent/open-multi-agent
+  - AI Agent
+  - Git-native
+  - Open Standard
+  - Multi-agent
+  - Developer Tools
+  - MCP Alternative
+  title: open-gitagent/gitagent
+  url: https://github.com/open-gitagent/gitagent
 paper:
-- desc: CVPR 2026 Honorable Mention。提出从2D图像/视频中直接提取3D物体与人物交互轨迹的统一框架，无需3D训练数据即可生成高质量纹理网格，开源代码已发布。
+- desc: NeurIPS 2025最佳论文奖得主。该工作系统性分析大规模深度强化学习中训练不稳定的根源——梯度估计方差的指数级放大效应，提出Stable Gradients方法，通过自适应梯度裁剪与方差缩减技术实现稳定训练。在Atari、MuJoCo及大规模多智能体场景中对PPO、SAC等主流RL算法取得一致且显著的性能提升，为RL的工业化落地扫除了关键障碍。
   tags:
-  - CVPR 2026
-  - 3D Reconstruction
-  - Segment Anything
-  - Zero-Shot 3D
-  title: 'SAM 3D: 3Dfy Anything in Images'
-  url: https://arxiv.org/abs/2511.16624
+  - NeurIPS 2025
+  - Best Paper
+  - Deep RL
+  - Gradient Stability
+  - Reinforcement Learning
+  - Scale
+  title: Stable Gradients for Stable Learning at Scale in Deep Reinforcement Learning
+  url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/32375260090404f907ceae19f3564a7e-Abstract-Conference.html
 tech:
   Arch:
-  - desc: RISC-V International批准RVA23应用处理器Profile标准，首次强制要求Hypervisor扩展、Vector 1.0向量指令集、密码学扩展及指针掩码(Pointer
-      Masking)特性。标志着RISC-V在服务器与移动端具备完整的操作系统级虚拟化与安全能力，为RISC-V进军主流计算市场奠定ISA基础。
+  - desc: Tenstorrent于2025年12月正式发布TT-Ascalon高性能RISC-V CPU，由芯片传奇Jim Keller主导设计。基于自研8发射乱序执行RISC-V核心，支持RV64GCBH+向量扩展，SPECint2017单核性能突破8.0分/GHz，对标ARM
+      Cortex-X系列旗舰。采用台积电先进制程，8核Cluster共享32MB L3缓存，目标市场覆盖数据中心、AI推理边缘与高性能嵌入式，填补了RISC-V在高性能通用计算领域的空白。
     tags:
     - RISC-V
-    - RVA23
-    - ISA Standard
-    - Hypervisor
-    title: RISC-V RVA23 Profile正式获批
+    - Tenstorrent
+    - Jim Keller
+    - High-Performance
+    - 8-wide OoO
+    - CPU
+    title: 'Tenstorrent TT-Ascalon: Jim Keller团队RISC-V性能旗舰'
   Audio:
-  - desc: k2-fsa团队提出全语种零样本TTS模型。基于扩散语言模型架构，在单一模型中统一100+语言的语音合成，仅需3秒参考音频即可实现跨语种音色克隆。采用Flow
-      Matching训练范式与多语言音素对齐策略，在MOS评分上达到4.31，接近真人录音水平。
+  - desc: 小红书技术团队开源dots.tts，业界首个全连续自回归文本到语音模型。摒弃离散token中间表示，直接在连续声学空间建模，从根本上消除离散量化引入的信息瓶颈与发音错误。支持零样本声音克隆，仅需3秒参考音频即可高保真复刻任意说话人音色与韵律，在自然度和说话人相似度上全面超越现有离散TTS方案。
     tags:
     - TTS
-    - Diffusion Language Model
-    - Zero-Shot
-    - Multilingual Speech
-    title: 'OmniVoice: Towards Omnilingual Zero-Shot Text-to-Speech with Diffusion
-      Language Models'
+    - Zero-shot Voice Cloning
+    - Continuous Autoregressive
+    - Open Source
+    - Speech Synthesis
+    title: 'dots.tts: 小红书开源全连续自回归TTS模型'
   CPU:
-  - desc: Qualcomm在Computex 2026展示Snapdragon X2 Elite旗舰PC处理器。基于TSMC N3P工艺，集成12个Oryon
-      V3性能核+6个效率核共18核心，单核加速4.3GHz。Hexagon NPU提供45+ TOPS AI算力，Adreno 830 GPU支持LPDDR5X-8533。Geekbench
-      6单核超越Apple M4约8%，多核领先Intel Lunar Lake旗舰35%，NVFP4原生精度支持端侧70B模型推理。
+  - desc: AMD Zen 6 'Medusa'架构于2026年6月迎来大规模泄露。首次确认采用2nm级先进制程，核心前端从Zen 5的4-wide升级至8-wide指令分发，支持原生512位矢量数据路径与AVX-512完整实现，整数与浮点执行单元数量翻倍。桌面旗舰SKU加速频率超6.5
+      GHz，CCD集成288MB 3D V-Cache，IPC较Zen 5提升超30%，预计2027年初量产，被视为x86阵营对ARM冲击的全面反击。
     tags:
-    - ARM PC
-    - Qualcomm
-    - Oryon V3
-    - TSMC N3P
-    title: 'Qualcomm Snapdragon X2 Elite: 18核Oryon V3挑战x86霸权'
+    - AMD
+    - Zen 6
+    - Medusa
+    - 2nm
+    - 8-wide Dispatch
+    - AVX-512
+    - 6.5GHz
+    title: 'AMD Zen 6 ''Medusa'': 2nm 8-wide架构全面泄露'
   Computer Vision:
-  - desc: CVPR 2026 Honorable Mention。Meta FAIR提出，基于Segment Anything的三维扩展，可从单张RGB图像或视频中提取物体的3D几何、外观及人-物交互轨迹。采用多视图扩散先验与可微渲染联合优化，无需3D监督即可生成带纹理的高质量3D网格，支持开放词汇3D分割。
+  - desc: CVPR 2026论文，提出RnG统一Transformer框架，首次实现从部分观测（单视图RGB图像或稀疏点云）端到端重建完整3D模型，包含几何、纹理和未观测区域。核心创新为Point-Pixel-UV三模态联合注意力机制，在单视图重建与点云补全任务上均达SOTA，无需多阶段流水线或额外先验模型。
     tags:
     - CVPR 2026
-    - 3D Vision
-    - Segment Anything
-    - Meta FAIR
-    title: 'SAM 3D: 3Dfy Anything in Images'
+    - 3D Reconstruction
+    - Transformer
+    - Point Cloud
+    - Single-View
+    title: 'RnG: A Unified Transformer for Complete 3D Modeling from Partial Observations'
   GPU:
-  - desc: Intel于Computex 2026正式发布Arc G3系列，面向Windows掌机市场。旗舰型号Arc G3 Extreme集成8个Xe3核心(Xe-LPG+架构)，GPU最高频率4.70GHz，配备12MB
-      L2缓存，支持LPDDR5X-8533内存。原生支持XeSS 2超分与DX12 Ultimate，实测Steam Deck同级功耗下性能领先AMD Z2
-      Extreme约25%。
+  - desc: NVIDIA于COMPUTEX 2026发布RTX Spark处理器，首次将Grace ARM CPU与Blackwell GPU集成于单一SoC，通过NVLink-C2C实现统一内存架构，提供高达1
+      PetaFLOP的AI算力。该芯片由联发科协助设计，原生支持Windows on ARM与x86模拟，内置RTX GPU光线追踪核心及DLSS 4.5支持，并集成NPU处理本地AI
+      Agent工作负载，定位为Agentic AI时代的个人AI超算处理器。
     tags:
-    - Intel Arc
-    - Xe3 Architecture
-    - Handheld Gaming
-    - XeSS 2
-    title: 'Intel Arc G3 Extreme: Xe3架构掌机专用芯片'
-  Lang:
-  - desc: 2026年6月3日发布。引入基于集合论的类型系统(Set-Theoretic Types)，支持编译期渐进类型检查与类型推断。新增`defstruct`类型注解语法，函数签名可携带完整类型信息。编译器利用类型信息优化模式匹配分支，在Phoenix框架基准测试中吞吐量提升12-18%。
-    tags:
-    - Elixir
-    - Gradual Typing
-    - BEAM VM
-    - Set-Theoretic Types
-    title: 'Elixir 1.20: 正式成为渐进类型语言'
-  NLP:
-  - desc: EACL 2026长文。揭示LLM的多语言知识天然存在于高度稀疏的低维子空间中，提出基于稀疏自编码器的多语言可控框架SparseLang，仅需调整不足0.1%的参数即可实现细粒度语言风格切换，在保持生成质量的同时将推理开销降低67%，为LLM多语言解释性开辟新范式。
-    tags:
-    - EACL 2026
-    - Multilingual NLP
-    - Sparse Autoencoder
-    - LLM Interpretability
-    title: 'Language Lives in Sparse Dimensions: Toward Interpretable and Efficient
-      Multilingual Control for Large Language Models'
-  Net:
-  - desc: NVIDIA在MWC 2026后披露自研6G无线单元(RU)芯片路线图，将AI推理加速器直接嵌入射频前端，支持实时频谱感知与波束赋形优化。与Nokia达成战略合作，目标2028年实现AI-Native
-      6G基站商用部署，峰值速率突破1Tbps，时延低于0.1ms。
-    tags:
-    - 6G
-    - AI-RAN
     - NVIDIA
-    - Nokia
-    title: NVIDIA与Nokia联合推进AI-RAN 6G无线单元芯片
-  News:
-  - desc: 北京时间6月9日凌晨，Apple在WWDC 2026正式发布全新Siri AI对话助手。基于此前1月公布的10亿美元Google Gemini合作协议，Siri
-      AI深度融合Gemini 3 Ultra多模态能力，支持跨应用自然语言任务编排、屏幕内容理解与主动式建议。同步发布Apple Intelligence
-      2.0，引入端侧70亿参数小模型与私有云计算混合推理架构，iOS 27/macOS 26即日起推送Developer Beta。
+    - RTX Spark
+    - Grace CPU
+    - Blackwell GPU
+    - ARM SoC
+    - COMPUTEX 2026
+    - AI PC
+    title: 'NVIDIA RTX Spark: Grace+Blackwell SoC重塑Windows PC'
+  Lang:
+  - desc: Go 1.27于2026年5月正式发布。标志性变更为amd64平台默认启用架构特定SIMD向量化（GOEXPERIMENT=archsimd），编译器自动将循环热点编译为AVX2/AVX-512指令序列，数值计算密集代码获得2-4倍加速。同时引入全新的接口逃逸分析优化，解决了十年未解的interface装箱强制堆分配问题，大幅降低GC压力并在微服务场景中实现15-25%的内存占用下降。
     tags:
-    - Apple
-    - WWDC 2026
-    - Siri AI
-    - Google Gemini
-    title: 'Apple WWDC 2026: Siri AI诞生，Google Gemini十亿美元联姻落地'
+    - Go 1.27
+    - SIMD
+    - Compiler Optimization
+    - amd64
+    - Escape Analysis
+    - GC
+    title: 'Go 1.27: amd64 SIMD默认开启与接口逃逸分析突破'
+  NLP:
+  - desc: ACL 2026论文，提出时间智能元推理引擎TIME，使LLM能自主判断何时需要显式多步推理而非对所有输入盲目展开推理链。通过时序感知门控机制动态调度推理资源，在减少70%冗余推理步骤的同时保持甚至提升下游任务精度，显著降低推理延迟与计算成本。
+    tags:
+    - ACL 2026
+    - LLM Reasoning
+    - Meta-Reasoning
+    - Adaptive Computation
+    - Efficiency
+    title: 'TIME: Temporally Intelligent Meta-Reasoning Engine for Context-Triggered
+      Explicit Reasoning'
+  Net:
+  - desc: 高通在MWC 2026发布Dragonwing NPro A8 Elite平台，业界首款面向Agentic AI时代设计的AI原生Wi-Fi 8方案。采用4nm制程，支持16流MIMO与320MHz带宽，物理层峰值速率突破10Gbps。核心创新为AI调度引擎，可实时感知接入设备AI工作负载并动态优化信道分配与QoS，将Agent-to-Agent通信时延降至亚毫秒级，可靠性较Wi-Fi
+      7提升10倍。
+    tags:
+    - Wi-Fi 8
+    - AI-Native
+    - Qualcomm
+    - 10Gbps
+    - Dragonwing
+    - Agentic AI
+    title: 'Qualcomm NPro A8 Elite: AI原生Wi-Fi 8网络平台'
+  News:
+  - desc: 2026年6月7日，NVIDIA与SK海力士宣布达成多年期技术合作伙伴关系，共同开发面向下一代AI工厂的先进内存解决方案。合作覆盖Vera Rubin架构GPU所需的新一代HBM、用于RTX
+      Spark与Jetson Thor平台的LP-DDR AI内存，以及面向数字孪生Omniverse的存算一体技术。此举标志着GPU巨头与存储龙头的深度绑定，旨在突破AI计算的'内存墙'瓶颈。
+    tags:
+    - NVIDIA
+    - SK Hynix
+    - AI Memory
+    - HBM
+    - Vera Rubin
+    - Partnership
+    title: NVIDIA与SK海力士签署多年期AI内存技术合作协议

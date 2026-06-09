@@ -1,4 +1,20 @@
 {
+  "2026-06-10": [
+    "Tenstorrent TT-Ascalon: Jim Keller团队RISC-V性能旗舰",
+    "AMD Zen 6 'Medusa': 2nm 8-wide架构全面泄露",
+    "Qualcomm NPro A8 Elite: AI原生Wi-Fi 8网络平台",
+    "Go 1.27: amd64 SIMD默认开启与接口逃逸分析突破",
+    "種田梨沙",
+    "Llama 4: Meta原生多模态MoE大模型系列",
+    "dots.tts: 小红书开源全连续自回归TTS模型",
+    "NVIDIA与SK海力士签署多年期AI内存技术合作协议",
+    "NVIDIA RTX Spark: Grace+Blackwell SoC重塑Windows PC",
+    "RnG: A Unified Transformer for Complete 3D Modeling from Partial Observations",
+    "Stable Gradients for Stable Learning at Scale in Deep Reinforcement Learning",
+    "朴素贝叶斯 (Naive Bayes)",
+    "open-gitagent/gitagent",
+    "TIME: Temporally Intelligent Meta-Reasoning Engine for Context-Triggered Explicit Reasoning"
+  ],
   "2026-06-09": [
     "RISC-V RVA23 Profile正式获批",
     "open-multi-agent",
@@ -138,21 +154,5 @@
     "RT-DETR: 基于Transformer的实时目标检测",
     "Qwen2: Advanced Open-Source Large Language Models",
     "OpenVoice V2: 低成本零样本语音克隆"
-  ],
-  "2026-05-31": [
-    "Llama 4: Meta 开源多模态大模型",
-    "Wi-Fi 8 (802.11bn): 超高可靠性无线接入",
-    "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis",
-    "高橋李依",
-    "SAM 2: Segment Anything in Images and Videos",
-    "Intel Core Ultra 9 285K: Arrow Lake 旗舰",
-    "Mojo: Python 兼容的系统编程语言",
-    "Llama 4 Maverick: 402B MoE 开源多模态模型",
-    "K-Means 聚类: 无监督学习基石",
-    "uv: 极速 Python 包与项目管理器",
-    "NVIDIA GeForce RTX 5060 Ti: Blackwell 中端主力",
-    "台积电 2nm (N2) 工艺进入风险量产",
-    "Meta Voicebox: 多任务语音生成基础模型",
-    "UCIe 2.0: 通用芯粒互连标准"
   ]
 }
