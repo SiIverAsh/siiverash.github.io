@@ -1,4 +1,19 @@
 {
+  "2026-06-11": [
+    "Intel 18A制程量产就绪: RibbonFET+PowerVia双剑合璧",
+    "花澤香菜",
+    "Intel Xeon 6+ Granite Rapids-AP: 288核E-core单插槽密度极限",
+    "Diff4Splat: Repurposing Video Diffusion Models for Dynamic Scene Generation",
+    "MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End RL",
+    "NVIDIA Blackwell首度美国本土量产: 台积电亚利桑那Fab 21启动规模出货",
+    "opencode: AI原生终端编码代理",
+    "AMD Radeon RX 9060 XT: RDNA 4主流级16GB显存降维打击",
+    "GPT-5.6 Kindle: OpenAI新一代推理旗舰，150万Token超长上下文",
+    "LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space",
+    "K近邻算法 (K-Nearest Neighbors, KNN)",
+    "Rust 1.96.0: core::range新类型稳定化与assert_matches!宏落地",
+    "Qualcomm FastConnect 8800: 全球首款移动4-Stream Wi-Fi 8芯片"
+  ],
   "2026-06-10": [
     "Tenstorrent TT-Ascalon: Jim Keller团队RISC-V性能旗舰",
     "AMD Zen 6 'Medusa': 2nm 8-wide架构全面泄露",
@@ -138,21 +153,5 @@
     "TSMC N3P: 3nm增强工艺节点量产",
     "ReFT: Representation Finetuning for Language Models",
     "OLMo 2: 完全开放的语言模型家族"
-  ],
-  "2026-06-01": [
-    "NVIDIA GeForce RTX 5070 (Blackwell)",
-    "Open WebUI",
-    "6G太赫兹通信与智能超表面原型系统",
-    "Intel Core Ultra 5 245K (Arrow Lake)",
-    "Go 1.23: 泛型迭代器与标准库增强",
-    "Gemini 1.5 Pro: 超长上下文多模态模型",
-    "微软发布首个拓扑量子比特芯片Majorana 1",
-    "支持向量机 (SVM)",
-    "雨宮天",
-    "英特尔PowerVia: 背面供电技术进入量产准备",
-    "BGE-M3: 多语言多粒度嵌入模型",
-    "RT-DETR: 基于Transformer的实时目标检测",
-    "Qwen2: Advanced Open-Source Large Language Models",
-    "OpenVoice V2: 低成本零样本语音克隆"
   ]
 }

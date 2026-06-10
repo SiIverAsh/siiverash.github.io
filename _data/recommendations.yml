@@ -1,161 +1,137 @@
 algorithm:
-- desc: 基于贝叶斯定理与特征条件独立假设的经典概率分类算法。其'朴素'之处在于假设所有特征相互独立，尽管该假设在现实中鲜有成立，却使模型参数数量从指数级降至线性级，训练与推理速度极快。在高维稀疏数据（如文本分类、垃圾邮件过滤）中表现尤为出色，常作为复杂深度学习模型的强Baseline。核心推论为通过先验概率与似然计算后验概率，取最大后验类别为预测结果。
+- desc: 最经典的实例基础监督学习算法之一。核心思想：对于待分类样本，在特征空间中找出与其距离最近的K个训练样本，通过多数投票（分类）或加权平均（回归）决定预测结果。无需显式训练过程，复杂度集中在推理阶段（懒惰学习）。常用距离度量包括欧氏距离、曼哈顿距离、余弦相似度。K值选择与距离度量对模型性能影响显著，适用于低维数据分类与回归任务。
   tags:
-  - 贝叶斯定理
-  - 分类算法
   - 监督学习
-  - 概率模型
-  - 文本分类
-  - 生成式模型
-  title: 朴素贝叶斯 (Naive Bayes)
+  - 实例基础
+  - 懒惰学习
+  - 分类与回归
+  title: K近邻算法 (K-Nearest Neighbors, KNN)
 cv_recommend:
   agency: 大沢事務所
-  hometown: 东京都
-  intro: 以清澈透明且富有穿透力的声线特质著称，音域宽广，从少女的纤细到成熟女性的深沉皆能自如驾驭。2012年正式声优出道后迅速展现出色表现力，凭借细腻入微的情感层次与扎实的台词功底获得业界广泛认可。职业生涯中曾因伤病经历休业低谷期，复出后以更加沉稳圆熟的演技回归一线，展现出令人钦佩的职业韧性。其声质兼具柔和与力量，在需要情绪爆发与内心独白交替的场景中表现尤为突出，是当代兼具人气与实力的中生代声优代表之一。
-  name: 種田梨沙
-date: '2026-06-10'
+  hometown: 東京都
+  intro: 花澤香菜以其清澈透明且辨识度极高的声线在声优界独树一帜，被粉丝誉为拥有「天使之声」。自幼以童星身份出道，后转型声优深耕配音领域。其音域宽广，可精准驾驭从元气少女到冷艳成熟的多元声线，演技细腻且富有层次。作为歌手亦取得非凡成就，多次登上日本武道馆举办个人演唱会，单曲屡次进入Oricon周榜前十。凭借扎实的台词功底、卓越的音乐才能与持续稳定的高质量作品输出，成为平成至令和时代最具影响力的女性声优之一，2026年版《声優名鑑》女性編连续多年收录其条目，业界地位无可撼动。
+  name: 花澤香菜
+date: '2026-06-11'
 history:
-- event: Apple II个人电脑首次发货，搭载MOS 6502处理器与4KB RAM，成为历史上首款大规模成功的量产微型计算机，定义了个人电脑的产品形态。
-  year: '1977'
-- event: SOS莫尔斯求救信号（···---···）首次在海上正式使用，英国冠达邮轮SS Slavonia号在亚速尔群岛附近遇险时发出，此后成为国际通用遇难信号标准。
-  year: '1909'
-- event: 匈牙利发明家比罗·拉斯洛（László Bíró）获得圆珠笔专利。其油墨粘度与滚珠输送系统的工程设计至今仍是书写工具的基础。
-  year: '1943'
-- event: NASA勇气号（Spirit）火星探测器由Delta II火箭成功发射，踏上为期七个月的火星之旅，开启了人类火星表面地质探索的黄金时代。
-  year: '2003'
-- event: 匿名戒酒会（Alcoholics Anonymous）在美国俄亥俄州阿克伦成立，开创了基于同伴互助的行为矫正模式，影响了后续全球范围内的互助组织运动。
-  year: '1935'
-- event: 杜邦公司正式注册Mylar（聚酯薄膜）商标。该材料以卓越的电绝缘性、机械强度和热稳定性广泛应用于电子电容器、航天隔热层及数据存储磁带。
-  year: '1952'
+- event: 德州仪器发布Speak & Spell，全球首款电子语音合成教育玩具，采用TMC0280线性预测编码芯片，标志消费级数字语音处理时代开端。
+  year: 1978年
+- event: 中国天问一号火星探测器首批科学影像图在北京公布，祝融号火星车拍摄的着陆点全景、火星地形地貌影像首次向全球公开。
+  year: 2021年
+- event: 中国神舟十号载人飞船在酒泉卫星发射中心成功发射，搭载聂海胜、张晓光、王亚平三名航天员，开启中国首次应用性太空飞行。
+  year: 2013年
+- event: 清光绪帝颁布《明定国是诏》，戊戌变法正式开始，倡导学习西方、改革科举、兴办新式学堂，是中国近代化进程中的重要政治改革。
+  year: 1898年
+- event: 京师同文馆在北京成立，中国近代第一所官办外语专门学校，后发展为京师大学堂重要组成部分，标志中国近代新式教育的开端。
+  year: 1862年
+- event: 法国海洋探险家雅克-伊夫·库斯托诞生，他后与埃米尔·加尼昂共同发明水肺（Aqua-Lung），开创现代水下探索与海洋保护事业。
+  year: 1910年
 llm:
-- desc: Meta于2026年4月发布Llama 4系列，采用原生多模态MoE（混合专家）架构，包含三个版本：Scout（轻量高效端侧部署）、Maverick（主力模型，109B总参/17B活跃参数）及Behemoth（288B总参/30B活跃参数，旗舰性能）。创新之处在于Early
-    Fusion多模态编码器，使模型在预训练阶段即联合学习图文音视频表征，而非事后拼接，在MMLU-Pro、MathVista等多模态推理基准上全面超越GPT-5。全部权重开源。
+- desc: 2026年6月，OpenAI发布GPT-5.6系列（代号Kindle），支持150万token超长上下文窗口，推理能力较GPT-5飞跃提升。采用改进的Chain-of-Thought自校正机制，在AIME
+    2025数学竞赛中达95%+准确率，SWE-bench Verified编程基准得分78%。已知变体包括Kindle-Alpha高推理版与Kepler轻量版，直接对标Anthropic
+    Mythos。
   tags:
-  - Meta
-  - Llama 4
-  - MoE
-  - Multimodal
-  - Open Source
-  - Early Fusion
-  title: 'Llama 4: Meta原生多模态MoE大模型系列'
+  - GPT-5.6
+  - OpenAI
+  - 1.5M Context
+  - Reasoning
+  title: 'GPT-5.6 Kindle: OpenAI新一代推理旗舰，150万Token超长上下文'
 new_project:
-- desc: Git原生的AI Agent开放标准与参考实现框架。通过标准化的YAML/JSON Agent技能描述文件（存放于.gitagent/目录），开发者可在任意Git仓库中定义、版本管理及共享AI
-    Agent能力。核心特性包括：多Agent间通过Git协议进行技能发现与协作、内置沙箱化工具执行引擎、与Claude Code/GitHub Copilot等主流AI编码助手深度集成。2026年6月GitHub
-    Trending连续上榜，正在成为Agent互操作性的社区事实标准。
+- desc: anomalyco团队开源的终端原生AI编程代理，纯Rust编写，提供交互式TUI界面。支持在终端中通过自然语言指令自动生成、修改与审查代码，深度集成Git工作流，兼容Claude、GPT等多模型后端。28天涨星776+，定位为Cursor/Copilot的轻量级开源替代方案。
   tags:
-  - AI Agent
-  - Git-native
-  - Open Standard
-  - Multi-agent
-  - Developer Tools
-  - MCP Alternative
-  title: open-gitagent/gitagent
-  url: https://github.com/open-gitagent/gitagent
+  - AI Coding Agent
+  - Rust
+  - TUI
+  - 开源
+  title: 'opencode: AI原生终端编码代理'
+  url: https://github.com/anomalyco/opencode
 paper:
-- desc: NeurIPS 2025最佳论文奖得主。该工作系统性分析大规模深度强化学习中训练不稳定的根源——梯度估计方差的指数级放大效应，提出Stable Gradients方法，通过自适应梯度裁剪与方差缩减技术实现稳定训练。在Atari、MuJoCo及大规模多智能体场景中对PPO、SAC等主流RL算法取得一致且显著的性能提升，为RL的工业化落地扫除了关键障碍。
+- desc: CVPR 2026顶会论文。提出将预训练视频扩散模型的4D动态先验迁移至3D Gaussian Splatting表示的新框架。通过潜在动态重建模型（LDRM）实现时空一致的4D场景生成，支持文本/图像引导的可控动态内容创建，在NVS与动态编辑基准上均达到SOTA。论文开源代码已发布。
   tags:
-  - NeurIPS 2025
-  - Best Paper
-  - Deep RL
-  - Gradient Stability
-  - Reinforcement Learning
-  - Scale
-  title: Stable Gradients for Stable Learning at Scale in Deep Reinforcement Learning
-  url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/32375260090404f907ceae19f3564a7e-Abstract-Conference.html
+  - CVPR 2026
+  - 4D Reconstruction
+  - Gaussian Splatting
+  - Video Diffusion
+  title: 'Diff4Splat: Repurposing Video Diffusion Models for Dynamic Scene Generation'
+  url: https://openaccess.thecvf.com/content/CVPR2026/html/Pan_Diff4Splat_Repurposing_Video_Diffusion_Models_for_Dynamic_Scene_Generation_CVPR_2026_paper.html
 tech:
   Arch:
-  - desc: Tenstorrent于2025年12月正式发布TT-Ascalon高性能RISC-V CPU，由芯片传奇Jim Keller主导设计。基于自研8发射乱序执行RISC-V核心，支持RV64GCBH+向量扩展，SPECint2017单核性能突破8.0分/GHz，对标ARM
-      Cortex-X系列旗舰。采用台积电先进制程，8核Cluster共享32MB L3缓存，目标市场覆盖数据中心、AI推理边缘与高性能嵌入式，填补了RISC-V在高性能通用计算领域的空白。
+  - desc: Intel 18A（1.8nm级）制程在Computex 2026确认进入量产阶段，首批搭载于Xeon 6+数据中心处理器。采用RibbonFET全环绕栅极晶体管与PowerVia背面供电网络两大突破性技术，相较Intel
+      3制程实现每瓦性能翻倍，逻辑密度提升30%，是Intel重夺制程领导力的关键节点。
     tags:
-    - RISC-V
-    - Tenstorrent
-    - Jim Keller
-    - High-Performance
-    - 8-wide OoO
-    - CPU
-    title: 'Tenstorrent TT-Ascalon: Jim Keller团队RISC-V性能旗舰'
+    - Intel 18A
+    - RibbonFET
+    - PowerVia
+    - 1.8nm
+    title: 'Intel 18A制程量产就绪: RibbonFET+PowerVia双剑合璧'
   Audio:
-  - desc: 小红书技术团队开源dots.tts，业界首个全连续自回归文本到语音模型。摒弃离散token中间表示，直接在连续声学空间建模，从根本上消除离散量化引入的信息瓶颈与发音错误。支持零样本声音克隆，仅需3秒参考音频即可高保真复刻任意说话人音色与韵律，在自然度和说话人相似度上全面超越现有离散TTS方案。
+  - desc: 美团LongCat团队开源，直接在波形潜空间中建模扩散过程，绕过传统Mel频谱中间表示，实现48kHz高保真语音合成。采用DiT架构结合ConvNeXt编码器，支持零样本声音克隆与细粒度情感控制，MOS评分达4.45，在自然度与韵律表现上超越现有主流TTS方案。
     tags:
     - TTS
-    - Zero-shot Voice Cloning
-    - Continuous Autoregressive
-    - Open Source
-    - Speech Synthesis
-    title: 'dots.tts: 小红书开源全连续自回归TTS模型'
+    - Diffusion DiT
+    - Waveform Latent Space
+    - 美团开源
+    title: 'LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform
+      Latent Space'
   CPU:
-  - desc: AMD Zen 6 'Medusa'架构于2026年6月迎来大规模泄露。首次确认采用2nm级先进制程，核心前端从Zen 5的4-wide升级至8-wide指令分发，支持原生512位矢量数据路径与AVX-512完整实现，整数与浮点执行单元数量翻倍。桌面旗舰SKU加速频率超6.5
-      GHz，CCD集成288MB 3D V-Cache，IPC较Zen 5提升超30%，预计2027年初量产，被视为x86阵营对ARM冲击的全面反击。
+  - desc: Computex 2026发布，基于Intel 18A制程的Granite Rapids-AP旗舰，集成288个Sierra Forest能效核于单一Socket
+      E2封装。支持12通道DDR5-6400与CXL 2.0 Type 3内存扩展，TDP 500W可配置。针对Agentic AI微服务推理优化，单路可承载超2000个并发轻量推理实例，搭配200GbE
+      E835网卡构建新一代智算节点。
     tags:
-    - AMD
-    - Zen 6
-    - Medusa
-    - 2nm
-    - 8-wide Dispatch
-    - AVX-512
-    - 6.5GHz
-    title: 'AMD Zen 6 ''Medusa'': 2nm 8-wide架构全面泄露'
+    - Xeon 6+
+    - 288核
+    - Intel 18A
+    - Granite Rapids
+    title: 'Intel Xeon 6+ Granite Rapids-AP: 288核E-core单插槽密度极限'
   Computer Vision:
-  - desc: CVPR 2026论文，提出RnG统一Transformer框架，首次实现从部分观测（单视图RGB图像或稀疏点云）端到端重建完整3D模型，包含几何、纹理和未观测区域。核心创新为Point-Pixel-UV三模态联合注意力机制，在单视图重建与点云补全任务上均达SOTA，无需多阶段流水线或额外先验模型。
+  - desc: CVPR 2026论文，提出从预训练视频扩散模型中提取4D动态先验并迁移至3D Gaussian Splatting的全新框架。通过潜在动态重建模型（LDRM）实现时空一致的可控4D场景生成，在新视角合成与动态场景编辑任务中达到SOTA水平，解决了动态3D内容创建中长期存在的时空一致性问题。
     tags:
     - CVPR 2026
-    - 3D Reconstruction
-    - Transformer
-    - Point Cloud
-    - Single-View
-    title: 'RnG: A Unified Transformer for Complete 3D Modeling from Partial Observations'
+    - 4D Scene Generation
+    - Gaussian Splatting
+    - Video Diffusion
+    title: 'Diff4Splat: Repurposing Video Diffusion Models for Dynamic Scene Generation'
   GPU:
-  - desc: NVIDIA于COMPUTEX 2026发布RTX Spark处理器，首次将Grace ARM CPU与Blackwell GPU集成于单一SoC，通过NVLink-C2C实现统一内存架构，提供高达1
-      PetaFLOP的AI算力。该芯片由联发科协助设计，原生支持Windows on ARM与x86模拟，内置RTX GPU光线追踪核心及DLSS 4.5支持，并集成NPU处理本地AI
-      Agent工作负载，定位为Agentic AI时代的个人AI超算处理器。
+  - desc: 2026年6月5日正式发售，基于RDNA 4架构Navi 44核心，配备2048个流处理器与128-bit GDDR6显存接口。提供8GB（$299）与16GB（$349）双配置，16GB版在1440p游戏中显存容量远超同级竞品。支持FSR
+      4 AI超分与HYPR-RX一键低延迟技术，整板功耗仅150W。
     tags:
-    - NVIDIA
-    - RTX Spark
-    - Grace CPU
-    - Blackwell GPU
-    - ARM SoC
-    - COMPUTEX 2026
-    - AI PC
-    title: 'NVIDIA RTX Spark: Grace+Blackwell SoC重塑Windows PC'
+    - RDNA 4
+    - Navi 44
+    - 16GB VRAM
+    - RX 9060 XT
+    title: 'AMD Radeon RX 9060 XT: RDNA 4主流级16GB显存降维打击'
   Lang:
-  - desc: Go 1.27于2026年5月正式发布。标志性变更为amd64平台默认启用架构特定SIMD向量化（GOEXPERIMENT=archsimd），编译器自动将循环热点编译为AVX2/AVX-512指令序列，数值计算密集代码获得2-4倍加速。同时引入全新的接口逃逸分析优化，解决了十年未解的interface装箱强制堆分配问题，大幅降低GC压力并在微服务场景中实现15-25%的内存占用下降。
+  - desc: 2026年5月28日发布，正式稳定化core::range模块中的Range、RangeInclusive、RangeFrom等新类型并为其实现Copy
+      trait，彻底解决区间类型在迭代器与泛型中的传递难题。新增assert_matches!宏大幅简化模式匹配断言代码，Wasm目标增强控制流完整性保护，trait解析性能提升15%。
     tags:
-    - Go 1.27
-    - SIMD
-    - Compiler Optimization
-    - amd64
-    - Escape Analysis
-    - GC
-    title: 'Go 1.27: amd64 SIMD默认开启与接口逃逸分析突破'
+    - Rust
+    - core::range
+    - assert_matches
+    - Wasm安全
+    title: 'Rust 1.96.0: core::range新类型稳定化与assert_matches!宏落地'
   NLP:
-  - desc: ACL 2026论文，提出时间智能元推理引擎TIME，使LLM能自主判断何时需要显式多步推理而非对所有输入盲目展开推理链。通过时序感知门控机制动态调度推理资源，在减少70%冗余推理步骤的同时保持甚至提升下游任务精度，显著降低推理延迟与计算成本。
+  - desc: ACL 2026论文，提出端到端强化学习框架训练大模型自主进行记忆搜索、推理与管理。模型主动决策何时检索外部知识库、如何将检索信息融入推理链，在长文档问答与多跳推理基准上全面超越传统RAG方案，为Agentic
+      LLM的记忆机制提供新范式。
     tags:
     - ACL 2026
-    - LLM Reasoning
-    - Meta-Reasoning
-    - Adaptive Computation
-    - Efficiency
-    title: 'TIME: Temporally Intelligent Meta-Reasoning Engine for Context-Triggered
-      Explicit Reasoning'
+    - Memory-Augmented LLM
+    - End-to-End RL
+    - RAG
+    title: 'MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End
+      RL'
   Net:
-  - desc: 高通在MWC 2026发布Dragonwing NPro A8 Elite平台，业界首款面向Agentic AI时代设计的AI原生Wi-Fi 8方案。采用4nm制程，支持16流MIMO与320MHz带宽，物理层峰值速率突破10Gbps。核心创新为AI调度引擎，可实时感知接入设备AI工作负载并动态优化信道分配与QoS，将Agent-to-Agent通信时延降至亚毫秒级，可靠性较Wi-Fi
-      7提升10倍。
+  - desc: 高通MWC 2026发布FastConnect 8800移动连接平台，全球首款支持4x4 MIMO的移动端Wi-Fi 8方案。峰值吞吐达11.6Gbps，支持320MHz信道带宽与4K
+      QAM调制，集成AI原生信道调度引擎，空口延迟低于1ms，专为XR空间计算与终端Agent AI实时交互场景设计。
     tags:
     - Wi-Fi 8
+    - 4x4 MIMO
+    - FastConnect 8800
     - AI-Native
-    - Qualcomm
-    - 10Gbps
-    - Dragonwing
-    - Agentic AI
-    title: 'Qualcomm NPro A8 Elite: AI原生Wi-Fi 8网络平台'
+    title: 'Qualcomm FastConnect 8800: 全球首款移动4-Stream Wi-Fi 8芯片'
   News:
-  - desc: 2026年6月7日，NVIDIA与SK海力士宣布达成多年期技术合作伙伴关系，共同开发面向下一代AI工厂的先进内存解决方案。合作覆盖Vera Rubin架构GPU所需的新一代HBM、用于RTX
-      Spark与Jetson Thor平台的LP-DDR AI内存，以及面向数字孪生Omniverse的存算一体技术。此举标志着GPU巨头与存储龙头的深度绑定，旨在突破AI计算的'内存墙'瓶颈。
+  - desc: 2026年6月，NVIDIA与台积电联合宣布Blackwell GPU在亚利桑那州Fab 21晶圆厂实现大规模量产，首批晶圆良率已达商用标准。这是AI旗舰芯片首次在美国本土完成先进制程制造，标志着全球AI芯片供应链从「台湾集中」向「台美双轨」的历史性转折，北美数据中心客户可直接获得美国制造的Blackwell加速器。
     tags:
     - NVIDIA
-    - SK Hynix
-    - AI Memory
-    - HBM
-    - Vera Rubin
-    - Partnership
-    title: NVIDIA与SK海力士签署多年期AI内存技术合作协议
+    - Blackwell
+    - TSMC Arizona
+    - 芯片供应链
+    title: 'NVIDIA Blackwell首度美国本土量产: 台积电亚利桑那Fab 21启动规模出货'
