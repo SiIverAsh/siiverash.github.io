@@ -1,4 +1,19 @@
 {
+  "2026-06-13": [
+    "Echo: Towards Advanced Audio Comprehension via Audio-Interleaved Reasoning",
+    "Swift 6.3: C互操作性全面增强与Android SDK正式稳定化",
+    "Google Gemma 4 12B: 开源多模态小模型新标杆",
+    "smolagents: HuggingFace轻量级代码思维Agent框架",
+    "Apple M5 Pro/Max: Fusion双Die架构重塑专业级Apple Silicon",
+    "VerseCrafter: Dynamic Realistic Video World Model with 4D Geometric Control",
+    "Discourse Graph Guided Document Translation with Large Language Models",
+    "决策树 (Decision Tree)",
+    "NVIDIA与TSMC将AI深度引入晶圆厂：cuLitho加速计算光刻全流程",
+    "MediaTek Filogic Wi-Fi 8单芯片平台获COMPUTEX 2026双项Best Choice Award",
+    "鬼頭明里",
+    "NVIDIA GeForce RTX 5060: Blackwell主流级正式发布",
+    "Vortex 3.0: 全栈开源RISC-V GPU，完整3D渲染管线与Vulkan支持落地"
+  ],
   "2026-06-12": [
     "Arm AGI CPU: Arm首款自研硅芯片，Neoverse V3架构专为Agentic AI打造",
     "3GPP新加坡全会锁定6G标准化时间表: Release 21规范2029年3月冻结",
@@ -138,19 +153,5 @@
     "Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion",
     "Llama 4 Scout: 109B参数开源MoE模型，支持10M上下文窗口",
     "VoiceCraft 2: 零样本语音克隆与跨语种风格迁移"
-  ],
-  "2026-06-03": [
-    "5G-Advanced (3GPP Release 18) 正式冻结",
-    "随机森林 (Random Forest)",
-    "DBRX: 高效开源 MoE 大语言模型",
-    "内田真礼",
-    "Apple M4 芯片：第二代 3nm 工艺",
-    "AMD Ryzen 9 9950X: Zen 5 旗舰 16 核",
-    "Devika: 开源 AI 软件工程师",
-    "AMD Radeon RX 8800 XT: RDNA 4 中端主力",
-    "NaturalSpeech 3: 零样本语音合成新范式",
-    "Rust 2024 Edition 路线图确定",
-    "NVIDIA GTC 2026: Blackwell Ultra 与 Vera CPU 亮相",
-    "LLaVA: Large Language and Vision Assistant"
   ]
 }

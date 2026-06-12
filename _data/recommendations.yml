@@ -1,144 +1,158 @@
 algorithm:
-- desc: 经典监督学习算法，通过寻找最大化类别间隔的最优超平面实现二分类与多分类。核技巧(Kernel Trick)使其能高效处理非线性可分数据，常用核函数包括RBF、多项式与Sigmoid。SVM在小样本高维数据场景下表现优异，广泛应用于文本分类、图像识别与生物信息学。sklearn.svm提供SVC/SVR等完整实现，关键超参数包括C(正则化强度)与gamma(RBF核宽度)。
+- desc: 决策树是一种经典监督学习算法，通过递归划分特征空间构建树形模型。核心算法包括ID3（信息增益）、C4.5（增益率）和CART（Gini不纯度）。其优势在于模型可解释性极强——任意预测路径均可追溯至明确的特征条件组合。作为集成学习（随机森林、GBDT、XGBoost）的基学习器，决策树在现代ML中仍占据基础性地位。关键参数包括max_depth、min_samples_split与criterion选择，控制过拟合与泛化性能的平衡。
   tags:
-  - SVM
+  - Decision Tree
   - Supervised Learning
-  - Kernel Method
-  - Classification
-  - Margin Maximization
-  title: 支持向量机 (Support Vector Machine, SVM)
+  - CART
+  - Gini Impurity
+  - Interpretable ML
+  - Ensemble Learning
+  title: 决策树 (Decision Tree)
 cv_recommend:
-  agency: アイムエンタープライズ (I'm Enterprise)
-  hometown: 東京都
-  intro: 1989年12月27日出生于东京都。2010年以声优身份正式出道，凭借清亮而富有穿透力的音质迅速获得业界关注。声线可塑性极强，既能驾驭元气活力的少女声线，也能演绎沉稳冷静的角色。2014年荣获第8回声优奖新人女优奖。除配音工作外，亦以歌手身份活跃，个人音乐作品风格多元。在广播节目主持与舞台演出中也展现了出色的即兴应变能力与表现力，是被业界广泛认可的实力派声优。
-  name: 内田真礼
-date: '2026-06-12'
+  agency: ラクーンドッグ (Raccoon Dog)
+  hometown: 愛知県名古屋市
+  intro: 1994年10月16日出生于爱知县名古屋市，所属事务所为Raccoon Dog。她以极具辨识度的声线著称，能在清冷透明与温暖柔和之间自如切换，声音可塑性极强。除配音工作外，她同时以solo歌手身份活跃，已发行多张单曲与原创专辑，展现出扎实的歌唱实力与音乐表现力。业内评价其声音富有层次感，能精准捕捉角色情感的细腻变化，无论少年角色还是少女角色均驾驭自如。凭借多年积累的演技功底与不断拓展的音乐事业，她已成为令和时代最具代表性的女性声优之一，持续在业界发挥着重要影响力。
+  name: 鬼頭明里
+date: '2026-06-13'
 history:
-- event: 苏联发射Venera 4探测器，成为人类首个进入其他行星(金星)大气层并传回数据的航天器
-  year: '1967'
-- event: 美国总统里根在柏林勃兰登堡门前发表著名演说，向戈尔巴乔夫喊话「推倒这堵墙」
-  year: '1987'
-- event: IBM以35亿美元收购Lotus Development Corporation，创当时软件行业最大并购案
-  year: '1995'
-- event: 3Com与US Robotics合并，交易金额66亿美元，合并后成为全球最大网络设备制造商之一
-  year: '1997'
-- event: Mozilla 1.0正式发布，标志着开源浏览器时代的开端，为日后Firefox奠定基础
-  year: '2002'
-- event: 美国佛罗里达州奥兰多Pulse夜总会发生大规模枪击事件，造成49人遇难
-  year: '2016'
+- event: UNIVAC I（通用自动计算机）正式交付美国人口普查局，成为世界首台投入商用的电子计算机，标志计算机从实验室走向产业应用。
+  year: 1951年
+- event: 《纽约时报》开始连载刊登五角大楼文件（Pentagon Papers），引发关于政府透明度与新闻自由的历史性法律对决。
+  year: 1971年
+- event: 先驱者10号（Pioneer 10）探测器越过海王星轨道，成为人类历史上首个离开太阳系八大行星范围的人造物体。
+  year: 1983年
+- event: 微软联合有线电视巨头TCI与时代华纳宣布合资计划，旨在打造融合计算与电视的Cable-Box PC，为交互式电视时代铺路。
+  year: 1993年
+- event: 名为Junkie的多态计算机病毒在全球范围内快速传播，感染MS-DOS系统可执行文件，引发当时最大规模的跨国反病毒协作响应。
+  year: 1994年
+- event: 微软正式发布Direct3D API，为Windows平台3D图形加速建立标准化接口，成为PC游戏产业爆发的关键基础设施。
+  year: 1996年
 llm:
-- desc: DeepSeek于2026年4月发布V4系列，Pro版本采用改进的混合专家(MoE)架构，总参数量约1.6T，激活参数318B，支持100万Token超长上下文窗口。创新性引入Multi-Token
-    Prediction(MTP)训练目标与Agent-Aware预训练数据配比，在SWE-bench verified上达71.2%解决率，HumanEval编码基准94.6%。推理成本仅为同类模型的1/5，已开源权重并支持HuggingFace推理。
+- desc: Google DeepMind于2026年5-6月发布Gemma 4 12B，以120亿参数实现原生多模态理解（文本+图像+音频+视频）。支持256K超长上下文窗口，基于Gemini
+    3同源架构蒸馏。最大亮点：可在16GB显存的消费级笔记本上完全本地运行。在MMLU-Pro、MathVista、AudioBench等基准上超越同尺寸所有开源模型，部分指标接近Llama
+    4 70B水平。采用Apache 2.0开源协议，开发者可自由商用。
   tags:
-  - DeepSeek
-  - MoE
-  - 1M Context
-  - Agent
-  - Open Source
-  title: 'DeepSeek V4 Pro: 百万Token上下文MoE旗舰，Agent场景原生优化'
+  - Gemma 4
+  - Google DeepMind
+  - Open-Source LLM
+  - Multimodal
+  - 256K Context
+  - On-Device
+  title: 'Google Gemma 4 12B: 开源多模态小模型新标杆'
 new_project:
-- desc: nex-agi团队开源的Nex-N2是一个专为Agentic Coding设计的AI代理框架，支持思考-行动-观察循环与长程任务执行。支持OpenAI、Anthropic、DeepSeek等多种LLM后端，内置文件系统、Shell、浏览器与Git工具链集成。N2-Pro版本在SWE-bench上取得63.8%解决率，支持多Agent协作与动态环境交互。GitHub近期快速获得开发者关注。
+- desc: HuggingFace官方开源的轻量级AI Agent框架。核心理念是让Agent以代码为思维媒介——Agent通过生成并执行Python代码片段来完成工具调用、推理与决策，而非依赖传统JSON函数调用格式。支持多种LLM后端（OpenAI、Anthropic、本地模型），内置代码沙箱安全执行环境。提供CodeAgent与ToolCallingAgent两种范式，可连接HuggingFace
+    Hub上数千个模型与工具。GitHub Star快速增长，已成为Agent开发领域热门基础设施。
   tags:
-  - Agent Framework
-  - Coding Agent
-  - Multi-Agent
+  - AI Agent
+  - HuggingFace
+  - Code-as-Action
   - Open Source
-  - LLM
-  title: 'Nex-N2: 面向Agentic Coding的开源思考-行动框架'
-  url: https://github.com/nex-agi/Nex-N2
+  - Tool Calling
+  title: 'smolagents: HuggingFace轻量级代码思维Agent框架'
+  url: https://github.com/huggingface/smolagents
 paper:
-- desc: '顶会论文推荐: CVPR 2026。提出从真实世界视频中学习可迁移通用知识的自监督框架。通过视频生成作为代理任务，模型在没有任何人工标注的情况下习得物理规律、物体恒常性与空间几何先验。在机器人操控、自动驾驶感知与视频问答等下游任务中展现出卓越的零样本迁移能力，为视觉世界模型研究开辟新路径。'
+- desc: CVPR 2026亮点论文。提出VerseCrafter——首个支持4D几何控制的动态逼真视频世界模型。基于DiT架构并结合显式相机-几何联合建模，可从单张图像或文本生成具有精确3D几何一致性的动态视频。创新点包括：4D几何条件注入、运动-外观解耦训练策略、以及自适应时域注意力机制。在视频生成质量、几何准确性、运动连贯性三个维度全面超越SOTA基线，为视频世界模型奠定新范式。
   tags:
   - CVPR 2026
-  - World Model
-  - Video Generation
-  - Transfer Learning
-  title: 'VideoWorld 2: Learning Transferable Knowledge from Real-world Videos'
-  url: https://openaccess.thecvf.com/content/CVPR2026/html/Ren_VideoWorld_2_Learning_Transferable_Knowledge_from_Real-world_Videos_CVPR_2026_paper.html
+  - Video World Model
+  - 4D Geometry
+  - DiT
+  - Dynamic Generation
+  title: 'VerseCrafter: Dynamic Realistic Video World Model with 4D Geometric Control'
+  url: https://arxiv.org/abs/2601.05138
 tech:
   Arch:
-  - desc: Arm于2026年6月Computex期间正式发布AGI CPU——公司历史上首款自研物理芯片产品。基于Neoverse V3架构，采用Armv9.4-A指令集，单插槽集成最多128个定制核心，支持SVE3向量扩展与机密计算。搭配HBM3e内存控制器与CXL
-      3.1互连，专为大规模Agentic AI推理与云计算设计，支持SuperMicro双路参考服务器平台。
+  - desc: Vortex 3.0正式发布，成为全球首个拥有完整3D图形渲染管线的全栈开源RISC-V GPU。新版本支持Vulkan API、完整可编程着色器管线、硬件光栅化与ASIC设计流程。基于RISC-V
+      RV32IMF指令集扩展，已在FPGA与ASIC双路径验证。采用SIMT执行模型，支持OpenCL计算与图形混合工作负载。开源社区活跃，已适配Linux
+      DRM框架。
     tags:
-    - Arm
-    - Neoverse V3
-    - Agentic AI
-    - HBM3e
-    - CXL 3.1
-    title: 'Arm AGI CPU: Arm首款自研硅芯片，Neoverse V3架构专为Agentic AI打造'
+    - RISC-V GPU
+    - Open-Source Hardware
+    - Vulkan
+    - 3D Pipeline
+    - Vortex 3.0
+    - ASIC
+    title: 'Vortex 3.0: 全栈开源RISC-V GPU，完整3D渲染管线与Vulkan支持落地'
   Audio:
-  - desc: ICLR 2026 Oral论文(NVIDIA出品)。首次将音频理解、生成与推理统一于单一自回归语言模型架构。通过音频离散化token与文本token联合训练，在语音识别、TTS、音乐理解和音频问答等12项任务上达到或超越专用模型水平，参数量仅7B。
+  - desc: ICLR 2026接收论文，提出Echo模型实现音频交错推理。该模型将音频理解与语言推理深度融合，支持音频-文本交错输入并进行多步推理。核心架构基于Audio-Language预训练与Chain-of-Thought结合的范式，在复杂音频问答、声学场景理解、音乐分析等任务上取得SOTA。开源代码与模型权重已发布。
     tags:
     - ICLR 2026
-    - Audio LM
-    - Speech
-    - NVIDIA
-    - Unified Model
-    title: 'UALM: Unified Audio Language Model for Understanding, Generation and Reasoning'
+    - Audio Comprehension
+    - Multimodal Reasoning
+    - Audio-Language Model
+    - Chain-of-Thought
+    title: 'Echo: Towards Advanced Audio Comprehension via Audio-Interleaved Reasoning'
   CPU:
-  - desc: AMD于2026年5月正式宣布Zen 6架构EPYC Venice处理器在TSMC 2nm(N2)工艺上启动量产爬坡。旗舰型号搭载256核心(32核/CCD
-      × 8 CCD)，采用SP7新平台(Congo/Kenya/Nigeria)。工程样品显示全核频率达4.2GHz，较上代Turin性能提升约70%。首次引入L4缓存die-stacking方案，AI推理吞吐量较竞品NVIDIA
-      Vera高出3.3倍。
+  - desc: Apple于2026年3月发布M5 Pro与M5 Max，首次采用Fusion双Die互联架构。基于TSMC N3P工艺，M5 Pro最高14核CPU（10P+4E）+20核GPU；M5
+      Max最高16核CPU（12P+4E）+40核GPU。双Die通过Apple UltraFusion 2.0互联，带宽达1TB/s。统一内存最高128GB
+      LPDDR5X-8600，神经网络引擎16核达45TOPS。单核性能较M4 Pro提升18%，多核能效领先同期x86竞品40%。
     tags:
-    - Zen 6
-    - TSMC 2nm
-    - EPYC Venice
-    - 256 Cores
-    - SP7
-    title: 'AMD EPYC Venice (Zen 6): TSMC 2nm N2量产爬坡，最高256核32核/CCD'
+    - Apple Silicon
+    - M5 Pro
+    - M5 Max
+    - TSMC N3P
+    - Fusion Architecture
+    - UltraFusion 2.0
+    title: 'Apple M5 Pro/Max: Fusion双Die架构重塑专业级Apple Silicon'
   Computer Vision:
-  - desc: CVPR 2026亮点论文。提出从真实世界视频中学习可迁移知识的视频世界模型，通过大规模视频生成预训练，模型习得物理规律、物体交互与空间推理能力，在下游机器人操控与自动驾驶任务中实现零样本迁移，性能较VideoWorld初代提升47%。
+  - desc: CVPR 2026亮点论文，提出VerseCrafter框架实现动态逼真视频世界模型。核心创新在于4D几何控制机制——通过显式建模相机位姿与场景几何的联合空间，实现细粒度的动态场景生成与编辑。模型基于DiT架构，在运动一致性、几何准确性上显著超越现有方法，支持从单张图像或文本描述生成具有精确3D几何控制的动态视频。
     tags:
     - CVPR 2026
-    - Video Generation
-    - World Model
-    - Transfer Learning
-    title: 'VideoWorld 2: Learning Transferable Knowledge from Real-world Videos'
+    - Video World Model
+    - 4D Geometric Control
+    - DiT Architecture
+    - Dynamic Scene Generation
+    title: 'VerseCrafter: Dynamic Realistic Video World Model with 4D Geometric Control'
   GPU:
-  - desc: 多方爆料确认NVIDIA RTX 50 Super系列仍在2026年发布计划中。RTX 5060 Super预计搭载GB206-350核心，配备12GB
-      GDDR7显存(192-bit位宽)，较RTX 5060标准版的8GB显著提升。CUDA核心数约4608个，Boost频率约2.8GHz，TGP约180W。定价预计$329-379区间，剑指主流1440p游戏市场。
+  - desc: NVIDIA RTX 5060正式上市，基于Blackwell GB206核心，搭载3840 CUDA Cores、8GB GDDR7显存（128-bit位宽，28Gbps速率），TGP仅150W。支持DLSS
+      4多帧生成与Neural Rendering全套Blackwell特性。PCIe 5.0 x8接口，建议零售价仅299美元。在1080p/1440p游戏中较RTX
+      4060平均提升35%，能效比显著优于前代。2026年5月桌面版出货，笔记本版同步上市。
     tags:
+    - NVIDIA
     - Blackwell
-    - RTX 5060 Super
+    - RTX 5060
     - GDDR7
-    - 12GB
-    - GB206
-    title: 'NVIDIA GeForce RTX 5060 Super: Blackwell主流级12GB显存版泄露'
+    - DLSS 4
+    - Neural Rendering
+    title: 'NVIDIA GeForce RTX 5060: Blackwell主流级正式发布'
   Lang:
-  - desc: Zig 0.16.0于2026年4月正式发布。核心更新包括：全新增量编译后端，对大型项目重编译速度提升3-8倍；comptime解释器重写，编译期代码执行性能提升2.3倍；新增@branchHint内置函数支持分支预测提示；标准库新增MultiArrayList与SinglyLinkedList稳定API；实验性Async/Await语法恢复推进。
+  - desc: Swift 6.3于2026年3月正式发布，三大核心突破：(1) C互操作性深度扩展，支持直接导入C结构体与联合体；(2) Android SDK目标平台正式进入稳定通道，Swift代码可直接编译为Android原生库；(3)
+      Embedded Swift子集扩展，支持更多裸机与RTOS平台。同时引入Typed Throws增强错误处理，非拷贝泛型支持范围扩大。
     tags:
-    - Zig
-    - Systems Programming
-    - Compiler
-    - Incremental Compilation
-    - comptime
-    title: 'Zig 0.16.0: 增量编译架构落地，comptime性能翻倍'
+    - Swift 6.3
+    - C Interoperability
+    - Android SDK
+    - Embedded Swift
+    - Typed Throws
+    title: 'Swift 6.3: C互操作性全面增强与Android SDK正式稳定化'
   NLP:
-  - desc: EACL 2026长文。提出原生推理与反思机制的多模态通用GUI Agent，通过层次化动作空间与思维链推理深度融合，在Web、移动端与桌面GUI任务中均展现出强大的跨平台泛化能力。支持动态反思纠正错误操作，在Mind2Web与OSWorld基准上刷新SOTA。
+  - desc: EACL 2026长文论文，提出利用篇章图结构引导大语言模型进行文档级翻译。该方法通过构建源文档的篇章关系图（Discourse Graph），显式建模段落间的逻辑连接（因果、转折、并列等），使LLM在翻译长文档时保持篇章连贯性与语义一致性。在多个语言对的文档翻译基准上显著优于传统句子级方法。
     tags:
     - EACL 2026
-    - GUI Agent
-    - Multimodal
-    - Reasoning
-    - Reflection
-    title: 'InfiGUIAgent: A Multimodal Generalist GUI Agent with Native Reasoning
-      and Reflection'
+    - Machine Translation
+    - Discourse Graph
+    - LLM
+    - Document-Level NLP
+    title: Discourse Graph Guided Document Translation with Large Language Models
   Net:
-  - desc: Broadcom于2026年Q2正式推出全球首套Wi-Fi 8商用芯片组BCM6718(AP端)与BCM6726(客户端)。基于IEEE 802.11bn标准草案，支持4-Stream
-      MIMO、320MHz信道带宽与4096-QAM调制，理论PHY速率达11.5Gbps。内置AI驱动的智能信道调度引擎，针对Agentic AI时代的多设备高并发场景优化延迟至亚毫秒级。
+  - desc: MediaTek在COMPUTEX 2026上发布Filogic Wi-Fi 8（802.11bn）单芯片平台，斩获两项Best Choice
+      Award。该芯片集成AI引擎实现智能信道调度与干扰管理，支持4-Stream MIMO、320MHz带宽与Multi-Link Operation增强版。内置NPU可实时优化QoS，面向Agentic
+      AI时代的边缘-云端协同场景设计。标志着Wi-Fi 8从标准制定迈向商用落地。
     tags:
     - Wi-Fi 8
     - 802.11bn
-    - Broadcom
-    - 4-Stream
-    - AI-RAN
-    title: 'Broadcom BCM6718: 业界首款Wi-Fi 8 (802.11bn) 芯片生态系统发布'
+    - MediaTek Filogic
+    - COMPUTEX 2026
+    - AI-Native Networking
+    title: MediaTek Filogic Wi-Fi 8单芯片平台获COMPUTEX 2026双项Best Choice Award
   News:
-  - desc: 2026年6月8日，3GPP在新加坡全会上正式锁定6G标准化关键里程碑。Release 21规范将于2029年3月完成冻结，为芯片厂商预留约3年开发窗口。6G核心指标包括：峰值速率100Gbps以上、亚毫秒级确定性延迟、原生AI-RAN融合架构、太赫兹频段(100GHz-300GHz)商用化路线图，以及通感一体化(ISAC)标准框架。
+  - desc: 2026年6月，NVIDIA与台积电联合宣布将AI引入半导体制造全流程。核心突破为cuLitho计算光刻平台部署至TSMC产线：基于Blackwell
+      GPU集群加速光学邻近校正（OPC），将传统需数周的计算光刻任务压缩至数小时。同时引入生成式AI辅助缺陷检测与良率预测模型。此举标志着半导体制造从物理驱动向AI-物理协同驱动的范式转变，预计可提升先进制程良率3-5个百分点。
     tags:
-    - 3GPP
-    - 6G
-    - Release 21
-    - Standardization
-    - ISAC
-    title: '3GPP新加坡全会锁定6G标准化时间表: Release 21规范2029年3月冻结'
+    - NVIDIA
+    - TSMC
+    - cuLitho
+    - AI Manufacturing
+    - Semiconductor
+    - Computational Lithography
+    title: NVIDIA与TSMC将AI深度引入晶圆厂：cuLitho加速计算光刻全流程
