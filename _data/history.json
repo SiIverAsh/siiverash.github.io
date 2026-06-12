@@ -1,4 +1,19 @@
 {
+  "2026-06-12": [
+    "Arm AGI CPU: Arm首款自研硅芯片，Neoverse V3架构专为Agentic AI打造",
+    "3GPP新加坡全会锁定6G标准化时间表: Release 21规范2029年3月冻结",
+    "Broadcom BCM6718: 业界首款Wi-Fi 8 (802.11bn) 芯片生态系统发布",
+    "NVIDIA GeForce RTX 5060 Super: Blackwell主流级12GB显存版泄露",
+    "UALM: Unified Audio Language Model for Understanding, Generation and Reasoning",
+    "VideoWorld 2: Learning Transferable Knowledge from Real-world Videos",
+    "DeepSeek V4 Pro: 百万Token上下文MoE旗舰，Agent场景原生优化",
+    "AMD EPYC Venice (Zen 6): TSMC 2nm N2量产爬坡，最高256核32核/CCD",
+    "内田真礼",
+    "Zig 0.16.0: 增量编译架构落地，comptime性能翻倍",
+    "Nex-N2: 面向Agentic Coding的开源思考-行动框架",
+    "支持向量机 (Support Vector Machine, SVM)",
+    "InfiGUIAgent: A Multimodal Generalist GUI Agent with Native Reasoning and Reflection"
+  ],
   "2026-06-11": [
     "Intel 18A制程量产就绪: RibbonFET+PowerVia双剑合璧",
     "花澤香菜",
@@ -137,21 +152,5 @@
     "Rust 2024 Edition 路线图确定",
     "NVIDIA GTC 2026: Blackwell Ultra 与 Vera CPU 亮相",
     "LLaVA: Large Language and Vision Assistant"
-  ],
-  "2026-06-02": [
-    "NVIDIA GeForce RTX 5060: Blackwell主流甜点卡",
-    "Phi-4: 微软14B参数高效推理模型",
-    "XGBoost: 极限梯度提升算法",
-    "Computex 2026台北开幕：AI PC生态全面爆发",
-    "佐倉綾音",
-    "CosyVoice 2: 零样本多语种语音合成",
-    "AMD Ryzen 7 9800X3D: Zen 5 3D V-Cache游戏旗舰",
-    "CXL 3.1: 计算快速链路互联规范发布",
-    "Florence-2: 轻量级视觉基础模型",
-    "Ollama: 本地大语言模型推理引擎",
-    "Swift 6: 全面数据竞争安全并发模型",
-    "TSMC N3P: 3nm增强工艺节点量产",
-    "ReFT: Representation Finetuning for Language Models",
-    "OLMo 2: 完全开放的语言模型家族"
   ]
 }

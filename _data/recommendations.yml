@@ -1,137 +1,144 @@
 algorithm:
-- desc: 最经典的实例基础监督学习算法之一。核心思想：对于待分类样本，在特征空间中找出与其距离最近的K个训练样本，通过多数投票（分类）或加权平均（回归）决定预测结果。无需显式训练过程，复杂度集中在推理阶段（懒惰学习）。常用距离度量包括欧氏距离、曼哈顿距离、余弦相似度。K值选择与距离度量对模型性能影响显著，适用于低维数据分类与回归任务。
+- desc: 经典监督学习算法，通过寻找最大化类别间隔的最优超平面实现二分类与多分类。核技巧(Kernel Trick)使其能高效处理非线性可分数据，常用核函数包括RBF、多项式与Sigmoid。SVM在小样本高维数据场景下表现优异，广泛应用于文本分类、图像识别与生物信息学。sklearn.svm提供SVC/SVR等完整实现，关键超参数包括C(正则化强度)与gamma(RBF核宽度)。
   tags:
-  - 监督学习
-  - 实例基础
-  - 懒惰学习
-  - 分类与回归
-  title: K近邻算法 (K-Nearest Neighbors, KNN)
+  - SVM
+  - Supervised Learning
+  - Kernel Method
+  - Classification
+  - Margin Maximization
+  title: 支持向量机 (Support Vector Machine, SVM)
 cv_recommend:
-  agency: 大沢事務所
+  agency: アイムエンタープライズ (I'm Enterprise)
   hometown: 東京都
-  intro: 花澤香菜以其清澈透明且辨识度极高的声线在声优界独树一帜，被粉丝誉为拥有「天使之声」。自幼以童星身份出道，后转型声优深耕配音领域。其音域宽广，可精准驾驭从元气少女到冷艳成熟的多元声线，演技细腻且富有层次。作为歌手亦取得非凡成就，多次登上日本武道馆举办个人演唱会，单曲屡次进入Oricon周榜前十。凭借扎实的台词功底、卓越的音乐才能与持续稳定的高质量作品输出，成为平成至令和时代最具影响力的女性声优之一，2026年版《声優名鑑》女性編连续多年收录其条目，业界地位无可撼动。
-  name: 花澤香菜
-date: '2026-06-11'
+  intro: 1989年12月27日出生于东京都。2010年以声优身份正式出道，凭借清亮而富有穿透力的音质迅速获得业界关注。声线可塑性极强，既能驾驭元气活力的少女声线，也能演绎沉稳冷静的角色。2014年荣获第8回声优奖新人女优奖。除配音工作外，亦以歌手身份活跃，个人音乐作品风格多元。在广播节目主持与舞台演出中也展现了出色的即兴应变能力与表现力，是被业界广泛认可的实力派声优。
+  name: 内田真礼
+date: '2026-06-12'
 history:
-- event: 德州仪器发布Speak & Spell，全球首款电子语音合成教育玩具，采用TMC0280线性预测编码芯片，标志消费级数字语音处理时代开端。
-  year: 1978年
-- event: 中国天问一号火星探测器首批科学影像图在北京公布，祝融号火星车拍摄的着陆点全景、火星地形地貌影像首次向全球公开。
-  year: 2021年
-- event: 中国神舟十号载人飞船在酒泉卫星发射中心成功发射，搭载聂海胜、张晓光、王亚平三名航天员，开启中国首次应用性太空飞行。
-  year: 2013年
-- event: 清光绪帝颁布《明定国是诏》，戊戌变法正式开始，倡导学习西方、改革科举、兴办新式学堂，是中国近代化进程中的重要政治改革。
-  year: 1898年
-- event: 京师同文馆在北京成立，中国近代第一所官办外语专门学校，后发展为京师大学堂重要组成部分，标志中国近代新式教育的开端。
-  year: 1862年
-- event: 法国海洋探险家雅克-伊夫·库斯托诞生，他后与埃米尔·加尼昂共同发明水肺（Aqua-Lung），开创现代水下探索与海洋保护事业。
-  year: 1910年
+- event: 苏联发射Venera 4探测器，成为人类首个进入其他行星(金星)大气层并传回数据的航天器
+  year: '1967'
+- event: 美国总统里根在柏林勃兰登堡门前发表著名演说，向戈尔巴乔夫喊话「推倒这堵墙」
+  year: '1987'
+- event: IBM以35亿美元收购Lotus Development Corporation，创当时软件行业最大并购案
+  year: '1995'
+- event: 3Com与US Robotics合并，交易金额66亿美元，合并后成为全球最大网络设备制造商之一
+  year: '1997'
+- event: Mozilla 1.0正式发布，标志着开源浏览器时代的开端，为日后Firefox奠定基础
+  year: '2002'
+- event: 美国佛罗里达州奥兰多Pulse夜总会发生大规模枪击事件，造成49人遇难
+  year: '2016'
 llm:
-- desc: 2026年6月，OpenAI发布GPT-5.6系列（代号Kindle），支持150万token超长上下文窗口，推理能力较GPT-5飞跃提升。采用改进的Chain-of-Thought自校正机制，在AIME
-    2025数学竞赛中达95%+准确率，SWE-bench Verified编程基准得分78%。已知变体包括Kindle-Alpha高推理版与Kepler轻量版，直接对标Anthropic
-    Mythos。
+- desc: DeepSeek于2026年4月发布V4系列，Pro版本采用改进的混合专家(MoE)架构，总参数量约1.6T，激活参数318B，支持100万Token超长上下文窗口。创新性引入Multi-Token
+    Prediction(MTP)训练目标与Agent-Aware预训练数据配比，在SWE-bench verified上达71.2%解决率，HumanEval编码基准94.6%。推理成本仅为同类模型的1/5，已开源权重并支持HuggingFace推理。
   tags:
-  - GPT-5.6
-  - OpenAI
-  - 1.5M Context
-  - Reasoning
-  title: 'GPT-5.6 Kindle: OpenAI新一代推理旗舰，150万Token超长上下文'
+  - DeepSeek
+  - MoE
+  - 1M Context
+  - Agent
+  - Open Source
+  title: 'DeepSeek V4 Pro: 百万Token上下文MoE旗舰，Agent场景原生优化'
 new_project:
-- desc: anomalyco团队开源的终端原生AI编程代理，纯Rust编写，提供交互式TUI界面。支持在终端中通过自然语言指令自动生成、修改与审查代码，深度集成Git工作流，兼容Claude、GPT等多模型后端。28天涨星776+，定位为Cursor/Copilot的轻量级开源替代方案。
+- desc: nex-agi团队开源的Nex-N2是一个专为Agentic Coding设计的AI代理框架，支持思考-行动-观察循环与长程任务执行。支持OpenAI、Anthropic、DeepSeek等多种LLM后端，内置文件系统、Shell、浏览器与Git工具链集成。N2-Pro版本在SWE-bench上取得63.8%解决率，支持多Agent协作与动态环境交互。GitHub近期快速获得开发者关注。
   tags:
-  - AI Coding Agent
-  - Rust
-  - TUI
-  - 开源
-  title: 'opencode: AI原生终端编码代理'
-  url: https://github.com/anomalyco/opencode
+  - Agent Framework
+  - Coding Agent
+  - Multi-Agent
+  - Open Source
+  - LLM
+  title: 'Nex-N2: 面向Agentic Coding的开源思考-行动框架'
+  url: https://github.com/nex-agi/Nex-N2
 paper:
-- desc: CVPR 2026顶会论文。提出将预训练视频扩散模型的4D动态先验迁移至3D Gaussian Splatting表示的新框架。通过潜在动态重建模型（LDRM）实现时空一致的4D场景生成，支持文本/图像引导的可控动态内容创建，在NVS与动态编辑基准上均达到SOTA。论文开源代码已发布。
+- desc: '顶会论文推荐: CVPR 2026。提出从真实世界视频中学习可迁移通用知识的自监督框架。通过视频生成作为代理任务，模型在没有任何人工标注的情况下习得物理规律、物体恒常性与空间几何先验。在机器人操控、自动驾驶感知与视频问答等下游任务中展现出卓越的零样本迁移能力，为视觉世界模型研究开辟新路径。'
   tags:
   - CVPR 2026
-  - 4D Reconstruction
-  - Gaussian Splatting
-  - Video Diffusion
-  title: 'Diff4Splat: Repurposing Video Diffusion Models for Dynamic Scene Generation'
-  url: https://openaccess.thecvf.com/content/CVPR2026/html/Pan_Diff4Splat_Repurposing_Video_Diffusion_Models_for_Dynamic_Scene_Generation_CVPR_2026_paper.html
+  - World Model
+  - Video Generation
+  - Transfer Learning
+  title: 'VideoWorld 2: Learning Transferable Knowledge from Real-world Videos'
+  url: https://openaccess.thecvf.com/content/CVPR2026/html/Ren_VideoWorld_2_Learning_Transferable_Knowledge_from_Real-world_Videos_CVPR_2026_paper.html
 tech:
   Arch:
-  - desc: Intel 18A（1.8nm级）制程在Computex 2026确认进入量产阶段，首批搭载于Xeon 6+数据中心处理器。采用RibbonFET全环绕栅极晶体管与PowerVia背面供电网络两大突破性技术，相较Intel
-      3制程实现每瓦性能翻倍，逻辑密度提升30%，是Intel重夺制程领导力的关键节点。
+  - desc: Arm于2026年6月Computex期间正式发布AGI CPU——公司历史上首款自研物理芯片产品。基于Neoverse V3架构，采用Armv9.4-A指令集，单插槽集成最多128个定制核心，支持SVE3向量扩展与机密计算。搭配HBM3e内存控制器与CXL
+      3.1互连，专为大规模Agentic AI推理与云计算设计，支持SuperMicro双路参考服务器平台。
     tags:
-    - Intel 18A
-    - RibbonFET
-    - PowerVia
-    - 1.8nm
-    title: 'Intel 18A制程量产就绪: RibbonFET+PowerVia双剑合璧'
+    - Arm
+    - Neoverse V3
+    - Agentic AI
+    - HBM3e
+    - CXL 3.1
+    title: 'Arm AGI CPU: Arm首款自研硅芯片，Neoverse V3架构专为Agentic AI打造'
   Audio:
-  - desc: 美团LongCat团队开源，直接在波形潜空间中建模扩散过程，绕过传统Mel频谱中间表示，实现48kHz高保真语音合成。采用DiT架构结合ConvNeXt编码器，支持零样本声音克隆与细粒度情感控制，MOS评分达4.45，在自然度与韵律表现上超越现有主流TTS方案。
+  - desc: ICLR 2026 Oral论文(NVIDIA出品)。首次将音频理解、生成与推理统一于单一自回归语言模型架构。通过音频离散化token与文本token联合训练，在语音识别、TTS、音乐理解和音频问答等12项任务上达到或超越专用模型水平，参数量仅7B。
     tags:
-    - TTS
-    - Diffusion DiT
-    - Waveform Latent Space
-    - 美团开源
-    title: 'LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform
-      Latent Space'
+    - ICLR 2026
+    - Audio LM
+    - Speech
+    - NVIDIA
+    - Unified Model
+    title: 'UALM: Unified Audio Language Model for Understanding, Generation and Reasoning'
   CPU:
-  - desc: Computex 2026发布，基于Intel 18A制程的Granite Rapids-AP旗舰，集成288个Sierra Forest能效核于单一Socket
-      E2封装。支持12通道DDR5-6400与CXL 2.0 Type 3内存扩展，TDP 500W可配置。针对Agentic AI微服务推理优化，单路可承载超2000个并发轻量推理实例，搭配200GbE
-      E835网卡构建新一代智算节点。
+  - desc: AMD于2026年5月正式宣布Zen 6架构EPYC Venice处理器在TSMC 2nm(N2)工艺上启动量产爬坡。旗舰型号搭载256核心(32核/CCD
+      × 8 CCD)，采用SP7新平台(Congo/Kenya/Nigeria)。工程样品显示全核频率达4.2GHz，较上代Turin性能提升约70%。首次引入L4缓存die-stacking方案，AI推理吞吐量较竞品NVIDIA
+      Vera高出3.3倍。
     tags:
-    - Xeon 6+
-    - 288核
-    - Intel 18A
-    - Granite Rapids
-    title: 'Intel Xeon 6+ Granite Rapids-AP: 288核E-core单插槽密度极限'
+    - Zen 6
+    - TSMC 2nm
+    - EPYC Venice
+    - 256 Cores
+    - SP7
+    title: 'AMD EPYC Venice (Zen 6): TSMC 2nm N2量产爬坡，最高256核32核/CCD'
   Computer Vision:
-  - desc: CVPR 2026论文，提出从预训练视频扩散模型中提取4D动态先验并迁移至3D Gaussian Splatting的全新框架。通过潜在动态重建模型（LDRM）实现时空一致的可控4D场景生成，在新视角合成与动态场景编辑任务中达到SOTA水平，解决了动态3D内容创建中长期存在的时空一致性问题。
+  - desc: CVPR 2026亮点论文。提出从真实世界视频中学习可迁移知识的视频世界模型，通过大规模视频生成预训练，模型习得物理规律、物体交互与空间推理能力，在下游机器人操控与自动驾驶任务中实现零样本迁移，性能较VideoWorld初代提升47%。
     tags:
     - CVPR 2026
-    - 4D Scene Generation
-    - Gaussian Splatting
-    - Video Diffusion
-    title: 'Diff4Splat: Repurposing Video Diffusion Models for Dynamic Scene Generation'
+    - Video Generation
+    - World Model
+    - Transfer Learning
+    title: 'VideoWorld 2: Learning Transferable Knowledge from Real-world Videos'
   GPU:
-  - desc: 2026年6月5日正式发售，基于RDNA 4架构Navi 44核心，配备2048个流处理器与128-bit GDDR6显存接口。提供8GB（$299）与16GB（$349）双配置，16GB版在1440p游戏中显存容量远超同级竞品。支持FSR
-      4 AI超分与HYPR-RX一键低延迟技术，整板功耗仅150W。
+  - desc: 多方爆料确认NVIDIA RTX 50 Super系列仍在2026年发布计划中。RTX 5060 Super预计搭载GB206-350核心，配备12GB
+      GDDR7显存(192-bit位宽)，较RTX 5060标准版的8GB显著提升。CUDA核心数约4608个，Boost频率约2.8GHz，TGP约180W。定价预计$329-379区间，剑指主流1440p游戏市场。
     tags:
-    - RDNA 4
-    - Navi 44
-    - 16GB VRAM
-    - RX 9060 XT
-    title: 'AMD Radeon RX 9060 XT: RDNA 4主流级16GB显存降维打击'
+    - Blackwell
+    - RTX 5060 Super
+    - GDDR7
+    - 12GB
+    - GB206
+    title: 'NVIDIA GeForce RTX 5060 Super: Blackwell主流级12GB显存版泄露'
   Lang:
-  - desc: 2026年5月28日发布，正式稳定化core::range模块中的Range、RangeInclusive、RangeFrom等新类型并为其实现Copy
-      trait，彻底解决区间类型在迭代器与泛型中的传递难题。新增assert_matches!宏大幅简化模式匹配断言代码，Wasm目标增强控制流完整性保护，trait解析性能提升15%。
+  - desc: Zig 0.16.0于2026年4月正式发布。核心更新包括：全新增量编译后端，对大型项目重编译速度提升3-8倍；comptime解释器重写，编译期代码执行性能提升2.3倍；新增@branchHint内置函数支持分支预测提示；标准库新增MultiArrayList与SinglyLinkedList稳定API；实验性Async/Await语法恢复推进。
     tags:
-    - Rust
-    - core::range
-    - assert_matches
-    - Wasm安全
-    title: 'Rust 1.96.0: core::range新类型稳定化与assert_matches!宏落地'
+    - Zig
+    - Systems Programming
+    - Compiler
+    - Incremental Compilation
+    - comptime
+    title: 'Zig 0.16.0: 增量编译架构落地，comptime性能翻倍'
   NLP:
-  - desc: ACL 2026论文，提出端到端强化学习框架训练大模型自主进行记忆搜索、推理与管理。模型主动决策何时检索外部知识库、如何将检索信息融入推理链，在长文档问答与多跳推理基准上全面超越传统RAG方案，为Agentic
-      LLM的记忆机制提供新范式。
+  - desc: EACL 2026长文。提出原生推理与反思机制的多模态通用GUI Agent，通过层次化动作空间与思维链推理深度融合，在Web、移动端与桌面GUI任务中均展现出强大的跨平台泛化能力。支持动态反思纠正错误操作，在Mind2Web与OSWorld基准上刷新SOTA。
     tags:
-    - ACL 2026
-    - Memory-Augmented LLM
-    - End-to-End RL
-    - RAG
-    title: 'MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End
-      RL'
+    - EACL 2026
+    - GUI Agent
+    - Multimodal
+    - Reasoning
+    - Reflection
+    title: 'InfiGUIAgent: A Multimodal Generalist GUI Agent with Native Reasoning
+      and Reflection'
   Net:
-  - desc: 高通MWC 2026发布FastConnect 8800移动连接平台，全球首款支持4x4 MIMO的移动端Wi-Fi 8方案。峰值吞吐达11.6Gbps，支持320MHz信道带宽与4K
-      QAM调制，集成AI原生信道调度引擎，空口延迟低于1ms，专为XR空间计算与终端Agent AI实时交互场景设计。
+  - desc: Broadcom于2026年Q2正式推出全球首套Wi-Fi 8商用芯片组BCM6718(AP端)与BCM6726(客户端)。基于IEEE 802.11bn标准草案，支持4-Stream
+      MIMO、320MHz信道带宽与4096-QAM调制，理论PHY速率达11.5Gbps。内置AI驱动的智能信道调度引擎，针对Agentic AI时代的多设备高并发场景优化延迟至亚毫秒级。
     tags:
     - Wi-Fi 8
-    - 4x4 MIMO
-    - FastConnect 8800
-    - AI-Native
-    title: 'Qualcomm FastConnect 8800: 全球首款移动4-Stream Wi-Fi 8芯片'
+    - 802.11bn
+    - Broadcom
+    - 4-Stream
+    - AI-RAN
+    title: 'Broadcom BCM6718: 业界首款Wi-Fi 8 (802.11bn) 芯片生态系统发布'
   News:
-  - desc: 2026年6月，NVIDIA与台积电联合宣布Blackwell GPU在亚利桑那州Fab 21晶圆厂实现大规模量产，首批晶圆良率已达商用标准。这是AI旗舰芯片首次在美国本土完成先进制程制造，标志着全球AI芯片供应链从「台湾集中」向「台美双轨」的历史性转折，北美数据中心客户可直接获得美国制造的Blackwell加速器。
+  - desc: 2026年6月8日，3GPP在新加坡全会上正式锁定6G标准化关键里程碑。Release 21规范将于2029年3月完成冻结，为芯片厂商预留约3年开发窗口。6G核心指标包括：峰值速率100Gbps以上、亚毫秒级确定性延迟、原生AI-RAN融合架构、太赫兹频段(100GHz-300GHz)商用化路线图，以及通感一体化(ISAC)标准框架。
     tags:
-    - NVIDIA
-    - Blackwell
-    - TSMC Arizona
-    - 芯片供应链
-    title: 'NVIDIA Blackwell首度美国本土量产: 台积电亚利桑那Fab 21启动规模出货'
+    - 3GPP
+    - 6G
+    - Release 21
+    - Standardization
+    - ISAC
+    title: '3GPP新加坡全会锁定6G标准化时间表: Release 21规范2029年3月冻结'
