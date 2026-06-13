@@ -1,158 +1,132 @@
 algorithm:
-- desc: 决策树是一种经典监督学习算法，通过递归划分特征空间构建树形模型。核心算法包括ID3（信息增益）、C4.5（增益率）和CART（Gini不纯度）。其优势在于模型可解释性极强——任意预测路径均可追溯至明确的特征条件组合。作为集成学习（随机森林、GBDT、XGBoost）的基学习器，决策树在现代ML中仍占据基础性地位。关键参数包括max_depth、min_samples_split与criterion选择，控制过拟合与泛化性能的平衡。
+- desc: 集成学习经典算法。通过Bootstrap采样构建多棵决策树，每棵树在随机特征子集上分裂，最终以投票（分类）或平均（回归）聚合预测。具有天然的过拟合抵抗能力、特征重要性评估功能，以及对缺失值与非平衡数据的高鲁棒性，仍是表格数据竞赛的基线首选。
   tags:
-  - Decision Tree
-  - Supervised Learning
-  - CART
-  - Gini Impurity
-  - Interpretable ML
-  - Ensemble Learning
-  title: 决策树 (Decision Tree)
+  - 集成学习
+  - Bootstrap
+  - 特征重要性
+  - 表格数据
+  title: 随机森林 (Random Forest)
 cv_recommend:
-  agency: ラクーンドッグ (Raccoon Dog)
-  hometown: 愛知県名古屋市
-  intro: 1994年10月16日出生于爱知县名古屋市，所属事务所为Raccoon Dog。她以极具辨识度的声线著称，能在清冷透明与温暖柔和之间自如切换，声音可塑性极强。除配音工作外，她同时以solo歌手身份活跃，已发行多张单曲与原创专辑，展现出扎实的歌唱实力与音乐表现力。业内评价其声音富有层次感，能精准捕捉角色情感的细腻变化，无论少年角色还是少女角色均驾驭自如。凭借多年积累的演技功底与不断拓展的音乐事业，她已成为令和时代最具代表性的女性声优之一，持续在业界发挥着重要影响力。
-  name: 鬼頭明里
-date: '2026-06-13'
+  agency: アイムエンタープライズ (I'm Enterprise)
+  hometown: 東京都
+  intro: 1991年5月29日出生于东京都。所属声优事务所I'm Enterprise，是平成后期至令和时代最具代表性的女性声优之一。以其清澈透明、辨识度极高的嗓音著称，音域宽广，可驾驭从少女到成熟女性的多类型声线，尤以柔和细腻的吐字与精准的情感表达见长。自幼学习钢琴，具备扎实的音乐素养，歌唱能力在同业中亦属一流，多次以个人名义发行单曲与专辑，并在大型音乐场馆举办个人演唱会。在演技层面，她善于通过微妙的语气变化与呼吸节奏塑造角色的内在情绪，无论是内敛含蓄还是爆发力极强的场景均能精准拿捏，被业界誉为「透明感の天才」。此外，其在广播节目与公开活动中展现的沉稳谈吐与谦逊人柄，也为她积累了跨世代的广泛人气。
+  name: 早見沙織
+date: '2026-06-14'
 history:
-- event: UNIVAC I（通用自动计算机）正式交付美国人口普查局，成为世界首台投入商用的电子计算机，标志计算机从实验室走向产业应用。
-  year: 1951年
-- event: 《纽约时报》开始连载刊登五角大楼文件（Pentagon Papers），引发关于政府透明度与新闻自由的历史性法律对决。
-  year: 1971年
-- event: 先驱者10号（Pioneer 10）探测器越过海王星轨道，成为人类历史上首个离开太阳系八大行星范围的人造物体。
-  year: 1983年
-- event: 微软联合有线电视巨头TCI与时代华纳宣布合资计划，旨在打造融合计算与电视的Cable-Box PC，为交互式电视时代铺路。
-  year: 1993年
-- event: 名为Junkie的多态计算机病毒在全球范围内快速传播，感染MS-DOS系统可执行文件，引发当时最大规模的跨国反病毒协作响应。
-  year: 1994年
-- event: 微软正式发布Direct3D API，为Windows平台3D图形加速建立标准化接口，成为PC游戏产业爆发的关键基础设施。
-  year: 1996年
+- event: 第二次大陆会议正式通过星条旗作为美利坚合众国国旗，13条红白相间条纹与13颗蓝底白星象征最初13州
+  year: 1777年
+- event: 第二次世界大战中，德国军队未经抵抗进入巴黎，法国政府被迫迁往波尔多
+  year: 1940年
+- event: 第45任美国总统唐纳德·特朗普出生于纽约市皇后区
+  year: 1946年
+- event: 中华人民共和国第一届全国人民代表大会通过《中华人民共和国宪法》，确立国旗、国徽与国歌
+  year: 1954年
+- event: 福克兰战争（马岛战争）结束，阿根廷驻军向英军投降，历时74天的冲突正式终结
+  year: 1982年
+- event: 伦敦格伦费尔塔高层住宅发生重大火灾，引发全球对建筑防火材料安全性的反思与法规修订
+  year: 2017年
 llm:
-- desc: Google DeepMind于2026年5-6月发布Gemma 4 12B，以120亿参数实现原生多模态理解（文本+图像+音频+视频）。支持256K超长上下文窗口，基于Gemini
-    3同源架构蒸馏。最大亮点：可在16GB显存的消费级笔记本上完全本地运行。在MMLU-Pro、MathVista、AudioBench等基准上超越同尺寸所有开源模型，部分指标接近Llama
-    4 70B水平。采用Apache 2.0开源协议，开发者可自由商用。
+- desc: 2026年6月Anthropic发布Claude Fable 5，为Mythos系列首款面向公众的模型。采用改进的Constitutional AI对齐框架，支持200K
+    Token上下文窗口，在数学推理（GSM8K 97.2%）、代码生成（HumanEval 95.8%）与多语言理解任务上全面超越前代。支持工具调用与结构化输出。
   tags:
-  - Gemma 4
-  - Google DeepMind
-  - Open-Source LLM
-  - Multimodal
-  - 256K Context
-  - On-Device
-  title: 'Google Gemma 4 12B: 开源多模态小模型新标杆'
+  - Claude Fable 5
+  - Anthropic
+  - Mythos
+  - 200K上下文
+  title: Anthropic Claude Fable 5：Mythos级通用推理模型首次公开
 new_project:
-- desc: HuggingFace官方开源的轻量级AI Agent框架。核心理念是让Agent以代码为思维媒介——Agent通过生成并执行Python代码片段来完成工具调用、推理与决策，而非依赖传统JSON函数调用格式。支持多种LLM后端（OpenAI、Anthropic、本地模型），内置代码沙箱安全执行环境。提供CodeAgent与ToolCallingAgent两种范式，可连接HuggingFace
-    Hub上数千个模型与工具。GitHub Star快速增长，已成为Agent开发领域热门基础设施。
+- desc: 2026年6月GitHub趋势榜首。系统化上下文工程工具包，提供Prompt模板管理、上下文窗口优化、动态信息注入与多Agent上下文共享框架。支持OpenAI、Claude、DeepSeek等多后端，内置上下文压缩与缓存策略，显著降低长对话Token消耗。
   tags:
-  - AI Agent
-  - HuggingFace
-  - Code-as-Action
-  - Open Source
-  - Tool Calling
-  title: 'smolagents: HuggingFace轻量级代码思维Agent框架'
-  url: https://github.com/huggingface/smolagents
+  - 上下文工程
+  - Prompt优化
+  - 多Agent
+  - 开源
+  title: davidkimai/Context-Engineering
+  url: https://github.com/davidkimai/Context-Engineering
 paper:
-- desc: CVPR 2026亮点论文。提出VerseCrafter——首个支持4D几何控制的动态逼真视频世界模型。基于DiT架构并结合显式相机-几何联合建模，可从单张图像或文本生成具有精确3D几何一致性的动态视频。创新点包括：4D几何条件注入、运动-外观解耦训练策略、以及自适应时域注意力机制。在视频生成质量、几何准确性、运动连贯性三个维度全面超越SOTA基线，为视频世界模型奠定新范式。
+- desc: ICLR 2026 Outstanding Paper。首次系统性揭示大语言模型在多轮对话中存在严重的「迷失」现象：随对话轮次增加，模型逐步偏离初始指令与上下文约束，核心原因在于注意力机制的长程衰减与KV缓存累积误差。提出Turn-Level
+    Attention Rescaling（TAR）方法，在10+轮对话中任务完成率提升27%。
   tags:
-  - CVPR 2026
-  - Video World Model
-  - 4D Geometry
-  - DiT
-  - Dynamic Generation
-  title: 'VerseCrafter: Dynamic Realistic Video World Model with 4D Geometric Control'
-  url: https://arxiv.org/abs/2601.05138
+  - ICLR 2026
+  - 多轮对话
+  - 注意力衰减
+  - LLM
+  title: LLMs Get Lost In Multi-Turn Conversation
+  url: https://openreview.net/forum?id=VKGTGGcwl6
 tech:
   Arch:
-  - desc: Vortex 3.0正式发布，成为全球首个拥有完整3D图形渲染管线的全栈开源RISC-V GPU。新版本支持Vulkan API、完整可编程着色器管线、硬件光栅化与ASIC设计流程。基于RISC-V
-      RV32IMF指令集扩展，已在FPGA与ASIC双路径验证。采用SIMT执行模型，支持OpenCL计算与图形混合工作负载。开源社区活跃，已适配Linux
-      DRM框架。
+  - desc: 2026年3月发布。玄铁C950是阿里首款完全符合RVA23 Profile的64位RISC-V处理器IP，集成256-bit向量扩展（RVV
+      1.0）与矩阵运算加速单元，专为边缘AI推理设计，单核INT8算力达4TOPS，支持Linux与Android双系统。
     tags:
-    - RISC-V GPU
-    - Open-Source Hardware
-    - Vulkan
-    - 3D Pipeline
-    - Vortex 3.0
-    - ASIC
-    title: 'Vortex 3.0: 全栈开源RISC-V GPU，完整3D渲染管线与Vulkan支持落地'
+    - RISC-V
+    - RVA23
+    - 玄铁C950
+    - 边缘AI
+    title: 阿里巴巴玄铁C950：RVA23合规64位RISC-V边缘AI核心
   Audio:
-  - desc: ICLR 2026接收论文，提出Echo模型实现音频交错推理。该模型将音频理解与语言推理深度融合，支持音频-文本交错输入并进行多步推理。核心架构基于Audio-Language预训练与Chain-of-Thought结合的范式，在复杂音频问答、声学场景理解、音乐分析等任务上取得SOTA。开源代码与模型权重已发布。
+  - desc: 2026年6月arXiv新作。直接在原始波形域进行流匹配建模，摒弃传统梅尔频谱中间表示，通过波形原生扩散Transformer实现端到端TTS。支持零样本音色克隆与情感控制，MOS评分超越现有两阶段方案，合成速度提升3倍。
     tags:
-    - ICLR 2026
-    - Audio Comprehension
-    - Multimodal Reasoning
-    - Audio-Language Model
-    - Chain-of-Thought
-    title: 'Echo: Towards Advanced Audio Comprehension via Audio-Interleaved Reasoning'
+    - TTS
+    - 流匹配
+    - 波形原生
+    - 零样本克隆
+    title: 'BareWave: Waveform-Native Flow-Matching Text-to-Speech'
   CPU:
-  - desc: Apple于2026年3月发布M5 Pro与M5 Max，首次采用Fusion双Die互联架构。基于TSMC N3P工艺，M5 Pro最高14核CPU（10P+4E）+20核GPU；M5
-      Max最高16核CPU（12P+4E）+40核GPU。双Die通过Apple UltraFusion 2.0互联，带宽达1TB/s。统一内存最高128GB
-      LPDDR5X-8600，神经网络引擎16核达45TOPS。单核性能较M4 Pro提升18%，多核能效领先同期x86竞品40%。
+  - desc: 2026年4月22日发布。业界首款双3D V-Cache处理器，每个Zen 5 CCD各堆叠64MB额外缓存，总缓存达208MB（128MB L3
+      V-Cache + 64MB L3 + 16MB L2）。16核32线程，最高频率5.7GHz，TDP 200W，AM5平台兼容现有600系主板。
     tags:
-    - Apple Silicon
-    - M5 Pro
-    - M5 Max
-    - TSMC N3P
-    - Fusion Architecture
-    - UltraFusion 2.0
-    title: 'Apple M5 Pro/Max: Fusion双Die架构重塑专业级Apple Silicon'
+    - Ryzen 9000
+    - 3D V-Cache
+    - Zen 5
+    - 208MB缓存
+    title: AMD Ryzen 9 9950X3D2 Dual Edition：双3D V-Cache 208MB怪兽
   Computer Vision:
-  - desc: CVPR 2026亮点论文，提出VerseCrafter框架实现动态逼真视频世界模型。核心创新在于4D几何控制机制——通过显式建模相机位姿与场景几何的联合空间，实现细粒度的动态场景生成与编辑。模型基于DiT架构，在运动一致性、几何准确性上显著超越现有方法，支持从单张图像或文本描述生成具有精确3D几何控制的动态视频。
+  - desc: CVPR 2026最佳论文。提出D4RT框架，通过4D可微分光场表征与射线变换（Ray Transform）实现动态场景的高效重建，在单张消费级GPU上即可完成分钟级4D重建，较现有方法提速10倍以上，同时保持亚毫米级几何精度与照片级渲染质量。
     tags:
     - CVPR 2026
-    - Video World Model
-    - 4D Geometric Control
-    - DiT Architecture
-    - Dynamic Scene Generation
-    title: 'VerseCrafter: Dynamic Realistic Video World Model with 4D Geometric Control'
+    - 动态场景重建
+    - 4D表征
+    - 可微分渲染
+    title: 'D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time'
   GPU:
-  - desc: NVIDIA RTX 5060正式上市，基于Blackwell GB206核心，搭载3840 CUDA Cores、8GB GDDR7显存（128-bit位宽，28Gbps速率），TGP仅150W。支持DLSS
-      4多帧生成与Neural Rendering全套Blackwell特性。PCIe 5.0 x8接口，建议零售价仅299美元。在1080p/1440p游戏中较RTX
-      4060平均提升35%，能效比显著优于前代。2026年5月桌面版出货，笔记本版同步上市。
+  - desc: 2026年Computex期间发布。搭载GB207核心，2560 CUDA Cores，9GB GDDR7显存（128-bit），130W TDP，支持DLSS
+      4多帧生成与Reflex 2低延迟技术。采用台积电4N制程，$249起售价填补入门级Blackwell生态位。
     tags:
-    - NVIDIA
+    - RTX 5050
     - Blackwell
-    - RTX 5060
     - GDDR7
     - DLSS 4
-    - Neural Rendering
-    title: 'NVIDIA GeForce RTX 5060: Blackwell主流级正式发布'
+    title: NVIDIA GeForce RTX 5050：Blackwell入门级GDDR7 9GB正式发布
   Lang:
-  - desc: Swift 6.3于2026年3月正式发布，三大核心突破：(1) C互操作性深度扩展，支持直接导入C结构体与联合体；(2) Android SDK目标平台正式进入稳定通道，Swift代码可直接编译为Android原生库；(3)
-      Embedded Swift子集扩展，支持更多裸机与RTOS平台。同时引入Typed Throws增强错误处理，非拷贝泛型支持范围扩大。
+  - desc: 2026年6月最新维护版本。3.14系列引入PEP 701实现f-string完整表达式支持，模式匹配（match-case）编译性能提升40%，新增typing.TypeIs窄化类型守卫，解释器启动速度优化15%，dict内存占用降低20%。
     tags:
-    - Swift 6.3
-    - C Interoperability
-    - Android SDK
-    - Embedded Swift
-    - Typed Throws
-    title: 'Swift 6.3: C互操作性全面增强与Android SDK正式稳定化'
+    - Python 3.14
+    - 模式匹配
+    - 类型系统
+    - 性能优化
+    title: Python 3.14.6 发布：内置错误信息增强与模式匹配性能革新
   NLP:
-  - desc: EACL 2026长文论文，提出利用篇章图结构引导大语言模型进行文档级翻译。该方法通过构建源文档的篇章关系图（Discourse Graph），显式建模段落间的逻辑连接（因果、转折、并列等），使LLM在翻译长文档时保持篇章连贯性与语义一致性。在多个语言对的文档翻译基准上显著优于传统句子级方法。
+  - desc: EMNLP 2025最佳论文。基于FM-Index构建万亿级Token语料库的精确n-gram检索引擎，将倒排索引压缩至原始文本大小的1/3，支持毫秒级查询响应。无需GPU即可在消费级硬件上对互联网规模文本进行高效搜索与统计推断。
     tags:
-    - EACL 2026
-    - Machine Translation
-    - Discourse Graph
-    - LLM
-    - Document-Level NLP
-    title: Discourse Graph Guided Document Translation with Large Language Models
+    - EMNLP 2025
+    - n-gram搜索
+    - FM-Index
+    - 大规模语料
+    title: 'Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index'
   Net:
-  - desc: MediaTek在COMPUTEX 2026上发布Filogic Wi-Fi 8（802.11bn）单芯片平台，斩获两项Best Choice
-      Award。该芯片集成AI引擎实现智能信道调度与干扰管理，支持4-Stream MIMO、320MHz带宽与Multi-Link Operation增强版。内置NPU可实时优化QoS，面向Agentic
-      AI时代的边缘-云端协同场景设计。标志着Wi-Fi 8从标准制定迈向商用落地。
+  - desc: 2026年2月，Ericsson在德克萨斯州完成全球首个预标准6G现场试验，使用7GHz中频段频谱，实现峰值速率超100Gbps、亚毫秒级时延，成功驱动AI机器人远程操控与实时8K视频流传输，验证6G智能网络架构核心模块。
     tags:
-    - Wi-Fi 8
-    - 802.11bn
-    - MediaTek Filogic
-    - COMPUTEX 2026
-    - AI-Native Networking
-    title: MediaTek Filogic Wi-Fi 8单芯片平台获COMPUTEX 2026双项Best Choice Award
+    - 6G
+    - Ericsson
+    - 7GHz频谱
+    - AI机器人
+    title: Ericsson 世界首次6G现场试验：德州7GHz频段突破
   News:
-  - desc: 2026年6月，NVIDIA与台积电联合宣布将AI引入半导体制造全流程。核心突破为cuLitho计算光刻平台部署至TSMC产线：基于Blackwell
-      GPU集群加速光学邻近校正（OPC），将传统需数周的计算光刻任务压缩至数小时。同时引入生成式AI辅助缺陷检测与良率预测模型。此举标志着半导体制造从物理驱动向AI-物理协同驱动的范式转变，预计可提升先进制程良率3-5个百分点。
+  - desc: 2026年6月12日路透社报道，因台积电2nm产能持续紧缺，Google正与三星晶圆代工就下一代TPU及AI加速芯片制造进行深入谈判。三星拟以GAA
+      2nm工艺（SF2）承接订单，若达成协议将重塑全球AI芯片供应链格局。
     tags:
-    - NVIDIA
-    - TSMC
-    - cuLitho
-    - AI Manufacturing
-    - Semiconductor
-    - Computational Lithography
-    title: NVIDIA与TSMC将AI深度引入晶圆厂：cuLitho加速计算光刻全流程
+    - Google
+    - 三星
+    - 2nm
+    - AI芯片
+    title: Google与三星洽谈次世代AI芯片制造合作

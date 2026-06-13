@@ -1,4 +1,20 @@
 {
+  "2026-06-14": [
+    "阿里巴巴玄铁C950：RVA23合规64位RISC-V边缘AI核心",
+    "Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index",
+    "D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time",
+    "Python 3.14.6 发布：内置错误信息增强与模式匹配性能革新",
+    "Ericsson 世界首次6G现场试验：德州7GHz频段突破",
+    "Google与三星洽谈次世代AI芯片制造合作",
+    "AMD Ryzen 9 9950X3D2 Dual Edition：双3D V-Cache 208MB怪兽",
+    "LLMs Get Lost In Multi-Turn Conversation",
+    "Anthropic Claude Fable 5：Mythos级通用推理模型首次公开",
+    "随机森林 (Random Forest)",
+    "早見沙織",
+    "BareWave: Waveform-Native Flow-Matching Text-to-Speech",
+    "NVIDIA GeForce RTX 5050：Blackwell入门级GDDR7 9GB正式发布",
+    "davidkimai/Context-Engineering"
+  ],
   "2026-06-13": [
     "Echo: Towards Advanced Audio Comprehension via Audio-Interleaved Reasoning",
     "Swift 6.3: C互操作性全面增强与Android SDK正式稳定化",
@@ -137,21 +153,5 @@
     "Computex 2026: NVIDIA RTX Spark Superchip重塑AI PC",
     "AMD Radeon RX 9060 XT: RDNA 4中端主力",
     "TRACE: Your Diffusion Model is Secretly an Instance Edge Detector"
-  ],
-  "2026-06-04": [
-    "主成分分析 (PCA): 经典线性降维算法",
-    "AMD Zen 6 微架构首曝: 3nm工艺，Chiplet设计革新",
-    "花澤香菜",
-    "AMD Radeon RX 9070 XT: RDNA 4旗舰，台积电N4P工艺",
-    "AMD Ryzen 9 9950X3D: 192MB 3D V-Cache，游戏与创作双料旗舰",
-    "t r a c k e r (GitHub 趋势榜第二，30K星)",
-    "Rust 2025 Edition: 稳定泛型关联类型与异步闭包",
-    "Gemma 3: Google 轻量级多模态开源模型家族",
-    "3GPP Release 19: 面向6G的AI原生网络架构标准启动",
-    "VideoGigaGAN: 实时8K视频超分辨率生成对抗网络",
-    "WWDC 2026: Apple发布自研服务器芯片与全新Siri架构",
-    "Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion",
-    "Llama 4 Scout: 109B参数开源MoE模型，支持10M上下文窗口",
-    "VoiceCraft 2: 零样本语音克隆与跨语种风格迁移"
   ]
 }
