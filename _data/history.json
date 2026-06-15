@@ -1,4 +1,20 @@
 {
+  "2026-06-16": [
+    "水瀬いのり",
+    "AMD Ryzen 9 9950X3D: Zen 5 3D V-Cache 旗舰",
+    "Meta SAM 3D: 通用三维分割模型",
+    "Broadcom 企业级 Wi-Fi 8 AP 与交换机平台",
+    "TSMC 亮相 A13 工艺：2nm 级节点无需 High-NA EUV",
+    "NVIDIA GeForce RTX 5070: Blackwell 中端主力",
+    "Interleaving Reasoning for Better Text-to-Image Generation",
+    "逻辑回归 (Logistic Regression)",
+    "Spark NLP 6.3.3: ModernBERT嵌入与向量数据库集成",
+    "Mistral Large 3: 675B 参数 MoE 开源旗舰",
+    "TypeScript 5.7: 模式匹配与类型系统增强",
+    "SiFive Performance P570 Gen3: RVA23 RISC-V 高性能核心",
+    "Goose: 可扩展的开源 AI 代理",
+    "Google Gemini 3.1 Flash TTS: 超低延迟文本到语音"
+  ],
   "2026-06-14": [
     "阿里巴巴玄铁C950：RVA23合规64位RISC-V边缘AI核心",
     "Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index",
@@ -137,21 +153,5 @@
     "AMD Ryzen 7 5800X3D 十周年纪念版",
     "决策树 (Decision Tree)",
     "AMD Instinct MI430X GPU"
-  ],
-  "2026-06-05": [
-    "Zig 0.16.0: 增量编译与异步语法稳定化",
-    "StepAudio 2.5 Realtime: 端到端角色扮演语音模型",
-    "SiFive Performance P570 Gen3: RVA23高性能RISC-V核心",
-    "K-近邻算法 (K-Nearest Neighbors)",
-    "鬼頭明里",
-    "3GPP Release 20: 6G标准化正式启动",
-    "Intel Nova Lake: Core Ultra 400系列52核旗舰泄露",
-    "MiniMax M3: 1M上下文原生多模态编程旗舰",
-    "GLASS Flows: Efficient Inference for Reward Alignment of Flow and Diffusion Models",
-    "Tracking the Limits of Knowledge Propagation: How LLMs Fail at Multi-Step Reasoning with Conflicting Knowledge",
-    "CodeGraph: 预索引代码知识图谱",
-    "Computex 2026: NVIDIA RTX Spark Superchip重塑AI PC",
-    "AMD Radeon RX 9060 XT: RDNA 4中端主力",
-    "TRACE: Your Diffusion Model is Secretly an Instance Edge Detector"
   ]
 }

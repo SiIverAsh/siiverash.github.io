@@ -1,132 +1,128 @@
 algorithm:
-- desc: 集成学习经典算法。通过Bootstrap采样构建多棵决策树，每棵树在随机特征子集上分裂，最终以投票（分类）或平均（回归）聚合预测。具有天然的过拟合抵抗能力、特征重要性评估功能，以及对缺失值与非平衡数据的高鲁棒性，仍是表格数据竞赛的基线首选。
+- desc: 经典的线性二分类算法，通过逻辑函数将线性回归的输出映射到(0,1)区间，以概率形式进行预测。使用最大似然估计求解参数，简单高效，可解释性强，是信用评分、医学诊断等领域的基准模型，也是深度学习的基础组件之一。
   tags:
-  - 集成学习
-  - Bootstrap
-  - 特征重要性
-  - 表格数据
-  title: 随机森林 (Random Forest)
+  - Classification
+  - Statistical Learning
+  - Linear Model
+  - Supervised
+  title: 逻辑回归 (Logistic Regression)
 cv_recommend:
-  agency: アイムエンタープライズ (I'm Enterprise)
+  agency: アクセルワン
   hometown: 東京都
-  intro: 1991年5月29日出生于东京都。所属声优事务所I'm Enterprise，是平成后期至令和时代最具代表性的女性声优之一。以其清澈透明、辨识度极高的嗓音著称，音域宽广，可驾驭从少女到成熟女性的多类型声线，尤以柔和细腻的吐字与精准的情感表达见长。自幼学习钢琴，具备扎实的音乐素养，歌唱能力在同业中亦属一流，多次以个人名义发行单曲与专辑，并在大型音乐场馆举办个人演唱会。在演技层面，她善于通过微妙的语气变化与呼吸节奏塑造角色的内在情绪，无论是内敛含蓄还是爆发力极强的场景均能精准拿捏，被业界誉为「透明感の天才」。此外，其在广播节目与公开活动中展现的沉稳谈吐与谦逊人柄，也为她积累了跨世代的广泛人气。
-  name: 早見沙織
-date: '2026-06-14'
+  intro: 清澈通透的声线是其最鲜明的标志，能够细腻地表现从青涩少女到成熟女性的丰富内心世界。作为歌手同样成果丰硕，多次举办个人巡回演唱会，唱功扎实且舞台感染力强。演技自然流畅，情感层次分明，在同行与观众中均享有高度评价。她持续挑战多元化的角色，展现出宽广的戏路与不懈的进取心，被视为新时代声优的代表人物之一，拥有广泛且忠实的粉丝群体。
+  name: 水瀬いのり
+date: '2026-06-16'
 history:
-- event: 第二次大陆会议正式通过星条旗作为美利坚合众国国旗，13条红白相间条纹与13颗蓝底白星象征最初13州
-  year: 1777年
-- event: 第二次世界大战中，德国军队未经抵抗进入巴黎，法国政府被迫迁往波尔多
-  year: 1940年
-- event: 第45任美国总统唐纳德·特朗普出生于纽约市皇后区
-  year: 1946年
-- event: 中华人民共和国第一届全国人民代表大会通过《中华人民共和国宪法》，确立国旗、国徽与国歌
-  year: 1954年
-- event: 福克兰战争（马岛战争）结束，阿根廷驻军向英军投降，历时74天的冲突正式终结
-  year: 1982年
-- event: 伦敦格伦费尔塔高层住宅发生重大火灾，引发全球对建筑防火材料安全性的反思与法规修订
-  year: 2017年
+- event: Computing-Tabulating-Recording Company (CTR) 成立，后更名为IBM，成为信息技术产业的奠基者。
+  year: 1911
+- event: 苏联发射Vostok 6，宇航员Valentina Tereshkova成为首位进入太空的女性，开辟了女性参与航天的新纪元。
+  year: 1963
+- event: Oracle Corporation由Larry Ellison、Bob Miner和Ed Oates创立，日后成长为全球第二大软件公司。
+  year: 1977
+- event: Swype输入法在Android平台正式发布，通过滑动手势革新了移动设备的文字输入方式。
+  year: 2010
+- event: 微软收购自然语言处理初创公司Wand Labs，加强其在消息应用和机器人的语义理解能力。
+  year: 2016
+- event: Boston Dynamics开始向美国企业公开销售Spot四足机器人，定价$74,500，标志仿生机器人走向商用。
+  year: 2020
 llm:
-- desc: 2026年6月Anthropic发布Claude Fable 5，为Mythos系列首款面向公众的模型。采用改进的Constitutional AI对齐框架，支持200K
-    Token上下文窗口，在数学推理（GSM8K 97.2%）、代码生成（HumanEval 95.8%）与多语言理解任务上全面超越前代。支持工具调用与结构化输出。
+- desc: Mistral AI于2025年12月发布的旗舰模型，采用Mixture-of-Experts架构，总参数675B，激活参数约40B。支持128K上下文窗口，在MMLU、HumanEval等基准上与GPT-4o持平，提供开放权重，专为复杂推理、代码生成和多语言任务优化。
   tags:
-  - Claude Fable 5
-  - Anthropic
-  - Mythos
-  - 200K上下文
-  title: Anthropic Claude Fable 5：Mythos级通用推理模型首次公开
+  - LLM
+  - Mistral
+  - MoE
+  - Open-Weight
+  title: 'Mistral Large 3: 675B 参数 MoE 开源旗舰'
 new_project:
-- desc: 2026年6月GitHub趋势榜首。系统化上下文工程工具包，提供Prompt模板管理、上下文窗口优化、动态信息注入与多Agent上下文共享框架。支持OpenAI、Claude、DeepSeek等多后端，内置上下文压缩与缓存策略，显著降低长对话Token消耗。
+- desc: Block（原Square）开源的Goose是一个基于MCP协议的AI代理，支持70+扩展，能够自主执行终端命令、管理代码仓库、操控浏览器等。旨在打造开发者日常工作的智能助手，6月在GitHub趋势榜上迅速攀升。
   tags:
-  - 上下文工程
-  - Prompt优化
-  - 多Agent
-  - 开源
-  title: davidkimai/Context-Engineering
-  url: https://github.com/davidkimai/Context-Engineering
+  - AI Agent
+  - MCP
+  - Open Source
+  - Automation
+  title: 'Goose: 可扩展的开源 AI 代理'
+  url: https://github.com/block/goose
 paper:
-- desc: ICLR 2026 Outstanding Paper。首次系统性揭示大语言模型在多轮对话中存在严重的「迷失」现象：随对话轮次增加，模型逐步偏离初始指令与上下文约束，核心原因在于注意力机制的长程衰减与KV缓存累积误差。提出Turn-Level
-    Attention Rescaling（TAR）方法，在10+轮对话中任务完成率提升27%。
+- desc: ICLR 2026 论文，提出一种交错推理框架，将文本规划与图像生成步骤交替执行，显著提升复杂场景下文本到图像生成的一致性和细节还原。在多个基准上超越现有扩散模型，展示了推理能力在生成任务中的重要性。
   tags:
   - ICLR 2026
-  - 多轮对话
-  - 注意力衰减
-  - LLM
-  title: LLMs Get Lost In Multi-Turn Conversation
-  url: https://openreview.net/forum?id=VKGTGGcwl6
+  - Text-to-Image
+  - Diffusion Model
+  - Reasoning
+  title: Interleaving Reasoning for Better Text-to-Image Generation
+  url: https://openreview.net/forum?id=lLNNzBQPas
 tech:
   Arch:
-  - desc: 2026年3月发布。玄铁C950是阿里首款完全符合RVA23 Profile的64位RISC-V处理器IP，集成256-bit向量扩展（RVV
-      1.0）与矩阵运算加速单元，专为边缘AI推理设计，单核INT8算力达4TOPS，支持Linux与Android双系统。
+  - desc: SiFive于2026年5月推出第三代Performance系列P570核心，完全兼容RVA23 Profile。采用13级流水线、4-wide超标量乱序设计，SPECint估算性能较上一代提升40%，目标市场为消费电子与AIoT设备，标志着RISC-V向主流高性能领域的关键迈进。
     tags:
     - RISC-V
+    - SiFive
+    - P570
     - RVA23
-    - 玄铁C950
-    - 边缘AI
-    title: 阿里巴巴玄铁C950：RVA23合规64位RISC-V边缘AI核心
+    title: 'SiFive Performance P570 Gen3: RVA23 RISC-V 高性能核心'
   Audio:
-  - desc: 2026年6月arXiv新作。直接在原始波形域进行流匹配建模，摒弃传统梅尔频谱中间表示，通过波形原生扩散Transformer实现端到端TTS。支持零样本音色克隆与情感控制，MOS评分超越现有两阶段方案，合成速度提升3倍。
+  - desc: Google于2026年推出的轻量级文本到语音模型，基于Gemini架构，支持200+种音色与多语言混合生成。模型延迟低于100ms，提供情感可控的韵律调节，并通过API开放给开发者，专为实时交互场景设计。
     tags:
     - TTS
-    - 流匹配
-    - 波形原生
-    - 零样本克隆
-    title: 'BareWave: Waveform-Native Flow-Matching Text-to-Speech'
+    - Google
+    - Gemini
+    - Speech Synthesis
+    title: 'Google Gemini 3.1 Flash TTS: 超低延迟文本到语音'
   CPU:
-  - desc: 2026年4月22日发布。业界首款双3D V-Cache处理器，每个Zen 5 CCD各堆叠64MB额外缓存，总缓存达208MB（128MB L3
-      V-Cache + 64MB L3 + 16MB L2）。16核32线程，最高频率5.7GHz，TDP 200W，AM5平台兼容现有600系主板。
+  - desc: AMD于2026年3月推出的16核32线程桌面旗舰处理器，基于Zen 5架构，集成第二代3D V-Cache技术，总L3缓存达128MB。TDP
+      170W，最高加速频率5.7GHz，专为游戏与内容创作优化，凭借大缓存显著降低帧延迟。
     tags:
-    - Ryzen 9000
+    - AMD
+    - Ryzen 9
     - 3D V-Cache
     - Zen 5
-    - 208MB缓存
-    title: AMD Ryzen 9 9950X3D2 Dual Edition：双3D V-Cache 208MB怪兽
+    title: 'AMD Ryzen 9 9950X3D: Zen 5 3D V-Cache 旗舰'
   Computer Vision:
-  - desc: CVPR 2026最佳论文。提出D4RT框架，通过4D可微分光场表征与射线变换（Ray Transform）实现动态场景的高效重建，在单张消费级GPU上即可完成分钟级4D重建，较现有方法提速10倍以上，同时保持亚毫米级几何精度与照片级渲染质量。
+  - desc: Meta在CVPR 2026上发布的Segment Anything Model 3D，首次将SAM范式扩展到三维空间。模型基于Transformer架构，支持零样本三维分割，在3D重建基准上以5:1优势超越先前方法，可直接处理点云与体素数据，为AR/VR与机器人领域提供通用3D感知基础。
     tags:
+    - 3D Reconstruction
+    - Meta
     - CVPR 2026
-    - 动态场景重建
-    - 4D表征
-    - 可微分渲染
-    title: 'D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time'
+    - Zero-shot
+    title: 'Meta SAM 3D: 通用三维分割模型'
   GPU:
-  - desc: 2026年Computex期间发布。搭载GB207核心，2560 CUDA Cores，9GB GDDR7显存（128-bit），130W TDP，支持DLSS
-      4多帧生成与Reflex 2低延迟技术。采用台积电4N制程，$249起售价填补入门级Blackwell生态位。
+  - desc: RTX 5070基于Blackwell架构的GB205 GPU，搭载12GB GDDR7显存，192-bit位宽，配备48个SM单元（6144个CUDA核心）。相比前代RTX
+      4070，光栅性能提升约30%，支持DLSS 4与帧生成技术，于2026年3月发售，定位1440p高刷游戏市场。
     tags:
-    - RTX 5050
+    - NVIDIA
+    - RTX 5070
     - Blackwell
     - GDDR7
-    - DLSS 4
-    title: NVIDIA GeForce RTX 5050：Blackwell入门级GDDR7 9GB正式发布
+    title: 'NVIDIA GeForce RTX 5070: Blackwell 中端主力'
   Lang:
-  - desc: 2026年6月最新维护版本。3.14系列引入PEP 701实现f-string完整表达式支持，模式匹配（match-case）编译性能提升40%，新增typing.TypeIs窄化类型守卫，解释器启动速度优化15%，dict内存占用降低20%。
+  - desc: 2026年2月正式发布的TypeScript 5.7引入实验性模式匹配语法、改进的条件类型推导以及更严格的空值检查。编译速度提升15%，并新增对ES2026装饰器的完整支持，进一步巩固其在大规模前端与全栈项目中的类型安全优势。
     tags:
-    - Python 3.14
-    - 模式匹配
-    - 类型系统
-    - 性能优化
-    title: Python 3.14.6 发布：内置错误信息增强与模式匹配性能革新
+    - TypeScript
+    - Programming Language
+    - Pattern Matching
+    - Static Typing
+    title: 'TypeScript 5.7: 模式匹配与类型系统增强'
   NLP:
-  - desc: EMNLP 2025最佳论文。基于FM-Index构建万亿级Token语料库的精确n-gram检索引擎，将倒排索引压缩至原始文本大小的1/3，支持毫秒级查询响应。无需GPU即可在消费级硬件上对互联网规模文本进行高效搜索与统计推断。
+  - desc: John Snow Labs于2026年5月发布的Spark NLP 6.3.3版本，首次集成ModernBERT嵌入模型，支持原生向量数据库连接与布局感知文档处理。该版本在长文档理解与多语言NER任务上实现20%的准确率提升，并提供统一的RAG流水线API。
     tags:
-    - EMNLP 2025
-    - n-gram搜索
-    - FM-Index
-    - 大规模语料
-    title: 'Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index'
+    - NLP
+    - Spark
+    - ModernBERT
+    - Vector DB
+    title: 'Spark NLP 6.3.3: ModernBERT嵌入与向量数据库集成'
   Net:
-  - desc: 2026年2月，Ericsson在德克萨斯州完成全球首个预标准6G现场试验，使用7GHz中频段频谱，实现峰值速率超100Gbps、亚毫秒级时延，成功驱动AI机器人远程操控与实时8K视频流传输，验证6G智能网络架构核心模块。
+  - desc: Broadcom于2026年2月发布业界首款完整企业Wi-Fi 8解决方案，包括BCM4918四核ARM v8 AP处理器与配套交换机芯片。平台支持AI驱动的射频管理，提供10GbE有线回程，专为高密度的AI时代企业园区网络打造。
     tags:
-    - 6G
-    - Ericsson
-    - 7GHz频谱
-    - AI机器人
-    title: Ericsson 世界首次6G现场试验：德州7GHz频段突破
+    - Wi-Fi 8
+    - Broadcom
+    - Enterprise
+    - AI
+    title: Broadcom 企业级 Wi-Fi 8 AP 与交换机平台
   News:
-  - desc: 2026年6月12日路透社报道，因台积电2nm产能持续紧缺，Google正与三星晶圆代工就下一代TPU及AI加速芯片制造进行深入谈判。三星拟以GAA
-      2nm工艺（SF2）承接订单，若达成协议将重塑全球AI芯片供应链格局。
+  - desc: 台积电在2026年北美技术研讨会上首次披露A13节点细节，该工艺属于2nm级别，采用增强型纳米片晶体管，并延续使用现有EUV光刻设备，无需High-NA即可实现性能和密度提升。A13计划于2029年量产，将支撑下一代AI与高性能计算芯片。
     tags:
-    - Google
-    - 三星
+    - TSMC
+    - A13
     - 2nm
-    - AI芯片
-    title: Google与三星洽谈次世代AI芯片制造合作
+    - Semiconductor
+    title: TSMC 亮相 A13 工艺：2nm 级节点无需 High-NA EUV
