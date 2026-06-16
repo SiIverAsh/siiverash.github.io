@@ -1,128 +1,157 @@
 algorithm:
-- desc: 经典的线性二分类算法，通过逻辑函数将线性回归的输出映射到(0,1)区间，以概率形式进行预测。使用最大似然估计求解参数，简单高效，可解释性强，是信用评分、医学诊断等领域的基准模型，也是深度学习的基础组件之一。
+- desc: K-Means是最经典的无监督学习算法之一，由Stuart Lloyd于1957年提出（1982年正式发表）。算法通过迭代优化将n个数据点划分到k个簇中，使得簇内平方和(WCSS)最小化。核心步骤包括：(1)随机初始化k个质心；(2)将每个点分配到最近质心；(3)重新计算各簇的质心位置；(4)重复直至收敛。K-Means的时间复杂度为O(n·k·d·i)，其中n为样本数、k为簇数、d为维度、i为迭代次数。该算法广泛应用于客户分群、图像压缩、异常检测与文档聚类。其关键局限性在于需预先指定k值、对初始质心敏感，且假设簇为球形分布。K-Means++初始化与Elbow
+    Method是常用的工程改进手段。
   tags:
-  - Classification
-  - Statistical Learning
-  - Linear Model
-  - Supervised
-  title: 逻辑回归 (Logistic Regression)
+  - Unsupervised Learning
+  - Clustering
+  - Lloyd's Algorithm
+  - WCSS Minimization
+  - Elbow Method
+  title: K-Means聚类 (K-Means Clustering)
 cv_recommend:
-  agency: アクセルワン
-  hometown: 東京都
-  intro: 清澈通透的声线是其最鲜明的标志，能够细腻地表现从青涩少女到成熟女性的丰富内心世界。作为歌手同样成果丰硕，多次举办个人巡回演唱会，唱功扎实且舞台感染力强。演技自然流畅，情感层次分明，在同行与观众中均享有高度评价。她持续挑战多元化的角色，展现出宽广的戏路与不懈的进取心，被视为新时代声优的代表人物之一，拥有广泛且忠实的粉丝群体。
-  name: 水瀬いのり
-date: '2026-06-16'
+  agency: スペースクラフト・エンタテインメント (Space Craft Entertainment)
+  hometown: 神奈川県
+  intro: 上坂すみれ以其独特的声线跨度与深厚的语言学功底在声优界独树一帜。她毕业于上智大学外国语学院俄语专业，具备扎实的学术背景，这赋予了她对角色的独特理解力与文化敏感度。其嗓音兼具少女的清澈明快与沉稳有力的中低音张力，能在元气型与冷艳型角色之间自如切换。对俄罗斯文化、苏联历史及军事知识的深度爱好早已成为其个人标志，这一特质也反向丰富了她的声音表现层次。在歌唱领域，她凭借稳定的Live表现力与独特的音乐审美，多次登上大型音乐舞台，积累了跨越声优与歌手双重身份的忠实粉丝群体。
+  name: 上坂すみれ
+date: '2026-06-17'
 history:
-- event: Computing-Tabulating-Recording Company (CTR) 成立，后更名为IBM，成为信息技术产业的奠基者。
-  year: 1911
-- event: 苏联发射Vostok 6，宇航员Valentina Tereshkova成为首位进入太空的女性，开辟了女性参与航天的新纪元。
-  year: 1963
-- event: Oracle Corporation由Larry Ellison、Bob Miner和Ed Oates创立，日后成长为全球第二大软件公司。
-  year: 1977
-- event: Swype输入法在Android平台正式发布，通过滑动手势革新了移动设备的文字输入方式。
-  year: 2010
-- event: 微软收购自然语言处理初创公司Wand Labs，加强其在消息应用和机器人的语义理解能力。
-  year: 2016
-- event: Boston Dynamics开始向美国企业公开销售Spot四足机器人，定价$74,500，标志仿生机器人走向商用。
-  year: 2020
+- event: 自由女神像运抵纽约港，法国将这一象征自由与民主的巨型雕塑赠予美国，成为美法友谊的永恒象征。
+  year: 1885年
+- event: 冰岛共和国正式成立，结束与丹麦的共主邦联关系，6月17日被定为冰岛国庆日。
+  year: 1944年
+- event: 东德爆发六一七事件：东柏林工人因不满提高劳动定额而上街示威，迅速蔓延为全国性反政府抗议，遭苏军镇压。
+  year: 1953年
+- event: 水门事件曝光：5名潜入华盛顿水门大厦民主党全国委员会总部的男子被逮捕，最终导致尼克松总统辞职。
+  year: 1972年
+- event: 南非议会正式废除《人口登记法》(Population Registration Act)，标志着种族隔离制度法律体系的彻底终结。
+  year: 1991年
+- event: 美国南卡罗来纳州查尔斯顿伊曼纽尔非裔卫理公会教堂发生种族仇恨枪击案，造成9名非裔信徒遇难，震惊全美。
+  year: 2015年
 llm:
-- desc: Mistral AI于2025年12月发布的旗舰模型，采用Mixture-of-Experts架构，总参数675B，激活参数约40B。支持128K上下文窗口，在MMLU、HumanEval等基准上与GPT-4o持平，提供开放权重，专为复杂推理、代码生成和多语言任务优化。
+- desc: Moonshot AI于2026年6月发布Kimi K2.7 Code，这是一个1万亿参数的混合专家(MoE)架构开源编码模型。K2.7 Code专为Agentic
+    Coding场景设计，支持128K上下文窗口，在SWE-bench Verified上以48.2%的解决率刷新开源模型纪录，超越GPT-5。模型采用16路MoE路由(每次推理仅激活约65B参数)，支持多文件编辑、终端交互、Git操作等复杂Agent行为。基于Apache
+    2.0协议在HuggingFace开源权重，配套发布Kimi Coder Agent框架与vLLM推理适配方案。
   tags:
-  - LLM
-  - Mistral
   - MoE
-  - Open-Weight
-  title: 'Mistral Large 3: 675B 参数 MoE 开源旗舰'
+  - 1T Parameters
+  - Agentic Coding
+  - Open-Source
+  - SWE-bench
+  title: 'Kimi K2.7 Code: Moonshot AI开源1T参数Agentic Coding模型'
 new_project:
-- desc: Block（原Square）开源的Goose是一个基于MCP协议的AI代理，支持70+扩展，能够自主执行终端命令、管理代码仓库、操控浏览器等。旨在打造开发者日常工作的智能助手，6月在GitHub趋势榜上迅速攀升。
+- desc: 由Y Combinator合伙人Garry Tan开源的AI Agent框架。gbrain基于OpenClaw与Hermes架构，提供知识图谱层(KG
+    Layer)实现自动链接、类型化关系与图查询，支持多Agent协作、工具调用(MCP协议)、长短期记忆管理与任务编排。项目采用TypeScript构建，内置对Claude、GPT等多模型后端的统一适配层。截至2026年6月已获1.2万+
+    GitHub Stars，作为开发者构建自主AI Agent的轻量级基础设施而广受关注。
   tags:
   - AI Agent
-  - MCP
-  - Open Source
-  - Automation
-  title: 'Goose: 可扩展的开源 AI 代理'
-  url: https://github.com/block/goose
+  - Knowledge Graph
+  - OpenClaw
+  - MCP Protocol
+  - TypeScript
+  title: 'garrytan/gbrain: OpenClaw/Hermes AI Agent Brain'
+  url: https://github.com/garrytan/gbrain
 paper:
-- desc: ICLR 2026 论文，提出一种交错推理框架，将文本规划与图像生成步骤交替执行，显著提升复杂场景下文本到图像生成的一致性和细节还原。在多个基准上超越现有扩散模型，展示了推理能力在生成任务中的重要性。
+- desc: CVPR 2026录用论文。WorldReel提出了首个具有一致几何与运动建模的4D视频生成框架。该工作将视频扩散模型从3D(空间+时间)拓展至4D(3D空间+时间)，通过联合学习隐式神经辐射场(NeRF)与场景流(Scene
+    Flow)，实现跨视角一致的动态场景生成。核心创新在于将相机位姿与场景几何作为显式条件引入扩散过程，解决了现有视频生成模型在多视角渲染时的几何不一致问题。在RealEstate10K与MVImgNet上，FVD指标较基线方法降低34%，且支持单目视频的4D重建与自由视角渲染。
   tags:
-  - ICLR 2026
-  - Text-to-Image
-  - Diffusion Model
-  - Reasoning
-  title: Interleaving Reasoning for Better Text-to-Image Generation
-  url: https://openreview.net/forum?id=lLNNzBQPas
+  - 4D Generation
+  - Video Diffusion
+  - NeRF
+  - Scene Flow
+  - CVPR 2026
+  title: 'WorldReel: 4D Video Generation with Consistent Geometry and Motion Modeling'
+  url: https://arxiv.org/abs/2512.07821
 tech:
   Arch:
-  - desc: SiFive于2026年5月推出第三代Performance系列P570核心，完全兼容RVA23 Profile。采用13级流水线、4-wide超标量乱序设计，SPECint估算性能较上一代提升40%，目标市场为消费电子与AIoT设备，标志着RISC-V向主流高性能领域的关键迈进。
+  - desc: CES 2026正式发布，Intel Core Ultra Series 3 (Panther Lake)是首款基于Intel 18A制程的客户端处理器平台。18A工艺融合RibbonFET环栅晶体管与PowerVia背面供电技术，实现单位功耗性能提升25%。旗舰型号Core
+      Ultra 9 386H集成12个Xe3 GPU核心(基于Battlemage架构)与NPU5 AI引擎(48 TOPS INT8)，CPU部分采用Lion
+      Cove P-core + Skymont E-core混合架构，最高16核/16线程，TDP可配置28W-65W，支持LPDDR6-9600内存与Thunderbolt
+      5。
     tags:
-    - RISC-V
-    - SiFive
-    - P570
-    - RVA23
-    title: 'SiFive Performance P570 Gen3: RVA23 RISC-V 高性能核心'
+    - Intel 18A
+    - Panther Lake
+    - RibbonFET
+    - PowerVia
+    - NPU5
+    title: 'Intel Core Ultra Series 3 ''Panther Lake'': Intel 18A首款客户端平台'
   Audio:
-  - desc: Google于2026年推出的轻量级文本到语音模型，基于Gemini架构，支持200+种音色与多语言混合生成。模型延迟低于100ms，提供情感可控的韵律调节，并通过API开放给开发者，专为实时交互场景设计。
+  - desc: ICASSP 2026录用。Omni-AVSR构建了首个将音频、视频唇语与文本三模态统一的大语言模型语音识别框架。该模型利用Q-Former桥接冻结的音频编码器(Whisper)与视觉编码器(CLIP)，将多模态特征对齐至LLaMA-3的语义空间，实现端到端的音视频融合语音识别。在LRS3-TED数据集上，Omni-AVSR在-10dB极低信噪比场景下WER降低41.3%，首次展示LLM在多模态抗噪语音识别中的鲁棒优势，并支持流式推理部署。
     tags:
-    - TTS
-    - Google
-    - Gemini
-    - Speech Synthesis
-    title: 'Google Gemini 3.1 Flash TTS: 超低延迟文本到语音'
+    - Multimodal ASR
+    - Audio-Visual Fusion
+    - Large Language Model
+    - ICASSP 2026
+    title: 'Omni-AVSR: Towards Unified Multimodal Speech Recognition with Large Language
+      Models'
   CPU:
-  - desc: AMD于2026年3月推出的16核32线程桌面旗舰处理器，基于Zen 5架构，集成第二代3D V-Cache技术，总L3缓存达128MB。TDP
-      170W，最高加速频率5.7GHz，专为游戏与内容创作优化，凭借大缓存显著降低帧延迟。
+  - desc: AMD下一代Ryzen 10000系列'奥运岭'(Olympic Ridge)桌面CPU关键规格泄露。基于Zen 6架构，采用AM5+平台，首次在桌面级CPU中集成NPU(XDNA
+      3架构)，同时取消iGPU以腾出芯片面积。核心配置覆盖6/8/10/12/16/20/24核SKU，最高Boost频率传闻突破6.5GHz。支持CUDIMM
+      DDR5内存与PCIe 6.0，NPU提供约50 TOPS AI算力，为桌面平台提供原生Copilot+级别的AI加速能力。预计2026年Q4正式发布。
     tags:
-    - AMD
-    - Ryzen 9
-    - 3D V-Cache
-    - Zen 5
-    title: 'AMD Ryzen 9 9950X3D: Zen 5 3D V-Cache 旗舰'
+    - Zen 6
+    - NPU Integrated
+    - AM5+
+    - CUDIMM
+    - Ryzen 10000
+    title: 'AMD Olympic Ridge: Zen 6桌面CPU集成NPU、取消iGPU'
   Computer Vision:
-  - desc: Meta在CVPR 2026上发布的Segment Anything Model 3D，首次将SAM范式扩展到三维空间。模型基于Transformer架构，支持零样本三维分割，在3D重建基准上以5:1优势超越先前方法，可直接处理点云与体素数据，为AR/VR与机器人领域提供通用3D感知基础。
+  - desc: CVPR 2026录用。GHPT首次将混合路径追踪与3D Gaussian Splatting深度融合，实现实时可重光照场景渲染。该框架在Gaussian原语上引入BRDF材质属性，通过GPU加速的路径追踪管线动态计算全局光照与间接光照，在1920×1080分辨率下达到60fps以上的交互式重光照性能。相比传统逆渲染方法，PSNR提升3.2dB，且支持动态光源、环境贴图切换与材质编辑，为AR/VR与电影预可视化提供了轻量级物理真实感渲染新范式。
     tags:
-    - 3D Reconstruction
-    - Meta
+    - 3D Gaussian Splatting
+    - Path Tracing
+    - Real-Time Relighting
     - CVPR 2026
-    - Zero-shot
-    title: 'Meta SAM 3D: 通用三维分割模型'
+    title: 'GHPT: Real-Time Relightable Gaussian Splatting using Hybrid Path Tracing'
   GPU:
-  - desc: RTX 5070基于Blackwell架构的GB205 GPU，搭载12GB GDDR7显存，192-bit位宽，配备48个SM单元（6144个CUDA核心）。相比前代RTX
-      4070，光栅性能提升约30%，支持DLSS 4与帧生成技术，于2026年3月发售，定位1440p高刷游戏市场。
+  - desc: COMPUTEX 2026重磅发布，NVIDIA RTX Spark Superchip (GB10) 是面向Windows AI PC的革命性SoC。集成了基于Blackwell架构的GPU(FP4算力1000
+      TOPS)、20核Arm v9.2 CPU，以及128GB LPDDR5X-9400统一内存(带宽500GB/s)，TSMC 3nm工艺制造，TDP 140W。支持DLSS
+      4.5与AI Agent本地部署，NVIDIA与微软深度合作将Windows打造为Agentic AI OS。标志着NVIDIA正式进军Arm PC处理器市场，直接对标Apple
+      M5与Qualcomm Snapdragon X。
     tags:
-    - NVIDIA
-    - RTX 5070
-    - Blackwell
-    - GDDR7
-    title: 'NVIDIA GeForce RTX 5070: Blackwell 中端主力'
+    - Blackwell GPU
+    - Arm v9.2
+    - 128GB Unified Memory
+    - 1000 TOPS
+    - COMPUTEX 2026
+    title: 'NVIDIA RTX Spark Superchip: Blackwell+Arm重塑Windows AI PC'
   Lang:
-  - desc: 2026年2月正式发布的TypeScript 5.7引入实验性模式匹配语法、改进的条件类型推导以及更严格的空值检查。编译速度提升15%，并新增对ES2026装饰器的完整支持，进一步巩固其在大规模前端与全栈项目中的类型安全优势。
+  - desc: Rust 1.96.0于2026年5月28日正式发布。本版本最重大的变化是Trait Upcasting的完全稳定化，允许将`dyn Trait`对象安全地向上转型为`dyn
+      Supertrait`，消除了长期存在的类型系统限制。同时，`const_generics`特性迎来重大改进：支持在const泛型位置使用泛型参数进行布尔运算与基本算术，使得编译期矩阵运算等高级抽象成为可能。异步闭包(async
+      closures)进入稳定轨道，支持`async || {}`语法直接创建异步闭包而无需嵌套async块。
     tags:
-    - TypeScript
-    - Programming Language
-    - Pattern Matching
-    - Static Typing
-    title: 'TypeScript 5.7: 模式匹配与类型系统增强'
+    - Rust
+    - Trait Upcasting
+    - Const Generics
+    - Async Closures
+    title: 'Rust 1.96.0: Trait Upcasting稳定化与Const泛型里程碑'
   NLP:
-  - desc: John Snow Labs于2026年5月发布的Spark NLP 6.3.3版本，首次集成ModernBERT嵌入模型，支持原生向量数据库连接与布局感知文档处理。该版本在长文档理解与多语言NER任务上实现20%的准确率提升，并提供统一的RAG流水线API。
+  - desc: EACL 2026最佳论文。该工作将概率论中的鞅理论(Martingale Theory)引入大语言模型推理时解码，提出Martingale Foresight
+      Sampling(MFS)方法。MFS通过前瞻性评估多条候选生成路径的期望回报，构建上鞅停时策略动态决定何时停止前瞻并提交当前最优token。在AlpacaEval
+      2.0上以相同计算预算超越Best-of-N采样12.7%胜率，且在数学推理(GSM8K)与代码生成(HumanEval)任务中均以更少的推理计算量获得显著提升。
     tags:
-    - NLP
-    - Spark
-    - ModernBERT
-    - Vector DB
-    title: 'Spark NLP 6.3.3: ModernBERT嵌入与向量数据库集成'
+    - LLM Decoding
+    - Martingale Theory
+    - Inference-Time Optimization
+    - EACL 2026 Best Paper
+    title: 'Martingale Foresight Sampling: A Principled Approach to Inference-Time
+      LLM Decoding'
   Net:
-  - desc: Broadcom于2026年2月发布业界首款完整企业Wi-Fi 8解决方案，包括BCM4918四核ARM v8 AP处理器与配套交换机芯片。平台支持AI驱动的射频管理，提供10GbE有线回程，专为高密度的AI时代企业园区网络打造。
+  - desc: ASUS在COMPUTEX 2026发布全球首款Wi-Fi 8 (802.11bn)消费级路由器ROG Rapture GT-BN98 Pro。搭载Broadcom最新Wi-Fi
+      8芯片组，支持4频并发(2.4GHz/5GHz/6GHz/6GHz-2)，理论总吞吐量高达30Gbps，配备双10G以太网口与主动式散热系统。相比Wi-Fi
+      7，实际吞吐量翻倍，延迟降低60%，并支持AI驱动的智能信道管理与实时干扰避让。标志着Wi-Fi 8从企业级向消费市场的正式渗透。
     tags:
     - Wi-Fi 8
-    - Broadcom
-    - Enterprise
-    - AI
-    title: Broadcom 企业级 Wi-Fi 8 AP 与交换机平台
+    - 802.11bn
+    - 30Gbps
+    - ROG Rapture
+    title: 'ASUS ROG Rapture GT-BN98 Pro: 全球首款Wi-Fi 8路由器'
   News:
-  - desc: 台积电在2026年北美技术研讨会上首次披露A13节点细节，该工艺属于2nm级别，采用增强型纳米片晶体管，并延续使用现有EUV光刻设备，无需High-NA即可实现性能和密度提升。A13计划于2029年量产，将支撑下一代AI与高性能计算芯片。
+  - desc: 2026年6月16日，据韩国经济日报报道，三星电子晶圆代工部门成功获得埃隆·马斯克旗下Neuralink的下一代脑机接口芯片制造订单。该芯片(N1
+      Gen4)将采用三星4nm FinFET工艺量产，标志着Neuralink首次将供应链从台积电扩展至三星。N1 Gen4芯片集成1024通道神经信号采集与实时刺激功能，功耗较上代降低40%，预计于2026年Q4启动N3植入式脑机接口临床人体试验。此举被视为三星在AI/HPC之外拓展医疗器械半导体领域的关键突破。
     tags:
-    - TSMC
-    - A13
-    - 2nm
-    - Semiconductor
-    title: TSMC 亮相 A13 工艺：2nm 级节点无需 High-NA EUV
+    - Samsung Foundry
+    - Neuralink
+    - 4nm
+    - Brain-Computer Interface
+    - BCI
+    title: 三星首获Neuralink脑机芯片制造订单：4nm工艺挑战TSMC

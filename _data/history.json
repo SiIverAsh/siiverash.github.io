@@ -1,4 +1,20 @@
 {
+  "2026-06-17": [
+    "Intel Core Ultra Series 3 'Panther Lake': Intel 18A首款客户端平台",
+    "三星首获Neuralink脑机芯片制造订单：4nm工艺挑战TSMC",
+    "K-Means聚类 (K-Means Clustering)",
+    "WorldReel: 4D Video Generation with Consistent Geometry and Motion Modeling",
+    "Omni-AVSR: Towards Unified Multimodal Speech Recognition with Large Language Models",
+    "Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding",
+    "上坂すみれ",
+    "NVIDIA RTX Spark Superchip: Blackwell+Arm重塑Windows AI PC",
+    "AMD Olympic Ridge: Zen 6桌面CPU集成NPU、取消iGPU",
+    "garrytan/gbrain: OpenClaw/Hermes AI Agent Brain",
+    "Rust 1.96.0: Trait Upcasting稳定化与Const泛型里程碑",
+    "GHPT: Real-Time Relightable Gaussian Splatting using Hybrid Path Tracing",
+    "Kimi K2.7 Code: Moonshot AI开源1T参数Agentic Coding模型",
+    "ASUS ROG Rapture GT-BN98 Pro: 全球首款Wi-Fi 8路由器"
+  ],
   "2026-06-16": [
     "水瀬いのり",
     "AMD Ryzen 9 9950X3D: Zen 5 3D V-Cache 旗舰",
@@ -138,20 +154,5 @@
     "支持向量机 (Support Vector Machine)",
     "AMD Ryzen 9 PRO 9965X3D: 16核Zen 5 3D V-Cache工作站处理器",
     "我国批复7-15GHz '黄金频谱' 用于6G试验"
-  ],
-  "2026-06-06": [
-    "ControlFoley: 可控视频音效生成模型",
-    "nanobot",
-    "新华三全球首发企业级Wi-Fi 8 接入点 WA8648",
-    "DeepSeek-V4 预览版",
-    "早見沙織",
-    "ViT^3: Unlocking Test-Time Training in Vision",
-    "ChatGPT与Codex正式合并，打造超级Agent",
-    "MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End RL",
-    "Intel Xeon 6+ 平台：288核全E核设计",
-    "Rust 1.96.0 稳定版发布",
-    "AMD Ryzen 7 5800X3D 十周年纪念版",
-    "决策树 (Decision Tree)",
-    "AMD Instinct MI430X GPU"
   ]
 }
