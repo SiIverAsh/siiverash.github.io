@@ -1,4 +1,20 @@
 {
+  "2026-06-18": [
+    "AudioX-Turbo: A Unified Framework for Efficient Anything-to-Audio Generation",
+    "AMD Radeon RX 9070 GRE 全球发布: RDNA 4架构主流级突围",
+    "DeepSeek V4: 1.6T参数MoE开源旗舰，百万上下文普惠时代",
+    "Can LLMs Reason over Extended Multilingual Contexts? Towards Long-Context Evaluation Beyond Retrieval over Haystacks",
+    "Rust 1.97.0: Async Closure稳定化与Return Type Notation落地",
+    "Universal Inverse Distillation for Matching Models with Real-Data Supervision (No GANs)",
+    "Intel 18A-P进入风险试产: 2nm级制程代工里程碑",
+    "支持向量机 (Support Vector Machine, SVM)",
+    "Google TPU v8 Ironwood: 第八代TPU训练推理分家，专为Agentic AI时代设计",
+    "雨宮天",
+    "AMD Zen 6 Medusa 桌面CPU泄露: 6.5GHz+ Boost与288MB超大缓存",
+    "Granulon: Awakening Pixel-Level Visual Encoders with Adaptive Multi-Granularity Semantics for MLLM",
+    "H3C WA8648: 全球首款企业级Wi-Fi 8 (802.11bn)接入点发布",
+    "vllm-project/vllm: Easy, Fast, and Cheap LLM Serving for Everyone"
+  ],
   "2026-06-17": [
     "Intel Core Ultra Series 3 'Panther Lake': Intel 18A首款客户端平台",
     "三星首获Neuralink脑机芯片制造订单：4nm工艺挑战TSMC",
@@ -138,21 +154,5 @@
     "NVIDIA GeForce RTX 5060",
     "Learning Unmasking Policies for Diffusion Language Models",
     "梯度提升树 (Gradient Boosting)"
-  ],
-  "2026-06-07": [
-    "GPG: A Simple and Strong Reinforcement Learning Baseline for Model Reasoning",
-    "Python 3.14.5 正式发布",
-    "SenseSearch: Empowering Vision-Language Models with High-Resolution Agentic Search-Reasoning via Reinforcement Learning",
-    "Step-3.7-Flash: 阶跃星辰开源原生多模态高速Agent大模型",
-    "AMD Radeon RX 9070 GRE: RDNA 4 全球中端新主力",
-    "Qwen3.7: 阿里通义千问新一代编程与工具调用旗舰模型",
-    "Qwen3-ASR: 阿里开源语音识别大模型",
-    "AMD CDNA 4 架构：面向数据中心AI加速的全新GPU架构",
-    "香港发布首个生产力级超级智能体 'Agent Workshop'",
-    "OpenClaw: 自主AI代理框架",
-    "水瀬いのり",
-    "支持向量机 (Support Vector Machine)",
-    "AMD Ryzen 9 PRO 9965X3D: 16核Zen 5 3D V-Cache工作站处理器",
-    "我国批复7-15GHz '黄金频谱' 用于6G试验"
   ]
 }
