@@ -1,152 +1,140 @@
 algorithm:
-- desc: 经典监督学习算法，通过在高维特征空间中寻找最大间隔超平面实现二分类。核技巧(Kernel Trick)使SVM无需显式计算高维映射即可处理非线性可分数据，常用核函数包括RBF、多项式与Sigmoid。在小样本、高维场景（如基因表达分类、文本分类）中至今保持竞争力，软间隔引入允许一定分类误差以提升泛化能力。
+- desc: PCA是最经典的线性降维算法，由Karl Pearson于1901年提出。核心思想是通过正交变换将原始特征映射到方差最大化的低维子空间，保留数据主要变异信息。数学上等价于对协方差矩阵进行特征值分解或对数据矩阵进行SVD。广泛应用于高维数据可视化、噪声过滤、特征提取与压缩。在深度学习时代，PCA仍作为嵌入空间分析与模型初始化的重要工具，其变体包括Kernel
+    PCA、Sparse PCA、Robust PCA等。
   tags:
-  - SVM
-  - Supervised Learning
-  - Kernel Trick
-  - Maximum Margin
-  - Convex Optimization
-  title: 支持向量机 (Support Vector Machine, SVM)
+  - 降维
+  - 特征值分解
+  - 无监督学习
+  - 数据预处理
+  title: 主成分分析 (Principal Component Analysis, PCA)
 cv_recommend:
-  agency: Music Ray'n（ミュージックレイン）
-  hometown: 东京都
-  intro: 雨宮天于1993年8月28日出生于东京都，所属事务所为Sony Music旗下Music Ray'n。2012年通过Music Ray'n超级声优选拔出道，以清澈通透且富有穿透力的声线著称，擅长演绎从高冷神秘到元气活泼的广泛角色谱系。其嗓音辨识度极高，高音区明亮不刺耳，低音区沉稳有力，在情感爆发场景中展现出极强的控制力与感染力。2014年起同时开展歌手活动，以solo艺人身份发行多张单曲与专辑，是声优歌手双栖发展的典型代表。作为TrySail组合成员之一，在广播与综艺领域同样活跃，以率真自然的性格获得广泛人気。
-  name: 雨宮天
-date: '2026-06-18'
+  agency: ラクーンドッグ（Raccoon Dog）
+  hometown: 愛知県名古屋市
+  intro: 1994年10月16日生。原所属プロ・フィット（Pro-Fit）于2022年解散后移籍至Raccoon Dog。以其清澈通透而富有穿透力的声线著称，音域宽广，从元气少女到冷酷角色均能精准驾驭。歌唱实力出众，作为solo歌手多次登上武道馆舞台，展现出超越声优本职的音乐表现力。演技风格细腻内敛，擅于通过微妙的呼吸与停顿传达角色内心情感，在萌系与严肃题材间切换自如，被誉为同世代最具实力与人气的女性声优之一。
+  name: 鬼頭明里
+date: '2026-06-20'
 history:
-- event: 滑铁卢战役：拿破仑·波拿巴在比利时滑铁卢被威灵顿公爵与布吕歇尔元帅联军彻底击败，法兰西第一帝国覆灭
-  year: '1815'
-- event: 美国飞行员Amelia Earhart作为乘客搭乘飞机从纽芬兰飞抵威尔士，成为首位飞越大西洋的女性
-  year: '1928'
-- event: 物理学家Sally Ride搭乘挑战者号航天飞机执行STS-7任务，成为美国首位进入太空的女性宇航员
-  year: '1983'
-- event: 刘强东在北京中关村创立京东商城（JD.com），后发展为中国最大的自营式电商平台之一
-  year: '1998'
-- event: 美国天文学家宣布在仙女座星系中发现首个中等质量黑洞（约5000倍太阳质量），填补了恒星级与超大质量黑洞之间的空白
-  year: '2002'
-- event: 手工艺品电商平台Etsy在纽约布鲁克林成立，开创了全球P2P手工制品在线交易新模式
-  year: '2005'
+- event: 富士通（Fujitsu）在日本神户成立，最初为富士电机的通信设备部门，后发展为全球IT服务与超级计算巨头。
+  year: '1935'
+- event: MP3之父 Karlheinz Brandenburg 出生。他领导Fraunhofer团队开发MP3音频编码格式，彻底改变数字音乐产业。
+  year: '1965'
+- event: Napster文件共享服务上线，由Shawn Fanning创立，开创P2P音乐分享时代，深刻影响版权法与数字内容分发。
+  year: '1999'
+- event: 维基媒体基金会（Wikimedia Foundation）在美国佛罗里达州正式注册成立，Jimmy Wales任首任主席，运营维基百科等自由知识项目。
+  year: '2003'
+- event: Google以5.55亿美元现金收购智能摄像头公司Dropcam，进军智能家居安防市场，后整合入Nest产品线。
+  year: '2013'
+- event: 神威·太湖之光以93 PFLOPS峰值性能登顶TOP500超级计算机榜首，成为中国首台完全采用国产处理器（申威SW26010）的全球最快超算。
+  year: '2016'
 llm:
-- desc: DeepSeek于2026年4月正式开源V4模型，采用MoE架构总参数1.6万亿（激活参数约160B），原生支持1M token超长上下文窗口。在代码生成、Agent工具调用与多步推理基准上比肩GPT-5
-    High，推理成本仅为闭源模型的1/20，训练采用FP8混合精度与Multi-Token Prediction策略大幅提升效率。
+- desc: MiniMax于2026年6月开源M3系列模型。支持1M token原生上下文窗口，MoE架构激活参数约20B，总参数量级达数百B。原生多模态（文本+图像理解），在HumanEval、MBPP等Coding基准上超越GPT-4.1，Agentic工具调用能力业界领先。同步开源完整权重与训练技术报告，支持国产算力平台部署，被誉为国内首个Frontier级全开源模型。
   tags:
-  - DeepSeek V4
-  - MoE
-  - 1.6T Params
-  - 1M Context
-  - Open Source
-  title: 'DeepSeek V4: 1.6T参数MoE开源旗舰，百万上下文普惠时代'
+  - MiniMax M3
+  - 开源LLM
+  - 1M上下文
+  - Agentic Coding
+  title: 'MiniMax M3: 开源Frontier Coding与多模态旗舰'
 new_project:
-- desc: vLLM是当前工业界最广泛部署的开源LLM推理引擎，基于PagedAttention实现近乎零浪费的KV缓存管理，支持连续批处理(Continuous
-    Batching)、张量并行、前缀缓存(Prefix Caching)与FP8/AWQ/GPTQ多量化方案。v1引擎重构后吞吐量再提升1.5倍，已成为Anthropic、LMSYS等机构的基础设施核心组件。
+- desc: NVIDIA开源的人形机器人通用参考设计平台，2026年6月发布即登上GitHub Trending榜首。包含完整机械结构（28个自由度）、PCB设计文件、ROS
+    2驱动栈及Isaac Sim仿真环境。基于Jetson AGX Thor（800 TOPS）计算平台，预集成GR00T基础模型实现零样本灵巧操作。提供Sim-to-Real迁移蓝图与Isaac
+    Lab强化学习训练框架，目标降低学术机构机器人研究入门门槛。
   tags:
-  - LLM Inference
-  - PagedAttention
-  - Continuous Batching
-  - Python
-  - CUDA
-  title: 'vllm-project/vllm: Easy, Fast, and Cheap LLM Serving for Everyone'
-  url: https://github.com/vllm-project/vllm
+  - 人形机器人
+  - 开源硬件
+  - ROS 2
+  - Sim-to-Real
+  title: NVIDIA/Isaac-GR00T
+  url: https://github.com/NVIDIA/Isaac-GR00T
 paper:
-- desc: ICLR 2026 Oral论文，提出通用逆蒸馏框架(UID)，无需GAN即可利用真实数据监督训练图像匹配模型。通过逆向知识迁移将教师模型特征蒸馏至学生匹配网络，在多个视觉匹配基准上超越GAN-based方法，训练稳定性显著提升且无需对抗训练。
+- desc: EACL 2026最佳论文。系统研究多LLM Agent协作进行零日漏洞利用：Agent团队通过规划、侦察、代码生成与验证循环，在无人类干预下发现并利用真实世界软件漏洞。在15个未公开CVE测试集上获得53%端到端成功率，首次证明LLM
+    Agent具备自主网络攻击能力，引发AI安全治理广泛讨论。
   tags:
-  - ICLR 2026
-  - Oral
-  - Inverse Distillation
-  - Image Matching
-  - No GANs
-  title: Universal Inverse Distillation for Matching Models with Real-Data Supervision
-    (No GANs)
-  url: https://openreview.net/forum?id=8NuN5UzXLC
+  - LLM Agent
+  - 零日漏洞
+  - 网络攻击
+  - AI安全
+  title: Teams of LLM Agents can Exploit Zero-Day Vulnerabilities
+  url: https://aclanthology.org/2026.eacl-long.2/
 tech:
   Arch:
-  - desc: Google于Cloud Next 2026发布Ironwood TPU v8系列，首次将训练(TPU 8t)与推理(TPU 8i)拆分为独立芯片。TPU
-      8t采用3nm工艺，单芯片BF16算力达1.2 PFLOPS，配备HBM4 96GB；TPU 8i专为Agentic AI推理优化，支持4-bit量化下每秒处理10万+
-      tokens，能效比上代提升2.5倍。
+  - desc: Arm于2026年3月Arm Everywhere大会上发布首款自研CPU——Arm AGI CPU。采用TSMC 3nm工艺，基于Armv9.6-A指令集架构，最高配置136个Neoverse
+      Hercules核心，TDP 300W。集成PCIe 6.0、CXL 3.1与HBM3e控制器，专为Agentic AI推理与大规模云端工作负载设计。Meta为首发客户，标志着Arm从IP授权商向芯片供应商的战略延伸。
     tags:
-    - TPU v8
-    - Ironwood
+    - Arm AGI CPU
     - 3nm
-    - Agentic AI
-    - HBM4
-    title: 'Google TPU v8 Ironwood: 第八代TPU训练推理分家，专为Agentic AI时代设计'
+    - 136核
+    - Neoverse Hercules
+    title: 'Arm AGI CPU: 首款自研处理器，3nm 136核'
   Audio:
-  - desc: Noiz AI联合港科大、清华于2026年6月开源，基于Flow Matching的统一音频生成框架，支持文本/图像/视频到任意音频生成，仅需4步采样在单张消费级GPU上0.24秒完成推理，比扩散模型加速50倍，支持44.1kHz高保真立体声输出。
+  - desc: 微软AI于2026年6月发布新一代TTS模型MAI-Voice-2。支持10种语言的表达性语音合成，采用增强型自回归Transformer架构结合扩散解码器，实现自然韵律、情感语调与多风格语音生成。模型在MOS评分上超越人类录音基准，延迟低于300ms，已集成至Azure
+      Speech Services。
     tags:
-    - Flow Matching
-    - Audio Generation
-    - Open Source
-    - Real-time
-    - Unified Framework
-    title: 'AudioX-Turbo: A Unified Framework for Efficient Anything-to-Audio Generation'
+    - TTS
+    - 表达性语音合成
+    - 多语言
+    - Microsoft AI
+    title: 'Microsoft MAI-Voice-2: 10语言表达性语音合成'
   CPU:
-  - desc: AMD Zen 6 'Medusa'桌面CPU规格全面泄露，采用TSMC N3工艺，顶级SKU达24核48线程，Boost频率突破6.5GHz（液氮超频可达6.6GHz+），集成288MB总缓存（含3D
-      V-Cache堆叠），支持CUDIMM DDR5-8400+内存，平台升级至AM6接口，预计2026年底至2027年初发布。
+  - desc: Computex 2026期间，Intel Nova Lake-S桌面CPU规格泄露。旗舰型号搭载52核（8P+44E），引入bLLC（大容量末级缓存）三级层次架构，支持多核独立超频。配套Z990芯片组采用PCIe
+      5.0，功耗显著提升。GIGABYTE已展示首款Z990主板（3x 8-pin供电），预计2027年初发布，为Arrow Lake后继者。
     tags:
-    - Zen 6
-    - Medusa
-    - 6.5GHz
-    - 3D V-Cache
-    - TSMC N3
-    title: 'AMD Zen 6 Medusa 桌面CPU泄露: 6.5GHz+ Boost与288MB超大缓存'
+    - Intel Nova Lake
+    - 52核
+    - Z990
+    - Computex 2026
+    title: 'Intel Nova Lake桌面CPU: 52核与Z990平台首曝'
   Computer Vision:
-  - desc: CVPR 2026论文，提出自适应多粒度语义机制唤醒像素级视觉编码器，通过动态粒度选择策略融合局部细节与全局语义，在MLLM细粒度视觉理解基准上SOTA提升12.7%，解决传统视觉编码器在多模态大模型中语义粒度过粗的核心瓶颈。
+  - desc: ICLR 2026论文，由NVIDIA Toronto AI Lab提出。该方法通过视频扩散模型自蒸馏实现端到端生成式3D场景重建，无需显式3D监督即可从稀疏视图合成高质量新视角。核心创新在于将预训练视频扩散模型的时序先验蒸馏至3D表示中，在场景级NeRF与GS重建任务上达到SOTA，单场景推理仅需数分钟。
     tags:
-    - CVPR 2026
-    - MLLM
-    - Visual Encoder
-    - Multi-Granularity
-    - Pixel-Level
-    title: 'Granulon: Awakening Pixel-Level Visual Encoders with Adaptive Multi-Granularity
-      Semantics for MLLM'
+    - 3D重建
+    - 视频扩散模型
+    - 自蒸馏
+    - ICLR 2026
+    title: 'Lyra: Generative 3D Scene Reconstruction via Video Diffusion Model Self-Distillation'
   GPU:
-  - desc: AMD于2026年6月2日正式全球发售RX 9070 GRE，基于RDNA 4架构Navi 48 XL核心，配备3072流处理器、12GB GDDR6显存与192-bit位宽，游戏频率2.4GHz，总板功耗220W，S.E.P定价549美元。此前仅限中国市场，全球发布后填补RX
-      9060 XT与RX 9070之间的关键市场空档。
+  - desc: NVIDIA在GTC 2026发布Vera Rubin平台，包含6款全新芯片：Rubin GPU（双Die设计、HBM4内存、FP4算力达15
+      PFLOPS）、Vera CPU（Grace继任者、自研ARM核心）、NVLink 6交换机（3.6 TB/s带宽）、CX10网卡（800GbE）、BlueField
+      5 DPU及Spectrum 5交换机。Rubin Ultra维持双Die方案，NVL72机架集成72颗GPU，专为万亿参数MoE推理与Agentic
+      AI工厂设计。
     tags:
-    - RDNA 4
-    - RX 9070 GRE
-    - 12GB GDDR6
-    - Navi 48
-    - $549
-    title: 'AMD Radeon RX 9070 GRE 全球发布: RDNA 4架构主流级突围'
+    - NVIDIA Rubin
+    - HBM4
+    - NVLink 6
+    - Agentic AI
+    title: 'NVIDIA Vera Rubin: 新一代Agentic AI超级计算平台'
   Lang:
-  - desc: Rust 1.97.0于2026年6月正式发布，稳定化async closure（异步闭包）支持在闭包内直接使用.await语法，Return
-      Type Notation (RTN)允许在trait关联类型中精确标注返回的impl Future类型，const泛型表达式支持度扩展至const{
-      N + 1 }等运算场景。
+  - desc: Python 3.15 beta于2026年5月发布，正式版预计2026年10月。最大变更为PEP 703 Free-Threading（无GIL模式）成为CPython默认构建，消除多线程瓶颈；PEP
+      744引入的JIT编译器（基于Copy-and-Patch）进入稳定阶段，纯Python代码加速2-5倍。同步推出PEP 803 'abi3t'稳定ABI，确保C扩展兼容自由线程构建。
     tags:
-    - Rust
-    - Async Closure
-    - RTN
-    - Const Generics
-    - Type System
-    title: 'Rust 1.97.0: Async Closure稳定化与Return Type Notation落地'
+    - Python 3.15
+    - Free-Threading
+    - JIT编译器
+    - 无GIL
+    title: 'Python 3.15: Free-Threading默认启用与JIT编译器落地'
   NLP:
-  - desc: EACL 2026长文论文，构建跨语言长上下文推理评估基准MLongBench，涵盖12种语言与长达128K token的多跳推理任务，揭示当前LLM在跨语言长上下文场景中推理能力退化超40%，并提出跨语言位置编码增强方案。
+  - desc: EACL 2026最佳论文奖。该研究首次系统证明LLM Agent团队可协作发现并利用真实世界零日安全漏洞。多Agent框架包含规划、执行、代码分析等角色分工，在无先验知识条件下对15个真实CVE进行端到端漏洞利用测试，成功率达53%，揭示LLM在网络安全领域的双刃剑效应。
     tags:
-    - EACL 2026
-    - Multilingual
-    - Long-Context Reasoning
-    - LLM Evaluation
-    - Cross-Lingual
-    title: Can LLMs Reason over Extended Multilingual Contexts? Towards Long-Context
-      Evaluation Beyond Retrieval over Haystacks
+    - LLM Agent
+    - 零日漏洞
+    - 网络安全
+    - EACL 2026 Best Paper
+    title: Teams of LLM Agents can Exploit Zero-Day Vulnerabilities
   Net:
-  - desc: 新华三于2026年6月4日发布全球首款企业级Wi-Fi 8 AP WA8648，搭载Qualcomm Networking Pro 1628平台，支持320MHz频宽与16×16
-      MU-MIMO，物理层速率达23Gbps，内置AI频谱智能引擎实现毫秒级干扰避让，专为高密企业环境设计。
+  - desc: 高通于2026年3月发布全球首个AI原生Wi-Fi 8端到端方案。FastConnect 8800移动端与Dragonwing N9300网络平台均搭载专用AI引擎，实现实时信道优化、智能MLO调度与干扰预测。支持4x4
+      MIMO、320MHz带宽、4K QAM调制，物理层峰值速率超10Gbps，时延低于1ms，专为Agentic AI时代的高密连接场景设计。
     tags:
     - Wi-Fi 8
     - 802.11bn
-    - Enterprise AP
-    - 320MHz
-    - Qualcomm
-    title: 'H3C WA8648: 全球首款企业级Wi-Fi 8 (802.11bn)接入点发布'
+    - AI原生
+    - FastConnect 8800
+    title: 'Qualcomm FastConnect 8800: AI-Native Wi-Fi 8平台'
   News:
-  - desc: Intel于2026年6月VLSI Symposium上正式宣布18A-P制程节点进入风险试产阶段，这是Intel Foundry代工业务的首个外部客户拳头产品节点。18A-P基于RibbonFET
-      GAA晶体管与PowerVia背面供电，晶体管密度较Intel 3提升约30%，标志着Intel在2nm级制程领域正式与TSMC N2展开正面竞争。
+  - desc: NVIDIA于2026年6月宣布开源Isaac GR00T——全球首个人形机器人通用参考设计平台。项目托管于GitHub，包含完整机械结构CAD、电气原理图、驱动固件及仿真环境。基于Jetson
+      AGX Thor计算平台，集成GR00T基础模型实现灵巧操作与全身控制，目标推动学术机构降低人形机器人研究门槛。同步发布NVIDIA Isaac GR00T
+      Blueprint用于Sim-to-Real迁移。
     tags:
-    - Intel 18A-P
-    - RibbonFET
-    - PowerVia
-    - 2nm
-    - VLSI 2026
-    title: 'Intel 18A-P进入风险试产: 2nm级制程代工里程碑'
+    - Isaac GR00T
+    - 人形机器人
+    - 开源硬件
+    - NVIDIA
+    title: NVIDIA开源Isaac GR00T人形机器人参考设计

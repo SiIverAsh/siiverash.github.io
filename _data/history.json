@@ -1,4 +1,19 @@
 {
+  "2026-06-20": [
+    "Teams of LLM Agents can Exploit Zero-Day Vulnerabilities",
+    "Python 3.15: Free-Threading默认启用与JIT编译器落地",
+    "NVIDIA/Isaac-GR00T",
+    "Intel Nova Lake桌面CPU: 52核与Z990平台首曝",
+    "Microsoft MAI-Voice-2: 10语言表达性语音合成",
+    "主成分分析 (Principal Component Analysis, PCA)",
+    "MiniMax M3: 开源Frontier Coding与多模态旗舰",
+    "鬼頭明里",
+    "NVIDIA Vera Rubin: 新一代Agentic AI超级计算平台",
+    "Lyra: Generative 3D Scene Reconstruction via Video Diffusion Model Self-Distillation",
+    "NVIDIA开源Isaac GR00T人形机器人参考设计",
+    "Arm AGI CPU: 首款自研处理器，3nm 136核",
+    "Qualcomm FastConnect 8800: AI-Native Wi-Fi 8平台"
+  ],
   "2026-06-18": [
     "AudioX-Turbo: A Unified Framework for Efficient Anything-to-Audio Generation",
     "AMD Radeon RX 9070 GRE 全球发布: RDNA 4架构主流级突围",
@@ -138,21 +153,5 @@
     "Language Lives in Sparse Dimensions: Toward Interpretable and Efficient Multilingual Control for Large Language Models",
     "Qualcomm Snapdragon X2 Elite: 18核Oryon V3挑战x86霸权",
     "随机森林 (Random Forest)"
-  ],
-  "2026-06-08": [
-    "Retrieval Heads are Dynamic",
-    "UniVoice: A Unified Model for Speech and Singing Voice Generation",
-    "Intel Core Ultra 300系列 (Arrow Lake)",
-    "国产昇腾910C集群成功训练1.6万亿参数大模型",
-    "高橋李依",
-    "Claude Skills (anthropics/skills)",
-    "D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time",
-    "NVIDIA Vera CPU",
-    "微软 MAI-Thinking-1 推理模型",
-    "Kotlin 2.4.0 发布",
-    "中国移动发布智能体互联网开放网络协议 (AONP)",
-    "NVIDIA GeForce RTX 5060",
-    "Learning Unmasking Policies for Diffusion Language Models",
-    "梯度提升树 (Gradient Boosting)"
   ]
 }
