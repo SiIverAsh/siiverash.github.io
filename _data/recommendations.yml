@@ -1,140 +1,132 @@
 algorithm:
-- desc: PCA是最经典的线性降维算法，由Karl Pearson于1901年提出。核心思想是通过正交变换将原始特征映射到方差最大化的低维子空间，保留数据主要变异信息。数学上等价于对协方差矩阵进行特征值分解或对数据矩阵进行SVD。广泛应用于高维数据可视化、噪声过滤、特征提取与压缩。在深度学习时代，PCA仍作为嵌入空间分析与模型初始化的重要工具，其变体包括Kernel
-    PCA、Sparse PCA、Robust PCA等。
+- desc: 集成学习经典算法，通过构建多棵决策树并结合Bagging(Bootstrap Aggregating)与随机特征子空间选择，有效降低方差、防止过拟合。核心特性：OOB(Out-of-Bag)误差估计天然提供交叉验证能力；特征重要性度量可解释性强；对缺失值和高维数据鲁棒。广泛应用于分类、回归及特征选择任务。
   tags:
-  - 降维
-  - 特征值分解
-  - 无监督学习
-  - 数据预处理
-  title: 主成分分析 (Principal Component Analysis, PCA)
+  - Ensemble Learning
+  - Decision Tree
+  - Bagging
+  - Classification
+  title: 随机森林 (Random Forest)
 cv_recommend:
-  agency: ラクーンドッグ（Raccoon Dog）
-  hometown: 愛知県名古屋市
-  intro: 1994年10月16日生。原所属プロ・フィット（Pro-Fit）于2022年解散后移籍至Raccoon Dog。以其清澈通透而富有穿透力的声线著称，音域宽广，从元气少女到冷酷角色均能精准驾驭。歌唱实力出众，作为solo歌手多次登上武道馆舞台，展现出超越声优本职的音乐表现力。演技风格细腻内敛，擅于通过微妙的呼吸与停顿传达角色内心情感，在萌系与严肃题材间切换自如，被誉为同世代最具实力与人气的女性声优之一。
-  name: 鬼頭明里
-date: '2026-06-20'
+  agency: Style Cube（スタイルキューブ）
+  hometown: 埼玉县
+  intro: 伊藤美来是日本女性声优、歌手，1996年10月12日出生于埼玉县，隶属于Style Cube事务所。作为声优，她以清澈透明的声线特质著称，能够精准驾驭从活泼少女到沉稳女性的多种角色类型，声域宽广且富有辨识度。2012年正式声优出道后，凭借扎实的表演功底和持续精进的态度逐步积累大量人气。除声优工作外，她同时以个人歌手身份活跃，多次发行完整专辑与单曲，展现了出众的歌唱实力与舞台表现力。2026年迎来出道十周年，开启十周年纪念特别企划，在《声優名鑑2026》中作为代表性人气声优收录，以其多方位的演艺活动持续扩大在日本声优业界的影响力。
+  name: 伊藤美来
+date: '2026-06-21'
 history:
-- event: 富士通（Fujitsu）在日本神户成立，最初为富士电机的通信设备部门，后发展为全球IT服务与超级计算巨头。
-  year: '1935'
-- event: MP3之父 Karlheinz Brandenburg 出生。他领导Fraunhofer团队开发MP3音频编码格式，彻底改变数字音乐产业。
-  year: '1965'
-- event: Napster文件共享服务上线，由Shawn Fanning创立，开创P2P音乐分享时代，深刻影响版权法与数字内容分发。
-  year: '1999'
-- event: 维基媒体基金会（Wikimedia Foundation）在美国佛罗里达州正式注册成立，Jimmy Wales任首任主席，运营维基百科等自由知识项目。
-  year: '2003'
-- event: Google以5.55亿美元现金收购智能摄像头公司Dropcam，进军智能家居安防市场，后整合入Nest产品线。
-  year: '2013'
-- event: 神威·太湖之光以93 PFLOPS峰值性能登顶TOP500超级计算机榜首，成为中国首台完全采用国产处理器（申威SW26010）的全球最快超算。
-  year: '2016'
+- event: 美国新罕布什尔州批准宪法，成为第九个批准州，美国宪法正式生效
+  year: 1788年
+- event: 二战北非战场：隆美尔率领的德军攻占托布鲁克(Tobruk)要塞
+  year: 1942年
+- event: 曼彻斯特'Baby'（世界首台存储程序电子计算机）成功运行第一个程序，开启现代计算机时代
+  year: 1948年
+- event: IBM正式退役最后一台STRETCH超级计算机(IBM 7030)，该机曾是世界首台晶体管化超级计算机
+  year: 1981年
+- event: 伊朗曼吉尔-鲁德巴尔地区发生7.4级大地震，造成约4万人死亡
+  year: 1990年
+- event: SpaceShipOne成为全球首个进入太空(超100km卡门线)的私人载人航天器，开创商业航天时代
+  year: 2004年
 llm:
-- desc: MiniMax于2026年6月开源M3系列模型。支持1M token原生上下文窗口，MoE架构激活参数约20B，总参数量级达数百B。原生多模态（文本+图像理解），在HumanEval、MBPP等Coding基准上超越GPT-4.1，Agentic工具调用能力业界领先。同步开源完整权重与训练技术报告，支持国产算力平台部署，被誉为国内首个Frontier级全开源模型。
+- desc: 华为于2026年6月12日正式开源盘古2.0大模型，最高参数规模505B(稀疏MoE架构)，支持512K超长上下文窗口。全栈适配昇腾(Ascend)算力与鸿蒙生态，采用创新的稀疏激活策略实现推理效率与模型容量的平衡，余承东表示目标将其打造为世界第一开源大模型。
   tags:
-  - MiniMax M3
-  - 开源LLM
-  - 1M上下文
-  - Agentic Coding
-  title: 'MiniMax M3: 开源Frontier Coding与多模态旗舰'
+  - OpenPangu 2.0
+  - Huawei
+  - 505B
+  - 512K Context
+  title: 华为OpenPangu 2.0开源：505B参数稀疏MoE旗舰，512K超长上下文
 new_project:
-- desc: NVIDIA开源的人形机器人通用参考设计平台，2026年6月发布即登上GitHub Trending榜首。包含完整机械结构（28个自由度）、PCB设计文件、ROS
-    2驱动栈及Isaac Sim仿真环境。基于Jetson AGX Thor（800 TOPS）计算平台，预集成GR00T基础模型实现零样本灵巧操作。提供Sim-to-Real迁移蓝图与Isaac
-    Lab强化学习训练框架，目标降低学术机构机器人研究入门门槛。
+- desc: 基于Model Context Protocol(MCP)的AI Agent构建框架，支持多工具编排、上下文管理、安全沙箱执行。通过标准化协议连接LLM与外部工具/数据源，实现可组合、可扩展的Agent系统。2026年6月GitHub趋势榜热门项目。
   tags:
-  - 人形机器人
-  - 开源硬件
-  - ROS 2
-  - Sim-to-Real
-  title: NVIDIA/Isaac-GR00T
-  url: https://github.com/NVIDIA/Isaac-GR00T
+  - MCP
+  - AI Agent
+  - LLM
+  - Open Source
+  title: 'lastmile-ai/mcp-agent: MCP协议AI Agent开发框架'
+  url: https://github.com/lastmile-ai/mcp-agent
 paper:
-- desc: EACL 2026最佳论文。系统研究多LLM Agent协作进行零日漏洞利用：Agent团队通过规划、侦察、代码生成与验证循环，在无人类干预下发现并利用真实世界软件漏洞。在15个未公开CVE测试集上获得53%端到端成功率，首次证明LLM
-    Agent具备自主网络攻击能力，引发AI安全治理广泛讨论。
+- desc: CVPR 2026论文，提出以3D几何记忆为桥梁，将相机引导视频生成与场景重建统一起来的方法。通过构造持久的3D几何记忆表征，实现视频生成与3D重建的相互增强，在动态场景下展现了优异的几何一致性与渲染质量。
   tags:
-  - LLM Agent
-  - 零日漏洞
-  - 网络攻击
-  - AI安全
-  title: Teams of LLM Agents can Exploit Zero-Day Vulnerabilities
-  url: https://aclanthology.org/2026.eacl-long.2/
+  - CVPR 2026
+  - 3D Reconstruction
+  - Video Generation
+  - Geometric Memory
+  title: 'WorldStereo: Bridging Camera-Guided Video Generation and Scene Reconstruction
+    via 3D Geometric Memories'
+  url: https://arxiv.org/abs/2603.02049
 tech:
   Arch:
-  - desc: Arm于2026年3月Arm Everywhere大会上发布首款自研CPU——Arm AGI CPU。采用TSMC 3nm工艺，基于Armv9.6-A指令集架构，最高配置136个Neoverse
-      Hercules核心，TDP 300W。集成PCIe 6.0、CXL 3.1与HBM3e控制器，专为Agentic AI推理与大规模云端工作负载设计。Meta为首发客户，标志着Arm从IP授权商向芯片供应商的战略延伸。
+  - desc: UCIe联盟于2026年正式发布UCIe 2.0规范，为Chiplet(芯粒)生态系统提供完整的Die-to-Die互连标准。2.0版本新增3D封装互连支持、更高带宽密度(>10Tbps/mm)与更低功耗(<0.5pJ/bit)，推动异构集成芯片从能连到可控的关键跨越。
     tags:
-    - Arm AGI CPU
-    - 3nm
-    - 136核
-    - Neoverse Hercules
-    title: 'Arm AGI CPU: 首款自研处理器，3nm 136核'
+    - UCIe 2.0
+    - Chiplet
+    - Die-to-Die Interconnect
+    - 3D Packaging
+    title: UCIe 2.0规范发布：开放Chiplet互连标准全面落地
   Audio:
-  - desc: 微软AI于2026年6月发布新一代TTS模型MAI-Voice-2。支持10种语言的表达性语音合成，采用增强型自回归Transformer架构结合扩散解码器，实现自然韵律、情感语调与多风格语音生成。模型在MOS评分上超越人类录音基准，延迟低于300ms，已集成至Azure
-      Speech Services。
+  - desc: OpenBMB发布VoxCPM2，2B参数全连续端到端语音合成模型。核心技术突破：无需音素/语义Token化，直接以连续表示建模语音；支持30种语言；零样本声音克隆；中文WER达0.94%的开源新标杆。论文arXiv:2606.06928。
     tags:
     - TTS
-    - 表达性语音合成
-    - 多语言
-    - Microsoft AI
-    title: 'Microsoft MAI-Voice-2: 10语言表达性语音合成'
+    - Tokenizer-Free
+    - Multilingual
+    - Open Source
+    title: 'OpenBMB VoxCPM2: 2B参数Tokenizer-Free多语言TTS开源'
   CPU:
-  - desc: Computex 2026期间，Intel Nova Lake-S桌面CPU规格泄露。旗舰型号搭载52核（8P+44E），引入bLLC（大容量末级缓存）三级层次架构，支持多核独立超频。配套Z990芯片组采用PCIe
-      5.0，功耗显著提升。GIGABYTE已展示首款Z990主板（3x 8-pin供电），预计2027年初发布，为Arrow Lake后继者。
+  - desc: Intel于Computex 2026正式发布Xeon 6+系列(Clearwater Forest)，采用Intel 18A制程，最高288核心、576MB
+      L3缓存。旗舰型号Xeon 6990E+单线程性能据称比AMD EPYC 9965(192核)高30%，专为Agentic AI数据中心工作负载设计。
     tags:
-    - Intel Nova Lake
-    - 52核
-    - Z990
-    - Computex 2026
-    title: 'Intel Nova Lake桌面CPU: 52核与Z990平台首曝'
+    - Intel
+    - Xeon 6+
+    - 18A
+    - 288 Cores
+    title: 'Intel Xeon 6+ Clearwater Forest: 18A制程288核服务器CPU发布'
   Computer Vision:
-  - desc: ICLR 2026论文，由NVIDIA Toronto AI Lab提出。该方法通过视频扩散模型自蒸馏实现端到端生成式3D场景重建，无需显式3D监督即可从稀疏视图合成高质量新视角。核心创新在于将预训练视频扩散模型的时序先验蒸馏至3D表示中，在场景级NeRF与GS重建任务上达到SOTA，单场景推理仅需数分钟。
+  - desc: CVPR 2026论文，提出统一3D场景生成与Feed-Forward重建的新范式。通过生成式先验引导的迭代前馈3D高斯泼溅(Gaussian
+      Splatting)，从稀疏视图即可实现高质量3D场景重建，突破传统方法对密集输入的依赖。
     tags:
-    - 3D重建
-    - 视频扩散模型
-    - 自蒸馏
-    - ICLR 2026
-    title: 'Lyra: Generative 3D Scene Reconstruction via Video Diffusion Model Self-Distillation'
+    - CVPR 2026
+    - 3D Gaussian Splatting
+    - Feed-Forward Reconstruction
+    - Sparse View
+    title: 'Gen3R: 3D Scene Generation Meets Feed-Forward Reconstruction'
   GPU:
-  - desc: NVIDIA在GTC 2026发布Vera Rubin平台，包含6款全新芯片：Rubin GPU（双Die设计、HBM4内存、FP4算力达15
-      PFLOPS）、Vera CPU（Grace继任者、自研ARM核心）、NVLink 6交换机（3.6 TB/s带宽）、CX10网卡（800GbE）、BlueField
-      5 DPU及Spectrum 5交换机。Rubin Ultra维持双Die方案，NVL72机架集成72颗GPU，专为万亿参数MoE推理与Agentic
-      AI工厂设计。
+  - desc: RTX 5060搭载GB206 GPU，基于Blackwell架构，配备4608 CUDA Core、8GB GDDR7显存(128-bit，272GB/s带宽)、支持DLSS
+      4多帧生成与神经网络渲染。起售价2499元人民币，面向1080p-1440p游戏市场，能效比同比上代提升35%。
     tags:
-    - NVIDIA Rubin
-    - HBM4
-    - NVLink 6
-    - Agentic AI
-    title: 'NVIDIA Vera Rubin: 新一代Agentic AI超级计算平台'
-  Lang:
-  - desc: Python 3.15 beta于2026年5月发布，正式版预计2026年10月。最大变更为PEP 703 Free-Threading（无GIL模式）成为CPython默认构建，消除多线程瓶颈；PEP
-      744引入的JIT编译器（基于Copy-and-Patch）进入稳定阶段，纯Python代码加速2-5倍。同步推出PEP 803 'abi3t'稳定ABI，确保C扩展兼容自由线程构建。
-    tags:
-    - Python 3.15
-    - Free-Threading
-    - JIT编译器
-    - 无GIL
-    title: 'Python 3.15: Free-Threading默认启用与JIT编译器落地'
-  NLP:
-  - desc: EACL 2026最佳论文奖。该研究首次系统证明LLM Agent团队可协作发现并利用真实世界零日安全漏洞。多Agent框架包含规划、执行、代码分析等角色分工，在无先验知识条件下对15个真实CVE进行端到端漏洞利用测试，成功率达53%，揭示LLM在网络安全领域的双刃剑效应。
-    tags:
-    - LLM Agent
-    - 零日漏洞
-    - 网络安全
-    - EACL 2026 Best Paper
-    title: Teams of LLM Agents can Exploit Zero-Day Vulnerabilities
-  Net:
-  - desc: 高通于2026年3月发布全球首个AI原生Wi-Fi 8端到端方案。FastConnect 8800移动端与Dragonwing N9300网络平台均搭载专用AI引擎，实现实时信道优化、智能MLO调度与干扰预测。支持4x4
-      MIMO、320MHz带宽、4K QAM调制，物理层峰值速率超10Gbps，时延低于1ms，专为Agentic AI时代的高密连接场景设计。
-    tags:
-    - Wi-Fi 8
-    - 802.11bn
-    - AI原生
-    - FastConnect 8800
-    title: 'Qualcomm FastConnect 8800: AI-Native Wi-Fi 8平台'
-  News:
-  - desc: NVIDIA于2026年6月宣布开源Isaac GR00T——全球首个人形机器人通用参考设计平台。项目托管于GitHub，包含完整机械结构CAD、电气原理图、驱动固件及仿真环境。基于Jetson
-      AGX Thor计算平台，集成GR00T基础模型实现灵巧操作与全身控制，目标推动学术机构降低人形机器人研究门槛。同步发布NVIDIA Isaac GR00T
-      Blueprint用于Sim-to-Real迁移。
-    tags:
-    - Isaac GR00T
-    - 人形机器人
-    - 开源硬件
     - NVIDIA
-    title: NVIDIA开源Isaac GR00T人形机器人参考设计
+    - RTX 5060
+    - Blackwell
+    - GDDR7
+    title: 'NVIDIA GeForce RTX 5060: Blackwell中端主力正式上市'
+  Lang:
+  - desc: Go 1.26于2026年2月发布，核心里程碑：泛型类型别名(Generic Type Aliases)正式稳定，允许为泛型类型定义简洁别名；Range-over-Func迭代器全面入驻标准库，实现统一函数式迭代范式；运行时性能优化使GC延迟降低15%。
+    tags:
+    - Go
+    - Generics
+    - Type Aliases
+    - Range-over-Func
+    title: Go 1.26 正式发布：泛型类型别名稳定化与Range-over-Func落地
+  NLP:
+  - desc: ACL 2026最佳论文奖(Best Paper Award)获奖工作，由北京大学杨耀东课题组等中国学者完成。提出轨迹拓扑损失(Trajectory
+      Topology Loss)与拓扑偏好优化(TPO)，首次从拓扑学视角揭示LLM后训练对齐中的表征几何结构，解决现有对齐方法在偏好空间中的拓扑失真问题。
+    tags:
+    - ACL 2026
+    - Best Paper
+    - LLM Alignment
+    - Topology
+    title: 'Topology-Enhanced Alignment for Large Language Models: Trajectory Topology
+      Loss and Topological Preference Optimization'
+  Net:
+  - desc: 2026年5-6月，中国率先批复6GHz试验频率用于6G研发，标志着6G从技术验证迈向频谱落地。该频段兼顾覆盖与容量优势，被视为6G核心中频资源。同时星思半导体攻克宽带卫星通信芯片关键技术壁垒，地面与太空网络协同推进。
+    tags:
+    - 6G
+    - 6GHz Spectrum
+    - Satellite Communication
+    - China
+    title: 中国6G研发进入新阶段：6GHz黄金频段正式获批
+  News:
+  - desc: 2026年5月，中国科学技术大学潘建伟团队成功研制「九章四号」光量子计算原型机，操控255个光子，在高斯玻色采样任务上实现远超经典超级计算机的量子计算优越性。该成果巩固了中国在光量子计算领域的国际领先地位。
+    tags:
+    - Quantum Computing
+    - Jiuzhang-4
+    - Quantum Supremacy
+    - USTC
+    title: 中国科大「九章四号」量子计算原型机震撼问世，再创全球最强量子优越性

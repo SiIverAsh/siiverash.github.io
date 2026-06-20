@@ -1,4 +1,20 @@
 {
+  "2026-06-21": [
+    "WorldStereo: Bridging Camera-Guided Video Generation and Scene Reconstruction via 3D Geometric Memories",
+    "Gen3R: 3D Scene Generation Meets Feed-Forward Reconstruction",
+    "Intel Xeon 6+ Clearwater Forest: 18A制程288核服务器CPU发布",
+    "中国6G研发进入新阶段：6GHz黄金频段正式获批",
+    "中国科大「九章四号」量子计算原型机震撼问世，再创全球最强量子优越性",
+    "Topology-Enhanced Alignment for Large Language Models: Trajectory Topology Loss and Topological Preference Optimization",
+    "OpenBMB VoxCPM2: 2B参数Tokenizer-Free多语言TTS开源",
+    "NVIDIA GeForce RTX 5060: Blackwell中端主力正式上市",
+    "伊藤美来",
+    "Go 1.26 正式发布：泛型类型别名稳定化与Range-over-Func落地",
+    "UCIe 2.0规范发布：开放Chiplet互连标准全面落地",
+    "随机森林 (Random Forest)",
+    "华为OpenPangu 2.0开源：505B参数稀疏MoE旗舰，512K超长上下文",
+    "lastmile-ai/mcp-agent: MCP协议AI Agent开发框架"
+  ],
   "2026-06-20": [
     "Teams of LLM Agents can Exploit Zero-Day Vulnerabilities",
     "Python 3.15: Free-Threading默认启用与JIT编译器落地",
@@ -138,20 +154,5 @@
     "朴素贝叶斯 (Naive Bayes)",
     "open-gitagent/gitagent",
     "TIME: Temporally Intelligent Meta-Reasoning Engine for Context-Triggered Explicit Reasoning"
-  ],
-  "2026-06-09": [
-    "RISC-V RVA23 Profile正式获批",
-    "open-multi-agent",
-    "SAM 3D: 3Dfy Anything in Images",
-    "OmniVoice: Towards Omnilingual Zero-Shot Text-to-Speech with Diffusion Language Models",
-    "上田麗奈",
-    "Intel Arc G3 Extreme: Xe3架构掌机专用芯片",
-    "NVIDIA Nemotron 3 Ultra: 550B MoE混合Mamba-Transformer",
-    "Elixir 1.20: 正式成为渐进类型语言",
-    "Apple WWDC 2026: Siri AI诞生，Google Gemini十亿美元联姻落地",
-    "NVIDIA与Nokia联合推进AI-RAN 6G无线单元芯片",
-    "Language Lives in Sparse Dimensions: Toward Interpretable and Efficient Multilingual Control for Large Language Models",
-    "Qualcomm Snapdragon X2 Elite: 18核Oryon V3挑战x86霸权",
-    "随机森林 (Random Forest)"
   ]
 }
