@@ -1,4 +1,19 @@
 {
+  "2026-06-22": [
+    "决策树 (Decision Tree)",
+    "Think in Sentences: Explicit Sentence Boundaries Enhance Language Model's Capabilities",
+    "AMD EPYC Venice: 256 核 Zen 6，2nm 制程量产",
+    "OpenAI 发布 ChatGPT Images 2.0: 多模态生图新范式",
+    "LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space",
+    "Go 1.27 正式发布：泛型方法与字面量推导落地",
+    "Intel Arc G-Series: 18A 制程掌机处理器发布",
+    "Wi-Fi 8 (802.11bn): 从速度竞争转向可靠性优先",
+    "阿里达摩院玄铁C950: RISC-V 高性能处理器新标杆",
+    "LongCat-Next: 美团原生多模态模型开源",
+    "apple/container",
+    "花澤香菜",
+    "D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time"
+  ],
   "2026-06-21": [
     "WorldStereo: Bridging Camera-Guided Video Generation and Scene Reconstruction via 3D Geometric Memories",
     "Gen3R: 3D Scene Generation Meets Feed-Forward Reconstruction",
@@ -138,21 +153,5 @@
     "K近邻算法 (K-Nearest Neighbors, KNN)",
     "Rust 1.96.0: core::range新类型稳定化与assert_matches!宏落地",
     "Qualcomm FastConnect 8800: 全球首款移动4-Stream Wi-Fi 8芯片"
-  ],
-  "2026-06-10": [
-    "Tenstorrent TT-Ascalon: Jim Keller团队RISC-V性能旗舰",
-    "AMD Zen 6 'Medusa': 2nm 8-wide架构全面泄露",
-    "Qualcomm NPro A8 Elite: AI原生Wi-Fi 8网络平台",
-    "Go 1.27: amd64 SIMD默认开启与接口逃逸分析突破",
-    "種田梨沙",
-    "Llama 4: Meta原生多模态MoE大模型系列",
-    "dots.tts: 小红书开源全连续自回归TTS模型",
-    "NVIDIA与SK海力士签署多年期AI内存技术合作协议",
-    "NVIDIA RTX Spark: Grace+Blackwell SoC重塑Windows PC",
-    "RnG: A Unified Transformer for Complete 3D Modeling from Partial Observations",
-    "Stable Gradients for Stable Learning at Scale in Deep Reinforcement Learning",
-    "朴素贝叶斯 (Naive Bayes)",
-    "open-gitagent/gitagent",
-    "TIME: Temporally Intelligent Meta-Reasoning Engine for Context-Triggered Explicit Reasoning"
   ]
 }

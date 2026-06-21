@@ -1,132 +1,131 @@
 algorithm:
-- desc: 集成学习经典算法，通过构建多棵决策树并结合Bagging(Bootstrap Aggregating)与随机特征子空间选择，有效降低方差、防止过拟合。核心特性：OOB(Out-of-Bag)误差估计天然提供交叉验证能力；特征重要性度量可解释性强；对缺失值和高维数据鲁棒。广泛应用于分类、回归及特征选择任务。
+- desc: 决策树是一种基本的分类与回归方法，通过树形结构进行决策，具有可解释性强、易于理解和实现的优点，是集成学习的基础。
   tags:
-  - Ensemble Learning
   - Decision Tree
-  - Bagging
   - Classification
-  title: 随机森林 (Random Forest)
+  - Machine Learning
+  - Interpretable
+  title: 决策树 (Decision Tree)
 cv_recommend:
-  agency: Style Cube（スタイルキューブ）
-  hometown: 埼玉县
-  intro: 伊藤美来是日本女性声优、歌手，1996年10月12日出生于埼玉县，隶属于Style Cube事务所。作为声优，她以清澈透明的声线特质著称，能够精准驾驭从活泼少女到沉稳女性的多种角色类型，声域宽广且富有辨识度。2012年正式声优出道后，凭借扎实的表演功底和持续精进的态度逐步积累大量人气。除声优工作外，她同时以个人歌手身份活跃，多次发行完整专辑与单曲，展现了出众的歌唱实力与舞台表现力。2026年迎来出道十周年，开启十周年纪念特别企划，在《声優名鑑2026》中作为代表性人气声优收录，以其多方位的演艺活动持续扩大在日本声优业界的影响力。
-  name: 伊藤美来
-date: '2026-06-21'
+  agency: 大沢事務所
+  hometown: 日本東京都
+  intro: 花澤香菜以其清澈透明的声线与细腻的情感表达著称，能够驾驭从温柔少女到冷酷角色的广泛声线。她在歌唱领域同样活跃，凭借独特的音乐风格与舞台表现力赢得大量粉丝。作为业界公认的实力派声优，她持续在广播、旁白等多领域拓展，展现出卓越的职业素养与艺术感染力。
+  name: 花澤香菜
+date: '2026-06-22'
 history:
-- event: 美国新罕布什尔州批准宪法，成为第九个批准州，美国宪法正式生效
-  year: 1788年
-- event: 二战北非战场：隆美尔率领的德军攻占托布鲁克(Tobruk)要塞
-  year: 1942年
-- event: 曼彻斯特'Baby'（世界首台存储程序电子计算机）成功运行第一个程序，开启现代计算机时代
-  year: 1948年
-- event: IBM正式退役最后一台STRETCH超级计算机(IBM 7030)，该机曾是世界首台晶体管化超级计算机
-  year: 1981年
-- event: 伊朗曼吉尔-鲁德巴尔地区发生7.4级大地震，造成约4万人死亡
-  year: 1990年
-- event: SpaceShipOne成为全球首个进入太空(超100km卡门线)的私人载人航天器，开创商业航天时代
-  year: 2004年
+- event: 美国天文学家詹姆斯·克里斯蒂发现冥王星的卫星卡戎。
+  year: '1978'
+- event: 人类基因组计划草图完成，标志着生命科学进入新纪元。
+  year: '2000'
+- event: 「好奇号」火星车成功着陆火星，开启火星探测新篇章。
+  year: '2012'
+- event: SpaceX 猎鹰9号火箭首次成功实现海上平台回收。
+  year: '2015'
+- event: Apple 在 WWDC 宣布 Mac 将转向自研 ARM 架构芯片。
+  year: '2020'
+- event: 中法天文卫星 (SVOM) 成功发射，用于探测伽马射线暴。
+  year: '2024'
 llm:
-- desc: 华为于2026年6月12日正式开源盘古2.0大模型，最高参数规模505B(稀疏MoE架构)，支持512K超长上下文窗口。全栈适配昇腾(Ascend)算力与鸿蒙生态，采用创新的稀疏激活策略实现推理效率与模型容量的平衡，余承东表示目标将其打造为世界第一开源大模型。
+- desc: 美团发布 LongCat-Next，原生多模态大模型，将视觉与语音等模态词元化，在物理世界 AI 感知与具身智能任务中表现优异。
   tags:
-  - OpenPangu 2.0
-  - Huawei
-  - 505B
-  - 512K Context
-  title: 华为OpenPangu 2.0开源：505B参数稀疏MoE旗舰，512K超长上下文
-new_project:
-- desc: 基于Model Context Protocol(MCP)的AI Agent构建框架，支持多工具编排、上下文管理、安全沙箱执行。通过标准化协议连接LLM与外部工具/数据源，实现可组合、可扩展的Agent系统。2026年6月GitHub趋势榜热门项目。
-  tags:
-  - MCP
-  - AI Agent
-  - LLM
+  - Multimodal
   - Open Source
-  title: 'lastmile-ai/mcp-agent: MCP协议AI Agent开发框架'
-  url: https://github.com/lastmile-ai/mcp-agent
-paper:
-- desc: CVPR 2026论文，提出以3D几何记忆为桥梁，将相机引导视频生成与场景重建统一起来的方法。通过构造持久的3D几何记忆表征，实现视频生成与3D重建的相互增强，在动态场景下展现了优异的几何一致性与渲染质量。
+  - Embodied AI
+  - Meituan
+  title: 'LongCat-Next: 美团原生多模态模型开源'
+new_project:
+- desc: Apple 开源的容器运行时，用于构建和运行符合 OCI 标准的容器，提供轻量级、安全的容器环境。
   tags:
-  - CVPR 2026
-  - 3D Reconstruction
-  - Video Generation
-  - Geometric Memory
-  title: 'WorldStereo: Bridging Camera-Guided Video Generation and Scene Reconstruction
-    via 3D Geometric Memories'
-  url: https://arxiv.org/abs/2603.02049
+  - Apple
+  - Container
+  - OCI
+  - Open Source
+  title: apple/container
+  url: https://github.com/apple/container
+paper:
+- desc: ACL 2026 顶会论文，研究显式句子边界对语言模型的增强作用，在多项 NLP 任务中取得显著提升。
+  tags:
+  - ACL 2026
+  - NLP
+  - Sentence Boundary
+  - Language Model
+  title: 'Think in Sentences: Explicit Sentence Boundaries Enhance Language Model''s
+    Capabilities'
+  url: https://arxiv.org/abs/2604.10135
 tech:
   Arch:
-  - desc: UCIe联盟于2026年正式发布UCIe 2.0规范，为Chiplet(芯粒)生态系统提供完整的Die-to-Die互连标准。2.0版本新增3D封装互连支持、更高带宽密度(>10Tbps/mm)与更低功耗(<0.5pJ/bit)，推动异构集成芯片从能连到可控的关键跨越。
+  - desc: 玄铁 C950 采用 12 级流水线、超标量乱序执行，SPECint2006 得分 9.4/GHz，面向数据中心与 AI 加速。
     tags:
-    - UCIe 2.0
-    - Chiplet
-    - Die-to-Die Interconnect
-    - 3D Packaging
-    title: UCIe 2.0规范发布：开放Chiplet互连标准全面落地
+    - RISC-V
+    - Xuantie
+    - Alibaba
+    - CPU
+    title: '阿里达摩院玄铁C950: RISC-V 高性能处理器新标杆'
   Audio:
-  - desc: OpenBMB发布VoxCPM2，2B参数全连续端到端语音合成模型。核心技术突破：无需音素/语义Token化，直接以连续表示建模语音；支持30种语言；零样本声音克隆；中文WER达0.94%的开源新标杆。论文arXiv:2606.06928。
+  - desc: 美团开源，基于波形潜在空间扩散模型的高保真 TTS，实现零样本音色克隆，MOS 分超越主流方案。
     tags:
-    - TTS
-    - Tokenizer-Free
-    - Multilingual
+    - Text-to-Speech
+    - Diffusion Model
+    - Zero-shot Voice Cloning
     - Open Source
-    title: 'OpenBMB VoxCPM2: 2B参数Tokenizer-Free多语言TTS开源'
+    title: 'LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform
+      Latent Space'
   CPU:
-  - desc: Intel于Computex 2026正式发布Xeon 6+系列(Clearwater Forest)，采用Intel 18A制程，最高288核心、576MB
-      L3缓存。旗舰型号Xeon 6990E+单线程性能据称比AMD EPYC 9965(192核)高30%，专为Agentic AI数据中心工作负载设计。
+  - desc: AMD 宣布 EPYC Venice 处理器在台积电 2nm 节点进入量产，最高 256 核 Zen 6 核心，性能较前代提升 70%，面向 HPC
+      与 AI 基础设施。
     tags:
-    - Intel
-    - Xeon 6+
-    - 18A
-    - 288 Cores
-    title: 'Intel Xeon 6+ Clearwater Forest: 18A制程288核服务器CPU发布'
+    - AMD EPYC
+    - Zen 6
+    - 2nm
+    - TSMC
+    title: 'AMD EPYC Venice: 256 核 Zen 6，2nm 制程量产'
   Computer Vision:
-  - desc: CVPR 2026论文，提出统一3D场景生成与Feed-Forward重建的新范式。通过生成式先验引导的迭代前馈3D高斯泼溅(Gaussian
-      Splatting)，从稀疏视图即可实现高质量3D场景重建，突破传统方法对密集输入的依赖。
+  - desc: CVPR 2026 最佳论文，提出 D4RT 框架，利用 4D 高斯泼溅实现高效动态场景重建，渲染速度与质量均达 SOTA。
     tags:
     - CVPR 2026
-    - 3D Gaussian Splatting
-    - Feed-Forward Reconstruction
-    - Sparse View
-    title: 'Gen3R: 3D Scene Generation Meets Feed-Forward Reconstruction'
+    - 4D Reconstruction
+    - Gaussian Splatting
+    - Best Paper
+    title: 'D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time'
   GPU:
-  - desc: RTX 5060搭载GB206 GPU，基于Blackwell架构，配备4608 CUDA Core、8GB GDDR7显存(128-bit，272GB/s带宽)、支持DLSS
-      4多帧生成与神经网络渲染。起售价2499元人民币，面向1080p-1440p游戏市场，能效比同比上代提升35%。
+  - desc: Intel 在 COMPUTEX 2026 发布 Arc G 系列掌机处理器，采用 18A 制程，集成 Xe GPU 与 XeSS 3，为掌上游戏
+      PC 带来桌面级图形性能。
     tags:
-    - NVIDIA
-    - RTX 5060
-    - Blackwell
-    - GDDR7
-    title: 'NVIDIA GeForce RTX 5060: Blackwell中端主力正式上市'
+    - Intel Arc
+    - 18A
+    - XeSS 3
+    - Handheld Gaming
+    title: 'Intel Arc G-Series: 18A 制程掌机处理器发布'
   Lang:
-  - desc: Go 1.26于2026年2月发布，核心里程碑：泛型类型别名(Generic Type Aliases)正式稳定，允许为泛型类型定义简洁别名；Range-over-Func迭代器全面入驻标准库，实现统一函数式迭代范式；运行时性能优化使GC延迟降低15%。
+  - desc: Go 1.27 引入泛型方法支持，允许在方法上使用类型参数；新增字面量推导，简化泛型代码；工具链收紧，编译速度提升。
     tags:
     - Go
     - Generics
-    - Type Aliases
-    - Range-over-Func
-    title: Go 1.26 正式发布：泛型类型别名稳定化与Range-over-Func落地
+    - Programming Language
+    - Compiler
+    title: Go 1.27 正式发布：泛型方法与字面量推导落地
   NLP:
-  - desc: ACL 2026最佳论文奖(Best Paper Award)获奖工作，由北京大学杨耀东课题组等中国学者完成。提出轨迹拓扑损失(Trajectory
-      Topology Loss)与拓扑偏好优化(TPO)，首次从拓扑学视角揭示LLM后训练对齐中的表征几何结构，解决现有对齐方法在偏好空间中的拓扑失真问题。
+  - desc: ACL 2026 论文，通过显式句子边界增强语言模型的句子级理解与生成能力，在多项基准上显著提升。
     tags:
     - ACL 2026
-    - Best Paper
-    - LLM Alignment
-    - Topology
-    title: 'Topology-Enhanced Alignment for Large Language Models: Trajectory Topology
-      Loss and Topological Preference Optimization'
+    - Sentence Boundaries
+    - Language Models
+    - NLP
+    title: 'Think in Sentences: Explicit Sentence Boundaries Enhance Language Model''s
+      Capabilities'
   Net:
-  - desc: 2026年5-6月，中国率先批复6GHz试验频率用于6G研发，标志着6G从技术验证迈向频谱落地。该频段兼顾覆盖与容量优势，被视为6G核心中频资源。同时星思半导体攻克宽带卫星通信芯片关键技术壁垒，地面与太空网络协同推进。
+  - desc: IEEE 802.11bn 任务组最新进展，Wi-Fi 8 聚焦超高可靠性 (UHR)，针对 Agentic AI 和工业物联网优化低延迟与确定性传输。
     tags:
-    - 6G
-    - 6GHz Spectrum
-    - Satellite Communication
-    - China
-    title: 中国6G研发进入新阶段：6GHz黄金频段正式获批
+    - Wi-Fi 8
+    - IEEE 802.11bn
+    - UHR
+    - Agentic AI
+    title: 'Wi-Fi 8 (802.11bn): 从速度竞争转向可靠性优先'
   News:
-  - desc: 2026年5月，中国科学技术大学潘建伟团队成功研制「九章四号」光量子计算原型机，操控255个光子，在高斯玻色采样任务上实现远超经典超级计算机的量子计算优越性。该成果巩固了中国在光量子计算领域的国际领先地位。
+  - desc: ChatGPT Images 2.0 支持多语文字渲染、排版设计与连贯叙事，每次会话可生成 8 张一致性图片，被视为设计行业冲击。
     tags:
-    - Quantum Computing
-    - Jiuzhang-4
-    - Quantum Supremacy
-    - USTC
-    title: 中国科大「九章四号」量子计算原型机震撼问世，再创全球最强量子优越性
+    - OpenAI
+    - ChatGPT
+    - Image Generation
+    - Multimodal
+    title: 'OpenAI 发布 ChatGPT Images 2.0: 多模态生图新范式'
