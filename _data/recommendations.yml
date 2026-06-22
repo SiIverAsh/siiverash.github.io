@@ -1,131 +1,133 @@
 algorithm:
-- desc: 决策树是一种基本的分类与回归方法，通过树形结构进行决策，具有可解释性强、易于理解和实现的优点，是集成学习的基础。
+- desc: XGBoost是由陈天奇于2014年提出的梯度提升树集成算法，在结构化/表格数据任务中长期占据统治地位。其核心创新包括：对目标函数进行二阶泰勒展开以更精准近似损失、引入正则化项防止过拟合、支持列采样与加权分位数草图实现高效并行化。XGBoost在Kaggle竞赛中斩获无数冠军，至今仍是工业界表格数据建模的首选基线。
   tags:
-  - Decision Tree
-  - Classification
-  - Machine Learning
-  - Interpretable
-  title: 决策树 (Decision Tree)
+  - Gradient Boosting
+  - Tree Ensemble
+  - Regularization
+  - Structured Data
+  title: XGBoost (eXtreme Gradient Boosting)
 cv_recommend:
-  agency: 大沢事務所
-  hometown: 日本東京都
-  intro: 花澤香菜以其清澈透明的声线与细腻的情感表达著称，能够驾驭从温柔少女到冷酷角色的广泛声线。她在歌唱领域同样活跃，凭借独特的音乐风格与舞台表现力赢得大量粉丝。作为业界公认的实力派声优，她持续在广播、旁白等多领域拓展，展现出卓越的职业素养与艺术感染力。
-  name: 花澤香菜
-date: '2026-06-22'
+  agency: 青二プロダクション
+  hometown: 奈良県
+  intro: 羊宮妃那是日本新生代女性声优中备受瞩目的实力派。隶属于老牌事务所青二プロダクション，2000年3月26日出生于奈良县。她的声线清澈通透，兼具透明感与情感张力，尤其擅长演绎内心戏丰富的角色。在演技上，她以细腻的情感层次和精准的台词节奏著称，能从轻声细语瞬间切换至极具爆发力的呐喊，展现了远超同龄人的声优功底。作为令和时代声优界的代表性新星，她的成长轨迹备受业界与观众期待。
+  name: 羊宮妃那
+date: '2026-06-23'
 history:
-- event: 美国天文学家詹姆斯·克里斯蒂发现冥王星的卫星卡戎。
-  year: '1978'
-- event: 人类基因组计划草图完成，标志着生命科学进入新纪元。
-  year: '2000'
-- event: 「好奇号」火星车成功着陆火星，开启火星探测新篇章。
-  year: '2012'
-- event: SpaceX 猎鹰9号火箭首次成功实现海上平台回收。
-  year: '2015'
-- event: Apple 在 WWDC 宣布 Mac 将转向自研 ARM 架构芯片。
-  year: '2020'
-- event: 中法天文卫星 (SVOM) 成功发射，用于探测伽马射线暴。
-  year: '2024'
+- event: 艾伦·图灵 (Alan Turing) 出生于英国伦敦，后世尊称为「计算机科学之父」与「人工智能之父」，其提出的图灵机模型奠定了现代计算理论的基础。
+  year: '1912'
+- event: 文特·瑟夫 (Vint Cerf) 出生于美国康涅狄格州，后与Robert Kahn共同发明TCP/IP协议，被誉为「互联网之父」之一。
+  year: '1943'
+- event: 克里斯托弗·莱瑟姆·肖尔斯 (Christopher Latham Sholes) 获得打字机专利，QWERTY键盘布局由此诞生，沿用至今超过150年。
+  year: '1868'
+- event: 任天堂64 (Nintendo 64) 在日本正式发售，首发游戏包括《超级马力欧64》，开创了3D动作游戏的全新标杆。
+  year: '1996'
+- event: 社交新闻网站 Reddit 正式上线，由Steve Huffman与Alexis Ohanian联合创立，日后成长为全球最具影响力的互联网社区之一。
+  year: '2005'
+- event: NCSA Mosaic 1.0网页浏览器正式发布，作为首个广泛普及的图形化浏览器，它引爆了万维网的大众化浪潮。
+  year: '1993'
 llm:
-- desc: 美团发布 LongCat-Next，原生多模态大模型，将视觉与语音等模态词元化，在物理世界 AI 感知与具身智能任务中表现优异。
+- desc: 2026年6月，Anthropic下一代中阶模型Claude Sonnet 5（代号Fennec）的模型标识符在合作平台意外曝光。泄露信息显示其在编程、多步推理与长上下文理解方面实现跨代提升，编程基准得分超越前代Opus
+    4.5。预计采用全新对齐架构与更高效的推理引擎，标志着Claude系列正式迈入第五代。
   tags:
-  - Multimodal
-  - Open Source
-  - Embodied AI
-  - Meituan
-  title: 'LongCat-Next: 美团原生多模态模型开源'
+  - Claude Sonnet 5
+  - Anthropic
+  - LLM
+  - Fennec
+  title: Claude Sonnet 5 (Fennec)：Anthropic下一代中阶模型震撼泄露
 new_project:
-- desc: Apple 开源的容器运行时，用于构建和运行符合 OCI 标准的容器，提供轻量级、安全的容器环境。
+- desc: 一个自进化的AI Agent框架，支持Agent动态构建技能树并在交互中持续学习与扩展能力。项目采用模块化设计，将工具调用、记忆管理与任务规划解耦，允许Agent在运行时自主发现新技能并组合复用。适用于构建可长期运行的自治Agent系统。
   tags:
-  - Apple
-  - Container
-  - OCI
-  - Open Source
-  title: apple/container
-  url: https://github.com/apple/container
+  - AI Agent
+  - Self-Evolving
+  - Skill Tree
+  - Autonomous System
+  title: lsdefine/GenericAgent
+  url: https://github.com/lsdefine/GenericAgent
 paper:
-- desc: ACL 2026 顶会论文，研究显式句子边界对语言模型的增强作用，在多项 NLP 任务中取得显著提升。
+- desc: ICLR 2026杰出论文奖（Outstanding Paper Award）。该论文从通信复杂性理论角度严格证明了Transformer架构在表示能力上具有内在的简洁性（Succinctness），即Transformer能以远少于传统序列模型的参数表达特定函数族。这一理论结果为理解大语言模型的规模化定律提供了全新的计算复杂度视角，揭示了注意力机制在表达效率上的根本优势。
   tags:
-  - ACL 2026
-  - NLP
-  - Sentence Boundary
-  - Language Model
-  title: 'Think in Sentences: Explicit Sentence Boundaries Enhance Language Model''s
-    Capabilities'
-  url: https://arxiv.org/abs/2604.10135
+  - ICLR 2026
+  - Outstanding Paper
+  - Transformer Theory
+  - Communication Complexity
+  title: Transformers Are Inherently Succinct
+  url: https://arxiv.org/abs/2510.19315
 tech:
   Arch:
-  - desc: 玄铁 C950 采用 12 级流水线、超标量乱序执行，SPECint2006 得分 9.4/GHz，面向数据中心与 AI 加速。
+  - desc: NVIDIA于Computex 2026发布RTX Spark Superchip平台，首次将自研Arm CPU与Blackwell GPU集成于单一封装，配备高达128GB统一内存。该架构打破传统x86
+      PC范式，专为Agentic AI时代设计，支持Windows on Arm与本地AI Agent高效运行，标志着PC架构进入异构融合新纪元。
     tags:
-    - RISC-V
-    - Xuantie
-    - Alibaba
-    - CPU
-    title: '阿里达摩院玄铁C950: RISC-V 高性能处理器新标杆'
+    - RTX Spark
+    - Arm CPU
+    - Blackwell GPU
+    - Unified Memory
+    title: NVIDIA RTX Spark Superchip：Arm CPU + Blackwell GPU统一内存PC新架构
   Audio:
-  - desc: 美团开源，基于波形潜在空间扩散模型的高保真 TTS，实现零样本音色克隆，MOS 分超越主流方案。
+  - desc: 2026年6月提出的统一语音与歌声生成模型。UniVoice首次在单一框架内实现从文本到自然语音和歌唱声音的高质量合成，采用共享声学表征与解耦风格编码器，在语音自然度（MOS
+      4.32）和歌声表现力上均达到SOTA水平。
     tags:
-    - Text-to-Speech
-    - Diffusion Model
-    - Zero-shot Voice Cloning
-    - Open Source
-    title: 'LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform
-      Latent Space'
+    - Speech Synthesis
+    - Singing Voice
+    - Unified Model
+    - TTS
+    title: 'UniVoice: A Unified Model for Speech and Singing Voice Generation'
   CPU:
-  - desc: AMD 宣布 EPYC Venice 处理器在台积电 2nm 节点进入量产，最高 256 核 Zen 6 核心，性能较前代提升 70%，面向 HPC
-      与 AI 基础设施。
+  - desc: AMD于2026年6月正式发布Ryzen 9 PRO 9965X3D处理器。基于Zen 5架构，拥有16核32线程，集成第二代3D V-Cache技术，L3缓存总量达128MB，基础频率4.3GHz，Boost频率达5.6GHz，TDP
+      170W。首次将3D V-Cache引入PRO商用系列，AM5平台兼容，为工作站负载提供极致性能。
     tags:
-    - AMD EPYC
-    - Zen 6
-    - 2nm
-    - TSMC
-    title: 'AMD EPYC Venice: 256 核 Zen 6，2nm 制程量产'
+    - Zen 5
+    - 3D V-Cache
+    - AM5
+    - 16-Core
+    title: AMD Ryzen 9 PRO 9965X3D：16核Zen 5与3D V-Cache首登商用桌面平台
   Computer Vision:
-  - desc: CVPR 2026 最佳论文，提出 D4RT 框架，利用 4D 高斯泼溅实现高效动态场景重建，渲染速度与质量均达 SOTA。
+  - desc: CVPR 2026论文，提出利用几何信息引导的视频生成器来增强野外场景的3D高斯泼溅重建。通过将视频扩散先验与3D几何约束深度融合，在稀疏视角输入下显著提升重建质量与几何一致性，解决了传统方法在无约束场景中重建退化的问题。
     tags:
+    - 3D Gaussian Splatting
+    - Video Diffusion
     - CVPR 2026
-    - 4D Reconstruction
-    - Gaussian Splatting
-    - Best Paper
-    title: 'D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time'
+    - 3D Reconstruction
+    title: 'GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed
+      Video Generator'
   GPU:
-  - desc: Intel 在 COMPUTEX 2026 发布 Arc G 系列掌机处理器，采用 18A 制程，集成 Xe GPU 与 XeSS 3，为掌上游戏
-      PC 带来桌面级图形性能。
+  - desc: NVIDIA于2026年6月正式发售GeForce RTX 5050。基于Blackwell GB207核心，配备2560个CUDA核心与8GB
+      GDDR6显存，128-bit位宽，TGP仅130W，起售价$249。支持DLSS 4.5与第四代RT Core，为1080p游戏市场提供实时光线追踪与AI加速的入门方案。
     tags:
-    - Intel Arc
-    - 18A
-    - XeSS 3
-    - Handheld Gaming
-    title: 'Intel Arc G-Series: 18A 制程掌机处理器发布'
+    - Blackwell
+    - RTX 5050
+    - GDDR6
+    - Entry-Level GPU
+    title: NVIDIA GeForce RTX 5050：Blackwell架构入门级主力正式上市
   Lang:
-  - desc: Go 1.27 引入泛型方法支持，允许在方法上使用类型参数；新增字面量推导，简化泛型代码；工具链收紧，编译速度提升。
+  - desc: Rust 1.96.0于2026年5月28日正式发布。本次更新将RangeTo、RangeFull等新Range类型族稳定化，为迭代器生态提供更丰富的表达能力；assert_matches!宏正式落地，极大简化模式匹配测试断言。此外还带来了trait实现一致性检查增强与编译器性能优化。
     tags:
-    - Go
-    - Generics
+    - Rust
+    - Range Types
+    - assert_matches
     - Programming Language
-    - Compiler
-    title: Go 1.27 正式发布：泛型方法与字面量推导落地
+    title: Rust 1.96.0 正式发布：Range类型族与assert_matches!稳定化
   NLP:
-  - desc: ACL 2026 论文，通过显式句子边界增强语言模型的句子级理解与生成能力，在多项基准上显著提升。
+  - desc: 2026年6月最新提出的大推理模型高效推理方案。ADaPT通过Token级解耦机制，在长链推理过程中动态剪枝冗余计算，在保持推理质量的同时将解码延迟降低40%-60%。该方法无需额外训练，即插即用于现有推理模型，为推理效率优化开辟了新范式。
     tags:
-    - ACL 2026
-    - Sentence Boundaries
-    - Language Models
-    - NLP
-    title: 'Think in Sentences: Explicit Sentence Boundaries Enhance Language Model''s
-      Capabilities'
+    - Efficient Inference
+    - Reasoning Models
+    - Token Decoupling
+    - LLM Optimization
+    title: 'ADaPT: Token-Level Decoupling for Efficient Large Reasoning Models'
   Net:
-  - desc: IEEE 802.11bn 任务组最新进展，Wi-Fi 8 聚焦超高可靠性 (UHR)，针对 Agentic AI 和工业物联网优化低延迟与确定性传输。
+  - desc: Broadcom于2026年6月18日发布业界首款全集成的Wi-Fi 8 (802.11bn) SoC——BCM6772。采用四核Arm CPU架构，集成2.4GHz/5GHz/6GHz三频并发能力，峰值吞吐量达30Gbps，支持4K
+      QAM调制与MLO增强，为下一代Mesh与多千兆路由器提供核心动力。
     tags:
     - Wi-Fi 8
-    - IEEE 802.11bn
-    - UHR
-    - Agentic AI
-    title: 'Wi-Fi 8 (802.11bn): 从速度竞争转向可靠性优先'
+    - 802.11bn
+    - Broadcom
+    - SoC
+    title: 'Broadcom BCM6772: 业界首款全集成的Wi-Fi 8 SoC平台'
   News:
-  - desc: ChatGPT Images 2.0 支持多语文字渲染、排版设计与连贯叙事，每次会话可生成 8 张一致性图片，被视为设计行业冲击。
+  - desc: 2026年6月15日，央视报道我国成功实现硅基量子芯片关键材料——电子级高纯多晶硅的完全国产化突破，纯度达到99.9999999%（9N级）。该突破打破西方长期技术封锁，为自主可控的硅基量子计算芯片量产扫清核心材料障碍，标志着中国在量子计算硬件全产业链自主化上迈出关键一步。
     tags:
-    - OpenAI
-    - ChatGPT
-    - Image Generation
-    - Multimodal
-    title: 'OpenAI 发布 ChatGPT Images 2.0: 多模态生图新范式'
+    - 量子计算
+    - 硅基量子芯片
+    - 纯硅突破
+    - 国产替代
+    title: 中国攻克硅基量子芯片关键材料：国产高纯硅纯度达99.99%

@@ -1,4 +1,20 @@
 {
+  "2026-06-23": [
+    "AMD Ryzen 9 PRO 9965X3D：16核Zen 5与3D V-Cache首登商用桌面平台",
+    "羊宮妃那",
+    "Transformers Are Inherently Succinct",
+    "GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed Video Generator",
+    "XGBoost (eXtreme Gradient Boosting)",
+    "Broadcom BCM6772: 业界首款全集成的Wi-Fi 8 SoC平台",
+    "中国攻克硅基量子芯片关键材料：国产高纯硅纯度达99.99%",
+    "Rust 1.96.0 正式发布：Range类型族与assert_matches!稳定化",
+    "lsdefine/GenericAgent",
+    "NVIDIA RTX Spark Superchip：Arm CPU + Blackwell GPU统一内存PC新架构",
+    "NVIDIA GeForce RTX 5050：Blackwell架构入门级主力正式上市",
+    "UniVoice: A Unified Model for Speech and Singing Voice Generation",
+    "Claude Sonnet 5 (Fennec)：Anthropic下一代中阶模型震撼泄露",
+    "ADaPT: Token-Level Decoupling for Efficient Large Reasoning Models"
+  ],
   "2026-06-22": [
     "决策树 (Decision Tree)",
     "Think in Sentences: Explicit Sentence Boundaries Enhance Language Model's Capabilities",
@@ -138,20 +154,5 @@
     "Nex-N2: 面向Agentic Coding的开源思考-行动框架",
     "支持向量机 (Support Vector Machine, SVM)",
     "InfiGUIAgent: A Multimodal Generalist GUI Agent with Native Reasoning and Reflection"
-  ],
-  "2026-06-11": [
-    "Intel 18A制程量产就绪: RibbonFET+PowerVia双剑合璧",
-    "花澤香菜",
-    "Intel Xeon 6+ Granite Rapids-AP: 288核E-core单插槽密度极限",
-    "Diff4Splat: Repurposing Video Diffusion Models for Dynamic Scene Generation",
-    "MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End RL",
-    "NVIDIA Blackwell首度美国本土量产: 台积电亚利桑那Fab 21启动规模出货",
-    "opencode: AI原生终端编码代理",
-    "AMD Radeon RX 9060 XT: RDNA 4主流级16GB显存降维打击",
-    "GPT-5.6 Kindle: OpenAI新一代推理旗舰，150万Token超长上下文",
-    "LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space",
-    "K近邻算法 (K-Nearest Neighbors, KNN)",
-    "Rust 1.96.0: core::range新类型稳定化与assert_matches!宏落地",
-    "Qualcomm FastConnect 8800: 全球首款移动4-Stream Wi-Fi 8芯片"
   ]
 }
