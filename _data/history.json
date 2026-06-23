@@ -1,4 +1,19 @@
 {
+  "2026-06-24": [
+    "nex-agi/Nex-N2：为行动而生的开源AI Agent模型",
+    "AMD Radeon RX 9060：RDNA 4主流级正式上市",
+    "ARMv10指令集架构发布：IPC提升30%，原生AI加速引擎落地",
+    "岩永哲哉",
+    "支持向量机 (Support Vector Machine, SVM)",
+    "Intel Core Ultra Series 3 (Panther Lake)：首款Intel 18A制程AI PC平台",
+    "豆包2.1 Pro (ByteDance Seed 2.1 Pro)：Coding与Agent能力跨越'质变点'",
+    "3GPP Release 21正式获批：6G标准化全面启动",
+    "MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control",
+    "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction",
+    "中国纯国产超算「灵晟」登顶TOP500：245万核心突破2 ExaFLOPS",
+    "Every Token Counts: Generalizing 16M Ultra-Long Context in Large Language Models",
+    "Kotlin 2.4.0 正式发布：守卫子句与跨平台类型安全全面升级"
+  ],
   "2026-06-23": [
     "AMD Ryzen 9 PRO 9965X3D：16核Zen 5与3D V-Cache首登商用桌面平台",
     "羊宮妃那",
@@ -139,20 +154,5 @@
     "鬼頭明里",
     "NVIDIA GeForce RTX 5060: Blackwell主流级正式发布",
     "Vortex 3.0: 全栈开源RISC-V GPU，完整3D渲染管线与Vulkan支持落地"
-  ],
-  "2026-06-12": [
-    "Arm AGI CPU: Arm首款自研硅芯片，Neoverse V3架构专为Agentic AI打造",
-    "3GPP新加坡全会锁定6G标准化时间表: Release 21规范2029年3月冻结",
-    "Broadcom BCM6718: 业界首款Wi-Fi 8 (802.11bn) 芯片生态系统发布",
-    "NVIDIA GeForce RTX 5060 Super: Blackwell主流级12GB显存版泄露",
-    "UALM: Unified Audio Language Model for Understanding, Generation and Reasoning",
-    "VideoWorld 2: Learning Transferable Knowledge from Real-world Videos",
-    "DeepSeek V4 Pro: 百万Token上下文MoE旗舰，Agent场景原生优化",
-    "AMD EPYC Venice (Zen 6): TSMC 2nm N2量产爬坡，最高256核32核/CCD",
-    "内田真礼",
-    "Zig 0.16.0: 增量编译架构落地，comptime性能翻倍",
-    "Nex-N2: 面向Agentic Coding的开源思考-行动框架",
-    "支持向量机 (Support Vector Machine, SVM)",
-    "InfiGUIAgent: A Multimodal Generalist GUI Agent with Native Reasoning and Reflection"
   ]
 }

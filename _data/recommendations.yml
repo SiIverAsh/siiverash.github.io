@@ -1,133 +1,137 @@
 algorithm:
-- desc: XGBoost是由陈天奇于2014年提出的梯度提升树集成算法，在结构化/表格数据任务中长期占据统治地位。其核心创新包括：对目标函数进行二阶泰勒展开以更精准近似损失、引入正则化项防止过拟合、支持列采样与加权分位数草图实现高效并行化。XGBoost在Kaggle竞赛中斩获无数冠军，至今仍是工业界表格数据建模的首选基线。
+- desc: 经典监督式机器学习算法，通过寻找最大间隔超平面实现二分类。利用核技巧（Kernel Trick）将数据映射到高维空间处理非线性可分问题。核心优势在于对高维数据与小样本场景的泛化能力，广泛用于文本分类、图像识别等领域。
   tags:
-  - Gradient Boosting
-  - Tree Ensemble
-  - Regularization
-  - Structured Data
-  title: XGBoost (eXtreme Gradient Boosting)
+  - 机器学习
+  - 分类算法
+  - 核方法
+  - 经典算法
+  title: 支持向量机 (Support Vector Machine, SVM)
 cv_recommend:
-  agency: 青二プロダクション
-  hometown: 奈良県
-  intro: 羊宮妃那是日本新生代女性声优中备受瞩目的实力派。隶属于老牌事务所青二プロダクション，2000年3月26日出生于奈良县。她的声线清澈通透，兼具透明感与情感张力，尤其擅长演绎内心戏丰富的角色。在演技上，她以细腻的情感层次和精准的台词节奏著称，能从轻声细语瞬间切换至极具爆发力的呐喊，展现了远超同龄人的声优功底。作为令和时代声优界的代表性新星，她的成长轨迹备受业界与观众期待。
-  name: 羊宮妃那
-date: '2026-06-23'
+  agency: フリー（元プロ・フィット所属）
+  hometown: 東京都
+  intro: 1970年6月24日出生于东京都，资深男性声优。其声线兼具清澈的少年感与沉稳的成年男性魅力，在旁白解说领域拥有极高评价，以克制而富有张力的语调控制能力著称。演艺生涯横跨1990年代至今逾三十年，积累了深厚的舞台功底与语音表现力。经历过所属事务所プロ・フィット的闭业后，以自由身份继续活跃于业界。他擅长通过微妙的语速变化与气息控制来塑造角色内心世界，在同辈声优中以敬业态度与稳定的演技水准受到广泛尊重。
+  name: 岩永哲哉
+date: '2026-06-24'
 history:
-- event: 艾伦·图灵 (Alan Turing) 出生于英国伦敦，后世尊称为「计算机科学之父」与「人工智能之父」，其提出的图灵机模型奠定了现代计算理论的基础。
-  year: '1912'
-- event: 文特·瑟夫 (Vint Cerf) 出生于美国康涅狄格州，后与Robert Kahn共同发明TCP/IP协议，被誉为「互联网之父」之一。
-  year: '1943'
-- event: 克里斯托弗·莱瑟姆·肖尔斯 (Christopher Latham Sholes) 获得打字机专利，QWERTY键盘布局由此诞生，沿用至今超过150年。
-  year: '1868'
-- event: 任天堂64 (Nintendo 64) 在日本正式发售，首发游戏包括《超级马力欧64》，开创了3D动作游戏的全新标杆。
-  year: '1996'
-- event: 社交新闻网站 Reddit 正式上线，由Steve Huffman与Alexis Ohanian联合创立，日后成长为全球最具影响力的互联网社区之一。
-  year: '2005'
-- event: NCSA Mosaic 1.0网页浏览器正式发布，作为首个广泛普及的图形化浏览器，它引爆了万维网的大众化浪潮。
-  year: '1993'
+- event: 微软正式发布Windows 98操作系统，首次集成Internet Explorer浏览器与桌面，奠定PC互联网时代基石。
+  year: '1998'
+- event: 人类基因组工作草图完成并公布，标志着生命科学进入基因组时代。
+  year: '2000'
+- event: 苹果iPhone 4正式在全球发售，Retina视网膜屏幕与FaceTime视频通话引领智能手机革命。
+  year: '2010'
+- event: 英国脱欧公投结果公布，52%选民支持脱离欧盟，对全球科技产业格局产生深远影响。
+  year: '2016'
+- event: 微软正式发布Windows 11操作系统，全新UI设计与Android应用原生支持成为最大亮点。
+  year: '2021'
+- event: 全国科技大会、国家科学技术奖励大会、两院院士大会在北京隆重召开，习近平为国家最高科学技术奖获得者颁奖。
+  year: '2024'
 llm:
-- desc: 2026年6月，Anthropic下一代中阶模型Claude Sonnet 5（代号Fennec）的模型标识符在合作平台意外曝光。泄露信息显示其在编程、多步推理与长上下文理解方面实现跨代提升，编程基准得分超越前代Opus
-    4.5。预计采用全新对齐架构与更高效的推理引擎，标志着Claude系列正式迈入第五代。
+- desc: 字节跳动于2026年6月23日发布豆包大模型2.1 Pro（Seed 2.1 Pro），Coding与Agent能力实现质变突破。在SWE-bench
+    Verified、HumanEval等编程基准上比肩GPT-5.5水平，支持自主Agent执行复杂任务（如芯片设计代码生成18小时自主运行），并开源深度思考模型。
   tags:
-  - Claude Sonnet 5
-  - Anthropic
+  - 豆包
   - LLM
-  - Fennec
-  title: Claude Sonnet 5 (Fennec)：Anthropic下一代中阶模型震撼泄露
+  - Agent
+  - 字节跳动
+  title: 豆包2.1 Pro (ByteDance Seed 2.1 Pro)：Coding与Agent能力跨越'质变点'
 new_project:
-- desc: 一个自进化的AI Agent框架，支持Agent动态构建技能树并在交互中持续学习与扩展能力。项目采用模块化设计，将工具调用、记忆管理与任务规划解耦，允许Agent在运行时自主发现新技能并组合复用。适用于构建可长期运行的自治Agent系统。
+- desc: Nex-AGI团队于2026年6月开源Nex-N2，基于Qwen3.5进行后训练优化的AI Agent模型。专注于工具调用、多步推理与自主任务执行，在Function
+    Call准确率与复杂Agent工作流中表现优异，支持MCP协议集成与自定义工具链扩展。
   tags:
   - AI Agent
-  - Self-Evolving
-  - Skill Tree
-  - Autonomous System
-  title: lsdefine/GenericAgent
-  url: https://github.com/lsdefine/GenericAgent
+  - 开源
+  - GitHub
+  - Qwen
+  title: nex-agi/Nex-N2：为行动而生的开源AI Agent模型
+  url: https://github.com/nex-agi/Nex-N2
 paper:
-- desc: ICLR 2026杰出论文奖（Outstanding Paper Award）。该论文从通信复杂性理论角度严格证明了Transformer架构在表示能力上具有内在的简洁性（Succinctness），即Transformer能以远少于传统序列模型的参数表达特定函数族。这一理论结果为理解大语言模型的规模化定律提供了全新的计算复杂度视角，揭示了注意力机制在表达效率上的根本优势。
+- desc: ACL 2026顶会论文，提出将LLM上下文窗口扩展至1600万Token。通过Token级重要性感知机制实现超长上下文的精准建模，在长文档理解与多轮对话等任务中刷新SOTA，为超长上下文LLM应用奠定基础。
   tags:
-  - ICLR 2026
-  - Outstanding Paper
-  - Transformer Theory
-  - Communication Complexity
-  title: Transformers Are Inherently Succinct
-  url: https://arxiv.org/abs/2510.19315
+  - ACL 2026
+  - Long Context
+  - LLM
+  - 16M Tokens
+  title: 'Every Token Counts: Generalizing 16M Ultra-Long Context in Large Language
+    Models'
+  url: https://aclanthology.org/2026.acl-long.464/
 tech:
   Arch:
-  - desc: NVIDIA于Computex 2026发布RTX Spark Superchip平台，首次将自研Arm CPU与Blackwell GPU集成于单一封装，配备高达128GB统一内存。该架构打破传统x86
-      PC范式，专为Agentic AI时代设计，支持Windows on Arm与本地AI Agent高效运行，标志着PC架构进入异构融合新纪元。
+  - desc: ARM于2026年正式发布ARMv10-A架构，相较ARMv9实现单线程IPC 30%的提升。集成原生AI加速指令（Matrix Multiplication
+      Engine指令扩展），支持INT8/FP16混合精度推理，目标覆盖端侧AI推理与边缘计算场景。
     tags:
-    - RTX Spark
-    - Arm CPU
-    - Blackwell GPU
-    - Unified Memory
-    title: NVIDIA RTX Spark Superchip：Arm CPU + Blackwell GPU统一内存PC新架构
+    - ARMv10
+    - ISA
+    - AI加速
+    - IPC提升
+    title: ARMv10指令集架构发布：IPC提升30%，原生AI加速引擎落地
   Audio:
-  - desc: 2026年6月提出的统一语音与歌声生成模型。UniVoice首次在单一框架内实现从文本到自然语音和歌唱声音的高质量合成，采用共享声学表征与解耦风格编码器，在语音自然度（MOS
-      4.32）和歌声表现力上均达到SOTA水平。
+  - desc: ICLR 2026录用论文，首次将Mamba状态空间模型与扩散控制结合用于语音克隆。相比Transformer架构推理速度提升3倍以上，在语音自然度与说话人相似度指标上达到新SOTA，仅需3秒参考音频即可完成高质量零样本克隆。
     tags:
-    - Speech Synthesis
-    - Singing Voice
-    - Unified Model
+    - ICLR 2026
     - TTS
-    title: 'UniVoice: A Unified Model for Speech and Singing Voice Generation'
+    - State-Space Model
+    - Diffusion
+    title: 'MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space
+      Modeling and Diffusion Control'
+    url: https://arxiv.org/abs/2604.00292
   CPU:
-  - desc: AMD于2026年6月正式发布Ryzen 9 PRO 9965X3D处理器。基于Zen 5架构，拥有16核32线程，集成第二代3D V-Cache技术，L3缓存总量达128MB，基础频率4.3GHz，Boost频率达5.6GHz，TDP
-      170W。首次将3D V-Cache引入PRO商用系列，AM5平台兼容，为工作站负载提供极致性能。
+  - desc: Intel于CES 2026发布Panther Lake处理器（Core Ultra 300系列），首发Intel 18A（1.8nm级）制程。最高14核心（P-core
+      + E-core + LP E-core三丛集），P-core频率达5.1GHz，集成第四代NPU（AI算力达48 TOPS），共14款SKU覆盖9W至45W。
     tags:
-    - Zen 5
-    - 3D V-Cache
-    - AM5
-    - 16-Core
-    title: AMD Ryzen 9 PRO 9965X3D：16核Zen 5与3D V-Cache首登商用桌面平台
+    - Intel 18A
+    - Panther Lake
+    - Core Ultra
+    - AI PC
+    title: Intel Core Ultra Series 3 (Panther Lake)：首款Intel 18A制程AI PC平台
   Computer Vision:
-  - desc: CVPR 2026论文，提出利用几何信息引导的视频生成器来增强野外场景的3D高斯泼溅重建。通过将视频扩散先验与3D几何约束深度融合，在稀疏视角输入下显著提升重建质量与几何一致性，解决了传统方法在无约束场景中重建退化的问题。
+  - desc: CVPR 2026论文，提出可扩展的测试时训练框架用于大规模3D重建。通过动态适配机制在推理阶段优化场景表征，无需额外标注即可提升重建精度，在稀疏视角与大场景设定下显著超越现有方法。
     tags:
-    - 3D Gaussian Splatting
-    - Video Diffusion
     - CVPR 2026
-    - 3D Reconstruction
-    title: 'GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed
-      Video Generator'
+    - 3D重建
+    - Test-Time Training
+    - 可扩展架构
+    title: 'Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction'
+    url: https://arxiv.org/abs/2604.08542
   GPU:
-  - desc: NVIDIA于2026年6月正式发售GeForce RTX 5050。基于Blackwell GB207核心，配备2560个CUDA核心与8GB
-      GDDR6显存，128-bit位宽，TGP仅130W，起售价$249。支持DLSS 4.5与第四代RT Core，为1080p游戏市场提供实时光线追踪与AI加速的入门方案。
+  - desc: AMD Radeon RX 9060基于RDNA 4架构Navi 44 GPU，配备28个CU（1792个流处理器），搭载8GB 18Gbps
+      GDDR6显存，TDP仅132W。主打1080p高帧率游戏，支持FSR 4与AI加速，定位主流级甜品市场。
     tags:
-    - Blackwell
-    - RTX 5050
+    - RDNA 4
+    - AMD
+    - 显卡
     - GDDR6
-    - Entry-Level GPU
-    title: NVIDIA GeForce RTX 5050：Blackwell架构入门级主力正式上市
+    title: AMD Radeon RX 9060：RDNA 4主流级正式上市
   Lang:
-  - desc: Rust 1.96.0于2026年5月28日正式发布。本次更新将RangeTo、RangeFull等新Range类型族稳定化，为迭代器生态提供更丰富的表达能力；assert_matches!宏正式落地，极大简化模式匹配测试断言。此外还带来了trait实现一致性检查增强与编译器性能优化。
+  - desc: JetBrains于2026年6月发布Kotlin 2.4.0，引入guard condition守卫子句语法（减少嵌套层级）、Kotlin/Native类型安全增强、以及K2编译器性能大幅优化。在JVM、JS、Native三平台编译速度平均提升15-20%。
     tags:
-    - Rust
-    - Range Types
-    - assert_matches
-    - Programming Language
-    title: Rust 1.96.0 正式发布：Range类型族与assert_matches!稳定化
+    - Kotlin
+    - JVM
+    - 编程语言
+    - JetBrains
+    title: Kotlin 2.4.0 正式发布：守卫子句与跨平台类型安全全面升级
   NLP:
-  - desc: 2026年6月最新提出的大推理模型高效推理方案。ADaPT通过Token级解耦机制，在长链推理过程中动态剪枝冗余计算，在保持推理质量的同时将解码延迟降低40%-60%。该方法无需额外训练，即插即用于现有推理模型，为推理效率优化开辟了新范式。
+  - desc: ACL 2026论文，突破LLM超长上下文瓶颈，将上下文窗口扩展至1600万Token量级。提出Token级重要性感知机制，在全长上下文中精准捕获关键信息，在长文档理解、多轮对话等任务中取得SOTA。
     tags:
-    - Efficient Inference
-    - Reasoning Models
-    - Token Decoupling
-    - LLM Optimization
-    title: 'ADaPT: Token-Level Decoupling for Efficient Large Reasoning Models'
+    - ACL 2026
+    - Long Context
+    - LLM
+    - 16M Tokens
+    title: 'Every Token Counts: Generalizing 16M Ultra-Long Context in Large Language
+      Models'
+    url: https://aclanthology.org/2026.acl-long.464/
   Net:
-  - desc: Broadcom于2026年6月18日发布业界首款全集成的Wi-Fi 8 (802.11bn) SoC——BCM6772。采用四核Arm CPU架构，集成2.4GHz/5GHz/6GHz三频并发能力，峰值吞吐量达30Gbps，支持4K
-      QAM调制与MLO增强，为下一代Mesh与多千兆路由器提供核心动力。
+  - desc: 2026年6月，3GPP新加坡全会正式批准Release 21，锁定6G标准化时间表。Rel-21将定义6G场景与技术需求（含AI原生空口、通感一体化等），预计2029年完成ASN.1/OpenAPI冻结，2030年实现6G商用部署。
     tags:
-    - Wi-Fi 8
-    - 802.11bn
-    - Broadcom
-    - SoC
-    title: 'Broadcom BCM6772: 业界首款全集成的Wi-Fi 8 SoC平台'
+    - 6G
+    - 3GPP
+    - Release 21
+    - 标准化
+    title: 3GPP Release 21正式获批：6G标准化全面启动
   News:
-  - desc: 2026年6月15日，央视报道我国成功实现硅基量子芯片关键材料——电子级高纯多晶硅的完全国产化突破，纯度达到99.9999999%（9N级）。该突破打破西方长期技术封锁，为自主可控的硅基量子计算芯片量产扫清核心材料障碍，标志着中国在量子计算硬件全产业链自主化上迈出关键一步。
+  - desc: 2026年6月，国家超算深圳中心「灵晟」以持续性能超2 ExaFLOPS问鼎全球TOP500榜首，时隔8年重回世界第一。全系统采用纯国产CPU架构（零GPU加速卡），共计245万个处理器核心，彰显中国在E级超算领域的全自主可控实力。
     tags:
-    - 量子计算
-    - 硅基量子芯片
-    - 纯硅突破
-    - 国产替代
-    title: 中国攻克硅基量子芯片关键材料：国产高纯硅纯度达99.99%
+    - TOP500
+    - 超算
+    - 国产CPU
+    - ExaFLOPS
+    title: 中国纯国产超算「灵晟」登顶TOP500：245万核心突破2 ExaFLOPS
