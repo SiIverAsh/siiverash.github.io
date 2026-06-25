@@ -1,4 +1,20 @@
 {
+  "2026-06-26": [
+    "COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context",
+    "AMD Ryzen 9 9950X3D2 Dual Edition：双V-Cache旗舰",
+    "DeepSeek V4：百万Token原生上下文，稀疏注意力重塑推理效率",
+    "A Frame is Worth One Token: Efficient Generative World Modeling with Delta Tokens",
+    "browser-use/browser-use",
+    "3GPP正式批准首个6G RAN研究项目",
+    "NVIDIA RTX 5060 SUPER 12GB泄露：Blackwell中端超频版",
+    "OpenAI与Broadcom联合发布Jalapeño推理芯片：9个月光速流片",
+    "早見沙織",
+    "SPEAR: A Unified SSL Framework for Learning Speech and Audio Representations",
+    "Swift 6.2 正式发布：Typed Throws与分布式Actor落地",
+    "K近邻 (K-Nearest Neighbors, KNN)",
+    "IBM NanoStack：全球首个亚1纳米晶体管技术问世",
+    "Rethinking Fine-Tuning when Scaling Test-Time Compute: Limiting Confidence Improves Mathematical Reasoning"
+  ],
   "2026-06-24": [
     "nex-agi/Nex-N2：为行动而生的开源AI Agent模型",
     "AMD Radeon RX 9060：RDNA 4主流级正式上市",
@@ -139,20 +155,5 @@
     "BareWave: Waveform-Native Flow-Matching Text-to-Speech",
     "NVIDIA GeForce RTX 5050：Blackwell入门级GDDR7 9GB正式发布",
     "davidkimai/Context-Engineering"
-  ],
-  "2026-06-13": [
-    "Echo: Towards Advanced Audio Comprehension via Audio-Interleaved Reasoning",
-    "Swift 6.3: C互操作性全面增强与Android SDK正式稳定化",
-    "Google Gemma 4 12B: 开源多模态小模型新标杆",
-    "smolagents: HuggingFace轻量级代码思维Agent框架",
-    "Apple M5 Pro/Max: Fusion双Die架构重塑专业级Apple Silicon",
-    "VerseCrafter: Dynamic Realistic Video World Model with 4D Geometric Control",
-    "Discourse Graph Guided Document Translation with Large Language Models",
-    "决策树 (Decision Tree)",
-    "NVIDIA与TSMC将AI深度引入晶圆厂：cuLitho加速计算光刻全流程",
-    "MediaTek Filogic Wi-Fi 8单芯片平台获COMPUTEX 2026双项Best Choice Award",
-    "鬼頭明里",
-    "NVIDIA GeForce RTX 5060: Blackwell主流级正式发布",
-    "Vortex 3.0: 全栈开源RISC-V GPU，完整3D渲染管线与Vulkan支持落地"
   ]
 }

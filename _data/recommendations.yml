@@ -1,137 +1,140 @@
 algorithm:
-- desc: 经典监督式机器学习算法，通过寻找最大间隔超平面实现二分类。利用核技巧（Kernel Trick）将数据映射到高维空间处理非线性可分问题。核心优势在于对高维数据与小样本场景的泛化能力，广泛用于文本分类、图像识别等领域。
+- desc: KNN是最经典的非参数监督学习算法之一。核心思想：在特征空间中，通过距离度量（欧氏距离、曼哈顿距离等）找到与待预测样本最接近的K个训练样本，以多数投票（分类）或均值（回归）决定输出。无需显式训练过程（惰性学习），决策边界高度灵活。然而，KNN对维度灾难敏感，高维空间中距离度量失效，且预测时需遍历全量训练数据，时间复杂度和存储开销均为O(n·d)。通常在低维、小样本场景下仍具竞争力。
   tags:
-  - 机器学习
-  - 分类算法
-  - 核方法
-  - 经典算法
-  title: 支持向量机 (Support Vector Machine, SVM)
+  - KNN
+  - Non-parametric
+  - Distance-based
+  - Lazy Learning
+  title: K近邻 (K-Nearest Neighbors, KNN)
 cv_recommend:
-  agency: フリー（元プロ・フィット所属）
+  agency: アイムエンタープライズ (I'm Enterprise)
   hometown: 東京都
-  intro: 1970年6月24日出生于东京都，资深男性声优。其声线兼具清澈的少年感与沉稳的成年男性魅力，在旁白解说领域拥有极高评价，以克制而富有张力的语调控制能力著称。演艺生涯横跨1990年代至今逾三十年，积累了深厚的舞台功底与语音表现力。经历过所属事务所プロ・フィット的闭业后，以自由身份继续活跃于业界。他擅长通过微妙的语速变化与气息控制来塑造角色内心世界，在同辈声优中以敬业态度与稳定的演技水准受到广泛尊重。
-  name: 岩永哲哉
-date: '2026-06-24'
+  intro: 1991年5月29日出生于东京都，アイムエンタープライズ所属。以透明感与穿透力兼备的声线著称，能在柔和与凛然之间自如切换，声域宽广，从少女到成熟女性、少年角色均能精准驾驭。歌唱实力出众，多次举办个人演唱会及发行音乐专辑。演技细腻且富有层次感，在配音业界获得「演技派」的高度评价。近年来在旁白、朗读剧、外语片配音等领域也展现出卓越的表现力与适应力，持续拓展声优职业的边界，是当今日本声优界最具代表性的实力派之一。
+  name: 早見沙織
+date: '2026-06-26'
 history:
-- event: 微软正式发布Windows 98操作系统，首次集成Internet Explorer浏览器与桌面，奠定PC互联网时代基石。
-  year: '1998'
-- event: 人类基因组工作草图完成并公布，标志着生命科学进入基因组时代。
-  year: '2000'
-- event: 苹果iPhone 4正式在全球发售，Retina视网膜屏幕与FaceTime视频通话引领智能手机革命。
-  year: '2010'
-- event: 英国脱欧公投结果公布，52%选民支持脱离欧盟，对全球科技产业格局产生深远影响。
-  year: '2016'
-- event: 微软正式发布Windows 11操作系统，全新UI设计与Android应用原生支持成为最大亮点。
-  year: '2021'
-- event: 全国科技大会、国家科学技术奖励大会、两院院士大会在北京隆重召开，习近平为国家最高科学技术奖获得者颁奖。
-  year: '2024'
+- event: 《联合国宪章》在旧金山签署，51个创始成员国代表共同签署，联合国正式成立
+  year: '1945'
+- event: 柏林空运启动：美英为突破苏联对西柏林的地面封锁，展开史上最大规模空中补给行动
+  year: '1948'
+- event: 美国总统约翰·F·肯尼迪在西柏林发表著名演讲，宣称「我是柏林人」(Ich bin ein Berliner)
+  year: '1963'
+- event: 全球首个UPC通用产品条形码在美国俄亥俄州Troy市的Marsh超市被扫描——一包箭牌Juicy Fruit口香糖
+  year: '1974'
+- event: J.K.罗琳的处女作《哈利·波特与魔法石》由英国Bloomsbury出版社首次出版，首印仅500册
+  year: '1997'
+- event: 美国联邦最高法院在Obergefell v. Hodges案中以5:4裁定同性婚姻在全美50个州合法化
+  year: '2015'
 llm:
-- desc: 字节跳动于2026年6月23日发布豆包大模型2.1 Pro（Seed 2.1 Pro），Coding与Agent能力实现质变突破。在SWE-bench
-    Verified、HumanEval等编程基准上比肩GPT-5.5水平，支持自主Agent执行复杂任务（如芯片设计代码生成18小时自主运行），并开源深度思考模型。
+- desc: DeepSeek于2026年4月发布V4系列，采用改进的混合专家架构（MoE）与稀疏注意力机制，原生支持百万Token超长上下文窗口，无需位置外推即可稳定运行。V4
+    Pro版本在HumanEval、SWE-bench等Coding及Agent基准上达到开源模型SOTA，推理成本较V3降低约60%。采用Multi-head
+    Latent Attention压缩KV缓存，使百万Token上下文的显存占用仅为同等上下文长度下标准注意力的1/8。
   tags:
-  - 豆包
-  - LLM
-  - Agent
-  - 字节跳动
-  title: 豆包2.1 Pro (ByteDance Seed 2.1 Pro)：Coding与Agent能力跨越'质变点'
+  - DeepSeek
+  - MoE
+  - Million-Token Context
+  - Sparse Attention
+  title: DeepSeek V4：百万Token原生上下文，稀疏注意力重塑推理效率
 new_project:
-- desc: Nex-AGI团队于2026年6月开源Nex-N2，基于Qwen3.5进行后训练优化的AI Agent模型。专注于工具调用、多步推理与自主任务执行，在Function
-    Call准确率与复杂Agent工作流中表现优异，支持MCP协议集成与自定义工具链扩展。
+- desc: 开源AI Agent框架，让大语言模型能够像人类一样操控浏览器完成复杂任务。支持多标签页管理、表单填写、动态内容交互与视觉定位，内置自愈机制与XPath/CSS选择器智能回退。支持LangChain、CrewAI等多Agent编排框架集成，已广泛应用于Web自动化测试、价格监控、表单自动填报等场景。GitHub
+    Stars迅速增长至100K+，成为2026年最活跃的AI Agent工具链项目之一。
   tags:
   - AI Agent
-  - 开源
-  - GitHub
-  - Qwen
-  title: nex-agi/Nex-N2：为行动而生的开源AI Agent模型
-  url: https://github.com/nex-agi/Nex-N2
-paper:
-- desc: ACL 2026顶会论文，提出将LLM上下文窗口扩展至1600万Token。通过Token级重要性感知机制实现超长上下文的精准建模，在长文档理解与多轮对话等任务中刷新SOTA，为超长上下文LLM应用奠定基础。
-  tags:
-  - ACL 2026
-  - Long Context
+  - Browser Automation
+  - Web Scraping
   - LLM
-  - 16M Tokens
-  title: 'Every Token Counts: Generalizing 16M Ultra-Long Context in Large Language
-    Models'
-  url: https://aclanthology.org/2026.acl-long.464/
+  title: browser-use/browser-use
+  url: https://github.com/browser-use/browser-use
+paper:
+- desc: NeurIPS 2025最佳论文奖(Best Paper)。该研究颠覆性地指出：当模型在推理阶段分配更多计算资源时，传统微调中追求高置信度的策略反而会损害数学推理能力。论文提出Confidence-Limited
+    Fine-Tuning (CLFT)方法，通过在训练时主动限制模型置信度上界，保留推理不确定性，使test-time compute scaling的效率提升2-3倍。在MATH、GSM8K等基准上使用额外推理计算时性能大幅超越标准SFT。
+  tags:
+  - NeurIPS 2025
+  - Best Paper
+  - Test-Time Compute
+  - Mathematical Reasoning
+  title: 'Rethinking Fine-Tuning when Scaling Test-Time Compute: Limiting Confidence
+    Improves Mathematical Reasoning'
+  url: https://proceedings.neurips.cc/paper_files/paper/2025/file/e8f4eae0a41cab67fdead3aa6b77f083-Paper-Conference.pdf
 tech:
   Arch:
-  - desc: ARM于2026年正式发布ARMv10-A架构，相较ARMv9实现单线程IPC 30%的提升。集成原生AI加速指令（Matrix Multiplication
-      Engine指令扩展），支持INT8/FP16混合精度推理，目标覆盖端侧AI推理与边缘计算场景。
+  - desc: 2026年6月25日，IBM研究院发布NanoStack晶体管架构，采用垂直堆叠Gate-All-Around纳米片结构，实现CMOS 7A节点（特征尺寸<1nm），晶体管密度较当前2nm
+      GAA工艺提升约30%，功耗降低40%。采用自对准垂直堆叠工艺，可为摩尔定律延续至2030年代提供技术路径。
     tags:
-    - ARMv10
-    - ISA
-    - AI加速
-    - IPC提升
-    title: ARMv10指令集架构发布：IPC提升30%，原生AI加速引擎落地
+    - IBM
+    - NanoStack
+    - Sub-1nm
+    - Gate-All-Around
+    title: IBM NanoStack：全球首个亚1纳米晶体管技术问世
   Audio:
-  - desc: ICLR 2026录用论文，首次将Mamba状态空间模型与扩散控制结合用于语音克隆。相比Transformer架构推理速度提升3倍以上，在语音自然度与说话人相似度指标上达到新SOTA，仅需3秒参考音频即可完成高质量零样本克隆。
+  - desc: ICML 2026论文。提出SPEAR统一自监督学习框架，首次实现语音与通用音频在单一预训练范式下的联合表示学习。采用多粒度对比学习与跨模态对齐策略，在语音识别、声音事件检测、音乐分类等12个下游任务上平均超越此前SOTA
+      8.3%，证明了语音与音频表征可共享底层声学先验。
     tags:
-    - ICLR 2026
-    - TTS
-    - State-Space Model
-    - Diffusion
-    title: 'MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space
-      Modeling and Diffusion Control'
-    url: https://arxiv.org/abs/2604.00292
+    - ICML 2026
+    - Self-Supervised Learning
+    - Speech
+    - Audio Representations
+    title: 'SPEAR: A Unified SSL Framework for Learning Speech and Audio Representations'
   CPU:
-  - desc: Intel于CES 2026发布Panther Lake处理器（Core Ultra 300系列），首发Intel 18A（1.8nm级）制程。最高14核心（P-core
-      + E-core + LP E-core三丛集），P-core频率达5.1GHz，集成第四代NPU（AI算力达48 TOPS），共14款SKU覆盖9W至45W。
+  - desc: AMD于2026年4月22日发布Ryzen 9 9950X3D2 Dual Edition处理器，首次在AM5平台实现双CCD各搭载一枚3D V-Cache芯片的设计，总计208MB缓存（128MB
+      L3 + 64MB 3D V-Cache ×2 + 16MB L2），16核32线程Zen 5架构，最高加速频率5.7GHz，TDP 200W。相较单V-Cache的9950X3D，多线程生产力与游戏性能同时受益。
     tags:
-    - Intel 18A
-    - Panther Lake
-    - Core Ultra
-    - AI PC
-    title: Intel Core Ultra Series 3 (Panther Lake)：首款Intel 18A制程AI PC平台
+    - AMD
+    - Zen 5
+    - 3D V-Cache
+    - AM5
+    title: AMD Ryzen 9 9950X3D2 Dual Edition：双V-Cache旗舰
   Computer Vision:
-  - desc: CVPR 2026论文，提出可扩展的测试时训练框架用于大规模3D重建。通过动态适配机制在推理阶段优化场景表征，无需额外标注即可提升重建精度，在稀疏视角与大场景设定下显著超越现有方法。
+  - desc: CVPR 2026论文。提出Delta Tokens方法，仅需每帧1个token即可完成世界状态的高效更新，通过帧间差分编码将视频生成的计算复杂度降低一个数量级，在保持生成质量的同时实现实时世界建模。核心创新在于将连续帧映射到潜在空间中的稀疏变化表示，使生成式世界模型首次具备了实用级效率。
     tags:
     - CVPR 2026
-    - 3D重建
-    - Test-Time Training
-    - 可扩展架构
-    title: 'Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction'
-    url: https://arxiv.org/abs/2604.08542
+    - World Model
+    - Delta Tokens
+    - Generative AI
+    title: 'A Frame is Worth One Token: Efficient Generative World Modeling with Delta
+      Tokens'
   GPU:
-  - desc: AMD Radeon RX 9060基于RDNA 4架构Navi 44 GPU，配备28个CU（1792个流处理器），搭载8GB 18Gbps
-      GDDR6显存，TDP仅132W。主打1080p高帧率游戏，支持FSR 4与AI加速，定位主流级甜品市场。
+  - desc: 据多方泄露消息，NVIDIA RTX 50 SUPER系列已重回正轨，RTX 5060 SUPER预计搭载GB206-350核心、4608 CUDA核心、12GB
+      GDDR7显存（192-bit位宽），TGP约180W。相比RTX 5060标准版，显存容量提升50%、位宽提升50%，目标在1080p高刷新率与1440p入门市场形成对AMD
+      RX 9060的竞争优势。
     tags:
-    - RDNA 4
-    - AMD
-    - 显卡
-    - GDDR6
-    title: AMD Radeon RX 9060：RDNA 4主流级正式上市
+    - NVIDIA
+    - RTX 5060 SUPER
+    - Blackwell
+    - GDDR7
+    title: NVIDIA RTX 5060 SUPER 12GB泄露：Blackwell中端超频版
   Lang:
-  - desc: JetBrains于2026年6月发布Kotlin 2.4.0，引入guard condition守卫子句语法（减少嵌套层级）、Kotlin/Native类型安全增强、以及K2编译器性能大幅优化。在JVM、JS、Native三平台编译速度平均提升15-20%。
+  - desc: 随WWDC 2025发布，Swift 6.2实现多项关键语言演进：Typed Throws允许函数声明具体错误类型以增强类型安全；Async Function
+      Isolation完善了Swift 6并发模型中的actor隔离语义；Distributed Actor新增对集群内透明方法调用的原生支持。Xcode
+      26同步提供完整工具链适配。
     tags:
-    - Kotlin
-    - JVM
-    - 编程语言
-    - JetBrains
-    title: Kotlin 2.4.0 正式发布：守卫子句与跨平台类型安全全面升级
+    - Swift
+    - Typed Throws
+    - Concurrency
+    - Apple
+    title: Swift 6.2 正式发布：Typed Throws与分布式Actor落地
   NLP:
-  - desc: ACL 2026论文，突破LLM超长上下文瓶颈，将上下文窗口扩展至1600万Token量级。提出Token级重要性感知机制，在全长上下文中精准捕获关键信息，在长文档理解、多轮对话等任务中取得SOTA。
+  - desc: ACL 2026长文论文。针对LLM Agent在多步长程推理任务中面临的上下文漂移与遗忘问题，提出COMPASS框架——通过动态演化上下文表示与阶段性记忆压缩机制，在保持关键信息的同时逐步精化推理路径。在WebArena与GAIA基准上长程任务成功率提升超过22%。
     tags:
     - ACL 2026
-    - Long Context
-    - LLM
-    - 16M Tokens
-    title: 'Every Token Counts: Generalizing 16M Ultra-Long Context in Large Language
-      Models'
-    url: https://aclanthology.org/2026.acl-long.464/
+    - LLM Agent
+    - Long-Horizon Reasoning
+    - Context Evolution
+    title: 'COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context'
   Net:
-  - desc: 2026年6月，3GPP新加坡全会正式批准Release 21，锁定6G标准化时间表。Rel-21将定义6G场景与技术需求（含AI原生空口、通感一体化等），预计2029年完成ASN.1/OpenAPI冻结，2030年实现6G商用部署。
+  - desc: 2026年6月，3GPP在TSG#112全体会议上正式批准首个6G无线接入网（RAN）研究项目（SI），标志着6G从ITU IMT-2030愿景正式进入技术规范制定阶段。该研究聚焦新型空口波形、AI原生RAN架构、太赫兹接入与通感一体化等关键技术，预计为2028年Release
+      21的6G规范奠定基础。
     tags:
     - 6G
     - 3GPP
-    - Release 21
-    - 标准化
-    title: 3GPP Release 21正式获批：6G标准化全面启动
+    - RAN
+    - IMT-2030
+    title: 3GPP正式批准首个6G RAN研究项目
   News:
-  - desc: 2026年6月，国家超算深圳中心「灵晟」以持续性能超2 ExaFLOPS问鼎全球TOP500榜首，时隔8年重回世界第一。全系统采用纯国产CPU架构（零GPU加速卡），共计245万个处理器核心，彰显中国在E级超算领域的全自主可控实力。
+  - desc: 2026年6月24日，OpenAI与Broadcom联合发布首款定制AI推理ASIC——Jalapeño。该芯片采用TSMC 3nm工艺、大尺寸Reticle设计，从架构定义到流片仅耗时9个月。专为大语言模型推理优化，支持FP4/FP8混合精度，每瓦token生成效率较H100提升4.5倍，单芯片可承载GPT-5级别模型推理。OpenAI宣称该芯片可将推理成本降低50%。
     tags:
-    - TOP500
-    - 超算
-    - 国产CPU
-    - ExaFLOPS
-    title: 中国纯国产超算「灵晟」登顶TOP500：245万核心突破2 ExaFLOPS
+    - OpenAI
+    - Broadcom
+    - ASIC
+    - AI Inference
+    title: OpenAI与Broadcom联合发布Jalapeño推理芯片：9个月光速流片
