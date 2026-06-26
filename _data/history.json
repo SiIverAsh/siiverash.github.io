@@ -1,4 +1,20 @@
 {
+  "2026-06-27": [
+    "上坂すみれ",
+    "Meta Llama 4：原生多模态MoE开源旗舰模型家族",
+    "Stable Audio Open 2.0：开源扩散模型音频生成平台",
+    "AST SpaceMobile：LEO卫星直连手机5G宽带商用启航",
+    "随机森林 (Random Forest)：Bagging集成的经典基石算法",
+    "Python 3.14 正式发布：自由线程默认启用与JIT编译器落地",
+    "WWDC 2026：Apple Intelligence 2.0携Swift 6.3与Xcode 18震撼登场",
+    "GiLT：依赖图增强Transformer语言模型 (ACL 2026)",
+    "Intel Arc Pro B70：Big Battlemage 32GB工作站GPU，367 TOPS AI算力",
+    "Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio Language Models (NeurIPS 2025)",
+    "HBM4高带宽内存：1.6TB/s单栈带宽，AI加速器新引擎",
+    "vllm-project/vllm：高吞吐低延迟LLM推理引擎",
+    "Dynamic 3D Gaussian Splatting：实时4D场景重建与渲染新范式",
+    "Apple M5 Pro/Max：N3P制程，统一内存架构再进化"
+  ],
   "2026-06-26": [
     "COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context",
     "AMD Ryzen 9 9950X3D2 Dual Edition：双V-Cache旗舰",
@@ -139,21 +155,5 @@
     "SiFive Performance P570 Gen3: RVA23 RISC-V 高性能核心",
     "Goose: 可扩展的开源 AI 代理",
     "Google Gemini 3.1 Flash TTS: 超低延迟文本到语音"
-  ],
-  "2026-06-14": [
-    "阿里巴巴玄铁C950：RVA23合规64位RISC-V边缘AI核心",
-    "Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index",
-    "D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time",
-    "Python 3.14.6 发布：内置错误信息增强与模式匹配性能革新",
-    "Ericsson 世界首次6G现场试验：德州7GHz频段突破",
-    "Google与三星洽谈次世代AI芯片制造合作",
-    "AMD Ryzen 9 9950X3D2 Dual Edition：双3D V-Cache 208MB怪兽",
-    "LLMs Get Lost In Multi-Turn Conversation",
-    "Anthropic Claude Fable 5：Mythos级通用推理模型首次公开",
-    "随机森林 (Random Forest)",
-    "早見沙織",
-    "BareWave: Waveform-Native Flow-Matching Text-to-Speech",
-    "NVIDIA GeForce RTX 5050：Blackwell入门级GDDR7 9GB正式发布",
-    "davidkimai/Context-Engineering"
   ]
 }
