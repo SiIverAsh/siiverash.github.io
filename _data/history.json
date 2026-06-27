@@ -1,4 +1,20 @@
 {
+  "2026-06-28": [
+    "Gemma 3 27B：Google开放多模态大语言模型家族",
+    "AMD Radeon RX 9060 XT：RDNA 4中高端主力16GB GDDR6上市",
+    "逻辑回归 (Logistic Regression)",
+    "CXL 3.1规范发布：内存池化与多级交换架构标准化",
+    "内田真礼",
+    "Qwen2.5-VL-72B：通义千问旗舰视觉语言模型",
+    "Qualcomm Snapdragon X Elite Gen 2：Oryon V3核心登陆AI PC市场",
+    "OpenVoice V2：开源瞬时语音克隆与精细音色控制框架",
+    "Apple Vision Pro 2正式发售：更轻、更强、更亲民",
+    "5G-Advanced (3GPP Release 18) 全球商用部署加速",
+    "microsoft/graphrag",
+    "Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction",
+    "Mojo 1.0：面向AI开发者的Python超集语言正式发布",
+    "Jamba 1.5 Large：SSM-Transformer混合架构开源大模型"
+  ],
   "2026-06-27": [
     "上坂すみれ",
     "Meta Llama 4：原生多模态MoE开源旗舰模型家族",
@@ -139,21 +155,5 @@
     "GHPT: Real-Time Relightable Gaussian Splatting using Hybrid Path Tracing",
     "Kimi K2.7 Code: Moonshot AI开源1T参数Agentic Coding模型",
     "ASUS ROG Rapture GT-BN98 Pro: 全球首款Wi-Fi 8路由器"
-  ],
-  "2026-06-16": [
-    "水瀬いのり",
-    "AMD Ryzen 9 9950X3D: Zen 5 3D V-Cache 旗舰",
-    "Meta SAM 3D: 通用三维分割模型",
-    "Broadcom 企业级 Wi-Fi 8 AP 与交换机平台",
-    "TSMC 亮相 A13 工艺：2nm 级节点无需 High-NA EUV",
-    "NVIDIA GeForce RTX 5070: Blackwell 中端主力",
-    "Interleaving Reasoning for Better Text-to-Image Generation",
-    "逻辑回归 (Logistic Regression)",
-    "Spark NLP 6.3.3: ModernBERT嵌入与向量数据库集成",
-    "Mistral Large 3: 675B 参数 MoE 开源旗舰",
-    "TypeScript 5.7: 模式匹配与类型系统增强",
-    "SiFive Performance P570 Gen3: RVA23 RISC-V 高性能核心",
-    "Goose: 可扩展的开源 AI 代理",
-    "Google Gemini 3.1 Flash TTS: 超低延迟文本到语音"
   ]
 }

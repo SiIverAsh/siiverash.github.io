@@ -1,152 +1,151 @@
 algorithm:
-- desc: 随机森林由Leo Breiman于2001年正式提出，是集成学习中Bagging方法的代表算法。核心思想为：通过Bootstrap自助采样构建T棵CART决策树，每棵树在分裂时仅随机选取√d个特征（d为总特征数）作为候选分裂子集，以最大化树间多样性。最终分类采用多数投票，回归采用均值聚合。泛化误差上界为E*
-    ≤ ρ(1-s²)/s²，其中s为单棵树强度，ρ为树间平均相关系数——该公式解释了随机森林通过降低树间相关性(ρ↓)来控制过拟合的数学本质。OOB(out-of-bag)误差估计可替代交叉验证，特征重要性度量（MDI/MDA）天然内嵌。工程上支持高度并行化（每棵树独立训练），对缺失值与非平衡数据鲁棒，至今仍是Kaggle竞赛与工业界表格数据建模的基线首选。
+- desc: 经典二分类与多分类线性模型，通过Sigmoid/Softmax函数将线性组合映射为概率输出。基于最大似然估计优化，配合L1/L2正则化可有效防止过拟合。作为线性分类器的基石，其输出天然具备概率可解释性，是信用评分、医疗诊断、推荐系统中不可或缺的基线算法，同时也是深度学习交叉熵损失的数学前身。
   tags:
-  - Random Forest
-  - Bagging
-  - Ensemble Learning
-  - Decision Tree
-  title: 随机森林 (Random Forest)：Bagging集成的经典基石算法
+  - 逻辑回归
+  - 分类算法
+  - 最大似然估计
+  - 可解释性
+  - Sigmoid
+  title: 逻辑回归 (Logistic Regression)
 cv_recommend:
-  agency: VOICE KIT（个人事务所）
-  hometown: 神奈川県
-  intro: 1991年12月19日生まれの女性声優。上智大学外国語学部ロシア語学科を卒業し、ロシア文化・ソビエト史への深い造詣で知られ、その知的バックグラウンドは業界内でも稀有な存在として高く評価されている。2012年に本格的な声優キャリアをスタートさせ、独特のハスキーかつ張りのある声質を活かしてコメディからシリアスまで幅広い役柄を演じ分ける実力を確立。2020年には自ら個人事務所VOICE
-    KITを設立し、声優業に加えてアーティスト活動も精力的に展開している。ラジオパーソナリティとしても卓越したトークセンスを発揮し、知性とユーモアが絶妙に融合した語り口で多くのリスナーを魅了し続けている。後進声優からもそのプロ意識と教養の深さについて尊敬を集める、現代声優界を代表する実力派の一人である。
-  name: 上坂すみれ
-date: '2026-06-27'
+  agency: アイムエンタープライズ (I'm Enterprise)
+  hometown: 东京都
+  intro: 内田真礼于2010年代初期出道，以其清亮而富有穿透力的声线迅速获得业界瞩目。她的音域宽广，能自如切换于元气活泼与冷静沉稳之间，展现出极强的角色塑造弹性与情感表现力。作为I'm
+    Enterprise所属声优，她在配音工作之外亦以歌手身份活跃，签约Pony Canyon后陆续发行多张个人专辑与单曲，音乐风格融合J-Pop与轻摇滚元素，舞台表现力备受认可。其专业态度与长期稳定高质量的演绎输出，使她在同代女性声优中稳居一线地位，商业价值与行业口碑均极为突出，持续拓展多元化演艺事业版图。
+  name: 内田真礼
+date: '2026-06-28'
 history:
-- event: Atari公司由Nolan Bushnell与Ted Dabney在美国加州正式创立，标志街机游戏产业的开端——同年11月推出《Pong》彻底改变了电子游戏史。
-  year: '1972'
-- event: 世界首台自动取款机（ATM）在英国伦敦恩菲尔德的巴克莱银行支行投入使用，由John Shepherd-Barron发明，首次实现24小时自助现金存取。
-  year: '1967'
-- event: 苏联奥布宁斯克核电站（Obninsk NPP）正式并网发电，成为世界首座向电网供电的民用核电站，装机容量5MW，开启和平利用核能时代。
-  year: '1954'
-- event: Spyglass公司（Mosaic浏览器商业化开发商，后授权微软成为Internet Explorer基础）在NASDAQ成功上市，IPO融资超3000万美元，成为互联网浏览器商业化的里程碑。
-  year: '1995'
-- event: 比尔·盖茨（Bill Gates）正式告别微软日常管理工作，将全部精力投入比尔及梅琳达·盖茨基金会，结束其在微软33年的全职领导生涯。
-  year: '2008'
-- event: 美国联邦贸易委员会（FTC）正式启动国家「Do Not Call」电话营销拒接登记系统，首日超73.5万号码注册，成为全球最大规模的消费者隐私保护数据库之一。
-  year: '2003'
+- event: 奥匈帝国皇储斐迪南大公在萨拉热窝遇刺身亡，一个月后第一次世界大战全面爆发
+  year: '1914'
+- event: 《凡尔赛条约》在巴黎凡尔赛宫镜厅签署，正式结束第一次世界大战，对战败国德国施加严厉惩罚条款
+  year: '1919'
+- event: 比利时乐器制造家阿道夫·萨克斯获得萨克斯管专利，这一铜管乐器后来成为爵士乐的灵魂象征
+  year: '1846'
+- event: 美国纽约格林威治村石墙酒吧爆发持续数日的抗议冲突，触发全球现代LGBTQ+权利运动
+  year: '1969'
+- event: 朝鲜战争爆发第三天，朝鲜人民军攻陷韩国首都汉城（今首尔），战线迅速南推
+  year: '1950'
+- event: WBA重量级拳王争霸赛中迈克·泰森咬伤伊万德·霍利菲尔德耳朵，被吊销拳击执照并罚款300万美元
+  year: '1997'
 llm:
-- desc: Meta于2025年4月发布Llama 4系列，采用原生多模态Mixture-of-Experts架构。Scout（109B总参/17B激活，16专家）可在单张H100运行，Maverick（400B总参/17B激活，128专家）达到GPT-4o级别性能但推理成本仅1/10，Behemoth（~2T总参/288B激活）作为教师模型仍在训练中。所有变体原生支持文本+图像+音频输入，使用Early
-    Fusion将多模态编码器与MoE语言骨干深度融合。预训练语料达40T多模态token，引入MetaPragmatic数据筛选管线对低质内容进行语义级过滤。全系以Llama
-    4 Community License开源，权重可通过Hugging Face获取，成为开源生态最重要的基座模型之一。
+- desc: Google DeepMind发布Gemma 3系列，旗舰27B参数模型支持128K上下文窗口与原生多模态理解（图像+文本输入），在LMSYS Chatbot
+    Arena上ELO评分超越Llama 3.1 70B。采用分组查询注意力(GQA)与专家混合路由优化，可运行于单张NVIDIA H100 GPU，完全开放权重商用友好。
   tags:
-  - Llama 4
-  - Mixture of Experts
-  - Multimodal
-  - Open Source
-  title: Meta Llama 4：原生多模态MoE开源旗舰模型家族
+  - Gemma 3
+  - Google
+  - 开放权重
+  - 128K上下文
+  - 多模态
+  title: Gemma 3 27B：Google开放多模态大语言模型家族
 new_project:
-- desc: vLLM是UC Berkeley开源的LLM推理加速框架，核心创新PagedAttention通过将KV Cache以「页」(Page)为单位进行虚拟内存式管理，消除显存碎片，将GPU显存利用率从传统~40%提升至~95%。支持Continuous
-    Batching动态合并请求，吞吐量较Hugging Face Transformers提升最高24倍。v0.8+版本新增：FP8量化推理、Speculative
-    Decoding投机采样（2-3倍加速）、Multi-LoRA热切换、与AWQ/GPTQ量化格式兼容、Tensor Parallelism多卡并行、前缀缓存(Prefix
-    Cache)自动重用共享前缀KV Cache、以及结构化JSON输出约束。日均GitHub Stars增长超200，已成为OpenAI、Anthropic、Databricks等企业级LLM部署的首选推理运行时。
+- desc: 微软开源基于图的检索增强生成（GraphRAG）框架。从非结构化文本自动构建实体知识图谱与社区层次结构，支持全局语义搜索与局部实体关联查询双模式，在复杂多跳问答与文档摘要任务上显著超越传统向量RAG方案，已获65k+
+    GitHub Star。
   tags:
-  - LLM Inference
-  - PagedAttention
-  - GPU Optimization
-  - Open Source
-  title: vllm-project/vllm：高吞吐低延迟LLM推理引擎
-  url: https://github.com/vllm-project/vllm
+  - GraphRAG
+  - 知识图谱
+  - RAG
+  - 微软
+  - 开源
+  title: microsoft/graphrag
+  url: https://github.com/microsoft/graphrag
 paper:
-- desc: NVIDIA提出Audio Flamingo 3，一个全开源的大音频语言模型(LALM)，在Audio Flamingo系列基础上实现三项突破：①
-    构建AudioSkillBench-3，包含60万条覆盖42项音频理解任务的高质量指令数据（音乐理论分析、声学场景推理、多轨对话理解等）；② 提出AudioQFormer++模态桥接器，将变长音频编码为128个压缩Token并保持时间分辨率；③
-    引入CoT-Audio推理策略，在复杂音频推理任务中提升准确率12.3%。模型以Qwen2-7B为语言骨干，在10项zero-shot音频理解基准上超越GPT-4o
-    Audio与Gemini 2.5 Pro，全部模型权重、训练数据与代码以Apache 2.0开源。
+- desc: NeurIPS 2024最佳论文(Oral)。该工作提出VAR范式，将图像自回归建模从传统'下一个Token'重新定义为'下一个尺度'，在ImageNet
+    256×256上FID达到1.73，推理速度较扩散模型提升20倍以上。该范式为自回归视觉生成开辟了全新方向，已被广泛引用于后续视觉生成研究。
   tags:
-  - Audio LLM
-  - NeurIPS 2025
-  - Open Source
-  - Multimodal
-  title: 'Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio
-    Language Models (NeurIPS 2025)'
-  url: https://proceedings.neurips.cc/paper_files/paper/2025/file/3babb6b453cb59d87cb58a1219ef914b-Paper-Conference.pdf
+  - NeurIPS 2024
+  - Best Paper
+  - 视觉生成
+  - 自回归模型
+  - VAR
+  title: 'Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale
+    Prediction'
+  url: https://arxiv.org/abs/2404.02905
 tech:
   Arch:
-  - desc: JEDEC于2025年底正式发布HBM4标准(JESD239)，关键规格：单栈带宽跃升至1.6TB/s（2048-bit接口，数据速率6.4Gbps/pin），较HBM3E提升60%；支持16-Hi堆叠达64GB单栈容量；引入PAM4信令与全新硬宏PHY以减少功耗30%；支持双基座(die-to-die)直接键合连接GPU/ASIC逻辑芯片与内存堆叠，将互连距离从微米级压缩至亚微米级，延迟降低40%。NVIDIA
-      Rubin与AMD MI400系列将率先搭载，预计2026Q4量产，成为下一代百亿亿次AI训练集群的关键内存技术。
+  - desc: CXL联盟正式发布Compute Express Link 3.1规范，引入PBR（Peer-to-Peer Backbone Routing）多级交换架构，支持跨主机全局内存池化与动态分配，Type-3内存扩展延迟降至50ns以内。新增可信安全协议TSP，为数据中心CXL内存部署提供端到端完整性保护。
     tags:
-    - HBM4
-    - High Bandwidth Memory
-    - JEDEC
-    - AI Accelerator
-    title: HBM4高带宽内存：1.6TB/s单栈带宽，AI加速器新引擎
+    - CXL 3.1
+    - 内存池化
+    - PBR
+    - 数据中心
+    - 互连架构
+    title: CXL 3.1规范发布：内存池化与多级交换架构标准化
   Audio:
-  - desc: Stability AI发布的Stable Audio Open 2.0基于DiT（Diffusion Transformer）架构，在44.1kHz立体声潜空间中进行扩散去噪。采用改进的VAE将音频压缩256倍至连续latent，配合Flash
-      Attention 3实现47秒音频在单张A100上仅需8秒生成。支持文本到音频、音频到音频风格迁移及音乐续写，FAD（Fréchet Audio Distance）降至1.32，主观MOS评分4.21/5。全栈开源（模型权重+训练代码+数据集），成为开源音频生成生态的重要基石。
+  - desc: MyShell发布OpenVoice V2，实现毫秒级零样本语音克隆，支持音色、情感、口音、节奏等多粒度独立控制。仅需数秒参考音频即可复刻任意说话人音色，支持中英日韩等主要语言跨语种合成，完全开源，MOS评分达到4.3，接近商业闭源方案水平。
     tags:
-    - Diffusion Model
-    - Audio Generation
-    - Open Source
-    - DiT
-    title: Stable Audio Open 2.0：开源扩散模型音频生成平台
+    - 语音克隆
+    - 零样本
+    - OpenVoice
+    - TTS
+    - 开源
+    title: OpenVoice V2：开源瞬时语音克隆与精细音色控制框架
   CPU:
-  - desc: Apple于2026年3月发布M5 Pro与M5 Max芯片，采用TSMC N3P（3nm增强版）制程。M5 Pro集成14核CPU（10性能核P-Core
-      + 4能效核E-Core，微架构代号Coll-P），20核GPU（第5代Apple GPU架构），38TOPS 16核Neural Engine；M5
-      Max升级至16核CPU（12P+4E）与40核GPU，统一内存带宽达640GB/s（LPDDR5X-9600），最大支持128GB。相较M4 Max，单核Geekbench
-      6提升18%（~4,500分），多核达28,000分，GPU Metal性能+25%。Thunderbolt 5（120Gbps）集成于SoC，UltraFusion
-      2.0互连延迟降至25ns，为2026年MacBook Pro与Mac Studio提供桌面级能效比。
+  - desc: 高通发布Snapdragon X Elite Gen 2 (SC8480XP)，采用第二代4nm工艺集成12个Oryon V3高性能核心，最高单核频率4.5GHz。Hexagon
+      NPU升级至75 TOPS，支持LPDDR6-9600内存，PCIe 5.0 x16接口。Geekbench 6单核突破3700分，多核超17500分，能效比领先x86竞品50%。
     tags:
-    - Apple M5
-    - TSMC N3P
-    - Unified Memory
-    - ARMv9
-    title: Apple M5 Pro/Max：N3P制程，统一内存架构再进化
+    - Snapdragon X Elite
+    - Oryon V3
+    - LPDDR6
+    - AI PC
+    - Qualcomm
+    title: Qualcomm Snapdragon X Elite Gen 2：Oryon V3核心登陆AI PC市场
   Computer Vision:
-  - desc: 动态3D高斯泼溅（Dynamic 3DGS）将3D Gaussian Splatting扩展至时域，通过4D高斯原语（时空协方差矩阵+高阶球谐系数）对动态场景进行可微渲染。核心创新包括：HexPlane编码器将6D时空坐标分解为六平面特征场以实现紧凑表示；变形网络通过MLP预测逐帧高斯位移与旋转；每帧仅需~5ms渲染1080p画面。PSNR较NeRF-based方法提升3-5dB，训练时间从数日压缩至数小时，支持实时自由视点合成，正成为VR/AR、数字孪生与元宇宙内容生成的新基础设施。
+  - desc: 阿里巴巴发布Qwen2.5-VL系列旗舰模型，最大72B参数。支持动态分辨率图像输入、最长1小时视频理解及多页文档解析，视觉推理能力在MMBench、MathVista等多个基准上超越GPT-4V与Claude
+      3.5 Sonnet，原生支持中英双语及29种以上语言图文交互。
     tags:
-    - 3D Gaussian Splatting
-    - 4D Reconstruction
-    - Neural Rendering
-    - CVPR 2026
-    title: Dynamic 3D Gaussian Splatting：实时4D场景重建与渲染新范式
+    - Vision-Language
+    - Qwen
+    - 多模态理解
+    - 72B参数
+    - Alibaba
+    title: Qwen2.5-VL-72B：通义千问旗舰视觉语言模型
   GPU:
-  - desc: Intel于2026年3月发布Arc Pro B70「Big Battlemage」专业GPU，基于BMG-G31大核心，采用Xe2 HPG架构，集成28个Xe2核心（448个Vector
-      Engine + 448个XMX Matrix Engine）。配备32GB GDDR6显存（256-bit位宽，672GB/s带宽），INT8 AI算力达367
-      TOPS（BF16为183 TFLOPS），FP32单精度渲染性能29.4 TFLOPS。支持PCIe 5.0 x16、AV1双编码器硬加速、DP 2.1
-      UHBR20输出。TBP仅200W，单槽被动散热设计面向数据中心与边缘AI推理场景，定价$799，直指NVIDIA RTX 4000 SFF Ada市场。
+  - desc: AMD推出Radeon RX 9060 XT，基于RDNA 4架构Navi 48核心，48个Compute Unit（3072流处理器），16GB
+      GDDR6显存配256-bit位宽。第二代AI加速器提供180 TOPS INT8推理性能，支持FSR 4超分辨率与Anti-Lag 2低延迟技术，4K游戏性能对标RTX
+      4070 Ti，TBP仅220W。
     tags:
-    - Intel Arc
-    - Battlemage
-    - Workstation GPU
-    - Xe2
-    title: Intel Arc Pro B70：Big Battlemage 32GB工作站GPU，367 TOPS AI算力
+    - RDNA 4
+    - RX 9060 XT
+    - 16GB GDDR6
+    - FSR 4
+    - AMD
+    title: AMD Radeon RX 9060 XT：RDNA 4中高端主力16GB GDDR6上市
   Lang:
-  - desc: Python 3.14（PEP 745）于2026年4月正式发布，标志性更新包括：① 自由线程（PEP 703）正式成为默认模式，GIL可完全禁用，多线程CPU密集型任务实现真正并行，NumPy/Pandas多线程性能提升3-8倍；②
-      第二层JIT编译器（copy-and-patch技术）在运行时将热点字节码透明编译为x86-64/AArch64机器码，CPython纯Python循环加速1.5-5倍；③
-      注解延迟求值（PEP 649）落地，类型提示零运行时开销；④ 模式匹配新增守卫子句(guard clause)与解构赋值增强；⑤ 新增TaskGroup异常聚合。CPython解释器性能正式迈入JIT时代。
+  - desc: Modular公司正式发布Mojo 1.0，作为Python的严格超集，在保持Python生态兼容的同时提供系统级编程性能。内置MLIR编译器框架，支持SIMD向量化、异构计算（GPU/TPU）及零成本抽象，矩阵乘法性能可达纯Python的35,000倍，直接对标CUDA开发体验。
     tags:
-    - Python
-    - Free-Threading
-    - JIT Compiler
-    - No-GIL
-    title: Python 3.14 正式发布：自由线程默认启用与JIT编译器落地
+    - Mojo
+    - Python超集
+    - MLIR
+    - Modular
+    - AI编程语言
+    title: Mojo 1.0：面向AI开发者的Python超集语言正式发布
   NLP:
-  - desc: GiLT (Graph-injected Language Transformer) 提出将句法依存图作为显式结构先验注入Transformer注意力机制，通过图卷积网络编码依存边关系后与自注意力分布进行门控融合。在12个NLU基准上平均提升2.1%，其中句法敏感任务（如语义角色标注、共指消解）提升达4.7%。方法无需额外预训练，仅增加3%参数量，可与现有PLM即插即用集成。
+  - desc: AI21 Labs发布Jamba 1.5系列，Large版本总参数量398B（94B活跃参数），采用Mamba状态空间模型与Transformer混合架构，实现256K有效上下文窗口。在HellaSwag、ARC-Challenge等推理基准上逼近Llama
+      3.1 405B，推理速度较纯Transformer架构提升3倍。
     tags:
-    - ACL 2026
-    - Graph Neural Network
-    - Syntax-Aware
-    - Transformer
-    title: GiLT：依赖图增强Transformer语言模型 (ACL 2026)
+    - SSM-Transformer
+    - Jamba
+    - AI21 Labs
+    - 256K上下文
+    - 混合架构
+    title: Jamba 1.5 Large：SSM-Transformer混合架构开源大模型
   Net:
-  - desc: AST SpaceMobile的BlueBird LEO星座（5颗Block 1卫星，轨道高度725-740km）已通过FCC商用许可，实现普通4G/5G手机无需任何硬件修改即可直连卫星进行宽带通信。每颗卫星搭载64m²相控阵天线，支持多达3000个波束成形同时连接，下行峰值速率达120Mbps（单波束21Mbps
-      × 6波束聚合）。已与AT&T、Vodafone、Rakuten签订商用漫游协议，2026年中启动北美及欧洲初始商用服务，标志着非地面网络(NTN)从紧急通信向日常宽带的历史性跨越。
+  - desc: 3GPP Release 18作为5G-Advanced首个标准版本于2024年冻结，2025-2026年全球运营商开始规模部署。核心技术包括MIMO增强（32TRx→64TRx）、AI/ML原生网络优化框架、厘米级定位增强、无源物联网（Ambient
+      IoT）支持，下行峰值速率突破10Gbps。
     tags:
-    - LEO Satellite
-    - Direct-to-Phone
-    - 5G NTN
-    - Phased Array
-    title: AST SpaceMobile：LEO卫星直连手机5G宽带商用启航
+    - 5G-Advanced
+    - 3GPP R18
+    - MIMO增强
+    - AI原生网络
+    - Ambient IoT
+    title: 5G-Advanced (3GPP Release 18) 全球商用部署加速
   News:
-  - desc: 2026年6月22日WWDC开幕，Apple发布Apple Intelligence 2.0——全面集成于iOS 20/macOS 16的端侧多模态AI系统。核心升级包括：M5
-      Neural Engine原生支持38TOPS推理，可本地运行17B参数MoE模型（激活3B）；Siri全面重构，引入屏幕内容理解与跨应用任务链；Xcode
-      18集成Swift Assist 2.0，支持自然语言生成完整SwiftUI视图并实时预览；Swift 6.3正式发布，Typed Throws、分布式Actor与所有权(Ownership)特性落地，引入embedded
-      Swift子集支持裸机与嵌入式开发；RealityKit 6新增动态全局光照与Gaussian Splatting原生渲染管线。整个生态向AI-First开发范式演进。
+  - desc: Apple Vision Pro 2于2026年6月正式全球发售，搭载M5芯片与第二代R2协处理器，重量较初代减轻35%至约410g。新增EyeSight
+      2.0外显技术与空间Persona实时交互，visionOS 3支持多应用空间窗口自由布局，起售价降至$1,499（约¥10,999），大幅拓宽消费级市场。
     tags:
-    - WWDC 2026
-    - Apple Intelligence
-    - Swift 6.3
-    - On-Device AI
-    title: WWDC 2026：Apple Intelligence 2.0携Swift 6.3与Xcode 18震撼登场
+    - Apple
+    - Vision Pro 2
+    - M5芯片
+    - 空间计算
+    - XR
+    title: Apple Vision Pro 2正式发售：更轻、更强、更亲民
