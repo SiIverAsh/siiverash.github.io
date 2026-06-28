@@ -1,4 +1,20 @@
 {
+  "2026-06-29": [
+    "Veo 2：Google DeepMind视频生成模型全面开放",
+    "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+    "Java 26 正式发布：值类型预览与虚拟线程增强",
+    "欧盟《人工智能法案》全面实施：全球首部全面AI监管法律生效",
+    "AMD Ryzen 7 9800X3D：Zen 5单CCD 3D V-Cache游戏旗舰",
+    "Claude 4 Opus：Anthropic新一代旗舰推理模型",
+    "CosyVoice 3：零样本语音合成与全情感控制框架",
+    "microsoft/markitdown",
+    "AMD Radeon RX 9070 XT：RDNA 4旗舰，16GB GDDR7，3299元",
+    "PCIe 7.0规范正式发布：512GB/s双向带宽，PAM4信令",
+    "决策树 (Decision Tree)",
+    "3GPP Release 19标准正式冻结：5G-Advanced迈向6G关键一步",
+    "Qwen 3：通义千问第三代开源大语言模型家族",
+    "花澤香菜"
+  ],
   "2026-06-28": [
     "Gemma 3 27B：Google开放多模态大语言模型家族",
     "AMD Radeon RX 9060 XT：RDNA 4中高端主力16GB GDDR6上市",
@@ -139,21 +155,5 @@
     "Granulon: Awakening Pixel-Level Visual Encoders with Adaptive Multi-Granularity Semantics for MLLM",
     "H3C WA8648: 全球首款企业级Wi-Fi 8 (802.11bn)接入点发布",
     "vllm-project/vllm: Easy, Fast, and Cheap LLM Serving for Everyone"
-  ],
-  "2026-06-17": [
-    "Intel Core Ultra Series 3 'Panther Lake': Intel 18A首款客户端平台",
-    "三星首获Neuralink脑机芯片制造订单：4nm工艺挑战TSMC",
-    "K-Means聚类 (K-Means Clustering)",
-    "WorldReel: 4D Video Generation with Consistent Geometry and Motion Modeling",
-    "Omni-AVSR: Towards Unified Multimodal Speech Recognition with Large Language Models",
-    "Martingale Foresight Sampling: A Principled Approach to Inference-Time LLM Decoding",
-    "上坂すみれ",
-    "NVIDIA RTX Spark Superchip: Blackwell+Arm重塑Windows AI PC",
-    "AMD Olympic Ridge: Zen 6桌面CPU集成NPU、取消iGPU",
-    "garrytan/gbrain: OpenClaw/Hermes AI Agent Brain",
-    "Rust 1.96.0: Trait Upcasting稳定化与Const泛型里程碑",
-    "GHPT: Real-Time Relightable Gaussian Splatting using Hybrid Path Tracing",
-    "Kimi K2.7 Code: Moonshot AI开源1T参数Agentic Coding模型",
-    "ASUS ROG Rapture GT-BN98 Pro: 全球首款Wi-Fi 8路由器"
   ]
 }

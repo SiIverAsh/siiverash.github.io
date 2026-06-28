@@ -1,151 +1,144 @@
 algorithm:
-- desc: 经典二分类与多分类线性模型，通过Sigmoid/Softmax函数将线性组合映射为概率输出。基于最大似然估计优化，配合L1/L2正则化可有效防止过拟合。作为线性分类器的基石，其输出天然具备概率可解释性，是信用评分、医疗诊断、推荐系统中不可或缺的基线算法，同时也是深度学习交叉熵损失的数学前身。
+- desc: 决策树是机器学习中最经典的基础算法之一，广泛应用于分类与回归任务。其核心思想是通过递归地将数据集按特征值分裂为子集，构建树状结构，每个内部节点代表一个特征测试，每个叶节点代表预测值。常用分裂准则包括信息增益(ID3)、信息增益比(C4.5)和基尼系数(CART)。决策树具有极强的可解释性（可直接可视化为规则集），能自动处理非线性关系与特征交互。单一决策树容易过拟合，但作为随机森林与XGBoost等集成方法的基学习器，构成了现代表格数据建模的基石。
   tags:
-  - 逻辑回归
-  - 分类算法
-  - 最大似然估计
-  - 可解释性
-  - Sigmoid
-  title: 逻辑回归 (Logistic Regression)
+  - 监督学习
+  - 分类
+  - 回归
+  - 可解释AI
+  title: 决策树 (Decision Tree)
 cv_recommend:
-  agency: アイムエンタープライズ (I'm Enterprise)
-  hometown: 东京都
-  intro: 内田真礼于2010年代初期出道，以其清亮而富有穿透力的声线迅速获得业界瞩目。她的音域宽广，能自如切换于元气活泼与冷静沉稳之间，展现出极强的角色塑造弹性与情感表现力。作为I'm
-    Enterprise所属声优，她在配音工作之外亦以歌手身份活跃，签约Pony Canyon后陆续发行多张个人专辑与单曲，音乐风格融合J-Pop与轻摇滚元素，舞台表现力备受认可。其专业态度与长期稳定高质量的演绎输出，使她在同代女性声优中稳居一线地位，商业价值与行业口碑均极为突出，持续拓展多元化演艺事业版图。
-  name: 内田真礼
-date: '2026-06-28'
+  agency: 大沢事務所
+  hometown: 東京都
+  intro: 花澤香菜于1989年2月25日出生于东京都，自幼以童星身份活跃于演艺界，后转型为职业声优，现隶属大沢事務所。凭借清澈透明、甜美柔和且辨识度极高的声线，她迅速成为日本声优界的标志性人物。其音域表现力极为丰富，能够自然游走于温柔治愈与冷静锐利之间，对不同性格类型的角色均能赋予独特生命力。除卓越的配音成就外，她亦在音乐领域深耕，发行多张个人专辑并成功举办大型巡回演唱会，实现了声优与歌手的双重事业高度。她曾荣获第9回声优奖最佳女配角奖，在业界与粉丝群体中均享有极高声誉，是实力与影响力兼备的顶级声优。
+  name: 花澤香菜
+date: '2026-06-29'
 history:
-- event: 奥匈帝国皇储斐迪南大公在萨拉热窝遇刺身亡，一个月后第一次世界大战全面爆发
-  year: '1914'
-- event: 《凡尔赛条约》在巴黎凡尔赛宫镜厅签署，正式结束第一次世界大战，对战败国德国施加严厉惩罚条款
-  year: '1919'
-- event: 比利时乐器制造家阿道夫·萨克斯获得萨克斯管专利，这一铜管乐器后来成为爵士乐的灵魂象征
-  year: '1846'
-- event: 美国纽约格林威治村石墙酒吧爆发持续数日的抗议冲突，触发全球现代LGBTQ+权利运动
-  year: '1969'
-- event: 朝鲜战争爆发第三天，朝鲜人民军攻陷韩国首都汉城（今首尔），战线迅速南推
-  year: '1950'
-- event: WBA重量级拳王争霸赛中迈克·泰森咬伤伊万德·霍利菲尔德耳朵，被吊销拳击执照并罚款300万美元
-  year: '1997'
+- event: 第一代iPhone在美国正式发售，4GB版售价499美元，彻底颠覆移动通信与个人计算格局
+  year: '2007'
+- event: 美国亚特兰蒂斯号航天飞机(STS-71)与俄罗斯和平号空间站首次成功对接，开启国际航天合作新纪元
+  year: '1995'
+- event: 因胡安·庇隆病重，伊莎贝尔·庇隆宣誓就任阿根廷临时总统，成为世界首位女性国家元首
+  year: '1974'
+- event: 联盟11号飞船与礼炮1号空间站完成23天人类首次空间站驻留任务后分离，次日返回时三名宇航员不幸遇难
+  year: '1971'
+- event: 美国总统艾森豪威尔签署《联邦援助公路法案》，41,000英里州际公路系统正式启动建设
+  year: '1956'
+- event: 伦敦环球剧场在演出莎士比亚《亨利八世》时因舞台炮火特效引发大火，整座剧院一小时内焚毁
+  year: '1613'
 llm:
-- desc: Google DeepMind发布Gemma 3系列，旗舰27B参数模型支持128K上下文窗口与原生多模态理解（图像+文本输入），在LMSYS Chatbot
-    Arena上ELO评分超越Llama 3.1 70B。采用分组查询注意力(GQA)与专家混合路由优化，可运行于单张NVIDIA H100 GPU，完全开放权重商用友好。
+- desc: Anthropic于2026年Q1发布Claude 4 Opus，在推理、代码生成与多模态理解领域全面超越前代。模型引入Extended Thinking
+    2.0机制，支持最长100万token推理链自主展开与检验；多模态能力原生融合文本、图像、音频与视频输入；在GPQA Diamond(92.3%)、SWE-Bench
+    Verified(71.8%)、MMMU(76.4%)等基准上达到新SOTA。采用Constitutional AI 3.0对齐框架与多阶段RLHF训练，显著降低幻觉率。API上下文窗口扩展至200K
+    tokens。
   tags:
-  - Gemma 3
-  - Google
-  - 开放权重
-  - 128K上下文
+  - Anthropic
+  - 闭源LLM
+  - 推理增强
   - 多模态
-  title: Gemma 3 27B：Google开放多模态大语言模型家族
+  title: Claude 4 Opus：Anthropic新一代旗舰推理模型
 new_project:
-- desc: 微软开源基于图的检索增强生成（GraphRAG）框架。从非结构化文本自动构建实体知识图谱与社区层次结构，支持全局语义搜索与局部实体关联查询双模式，在复杂多跳问答与文档摘要任务上显著超越传统向量RAG方案，已获65k+
-    GitHub Star。
+- desc: 微软开源的轻量级Python工具库，可将PDF、Word、Excel、PowerPoint、图片、HTML、CSV、JSON、XML、ZIP等十余种常见文件格式转换为统一的Markdown文本，专为大语言模型(LLM)数据预处理与RAG场景设计。内置OCR支持（图片/扫描PDF转文字）、表格保留（HTML
+    Table→Markdown Table）、元数据提取等功能。支持CLI命令行与Python API双模式调用，一行代码即可完成文档转换。截至2026年6月在GitHub已获超过45K
+    Star。
   tags:
-  - GraphRAG
-  - 知识图谱
-  - RAG
-  - 微软
-  - 开源
-  title: microsoft/graphrag
-  url: https://github.com/microsoft/graphrag
+  - 文档转换
+  - LLM数据预处理
+  - Markdown
+  - 微软开源
+  title: microsoft/markitdown
+  url: https://github.com/microsoft/markitdown
 paper:
-- desc: NeurIPS 2024最佳论文(Oral)。该工作提出VAR范式，将图像自回归建模从传统'下一个Token'重新定义为'下一个尺度'，在ImageNet
-    256×256上FID达到1.73，推理速度较扩散模型提升20倍以上。该范式为自回归视觉生成开辟了全新方向，已被广泛引用于后续视觉生成研究。
+- desc: 顶会论文推荐：ICML 2024接收。该论文提出Gradient Low-Rank Projection(GaLore)策略，通过在训练过程中对梯度矩阵进行低秩分解并投影到低维子空间进行更新，将LLM全参数微调的内存占用降低至原来的1/3。在LLaMA
+    7B模型上，GaLore仅需24GB显存即可完成全参数训练，同时保持与全秩训练相当的收敛速度与下游任务性能。支持与8-bit优化器、FlashAttention等技术组合使用，为消费级GPU上的大模型训练开辟新路径。
   tags:
-  - NeurIPS 2024
-  - Best Paper
-  - 视觉生成
-  - 自回归模型
-  - VAR
-  title: 'Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale
-    Prediction'
-  url: https://arxiv.org/abs/2404.02905
+  - ICML 2024
+  - LLM训练
+  - 内存优化
+  - 梯度低秩投影
+  title: 'GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection'
+  url: https://arxiv.org/abs/2402.19427
 tech:
   Arch:
-  - desc: CXL联盟正式发布Compute Express Link 3.1规范，引入PBR（Peer-to-Peer Backbone Routing）多级交换架构，支持跨主机全局内存池化与动态分配，Type-3内存扩展延迟降至50ns以内。新增可信安全协议TSP，为数据中心CXL内存部署提供端到端完整性保护。
+  - desc: PCI-SIG于2025年底正式发布PCIe 7.0规范(v1.0)，单lane速率达128GT/s，x16双向带宽高达512GB/s（是PCIe
+      5.0的4倍）。采用PAM4(4-level Pulse Amplitude Modulation)信令，引入前向纠错(FEC)与动态链路均衡机制以保障信号完整性。完全向下兼容PCIe
+      6.0/5.0设备。面向AI/ML加速器、800G以太网与CXL 3.1内存互连场景优化，首批商用控制器预计2027年面世。
     tags:
-    - CXL 3.1
-    - 内存池化
-    - PBR
-    - 数据中心
-    - 互连架构
-    title: CXL 3.1规范发布：内存池化与多级交换架构标准化
+    - PCIe 7.0
+    - PAM4
+    - 512GB/s
+    - AI加速
+    title: PCIe 7.0规范正式发布：512GB/s双向带宽，PAM4信令
   Audio:
-  - desc: MyShell发布OpenVoice V2，实现毫秒级零样本语音克隆，支持音色、情感、口音、节奏等多粒度独立控制。仅需数秒参考音频即可复刻任意说话人音色，支持中英日韩等主要语言跨语种合成，完全开源，MOS评分达到4.3，接近商业闭源方案水平。
+  - desc: 阿里巴巴通义实验室推出CosyVoice 3，基于流匹配(Flow Matching)与双编码器架构，实现3秒音频即可零样本克隆任意说话人音色。新增全情感强度滑条控制(arousal-valence二维空间)，支持22种语言跨语种合成，MOS评分达4.62。引入音频水印与DeepFake检测模块，有效防御语音伪造攻击。推理延迟降至80ms(流式)，已开源全部模型权重与训练代码。
     tags:
-    - 语音克隆
-    - 零样本
-    - OpenVoice
-    - TTS
-    - 开源
-    title: OpenVoice V2：开源瞬时语音克隆与精细音色控制框架
+    - 语音合成
+    - 零样本克隆
+    - 情感控制
+    - 开源TTS
+    title: CosyVoice 3：零样本语音合成与全情感控制框架
   CPU:
-  - desc: 高通发布Snapdragon X Elite Gen 2 (SC8480XP)，采用第二代4nm工艺集成12个Oryon V3高性能核心，最高单核频率4.5GHz。Hexagon
-      NPU升级至75 TOPS，支持LPDDR6-9600内存，PCIe 5.0 x16接口。Geekbench 6单核突破3700分，多核超17500分，能效比领先x86竞品50%。
+  - desc: AMD于2026年4月推出Ryzen 7 9800X3D，基于Zen 5架构单CCD设计，8核16线程，采用第二代3D V-Cache技术，L3缓存扩容至96MB(32MB片上+64MB堆叠)。最大加速频率提升至5.5GHz，TDP维持120W，相比上代7800X3D游戏性能提升18%，生产力多线程性能提升24%。3D
+      V-Cache置于CCD下方优化散热，支持AM5平台与DDR5-6400内存。在1080p游戏测试中全面超越Intel Core Ultra 7 265K。
     tags:
-    - Snapdragon X Elite
-    - Oryon V3
-    - LPDDR6
-    - AI PC
-    - Qualcomm
-    title: Qualcomm Snapdragon X Elite Gen 2：Oryon V3核心登陆AI PC市场
-  Computer Vision:
-  - desc: 阿里巴巴发布Qwen2.5-VL系列旗舰模型，最大72B参数。支持动态分辨率图像输入、最长1小时视频理解及多页文档解析，视觉推理能力在MMBench、MathVista等多个基准上超越GPT-4V与Claude
-      3.5 Sonnet，原生支持中英双语及29种以上语言图文交互。
-    tags:
-    - Vision-Language
-    - Qwen
-    - 多模态理解
-    - 72B参数
-    - Alibaba
-    title: Qwen2.5-VL-72B：通义千问旗舰视觉语言模型
-  GPU:
-  - desc: AMD推出Radeon RX 9060 XT，基于RDNA 4架构Navi 48核心，48个Compute Unit（3072流处理器），16GB
-      GDDR6显存配256-bit位宽。第二代AI加速器提供180 TOPS INT8推理性能，支持FSR 4超分辨率与Anti-Lag 2低延迟技术，4K游戏性能对标RTX
-      4070 Ti，TBP仅220W。
-    tags:
-    - RDNA 4
-    - RX 9060 XT
-    - 16GB GDDR6
-    - FSR 4
     - AMD
-    title: AMD Radeon RX 9060 XT：RDNA 4中高端主力16GB GDDR6上市
+    - Zen 5
+    - 3D V-Cache
+    - AM5
+    title: AMD Ryzen 7 9800X3D：Zen 5单CCD 3D V-Cache游戏旗舰
+  Computer Vision:
+  - desc: Google DeepMind在2026年Q2向开发者全面开放Veo 2视频生成API。模型支持8K分辨率、最长120秒视频生成，引入物理世界模拟器(World
+      Simulator)模块，能够推理物体运动、光影变化与流体动力学。基于扩散Transformer架构，训练数据量达50亿视频-文本对，推理时使用级联超分辨率策略，单卡H100即可生成1080p/24fps视频。支持文本/图像/视频多模态条件输入，在VBench-Long基准上大幅领先Sora与Kling。
+    tags:
+    - 视频生成
+    - 扩散Transformer
+    - 世界模型
+    - Google DeepMind
+    title: Veo 2：Google DeepMind视频生成模型全面开放
+  GPU:
+  - desc: AMD于2026年Q1正式推出Radeon RX 9070 XT，基于RDNA 4架构Navi 48 GPU，采用TSMC N4P工艺，配备64个CU(4096流处理器)、16GB
+      20Gbps GDDR7显存与256-bit位宽，总带宽640GB/s。第二代AI加速器提供192 TOPS INT8算力，第三代光追核心RT性能较RDNA
+      3提升2.1倍。支持DisplayPort 2.1 UHBR20与FSR 4超分辨率。首发定价3299元，对标RTX 5070 Ti，在1440p光栅化性能中领先约8%。
+    tags:
+    - AMD
+    - RDNA 4
+    - GDDR7
+    - FSR 4
+    title: AMD Radeon RX 9070 XT：RDNA 4旗舰，16GB GDDR7，3299元
   Lang:
-  - desc: Modular公司正式发布Mojo 1.0，作为Python的严格超集，在保持Python生态兼容的同时提供系统级编程性能。内置MLIR编译器框架，支持SIMD向量化、异构计算（GPU/TPU）及零成本抽象，矩阵乘法性能可达纯Python的35,000倍，直接对标CUDA开发体验。
+  - desc: Oracle于2026年3月发布Java 26 (JDK 26)，作为非LTS版本引入多项JEP。核心特性包括：值类型(Value Types)第三轮预览，通过identity-free对象实现栈分配与扁平化内存布局，大幅降低GC压力；虚拟线程(Virtual
+      Threads)增强，引入结构化并发(Structured Concurrency)正式API与作用域值(Scoped Values)性能优化；外部函数与内存API(FFM
+      API)正式毕业，彻底替代JNI。
     tags:
-    - Mojo
-    - Python超集
-    - MLIR
-    - Modular
-    - AI编程语言
-    title: Mojo 1.0：面向AI开发者的Python超集语言正式发布
+    - 编程语言
+    - Java
+    - 值类型
+    - 虚拟线程
+    title: Java 26 正式发布：值类型预览与虚拟线程增强
   NLP:
-  - desc: AI21 Labs发布Jamba 1.5系列，Large版本总参数量398B（94B活跃参数），采用Mamba状态空间模型与Transformer混合架构，实现256K有效上下文窗口。在HellaSwag、ARC-Challenge等推理基准上逼近Llama
-      3.1 405B，推理速度较纯Transformer架构提升3倍。
+  - desc: 阿里巴巴通义实验室发布Qwen 3系列，涵盖0.5B至720B参数规模。旗舰Qwen 3-720B采用Hybrid MoE架构，激活参数仅37B，在MMLU-Pro、GPQA
+      Diamond、LiveCodeBench等基准上比肩Claude 4 Opus。创新引入Thinking-in-Self-Distillation训练策略，使小模型从大模型思维链中学习推理能力；支持131072
+      tokens原生上下文窗口，通过YaRN外推可扩展至1M。全系列采用Apache 2.0协议开源。
     tags:
-    - SSM-Transformer
-    - Jamba
-    - AI21 Labs
-    - 256K上下文
-    - 混合架构
-    title: Jamba 1.5 Large：SSM-Transformer混合架构开源大模型
+    - 开源LLM
+    - MoE架构
+    - 通义千问
+    - 推理增强
+    title: Qwen 3：通义千问第三代开源大语言模型家族
   Net:
-  - desc: 3GPP Release 18作为5G-Advanced首个标准版本于2024年冻结，2025-2026年全球运营商开始规模部署。核心技术包括MIMO增强（32TRx→64TRx）、AI/ML原生网络优化框架、厘米级定位增强、无源物联网（Ambient
-      IoT）支持，下行峰值速率突破10Gbps。
+  - desc: 3GPP于2026年Q1正式冻结Release 19规范，标志着5G-Advanced第二阶段完成。Rel-19核心特性包括：AI/ML原生空口(Native
+      AI Air Interface)标准化，支持基站与终端联合训练联邦学习模型；集成传感与通信(ISAC)第一阶段规范，实现厘米级定位与环境感知；非地面网络(NTN)增强，支持LEO/GEO卫星间无缝切换与星地直连宽带。为3GPP
+      Release 21 6G标准化奠定基础。
     tags:
     - 5G-Advanced
-    - 3GPP R18
-    - MIMO增强
-    - AI原生网络
-    - Ambient IoT
-    title: 5G-Advanced (3GPP Release 18) 全球商用部署加速
+    - 3GPP
+    - ISAC
+    - AI原生空口
+    title: 3GPP Release 19标准正式冻结：5G-Advanced迈向6G关键一步
   News:
-  - desc: Apple Vision Pro 2于2026年6月正式全球发售，搭载M5芯片与第二代R2协处理器，重量较初代减轻35%至约410g。新增EyeSight
-      2.0外显技术与空间Persona实时交互，visionOS 3支持多应用空间窗口自由布局，起售价降至$1,499（约¥10,999），大幅拓宽消费级市场。
+  - desc: 2026年6月，欧盟《人工智能法案》(AI Act)历经两年过渡期后进入全面实施阶段。高风险AI系统(涵盖招聘、信贷、司法、医疗等领域)须通过第三方合格评定并注册欧盟数据库；通用AI(GPAI)模型提供者须披露训练数据摘要并遵守版权指令；实时生物识别监控在公共场所全面禁止(除极少数例外)。违规最高可罚全球年营收7%或3500万欧元。该法案推动全球AI治理格局深刻重塑，美国、日本、韩国相继加速本国AI立法进程。
     tags:
-    - Apple
-    - Vision Pro 2
-    - M5芯片
-    - 空间计算
-    - XR
-    title: Apple Vision Pro 2正式发售：更轻、更强、更亲民
+    - AI监管
+    - 欧盟AI法案
+    - 合规
+    - 科技政策
+    title: 欧盟《人工智能法案》全面实施：全球首部全面AI监管法律生效
