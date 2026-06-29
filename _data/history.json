@@ -1,4 +1,20 @@
 {
+  "2026-06-30": [
+    "MusicGen Remixed：基于流匹配与DiT架构的立体声音乐生成",
+    "梯度提升决策树 (Gradient Boosting / XGBoost)",
+    "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "UCIe 2.0规范正式发布：chiplet互联进入多协议统一时代",
+    "SpatialLM：基于大型语言模型的3D空间理解与场景重建统一框架",
+    "斎藤千和",
+    "Mamba-2：状态空间模型与Transformer注意力机制的深度统一",
+    "NVIDIA GeForce RTX 5060 Ti 16GB：Blackwell中端GDDR7主力全面铺货",
+    "Rust 2025 Edition正式发布：Async闭包、RPIT与if-let链式语法全面落地",
+    "AMD Ryzen 9 9900X3D：Zen 5 12核单3D V-Cache，AM5游戏与生产力兼得",
+    "microsoft/autogen",
+    "Wi-Fi 8 (IEEE 802.11bn)：超高可靠性无线标准进入草案1.0阶段",
+    "Grok-3：xAI推出的万亿参数级多模态推理大模型",
+    "TSMC N2P制程进入风险量产：GAA纳米片晶体管定义2026下半年先进工艺"
+  ],
   "2026-06-29": [
     "Veo 2：Google DeepMind视频生成模型全面开放",
     "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
@@ -139,21 +155,5 @@
     "NVIDIA开源Isaac GR00T人形机器人参考设计",
     "Arm AGI CPU: 首款自研处理器，3nm 136核",
     "Qualcomm FastConnect 8800: AI-Native Wi-Fi 8平台"
-  ],
-  "2026-06-18": [
-    "AudioX-Turbo: A Unified Framework for Efficient Anything-to-Audio Generation",
-    "AMD Radeon RX 9070 GRE 全球发布: RDNA 4架构主流级突围",
-    "DeepSeek V4: 1.6T参数MoE开源旗舰，百万上下文普惠时代",
-    "Can LLMs Reason over Extended Multilingual Contexts? Towards Long-Context Evaluation Beyond Retrieval over Haystacks",
-    "Rust 1.97.0: Async Closure稳定化与Return Type Notation落地",
-    "Universal Inverse Distillation for Matching Models with Real-Data Supervision (No GANs)",
-    "Intel 18A-P进入风险试产: 2nm级制程代工里程碑",
-    "支持向量机 (Support Vector Machine, SVM)",
-    "Google TPU v8 Ironwood: 第八代TPU训练推理分家，专为Agentic AI时代设计",
-    "雨宮天",
-    "AMD Zen 6 Medusa 桌面CPU泄露: 6.5GHz+ Boost与288MB超大缓存",
-    "Granulon: Awakening Pixel-Level Visual Encoders with Adaptive Multi-Granularity Semantics for MLLM",
-    "H3C WA8648: 全球首款企业级Wi-Fi 8 (802.11bn)接入点发布",
-    "vllm-project/vllm: Easy, Fast, and Cheap LLM Serving for Everyone"
   ]
 }
