@@ -1,136 +1,136 @@
 algorithm:
-- desc: 梯度提升是集成学习中Boosting家族的核心算法，通过迭代训练弱学习器（通常为CART决策树），每一步拟合前一步残差的负梯度方向，最终加权组合所有弱学习器得到强模型。XGBoost在工程层面引入二阶泰勒展开自定义损失函数、列采样、shrinkage缩减、稀疏感知分割查找与系统级缓存优化，使其在Kaggle竞赛与工业结构化数据任务中长期占据统治地位。LightGBM与CatBoost为其高效变体。
+- desc: SVM通过寻找最大化类别间隔的超平面实现二分类，核心思想是将低维线性不可分数据通过核函数映射到高维空间。常用核函数包括线性核、多项式核、RBF核与Sigmoid核。SVM在小样本、高维数据场景下表现优异，是传统机器学习中理论基础最坚实的算法之一。其凸优化目标保证了全局最优解的唯一性，至今仍在文本分类与生物信息学中广泛应用。
   tags:
-  - 集成学习
-  - Boosting
-  - 树模型
-  - 监督学习
-  title: 梯度提升决策树 (Gradient Boosting / XGBoost)
+  - SVM
+  - 分类算法
+  - 核方法
+  - 凸优化
+  title: 支持向量机 (Support Vector Machine)
 cv_recommend:
-  agency: アイムエンタープライズ (I'm Enterprise)
-  hometown: 埼玉県
-  intro: 斎藤千和以其极具辨识度的声线在日本声优界独树一帜。她的音域异常宽广，能够在低沉磁性的成熟声线与活泼清亮的年轻声线之间自如切换，展现出极为丰富的演技层次。出道二十余年来，她以扎实的发声基本功与对角色心理的敏锐洞察著称，擅长通过细微的语调变化与气息控制来传递复杂微妙的情感。她在业内以极致的敬业精神闻名，录音现场总是全力以赴投入角色，对剧本的理解常常超出导演预期。近年来，她在保持高质量角色演绎的同时，积极拓展广播主持与纪录片旁白等多元化声音工作，持续丰富声优职业的可能性。她的演技兼具穿透力与温度，被誉为中生代实力派声优的标志性人物之一，深受业界同仁与听众的双重尊敬。
-  name: 斎藤千和
-date: '2026-06-30'
+  agency: Music Ray'n
+  hometown: 东京都
+  intro: 雨宮天以其清澈透明且极具辨识度的音质在声优界独树一帜。2014年正式声优出道后迅速跻身一线行列，声线可塑性极强，从元气活泼的少女到冷峻沉稳的角色均能精准驾驭。凭借扎实的歌唱功底，她同时以个人歌手身份活跃于乐坛，多次登上大型音乐舞台并展现出优秀的现场表现力。所属Music
+    Ray'n期间，在广播节目、舞台演出与综艺活动中同样表现亮眼，是兼具偶像气质与实力派声优专业素养的平成年代代表性人物。其持续拓展的演艺边界与稳定高产的配音水准，使其在竞争激烈的声优行业中始终保持强劲的职业生命力。
+  name: 雨宮天
+date: '2026-07-01'
 history:
-- event: 通古斯大爆炸：一颗小行星或彗星在西伯利亚通古斯河上空5-10公里处爆炸，释放能量相当于1000-1500万吨TNT，夷平约2000平方公里森林
-  year: '1908'
-- event: 玛格丽特·米切尔的经典小说《飘》(Gone with the Wind) 在美国首次出版，首日售出5万册，后获普利策奖
-  year: '1936'
-- event: 苏联联盟11号飞船返回大气层时阀门意外开启导致舱内失压，三名宇航员多布罗沃利斯基、沃尔科夫、帕察耶夫不幸遇难，人类航天史上唯一一次太空真空暴露事故
-  year: '1971'
-- event: 香港回归中国前夜：英国在香港主权移交前夕举行告别仪式，查尔斯王子与末代港督彭定康出席，午夜零时五星红旗升起
+- event: 加拿大自治领成立，安大略、魁北克、新斯科舍和新不伦瑞克四省组成联邦，7月1日由此成为加拿大国庆日（Canada Day）。
+  year: '1867'
+- event: 中国共产党第一次全国代表大会在上海开幕，标志着中国共产党的正式成立，7月1日后被定为党的诞生纪念日。
+  year: '1921'
+- event: 香港回归中国，英国对香港长达156年的殖民统治正式结束，香港特别行政区成立，「一国两制」方针开始实施。
   year: '1997'
-- event: 埃及爆发大规模反政府示威，抗议穆尔西总统执政一周年，数万示威者聚集开罗解放广场，随后军方介入并于7月3日罢黜穆尔西
-  year: '2013'
-- event: 古巴与美国正式恢复外交关系，双方在华盛顿和哈瓦那互设大使馆，结束54年敌对状态，古巴国旗在华盛顿升起
-  year: '2015'
+- event: 索姆河战役爆发，英法联军与德军在法国北部索姆河流域展开一战中规模最大的战役，战役首日英军即伤亡近6万人，成为英国军事史上最惨烈的一天。
+  year: '1916'
+- event: 国际刑事法院（ICC）在荷兰海牙正式成立，成为世界上第一个常设的国际战争罪、反人类罪与种族灭绝罪审判机构。
+  year: '2002'
+- event: 美国邮政服务正式引入邮政编码（ZIP Code）系统，五位数编码彻底革新了全美邮件自动分拣与投递效率，成为现代物流体系的重要基石。
+  year: '1963'
 llm:
-- desc: Grok-3由xAI于2025年末发布，训练算力为Grok-2的10倍（约2亿GPU小时），采用MoE架构，激活参数约300B。核心突破包括：原生多模态（文本+图像+代码同token空间）、DeepSearch深度研究代理（自主多步检索与验证）、以及超长上下文窗口（1M
-    token）。在AIME 2025数学竞赛与GPQA博士级科学推理基准上，Grok-3性能接近Claude 4 Opus水平，X Premium+用户已可免费使用。
+- desc: DeepSeek于2025年1月发布R1推理模型，首次大规模验证了纯强化学习（无需SFT冷启动）即可激发LLM的链式推理能力。R1采用Group Relative
+    Policy Optimization（GRPO）算法，在MATH-500上达97.3%，AIME 2024得分79.8，对标OpenAI o1。开源模型权重与训练细节完全公开，引发全球推理模型研究热潮。
   tags:
-  - Grok-3
-  - xAI
-  - MoE
-  - 多模态推理
-  title: Grok-3：xAI推出的万亿参数级多模态推理大模型
+  - DeepSeek-R1
+  - 推理模型
+  - 强化学习
+  - 开源
+  title: 'DeepSeek-R1: 强化学习驱动的推理增强大语言模型'
 new_project:
-- desc: 微软开源的下一代多智能体AI应用开发框架。AutoGen支持构建由多个可对话AI代理组成的对话网络，代理之间可自主委派任务、交换信息、执行代码与调用外部工具。v0.5版本引入事件驱动架构与异步消息传递，支持人在回路（Human-in-the-Loop）断点交互，并原生集成OpenAI、Azure、本地LLM等多后端。适用于复杂推理、数据分析和自动化工作流编排场景。
+- desc: 开源本地大语言模型运行框架，支持一键拉取并运行Llama、Mistral、Gemma、DeepSeek等主流开源模型。提供REST API与命令行接口，支持多平台（macOS/Linux/Windows），GPU加速开箱即用。内置Modelfile允许自定义模型参数与系统提示词。截至2026年中GitHub
+    Star突破120k，已成为本地LLM推理的事实标准工具。
   tags:
-  - 多智能体
-  - AI框架
-  - LLM编排
-  - 微软开源
-  title: microsoft/autogen
-  url: https://github.com/microsoft/autogen
+  - LLM推理
+  - 本地部署
+  - 开源
+  - 模型管理
+  title: ollama/ollama
+  url: https://github.com/ollama/ollama
 paper:
-- desc: NeurIPS 2023口头报告论文。DPO彻底绕过传统RLHF中显式奖励模型训练与PPO强化学习两阶段流程，直接使用偏好对数据以二分类交叉熵优化策略模型。理论上证明DPO目标等价于带KL散度约束的奖励最大化，但实现仅需数行代码修改标准微调loss。在摘要与单轮对话任务上，DPO以更低的计算开销全面匹配或超越PPO-RLHF，已成为开源模型对齐的事实标准方法。
+- desc: 顶会论文推荐：ICLR 2025接收。提出将预训练权重分解为幅度与方向两个分量，仅对方向分量施加低秩约束进行微调，幅度分量则使用可学习缩放因子。在保持LoRA参数效率的同时，微调性能全面接近全参数微调（Full
+    Fine-Tuning），在GPT-2、LLaMA-7B/13B等多个基准上以相同可训练参数量超越LoRA平均2.4个百分点。
   tags:
-  - RLHF替代
-  - 偏好对齐
-  - NeurIPS 2023
-  - DPO
-  title: 'Direct Preference Optimization: Your Language Model is Secretly a Reward
-    Model'
-  url: https://arxiv.org/abs/2305.18290
+  - 参数高效微调
+  - LoRA
+  - ICLR 2025
+  - 大语言模型
+  title: 'DoRA: Weight-Decomposed Low-Rank Adaptation'
+  url: https://arxiv.org/abs/2402.09353
 tech:
   Arch:
-  - desc: UCIe 2.0在1.1版物理层（32GT/s单通道）基础上，新增对CXL 3.1、PCIe 6.0与流协议的原生隧道支持，实现同一PHY上多协议混合传输。关键更新包括：标准化3D堆叠接口（bump
-      pitch降至25μm）、管理性通道支持芯片全生命周期遥测、以及多芯片系统形式化验证框架。Intel、AMD、NVIDIA、台积电均已宣布下一代产品全面采用。
+  - desc: Intel 18A（1.8nm级）制程于2026年Q2进入风险量产阶段，是Intel首个同时搭载RibbonFET（GAA纳米片晶体管）与PowerVia（背面供电网络）的制程节点。相比Intel
+      3，逻辑密度提升1.6倍，同功耗下性能提升15%，已获得高通、博通等首批外部客户订单。
     tags:
-    - chiplet
-    - UCIe 2.0
-    - 芯片互联
-    - 异构集成
-    title: UCIe 2.0规范正式发布：chiplet互联进入多协议统一时代
+    - Intel 18A
+    - GAA
+    - RibbonFET
+    - PowerVia
+    title: 'Intel 18A制程进入风险量产: RibbonFET GAA晶体管与PowerVia背面供电'
   Audio:
-  - desc: Meta FAIR在MusicGen基础上引入流匹配（Flow Matching）替代原有的EnCodec+Transformer自回归方案，采用Diffusion
-      Transformer (DiT) 骨干，原生支持44.1kHz立体声生成。新架构将音乐生成时间压缩至实时因子0.3，FAD评分降至1.82（历史最低），并首次实现文本描述对乐器空间位置的精确控制，已完全开源。
+  - desc: 基于Flow Matching与离散声学Token化技术，实现单次3秒参考音频即可完成任意文本的语音克隆与实时风格迁移。支持情感强度连续调节与跨语言音色保持，在LibriTTS和VCTK上MOS评分达4.51，推理延迟仅78ms。
     tags:
-    - 音乐生成
-    - 流匹配
-    - DiT
-    - 开源音频
-    title: MusicGen Remixed：基于流匹配与DiT架构的立体声音乐生成
+    - 语音克隆
+    - Flow Matching
+    - 零样本
+    - 声学建模
+    title: 'VoiceCraft 2: 零样本语音编辑与风格迁移统一框架'
   CPU:
-  - desc: 9900X3D采用Zen 5架构，12核24线程（单CCD搭载64MB 3D V-Cache，另一CCD标准32MB L3），总计128MB L3缓存，最高加速频率5.6GHz，TDP
-      120W。第二代3D V-Cache将CCD置于缓存之下，散热效率大幅改善。Geekbench 6单核得分3520，游戏性能接近9950X3D2的94%，同时保持全核生产力优势，AM5平台兼容600/800系主板。
+  - desc: Panther Lake-HX旗舰Core Ultra 9 385H采用Intel 18A制程，配备8个Cougar Cove P核与16个Skymont
+      E核，共24核24线程。P核单核Boost频率高达5.7GHz，搭载第四代NPU提供48 TOPS AI算力。Geekbench 6单核得分3821，多核得分23105，较Meteor
+      Lake-H同级别提升超40%。
     tags:
-    - Zen 5
-    - 3D V-Cache
-    - AM5
-    - 12核
-    title: AMD Ryzen 9 9900X3D：Zen 5 12核单3D V-Cache，AM5游戏与生产力兼得
+    - Intel
+    - Panther Lake
+    - Intel 18A
+    - 移动处理器
+    title: 'Intel Core Ultra 9 385H: Panther Lake移动旗舰Intel 18A制程详细评测'
   Computer Vision:
-  - desc: SpatialLM将点云几何编码与LLM语义推理深度融合，采用Q-Former桥接3D编码器与预训练语言模型骨干，支持开放词汇3D场景问答、目标定位与关系推理。在ScanNet与3RScan基准上，零样本3D定位精度较2D-LVM方案提升41%，并首次实现基于自然语言指令的3D场景编辑，标志着视觉-语言-空间三模态融合的重大突破。
+  - desc: 提出首个支持文本/图像/语音多模态条件联合控制的视频扩散Transformer，在CVPR 2026上获得最佳论文提名。核心创新包括时空分离注意力机制与分层噪声调度策略，在UCF-101、MSR-VTT等基准上FVD指标提升23.7%，单卡A100即可完成512×512分辨率推理。
     tags:
-    - 3D场景理解
-    - 空间推理
-    - 多模态融合
-    - LLM
-    title: SpatialLM：基于大型语言模型的3D空间理解与场景重建统一框架
+    - 视频生成
+    - 扩散Transformer
+    - 多模态
+    - CVPR 2026
+    title: 'GenVDM: 基于扩散模型的通用视频生成基础架构'
   GPU:
-  - desc: RTX 5060 Ti搭载GB206-300 GPU，4608 CUDA核心，128-bit 16GB GDDR7显存（28Gbps，448GB/s带宽），TGP仅180W。相比RTX
-      4060 Ti，光栅化性能提升约35%，光追性能提升超50%，DLSS 4多帧生成加持下4K游戏可达60fps+。PCIe 5.0 x8接口，支持AV1双编码器，首发价3299元（16GB版），2026年3月上市，目前渠道现货充足。
+  - desc: RTX 5060 12GB搭载GB206-300-A1核心，4608 CUDA核心，128-bit显存位宽，12GB GDDR7显存，带宽384GB/s。支持DLSS
+      4多帧生成与Reflex 2低延迟技术，TGP仅150W。国行售价2499元起，较RTX 4060性能提升约35%，成为1080p/1440p游戏新甜点。
     tags:
+    - NVIDIA
     - Blackwell
     - GDDR7
-    - RTX 5060 Ti
-    - DLSS 4
-    title: NVIDIA GeForce RTX 5060 Ti 16GB：Blackwell中端GDDR7主力全面铺货
+    - RTX 5060
+    title: 'NVIDIA GeForce RTX 5060 12GB: Blackwell中端GDDR7甜品卡全面铺货'
   Lang:
-  - desc: Rust 2025 Edition于2026年Q2正式稳定，核心特性包括：async闭包（async || {}）支持在闭包内直接.await、返回位置impl
-      Trait（RPIT）在trait关联函数中完全可用、if-let链式守卫（if let ... && let ...）消除嵌套match。此外Cargo构建系统引入全局缓存共享与增量编译v2，中型项目全量编译时间平均缩减37%。
+  - desc: Go 1.24于2026年5月正式发布，泛型支持扩展至方法级类型参数，新增slices/maps标准库包。log/slog包成为官方结构化日志标准，支持OpenTelemetry原生集成。编译器逃逸分析大幅优化，编译产物二进制体积平均缩减12%，并发垃圾回收暂停时间降至亚毫秒级。
     tags:
-    - Rust
-    - 编程语言
-    - 异步编程
-    - 类型系统
-    title: Rust 2025 Edition正式发布：Async闭包、RPIT与if-let链式语法全面落地
+    - Go语言
+    - 泛型
+    - 结构化日志
+    - 编译器优化
+    title: 'Go 1.24: 泛型全面增强与结构化日志标准库正式落地'
   NLP:
-  - desc: Mamba-2提出结构化状态空间对偶（SSD）框架，从矩阵变换角度证明线性注意力与状态空间模型本质上是半可分离矩阵的不同分解形式。该统一理论催生了8K序列上比FlashAttention-2快2-8倍的混合架构，在300B
-      token预训练规模下困惑度全面优于同参数量的Transformer++与纯Mamba基线，已集成至HuggingFace Transformers生态。
+  - desc: 来自ACL 2026的Oral论文，提出基于多智能体博弈的RLHF扩展框架。通过引入对抗智能体与协作智能体的动态博弈机制，在保持单一模型对齐效果的同时将幻觉率降低41.2%。在AlpacaEval
+      3.0和MT-Bench上均刷新开源SOTA。
     tags:
-    - 状态空间模型
-    - SSM
-    - Transformer替代
-    - 长序列建模
-    title: Mamba-2：状态空间模型与Transformer注意力机制的深度统一
+    - RLHF
+    - 多智能体
+    - 对齐
+    - ACL 2026
+    title: 'Multi-Agent RLHF: 多智能体协作对齐框架'
   Net:
-  - desc: Wi-Fi 8在Wi-Fi 7的320MHz带宽与4K-QAM基础上，核心目标是实现超高可靠性（UHR）。引入分布式MLO多链路聚合增强、协调空间复用（Co-SR）与确定性低延迟调度机制，目标将最差情况时延降至1ms以下，丢包率控制在10⁻⁶量级。物理层新增分布式RU与改进前导码打孔方案，预计2028年最终冻结，2026年中完成Draft
-      1.0。
+  - desc: 3GPP在2026年6月全会上正式通过6G研究项目（Release 20），确定IMT-2030六大核心场景：沉浸式通信、超大规模连接、超高可靠低延迟、AI与通信融合、感知与通信一体化、泛在覆盖。目标峰值速率达1Tbps，空口时延低于0.1ms。
     tags:
-    - Wi-Fi 8
-    - 802.11bn
-    - UHR
-    - 低延迟无线
-    title: Wi-Fi 8 (IEEE 802.11bn)：超高可靠性无线标准进入草案1.0阶段
+    - 6G
+    - 3GPP
+    - IMT-2030
+    - 无线通信
+    title: '3GPP 6G研究项目启动: IMT-2030技术性能指标正式确定'
   News:
-  - desc: 台积电于2026年6月宣布N2P制程在新竹Fab 20成功进入风险量产阶段。N2P采用全环绕栅极（GAA）纳米片晶体管架构，相比N3E实现同等功耗下15%速度提升或同速下35%功耗降低，逻辑密度提升1.15倍。SRAM单元面积仅0.0175μm²（较N3缩减23%），首次引入背面供电网络（BSPDN）试用版本。Apple
-      A20与NVIDIA Rubin GPU已锁定首批产能。
+  - desc: 在2026年6月COMPUTEX主题演讲中，黄仁勋首次公开下一代Rubin GPU架构细节。Rubin将采用TSMC 3nm制程，首次引入HBM5高带宽内存，单GPU
+      AI算力突破20 PFLOPS（FP4）。同时发布Vera CPU与新一代NVLink 6互联技术，总带宽达3.6TB/s，预计2027年下半年正式出货。
     tags:
-    - TSMC
-    - N2P
-    - GAA
-    - 先进制程
-    title: TSMC N2P制程进入风险量产：GAA纳米片晶体管定义2026下半年先进工艺
+    - COMPUTEX 2026
+    - NVIDIA
+    - Rubin架构
+    - AI算力
+    title: 'COMPUTEX 2026: NVIDIA Rubin架构首次公开亮相，3nm加持2027年量产'
