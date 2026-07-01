@@ -1,4 +1,20 @@
 {
+  "2026-07-02": [
+    "3GPP Release 19 标准冻结后：NTN 卫星直连手机进入规模测试阶段",
+    "SimPO: Simple Preference Optimization with a Reference-Free Reward",
+    "princeton-nlp/SWE-agent",
+    "DeepSeek-Coder-V2: 开源代码大模型突破 GPT-4 Turbo 性能",
+    "CVPR 2026 最佳论文：OmniRecon - 从单目视频中重建可驱动3D数字人的统一框架",
+    "AMD Zen 6 架构细节曝光：每周期可解码 8 指令，3nm 工艺",
+    "NVIDIA GeForce RTX 5070 12GB：Blackwell 中高端 GDDR7 主力全面铺货",
+    "K-Means 聚类：无监督学习的基石",
+    "苹果 WWDC 2026：visionOS 3 与全新 Mac Pro 携 M4 Ultra 芯片亮相",
+    "佐倉綾音",
+    "Python 3.14 正式发布：模式匹配增强与实验性 JIT 编译",
+    "ElevenLabs Turbo 2.5：多语言超低延迟语音合成模型发布",
+    "AMD Ryzen 9 9950X3D：Zen 5 双 CCD 3D V-Cache，AM5 平台旗舰登场",
+    "Gemini 2.5 Pro：谷歌推出200万上下文多模态推理大模型"
+  ],
   "2026-07-01": [
     "GenVDM: 基于扩散模型的通用视频生成基础架构",
     "COMPUTEX 2026: NVIDIA Rubin架构首次公开亮相，3nm加持2027年量产",
@@ -140,21 +156,5 @@
     "apple/container",
     "花澤香菜",
     "D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time"
-  ],
-  "2026-06-21": [
-    "WorldStereo: Bridging Camera-Guided Video Generation and Scene Reconstruction via 3D Geometric Memories",
-    "Gen3R: 3D Scene Generation Meets Feed-Forward Reconstruction",
-    "Intel Xeon 6+ Clearwater Forest: 18A制程288核服务器CPU发布",
-    "中国6G研发进入新阶段：6GHz黄金频段正式获批",
-    "中国科大「九章四号」量子计算原型机震撼问世，再创全球最强量子优越性",
-    "Topology-Enhanced Alignment for Large Language Models: Trajectory Topology Loss and Topological Preference Optimization",
-    "OpenBMB VoxCPM2: 2B参数Tokenizer-Free多语言TTS开源",
-    "NVIDIA GeForce RTX 5060: Blackwell中端主力正式上市",
-    "伊藤美来",
-    "Go 1.26 正式发布：泛型类型别名稳定化与Range-over-Func落地",
-    "UCIe 2.0规范发布：开放Chiplet互连标准全面落地",
-    "随机森林 (Random Forest)",
-    "华为OpenPangu 2.0开源：505B参数稀疏MoE旗舰，512K超长上下文",
-    "lastmile-ai/mcp-agent: MCP协议AI Agent开发框架"
   ]
 }
