@@ -1,139 +1,138 @@
 algorithm:
-- desc: K-Means 通过迭代最小化样本点到质心的距离平方和，实现数据自动分组。其简单高效使其成为聚类分析的首选算法，广泛用于客户分群、图像压缩与异常检测。选择合适
-    K 值常借助肘部法则或轮廓系数。
+- desc: PCA是一种线性降维算法，通过正交变换将可能相关的变量转换为线性不相关的变量（主成分），保留数据最大方差方向。广泛应用于数据可视化、噪声过滤、特征提取与压缩。核心数学基础为协方差矩阵特征分解或SVD，计算复杂度O(min(n^2p,
+    np^2))。
   tags:
-  - 聚类
+  - 降维
+  - 特征提取
   - 无监督学习
-  - K-Means
-  - 数据分析
-  title: K-Means 聚类：无监督学习的基石
+  - 线性代数
+  title: 主成分分析 (Principal Component Analysis)
 cv_recommend:
-  agency: アイムエンタープライズ（I'm Enterprise）
+  agency: アイムエンタープライズ (I'm Enterprise)
   hometown: 东京都
-  intro: 佐倉綾音以清亮而极具辨识度的声线著称，音域宽广，既能演绎元气少女的活泼灵动，亦能塑造冷峻少年的沉稳厚重。其演技张弛有度，在情感爆发与细腻独白间转换自如，歌唱实力亦备受认可，多次获得声优奖。她通过丰富的声线变化塑造了诸多风格迥异的角色，展现出深厚的职业功底与艺术感染力，是中生代声优中极具代表性的实力派之一。
-  name: 佐倉綾音
-date: '2026-07-02'
+  intro: 内田真礼以其清澈活泼的声线与宽泛的角色跨度著称，从元气少女到沉稳御姐均能精准驾驭。她的演出常伴有极具穿透力的情感表达，在业界与粉丝中均享有高度评价。作为アイムエンタープライズ所属声优，其扎实的演技源于对角色背景的深度揣摩，同时她的音乐活动也展现了非凡的唱功，多张单曲打入Oricon榜单。业内普遍认为她的专业素养与稳定的作品质量使其成为平成至令和时代最具代表性的女性声优之一。
+  name: 内田真礼
+date: '2026-07-03'
 history:
-- event: 美国作家欧内斯特·海明威在爱达荷州家中自杀身亡，享年61岁
-  year: '1961'
-- event: 美国总统林登·约翰逊签署《1964年民权法案》，禁止种族、肤色、宗教、性别或国籍歧视
-  year: '1964'
-- event: 越南南北统一，改国名为越南社会主义共和国
-  year: '1976'
-- event: NASA火星探路者号成功着陆火星，并释放旅居者号漫游车
-  year: '1997'
-- event: RealNetworks发布RealOne Player，整合音频、视频与网页浏览功能
-  year: '2002'
-- event: 希腊议会通过养老金和税收改革法案，为接收国际货币基金组织与欧盟救助扫清障碍
-  year: '2010'
+- event: 爱达荷州成为美国第43个州。
+  year: '1890-07-03'
+- event: 约翰·洛吉·贝尔德在伦敦首次展示彩色电视传输。
+  year: '1928-07-03'
+- event: 以色列突击队救出被劫持到乌干达恩德培机场的法航139航班人质。
+  year: '1976-07-03'
+- event: 美国巡洋舰文森斯号击落伊朗航空655号航班，290人罹难。
+  year: '1988-07-03'
+- event: 西班牙同性婚姻合法化法律生效，成为全球第三个承认同性婚姻的国家。
+  year: '2005-07-03'
+- event: 埃及军方推翻总统穆罕默德·穆尔西，引发全国抗议与政治动荡。
+  year: '2013-07-03'
 llm:
-- desc: DeepSeek-Coder-V2 采用 MoE 架构，激活 16B 参数，总参数 236B，支持 338 种编程语言和 128K 上下文。在 HumanEval、MBPP
-    等基准上超越 GPT-4 Turbo，并开源模型权重。
+- desc: Mistral AI发布第二代旗舰模型，123B参数稠密架构，支持128K上下文窗口和数十种语言。在MMLU上达84.0%，HumanEval 92.3%，代码和推理能力显著提升。引入函数调用与JSON模式，API价格低于GPT-4o。权重开放研究用途，商业授权需单独协议。
   tags:
-  - DeepSeek
-  - 代码生成
-  - MoE
+  - 大语言模型
+  - Mistral
   - 开源
-  title: 'DeepSeek-Coder-V2: 开源代码大模型突破 GPT-4 Turbo 性能'
+  - 多语言
+  title: Mistral Large 2：123B参数多语言旗舰模型，开源与商业双重许可
 new_project:
-- desc: SWE-agent 将大型语言模型转化为自主软件工程代理，能够在真实仓库中定位并修复 bug、实现新功能。通过自定义的 agent-计算机接口 (ACI)
-    与专用工具，在 SWE-bench 上达到 12.5% 的解决率。
+- desc: GitHub趋势项目：高性能大模型推理引擎。支持PagedAttention实现近乎零浪费的内存管理，连续批处理提升吞吐量。集成量化GPTQ/AWQ，支持Llama、Mistral、Falcon等20+架构。CUDA与x86双后端，可搭配OpenAI兼容API服务器。截至2026年7月Star数超45k。
   tags:
-  - LLM
-  - 软件工程
-  - Agent
-  - GitHub
-  title: princeton-nlp/SWE-agent
-  url: https://github.com/princeton-nlp/SWE-agent
+  - LLM推理
+  - 高性能
+  - 开源
+  - Python
+  title: vllm-project/vllm
+  url: https://github.com/vllm-project/vllm
 paper:
-- desc: 该论文提出一种无需参考模型的偏好优化算法，将奖励建模为生成序列的平均对数概率，并引入长度归一化，显著简化 RLHF 流程。在 AlpacaEval
-    2 和 Arena-Hard 上超越了现有方法。
+- desc: 顶会论文推荐：ICLR 2025口头报告论文。提出视觉自回归建模VAR，将图像生成重新定义为从粗到细的“下一尺度预测”，不同于标准的光栅扫描“下一token预测”。VAR在ImageNet
+    256×256上FID达1.80，IS达356.4，推理速度比扩散模型快20倍。代码已开源。
   tags:
-  - RLHF
-  - 偏好优化
-  - LLM
-  - 对齐
-  title: 'SimPO: Simple Preference Optimization with a Reference-Free Reward'
-  url: https://arxiv.org/abs/2405.14734
+  - 图像生成
+  - 自回归
+  - ICLR
+  - 效率
+  title: 'Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale
+    Prediction'
+  url: https://arxiv.org/abs/2404.02905
 tech:
   Arch:
-  - desc: 据泄漏资料，Zen 6 代号 “Morpheus”，将采用 TSMC N3 工艺，前端每周期可解码 8 条 x86 指令，大幅拓宽执行引擎。核心调度器重设计，L1
-      数据缓存延迟降低，并引入新的矩阵扩展指令集以加速 AI 推理。预计 2027 年亮相。
+  - desc: SiFive P670基于64位RISC-V RVA22+规范，采用12级双发射乱序流水线，最高2.5GHz，SPECINT2k6得分6.77/MHz。支持RISC-V向量扩展1.0(RVV
+      1.0)、虚拟化、AIA中断控制器。台积电5nm工艺流片，目标智能座舱和数据中心边缘计算市场，预计2026年Q3量产。
     tags:
-    - Zen 6
-    - AMD
-    - 3nm
-    - 微架构
-    title: AMD Zen 6 架构细节曝光：每周期可解码 8 指令，3nm 工艺
+    - RISC-V
+    - SiFive
+    - 处理器架构
+    - 向量扩展
+    title: SiFive P670：首款RISC-V乱序高性能应用处理器流片
   Audio:
-  - desc: Turbo 2.5 模型将端到端延迟压缩至 80ms 以内，支持 32 种语言的自然语音生成，并新增高表现力风格 (expressive style)
-      与音色克隆一致性改进。模型基于改进的流匹配 (Flow Matching) 架构，通过知识蒸馏与并行解码实现实时交互。
+  - desc: 基于潜在扩散模型，支持通过文本提示生成最高3分钟44.1kHz立体声音频。引入音频条件VAE和扩散Transformer(DiT)骨干，实现时间连贯性和结构一致性。新增音频到音频风格迁移功能。在Frechet
+      Audio Distance(FAD)指标上较前代提升32%。
     tags:
-    - 语音合成
-    - 流匹配
-    - 多语言
-    - 低延迟
-    title: ElevenLabs Turbo 2.5：多语言超低延迟语音合成模型发布
+    - 音频生成
+    - 扩散模型
+    - 音乐生成
+    - 潜空间
+    title: Stable Audio 2.0：Stability AI发布长时音乐与音效生成模型
   CPU:
-  - desc: Ryzen 9 9950X3D 配备 16 核 32 线程，在其中一个 CCD 上搭载 64MB 3D V-Cache，另一 CCD 维持高频设计，实现游戏与创作双优。基础频率
-      4.5 GHz，加速频率 5.7 GHz，TDP 170W，支持 DDR5-8000 与 PCIe 5.0，兼容 AM5 主板。
+  - desc: Ryzen 9 9950X基于Zen 5架构，16核32线程，最高加速5.7GHz，L3缓存80MB。采用改进的AVX-512完整256位数据路径，IPC较Zen
+      4提升16%。支持DDR5-5600和PCIe 5.0，TDP 170W。在Cinebench R23多线程中得分约62,000，超越i9-14900K约18%。2024年8月上市，售价649美元。
     tags:
-    - Ryzen
-    - 3D V-Cache
+    - AMD
     - Zen 5
     - AM5
-    title: AMD Ryzen 9 9950X3D：Zen 5 双 CCD 3D V-Cache，AM5 平台旗舰登场
+    - 高性能计算
+    title: 'AMD Ryzen 9 9950X: Zen 5 16核旗舰，5nm TSMC，AM5平台'
   Computer Vision:
-  - desc: 该工作提出了一个端到端的可驱动3D数字人重建系统，通过联合建模外观、几何与动态变形，首次实现从单目视频中直接生成可用于实时动画的高保真化身。核心技术包括基于NeRF的隐式表示与线性混合蒙皮（LBS）的深度融合，并在动态场景中引入光照解耦模块，显著提升重光照与姿态控制的泛化性。
+  - desc: Segment Anything Model 2 (SAM 2) 将可提示分割从图像扩展到视频，采用流式记忆架构，支持实时视频对象分割。模型在多样化SA-V数据集上训练，具备零样本泛化能力，在17个视频数据集上显著超越先前方法，并保持图像分割竞争力。代码与模型权重已开源，Apache
+      2.0许可。
     tags:
-    - CVPR 2026
-    - 3D重建
-    - 数字人
-    - NeRF
-    title: CVPR 2026 最佳论文：OmniRecon - 从单目视频中重建可驱动3D数字人的统一框架
+    - 图像分割
+    - 视频理解
+    - 基础模型
+    - 零样本
+    title: SAM 2：Meta发布统一图像与视频可提示分割基础模型
   GPU:
-  - desc: RTX 5070 搭载 GB205-300 GPU，集成 6,144 CUDA 核心与 192-bit 显存位宽，搭配 12GB GDDR7，TBP
-      250W。在 1440p 游戏中平均领先 RTX 4070 约 25%，支持 DLSS 4 多帧生成与 Reflex 2 低延迟技术，建议零售价 4,199
-      元。
+  - desc: RTX 5090基于GB202 GPU，搭载21,760个CUDA核心，加速频率2.52GHz，FP32算力超91 TFLOPS。配备32GB
+      28Gbps GDDR7显存，带宽达1.79TB/s。支持PCIe 5.0 x16、第4代RT Core与Tensor Core，DLSS 4引入帧生成增强与光线重建。TGP
+      450W，售价1,599美元，2025年1月首发。
     tags:
-    - RTX 5070
+    - NVIDIA
     - Blackwell
     - GDDR7
     - DLSS 4
-    title: NVIDIA GeForce RTX 5070 12GB：Blackwell 中高端 GDDR7 主力全面铺货
+    title: NVIDIA GeForce RTX 5090：Blackwell架构旗舰，32GB GDDR7，512-bit位宽
   Lang:
-  - desc: Python 3.14 将模式匹配 (match-case) 扩展至可伸缩类型与映射协议，显著提升数据解析表达能力；同时引入基于 copy-and-patch
-      的轻量级 JIT 编译器（实验性），在特定数值计算负载中获得最高 15% 的性能提升。
+  - desc: Rust项目发布2026版预览路线图，重点推进async trait稳定化、const泛型扩展、impl Trait在关联位置的使用完善。引入wasm64-unknown-unknown
+      Tier 2目标，增强WebAssembly支持。编译器并行化前端改进使大型项目编译时间缩短15-25%。RFC过程已在rust-lang/rfcs中展开。
     tags:
-    - Python
-    - 模式匹配
-    - JIT
-    - 语言特性
-    title: Python 3.14 正式发布：模式匹配增强与实验性 JIT 编译
+    - Rust
+    - 编译优化
+    - 异步编程
+    - WebAssembly
+    title: Rust 2026 Edition路线图公布：围绕async trait与const泛型展开
   NLP:
-  - desc: Gemini 2.5 Pro 支持原生 2,000,000 token 上下文窗口，整合增强的推理与多模态理解能力，在 MMLU-Pro、HumanEval
-      等基准上超越 GPT-4.5。模型采用 MoE 架构，训练数据包含图像、音频、视频及多语言文本，并首次引入 “thinking budget” 机制，允许用户控制推理深度。
+  - desc: LLaMA 4系列基于混合专家(MoE)架构，参数规模从17B到400B+，训练数据超20T tokens。旗舰模型LLaMA 4 Behemoth在MMLU、HumanEval等基准上匹敌GPT-4o，支持128K上下文窗口和32种语言。引入改进的RLHF对齐和工具调用能力，权重开放给研究和商业用途。
     tags:
-    - Gemini
-    - 多模态
-    - 长上下文
-    - MoE
-    title: Gemini 2.5 Pro：谷歌推出200万上下文多模态推理大模型
+    - 大语言模型
+    - 混合专家
+    - 多语言
+    - 开源
+    title: LLaMA 4：Meta发布新一代开源多语言大语言模型
   Net:
-  - desc: 随着 Rel-19 在 2026 年 Q1 正式冻结，基于 NR-NTN (New Radio Non-Terrestrial Network)
-      的卫星直连手机技术进入运营商规模测试。多家厂商在 L/S 波段实现双向数据通信，下行速率达 20 Mbps，为偏远地区覆盖和应急通信提供 3GPP 标准化方案。
+  - desc: 3GPP Rel-18作为5G-Advanced首个版本，正式进入运营商级部署。关键特性包括基于AI/ML的波束管理、网络切片增强、NR-NTN卫星直连物联网、Sidelink
+      V2X增强。峰值速率提升至下行10Gbps，时延降至0.5ms以下。AT&T和NTT DoCoMo宣布首批商用计划。
     tags:
+    - 5G-Advanced
     - 3GPP
     - NTN
-    - 卫星通信
-    - 5G-Advanced
-    title: 3GPP Release 19 标准冻结后：NTN 卫星直连手机进入规模测试阶段
+    - AI网络优化
+    title: 5G-Advanced Release 18商业部署启动：引入AI/ML网络优化与NTN增强
   News:
-  - desc: 本届 WWDC 重点发布 visionOS 3 空间计算平台更新，引入 3D 窗口化多任务与 AI 场景理解；Mac Pro 更新为 M4 Ultra
-      芯片，配备最高 64 核 GPU 与 256GB 统一内存，面向专业渲染与本地大模型部署。
+  - desc: 据供应链消息，苹果M5 Ultra在台积电完成流片验证，采用SoIC 3D封装将两颗M5 Max硅片通过混合键合互联，实现超过2.5TB/s的片间带宽。M5基于N3E工艺，集成32核CPU(16性能+16效率)、80核GPU和64核神经引擎，预计2026年上半年亮相Mac
+      Studio和Mac Pro。
     tags:
-    - WWDC
-    - Apple
-    - visionOS
-    - M4 Ultra
-    title: 苹果 WWDC 2026：visionOS 3 与全新 Mac Pro 携 M4 Ultra 芯片亮相
+    - 苹果
+    - M5 Ultra
+    - 3D封装
+    - 台积电
+    title: 苹果M5 Ultra芯片流片：采用台积电N3E工艺与3D混合键合

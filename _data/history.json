@@ -1,4 +1,20 @@
 {
+  "2026-07-03": [
+    "内田真礼",
+    "NVIDIA GeForce RTX 5090：Blackwell架构旗舰，32GB GDDR7，512-bit位宽",
+    "苹果M5 Ultra芯片流片：采用台积电N3E工艺与3D混合键合",
+    "主成分分析 (Principal Component Analysis)",
+    "Rust 2026 Edition路线图公布：围绕async trait与const泛型展开",
+    "SiFive P670：首款RISC-V乱序高性能应用处理器流片",
+    "LLaMA 4：Meta发布新一代开源多语言大语言模型",
+    "AMD Ryzen 9 9950X: Zen 5 16核旗舰，5nm TSMC，AM5平台",
+    "vllm-project/vllm",
+    "Mistral Large 2：123B参数多语言旗舰模型，开源与商业双重许可",
+    "Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction",
+    "5G-Advanced Release 18商业部署启动：引入AI/ML网络优化与NTN增强",
+    "SAM 2：Meta发布统一图像与视频可提示分割基础模型",
+    "Stable Audio 2.0：Stability AI发布长时音乐与音效生成模型"
+  ],
   "2026-07-02": [
     "3GPP Release 19 标准冻结后：NTN 卫星直连手机进入规模测试阶段",
     "SimPO: Simple Preference Optimization with a Reference-Free Reward",
@@ -141,20 +157,5 @@
     "UniVoice: A Unified Model for Speech and Singing Voice Generation",
     "Claude Sonnet 5 (Fennec)：Anthropic下一代中阶模型震撼泄露",
     "ADaPT: Token-Level Decoupling for Efficient Large Reasoning Models"
-  ],
-  "2026-06-22": [
-    "决策树 (Decision Tree)",
-    "Think in Sentences: Explicit Sentence Boundaries Enhance Language Model's Capabilities",
-    "AMD EPYC Venice: 256 核 Zen 6，2nm 制程量产",
-    "OpenAI 发布 ChatGPT Images 2.0: 多模态生图新范式",
-    "LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space",
-    "Go 1.27 正式发布：泛型方法与字面量推导落地",
-    "Intel Arc G-Series: 18A 制程掌机处理器发布",
-    "Wi-Fi 8 (802.11bn): 从速度竞争转向可靠性优先",
-    "阿里达摩院玄铁C950: RISC-V 高性能处理器新标杆",
-    "LongCat-Next: 美团原生多模态模型开源",
-    "apple/container",
-    "花澤香菜",
-    "D4RT: Efficiently Reconstructing Dynamic Scenes One D4RT at a Time"
   ]
 }
