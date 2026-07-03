@@ -1,138 +1,128 @@
 algorithm:
-- desc: PCA是一种线性降维算法，通过正交变换将可能相关的变量转换为线性不相关的变量（主成分），保留数据最大方差方向。广泛应用于数据可视化、噪声过滤、特征提取与压缩。核心数学基础为协方差矩阵特征分解或SVD，计算复杂度O(min(n^2p,
-    np^2))。
+- desc: 集成学习算法，通过Bootstrap抽样构建多棵决策树，并在分裂时随机选择特征子集。对高维数据鲁棒，自带特征重要性评估。在实际应用中，常作为强基线用于分类、回归及异常检测任务。
   tags:
-  - 降维
-  - 特征提取
-  - 无监督学习
-  - 线性代数
-  title: 主成分分析 (Principal Component Analysis)
+  - 集成学习
+  - 决策树
+  - 特征选择
+  - 鲁棒性
+  title: 随机森林 (Random Forest)
 cv_recommend:
-  agency: アイムエンタープライズ (I'm Enterprise)
+  agency: 大泽事务所
   hometown: 东京都
-  intro: 内田真礼以其清澈活泼的声线与宽泛的角色跨度著称，从元气少女到沉稳御姐均能精准驾驭。她的演出常伴有极具穿透力的情感表达，在业界与粉丝中均享有高度评价。作为アイムエンタープライズ所属声优，其扎实的演技源于对角色背景的深度揣摩，同时她的音乐活动也展现了非凡的唱功，多张单曲打入Oricon榜单。业内普遍认为她的专业素养与稳定的作品质量使其成为平成至令和时代最具代表性的女性声优之一。
-  name: 内田真礼
-date: '2026-07-03'
+  intro: 花泽香菜以其清澈透明的声线和多样化的演技广受好评。从幼女声线到沉稳角色均能驾驭自如，在业内拥有极高的人气。她不仅在声优领域活跃，还作为歌手举办过个人演唱会，并在综艺节目中展现出率真自然的另一面。对待配音工作极度认真，常根据角色心理变化设计细微的语调调整，这种细腻的表演风格使其成为平成后期至今最具代表性的女性声优之一。
+  name: 花泽香菜
+date: '2026-07-04'
 history:
-- event: 爱达荷州成为美国第43个州。
-  year: '1890-07-03'
-- event: 约翰·洛吉·贝尔德在伦敦首次展示彩色电视传输。
-  year: '1928-07-03'
-- event: 以色列突击队救出被劫持到乌干达恩德培机场的法航139航班人质。
-  year: '1976-07-03'
-- event: 美国巡洋舰文森斯号击落伊朗航空655号航班，290人罹难。
-  year: '1988-07-03'
-- event: 西班牙同性婚姻合法化法律生效，成为全球第三个承认同性婚姻的国家。
-  year: '2005-07-03'
-- event: 埃及军方推翻总统穆罕默德·穆尔西，引发全国抗议与政治动荡。
-  year: '2013-07-03'
+- event: 大陆会议通过《独立宣言》，美利坚合众国正式成立。
+  year: '1776'
+- event: 美国第二任总统约翰·亚当斯与第三任总统托马斯·杰斐逊同日逝世，恰好为《独立宣言》发表50周年。
+  year: '1826'
+- event: 匈牙利物理学家利奥·西拉德申请核连锁反应专利，为核能发展奠定理论基础。
+  year: '1934'
+- event: NASA的火星探路者号成功着陆火星，释放旅居者号漫游车，开启火星表面巡视探测。
+  year: '1997'
+- event: NASA深度撞击号探测器释放撞击器成功撞击坦普尔1号彗星，人类首次探测彗星内部结构。
+  year: '2005'
+- event: 欧洲核子研究中心宣布发现与希格斯玻色子特性一致的新粒子，标准模型拼图基本完成。
+  year: '2012'
 llm:
-- desc: Mistral AI发布第二代旗舰模型，123B参数稠密架构，支持128K上下文窗口和数十种语言。在MMLU上达84.0%，HumanEval 92.3%，代码和推理能力显著提升。引入函数调用与JSON模式，API价格低于GPT-4o。权重开放研究用途，商业授权需单独协议。
+- desc: 阿里云发布Qwen 2.5系列，涵盖0.5B至72B参数版本，支持128K上下文。基于优化后的合成数据训练，数学与代码能力大幅提升，中文理解保持SOTA。旗舰模型Qwen2.5-72B在MMLU上得分86.8。
   tags:
-  - 大语言模型
-  - Mistral
-  - 开源
   - 多语言
-  title: Mistral Large 2：123B参数多语言旗舰模型，开源与商业双重许可
+  - 开源
+  - 百川
+  - 长上下文
+  title: 'Qwen 2.5: 通义千问多语言大模型'
 new_project:
-- desc: GitHub趋势项目：高性能大模型推理引擎。支持PagedAttention实现近乎零浪费的内存管理，连续批处理提升吞吐量。集成量化GPTQ/AWQ，支持Llama、Mistral、Falcon等20+架构。CUDA与x86双后端，可搭配OpenAI兼容API服务器。截至2026年7月Star数超45k。
+- desc: 高性能LLM推理框架，纯C/C++实现，无需Python依赖。支持INT4/INT8量化、GPU加速（CUDA/Metal/Vulkan），覆盖桌面、移动端与边缘设备。已集成数百个开源模型，是本地LLM部署的事实标准。
   tags:
   - LLM推理
-  - 高性能
-  - 开源
-  - Python
-  title: vllm-project/vllm
-  url: https://github.com/vllm-project/vllm
+  - 量化
+  - 跨平台
+  - C++
+  title: llama.cpp
+  url: https://github.com/ggerganov/llama.cpp
 paper:
-- desc: 顶会论文推荐：ICLR 2025口头报告论文。提出视觉自回归建模VAR，将图像生成重新定义为从粗到细的“下一尺度预测”，不同于标准的光栅扫描“下一token预测”。VAR在ImageNet
-    256×256上FID达1.80，IS达356.4，推理速度比扩散模型快20倍。代码已开源。
+- desc: 顶会论文（ICLR 2025 Workshop）：Google DeepMind发布的开源LLM Gemma，基于与Gemini相同的研究与技术栈，提供2B和7B两种尺寸。在同等规模模型中性能领先，训练数据经过严格过滤，附带负责任AI工具包。
   tags:
-  - 图像生成
-  - 自回归
-  - ICLR
-  - 效率
-  title: 'Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale
-    Prediction'
-  url: https://arxiv.org/abs/2404.02905
+  - Open Source
+  - Gemini
+  - 轻量级模型
+  - RLHF
+  title: 'Gemma: Open Models Based on Gemini Research and Technology'
+  url: https://arxiv.org/abs/2403.08295
 tech:
   Arch:
-  - desc: SiFive P670基于64位RISC-V RVA22+规范，采用12级双发射乱序流水线，最高2.5GHz，SPECINT2k6得分6.77/MHz。支持RISC-V向量扩展1.0(RVV
-      1.0)、虚拟化、AIA中断控制器。台积电5nm工艺流片，目标智能座舱和数据中心边缘计算市场，预计2026年Q3量产。
+  - desc: Compute Express Link 3.1 基于PCIe 6.0物理层，支持全局内存共享与分解式架构。通过多层交换机构建内存池，允许CPU与加速器动态分配内存，实现Tiered
+      Memory与近存计算。
     tags:
-    - RISC-V
-    - SiFive
-    - 处理器架构
-    - 向量扩展
-    title: SiFive P670：首款RISC-V乱序高性能应用处理器流片
+    - CXL
+    - 内存池化
+    - PCIe 6.0
+    - 分解式架构
+    title: CXL 3.1 内存池化互连
   Audio:
-  - desc: 基于潜在扩散模型，支持通过文本提示生成最高3分钟44.1kHz立体声音频。引入音频条件VAE和扩散Transformer(DiT)骨干，实现时间连贯性和结构一致性。新增音频到音频风格迁移功能。在Frechet
-      Audio Distance(FAD)指标上较前代提升32%。
+  - desc: 微软VALL-E 2基于神经编解码语言模型，仅需3秒提示音频即可克隆任意说话人声音，包括情感、口音和韵律。采用分组码本建模与重排策略，在词错误率和说话人相似度上超越现有系统。
     tags:
-    - 音频生成
-    - 扩散模型
-    - 音乐生成
-    - 潜空间
-    title: Stable Audio 2.0：Stability AI发布长时音乐与音效生成模型
-  CPU:
-  - desc: Ryzen 9 9950X基于Zen 5架构，16核32线程，最高加速5.7GHz，L3缓存80MB。采用改进的AVX-512完整256位数据路径，IPC较Zen
-      4提升16%。支持DDR5-5600和PCIe 5.0，TDP 170W。在Cinebench R23多线程中得分约62,000，超越i9-14900K约18%。2024年8月上市，售价649美元。
-    tags:
-    - AMD
-    - Zen 5
-    - AM5
-    - 高性能计算
-    title: 'AMD Ryzen 9 9950X: Zen 5 16核旗舰，5nm TSMC，AM5平台'
-  Computer Vision:
-  - desc: Segment Anything Model 2 (SAM 2) 将可提示分割从图像扩展到视频，采用流式记忆架构，支持实时视频对象分割。模型在多样化SA-V数据集上训练，具备零样本泛化能力，在17个视频数据集上显著超越先前方法，并保持图像分割竞争力。代码与模型权重已开源，Apache
-      2.0许可。
-    tags:
-    - 图像分割
-    - 视频理解
-    - 基础模型
+    - 语音合成
     - 零样本
-    title: SAM 2：Meta发布统一图像与视频可提示分割基础模型
-  GPU:
-  - desc: RTX 5090基于GB202 GPU，搭载21,760个CUDA核心，加速频率2.52GHz，FP32算力超91 TFLOPS。配备32GB
-      28Gbps GDDR7显存，带宽达1.79TB/s。支持PCIe 5.0 x16、第4代RT Core与Tensor Core，DLSS 4引入帧生成增强与光线重建。TGP
-      450W，售价1,599美元，2025年1月首发。
+    - 神经编解码
+    - 说话人克隆
+    title: 'VALL-E 2: 零样本语音合成'
+  CPU:
+  - desc: Zen 5架构8核16线程，单CCD搭载3D V-Cache（总缓存96MB），TDP 120W。AM5接口兼容DDR5-6000，游戏性能超越上代旗舰7950X3D，同时提供PBO超频支持，成为1440p高刷游戏利器。
     tags:
-    - NVIDIA
+    - Zen 5
+    - 3D V-Cache
+    - AM5
+    - 游戏旗舰
+    title: AMD Ryzen 7 9800X3D
+  Computer Vision:
+  - desc: 3D Gaussian Splatting (3DGS) 采用各向异性3D高斯函数显式表示场景，通过可微分光栅化实现快速训练与实时渲染。最新进展结合动态场景图与哈希编码，在SLAM与自由视点视频中达到SOTA质量，单卡训练仅需数分钟。
+    tags:
+    - 3DGS
+    - 实时渲染
+    - 神经渲染
+    - SLAM
+    title: 3D Gaussian Splatting 实时神经渲染
+  GPU:
+  - desc: Blackwell架构中高端显卡，搭载GB203-400核心，84组SM共10752个CUDA核心。配备24GB GDDR7显存，256-bit位宽，带宽高达896
+      GB/s。支持PCIe 5.0与DLSS 4帧生成，1440p光追性能较RTX 4080提升35%。
+    tags:
     - Blackwell
     - GDDR7
     - DLSS 4
-    title: NVIDIA GeForce RTX 5090：Blackwell架构旗舰，32GB GDDR7，512-bit位宽
+    - 中高端
+    title: NVIDIA GeForce RTX 5080 24GB
   Lang:
-  - desc: Rust项目发布2026版预览路线图，重点推进async trait稳定化、const泛型扩展、impl Trait在关联位置的使用完善。引入wasm64-unknown-unknown
-      Tier 2目标，增强WebAssembly支持。编译器并行化前端改进使大型项目编译时间缩短15-25%。RFC过程已在rust-lang/rfcs中展开。
+  - desc: Swift 6 引入严格并发检查，通过Actor模型与Sendable协议在编译时消除数据竞争。同时提供改进的C++互操作性，支持直接调用C++模板，以及Swift与C++之间的双向API映射。
     tags:
-    - Rust
-    - 编译优化
-    - 异步编程
-    - WebAssembly
-    title: Rust 2026 Edition路线图公布：围绕async trait与const泛型展开
+    - 并发安全
+    - Actor模型
+    - C++互操作
+    - 系统编程
+    title: 'Swift 6: 并发安全与C++互操作'
   NLP:
-  - desc: LLaMA 4系列基于混合专家(MoE)架构，参数规模从17B到400B+，训练数据超20T tokens。旗舰模型LLaMA 4 Behemoth在MMLU、HumanEval等基准上匹敌GPT-4o，支持128K上下文窗口和32种语言。引入改进的RLHF对齐和工具调用能力，权重开放给研究和商业用途。
+  - desc: BitNet b1.58 将LLM参数三值化至{-1,0,1}，在保持与全精度模型相当性能的同时，推理能耗降低90%以上。通过BitLinear层与权重量化感知训练，实现端侧部署千亿参数模型的可能性。
     tags:
-    - 大语言模型
-    - 混合专家
-    - 多语言
-    - 开源
-    title: LLaMA 4：Meta发布新一代开源多语言大语言模型
+    - 模型量化
+    - 端侧推理
+    - LLM
+    - 高效训练
+    title: 'BitNet b1.58: 1比特大语言模型'
   Net:
-  - desc: 3GPP Rel-18作为5G-Advanced首个版本，正式进入运营商级部署。关键特性包括基于AI/ML的波束管理、网络切片增强、NR-NTN卫星直连物联网、Sidelink
-      V2X增强。峰值速率提升至下行10Gbps，时延降至0.5ms以下。AT&T和NTT DoCoMo宣布首批商用计划。
+  - desc: Segment Routing over IPv6 (SRv6) 利用IPv6扩展头实现源路由，将网络路径编码为段列表。结合网络切片与带内遥测，SRv6能够简化MPLS隧道，提供端到端确定性时延，是5G承载与云数据中心的核心协议。
     tags:
-    - 5G-Advanced
-    - 3GPP
-    - NTN
-    - AI网络优化
-    title: 5G-Advanced Release 18商业部署启动：引入AI/ML网络优化与NTN增强
+    - SRv6
+    - IPv6
+    - 网络编程
+    - SDN
+    title: SRv6 网络编程
   News:
-  - desc: 据供应链消息，苹果M5 Ultra在台积电完成流片验证，采用SoIC 3D封装将两颗M5 Max硅片通过混合键合互联，实现超过2.5TB/s的片间带宽。M5基于N3E工艺，集成32核CPU(16性能+16效率)、80核GPU和64核神经引擎，预计2026年上半年亮相Mac
-      Studio和Mac Pro。
+  - desc: 特斯拉在2026世界人工智能大会上发布Optimus Gen 3，配备二代灵巧手与特斯拉自研AI芯片，可完成穿针引线等精细操作。量产版售价预计低于2万美元，已进入工厂实测。
     tags:
-    - 苹果
-    - M5 Ultra
-    - 3D封装
-    - 台积电
-    title: 苹果M5 Ultra芯片流片：采用台积电N3E工艺与3D混合键合
+    - 人形机器人
+    - 特斯拉
+    - AI芯片
+    - 灵巧手
+    title: 特斯拉 Optimus Gen 3 人形机器人亮相

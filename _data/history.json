@@ -1,4 +1,20 @@
 {
+  "2026-07-04": [
+    "AMD Ryzen 7 9800X3D",
+    "特斯拉 Optimus Gen 3 人形机器人亮相",
+    "VALL-E 2: 零样本语音合成",
+    "BitNet b1.58: 1比特大语言模型",
+    "3D Gaussian Splatting 实时神经渲染",
+    "llama.cpp",
+    "SRv6 网络编程",
+    "CXL 3.1 内存池化互连",
+    "NVIDIA GeForce RTX 5080 24GB",
+    "Swift 6: 并发安全与C++互操作",
+    "Qwen 2.5: 通义千问多语言大模型",
+    "Gemma: Open Models Based on Gemini Research and Technology",
+    "花泽香菜",
+    "随机森林 (Random Forest)"
+  ],
   "2026-07-03": [
     "内田真礼",
     "NVIDIA GeForce RTX 5090：Blackwell架构旗舰，32GB GDDR7，512-bit位宽",
@@ -141,21 +157,5 @@
     "中国纯国产超算「灵晟」登顶TOP500：245万核心突破2 ExaFLOPS",
     "Every Token Counts: Generalizing 16M Ultra-Long Context in Large Language Models",
     "Kotlin 2.4.0 正式发布：守卫子句与跨平台类型安全全面升级"
-  ],
-  "2026-06-23": [
-    "AMD Ryzen 9 PRO 9965X3D：16核Zen 5与3D V-Cache首登商用桌面平台",
-    "羊宮妃那",
-    "Transformers Are Inherently Succinct",
-    "GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed Video Generator",
-    "XGBoost (eXtreme Gradient Boosting)",
-    "Broadcom BCM6772: 业界首款全集成的Wi-Fi 8 SoC平台",
-    "中国攻克硅基量子芯片关键材料：国产高纯硅纯度达99.99%",
-    "Rust 1.96.0 正式发布：Range类型族与assert_matches!稳定化",
-    "lsdefine/GenericAgent",
-    "NVIDIA RTX Spark Superchip：Arm CPU + Blackwell GPU统一内存PC新架构",
-    "NVIDIA GeForce RTX 5050：Blackwell架构入门级主力正式上市",
-    "UniVoice: A Unified Model for Speech and Singing Voice Generation",
-    "Claude Sonnet 5 (Fennec)：Anthropic下一代中阶模型震撼泄露",
-    "ADaPT: Token-Level Decoupling for Efficient Large Reasoning Models"
   ]
 }
