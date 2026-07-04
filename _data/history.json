@@ -1,4 +1,20 @@
 {
+  "2026-07-05": [
+    "t-SNE (t-distributed Stochastic Neighbor Embedding)",
+    "早見沙織",
+    "Speculative Decoding：大语言模型推理加速核心技术",
+    "Intel Core Ultra 9 285K：Arrow Lake-S 旗舰处理器全面评测",
+    "NaturalSpeech 3：基于分解编解码与扩散模型的零样本语音合成",
+    "Mojo：面向 AI 开发者的高性能系统编程语言",
+    "Dify: 开源 LLM 应用开发平台",
+    "State Space Models for Vision：Mamba 引领视觉骨干网络新范式",
+    "AMD Radeon RX 9070 XT：RDNA 4 架构，16GB GDDR6，256-bit",
+    "欧盟《人工智能法案》（EU AI Act）全面正式生效",
+    "Wi-Fi 7 (802.11be) 大规模商用部署启动",
+    "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+    "DeepSeek-V3：671B 参数 MoE 开源大语言模型",
+    "ARMv9.2-A 架构：SVE2 向量扩展与机密计算全面落地"
+  ],
   "2026-07-04": [
     "AMD Ryzen 7 9800X3D",
     "特斯拉 Optimus Gen 3 人形机器人亮相",
@@ -142,20 +158,5 @@
     "K近邻 (K-Nearest Neighbors, KNN)",
     "IBM NanoStack：全球首个亚1纳米晶体管技术问世",
     "Rethinking Fine-Tuning when Scaling Test-Time Compute: Limiting Confidence Improves Mathematical Reasoning"
-  ],
-  "2026-06-24": [
-    "nex-agi/Nex-N2：为行动而生的开源AI Agent模型",
-    "AMD Radeon RX 9060：RDNA 4主流级正式上市",
-    "ARMv10指令集架构发布：IPC提升30%，原生AI加速引擎落地",
-    "岩永哲哉",
-    "支持向量机 (Support Vector Machine, SVM)",
-    "Intel Core Ultra Series 3 (Panther Lake)：首款Intel 18A制程AI PC平台",
-    "豆包2.1 Pro (ByteDance Seed 2.1 Pro)：Coding与Agent能力跨越'质变点'",
-    "3GPP Release 21正式获批：6G标准化全面启动",
-    "MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control",
-    "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction",
-    "中国纯国产超算「灵晟」登顶TOP500：245万核心突破2 ExaFLOPS",
-    "Every Token Counts: Generalizing 16M Ultra-Long Context in Large Language Models",
-    "Kotlin 2.4.0 正式发布：守卫子句与跨平台类型安全全面升级"
   ]
 }
