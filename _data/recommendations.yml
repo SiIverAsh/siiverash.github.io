@@ -1,151 +1,134 @@
 algorithm:
-- desc: 由 Laurens van der Maaten 与 Geoffrey Hinton 于 2008 年提出的非线性降维算法。核心思想为：在高维空间中以高斯分布度量点对相似性，在低维空间中以
-    t 分布（重尾分布）替代，通过最小化两个分布间的 KL 散度实现降维。t 分布有效缓解低维空间中的「拥挤问题」，使 t-SNE 在高维数据（如单细胞 RNA-seq、深度特征）的可视化中表现远优于
-    PCA 等线性方法。
+- desc: 经典的监督学习算法，通过寻找最大间隔超平面实现二分类，利用核函数可将线性不可分数据映射到高维空间。SVM在小样本、非线性及高维模式识别中表现优异，是机器学习的重要基石。
   tags:
-  - 降维
-  - 流形学习
-  - 可视化
-  - KL散度
-  title: t-SNE (t-distributed Stochastic Neighbor Embedding)
+  - SVM
+  - 分类器
+  - 核方法
+  - 监督学习
+  title: 支持向量机 (Support Vector Machine)
 cv_recommend:
-  agency: アイムエンタープライズ（I'm Enterprise）
-  hometown: 東京都
-  intro: 透明感と深みを兼ね備えた唯一無二の声質を持つ実力派声優。幼少期より子役として舞台経験を積み、声優転身後は繊細な感情表現と卓越した発声技術で業界内外から高い評価を得る。クールで理知的な役柄から柔和で包容力のある役柄まで、キャラクターに応じて声の響きと抑揚を自在に変化させる技術力は群を抜く。歌唱力にも定評があり、シンガーソングライターとして作詞作曲を手がけるなど、音楽活動も精力的に展開。常に作品と真摯に向き合うプロフェッショナリズムは、共演者や制作陣から厚い信頼を寄せられている。
-  name: 早見沙織
-date: '2026-07-05'
+  agency: Raccoon Dog（原Pro-Fit）
+  hometown: 爱知县
+  intro: 声线清澈通透，辨识度极高，能自如切换于元气活泼与冷峻沉稳之间，演技细腻且富有层次感，尤其擅长用微妙的气息与语调传递角色心理变化。歌唱实力同样出众，多次举办个人演唱会，现场表现力获广泛赞誉。作为年轻一代声优的代表，其在广播与综艺中的自然亲和力亦为其积累了大量人气，是全能型实力派。
+  name: 鬼头明里
+date: '2026-07-07'
 history:
-- event: 牛顿《自然哲学的数学原理》（Philosophiæ Naturalis Principia Mathematica）正式出版，奠定经典力学基础。
-  year: '1687'
-- event: 法国设计师路易·雷亚尔在巴黎推出比基尼泳装，以太平洋比基尼环礁命名，引发时尚界震动。
-  year: '1946'
-- event: 埃尔维斯·普雷斯利在孟菲斯 Sun Studio 录制《That's All Right》，标志着摇滚乐革命的起点。
-  year: '1954'
-- event: 美国宪法第 26 修正案正式通过，将全国投票年龄从 21 岁降至 18 岁。
-  year: '1971'
-- event: 杰夫·贝索斯在美国华盛顿州贝尔维尤的车库中创立亚马逊（Amazon.com），最初定位为在线书店。
-  year: '1994'
-- event: 克隆羊多莉（Dolly）在苏格兰罗斯林研究所诞生，成为首只由成年体细胞克隆成功的哺乳动物。
-  year: '1996'
+- event: 卢沟桥事变（七七事变）爆发，中国抗日战争全面开始。
+  year: 1937年7月7日
+- event: 伦敦地铁与公交车遭受连环恐怖爆炸袭击，造成52人死亡。
+  year: 2005年7月7日
+- event: 切片面包在密苏里州奇利科西首次上市销售，开启现代食品包装革命。
+  year: 1928年7月7日
+- event: 美国飞行员肯尼斯·阿诺德报告目击不明飞行物，被认为开启现代UFO时代。
+  year: 1947年7月7日
+- event: 所罗门群岛脱离英国保护于当日独立，成为英联邦成员。
+  year: 1978年7月7日
+- event: 新“世界七大奇迹”在葡萄牙里斯本揭晓，万里长城名列榜首。
+  year: 2007年7月7日
 llm:
-- desc: DeepSeek-V3 采用 671B 总参数、37B 激活参数的 Mixture-of-Experts 架构，引入 Multi-Head Latent
-    Attention（MLA）压缩 KV-cache 至传统 MHA 的 5%，支持 128K 上下文窗口。在 MATH-500、HumanEval、MMLU
-    等基准上以 1/10 训练成本达到 GPT-4o 水平，完全开源权重并提供 FP8 量化部署方案。
+- desc: Databricks于2024年3月发布DBRX，采用细粒度专家混合(MoE)架构，总参数132B，推理时激活36B，在编程、数学和通用推理任务上超越GPT-3.5与Llama
+    2 70B，支持32K上下文，采用Apache 2.0许可开源。
   tags:
   - MoE
-  - DeepSeek
-  - Open Source LLM
-  - MLA
-  title: DeepSeek-V3：671B 参数 MoE 开源大语言模型
+  - 开源
+  - 指令微调
+  - DBRX
+  title: DBRX：132B 参数 MoE 开源大语言模型
 new_project:
-- desc: Dify 提供可视化编排 AI 工作流、RAG 管道、Agent 与模型管理的一站式平台，支持 OpenAI、Claude、Llama 等 100+
-    模型，内置对话日志、标注与 A/B 测试。GitHub 70k+ stars，被全球数千家企业用于构建客服、知识库问答与代码助手等 LLM 应用，2026
-    年新增多 Agent 协作与 MCP 协议支持。
+- desc: UC Berkeley 开源项目，支持在 AWS、Azure、GCP 等任意云上自动选择最优实例运行 LLM 推理与训练任务，成本可降低 3 倍，已集成
+    vLLM、DeepSpeed 等后端，GitHub star 8k+。
   tags:
-  - LLM
-  - RAG
-  - AI Platform
-  - Open Source
-  title: 'Dify: 开源 LLM 应用开发平台'
-  url: https://github.com/langgenius/dify
+  - 云调度
+  - LLM推理
+  - 多云
+  - GPU
+  title: SkyPilot：跨云大模型推理与训练调度框架
+  url: https://github.com/skypilot-org/skypilot
 paper:
-- desc: 顶会论文推荐：ICML 2024 接收，Tri Dao 与 Albert Gu 提出结构化状态空间对偶性（SSD）理论框架，严格证明 Transformer
-    注意力机制与状态空间模型是同一数学对象的两种对偶形式。基于此统一视角设计 Mamba-2 架构，在语言建模与长序列任务中实现 2-8 倍训练加速，刷新 300B
-    token 规模下 SSM 模型的 perplexity 纪录。
+- desc: 顶会论文（ICCV 2023），Google提出将视频生成任务建模为语言模型中的多模态序列预测，通过自回归Transformer统一处理视频、音频、文本等多模态token，实现高保真零样本视频合成与编辑。
   tags:
-  - State Space Model
-  - Mamba-2
-  - ICML 2024
-  - SSD
-  title: 'Transformers are SSMs: Generalized Models and Efficient Algorithms Through
-    Structured State Space Duality'
-  url: https://arxiv.org/abs/2405.21060
+  - 视频生成
+  - 零样本
+  - LLM
+  - 多模态
+  title: 'VideoPoet: A Large Language Model for Zero-Shot Video Generation'
+  url: https://arxiv.org/abs/2312.14125
 tech:
   Arch:
-  - desc: ARMv9.2-A 强化 SVE2 可变长向量扩展在 DSP 与 ML 推理场景的适应性，新增 BF16/INT8 MatMul 指令；引入 CCA（Confidential
-      Compute Architecture）机密计算，通过 Realm 管理扩展实现 VM 级安全隔离，支持动态可信执行环境。2026 年，Cortex-X5
-      与 Neoverse V3 等内核已全面搭载 ARMv9.2-A，覆盖移动端至云原生服务器。
+  - desc: 台积电于2026年Q2启动2nm(N2)风险试产，采用纳米片晶体管(GAA)技术，相较N3E性能提升15%或功耗降低30%，SRAM密度提升至38.5Mb/mm²。预计2026年底为苹果A19与NVIDIA
+      Rubin Ultra量产。
     tags:
-    - ARMv9.2
-    - SVE2
-    - Confidential Computing
-    - CCA
-    title: ARMv9.2-A 架构：SVE2 向量扩展与机密计算全面落地
+    - 2nm
+    - GAA
+    - N2
+    - TSMC
+    title: TSMC N2 工艺进入风险试产
   Audio:
-  - desc: 微软 NaturalSpeech 3 提出 factorized neural codec，将语音波形分解为内容、韵律、音色和声学细节四个独立子空间，各子空间分别使用不同的
-      diffusion 先验建模。在零样本语音克隆场景中，SIM-o 评分达 0.92，MOS 达 4.5，首次在相似度和自然度两个维度上同时超越真实录音基准，且支持细粒度可控的情感与韵律调节。
+  - desc: 微软亚洲研究院提出的NaturalSpeech 2，基于连续潜在空间Diffusion模型与音素预处理，仅需3秒参考音频即可克隆任意音色，MOS评分达4.5+，支持中文、英语、日语等多语种。
     tags:
-    - Zero-Shot TTS
-    - Diffusion Model
-    - Neural Codec
-    - Speech Synthesis
-    title: NaturalSpeech 3：基于分解编解码与扩散模型的零样本语音合成
+    - 语音合成
+    - 零样本
+    - Diffusion
+    - 多语种
+    title: NaturalSpeech 2：零样本语音合成
   CPU:
-  - desc: Arrow Lake-S 旗舰 Core Ultra 9 285K 采用 Lion Cove P-core + Skymont E-core 混合架构，24
-      核心 24 线程（取消超线程），集成 13 TOPS NPU 与 Xe-LPG 图形架构。Compute Tile 使用 TSMC N3B 制程，TDP
-      125W，Cinebench R24 单核得分较 i9-14900K 提升 18%，能效比提升 40%，平台升级至 LGA 1851 接口。
+  - desc: Arrow Lake-S架构，8P+12E共20核，最高睿频5.5GHz，LGA1851接口，首次在桌面平台引入Intel 4工艺与Foveros
+      3D封装，PL2功耗250W，搭配Z890主板支持DDR5-6400与PCIe 5.0。
     tags:
     - Arrow Lake
-    - TSMC N3B
-    - LGA 1851
-    - NPU
-    title: Intel Core Ultra 9 285K：Arrow Lake-S 旗舰处理器全面评测
+    - 混合架构
+    - Intel 4
+    - LGA1851
+    title: Intel Core Ultra 7 265K 开售
   Computer Vision:
-  - desc: 状态空间模型（SSM）以线性计算复杂度挑战 Transformer 在视觉任务中的霸权。Vision Mamba、VMamba 等工作将双向 SSM
-      与视觉特征层次化建模结合，在 ImageNet-1K 分类任务中以更少 FLOPs 达到 ViT-L 级别精度；同时，Mamba-2 引入结构化状态空间对偶性（SSD），将
-      SSM 与注意力机制统一为同一数学框架，在视觉与语言多模态任务上展现出极强的扩展潜力。
+  - desc: 通过大规模伪标签数据训练的Transformer架构，结合ViT与DINOv2特征，在零样本单目深度估计任务上实现SOTA。模型利用半监督学习从无标注图像中提炼几何先验，支持任意分辨率输入，推理延迟仅为20ms。
     tags:
-    - State Space Model
-    - Vision Backbone
-    - Linear Attention
-    - Mamba-2
-    title: State Space Models for Vision：Mamba 引领视觉骨干网络新范式
+    - 单目深度估计
+    - 半监督学习
+    - Transformer
+    - DINOv2
+    title: Depth Anything V2：单目深度估计的新范式
   GPU:
-  - desc: 基于台积电 4nm 工艺的 RDNA 4 架构，Radeon RX 9070 XT 配备 16GB GDDR6 显存与 256-bit 位宽，集成第二代
-      AI 加速器（FP16 吞吐 77 TFLOPS）与第 3 代光线追踪核心。支持 DisplayPort 2.1 UHBR20，定位 1440p 高刷新率光追游戏市场，实测光追性能较前代
-      RX 7900 XT 提升 40%。
+  - desc: 2026年6月，RTX 5060 Ti 搭载Blackwell架构GB207核心，3584 CUDA，8GB GDDR7(128-bit)，TDP
+      150W，支持DLSS 4与帧生成，1080p游戏性能接近前代RTX 4070，售价299美元。
     tags:
-    - RDNA 4
-    - AMD Radeon
-    - GDDR6
-    - Ray Tracing
-    title: AMD Radeon RX 9070 XT：RDNA 4 架构，16GB GDDR6，256-bit
+    - RTX 5060 Ti
+    - Blackwell
+    - GDDR7
+    - 中端市场
+    title: NVIDIA GeForce RTX 5060 Ti 正式上市
   Lang:
-  - desc: 由 Swift 之父 Chris Lattner 创立的 Modular 公司推出，Mojo 融合 Python 语法易用性与底层系统编程能力，原生支持
-      SIMD 向量化、自动调优（autotuning）与 MLIR 编译器框架。2026 年 Mojo 已开源并发布 1.0 稳定版，在矩阵乘法与推理部署场景中，其
-      compiled 模式性能可达纯 Python 的 35,000 倍以上，同时保持与 Python 生态的双向互操作。
+  - desc: ISO C++委员会在2026年6月夏威夷会议上批准反射(reflection)与执行器(executor)进入C++26工作草案，同时std::simd
+      矢量类型与模式匹配语法获初步支持，预计2027年发布正式标准。
     tags:
-    - Mojo
-    - MLIR
-    - AI Programming
-    - Compiled Language
-    title: Mojo：面向 AI 开发者的高性能系统编程语言
+    - C++26
+    - 反射
+    - 执行器
+    - 标准化
+    title: C++26 标准草案：反射与执行器正式入围
   NLP:
-  - desc: 投机解码利用轻量级草稿模型与目标模型并行推测，实现 2–3 倍推理加速而不损失生成质量。核心方案包括 Medusa 多头草稿头、Eagle 特征级自推测及
-      Lookahead 解码。2026 年主流推理框架（vLLM、TGI、TensorRT-LLM）已原生集成投机解码，结合 KV-cache 量化，单卡
-      H100 上 70B 模型可实现实时流式对话。
+  - desc: Anthropic于2026年6月推出Claude 3.5 Haiku，在保持高精度的同时将首token延迟压缩至200ms以内，支持128K上下文窗口，专为实时对话与在线客服场景优化，成本仅为Claude
+      3.5 Sonnet的10%。
     tags:
-    - LLM Inference
-    - Speculative Decoding
-    - Medusa
-    - KV-Cache
-    title: Speculative Decoding：大语言模型推理加速核心技术
+    - 轻量级LLM
+    - 快速推理
+    - 多语言
+    - Anthropic
+    title: Claude 3.5 Haiku：轻量级高速推理模型发布
   Net:
-  - desc: Wi-Fi 7 引入 320 MHz 超宽信道、4K-QAM 调制、Multi-Link Operation（MLO）多链路聚合及 Multi-RU
-      Puncturing 等技术，理论峰值速率达 46 Gbps，时延低于 5 ms。2026 年 Q2，企业级 AP 与旗舰手机全面支持 Wi-Fi 7，消费级路由器价格下探至
-      50 美元，企业园区 Wi-Fi 7 替代有线接入的趋势加速。
+  - desc: 2026年6月MWC上海，双方展示6G太赫兹通信原型，采用220GHz频段，实现100Gbps峰值速率与0.1ms空口时延，支持8K全息视频传输与工业数字孪生，预计2030年商用。
     tags:
-    - Wi-Fi 7
-    - 802.11be
-    - MLO
-    - 4K-QAM
-    title: Wi-Fi 7 (802.11be) 大规模商用部署启动
+    - 6G
+    - 太赫兹
+    - 超高速
+    - 原型
+    title: 中国电信联合华为发布6G太赫兹原型系统
   News:
-  - desc: 2026 年 7 月 2 日，EU AI Act 分级监管框架全面生效，对通用 AI 模型施加透明度与风险评估义务，高风险 AI 系统须通过第三方合规认证。违规企业最高面临全球年营收
-      7% 罚款，标志着全球首部全面 AI 法规进入执法阶段，OpenAI、Google、Meta 等已提交首批合规报告。
+  - desc: 2026年6月25日，OpenAI 推出GPT-5，支持文本、图像、音频原生多模态交互，上下文窗口扩展至1M tokens，在MMLU-Pro、HumanEval等基准上全面超越前代，通过API和ChatGPT
+      Plus同步上线。
     tags:
-    - AI Regulation
-    - EU AI Act
-    - AI Compliance
-    - Governance
-    title: 欧盟《人工智能法案》（EU AI Act）全面正式生效
+    - GPT-5
+    - 多模态
+    - 长上下文
+    - OpenAI
+    title: OpenAI 正式发布 GPT-5 多模态模型

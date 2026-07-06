@@ -1,4 +1,20 @@
 {
+  "2026-07-07": [
+    "C++26 标准草案：反射与执行器正式入围",
+    "Depth Anything V2：单目深度估计的新范式",
+    "NaturalSpeech 2：零样本语音合成",
+    "鬼头明里",
+    "TSMC N2 工艺进入风险试产",
+    "NVIDIA GeForce RTX 5060 Ti 正式上市",
+    "支持向量机 (Support Vector Machine)",
+    "Claude 3.5 Haiku：轻量级高速推理模型发布",
+    "Intel Core Ultra 7 265K 开售",
+    "VideoPoet: A Large Language Model for Zero-Shot Video Generation",
+    "SkyPilot：跨云大模型推理与训练调度框架",
+    "中国电信联合华为发布6G太赫兹原型系统",
+    "DBRX：132B 参数 MoE 开源大语言模型",
+    "OpenAI 正式发布 GPT-5 多模态模型"
+  ],
   "2026-07-05": [
     "t-SNE (t-distributed Stochastic Neighbor Embedding)",
     "早見沙織",
@@ -142,21 +158,5 @@
     "vllm-project/vllm：高吞吐低延迟LLM推理引擎",
     "Dynamic 3D Gaussian Splatting：实时4D场景重建与渲染新范式",
     "Apple M5 Pro/Max：N3P制程，统一内存架构再进化"
-  ],
-  "2026-06-26": [
-    "COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context",
-    "AMD Ryzen 9 9950X3D2 Dual Edition：双V-Cache旗舰",
-    "DeepSeek V4：百万Token原生上下文，稀疏注意力重塑推理效率",
-    "A Frame is Worth One Token: Efficient Generative World Modeling with Delta Tokens",
-    "browser-use/browser-use",
-    "3GPP正式批准首个6G RAN研究项目",
-    "NVIDIA RTX 5060 SUPER 12GB泄露：Blackwell中端超频版",
-    "OpenAI与Broadcom联合发布Jalapeño推理芯片：9个月光速流片",
-    "早見沙織",
-    "SPEAR: A Unified SSL Framework for Learning Speech and Audio Representations",
-    "Swift 6.2 正式发布：Typed Throws与分布式Actor落地",
-    "K近邻 (K-Nearest Neighbors, KNN)",
-    "IBM NanoStack：全球首个亚1纳米晶体管技术问世",
-    "Rethinking Fine-Tuning when Scaling Test-Time Compute: Limiting Confidence Improves Mathematical Reasoning"
   ]
 }
