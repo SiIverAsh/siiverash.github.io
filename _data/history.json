@@ -1,4 +1,20 @@
 {
+  "2026-07-08": [
+    "XGBoost: 极致梯度提升树",
+    "AMD Ryzen 9 9900X: Zen 5架构12核24线程旗舰",
+    "佐仓绫音",
+    "NVIDIA Spectrum-4: 800G以太网交换平台",
+    "NVIDIA GeForce RTX 5070: Blackwell中端主力，12GB GDDR7",
+    "Grok-3: xAI发布第三代推理增强大语言模型",
+    "Intel 18A: RibbonFET环栅晶体管与PowerVia背面供电",
+    "MaskGCT: 掩码生成式编解码语音合成",
+    "InternVL 2.5: 开源多模态视觉语言模型",
+    "Aider: AI驱动的终端结对编程工具",
+    "Gemini 2.5 Pro: 谷歌多模态推理旗舰模型",
+    "Computex 2026: AI PC与下一代半导体平台竞逐",
+    "Zig 0.14: 编译时反射与增量编译系统编程语言",
+    "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
+  ],
   "2026-07-07": [
     "C++26 标准草案：反射与执行器正式入围",
     "Depth Anything V2：单目深度估计的新范式",
@@ -142,21 +158,5 @@
     "Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction",
     "Mojo 1.0：面向AI开发者的Python超集语言正式发布",
     "Jamba 1.5 Large：SSM-Transformer混合架构开源大模型"
-  ],
-  "2026-06-27": [
-    "上坂すみれ",
-    "Meta Llama 4：原生多模态MoE开源旗舰模型家族",
-    "Stable Audio Open 2.0：开源扩散模型音频生成平台",
-    "AST SpaceMobile：LEO卫星直连手机5G宽带商用启航",
-    "随机森林 (Random Forest)：Bagging集成的经典基石算法",
-    "Python 3.14 正式发布：自由线程默认启用与JIT编译器落地",
-    "WWDC 2026：Apple Intelligence 2.0携Swift 6.3与Xcode 18震撼登场",
-    "GiLT：依赖图增强Transformer语言模型 (ACL 2026)",
-    "Intel Arc Pro B70：Big Battlemage 32GB工作站GPU，367 TOPS AI算力",
-    "Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio Language Models (NeurIPS 2025)",
-    "HBM4高带宽内存：1.6TB/s单栈带宽，AI加速器新引擎",
-    "vllm-project/vllm：高吞吐低延迟LLM推理引擎",
-    "Dynamic 3D Gaussian Splatting：实时4D场景重建与渲染新范式",
-    "Apple M5 Pro/Max：N3P制程，统一内存架构再进化"
   ]
 }

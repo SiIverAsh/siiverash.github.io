@@ -1,134 +1,133 @@
 algorithm:
-- desc: 经典的监督学习算法，通过寻找最大间隔超平面实现二分类，利用核函数可将线性不可分数据映射到高维空间。SVM在小样本、非线性及高维模式识别中表现优异，是机器学习的重要基石。
+- desc: 基于梯度提升框架的集成学习算法，引入正则化目标函数与列采样防止过拟合，支持自定义损失函数与分布式训练，在结构化数据竞赛与工业级预测任务中长期占据统治地位。
   tags:
-  - SVM
-  - 分类器
-  - 核方法
-  - 监督学习
-  title: 支持向量机 (Support Vector Machine)
+  - 梯度提升
+  - 树模型
+  - 集成学习
+  - XGBoost
+  title: 'XGBoost: 极致梯度提升树'
 cv_recommend:
-  agency: Raccoon Dog（原Pro-Fit）
-  hometown: 爱知县
-  intro: 声线清澈通透，辨识度极高，能自如切换于元气活泼与冷峻沉稳之间，演技细腻且富有层次感，尤其擅长用微妙的气息与语调传递角色心理变化。歌唱实力同样出众，多次举办个人演唱会，现场表现力获广泛赞誉。作为年轻一代声优的代表，其在广播与综艺中的自然亲和力亦为其积累了大量人气，是全能型实力派。
-  name: 鬼头明里
-date: '2026-07-07'
+  agency: アイムエンタープライズ (I'm Enterprise)
+  hometown: 东京都
+  intro: 1994年生于东京都，2010年声优出道。隶属于I'm Enterprise事务所。音色清澈富有辨识度，声线跨度极广，可驾驭从活泼少女到冷艳御姐的多元角色。演技细腻自然，在情感爆发戏份中尤显张力。凭借扎实的台词功底与独特的鼻音特质，在同世代声优中独树一帜。曾获第12回声优奖主演女声优奖，是平成年代最具代表性的女性声优之一。
+  name: 佐仓绫音
+date: '2026-07-08'
 history:
-- event: 卢沟桥事变（七七事变）爆发，中国抗日战争全面开始。
-  year: 1937年7月7日
-- event: 伦敦地铁与公交车遭受连环恐怖爆炸袭击，造成52人死亡。
-  year: 2005年7月7日
-- event: 切片面包在密苏里州奇利科西首次上市销售，开启现代食品包装革命。
-  year: 1928年7月7日
-- event: 美国飞行员肯尼斯·阿诺德报告目击不明飞行物，被认为开启现代UFO时代。
-  year: 1947年7月7日
-- event: 所罗门群岛脱离英国保护于当日独立，成为英联邦成员。
-  year: 1978年7月7日
-- event: 新“世界七大奇迹”在葡萄牙里斯本揭晓，万里长城名列榜首。
-  year: 2007年7月7日
+- event: 美国费城自由钟敲响，召集市民聆听《独立宣言》首次公开宣读。
+  year: '1776'
+- event: 美国海军准将佩里率黑船舰队驶入江户湾（今东京湾），迫使日本开国。
+  year: '1853'
+- event: 《华尔街日报》创刊号正式出版，由道琼斯公司发行。
+  year: '1889'
+- event: 美国新墨西哥州罗斯威尔陆军机场宣布发现不明飞行物残骸，罗斯威尔事件引发全球UFO热潮。
+  year: '1947'
+- event: 美国航天飞机亚特兰蒂斯号完成最后一次发射任务，航天飞机时代落幕。
+  year: '2011'
+- event: 日本前首相安倍晋三在奈良市街头发表演讲时遭枪击身亡。
+  year: '2022'
 llm:
-- desc: Databricks于2024年3月发布DBRX，采用细粒度专家混合(MoE)架构，总参数132B，推理时激活36B，在编程、数学和通用推理任务上超越GPT-3.5与Llama
-    2 70B，支持32K上下文，采用Apache 2.0许可开源。
+- desc: xAI于2025年初发布的第三代推理增强大模型，基于Colossus超算集群训练，引入DeepSearch深度搜索与Think推理模式，在数学、代码与科学推理任务中表现突出，通过X平台向Premium+用户开放。
   tags:
-  - MoE
-  - 开源
-  - 指令微调
-  - DBRX
-  title: DBRX：132B 参数 MoE 开源大语言模型
+  - Grok-3
+  - xAI
+  - 推理增强
+  - 大语言模型
+  title: 'Grok-3: xAI发布第三代推理增强大语言模型'
 new_project:
-- desc: UC Berkeley 开源项目，支持在 AWS、Azure、GCP 等任意云上自动选择最优实例运行 LLM 推理与训练任务，成本可降低 3 倍，已集成
-    vLLM、DeepSpeed 等后端，GitHub star 8k+。
+- desc: 终端内AI结对编程工具，支持多LLM后端（GPT-4o、Claude等），可自动生成并应用Git提交，具备全仓库上下文感知能力，大幅提升重构与调试效率。
   tags:
-  - 云调度
-  - LLM推理
-  - 多云
-  - GPU
-  title: SkyPilot：跨云大模型推理与训练调度框架
-  url: https://github.com/skypilot-org/skypilot
-paper:
-- desc: 顶会论文（ICCV 2023），Google提出将视频生成任务建模为语言模型中的多模态序列预测，通过自回归Transformer统一处理视频、音频、文本等多模态token，实现高保真零样本视频合成与编辑。
-  tags:
-  - 视频生成
-  - 零样本
+  - AI编程
+  - 结对编程
   - LLM
-  - 多模态
-  title: 'VideoPoet: A Large Language Model for Zero-Shot Video Generation'
-  url: https://arxiv.org/abs/2312.14125
+  - Git
+  title: 'Aider: AI驱动的终端结对编程工具'
+  url: https://github.com/Aider-AI/aider
+paper:
+- desc: DeepSeek团队提出的基于强化学习的推理增强方法，通过Group Relative Policy Optimization (GRPO) 引导模型生成长链思维，在AIME、MATH-500等数学推理基准上媲美OpenAI
+    o1，论文发表于ICML 2025。
+  tags:
+  - 推理
+  - 强化学习
+  - DeepSeek
+  - 链式思维
+  title: 'DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement
+    Learning'
+  url: https://arxiv.org/abs/2501.12948
 tech:
   Arch:
-  - desc: 台积电于2026年Q2启动2nm(N2)风险试产，采用纳米片晶体管(GAA)技术，相较N3E性能提升15%或功耗降低30%，SRAM密度提升至38.5Mb/mm²。预计2026年底为苹果A19与NVIDIA
-      Rubin Ultra量产。
+  - desc: Intel首个同时采用RibbonFET环栅晶体管与PowerVia背面供电的先进制程节点，相比Intel 3实现显著密度与能效提升，已成功流片Clearwater
+      Forest至强处理器，目标2025年底量产，剑指台积电N2。
     tags:
-    - 2nm
+    - Intel 18A
     - GAA
-    - N2
-    - TSMC
-    title: TSMC N2 工艺进入风险试产
+    - 背面供电
+    - 先进制程
+    title: 'Intel 18A: RibbonFET环栅晶体管与PowerVia背面供电'
   Audio:
-  - desc: 微软亚洲研究院提出的NaturalSpeech 2，基于连续潜在空间Diffusion模型与音素预处理，仅需3秒参考音频即可克隆任意音色，MOS评分达4.5+，支持中文、英语、日语等多语种。
+  - desc: Meta FAIR提出的掩码生成式编解码语音合成模型，抛弃传统自回归范式，采用双向掩码建模与残差矢量量化结合，实现零样本语音克隆，在语音自然度与说话人相似度上超越现有方案。
     tags:
     - 语音合成
+    - 掩码生成
     - 零样本
-    - Diffusion
-    - 多语种
-    title: NaturalSpeech 2：零样本语音合成
+    - Meta
+    title: 'MaskGCT: 掩码生成式编解码语音合成'
   CPU:
-  - desc: Arrow Lake-S架构，8P+12E共20核，最高睿频5.5GHz，LGA1851接口，首次在桌面平台引入Intel 4工艺与Foveros
-      3D封装，PL2功耗250W，搭配Z890主板支持DDR5-6400与PCIe 5.0。
+  - desc: Zen 5架构12核24线程，基于TSMC 4nm工艺，最高加速5.6GHz，TDP 120W，IPC较Zen 4提升约16%，在单线程与多线程负载中表现均衡，搭配AM5平台支持PCIe
+      5.0与DDR5-5600。
     tags:
-    - Arrow Lake
-    - 混合架构
-    - Intel 4
-    - LGA1851
-    title: Intel Core Ultra 7 265K 开售
+    - Zen 5
+    - AM5
+    - TSMC 4nm
+    - 12核
+    title: 'AMD Ryzen 9 9900X: Zen 5架构12核24线程旗舰'
   Computer Vision:
-  - desc: 通过大规模伪标签数据训练的Transformer架构，结合ViT与DINOv2特征，在零样本单目深度估计任务上实现SOTA。模型利用半监督学习从无标注图像中提炼几何先验，支持任意分辨率输入，推理延迟仅为20ms。
+  - desc: 上海AI实验室推出的开源多模态大模型，支持动态高分辨率输入与多尺度特征融合，在MMBench、DocVQA、OCRBench等视觉理解基准上达到开源SOTA，采用渐进式训练策略实现从粗到细的视觉语义对齐。
     tags:
-    - 单目深度估计
-    - 半监督学习
-    - Transformer
-    - DINOv2
-    title: Depth Anything V2：单目深度估计的新范式
-  GPU:
-  - desc: 2026年6月，RTX 5060 Ti 搭载Blackwell架构GB207核心，3584 CUDA，8GB GDDR7(128-bit)，TDP
-      150W，支持DLSS 4与帧生成，1080p游戏性能接近前代RTX 4070，售价299美元。
-    tags:
-    - RTX 5060 Ti
-    - Blackwell
-    - GDDR7
-    - 中端市场
-    title: NVIDIA GeForce RTX 5060 Ti 正式上市
-  Lang:
-  - desc: ISO C++委员会在2026年6月夏威夷会议上批准反射(reflection)与执行器(executor)进入C++26工作草案，同时std::simd
-      矢量类型与模式匹配语法获初步支持，预计2027年发布正式标准。
-    tags:
-    - C++26
-    - 反射
-    - 执行器
-    - 标准化
-    title: C++26 标准草案：反射与执行器正式入围
-  NLP:
-  - desc: Anthropic于2026年6月推出Claude 3.5 Haiku，在保持高精度的同时将首token延迟压缩至200ms以内，支持128K上下文窗口，专为实时对话与在线客服场景优化，成本仅为Claude
-      3.5 Sonnet的10%。
-    tags:
-    - 轻量级LLM
-    - 快速推理
-    - 多语言
-    - Anthropic
-    title: Claude 3.5 Haiku：轻量级高速推理模型发布
-  Net:
-  - desc: 2026年6月MWC上海，双方展示6G太赫兹通信原型，采用220GHz频段，实现100Gbps峰值速率与0.1ms空口时延，支持8K全息视频传输与工业数字孪生，预计2030年商用。
-    tags:
-    - 6G
-    - 太赫兹
-    - 超高速
-    - 原型
-    title: 中国电信联合华为发布6G太赫兹原型系统
-  News:
-  - desc: 2026年6月25日，OpenAI 推出GPT-5，支持文本、图像、音频原生多模态交互，上下文窗口扩展至1M tokens，在MMLU-Pro、HumanEval等基准上全面超越前代，通过API和ChatGPT
-      Plus同步上线。
-    tags:
-    - GPT-5
     - 多模态
-    - 长上下文
-    - OpenAI
-    title: OpenAI 正式发布 GPT-5 多模态模型
+    - 视觉语言模型
+    - InternVL
+    - 开源
+    title: 'InternVL 2.5: 开源多模态视觉语言模型'
+  GPU:
+  - desc: 基于Blackwell GB205核心，配备6144个CUDA Core、12GB GDDR7显存与192-bit位宽，支持DLSS 4多帧生成与Reflex
+      2低延迟技术，TGP 250W，定位1440p高刷光追游戏市场。
+    tags:
+    - Blackwell
+    - RTX 5070
+    - GDDR7
+    - DLSS 4
+    title: 'NVIDIA GeForce RTX 5070: Blackwell中端主力，12GB GDDR7'
+  Lang:
+  - desc: 强调无隐式内存分配与编译时元编程的系统编程语言，原生支持交叉编译，自举编译器已稳定；0.14版本引入增量编译与改进的异步IO运行时，被视为C语言在现代系统软件开发中的强力替代方案。
+    tags:
+    - 系统编程
+    - Zig
+    - 编译时计算
+    - C替代
+    title: 'Zig 0.14: 编译时反射与增量编译系统编程语言'
+  NLP:
+  - desc: Google DeepMind推出的新一代多模态推理模型，支持百万级token上下文窗口，融入增强推理链机制与多步工具调用，在MMLU-Pro、GPQA等复杂推理基准上刷新SOTA，API已向开发者全面开放。
+    tags:
+    - 大语言模型
+    - Google
+    - 推理
+    - 多模态
+    title: 'Gemini 2.5 Pro: 谷歌多模态推理旗舰模型'
+  Net:
+  - desc: 基于51.2Tbps交换容量的800G以太网平台，专为AI工厂设计，支持自适应路由与动态负载均衡，单芯片可连接128个400G端口，NVIDIA推荐作为Blackwell
+      GPU集群的核心互联架构。
+    tags:
+    - 数据中心网络
+    - 800G
+    - AI基础设施
+    - NVIDIA
+    title: 'NVIDIA Spectrum-4: 800G以太网交换平台'
+  News:
+  - desc: 2026年台北国际电脑展聚焦AI PC与边缘计算，英特尔展示Panther Lake芯片，AMD推进Zen 6路线图，NVIDIA发布Blackwell
+      Ultra GPU，三大巨头围绕AI推理与能效展开激烈竞争。
+    tags:
+    - Computex 2026
+    - AI PC
+    - 半导体
+    - 台北
+    title: 'Computex 2026: AI PC与下一代半导体平台竞逐'
