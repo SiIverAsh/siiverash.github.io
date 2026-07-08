@@ -1,133 +1,128 @@
 algorithm:
-- desc: 基于梯度提升框架的集成学习算法，引入正则化目标函数与列采样防止过拟合，支持自定义损失函数与分布式训练，在结构化数据竞赛与工业级预测任务中长期占据统治地位。
+- desc: 经典无监督学习算法，通过迭代最小化样本到簇心的平方误差，将数据划分为K个簇。算法简单高效，广泛应用于客户细分、图像压缩、异常检测等领域。
   tags:
-  - 梯度提升
-  - 树模型
-  - 集成学习
-  - XGBoost
-  title: 'XGBoost: 极致梯度提升树'
+  - 聚类
+  - 无监督学习
+  - 向量量化
+  - 迭代优化
+  title: K-Means 聚类
 cv_recommend:
-  agency: アイムエンタープライズ (I'm Enterprise)
+  agency: Sony Music Artists
   hometown: 东京都
-  intro: 1994年生于东京都，2010年声优出道。隶属于I'm Enterprise事务所。音色清澈富有辨识度，声线跨度极广，可驾驭从活泼少女到冷艳御姐的多元角色。演技细腻自然，在情感爆发戏份中尤显张力。凭借扎实的台词功底与独特的鼻音特质，在同世代声优中独树一帜。曾获第12回声优奖主演女声优奖，是平成年代最具代表性的女性声优之一。
-  name: 佐仓绫音
-date: '2026-07-08'
+  intro: 水濑祈以其清澈透明的嗓音和细腻的演技在业内获得高度评价。她能够精准把握角色的情感脉络，无论是活泼开朗的少女还是内心复杂的女性，都能赋予独特魅力。在音乐领域，她凭借稳定的唱功和丰富的表现力成功举办多场个人演唱会，展现出全能艺人的素养。
+  name: 水濑祈
+date: '2026-07-09'
 history:
-- event: 美国费城自由钟敲响，召集市民聆听《独立宣言》首次公开宣读。
-  year: '1776'
-- event: 美国海军准将佩里率黑船舰队驶入江户湾（今东京湾），迫使日本开国。
-  year: '1853'
-- event: 《华尔街日报》创刊号正式出版，由道琼斯公司发行。
-  year: '1889'
-- event: 美国新墨西哥州罗斯威尔陆军机场宣布发现不明飞行物残骸，罗斯威尔事件引发全球UFO热潮。
-  year: '1947'
-- event: 美国航天飞机亚特兰蒂斯号完成最后一次发射任务，航天飞机时代落幕。
-  year: '2011'
-- event: 日本前首相安倍晋三在奈良市街头发表演讲时遭枪击身亡。
-  year: '2022'
+- event: 阿根廷宣布脱离西班牙独立，成立拉普拉塔联合省。
+  year: 1816
+- event: 首届温布尔登网球锦标赛在伦敦举行，成为现代网球史上最悠久的赛事。
+  year: 1877
+- event: 美国国务卿马歇尔在巴黎会议上提出欧洲复兴计划（马歇尔计划），旨在重建战后欧洲经济。
+  year: 1947
+- event: 罗素-爱因斯坦宣言在伦敦发布，由11位顶尖科学家签署，呼吁和平利用核能并警示核战争危险。
+  year: 1955
+- event: 旅行者2号探测器以最近距离飞掠木星，传回高分辨率图像并发现木星环。
+  year: 1979
+- event: 南苏丹共和国正式宣布独立，成为非洲第54个主权国家。
+  year: 2011
 llm:
-- desc: xAI于2025年初发布的第三代推理增强大模型，基于Colossus超算集群训练，引入DeepSearch深度搜索与Think推理模式，在数学、代码与科学推理任务中表现突出，通过X平台向Premium+用户开放。
+- desc: Meta于2025年发布的开源多模态大模型，采用混合专家(MoE)架构，包含Scout与Maverick等版本，支持128K上下文长度，在推理、编码与多模态任务上达到领先水平。
   tags:
-  - Grok-3
-  - xAI
-  - 推理增强
-  - 大语言模型
-  title: 'Grok-3: xAI发布第三代推理增强大语言模型'
+  - Llama 4
+  - MoE
+  - 多模态
+  - 开源
+  title: Meta Llama 4
 new_project:
-- desc: 终端内AI结对编程工具，支持多LLM后端（GPT-4o、Claude等），可自动生成并应用Git提交，具备全仓库上下文感知能力，大幅提升重构与调试效率。
+- desc: 让本地运行大语言模型变得简单易用。支持LLaMA、Mistral等多种模型，提供命令行接口与REST API，一键下载、运行并管理模型，是开发与实验的理想工具。
   tags:
-  - AI编程
-  - 结对编程
+  - Ollama
   - LLM
-  - Git
-  title: 'Aider: AI驱动的终端结对编程工具'
-  url: https://github.com/Aider-AI/aider
+  - 本地部署
+  - CLI
+  title: Ollama
+  url: https://github.com/ollama/ollama
 paper:
-- desc: DeepSeek团队提出的基于强化学习的推理增强方法，通过Group Relative Policy Optimization (GRPO) 引导模型生成长链思维，在AIME、MATH-500等数学推理基准上媲美OpenAI
-    o1，论文发表于ICML 2025。
+- desc: 顶会论文推荐：将偏好对齐与监督微调合并为单一阶段训练，无需额外参考模型，显著降低计算开销并提升对齐效果，为LLM对齐提供高效新范式。
   tags:
-  - 推理
-  - 强化学习
-  - DeepSeek
-  - 链式思维
-  title: 'DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement
-    Learning'
-  url: https://arxiv.org/abs/2501.12948
+  - LLM对齐
+  - 单阶段
+  - 偏好优化
+  - ICLR
+  title: 'ORPO: Monolithic Preference Optimization without Reference Model'
+  url: https://arxiv.org/abs/2403.07691
 tech:
   Arch:
-  - desc: Intel首个同时采用RibbonFET环栅晶体管与PowerVia背面供电的先进制程节点，相比Intel 3实现显著密度与能效提升，已成功流片Clearwater
-      Forest至强处理器，目标2025年底量产，剑指台积电N2。
+  - desc: 2024年RISC-V国际基金会正式批准向量扩展1.0规范，提供标准化的可变长度向量处理能力，为AI/ML、HPC等场景的RISC-V处理器设计奠定统一ISA基础。
     tags:
-    - Intel 18A
-    - GAA
-    - 背面供电
-    - 先进制程
-    title: 'Intel 18A: RibbonFET环栅晶体管与PowerVia背面供电'
+    - RISC-V
+    - 向量扩展
+    - ISA
+    - AI加速
+    title: RISC-V 向量扩展 1.0 (RVV 1.0) 正式批准
   Audio:
-  - desc: Meta FAIR提出的掩码生成式编解码语音合成模型，抛弃传统自回归范式，采用双向掩码建模与残差矢量量化结合，实现零样本语音克隆，在语音自然度与说话人相似度上超越现有方案。
+  - desc: Kyutai实验室于2024年开源的全双工实时语音对话模型。采用联合文本-语音建模，支持低延迟（200ms）自然交互，可同时处理听、说、想，具备情感感知与多轮对话能力。
     tags:
     - 语音合成
-    - 掩码生成
-    - 零样本
-    - Meta
-    title: 'MaskGCT: 掩码生成式编解码语音合成'
-  CPU:
-  - desc: Zen 5架构12核24线程，基于TSMC 4nm工艺，最高加速5.6GHz，TDP 120W，IPC较Zen 4提升约16%，在单线程与多线程负载中表现均衡，搭配AM5平台支持PCIe
-      5.0与DDR5-5600。
-    tags:
-    - Zen 5
-    - AM5
-    - TSMC 4nm
-    - 12核
-    title: 'AMD Ryzen 9 9900X: Zen 5架构12核24线程旗舰'
-  Computer Vision:
-  - desc: 上海AI实验室推出的开源多模态大模型，支持动态高分辨率输入与多尺度特征融合，在MMBench、DocVQA、OCRBench等视觉理解基准上达到开源SOTA，采用渐进式训练策略实现从粗到细的视觉语义对齐。
-    tags:
-    - 多模态
-    - 视觉语言模型
-    - InternVL
+    - 实时对话
+    - 全双工
     - 开源
-    title: 'InternVL 2.5: 开源多模态视觉语言模型'
-  GPU:
-  - desc: 基于Blackwell GB205核心，配备6144个CUDA Core、12GB GDDR7显存与192-bit位宽，支持DLSS 4多帧生成与Reflex
-      2低延迟技术，TGP 250W，定位1440p高刷光追游戏市场。
+    title: 'Moshi: A Speech-Text Foundation Model for Real-Time Dialogue'
+  CPU:
+  - desc: Arrow Lake-S桌面处理器，6P+8E核心，14线程。P核基于Lion Cove，E核为Skymont，最大睿频5.2GHz，Intel
+      20A与台积电N3B混合工艺，支持DDR5-6400，TDP 125W。
     tags:
+    - CPU
+    - Arrow Lake
+    - Lion Cove
+    - Intel 20A
+    title: Intel Core Ultra 5 245K
+  Computer Vision:
+  - desc: Meta于2024年发布的第二代分割基础模型，支持图像与视频的通用分割。采用Transformer架构与流式记忆机制，实现任意帧的实时交互式与自动分割。模型在多样化数据上训练，具备强大的零样本泛化能力。
+    tags:
+    - 计算机视觉
+    - 分割
+    - 基础模型
+    - 零样本
+    title: 'SAM 2: Segment Anything Model 2'
+  GPU:
+  - desc: Blackwell架构主流级GPU，2026年Q2上市。搭载12GB GDDR7显存，128-bit位宽，支持DLSS 4、Reflex 2低延迟技术，TGP约160W，PCIe
+      5.0接口，光线追踪性能较前代提升40%。
+    tags:
+    - GPU
     - Blackwell
-    - RTX 5070
     - GDDR7
     - DLSS 4
-    title: 'NVIDIA GeForce RTX 5070: Blackwell中端主力，12GB GDDR7'
+    title: NVIDIA GeForce RTX 5060 12GB
   Lang:
-  - desc: 强调无隐式内存分配与编译时元编程的系统编程语言，原生支持交叉编译，自举编译器已稳定；0.14版本引入增量编译与改进的异步IO运行时，被视为C语言在现代系统软件开发中的强力替代方案。
+  - desc: Rust 2024版随1.85版本于2025年发布，引入RPIT生命周期捕获、异步闭包、原生开发者认证等特性，进一步强化内存安全与并发编程，提升大型工程的可维护性。
     tags:
-    - 系统编程
-    - Zig
-    - 编译时计算
-    - C替代
-    title: 'Zig 0.14: 编译时反射与增量编译系统编程语言'
+    - Rust
+    - 编程语言
+    - 安全
+    - 并发
+    title: Rust 2024 Edition
   NLP:
-  - desc: Google DeepMind推出的新一代多模态推理模型，支持百万级token上下文窗口，融入增强推理链机制与多步工具调用，在MMLU-Pro、GPQA等复杂推理基准上刷新SOTA，API已向开发者全面开放。
+  - desc: AI21 Labs于2024年推出的混合架构大语言模型，结合Transformer注意力与Mamba状态空间模型，在保持长上下文建模能力（256K）的同时大幅降低内存占用。提供开源权重，支持高效微调与推理。
     tags:
-    - 大语言模型
-    - Google
-    - 推理
-    - 多模态
-    title: 'Gemini 2.5 Pro: 谷歌多模态推理旗舰模型'
+    - NLP
+    - 混合架构
+    - Mamba
+    - 长上下文
+    title: 'Jamba: A Hybrid Transformer-Mamba Language Model'
   Net:
-  - desc: 基于51.2Tbps交换容量的800G以太网平台，专为AI工厂设计，支持自适应路由与动态负载均衡，单芯片可连接128个400G端口，NVIDIA推荐作为Blackwell
-      GPU集群的核心互联架构。
+  - desc: 3GPP Release 18于2024年冻结，2025年启动商用。引入AI/ML驱动的网络优化、NR-Light（RedCap）低复杂度终端、非地面网络增强等，为沉浸式通信与工业物联网提供网络基础。
     tags:
-    - 数据中心网络
-    - 800G
-    - AI基础设施
-    - NVIDIA
-    title: 'NVIDIA Spectrum-4: 800G以太网交换平台'
+    - 5G-Advanced
+    - 3GPP
+    - NR-Light
+    - AI
+    title: 5G-Advanced (3GPP Release 18) 正式商用
   News:
-  - desc: 2026年台北国际电脑展聚焦AI PC与边缘计算，英特尔展示Panther Lake芯片，AMD推进Zen 6路线图，NVIDIA发布Blackwell
-      Ultra GPU，三大巨头围绕AI推理与能效展开激烈竞争。
+  - desc: 苹果全球开发者大会2026推出新一代设备端AI系统，深度集成于iOS 19与macOS 15，新增多模态交互、实时语义索引与个性化上下文感知，所有处理均在设备端完成，强化隐私保护。
     tags:
-    - Computex 2026
-    - AI PC
-    - 半导体
-    - 台北
-    title: 'Computex 2026: AI PC与下一代半导体平台竞逐'
+    - 苹果
+    - AI
+    - WWDC
+    - 设备端智能
+    title: 苹果在WWDC 2026上发布Apple Intelligence 2.0
