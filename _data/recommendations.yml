@@ -1,128 +1,129 @@
 algorithm:
-- desc: 经典无监督学习算法，通过迭代最小化样本到簇心的平方误差，将数据划分为K个簇。算法简单高效，广泛应用于客户细分、图像压缩、异常检测等领域。
+- desc: PCA通过正交变换将可能相关的变量转换为线性不相关的主成分，用于降维与可视化。保留方差最大的方向，广泛应用于高维数据预处理、噪声过滤与特征提取。计算方法为对协方差矩阵进行特征值分解。
   tags:
-  - 聚类
+  - 降维
+  - 特征提取
   - 无监督学习
-  - 向量量化
-  - 迭代优化
-  title: K-Means 聚类
+  - 统计学
+  title: 主成分分析 (Principal Component Analysis)
 cv_recommend:
-  agency: Sony Music Artists
+  agency: Music Ray'n
   hometown: 东京都
-  intro: 水濑祈以其清澈透明的嗓音和细腻的演技在业内获得高度评价。她能够精准把握角色的情感脉络，无论是活泼开朗的少女还是内心复杂的女性，都能赋予独特魅力。在音乐领域，她凭借稳定的唱功和丰富的表现力成功举办多场个人演唱会，展现出全能艺人的素养。
-  name: 水濑祈
-date: '2026-07-09'
+  intro: 雨宫天是日本女性声优，隶属于Music Ray'n事务所。她以清澈透明且辨识度极高的声线著称，能够驾驭从活泼少女到冷静知性角色的广泛类型，情感表达细腻而富有层次。除了配音工作，她还以歌手身份活跃，发行过多张单曲与专辑，歌唱实力同样受到肯定。在广播节目与活动中展现出开朗亲和的性格，与粉丝互动真诚，积累了大量人气。她对演技不断追求进步的态度，以及在音乐道路上的持续探索，使她成为同世代声优中颇具代表性的存在。
+  name: 雨宫天
+date: '2026-07-10'
 history:
-- event: 阿根廷宣布脱离西班牙独立，成立拉普拉塔联合省。
-  year: 1816
-- event: 首届温布尔登网球锦标赛在伦敦举行，成为现代网球史上最悠久的赛事。
-  year: 1877
-- event: 美国国务卿马歇尔在巴黎会议上提出欧洲复兴计划（马歇尔计划），旨在重建战后欧洲经济。
-  year: 1947
-- event: 罗素-爱因斯坦宣言在伦敦发布，由11位顶尖科学家签署，呼吁和平利用核能并警示核战争危险。
-  year: 1955
-- event: 旅行者2号探测器以最近距离飞掠木星，传回高分辨率图像并发现木星环。
-  year: 1979
-- event: 南苏丹共和国正式宣布独立，成为非洲第54个主权国家。
-  year: 2011
+- event: Telstar 1通信卫星发射，首次实现跨大西洋电视直播。
+  year: '1962'
+- event: 不列颠之战开始，德国空军首次大规模轰炸英国。
+  year: '1940'
+- event: 美国田纳西州代顿，斯科普斯“猴子审判”案开庭，关于进化论教学。
+  year: '1925'
+- event: 鲍里斯·叶利钦宣誓就任俄罗斯苏维埃联邦社会主义共和国总统。
+  year: '1991'
+- event: 米勒德·菲尔莫尔宣誓就任美国第13任总统，接替逝世的泰勒总统。
+  year: '1850'
+- event: 泰国睡美人洞救援行动成功结束，12名少年足球队员及其教练全部获救。
+  year: '2018'
 llm:
-- desc: Meta于2025年发布的开源多模态大模型，采用混合专家(MoE)架构，包含Scout与Maverick等版本，支持128K上下文长度，在推理、编码与多模态任务上达到领先水平。
+- desc: 2026年4月发布，123B参数密集型架构，128K上下文窗口，支持法语、英语、中文等80+语言。在MMLU、HellaSwag等基准上超越Llama-4-70B，函数调用准确率提升40%，原生支持工具使用与代码生成。
   tags:
-  - Llama 4
-  - MoE
-  - 多模态
+  - 大语言模型
+  - 多语言
   - 开源
-  title: Meta Llama 4
+  - 推理
+  title: 'Mistral Large 3: 123B参数多语言旗舰模型'
 new_project:
-- desc: 让本地运行大语言模型变得简单易用。支持LLaMA、Mistral等多种模型，提供命令行接口与REST API，一键下载、运行并管理模型，是开发与实验的理想工具。
+- desc: vLLM引入PagedAttention机制，实现KV缓存近乎零浪费，内存利用率提升4倍。支持连续批处理、张量并行、量化，兼容HuggingFace模型，广泛应用于生产环境部署。
   tags:
-  - Ollama
-  - LLM
-  - 本地部署
-  - CLI
-  title: Ollama
-  url: https://github.com/ollama/ollama
+  - 推理引擎
+  - 大模型
+  - 开源
+  - PyTorch
+  title: 'vLLM: 高吞吐量、内存高效的大模型推理引擎'
+  url: https://github.com/vllm-project/vllm
 paper:
-- desc: 顶会论文推荐：将偏好对齐与监督微调合并为单一阶段训练，无需额外参考模型，显著降低计算开销并提升对齐效果，为LLM对齐提供高效新范式。
+- desc: ICLR 2026接收论文。提出用前向扩散与逆向生成替代自回归，从头训练8B参数扩散语言模型，在语言理解、数学推理等任务上达到或超越同等规模自回归模型，推理速度提升2倍，支持并行生成。
   tags:
-  - LLM对齐
-  - 单阶段
-  - 偏好优化
-  - ICLR
-  title: 'ORPO: Monolithic Preference Optimization without Reference Model'
-  url: https://arxiv.org/abs/2403.07691
+  - 扩散模型
+  - 语言模型
+  - 非自回归
+  - ICLR 2026
+  title: 'LLaDA: Large Language Diffusion Models'
+  url: https://arxiv.org/abs/2502.09992
 tech:
   Arch:
-  - desc: 2024年RISC-V国际基金会正式批准向量扩展1.0规范，提供标准化的可变长度向量处理能力，为AI/ML、HPC等场景的RISC-V处理器设计奠定统一ISA基础。
+  - desc: 2026年6月，AMD公布Zen 6微架构细节，采用TSMC N3工艺，IPC较Zen 5提升18%，引入全内置AI加速单元（统一AI引擎），支持FP8数据格式，L1缓存增至64KB，AVX-512全栈吞吐量翻倍。桌面端最高24核。
     tags:
-    - RISC-V
-    - 向量扩展
-    - ISA
-    - AI加速
-    title: RISC-V 向量扩展 1.0 (RVV 1.0) 正式批准
+    - AMD
+    - Zen 6
+    - 微架构
+    - 3nm
+    title: 'AMD Zen 6 微架构细节公布: 3nm工艺与AI加速'
   Audio:
-  - desc: Kyutai实验室于2024年开源的全双工实时语音对话模型。采用联合文本-语音建模，支持低延迟（200ms）自然交互，可同时处理听、说、想，具备情感感知与多轮对话能力。
+  - desc: 2026年4月，字节跳动发布Seed-TTS 2，基于流匹配扩散模型与韵律编码器，实现3秒音频即可克隆音色，支持情感、语速、音高精细控制。在LibriSpeech测试集上WER降至1.2%，MOS评分达4.6，接近真人水平。
     tags:
     - 语音合成
-    - 实时对话
-    - 全双工
-    - 开源
-    title: 'Moshi: A Speech-Text Foundation Model for Real-Time Dialogue'
-  CPU:
-  - desc: Arrow Lake-S桌面处理器，6P+8E核心，14线程。P核基于Lion Cove，E核为Skymont，最大睿频5.2GHz，Intel
-      20A与台积电N3B混合工艺，支持DDR5-6400，TDP 125W。
-    tags:
-    - CPU
-    - Arrow Lake
-    - Lion Cove
-    - Intel 20A
-    title: Intel Core Ultra 5 245K
-  Computer Vision:
-  - desc: Meta于2024年发布的第二代分割基础模型，支持图像与视频的通用分割。采用Transformer架构与流式记忆机制，实现任意帧的实时交互式与自动分割。模型在多样化数据上训练，具备强大的零样本泛化能力。
-    tags:
-    - 计算机视觉
-    - 分割
-    - 基础模型
     - 零样本
-    title: 'SAM 2: Segment Anything Model 2'
-  GPU:
-  - desc: Blackwell架构主流级GPU，2026年Q2上市。搭载12GB GDDR7显存，128-bit位宽，支持DLSS 4、Reflex 2低延迟技术，TGP约160W，PCIe
-      5.0接口，光线追踪性能较前代提升40%。
+    - 扩散模型
+    - 音色克隆
+    title: 'Seed-TTS 2: 字节跳动新一代零样本语音合成'
+  CPU:
+  - desc: 2026年5月发布，Ryzen 9 9950X3D基于Zen 5架构，16核32线程，基础频率4.4GHz，加速频率5.7GHz，128MB L3缓存（含64MB
+      3D V-Cache），TDP 170W。在游戏中较7950X3D提升22%，多线程性能提升35%。
     tags:
-    - GPU
+    - AMD
+    - Ryzen 9
+    - 3D V-Cache
+    - Zen 5
+    title: 'AMD Ryzen 9 9950X3D: 3D V-Cache 16核性能怪兽'
+  Computer Vision:
+  - desc: 上海人工智能实验室于2026年6月发布InternVL 3.0，采用渐进式训练策略，支持高达1000万token的多模态上下文理解。模型基于Qwen3-72B语言模型与ViT-6B视觉编码器，在MMMU、MathVista等基准上刷新SOTA，动态分辨率处理最高支持8K图像输入。
+    tags:
+    - 多模态
+    - 视觉语言模型
+    - 长上下文
+    - 开源
+    title: 'InternVL 3.0: 千万token上下文多模态模型'
+  GPU:
+  - desc: 2026年3月上市，RTX 5070 Ti搭载GB205-400核心，8960个CUDA核心，16GB GDDR7显存（256-bit），TBP
+      300W。支持DLSS 4与光线重建，在4K游戏中较RTX 4070 Ti Super提升约35%，建议零售价899美元。
+    tags:
+    - NVIDIA
+    - RTX 5070 Ti
     - Blackwell
     - GDDR7
-    - DLSS 4
-    title: NVIDIA GeForce RTX 5060 12GB
+    title: 'NVIDIA GeForce RTX 5070 Ti: Blackwell架构主流悍将'
   Lang:
-  - desc: Rust 2024版随1.85版本于2025年发布，引入RPIT生命周期捕获、异步闭包、原生开发者认证等特性，进一步强化内存安全与并发编程，提升大型工程的可维护性。
+  - desc: 2026年5月，Rust 2025 Edition正式稳定，引入async闭包、类型别名impl Trait、更智能的匹配人体工程学。Cargo新增脚本支持与并行前端编译，编译性能提升20%，同时强化了供应链安全特性。
     tags:
     - Rust
     - 编程语言
-    - 安全
-    - 并发
-    title: Rust 2024 Edition
+    - 系统编程
+    - 编译器
+    title: Rust 2025 Edition 稳定版发布
   NLP:
-  - desc: AI21 Labs于2024年推出的混合架构大语言模型，结合Transformer注意力与Mamba状态空间模型，在保持长上下文建模能力（256K）的同时大幅降低内存占用。提供开源权重，支持高效微调与推理。
+  - desc: 2026年5月，阿里发布Qwen3系列，其中235B参数MoE模型激活22B参数，支持128K上下文，在MMLU-Pro、GPQA等基准上超越GPT-4o。采用分组查询注意力与SwiGLU激活，通过4T
+      tokens多语言预训练，覆盖100+语言。
     tags:
-    - NLP
-    - 混合架构
-    - Mamba
-    - 长上下文
-    title: 'Jamba: A Hybrid Transformer-Mamba Language Model'
+    - 大语言模型
+    - MoE
+    - 开源
+    - 多语言
+    title: 'Qwen3-235B: 阿里巴巴开源最大混合专家语言模型'
   Net:
-  - desc: 3GPP Release 18于2024年冻结，2025年启动商用。引入AI/ML驱动的网络优化、NR-Light（RedCap）低复杂度终端、非地面网络增强等，为沉浸式通信与工业物联网提供网络基础。
+  - desc: 2026年6月，IEEE正式启动802.11bn (Wi-Fi 8) 标准制定工作，目标在60GHz频段实现高达100Gbps的峰值吞吐量，引入分布式MIMO与AI原生信道优化，超低延迟低至0.1ms，预计2028年完成。
     tags:
-    - 5G-Advanced
-    - 3GPP
-    - NR-Light
-    - AI
-    title: 5G-Advanced (3GPP Release 18) 正式商用
+    - Wi-Fi 8
+    - IEEE
+    - 无线网络
+    - 毫米波
+    title: 'IEEE 802.11bn: Wi-Fi 8标准制定启动，目标100Gbps'
   News:
-  - desc: 苹果全球开发者大会2026推出新一代设备端AI系统，深度集成于iOS 19与macOS 15，新增多模态交互、实时语义索引与个性化上下文感知，所有处理均在设备端完成，强化隐私保护。
+  - desc: 2026年6月，苹果在WWDC 2026上发布Vision Pro 2，搭载M5芯片，重量减轻30%至450克，采用microLED显示，单眼分辨率达3800x3000。支持AI驱动空间交互与环境理解，售价3499美元，7月15日上市。
     tags:
-    - 苹果
-    - AI
-    - WWDC
-    - 设备端智能
-    title: 苹果在WWDC 2026上发布Apple Intelligence 2.0
+    - Apple
+    - Vision Pro 2
+    - 空间计算
+    - MR
+    title: Apple Vision Pro 2 WWDC 2026首发

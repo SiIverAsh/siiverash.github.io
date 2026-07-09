@@ -1,4 +1,20 @@
 {
+  "2026-07-10": [
+    "vLLM: 高吞吐量、内存高效的大模型推理引擎",
+    "AMD Ryzen 9 9950X3D: 3D V-Cache 16核性能怪兽",
+    "Qwen3-235B: 阿里巴巴开源最大混合专家语言模型",
+    "NVIDIA GeForce RTX 5070 Ti: Blackwell架构主流悍将",
+    "Rust 2025 Edition 稳定版发布",
+    "Mistral Large 3: 123B参数多语言旗舰模型",
+    "AMD Zen 6 微架构细节公布: 3nm工艺与AI加速",
+    "LLaDA: Large Language Diffusion Models",
+    "Apple Vision Pro 2 WWDC 2026首发",
+    "Seed-TTS 2: 字节跳动新一代零样本语音合成",
+    "主成分分析 (Principal Component Analysis)",
+    "InternVL 3.0: 千万token上下文多模态模型",
+    "雨宫天",
+    "IEEE 802.11bn: Wi-Fi 8标准制定启动，目标100Gbps"
+  ],
   "2026-07-09": [
     "ORPO: Monolithic Preference Optimization without Reference Model",
     "NVIDIA GeForce RTX 5060 12GB",
@@ -142,21 +158,5 @@
     "Wi-Fi 8 (IEEE 802.11bn)：超高可靠性无线标准进入草案1.0阶段",
     "Grok-3：xAI推出的万亿参数级多模态推理大模型",
     "TSMC N2P制程进入风险量产：GAA纳米片晶体管定义2026下半年先进工艺"
-  ],
-  "2026-06-29": [
-    "Veo 2：Google DeepMind视频生成模型全面开放",
-    "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
-    "Java 26 正式发布：值类型预览与虚拟线程增强",
-    "欧盟《人工智能法案》全面实施：全球首部全面AI监管法律生效",
-    "AMD Ryzen 7 9800X3D：Zen 5单CCD 3D V-Cache游戏旗舰",
-    "Claude 4 Opus：Anthropic新一代旗舰推理模型",
-    "CosyVoice 3：零样本语音合成与全情感控制框架",
-    "microsoft/markitdown",
-    "AMD Radeon RX 9070 XT：RDNA 4旗舰，16GB GDDR7，3299元",
-    "PCIe 7.0规范正式发布：512GB/s双向带宽，PAM4信令",
-    "决策树 (Decision Tree)",
-    "3GPP Release 19标准正式冻结：5G-Advanced迈向6G关键一步",
-    "Qwen 3：通义千问第三代开源大语言模型家族",
-    "花澤香菜"
   ]
 }
