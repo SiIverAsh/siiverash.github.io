@@ -3,347 +3,139 @@ layout: default
 title: Welcome to My HP!
 ---
 
-<div style="text-align: center; padding: 10px 0;">
-    <h1 style="font-size: 2.5em; color: #1d508a; margin-bottom: 20px;">Welcome to My HP!</h1>
-    <p style="font-size: 1.1em; line-height: 1.8;">Attention Is All You Need!</p>
+<section class="home-intro">
+    <h1>Welcome to My HP!</h1>
+    <p class="home-subtitle">Attention Is All You Need!</p>
+    <p class="home-description">
+        这里记录关于 LLM、ASR、算法与编程的学习，也分享动漫、音乐、游戏和摄影。
+    </p>
+</section>
 
-    <!-- 5 Categories Cards -->
-    <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; max-width: 900px; margin-left: auto; margin-right: auto;">
-        <div class="tech-card" onclick="handleTechClick()">
-            <h3>💻 Tech</h3>
-            <p>前沿技术动态</p>
-        </div>
-        <div class="tech-card" onclick="handleCategoryClick('paper')">
-            <h3>📄 Paper</h3>
-            <p>顶会论文推荐</p>
-        </div>
-        <div class="tech-card" onclick="handleCategoryClick('llm')">
-            <h3>🧠 LLM</h3>
-            <p>大语言模型进展</p>
-        </div>
-        <div class="tech-card" onclick="handleCategoryClick('algorithm')">
-            <h3>📊 Algorithm</h3>
-            <p>算法与机器学习</p>
-        </div>
-        <div class="tech-card" onclick="handleCategoryClick('new_project')">
-            <h3>🚀 New Project</h3>
-            <p>GitHub 最新开源</p>
-        </div>
-    </div>
-
-    <!-- Tech Sub-tags (Hidden by default) -->
-    <div id="tech-sub-tags" style="margin-top: 25px; display: none; animation: fadeIn 0.5s;">
-        <span class="sub-tag" onclick="showTechDetail('Computer Vision')">计算机视觉 (CV)</span>
-        <span class="sub-tag" onclick="showTechDetail('NLP')">自然语言 (NLP)</span>
-        <span class="sub-tag" onclick="showTechDetail('Audio')">音频处理 (Audio)</span>
-        <span class="sub-tag" onclick="showTechDetail('Net')">网络协议 (Net)</span>
-        <span class="sub-tag" onclick="showTechDetail('Lang')">编程语言 (Lang)</span>
-        <br>
-        <span class="sub-tag" onclick="showTechDetail('Arch')">系统架构 (Arch)</span>
-        <span class="sub-tag" onclick="showTechDetail('GPU')">硬件显卡 (GPU)</span>
-        <span class="sub-tag" onclick="showTechDetail('CPU')">处理器 (CPU)</span>
-        <span class="sub-tag" onclick="showTechDetail('News')">科技动态 (News)</span>
-    </div>
-
-    <!-- Terminal Box -->
-    <div class="terminal-container">
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="btn close"></span>
-                <span class="btn min"></span>
-                <span class="btn max"></span>
+<section class="home-section">
+    <div class="home-section-title">最新文章</div>
+    <div class="latest-posts">
+        {% for post in site.posts limit: 8 %}
+        <article class="latest-post">
+            <div class="latest-post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
+            <div>
+                <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                {% if post.categories.size > 0 %}
+                <div class="latest-post-category">{{ post.categories | join: " · " }}</div>
+                {% endif %}
             </div>
-            <div class="terminal-title">siiverash@ubuntu: ~/workspace</div>
-        </div>
-        <div class="terminal-body" id="terminal-body">
-            <p><span class="prompt">siiverash@ubuntu:~$</span> <span class="command">ls -l ./recent_posts/</span></p>
-            <ul class="terminal-post-list">
-                {% for post in site.posts limit:5 %}
-                <li>
-                    <span class="file-perms">-rw-r--r--</span> 
-                    <span class="file-user">siiverash</span> 
-                    <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span> 
-                    <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-            <p style="margin-top: 15px;"><span class="prompt">siiverash@ubuntu:~$</span> <span class="typing-animation">Waiting for input...</span><span class="cursor"></span></p>
-        </div>
+        </article>
+        {% endfor %}
     </div>
-</div>
+</section>
 
-<script>
-    function handleTechClick() {
-        document.getElementById('tech-sub-tags').style.display = 'block';
-        typeCommand(`./fetch_recommendation.sh --category tech`, function() {
-            const tb = document.getElementById('terminal-body');
-            tb.innerHTML += `<p style="margin-top: 15px;"><span class="prompt">siiverash@ubuntu:~$</span> <span class="typing-animation">Waiting for input...</span><span class="cursor"></span></p>`;
-            tb.scrollTop = tb.scrollHeight;
-        });
-    }
-
-    function showTechDetail(sub) {
-        typeCommand(`./fetch_recommendation.sh --category tech --sub "${sub}"`, function() {
-            const list = (window.siteData && window.siteData.tech) ? window.siteData.tech[sub] : null;
-            if (list && list.length > 0) { 
-                renderTerminalOutput(list[0]); 
-            } else {
-                renderTerminalOutput({title: "Error", desc: "No data found for this category."});
-            }
-        });
-    }
-
-    function handleCategoryClick(type) {
-        document.getElementById('tech-sub-tags').style.display = 'none';
-        typeCommand(`./fetch_recommendation.sh --category ${type}`, function() {
-            const list = window.siteData ? window.siteData[type] : null;
-            if (list && list.length > 0) { 
-                renderTerminalOutput(list[0]); 
-            } else {
-                renderTerminalOutput({title: "Error", desc: "No data found for this category."});
-            }
-        });
-    }
-
-    function typeCommand(cmdText, callback) {
-        const tb = document.getElementById('terminal-body');
-        // Keep the previous history but remove all typing animation prompts
-        const historyHTML = tb.innerHTML.replace(/<p[^>]*><span class="prompt">siiverash@ubuntu:~\$<\/span> <span class="typing-animation">.*?<\/span><span class="cursor"><\/span><\/p>/g, '');
-        
-        const loadingId = 'loading-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
-        const newCmdHTML = `<p><span class="prompt">siiverash@ubuntu:~$</span> <span class="command">${cmdText}</span></p>
-                            <p id="${loadingId}" style="color: #8b949e; margin-top: 5px;">> Fetching data from database...</p>`;
-        
-        tb.innerHTML = historyHTML + newCmdHTML;
-        tb.scrollTop = tb.scrollHeight;
-
-        setTimeout(() => {
-            const loadingEl = document.getElementById(loadingId);
-            if (loadingEl) loadingEl.remove();
-            if(callback) callback();
-        }, 600); // 模拟延迟
-    }
-
-    function renderTerminalOutput(item) {
-        const tb = document.getElementById('terminal-body');
-        
-        let tagsHtml = '';
-        if (item.tags) {
-            tagsHtml = `<div style="margin: 8px 0;">` + item.tags.map(t => `<span class="term-tag">[${t}]</span>`).join(' ') + `</div>`;
-        }
-
-        let linkHtml = '';
-        if (item.url) {
-            linkHtml = `<div style="margin-top: 8px;">> <span style="color: #8b949e;">Link:</span> <a href="${item.url}" target="_blank" style="color: #60a5fa; text-decoration: underline;">${item.url}</a></div>`;
-        }
-
-        const outputHTML = `
-            <div class="term-output-box">
-                <div style="color: var(--primary-color); font-weight: bold; font-size: 1.1em; margin-bottom: 8px;">${item.title}</div>
-                <div style="color: #e5e7eb; line-height: 1.6; font-size: 0.95em;">${item.desc}</div>
-                ${tagsHtml}
-                ${linkHtml}
-            </div>
-            <p style="margin-top: 15px;"><span class="prompt">siiverash@ubuntu:~$</span> <span class="typing-animation">Waiting for input...</span><span class="cursor"></span></p>
-        `;
-        
-        tb.innerHTML += outputHTML;
-        tb.scrollTop = tb.scrollHeight;
-    }
-</script>
+<section class="home-section">
+    <div class="home-section-title">文章分类</div>
+    <div class="home-categories">
+        {% for category in site.categories %}
+        <a href="{{ "/categories/" | append: category[0] | append: "/" | relative_url }}" class="home-category">
+            <span>{{ category[0] }}</span>
+            <small>{{ category[1].size }} 篇</small>
+        </a>
+        {% endfor %}
+    </div>
+</section>
 
 <style>
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    /* Tech Cards Styling - Adjust to fit 5 cards nicely */
-    .tech-card {
-        background: var(--glass-bg, rgba(20, 20, 25, 0.4));
-        color: var(--text-main, #d1d5db);
-        padding: 15px 10px;
-        border-radius: 10px;
-        width: calc((100% - 60px) / 5);
-        min-width: 140px;
-        cursor: pointer;
-        transition: 0.3s;
-        border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
-        box-shadow: var(--shadow, 0 8px 32px 0 rgba(0, 0, 0, 0.3));
+    .home-intro {
+        padding: 28px 10px 36px;
         text-align: center;
-        backdrop-filter: blur(10px);
-        box-sizing: border-box;
     }
 
-    .tech-card h3 {
-        font-size: 1.1em;
-        margin-bottom: 5px;
-        color: #1d508a;
-        text-shadow: 0 0 10px rgba(29, 80, 138, 0.3);
+    .home-intro h1 {
+        color: var(--primary-color);
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 4vw, 3rem);
     }
 
-    .tech-card p {
-        font-size: 0.8em;
-        color: var(--text-main, #9ca3af);
+    .home-subtitle {
+        color: var(--text-muted);
+        font-size: 1.15rem;
+        margin: 0;
     }
 
-    .tech-card:hover {
-        transform: translateY(-5px);
-        border-color: #1d508a;
-        box-shadow: 0 10px 40px rgba(29, 80, 138, 0.2);
+    .home-description {
+        max-width: 620px;
+        margin: 20px auto 0;
+        color: var(--text-main);
+        line-height: 1.9;
     }
 
-    .sub-tag {
-        display: inline-block;
-        padding: 5px 12px;
-        margin: 4px;
-        background: var(--glass-bg, rgba(20, 20, 25, 0.6));
-        border: 1px solid #1d508a;
-        color: #1d508a;
-        border-radius: 4px;
-        font-size: 0.85em;
-        cursor: pointer;
-        transition: 0.3s;
+    .home-section {
+        margin-top: 30px;
+    }
+
+    .home-section-title {
+        color: var(--primary-color);
+        border-left: 4px solid var(--primary-color);
+        padding-left: 12px;
+        margin-bottom: 16px;
+        font-size: 1.25rem;
         font-weight: bold;
     }
 
-    .sub-tag:hover {
-        background: #1d508a;
-        color: white;
+    .latest-posts {
+        display: grid;
+        gap: 10px;
     }
 
-    /* Terminal Container Styling */
-    .terminal-container {
-        margin: 40px auto;
-        max-width: 900px;
-        background: rgba(15, 15, 20, 0.85);
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-        overflow: hidden;
-        backdrop-filter: blur(15px);
-        text-align: left;
-        font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+    .latest-post {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 16px;
+        align-items: baseline;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--glass-border);
     }
 
-    .terminal-header {
-        background: rgba(30, 30, 35, 0.9);
-        padding: 10px 15px;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    .latest-post-meta,
+    .latest-post-category {
+        color: var(--text-muted);
+        font-size: 0.85rem;
     }
 
-    .terminal-buttons {
-        display: flex;
-        gap: 8px;
+    .latest-post h2 {
+        margin: 0;
+        font-size: 1.05rem;
     }
 
-    .terminal-buttons .btn {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        display: inline-block;
-    }
-
-    .btn.close { background-color: #ff5f56; }
-    .btn.min { background-color: #ffbd2e; }
-    .btn.max { background-color: #27c93f; }
-
-    .terminal-title {
-        flex: 1;
-        text-align: center;
-        color: #8b949e;
-        font-size: 0.85em;
-        margin-right: 40px;
-    }
-
-    .terminal-body {
-        padding: 20px;
-        color: #e5e7eb;
-        font-size: 0.95em;
-        line-height: 1.6;
-        max-height: 500px;
-        overflow-y: auto;
-    }
-
-    .prompt {
-        color: #10b981;
-        font-weight: bold;
-        margin-right: 8px;
-    }
-
-    .command {
-        color: #fcd34d;
-    }
-
-    .terminal-post-list {
-        list-style: none;
-        padding: 0;
-        margin: 15px 0 20px 0;
-    }
-
-    .terminal-post-list li {
-        margin-bottom: 8px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        align-items: center;
-    }
-
-    .file-perms { color: #6b7280; }
-    .file-user { color: #3b82f6; }
-    .post-date { color: #8b949e; }
-    
-    .post-title {
-        color: #60a5fa;
+    .latest-post h2 a {
+        color: var(--text-main);
         text-decoration: none;
-        transition: 0.2s;
     }
 
-    .post-title:hover {
-        color: #93c5fd;
-        text-decoration: underline;
-        text-underline-offset: 4px;
+    .latest-post h2 a:hover {
+        color: var(--primary-color);
     }
 
-    .term-output-box {
-        margin-top: 15px;
-        padding: 15px;
-        border-left: 3px solid #10b981;
-        background: rgba(255, 255, 255, 0.03);
+    .home-category {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 8px 10px 0;
+        padding: 8px 12px;
+        color: var(--text-main);
+        border: 1px solid var(--glass-border);
+        text-decoration: none;
     }
 
-    .term-tag {
-        color: #f472b6;
-        font-size: 0.85em;
-        margin-right: 6px;
+    .home-category:hover {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
     }
 
-    .typing-animation {
-        display: inline-block;
-        overflow: hidden;
-        white-space: nowrap;
-        animation: typing 2s steps(30, end);
+    .home-category small {
+        color: var(--text-muted);
     }
 
-    .cursor {
-        display: inline-block;
-        width: 8px;
-        height: 15px;
-        background-color: #e5e7eb;
-        margin-left: 2px;
-        vertical-align: middle;
-        animation: blink 1s step-end infinite;
-    }
-
-    @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-    }
-
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
+    @media (max-width: 600px) {
+        .latest-post {
+            grid-template-columns: 1fr;
+            gap: 4px;
+        }
     }
 </style>

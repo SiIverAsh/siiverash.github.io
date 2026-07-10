@@ -11,6 +11,8 @@ permissions:
 
 jobs:
   update-content:
+    # 已停用每日推荐，防止调用付费 API。
+    if: ${{ false }}
     runs-on: ubuntu-latest
     
     steps:

@@ -12,14 +12,6 @@
     <div id="clock-lunar"></div>
 </div>
 
-<!-- 仅在首页或特定页面显示历史记录 -->
-{% if page.url == "/" or page.url == "/index.html" %}
-<div class="extra-box glass-card">
-    <div class="extra-title"><i class="fas fa-history"></i> 历史上的今天</div>
-    <div id="history-content" style="max-height: 350px; overflow-y: auto; color: var(--text-main);">载入中...</div>
-</div>
-{% endif %}
-
 <!-- 动漫分类页：显示追番 -->
 {% if page.url contains '/categories/anime' %}
 <div class="extra-box glass-card">

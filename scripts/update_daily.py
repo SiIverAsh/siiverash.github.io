@@ -10,6 +10,12 @@ from openai import OpenAI
 from typing import List, Dict, Any, cast, Iterable
 from openai.types.chat import ChatCompletionToolParam, ChatCompletionMessageParam
 
+# 默认关闭每日推荐，避免误触发外部 API 产生费用。
+# 如需临时启用，运行前显式设置 ENABLE_DAILY_RECOMMENDATIONS=true。
+if os.getenv("ENABLE_DAILY_RECOMMENDATIONS", "false").lower() != "true":
+    print("每日推荐已禁用，未调用 DeepSeek 或 Exa API。")
+    sys.exit(0)
+
 api_key = os.getenv("DEEPSEEK_API_KEY")
 base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
 EXA_API_KEY = os.getenv("EXA_API_KEY")
