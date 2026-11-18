@@ -4,36 +4,42 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+    inputs:
+      run_ai_tagging:
+        description: Also run AI tagging and anime subject extraction
+        type: boolean
+        default: false
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
+  prepare:
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/blog_automation.yml
+    permissions:
+      contents: write
+    with:
+      run_ai_tagging: ${{ inputs.run_ai_tagging == true }}
+    secrets:
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+
   build:
+    needs: prepare
+    permissions:
+      contents: read
+      pages: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.9"
-          cache: "pip"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Normalize blog timestamps
-        run: python scripts/blog_lifecycle_manager.py
+          ref: ${{ needs.prepare.outputs.source_sha }}
+          persist-credentials: false
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -48,6 +54,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 
   deploy:
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

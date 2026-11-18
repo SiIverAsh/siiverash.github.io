@@ -8,9 +8,15 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
-vendor/
+/vendor/
 node_modules/
 .env
 
 # Local project documentation
 PROJECT_STRUCTURE.md
+
+# 本地原型页，不上线
+preview/
+
+# 本机 Bundler 路径配置，不用提交
+.bundle/

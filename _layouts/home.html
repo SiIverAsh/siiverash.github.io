@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% feed_meta %}
+    <title>{{ site.title }}</title>
+    <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
+    <link rel="preload" as="image" href="{{ '/assets/homepage.webp' | relative_url }}" fetchpriority="high">
+    <link rel="stylesheet" href="{{ '/assets/vendor/fontawesome/css/all.min.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/home-viewfinder.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <style>
+        :root {
+            --home-bg-url: url('{{ "/assets/homepage.webp" | relative_url }}');
+        }
+    </style>
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (saved === 'dark' || (!saved && prefersDark)) {
+                    document.documentElement.classList.add('dark-mode');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="bg-scrim"></div>
+
+    <!-- 快门帘幕与闪光层 -->
+    <div class="shutter-blade top"></div>
+    <div class="shutter-blade bottom"></div>
+    <div class="shutter-flash"></div>
+
+    <!-- STAGE 1：第一视角取景器 -->
+    <section class="evf-stage" id="evf-stage">
+        <div class="evf-grid">
+            <div class="evf-grid-v1"></div>
+            <div class="evf-grid-v2"></div>
+            <div class="evf-grid-h1"></div>
+            <div class="evf-grid-h2"></div>
+        </div>
+        <div class="evf-corner tl"></div>
+        <div class="evf-corner tr"></div>
+        <div class="evf-corner bl"></div>
+        <div class="evf-corner br"></div>
+
+        <div class="evf-top-hud">
+            <div class="evf-top-group">
+                <span class="evf-mode">M</span>
+                <span class="evf-badge">Z8</span>
+                <span>AF-S</span>
+            </div>
+            <div class="evf-top-group">
+                <span>RAW</span>
+            </div>
+        </div>
+
+        <div class="evf-focus-frame" id="evf-focus-frame">
+            <div class="af-brackets">
+                <span class="af-b tl"></span>
+                <span class="af-b tr"></span>
+                <span class="af-b bl"></span>
+                <span class="af-b br"></span>
+            </div>
+
+            <div class="intro-hero-grid">
+                <div class="intro-avatar-wrap">
+                    <div class="face-af-box"></div>
+                    <img
+                        src="{{ '/assets/images/avatar.webp' | relative_url }}"
+                        alt="Silverash Avatar"
+                        class="intro-avatar"
+                        width="120"
+                        height="120"
+                        decoding="async"
+                        fetchpriority="high"
+                        onerror="this.onerror=null;this.src='{{ '/assets/images/avatar.png' | relative_url }}'"
+                    >
+                </div>
+
+                <div>
+                    <h1 class="intro-name">Silverash</h1>
+                    <p class="intro-quote">{{ site.description | default: 'Attention Is All You Need!' }}</p>
+                </div>
+            </div>
+
+            <div class="evf-photo-watermark" aria-hidden="true">
+                <span class="wm-brand">welcome to my homepage</span>
+            </div>
+        </div>
+
+        <div class="evf-battery-hud" aria-hidden="true">
+            <span class="evf-battery"><i></i></span>
+            <span class="af-dot"></span>
+        </div>
+
+        <div class="evf-bottom-params" aria-hidden="true">
+            <div class="evf-param-card">
+                <span class="evf-val evf-val--shutter" id="evf-shutter-val">1/800</span>
+            </div>
+            <div class="evf-param-card">
+                <span class="evf-val evf-val--aperture" id="evf-aperture-val">F4</span>
+            </div>
+            <div class="evf-param-card evf-iso-card">
+                <span class="evf-iso-lbl">ISO</span>
+                <span class="evf-val evf-val--iso" id="evf-iso-val">64</span>
+            </div>
+        </div>
+
+        <div class="evf-ev-meter" aria-hidden="true">
+            <div class="ev-scale">
+                <span class="ev-tick major"></span>
+                <span class="ev-tick"></span>
+                <span class="ev-tick"></span>
+                <span class="ev-tick"></span>
+                <span class="ev-tick zero"></span>
+                <span class="ev-tick"></span>
+                <span class="ev-tick"></span>
+                <span class="ev-tick"></span>
+                <span class="ev-tick major"></span>
+                <span class="ev-pointer"></span>
+            </div>
+        </div>
+
+        <div class="evf-histogram-card" aria-label="实时亮度峰值图">
+            <div class="hist-head">
+                <span>PEAK</span>
+                <span>LUMA</span>
+            </div>
+            <svg class="hist-svg" viewBox="0 0 120 38" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="30" y1="0" x2="30" y2="38" stroke="rgba(255,255,255,0.14)" stroke-width="0.8" />
+                <line x1="60" y1="0" x2="60" y2="38" stroke="rgba(255,255,255,0.14)" stroke-width="0.8" />
+                <line x1="90" y1="0" x2="90" y2="38" stroke="rgba(255,255,255,0.14)" stroke-width="0.8" />
+                <path class="hist-r" d="M0,38 L0,35 Q12,31 22,23 T42,14 T62,25 T84,18 T106,31 L120,37 L120,38 Z" />
+                <path class="hist-g" d="M0,38 L0,35 Q16,29 28,18 T48,10 T70,20 T92,23 T112,34 L120,38 Z" />
+                <path class="hist-b" d="M0,38 L0,36 Q18,33 34,22 T56,12 T76,11 T96,21 T115,34 L120,38 Z" />
+                <path class="hist-luma" d="M0,35 Q14,27 27,16 T49,8 T72,16 T94,19 T114,34 L120,37" />
+            </svg>
+        </div>
+
+        <div class="shutter-progress" aria-hidden="true">
+            <div class="shutter-progress-fill" id="shutter-progress-fill"></div>
+        </div>
+    </section>
+
+    <!-- STAGE 2：四周平行四边形胶片边框 -->
+    <div class="film-edge top" aria-label="顶部分类胶片">
+        <div class="sprocket-x"></div>
+        <div class="film-track-x">
+            <div class="film-marquee-x" id="film-top-track"></div>
+        </div>
+        <div class="sprocket-x"></div>
+    </div>
+
+    <div class="film-edge bottom" aria-label="底部胶片">
+        <div class="sprocket-x"></div>
+        <div class="film-track-x">
+            <div class="film-marquee-x" id="film-bottom-track"></div>
+        </div>
+        <div class="sprocket-x"></div>
+    </div>
+
+    <div class="film-edge left" aria-label="左侧胶片">
+        <div class="sprocket-y"></div>
+        <div class="film-track-y">
+            <div class="film-marquee-y" id="film-left-track"></div>
+        </div>
+        <div class="sprocket-y"></div>
+    </div>
+
+    <div class="film-edge right" aria-label="右侧胶片">
+        <div class="sprocket-y"></div>
+        <div class="film-track-y">
+            <div class="film-marquee-y" id="film-right-track"></div>
+        </div>
+        <div class="sprocket-y"></div>
+    </div>
+
+    <!-- 中央开放画布 -->
+    <main class="stage-center">
+        <div id="main-panel"></div>
+    </main>
+
+    <!-- 左右整桌切换箭头按钮 -->
+    <button class="deck-side-btn prev" id="deck-prev-btn" type="button" aria-label="上一桌 (←)" title="上一桌 (←)">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="deck-side-btn next" id="deck-next-btn" type="button" aria-label="下一桌 (→)" title="下一桌 (→)">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- 浅景深正文阅读浮层 -->
+    <div class="post-reader-backdrop" id="post-reader-backdrop" aria-hidden="true">
+        <article class="post-reader-sheet" role="dialog" aria-modal="true" aria-labelledby="reader-title">
+            <header class="post-reader-bar">
+                <div class="reader-meta-line" id="reader-meta"></div>
+                <button class="reader-close-btn" id="reader-close" type="button">
+                    <i class="fas fa-arrow-left"></i> 返回
+                </button>
+            </header>
+            <div class="post-reader-scroll" id="reader-scroll">
+                <h1 class="post-reader-title" id="reader-title"></h1>
+                <div class="post-reader-tags" id="reader-tags"></div>
+                <div class="post-reader-body" id="reader-body"></div>
+            </div>
+        </article>
+    </div>
+
+    <!-- 底部栏拉起快速滚动胶片卷层 -->
+    <div class="film-reel-backdrop" id="film-reel-backdrop" aria-hidden="true">
+        <section class="film-reel-band" role="dialog" aria-modal="true" aria-label="胶片专题卷轴">
+            <div class="sprocket-x"></div>
+            <header class="film-reel-hud">
+                <div class="film-reel-tabs" id="film-reel-tabs"></div>
+                <button class="reel-close-btn" id="reel-close" type="button">
+                    <i class="fas fa-arrow-down"></i> 收起胶片
+                </button>
+            </header>
+            <div class="film-reel-viewport" id="film-reel-viewport">
+                <div class="film-reel-track" id="film-reel-track"></div>
+            </div>
+            <div class="sprocket-x"></div>
+        </section>
+    </div>
+
+    <!-- 左右侧胶片拉出可拖拽卷轴 -->
+    <div class="side-reel-backdrop" id="side-reel-backdrop" aria-hidden="true">
+        <aside class="side-reel-band" role="dialog" aria-modal="true" aria-label="侧边胶卷列表">
+            <div class="sprocket-y"></div>
+            <div class="side-reel-core">
+                <div class="side-reel-viewport" id="side-reel-viewport">
+                    <div class="side-reel-list" id="side-reel-list"></div>
+                </div>
+            </div>
+            <div class="sprocket-y"></div>
+        </aside>
+    </div>
+
+    <!-- 取景器全局检索层（仅匹配博客标题与正文） -->
+    <div class="search-vf-backdrop" id="search-vf-backdrop" aria-hidden="true">
+        <div class="search-vf-box" role="dialog" aria-modal="true" aria-label="取景器博客检索">
+            <div class="search-vf-corners" aria-hidden="true">
+                <span class="tl"></span>
+                <span class="tr"></span>
+                <span class="bl"></span>
+                <span class="br"></span>
+            </div>
+            <div class="search-vf-head">
+                <i class="fas fa-crosshairs"></i>
+                <input type="text" class="search-vf-input" id="search-vf-input" placeholder="检索博客标题与正文内容…（支持空格多词）" autocomplete="off">
+                <span class="search-vf-count" id="search-vf-count">{{ site.posts.size }} 篇</span>
+                <button class="search-vf-esc" id="search-vf-close" type="button">ESC</button>
+            </div>
+            <div class="search-vf-results" id="search-vf-results"></div>
+        </div>
+    </div>
+
+    <script id="home-site-data" type="application/json">
+    {
+        "siteTitle": {{ site.title | jsonify }},
+        "siteYear": {{ site.time | date: "%Y" | jsonify }},
+        "homeUrl": {{ '/' | relative_url | jsonify }},
+        "searchUrl": {{ '/search.json' | relative_url | jsonify }},
+        "channels": {{ site.data.film_showcase.channels | jsonify }},
+        "leftFilms": {{ site.data.film_showcase.left_films | jsonify }},
+        "rightModels": {{ site.data.film_showcase.right_models | jsonify }},
+        "me": {{ site.data.me | jsonify }},
+        "social": {{ site.social | jsonify }},
+        "posts": [
+            {% for post in site.posts %}
+                {% assign raw_cat = post.categories | first | default: 'emo' | downcase | strip %}
+                {% assign cat_name = raw_cat %}
+                {% for ch in site.data.film_showcase.channels %}
+                    {% if ch.key == raw_cat %}
+                        {% assign cat_name = ch.name %}
+                        {% break %}
+                    {% endif %}
+                {% endfor %}
+                {% assign clean_text = post.content | strip_html | strip_newlines %}
+                {% assign char_count = clean_text | size %}
+                {% assign read_mins = char_count | divided_by: 350 | plus: 1 %}
+                {% assign publish_time = post.date | date: "%Y-%m-%d %H:%M" %}
+                {% assign update_time = post.last_modified_at | date: "%Y-%m-%d %H:%M" %}
+                {% assign hex_no = site.data.post_serials[post.path] %}
+                {% unless hex_no %}
+                    {% assign hex_digits = "0123456789ABCDEF" | split: "" %}
+                    {% assign seq = forloop.rindex %}
+                    {% assign d_hi = seq | divided_by: 16 %}
+                    {% assign d_lo = seq | modulo: 16 %}
+                    {% if d_hi >= 16 %}
+                        {% assign d_top = d_hi | divided_by: 16 %}
+                        {% assign d_mid = d_hi | modulo: 16 %}
+                        {% capture hex_no %}0x{{ hex_digits[d_top] }}{{ hex_digits[d_mid] }}{{ hex_digits[d_lo] }}{% endcapture %}
+                    {% else %}
+                        {% capture hex_no %}0x{{ hex_digits[d_hi] }}{{ hex_digits[d_lo] }}{% endcapture %}
+                    {% endif %}
+                {% endunless %}
+                {
+                    "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+                    "dateTime": {{ publish_time | jsonify }},
+                    "updated": {% if post.last_modified_at and publish_time != update_time %}{{ update_time | jsonify }}{% else %}""{% endif %},
+                    "title": {{ post.title | jsonify }},
+                    "cat": {{ raw_cat | jsonify }},
+                    "catName": {{ cat_name | jsonify }},
+                    "hexNo": {{ hex_no | jsonify }},
+                    "url": {{ post.url | relative_url | jsonify }},
+                    "tags": {{ post.tags | jsonify }},
+                    "readTime": {{ read_mins | append: " min" | jsonify }},
+                    "excerpt": {{ clean_text | truncate: 280 | jsonify | replace: "</", "<\/" }}
+                }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ]
+    }
+    </script>
+    <script defer src="{{ '/assets/js/home-viewfinder.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

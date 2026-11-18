@@ -266,7 +266,7 @@ layout: default
         applyFilters();
     }
 
-    function applyFilters() {
+    function applyFilters(shouldScroll = true) {
         filteredItems = allItems.filter(item => {
             const matchesYear = activeYear === 'all' || item.dataset.year === activeYear;
             
@@ -277,14 +277,16 @@ layout: default
             return matchesYear && matchesTag;
         });
         currentPage = 1;
-        updateDisplay();
+        updateDisplay(shouldScroll);
     }
 
-    function updateDisplay() {
+    function updateDisplay(shouldScroll = true) {
         const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
         const start = (currentPage - 1) * itemsPerPage;
         const end = start + itemsPerPage;
-        allItems.forEach(item => item.style.display = 'none');
+        allItems.forEach(item => {
+            if (item.style.display !== 'none') item.style.display = 'none';
+        });
         filteredItems.slice(start, end).forEach(item => {
             item.style.display = 'block';
             item.style.animation = 'fadeInUp 0.4s ease forwards';
@@ -296,7 +298,9 @@ layout: default
         } else {
             controls.style.display = 'none';
         }
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (shouldScroll) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     }
 
     function changePage(delta) {
@@ -304,13 +308,13 @@ layout: default
         const newPage = currentPage + delta;
         if (newPage >= 1 && newPage <= totalPages) {
             currentPage = newPage;
-            updateDisplay();
+            updateDisplay(true);
         }
     }
 
     window.addEventListener('DOMContentLoaded', () => {
         initFilters();
-        applyFilters();
+        applyFilters(false);
     });
 </script>
 
@@ -549,7 +553,7 @@ layout: default
         padding: 25px 25px 25px 60px; 
         border-radius: 0; 
         border: 1px solid var(--glass-border); 
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
         box-shadow: var(--shadow); 
     }
     .post-preview-card:hover { transform: translateY(-8px); box-shadow: 0 15px 45px rgba(0,0,0,0.1); }

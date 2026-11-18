@@ -1,22 +1,37 @@
 <script>
     /**
-     * 更新时钟功能
+     * 更新时钟功能（仅在跨天时重算公历与农历日期）
      */
+    const lunarFormatter = (() => {
+        try {
+            return new Intl.DateTimeFormat('zh-u-ca-chinese', { day: 'numeric', month: 'long' });
+        } catch (e) {
+            return null;
+        }
+    })();
+    let lastClockDateKey = '';
+
     function updateClock() {
         const now = new Date();
         const timeEl = document.getElementById('clock-time');
-        const dateEl = document.getElementById('clock-date');
-        const lunarEl = document.getElementById('clock-lunar');
-        if(timeEl) timeEl.textContent = now.toLocaleTimeString('zh-CN', { hour12: false });
-        if(dateEl) dateEl.textContent = now.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
-        try {
-            if(lunarEl) {
-                const lunar = new Intl.DateTimeFormat('zh-u-ca-chinese', {day:'numeric', month:'long'}).format(now);
-                lunarEl.textContent = "农历 " + lunar;
+        if (timeEl) timeEl.textContent = now.toLocaleTimeString('zh-CN', { hour12: false });
+
+        const dateKey = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
+        if (dateKey !== lastClockDateKey) {
+            lastClockDateKey = dateKey;
+            const dateEl = document.getElementById('clock-date');
+            const lunarEl = document.getElementById('clock-lunar');
+            if (dateEl) dateEl.textContent = now.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
+            if (lunarEl && lunarFormatter) {
+                try {
+                    lunarEl.textContent = "农历 " + lunarFormatter.format(now);
+                } catch (e) {}
             }
-        } catch(e) {}
+        }
     }
-    setInterval(updateClock, 1000); updateClock();
+    if (document.getElementById('clock-time') || document.getElementById('clock-date')) {
+        setInterval(updateClock, 1000); updateClock();
+    }
 
     /**
      * 声优推荐
@@ -141,18 +156,41 @@
     }
 
     /**
-     * 初始化全站搜索模块
+     * 按需懒加载全站搜索模块（首次聚焦或打开搜索时再加载脚本与 search.json）
      */
     const sinput = document.getElementById('search-input');
     const sresults = document.getElementById('results-container');
-    if (sinput && sresults) {
-        sinput.addEventListener('input', () => { sresults.style.display = sinput.value ? 'block' : 'none'; });
+    let searchInitialized = false;
+    let searchLoadingPromise = null;
 
-        if (typeof window.SimpleJekyllSearch === 'function') {
-            window.SimpleJekyllSearch({
+    function initSiteSearch() {
+        if (searchInitialized || !sinput || !sresults) return Promise.resolve();
+        if (searchLoadingPromise) return searchLoadingPromise;
+
+        const scriptReady = typeof window.SimpleJekyllSearch === 'function'
+            ? Promise.resolve()
+            : new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = '{{ "/assets/vendor/simple-jekyll-search/simple-jekyll-search.min.js" | relative_url }}';
+                script.async = true;
+                script.onload = resolve;
+                script.onerror = () => {
+                    script.remove();
+                    reject(new Error('Failed to load SimpleJekyllSearch'));
+                };
+                document.head.appendChild(script);
+            });
+        const indexReady = fetch('{{ "/search.json" | relative_url }}').then(response => {
+            if (!response.ok) throw new Error(`Search index returned HTTP ${response.status}`);
+            return response.json();
+        });
+
+        searchLoadingPromise = Promise.all([scriptReady, indexReady]).then(([, index]) => {
+            if (!Array.isArray(index)) throw new Error('Invalid search index');
+            const search = window.SimpleJekyllSearch({
                 searchInput: sinput,
                 resultsContainer: sresults,
-                json: '{{ site.baseurl }}/search.json',
+                json: index,
                 searchResultTemplate: '<li><a href="{url}"><div class="search-result-title">{title}</div><div class="search-result-meta"><i class="fas fa-calendar-alt"></i> {date}</div><div class="search-result-snippet">{content}</div></a></li>',
                 noResultsText: '<li><p style="padding:15px; color:var(--text-main);">没有找到相关内容哦...</p></li>',
                 limit: 8,
@@ -179,20 +217,36 @@
                     return value;
                 }
             });
-        } else {
-            console.warn('SimpleJekyllSearch failed to load; search is disabled, theme toggle remains available.');
-        }
+            searchInitialized = true;
+            const query = sinput.value.trim();
+            sresults.style.display = query ? 'block' : 'none';
+            search.search(query);
+        }).catch(error => {
+            console.warn('Could not initialize site search:', error);
+        }).finally(() => {
+            searchLoadingPromise = null;
+        });
+        return searchLoadingPromise;
+    }
+
+    if (sinput && sresults) {
+        sinput.addEventListener('focus', initSiteSearch);
+        sinput.addEventListener('input', () => {
+            sresults.style.display = sinput.value ? 'block' : 'none';
+            if (!searchInitialized) initSiteSearch();
+        });
     }
 
     /**
      * 初始化页面组件
      */
-    window.addEventListener('DOMContentLoaded', () => {
+    const initPageComponents = () => {
         loadAnimeExtras();
         if (typeof loadBangumiWiki === 'function') loadBangumiWiki();
 
         // 自动为文章内的表格添加滚动外层
         document.querySelectorAll('.post-content table').forEach(table => {
+            if (table.parentNode && table.parentNode.classList.contains('table-wrapper')) return;
             const wrapper = document.createElement('div');
             wrapper.className = 'table-wrapper';
             table.parentNode.insertBefore(wrapper, table);
@@ -205,54 +259,59 @@
         const mobileSearchContainer = document.getElementById('mobile-search-container');
         const searchOverlay = document.getElementById('mobile-search-overlay');
 
-        // 处理移动端适配逻辑
-        if (sidebar && sidebarOverlay && mobileSearchContainer && searchOverlay) {
-            
-            const handleResize = () => {
-                const searchCard = document.querySelector('.search-box-card');
-                if (window.innerWidth <= 768 && searchCard) {
+        // 处理移动端适配逻辑（仅在跨越断点时移动搜索卡片）
+        if (sidebar && extraSidebar && sidebarOverlay && mobileSearchContainer && searchOverlay) {
+            const searchCard = document.querySelector('.search-box-card');
+            const mobileMedia = window.matchMedia('(max-width: 768px)');
+
+            const syncSearchPosition = (isMobile) => {
+                if (!searchCard) return;
+                if (isMobile) {
                     if (!mobileSearchContainer.contains(searchCard)) {
                         mobileSearchContainer.appendChild(searchCard);
                     }
-                } else if (window.innerWidth > 768 && searchCard && extraSidebar) {
-                    if (!extraSidebar.contains(searchCard)) {
-                        extraSidebar.insertBefore(searchCard, extraSidebar.firstChild);
-                    }
+                } else if (extraSidebar && !extraSidebar.contains(searchCard)) {
+                    extraSidebar.insertBefore(searchCard, extraSidebar.firstChild);
                 }
             };
-            window.addEventListener('resize', handleResize);
-            handleResize();
+            mobileMedia.addEventListener?.('change', (e) => syncSearchPosition(e.matches));
+            syncSearchPosition(mobileMedia.matches);
+
+            const setOpenSidebar = openSidebar => {
+                sidebar.classList.toggle('active', openSidebar === sidebar);
+                extraSidebar.classList.toggle('active', openSidebar === extraSidebar);
+                sidebarOverlay.classList.toggle('active', Boolean(openSidebar));
+            };
 
             // 侧边栏开关
             document.getElementById('mobile-menu-toggle')?.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-                sidebarOverlay.classList.toggle('active');
-                extraSidebar.classList.remove('active'); // 互斥
+                setOpenSidebar(sidebar.classList.contains('active') ? null : sidebar);
             });
 
             // 右侧信息栏开关
             document.getElementById('mobile-extra-toggle')?.addEventListener('click', () => {
-                extraSidebar.classList.toggle('active');
-                sidebarOverlay.classList.toggle('active');
-                sidebar.classList.remove('active'); // 互斥
+                setOpenSidebar(extraSidebar.classList.contains('active') ? null : extraSidebar);
             });
-
-            sidebarOverlay.addEventListener('click', () => {
-                sidebar.classList.remove('active');
-                extraSidebar.classList.remove('active');
-                sidebarOverlay.classList.remove('active');
-            });
+            sidebarOverlay.addEventListener('click', () => setOpenSidebar(null));
 
             // 搜索弹出层开关
+            let searchCloseTimer = null;
             document.getElementById('mobile-search-toggle')?.addEventListener('click', () => {
+                clearTimeout(searchCloseTimer);
+                searchCloseTimer = null;
                 searchOverlay.classList.add('active');
                 searchOverlay.style.display = 'flex';
+                initSiteSearch();
                 document.getElementById('search-input')?.focus();
             });
 
             const closeSearch = () => {
+                if (!searchOverlay.classList.contains('active')) return;
                 searchOverlay.classList.remove('active');
-                setTimeout(() => { searchOverlay.style.display = 'none'; }, 300);
+                searchCloseTimer = setTimeout(() => {
+                    searchCloseTimer = null;
+                    searchOverlay.style.display = 'none';
+                }, 300);
             };
 
             document.getElementById('close-search')?.addEventListener('click', closeSearch);
@@ -262,11 +321,14 @@
 
             // 导航点击后自动关闭菜单
             document.querySelectorAll('.nav-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    sidebar.classList.remove('active');
-                    sidebarOverlay.classList.remove('active');
-                });
+                item.addEventListener('click', () => setOpenSidebar(null));
             });
         }
-    });
+    };
+
+    if (document.readyState === 'loading') {
+        window.addEventListener('DOMContentLoaded', initPageComponents);
+    } else {
+        initPageComponents();
+    }
 </script>
