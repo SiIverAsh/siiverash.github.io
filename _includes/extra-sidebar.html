@@ -12,6 +12,18 @@
     <div id="clock-lunar"></div>
 </div>
 
+<!-- 动漫分类页：显示追番 -->
+{% if page.url contains '/categories/anime' %}
+<div class="extra-box glass-card">
+    <div class="extra-title"><i class="fas fa-play-circle"></i> 正在追番 (Watching)</div>
+    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85em; color: var(--text-main);">
+        {% for item in site.data.me.anime.watching %}
+        <li style="margin-bottom: 8px; border-left: 3px solid #f09199; padding-left: 10px;">{{ item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
 <!-- 音乐分类页：显示社团与曲风 -->
 {% if page.url contains '/categories/music' %}
 <div class="extra-box glass-card">

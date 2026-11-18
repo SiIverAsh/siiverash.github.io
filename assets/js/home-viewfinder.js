@@ -183,6 +183,7 @@
     }
 
     function buildReelFrames() {
+        const watchingList = (ME_DATA.anime && Array.isArray(ME_DATA.anime.watching)) ? ME_DATA.anime.watching : [];
         const specs = (ME_DATA.game && ME_DATA.game.specs) || {};
         const equip = (ME_DATA.snap && ME_DATA.snap.equipment) || {};
 
@@ -197,6 +198,10 @@
             specs.ram ? `内存：<code>${escapeHtml(specs.ram)}</code>` : '',
             specs.storage ? `存储：<code>${escapeHtml(specs.storage).trim()}</code>` : ''
         ].filter(Boolean).join('<br>');
+
+        const animeHtml = watchingList.length
+            ? watchingList.map((title) => `· 《${escapeHtml(title)}》`).join('<br>')
+            : '暂无追番记录';
 
         return [
             { key: 'lead', stub: true, label: 'SILVERASH · Z8' },
@@ -243,6 +248,18 @@
                     <p>${pcLines || 'Desktop Workstation'}</p>
                 `
             },
+            {
+                key: 'anime',
+                meta: `Watching List · ${watchingList.length} Titles`,
+                title: '近期追番记录',
+                icon: 'fas fa-tv',
+                tab: '追番记录',
+                body: `
+                    <blockquote>工作实验间隙，晚上点开一集轻松日常番回血。</blockquote>
+                    <h2>当前正在追</h2>
+                    <p>${animeHtml}</p>
+                `
+            },
             { key: 'tail', stub: true, label: 'Z 24-120 F/4 S' }
         ];
     }
@@ -254,6 +271,7 @@
             { type: 'search', label: '检索', icon: 'fas fa-crosshairs' },
             { type: 'sheet', key: 'about', label: '关于我', icon: 'fas fa-user-astronaut' },
             { type: 'sheet', key: 'gear', label: '装备清单', icon: 'fas fa-camera' },
+            { type: 'sheet', key: 'anime', label: '追番记录', icon: 'fas fa-tv' },
             { type: 'side', side: 'left', label: '胶片片号', icon: 'fas fa-film', mobileOnly: true },
             { type: 'side', side: 'right', label: 'AI 模型', icon: 'fas fa-microchip', mobileOnly: true },
             { type: 'replay', label: '重拍开场', icon: 'fas fa-rotate-left' }
